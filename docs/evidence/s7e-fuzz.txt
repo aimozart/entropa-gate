@@ -1,0 +1,4 @@
+fuzz target: request (router + strict query parser), container caps default, rss_limit 4096 MB
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz request for 60s
+Done 2357308 runs in 61 second(s)

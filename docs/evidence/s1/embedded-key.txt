@@ -1,0 +1,12 @@
+== build WITH the key embedded
+licence: OK
+customer: test-customer-0001
+entitlements: explorer, guard
+valid: 1794643542 to 1826265942 (unix seconds)
+build: s1-install-test
+clock tolerance: 24 h
+key source: build
+exit 0
+== same binary, a licence from another issuer
+licence: refused (unknown_key)
+exit 1

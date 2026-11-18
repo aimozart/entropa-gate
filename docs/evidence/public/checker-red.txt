@@ -1,0 +1,10 @@
+FAIL good rc=99 check-public-docs: not implemented
+FAIL noev rc=99 check-public-docs: not implemented
+FAIL miss rc=99 check-public-docs: not implemented
+FAIL untr rc=99 check-public-docs: not implemented
+FAIL esc rc=99 check-public-docs: not implemented
+FAIL mail rc=99 check-public-docs: not implemented
+FAIL word rc=99 check-public-docs: not implemented
+FAIL label rc=99 check-public-docs: not implemented
+FAIL empty rc=99 check-public-docs: not implemented
+RESULT: 0 passed, 9 failed; scratch <build-dir>/tmpdir/cpd-test.XoNW9t

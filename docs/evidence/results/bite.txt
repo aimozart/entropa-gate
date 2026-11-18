@@ -1,0 +1,19 @@
+== s/if got != chk\["equals"\] or isinstance(got, bool) != isinstance(chk\["equals"\], boo
+FAIL: test_r2_a_planted_wrong_number_is_refused_and_nothing_is_written (test_results.T.tes
+FAIL: test_r4_a_check_that_the_report_contradicts_by_one_is_refused_for_every_numeric_chec
+Ran 11 tests in 0.340s
+FAILED (failures=2)
+== s/failed_bars += b\["result"\] == "fail"/failed_bars += 0/
+FAIL: test_r6_failures_are_included_with_the_expected_counts (test_results.T.test_r6_failu
+Ran 11 tests in 0.585s
+FAILED (failures=1)
+== s/row\["verification_note"\] = "NOT verified: no report/row["verification_note"] = "no 
+Ran 11 tests in 0.592s
+OK
+== s/        if chk\["contains"\] in text:/        if True:/
+FAIL: test_r3_missing_file_bad_path_and_missing_phrase_are_refused (test_results.T.test_r3
+Ran 11 tests in 0.584s
+FAILED (failures=1)
+FAIL: test_r10_numbers_that_no_report_file_supports_are_flagged_plainly (test_results.T.te
+Ran 11 tests in 0.609s
+FAILED (failures=1)

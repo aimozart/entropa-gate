@@ -1,0 +1,4 @@
+test v3_the_reader_command_works_on_read_only_media_and_refuses_a_path_with_no_ledger ... FAILED
+test result: FAILED. 8 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+test ro7_a_node_directory_without_the_ledger_directory_keeps_its_old_answer_and_creates_nothing ... FAILED
+test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

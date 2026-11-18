@@ -1,0 +1,11 @@
+# Checkpoint witness service (stage P6). Builds only entropa-witnessd.
+FROM rust:1-slim-bookworm AS builder
+WORKDIR /build
+COPY . .
+RUN cargo build --release --locked -p entropa-witnessd
+
+FROM gcr.io/distroless/cc-debian12:nonroot
+COPY --from=builder /build/target/release/entropa-witnessd /usr/local/bin/entropa-witnessd
+ENV PORT=8080
+EXPOSE 8080
+ENTRYPOINT ["/usr/local/bin/entropa-witnessd"]

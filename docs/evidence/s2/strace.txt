@@ -1,0 +1,1 @@
+s2 test binary (incl. minisign and cargo metadata children): network syscalls = 0

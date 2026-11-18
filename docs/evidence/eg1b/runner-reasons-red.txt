@@ -1,0 +1,5 @@
+test h3_an_invalid_policy_in_the_file_is_refused_not_run ... ok
+test h1_the_hash_is_checked_before_parsing_and_a_second_run_is_refused ... ok
+test h2_the_schema_is_read_as_written_and_the_report_has_counts_bounds_and_ids_only ... FAILED
+reasons per class
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

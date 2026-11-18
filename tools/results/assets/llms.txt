@@ -1,0 +1,6 @@
+# Results of record (Entropa Gate)
+> Measured results of sealed and held-out tests of Entropa Gate, newest first. Every failed bar is listed. Each test set is written by someone other than the author, run once, and never reused. Evidence is mapped to the control; it is not a security claim.
+- Results page: https://results.entropa.space/
+- Data file (JSON): https://results.entropa.space/data/results.json
+- Product: https://entropa.space/
+- Documentation: https://docs.entropa.space/

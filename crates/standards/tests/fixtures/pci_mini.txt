@@ -1,0 +1,20 @@
+Synthetic Payment Standard
+Defined Approach Requirements
+Defined Approach Testing Procedures
+10.3.4 Integrity monitoring or change-detection
+mechanisms is used on logs so that existing data
+cannot be changed without alerts.
+
+10.3.4 Examine settings and results to verify the
+use of integrity monitoring on logs.
+
+Guidance text without an identifier that is ignored.
+
+10.2.1.1 Logs capture all individual access to
+cardholder data.
+
+12.3.3 Cipher suites in use are documented and
+reviewed at least once every 12 months.
+
+99.1.1 This identifier is outside the standard's range.
+2023 Annual report line that must not become a clause.

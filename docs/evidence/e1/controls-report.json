@@ -1,0 +1,643 @@
+{
+ "report_version": 1,
+ "generated": "2026-11-13T22:29:05Z",
+ "wording": "evidence mapped to the control; not an assessment of compliance, and not a claim that any standard is met",
+ "known_gaps": [
+  {
+   "id": "ledgers_share_one_key",
+   "text": "three ledgers share one signing key",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-10"
+   ]
+  },
+  {
+   "id": "witness_only_ai_ledger",
+   "text": "only the AI ledger is witnessed",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-9-2"
+   ]
+  },
+  {
+   "id": "gcp_service_account_keys_4",
+   "text": "four GCP service-account keys exist",
+   "affects": [
+    "DORA-7"
+   ]
+  },
+  {
+   "id": "aws_cli_key_not_retired",
+   "text": "the AWS CLI key has not been retired",
+   "affects": [
+    "DORA-7"
+   ]
+  },
+  {
+   "id": "csp_report_only",
+   "text": "content security policy is report-only on the public sites",
+   "affects": []
+  },
+  {
+   "id": "dnssec_off",
+   "text": "DNSSEC is off",
+   "affects": []
+  },
+  {
+   "id": "council_sessions_manual",
+   "text": "council sessions are run by hand",
+   "affects": []
+  },
+  {
+   "id": "node_dir_two_ledgers_one_key",
+   "text": "one node directory holds two ledgers (ledger and evidence-ledger) signed by the single platinum.key",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-10"
+   ]
+  },
+  {
+   "id": "crypto_agility_plan_missing",
+   "text": "an inventory exists, but a documented plan for changing certificate algorithms is not yet written; certificates are classical and the hybrid key exchange is supplied by the hosting platforms",
+   "affects": [
+    "PCI-12-3-3",
+    "DORA-6"
+   ]
+  }
+ ],
+ "findings": [
+  "10 of 10 answering hosts negotiated a hybrid ML-KEM key exchange with an OpenSSL 3.5 client. It is supplied by the hosting platforms (per the operator: Firebase Hosting and the Cloud Run front ends), not implemented by Entropa, and another client may negotiate differently.",
+  "The certificates are classical (EC, (prime256v1) x3; RSA, 2048 (bit) x7): no post-quantum signature protects the certificates.",
+  "Crypto-agility: this inventory exists; a documented plan for changing certificate algorithms is not yet written (known gap crypto_agility_plan_missing in compliance/controls-rubric.json).",
+  "Fact (not a gap): 4 hosts present one shared certificate: entropa.space, bigironbank.online, hippagrchealthcare.site, scryon.entropa.space.",
+  "Fact (not a gap): 3 hosts present one shared certificate: entropa-platinum-loqc3sut7a-uc.a.run.app, entropa-ingest-loqc3sut7a-uc.a.run.app, entropa-transparency-1032137727494.us-central1.run.app.",
+  "Certificates expire in 67 to 81 days from the inventory date.",
+  "Log integrity: a one-byte change anywhere in the evidence ledger of a copy was detected, most by a checkpoint mismatch; a flip of the very last byte hits the trailing newline and is caught as a format error ('file ends with a partial line'), not as a cryptographic mismatch."
+ ],
+ "summary": {
+  "MET BY EVIDENCE": 1,
+  "PARTIAL": 11,
+  "GAP": 5,
+  "quotes_verified": "17/17",
+  "primary_quotes_verified": 14,
+  "secondary_rows": 3
+ },
+ "rows": [
+  {
+   "id": "DORA-6",
+   "standard": "DORA RTS 2024/1774",
+   "version": "Commission Delegated Regulation (EU) 2024/1774, OJ 25.6.2024",
+   "clause": "Art. 6(1)",
+   "quote": "financial entities shall develop, document, and implement a policy on encryption and cryptographic controls",
+   "source_kind": "primary",
+   "source_file": "DORA_RTS_ICT_Risk_2024_1774.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "crypto_inventory"
+   ],
+   "missing": [
+    "crypto_policy_document"
+   ],
+   "gaps": [
+    "crypto_agility_plan_missing"
+   ],
+   "receipts": [
+    1
+   ],
+   "why": "missing evidence: crypto_policy_document; known gap attached: crypto_agility_plan_missing"
+  },
+  {
+   "id": "DORA-7",
+   "standard": "DORA RTS 2024/1774",
+   "version": "Commission Delegated Regulation (EU) 2024/1774, OJ 25.6.2024",
+   "clause": "Art. 7(2)",
+   "quote": "controls to protect cryptographic keys through their whole lifecycle against loss, unauthorised access, disclosure, and modification",
+   "source_kind": "primary",
+   "source_file": "DORA_RTS_ICT_Risk_2024_1774.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "GAP",
+   "covered": [],
+   "missing": [
+    "key_lifecycle_evidence"
+   ],
+   "gaps": [
+    "gcp_service_account_keys_4",
+    "aws_cli_key_not_retired"
+   ],
+   "receipts": [],
+   "why": "no required evidence kind has a verifying receipt"
+  },
+  {
+   "id": "DORA-12-2-d",
+   "standard": "DORA RTS 2024/1774",
+   "version": "Commission Delegated Regulation (EU) 2024/1774, OJ 25.6.2024",
+   "clause": "Art. 12(2)(d)",
+   "quote": "measures to protect logging systems and log information against tampering, deletion, and unauthorised access at rest, in transit, and, where relevant, in use",
+   "source_kind": "primary",
+   "source_file": "DORA_RTS_ICT_Risk_2024_1774.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection",
+    "signed_records"
+   ],
+   "missing": [
+    "separate_storage"
+   ],
+   "gaps": [
+    "ledgers_share_one_key",
+    "witness_only_ai_ledger",
+    "node_dir_two_ledgers_one_key"
+   ],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "missing evidence: separate_storage; known gap attached: ledgers_share_one_key, witness_only_ai_ledger, node_dir_two_ledgers_one_key"
+  },
+  {
+   "id": "PCI-10-3-2",
+   "standard": "PCI DSS",
+   "version": "v4.0.1",
+   "clause": "10.3.2",
+   "quote": "Audit log files are protected to prevent modifications by individuals.",
+   "source_kind": "primary",
+   "source_file": "PCI-DSS-v4_0_1.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection"
+   ],
+   "missing": [
+    "access_control_on_logs"
+   ],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "missing evidence: access_control_on_logs"
+  },
+  {
+   "id": "PCI-10-3-4",
+   "standard": "PCI DSS",
+   "version": "v4.0.1",
+   "clause": "10.3.4",
+   "quote": "File integrity monitoring or change-detection mechanisms is used on audit logs to ensure that existing log data cannot be changed without generating alerts.",
+   "source_kind": "primary",
+   "source_file": "PCI-DSS-v4_0_1.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection"
+   ],
+   "missing": [
+    "alerting_on_change"
+   ],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "missing evidence: alerting_on_change"
+  },
+  {
+   "id": "PCI-10-5-1",
+   "standard": "PCI DSS",
+   "version": "v4.0.1",
+   "clause": "10.5.1",
+   "quote": "Retain audit log history for at least 12 months, with at least the most recent three months immediately available for analysis.",
+   "source_kind": "primary",
+   "source_file": "PCI-DSS-v4_0_1.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "GAP",
+   "covered": [],
+   "missing": [
+    "retention_evidence"
+   ],
+   "gaps": [],
+   "receipts": [],
+   "why": "no required evidence kind has a verifying receipt"
+  },
+  {
+   "id": "PCI-12-3-3",
+   "standard": "PCI DSS",
+   "version": "v4.0.1",
+   "clause": "12.3.3",
+   "quote": "Cryptographic cipher suites and protocols in use are documented and reviewed at least once every 12 months",
+   "source_kind": "primary",
+   "source_file": "PCI-DSS-v4_0_1.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "crypto_inventory"
+   ],
+   "missing": [
+    "annual_review_record"
+   ],
+   "gaps": [
+    "crypto_agility_plan_missing"
+   ],
+   "receipts": [
+    1
+   ],
+   "why": "missing evidence: annual_review_record; known gap attached: crypto_agility_plan_missing"
+  },
+  {
+   "id": "NIST-AU-9",
+   "standard": "NIST SP 800-53",
+   "version": "Rev 5.2.0 (OSCAL catalog)",
+   "clause": "AU-9",
+   "quote": "Protect audit information and audit logging tools from unauthorized access, modification, and deletion",
+   "source_kind": "primary",
+   "source_file": "nist-800-53-rev5-catalog.json",
+   "quote_verified": true,
+   "quote_note": "found in the control's statement",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection"
+   ],
+   "missing": [
+    "access_control_on_logs"
+   ],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "missing evidence: access_control_on_logs"
+  },
+  {
+   "id": "NIST-AU-9-2",
+   "standard": "NIST SP 800-53",
+   "version": "Rev 5.2.0 (OSCAL catalog)",
+   "clause": "AU-9(2)",
+   "quote": "in a repository that is part of a physically different system or system component than the system or component being audited",
+   "source_kind": "primary",
+   "source_file": "nist-800-53-rev5-catalog.json",
+   "quote_verified": true,
+   "quote_note": "found in the control's statement",
+   "status": "GAP",
+   "covered": [],
+   "missing": [
+    "separate_storage"
+   ],
+   "gaps": [
+    "witness_only_ai_ledger"
+   ],
+   "receipts": [],
+   "why": "no required evidence kind has a verifying receipt"
+  },
+  {
+   "id": "NIST-AU-9-3",
+   "standard": "NIST SP 800-53",
+   "version": "Rev 5.2.0 (OSCAL catalog)",
+   "clause": "AU-9(3)",
+   "quote": "Implement cryptographic mechanisms to protect the integrity of audit information and audit tools.",
+   "source_kind": "primary",
+   "source_file": "nist-800-53-rev5-catalog.json",
+   "quote_verified": true,
+   "quote_note": "found in the control's statement",
+   "status": "MET BY EVIDENCE",
+   "covered": [
+    "signed_records",
+    "log_tamper_detection"
+   ],
+   "missing": [],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "every required evidence kind has a verifying receipt, no known gap, primary source verified",
+   "caveat": "the mechanism was demonstrated on a demo node built by the same binary; no production ledger was examined"
+  },
+  {
+   "id": "NIST-AU-10",
+   "standard": "NIST SP 800-53",
+   "version": "Rev 5.2.0 (OSCAL catalog)",
+   "clause": "AU-10",
+   "quote": "Provide irrefutable evidence that an individual (or process acting on behalf of an individual) has performed",
+   "source_kind": "primary",
+   "source_file": "nist-800-53-rev5-catalog.json",
+   "quote_verified": true,
+   "quote_note": "found in the control's statement",
+   "status": "PARTIAL",
+   "covered": [
+    "signed_records"
+   ],
+   "missing": [
+    "distinct_signing_keys"
+   ],
+   "gaps": [
+    "ledgers_share_one_key",
+    "node_dir_two_ledgers_one_key"
+   ],
+   "receipts": [
+    2
+   ],
+   "why": "missing evidence: distinct_signing_keys; known gap attached: ledgers_share_one_key, node_dir_two_ledgers_one_key"
+  },
+  {
+   "id": "EUAIA-12",
+   "standard": "EU AI Act",
+   "version": "Regulation (EU) 2024/1689, OJ 12.7.2024",
+   "clause": "Art. 12(1)",
+   "quote": "High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system.",
+   "source_kind": "primary",
+   "source_file": "EU_AI_Act_2024_1689.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "signed_records"
+   ],
+   "missing": [
+    "retention_evidence"
+   ],
+   "gaps": [],
+   "receipts": [
+    2
+   ],
+   "why": "missing evidence: retention_evidence"
+  },
+  {
+   "id": "EUAIA-19",
+   "standard": "EU AI Act",
+   "version": "Regulation (EU) 2024/1689, OJ 12.7.2024",
+   "clause": "Art. 19(1)",
+   "quote": "Providers of high-risk AI systems shall keep the logs referred to in Article 12(1), automatically generated by their high-risk AI systems",
+   "source_kind": "primary",
+   "source_file": "EU_AI_Act_2024_1689.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "GAP",
+   "covered": [],
+   "missing": [
+    "retention_evidence"
+   ],
+   "gaps": [],
+   "receipts": [],
+   "why": "no required evidence kind has a verifying receipt"
+  },
+  {
+   "id": "EUAIA-26-6",
+   "standard": "EU AI Act",
+   "version": "Regulation (EU) 2024/1689, OJ 12.7.2024",
+   "clause": "Art. 26(6)",
+   "quote": "Deployers of high-risk AI systems shall keep the logs automatically generated by that high-risk AI system",
+   "source_kind": "primary",
+   "source_file": "EU_AI_Act_2024_1689.pdf",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "GAP",
+   "covered": [],
+   "missing": [
+    "retention_evidence"
+   ],
+   "gaps": [],
+   "receipts": [],
+   "why": "no required evidence kind has a verifying receipt"
+  },
+  {
+   "id": "HIPAA-164-312-b",
+   "standard": "HIPAA Security Rule",
+   "version": "45 CFR 164.312 (Cornell LII mirror)",
+   "clause": "164.312(b)",
+   "quote": "Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use electronic protected health information.",
+   "source_kind": "secondary",
+   "source_file": "hipaa-164-312-source.html",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "signed_records"
+   ],
+   "missing": [
+    "audit_review_process"
+   ],
+   "gaps": [],
+   "receipts": [
+    2
+   ],
+   "why": "missing evidence: audit_review_process; the source text is secondary"
+  },
+  {
+   "id": "HIPAA-164-312-c1",
+   "standard": "HIPAA Security Rule",
+   "version": "45 CFR 164.312 (Cornell LII mirror)",
+   "clause": "164.312(c)(1)",
+   "quote": "Implement policies and procedures to protect electronic protected health information from improper alteration or destruction.",
+   "source_kind": "secondary",
+   "source_file": "hipaa-164-312-source.html",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection"
+   ],
+   "missing": [
+    "integrity_policy_document"
+   ],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "missing evidence: integrity_policy_document; the source text is secondary"
+  },
+  {
+   "id": "HIPAA-164-312-c2",
+   "standard": "HIPAA Security Rule",
+   "version": "45 CFR 164.312 (Cornell LII mirror)",
+   "clause": "164.312(c)(2)",
+   "quote": "Implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner.",
+   "source_kind": "secondary",
+   "source_file": "hipaa-164-312-source.html",
+   "quote_verified": true,
+   "quote_note": "found under its anchor",
+   "status": "PARTIAL",
+   "covered": [
+    "log_tamper_detection"
+   ],
+   "missing": [],
+   "gaps": [],
+   "receipts": [
+    2,
+    3
+   ],
+   "why": "the source text is secondary"
+  }
+ ],
+ "evidence": {
+  "crypto_inventory": {
+   "present": true,
+   "why": "the receipt verifies and the CBOM matches its hash",
+   "files": [
+    "crypto-inventory-2026-11-13-r2.json",
+    "cbom-2026-11-13-r2.cdx.json"
+   ],
+   "receipts": [
+    1
+   ],
+   "latest": "crypto-inventory-2026-11-13-r2.json",
+   "dated_records": [
+    "crypto-inventory-2026-11-13.json"
+   ]
+  },
+  "log_tamper_detection": {
+   "present": true,
+   "why": "a one-byte change to a copy fails offline verification; the original passes; both receipts verify",
+   "files": [
+    "log-integrity-2026-11-13.json"
+   ],
+   "receipts": [
+    2,
+    3
+   ],
+   "latest": null,
+   "dated_records": null
+  },
+  "signed_records": {
+   "present": true,
+   "why": "the original ledger verifies from start to end offline and the node signs with ML-DSA-65",
+   "files": [
+    "log-integrity-2026-11-13.json"
+   ],
+   "receipts": [
+    2
+   ],
+   "latest": null,
+   "dated_records": null
+  },
+  "separate_storage": {
+   "present": false,
+   "why": "recorded facts are documented or stated, not measured by the demonstration, so no receipt was emitted (the facts are in the log-integrity evidence file)",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "crypto_policy_document": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "key_lifecycle_evidence": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "access_control_on_logs": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "alerting_on_change": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "annual_review_record": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "retention_evidence": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "audit_review_process": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "integrity_policy_document": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  },
+  "distinct_signing_keys": {
+   "present": false,
+   "why": "not produced by E1",
+   "files": [],
+   "receipts": [],
+   "latest": null,
+   "dated_records": null
+  }
+ },
+ "plan_vs_outcome": [
+  {
+   "forecast": "every quote verified against its source",
+   "measured": "17 of 17 verified; 14 primary, 3 secondary rows"
+  },
+  {
+   "forecast": "most rows PARTIAL, a few MET, at least 5 GAP",
+   "measured": "11 PARTIAL, 1 MET (NIST-AU-9-3), 5 GAP (DORA-7, PCI-10-5-1, NIST-AU-9-2, EUAIA-19, EUAIA-26-6)"
+  },
+  {
+   "forecast": "the CBOM covers every in-scope host",
+   "measured": "10 of 11 in-scope targets answered (localhost has no TLS service)"
+  },
+  {
+   "forecast": "every MET row has an offline-verifying receipt",
+   "measured": "each MET row's required evidence has a receipt that was checked against the node and verified offline"
+  }
+ ],
+ "history": [
+  {
+   "what": "E-LABELS-2 RED commit",
+   "old": "23dcdca",
+   "new": "e54ac07"
+  },
+  {
+   "what": "E-LABELS-2 commit",
+   "old": "05bf716",
+   "new": "9b734fa"
+  }
+ ],
+ "limits": [
+  "The three HIPAA rows rest on a public mirror (Cornell LII) of 45 CFR 164.312, not on the official eCFR text, so the fixed rubric caps them at PARTIAL.",
+  "Receipts come from a LOCAL scratch node whose signing key is a throwaway made for E1. They verify offline on that node. No live node and no witness is involved.",
+  "The crypto inventory is one observation from one client (OpenSSL 3.5) at one network position on one day. The hybrid key exchange it shows is supplied by the hosting platforms, not by Entropa.",
+  "The CBOM is checked structurally against the parts of CycloneDX 1.6 we emit; it is not validated with the official JSON Schema (no validator is installed).",
+  "The log-integrity demonstration uses a dedicated demo node. No production ledger was copied or changed. Separate storage and key sharing in production are STATED, not measured.",
+  "Evidence kinds E1 does not produce (policy documents, retention, key lifecycle, alerting, review records, distinct signing keys) are absent, so rows that need them cannot be MET.",
+  "Register quotes are at most 25 words; a clause must be read in full in its source to be interpreted.",
+  "Dated note (2026-11-13, added after review): after the 2026-11-13 inventory, hippagrchealthcare.site was retired (hosting site deleted, DNS kept) and bigironbank.online is being retired; the 2026-11-13 inventory is kept as the dated record of what existed then.",
+  "This is revision 2 of the report: it adds the dated note above. Statuses, rubric and evidence are unchanged. Revision 1, the version outcome-E1 was bound to, is kept as controls-report-at-outcome.json and .md."
+ ]
+}

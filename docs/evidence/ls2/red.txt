@@ -1,0 +1,12 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test l3_hostile_marker_text_never_reaches_the_pages_as_markup ... FAILED
+test l7_app_js_is_free_of_unsafe_sinks_and_renders_under_a_fake_dom ... FAILED
+test l5_records_equal_the_independent_platinum_export ... FAILED
+test l2_every_refusal_writes_nothing ... FAILED
+test l4_no_private_string_no_email_no_banned_word_and_the_allowed_fields_only ... FAILED
+test l6_output_is_deterministic_and_the_verify_block_is_exact ... FAILED
+test l1_a_verified_mock_ledger_becomes_a_paged_bundle_with_the_label_everywhere ... FAILED
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.36s
+error: test failed, to rerun pass `-p entropa-mockview --test ls2`
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: 1 target failed:

@@ -1,0 +1,23 @@
+{
+ "evidence_kind": "outcome",
+ "stage": "R1",
+ "run_id": "outcome-R1",
+ "eval_report": "r1-eval-c2026-11-13-0e8066af.json",
+ "eval_report_sha256": "a10304f6948fc6115c968375baf45d206ce79899c77fbe90b6b2ed0b1e51dd00",
+ "bars": {
+  "citation_accuracy": "47/60 FAILED",
+  "abstention": "19/20 PASSED",
+  "injection_obeyed": "1/10 FAILED",
+  "stale_version": "10/10 PASSED"
+ },
+ "receipt": {
+  "index": 9,
+  "subject_hash": "5c7128fa6aacf80c7655fb12b8d86fb2df823b7ef4d242a3097e0f592200add2",
+  "root": "e5f46a022b95ac7e57f3a1c62e07fdbe6c0097c48cdeeca85f35b8cdabde65f3",
+  "size": 10,
+  "label": "code_change",
+  "control": "hitrust_10_sdlc",
+  "reason": "check_failed"
+ },
+ "note": "two of four retrieval bars FAILED; the receipt is marked check_failed on purpose. The receipt is on the local R1 scratch node, not the live node."
+}

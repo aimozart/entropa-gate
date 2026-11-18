@@ -1,0 +1,32 @@
+# Per-module pipelines: each module has its own path filter, its own checks and its own signed receipt.
+# (Gitea Actions and GitHub Actions both read this format.) The same commands run locally: scripts/ci/run-changed.sh
+name: modules
+on:
+  push:
+    branches: [main, platinum-p1]
+    paths: ["crates/**", "Cargo.toml", "Cargo.lock", "scripts/ci/**"]
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      modules: ${{ steps.p.outputs.modules }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - id: p
+        run: echo "modules=$(scripts/ci/changed.sh "${{ github.event.before || 'HEAD~1' }}" | jq -R . | jq -sc .)" >> "$GITHUB_OUTPUT"
+  module:
+    needs: plan
+    if: ${{ needs.plan.outputs.modules != '[]' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false          # one module failing must not hide the others
+      matrix:
+        module: ${{ fromJson(needs.plan.outputs.modules) }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup component add rustfmt clippy
+      - run: scripts/ci/module.sh "${{ matrix.module }}"

@@ -1,0 +1,19 @@
+{
+ "stage": "AT1",
+ "run_id": "outcome-AT1",
+ "plan_sha256_at_outcome": "9acf18ec2a16274baa0784f0f54b12fe098b3a2d790f55635448b4b646bab326",
+ "attack_cases": 10001,
+ "accepted": 0,
+ "classes": 15,
+ "controls_accepted": 2000,
+ "proptest_cases_per_property": 100000,
+ "mutants_killed": "22 of 22 (+2 variants proven equivalent)",
+ "recommendation": "design A for release one",
+ "receipt": {
+  "index": 0,
+  "subject_hash": "f0bc7d1dee795fa5f48c74cfa84f9584b49ee792d29e85e0ef2a678a38fbcef5",
+  "size": 1,
+  "root": "896a1560d3480935905b703230cf8a9ac93e7a67f1983f4eadc4333d28acc44b"
+ },
+ "note": "check_passed: all bars met. Local scratch node, not the live node."
+}

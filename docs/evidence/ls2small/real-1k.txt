@@ -1,0 +1,7 @@
+OK records=1000 pages=5 bytes=25577726 key_id=847598c75221fe53
+ledger.tar bytes: 24990720
+page part bytes: 587006
+OK records=1000 checkpoints=1000
+reader verify wall 0.26s
+key file in tar: 0
+4 distinct (kind,decision,reason): {('evidence.policy', 'allow', 'within_limits'): 612, ('evidence.policy', 'deny', 'gate_denied'): 186, ('evidence.policy', 'deny', 'guard_refused'): 112, ('evidence.policy', 'deny', 'policy_deny'): 90}

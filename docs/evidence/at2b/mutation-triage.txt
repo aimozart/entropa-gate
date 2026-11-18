@@ -1,0 +1,11 @@
+cargo-mutants 27.1.0, crates/tiers/src/adapters.rs + lib.rs, jobs 1, release tests (--test at2 --test at2b), 6 GB cap.
+Run 1: 73 mutants in 3 min: 46 caught, 10 missed, 17 unviable (output dir <build-dir>/at2b-mut1, outside the repo).
+Survivors and disposition:
+ lib.rs:250 request_hash -> "xyzzy": killed by tests/record_hash.rs (AT2), which run 1 did not include; caught in run 2.
+ adapters.rs:47 `>` -> `>=` calls_last_minute: killed by s1 (exactly 60 s). 
+ adapters.rs:76 `==` -> `!=` release: killed by s2.
+ adapters.rs:201, 205, 206 (reason_for), 218, 243 (decision, passed/flagged): killed by s3, s4 (stored events decoded back).
+ adapters.rs:173 Dyn::algorithm -> "" and "xyzzy": ARGUED, not killed: no code in entropa-core or entropa-ledger reads `algorithm()` on this signing path (grep of `.algorithm()` finds none), the checkpoint and event formats carry no algorithm label here, and Dyn is private, so no test can observe it. 2 survivors listed.
+Run 2 (the 13 mutants above with record_hash and at2b_survivors added): 11 caught, 2 missed (the Dyn::algorithm pair). Each of s1..s4 was seen to fail against its mutant in this run.
+Not mutated / not examined: tests/at2b_battery.rs and the other heavy tests are not in the mutation test set (time); 17 unviable are as reported by the tool (single job under the cap, no runaway mutant seen).
+Final: 54 caught, 2 argued equivalent, 17 unviable of 73; score caught / (caught + missed) = 54/56 = 96.4 percent, 100 percent after the argument.

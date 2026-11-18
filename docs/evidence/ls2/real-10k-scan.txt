@@ -1,0 +1,13 @@
+banned words (case-insens, excluding the HITRUST control name):
+0
+email-shaped:
+0
+AKIA/PEM/key:
+0
+raw < > & in json:
+0
+distinct plain sentences (first 5 of unique):
+2 distinct
+  6210 The policy gate allowed a proposed action. Supports HITRUST access control.
+  3790 The policy gate refused a proposed action. Supports HITRUST access control.
+{"label":"mock data, real signed records","page":1,"pages":50,"records":[{"index":0,"ts":1800000000,"plain":"The policy gate allowed a proposed action. Supports HITRUST access control.","kind":"evidence.policy","label":"policy_verdict","decision":"allow","reason":"within_limits","control":"hitrust_01_access_control","total":1,"passed":1,"flagged":0,"subject_hash":"2a3c4a3066fa97ceadf4db07a720217c96482b25176a3f45de76c78473d39735","leaf_hash":"32a5cbde0b50da9592c3fcf4d4c92b13c0988e6061dbbeec2e60f4c7cb16a510","key_id":"5141c3f819d14559","checkpoint_size":1,"checkpoint_root":"32a5cbde0b50da9592c3fcf4d4c92b13c0988e6061dbbeec2e60f4c7cb16a510"},{"index":1,"ts":1800000007,"plain":"The policy gate al

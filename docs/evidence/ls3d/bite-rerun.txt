@@ -1,0 +1,3 @@
+or_close alone accepts a response: KILLED by s15 
+stats totals ignored: KILLED by s15 
+hold never expires: KILLED by s12 

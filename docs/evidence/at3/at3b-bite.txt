@@ -1,0 +1,5 @@
+approvals not re-verified (every live approval counts) => v2_an_approver_token_expired_at_activation_or_a_stale_list_d v1_an_approver_revoked_after_approving_does_not_count b1_battery_revoked_after_approving_300_none_activated_and_30 result: FAILED. 5 passed; 3 failed; 0 ignored; 0 measured; 0 
+activator token not verified (token step skipped via junk accepted) => error[E0425]: cannot find value `ALL_CLASSES` in this scope 
+abort removed => v5_a_record_failure_aborts_the_reservation_so_a_retry_succee result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 
+prepare skipped (legacy append path) => v4_a_lost_race_writes_exactly_one_allowed_activation_record result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 
+activator token not verified => v3_activation_needs_a_valid_t3_token_naming_the_class v6_the_activation_record_names_the_activator_by_hash_only v2_an_approver_token_expired_at_activation_or_a_stale_list_d result: FAILED. 5 passed; 3 failed; 0 ignored; 0 measured; 0 

@@ -1,0 +1,20 @@
+ok   e1-clean-export
+ok   e2-refuses-crates/x/src/lib.rs
+ok   e2-refuses-.env
+ok   e2-refuses-docs/secret.key
+ok   e2-refuses-target/x.md
+ok   e2-refuses-docs/standards-store/c1.json
+ok   e3-refuses-../x
+ok   e3-refuses-/etc/passwd
+ok   e3-refuses-docs/../crates/x/src/lib.rs
+ok   e4-email
+ok   e5-banned-word
+ok   e6-secret-shape
+ok   e10-licensed-marker
+ok   e7-rag-branch
+ok   e8-tracked-only
+ok   e9-existing-output
+ok   e11-symlink
+ok   e13-empty-allowlist
+ok   e13-untracked-entry
+RESULT: 19 passed, 0 failed; scratch <build-dir>/tmpdir/export-test.URTKid

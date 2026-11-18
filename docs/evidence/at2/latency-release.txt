@@ -1,0 +1,7 @@
+T0 allow read_corpus: p50 0.2890 ms, p95 0.3083 ms
+T0 deny call_model: p50 0.2849 ms, p95 0.2954 ms
+T1 allow call_model: p50 0.2889 ms, p95 0.3016 ms
+T1 deny call_tool: p50 0.2830 ms, p95 0.2922 ms
+T2 allow call_tool: p50 0.2905 ms, p95 0.3022 ms
+T2 deny unknown action: p50 0.2847 ms, p95 0.2962 ms
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.47s

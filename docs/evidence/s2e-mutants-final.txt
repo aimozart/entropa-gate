@@ -1,0 +1,15 @@
+Found 185 mutants to test
+ok       Unmutated baseline in 8s build + 1s test
+ INFO Auto-set test timeout to 20s
+MISSED   crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 0 in 0s build + 1s test
+MISSED   crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 1 in 0s build + 1s test
+MISSED   crates/mcp/src/main.rs:156:56: replace * with + in main in 0s build + 2s test
+TIMEOUT  crates/mcp/src/main.rs:156:56: replace * with / in main in 1s build + 20s test
+MISSED   crates/mcp/src/verify.rs:153:28: replace < with <= in explain_proof in 0s build + 1s test
+185 mutants tested in 2m: 4 missed, 151 caught, 29 unviable, 1 timeouts
+# final run (after tests in mutation_gaps.rs and protocol.rs): 185 mutants, 151 caught, 4 missed, 29 unviable, 1 timeout (detected hang)
+# accepted survivors: main.rs now_ms -> 0/1 (needs 60 s of real time to observe); main.rs:156 duplex buffer size arithmetic (any non-zero size works); verify.rs:153 '<' vs '<=' at an exact 3500-byte boundary (equivalent).
+crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 0
+crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 1
+crates/mcp/src/main.rs:156:56: replace * with + in main
+crates/mcp/src/verify.rs:153:28: replace < with <= in explain_proof

@@ -1,0 +1,12 @@
+FMT_OK
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.48s
+   Generated /work/target/doc/entropa_api/index.html and 9 other files
+advisories ok, bans ok, licenses ok, sources ok
+      Loaded 1348 security advisories (from /cargo/advisory-db)
+    Updating crates.io index
+    Scanning Cargo.lock for vulnerabilities (385 crate dependencies)
+witness tests: green guards
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+rest of workspace:
+passed 490 failed 0

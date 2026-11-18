@@ -1,0 +1,58 @@
+# Entropa — a post-quantum, signed Merkle transparency log for AI-agent activity.
+# Pseudonymous project by aimozart. Rust cargo workspace.
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/api",
+    "crates/kms",
+    "crates/mcp",
+    "crates/approvals",
+    "crates/policy",
+    "crates/witness",
+    "crates/ledger",
+    "crates/explorer",
+    "crates/council",
+    "crates/synthetic",
+    "crates/platinum",
+    "crates/contact",
+    "crates/witnessd",
+    "crates/standards",
+    "crates/egress",
+    "crates/tokens",
+    "crates/gate",
+    "crates/tiers",
+    "crates/nodecore",
+    "crates/release",
+    "crates/mockview",
+    "crates/try",
+    "crates/try-http",
+]
+
+[workspace.package]
+version = "0.2.0"
+edition = "2021"
+authors = ["aimozart"]
+license = "Apache-2.0"
+repository = "https://github.com/aimozart/entropa-gate"
+
+[workspace.dependencies]
+blake3 = "1"
+sha3 = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+hex = "0.4"
+thiserror = "2"
+base64 = "0.22"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"
+dbg_macro = "deny"
+todo = "deny"
+unimplemented = "deny"

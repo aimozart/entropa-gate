@@ -1,0 +1,2 @@
+S4d: mutation 140 mutants, first run 123 caught / 4 missed (size and count limits at the edge), after b7/b8: 127 caught / 0 missed / 13 unviable.
+g3 red before gating (constructors not behind the feature): panicked at feature_guard.rs, Option::unwrap on None; g1/g2 passed at once (manifest already right, guards).

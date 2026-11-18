@@ -1,0 +1,10 @@
+{
+  "core":      {"packages": ["entropa-core"],                      "paths": ["crates/core/"],      "release": null},
+  "kms":       {"packages": ["entropa-kms"],                       "paths": ["crates/kms/"],       "release": null},
+  "ledger":    {"packages": ["entropa-ledger"],                    "paths": ["crates/ledger/"],    "release": null},
+  "witness":   {"packages": ["entropa-witness", "entropa-witnessd"], "paths": ["crates/witness/", "crates/witnessd/"], "release": "scripts/deploy-witness-azure.sh apply (Azure) / docs/aws-rbac/06-witness-lambda.sh (AWS)"},
+  "platinum":  {"packages": ["entropa-platinum"],                  "paths": ["crates/platinum/"],  "release": "scripts/deploy-platinum.sh all"},
+  "contact":   {"packages": ["entropa-contact"],                   "paths": ["crates/contact/"],   "release": "scripts/deploy-contact.sh all"},
+  "council":   {"packages": ["entropa-council"],                   "paths": ["crates/council/"],   "release": null},
+  "governance":{"packages": ["entropa-approvals", "entropa-policy", "the agent guard", "entropa-mcp"], "paths": ["crates/approvals/", "crates/policy/", "the agent guard (not published)", "crates/mcp/"], "release": null}
+}

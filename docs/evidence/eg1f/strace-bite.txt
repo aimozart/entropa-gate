@@ -1,0 +1,1 @@
+strace bite: a program that opens one socket is counted: network syscalls = 1

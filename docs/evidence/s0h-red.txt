@@ -1,0 +1,9 @@
+FAIL default --memory=24g missing
+FAIL default --memory-swap=24g missing
+FAIL default --cpus=12 missing
+FAIL default --pids-limit=4096 missing
+FAIL override --memory=512m missing
+FAIL override --memory-swap=512m missing
+FAIL override --cpus=2 missing
+FAIL override --pids-limit=64 missing
+SKIP bombs: the limit flags are missing, refusing to run anything uncapped

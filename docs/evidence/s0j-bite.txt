@@ -1,0 +1,7 @@
+# S0j: the preflight step bites (a pattern removed from .gitignore makes it fail); the real .gitignore is restored afterwards
+## without *.pem:
+FAIL NOT ignored: server.pem
+NOT IGNORED: server.pem
+PREFLIGHT FAIL
+## restored:
+PREFLIGHT PASS

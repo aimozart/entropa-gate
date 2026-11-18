@@ -1,0 +1,8 @@
+cargo-mutants exit 3
+caught: 618  missed: 226  timeout: 9  unviable: 44
+--- caught only by SIGKILL (non-terminating, NOT counted as caught):
+crates__egress__src__views.rs_line_207_col_15.log
+crates__egress__src__views.rs_line_211_col_15_001.log
+crates__egress__src__views.rs_line_224_col_28.log
+crates__egress__src__views.rs_line_225_col_11.log
+DONE

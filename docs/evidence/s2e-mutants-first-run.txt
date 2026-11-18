@@ -1,0 +1,36 @@
+crates/mcp/src/lib.rs:61:9: replace CallOutcome::is_not_implemented -> bool with false
+crates/mcp/src/lib.rs:79:5: replace hex_schema -> Value with Default::default()
+crates/mcp/src/lib.rs:83:5: replace checkpoint_schema -> Value with Default::default()
+crates/mcp/src/lib.rs:97:5: replace receipt_schema -> Value with Default::default()
+crates/mcp/src/main.rs:19:41: replace * with +
+crates/mcp/src/main.rs:19:41: replace * with /
+crates/mcp/src/main.rs:19:34: replace * with +
+crates/mcp/src/main.rs:19:34: replace * with /
+crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 0
+crates/mcp/src/main.rs:27:5: replace now_ms -> u64 with 1
+crates/mcp/src/main.rs:34:5: replace schema_object -> Arc<JsonObject> with Arc::new(Default::default())
+crates/mcp/src/main.rs:35:9: delete match arm Value::Object(m) in schema_object
+crates/mcp/src/main.rs:65:32: replace >= with < in <impl ServerHandler for EntropaMcp>::list_tools
+crates/mcp/src/main.rs:116:19: replace > with == in load_source
+crates/mcp/src/main.rs:116:19: replace > with < in load_source
+crates/mcp/src/main.rs:116:19: replace > with >= in load_source
+crates/mcp/src/main.rs:156:56: replace * with + in main
+crates/mcp/src/args.rs:8:41: replace - with +
+crates/mcp/src/args.rs:8:41: replace - with /
+crates/mcp/src/config.rs:35:34: replace > with >= in Config::from_vars
+crates/mcp/src/lines.rs:10:40: replace * with +
+crates/mcp/src/source.rs:52:9: replace <impl LogSource for FileSource>::kind -> &'static str with ""
+crates/mcp/src/source.rs:52:9: replace <impl LogSource for FileSource>::kind -> &'static str with "xyzzy"
+crates/mcp/src/verify.rs:20:49: replace > with >= in clip
+crates/mcp/src/verify.rs:87:28: replace < with == in verify_receipt
+crates/mcp/src/verify.rs:87:28: replace < with > in verify_receipt
+crates/mcp/src/verify.rs:87:28: replace < with <= in verify_receipt
+crates/mcp/src/verify.rs:95:65: replace && with || in verify_receipt
+crates/mcp/src/verify.rs:117:5: replace short -> String with String::new()
+crates/mcp/src/verify.rs:117:5: replace short -> String with "xyzzy".into()
+crates/mcp/src/verify.rs:144:30: replace == with != in explain_proof
+crates/mcp/src/verify.rs:153:28: replace < with == in explain_proof
+crates/mcp/src/verify.rs:153:28: replace < with > in explain_proof
+crates/mcp/src/verify.rs:153:28: replace < with <= in explain_proof
+crates/mcp/src/verify.rs:172:12: delete ! in explain_proof
+# first run: 185 mutants, 120 caught, 35 missed, 29 unviable, 1 timeout (missed list above)

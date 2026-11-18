@@ -1,0 +1,5 @@
+ok   no failure: one npm ci, then the build
+ok   one timeout: retried once, build runs
+ok   the retry is announced as a network retry
+ok   two timeouts: retried twice, build runs
+ok   three timeouts: gives up after 3 attempts and fails, no build

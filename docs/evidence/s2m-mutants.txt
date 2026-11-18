@@ -1,0 +1,23 @@
+Found 414 mutants to test
+ok       Unmutated baseline in 1s build + 0s test
+TIMEOUT  crates/hook/src/bash.rs:72:32: replace + with - in scan_text in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:133:15: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:139:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:144:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:144:27: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:153:23: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:159:19: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:162:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:167:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:167:27: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:173:68: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:175:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:177:23: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:177:23: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:182:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:187:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:187:27: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:416:15: replace += with *= in after_options in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:797:92: replace += with *= in git_rules in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:798:42: replace += with *= in git_rules in 0s build + 30s test
+414 mutants tested in 7m: 392 caught, 2 unviable, 20 timeouts

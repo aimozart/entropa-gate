@@ -1,0 +1,58 @@
+== host, static binary 4a74a15cfc7af705..., 5 runs
+host-1: init                                 0.002 s
+host-1: record x3                            0.012 s
+host-1: verify (expect OK records=3)         0.004 s  ok
+host-1: tampered copy fails                  0.012 s  ok
+host-1: explorer, intact -> OK page          0.005 s  ok
+host-1: explorer, tampered -> FAIL page      0.003 s  ok
+host-1: licence check OK                     0.003 s  ok
+host-1: tampered licence refused             0.010 s  ok
+host-1: TOTAL install to last check          0.052 s
+host-2: init                                 0.002 s
+host-2: record x3                            0.011 s
+host-2: verify (expect OK records=3)         0.004 s  ok
+host-2: tampered copy fails                  0.012 s  ok
+host-2: explorer, intact -> OK page          0.005 s  ok
+host-2: explorer, tampered -> FAIL page      0.003 s  ok
+host-2: licence check OK                     0.003 s  ok
+host-2: tampered licence refused             0.010 s  ok
+host-2: TOTAL install to last check          0.051 s
+host-3: init                                 0.002 s
+host-3: record x3                            0.016 s
+host-3: verify (expect OK records=3)         0.005 s  ok
+host-3: tampered copy fails                  0.012 s  ok
+host-3: explorer, intact -> OK page          0.005 s  ok
+host-3: explorer, tampered -> FAIL page      0.006 s  ok
+host-3: licence check OK                     0.004 s  ok
+host-3: tampered licence refused             0.011 s  ok
+host-3: TOTAL install to last check          0.060 s
+host-4: init                                 0.003 s
+host-4: record x3                            0.011 s
+host-4: verify (expect OK records=3)         0.004 s  ok
+host-4: tampered copy fails                  0.012 s  ok
+host-4: explorer, intact -> OK page          0.005 s  ok
+host-4: explorer, tampered -> FAIL page      0.004 s  ok
+host-4: licence check OK                     0.003 s  ok
+host-4: tampered licence refused             0.010 s  ok
+host-4: TOTAL install to last check          0.053 s
+host-5: init                                 0.002 s
+host-5: record x3                            0.011 s
+host-5: verify (expect OK records=3)         0.004 s  ok
+host-5: tampered copy fails                  0.013 s  ok
+host-5: explorer, intact -> OK page          0.005 s  ok
+host-5: explorer, tampered -> FAIL page      0.004 s  ok
+host-5: licence check OK                     0.003 s  ok
+host-5: tampered licence refused             0.010 s  ok
+host-5: TOTAL install to last check          0.053 s
+== container entropa-gate:s1-4a74a15cfc7a, --read-only --network none --cap-drop ALL, 1 run
+container-1: init                            0.127 s
+container-1: record x3                       0.360 s
+container-1: verify (expect OK records=3)    0.120 s  ok
+container-1: tampered copy fails             0.131 s  ok
+container-1: explorer, intact -> OK page     0.122 s  ok
+container-1: explorer, tampered -> FAIL page 0.125 s  ok
+container-1: licence check OK                0.125 s  ok
+container-1: tampered licence refused        0.124 s  ok
+container-1: TOTAL install to last check     1.235 s
+scratch directory left in place: /tmp/s1-install.s1AVV3
+INSTALL TEST: ALL STEPS OK

@@ -1,0 +1,365 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "abuse": {
+      "actions": {
+        "allow": 35,
+        "block": 265
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "attachment_many": {
+          "cases": 29,
+          "failed": 0
+        },
+        "attachment_type": {
+          "cases": 23,
+          "failed": 0
+        },
+        "bad_utf8": {
+          "cases": 26,
+          "failed": 0
+        },
+        "bomb": {
+          "cases": 35,
+          "failed": 0
+        },
+        "deep": {
+          "cases": 23,
+          "failed": 0
+        },
+        "dup_keys": {
+          "cases": 26,
+          "failed": 0
+        },
+        "nul": {
+          "cases": 24,
+          "failed": 0
+        },
+        "oversize": {
+          "cases": 28,
+          "failed": 0
+        },
+        "t0": {
+          "cases": 30,
+          "failed": 0
+        },
+        "truncated_json": {
+          "cases": 31,
+          "failed": 0
+        },
+        "wide": {
+          "cases": 25,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "clean": {
+      "actions": {
+        "allow": 300
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "code": {
+          "cases": 103,
+          "failed": 0
+        },
+        "mixed": {
+          "cases": 52,
+          "failed": 0
+        },
+        "prose": {
+          "cases": 145,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "destination": {
+      "actions": {
+        "block": 300
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "body_dns": {
+          "cases": 64,
+          "failed": 0
+        },
+        "body_path": {
+          "cases": 32,
+          "failed": 0
+        },
+        "body_query": {
+          "cases": 22,
+          "failed": 0
+        },
+        "body_userinfo": {
+          "cases": 22,
+          "failed": 0
+        },
+        "destination": {
+          "cases": 160,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "personal": {
+      "actions": {
+        "allow": 44,
+        "block": 177,
+        "redact": 87
+      },
+      "cases": 308,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "card_embedded": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_formatted": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_plain": {
+          "cases": 22,
+          "failed": 0
+        },
+        "dob": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email_obf": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "phone": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn_obf": {
+          "cases": 22,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.009679255008705256
+    },
+    "secrets": {
+      "actions": {
+        "allow": 2,
+        "block": 310
+      },
+      "cases": 312,
+      "failed": 2,
+      "failed_ids": [
+        "secrets-196",
+        "secrets-198"
+      ],
+      "families": {
+        "attachment": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base32": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base64": {
+          "cases": 13,
+          "failed": 0
+        },
+        "case": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain2": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain3": {
+          "cases": 13,
+          "failed": 0
+        },
+        "conn": {
+          "cases": 13,
+          "failed": 0
+        },
+        "entity": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_u": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_x": {
+          "cases": 13,
+          "failed": 0
+        },
+        "hex": {
+          "cases": 13,
+          "failed": 0
+        },
+        "homoglyph": {
+          "cases": 13,
+          "failed": 0
+        },
+        "json_arg": {
+          "cases": 13,
+          "failed": 0
+        },
+        "jwt": {
+          "cases": 13,
+          "failed": 0
+        },
+        "percent": {
+          "cases": 13,
+          "failed": 0
+        },
+        "plain": {
+          "cases": 13,
+          "failed": 0
+        },
+        "private_key": {
+          "cases": 13,
+          "failed": 0
+        },
+        "reverse": {
+          "cases": 13,
+          "failed": 0
+        },
+        "rot13": {
+          "cases": 13,
+          "failed": 0
+        },
+        "separators": {
+          "cases": 13,
+          "failed": 2
+        },
+        "split_fields": {
+          "cases": 13,
+          "failed": 0
+        },
+        "split_tail": {
+          "cases": 13,
+          "failed": 0
+        },
+        "url_query": {
+          "cases": 13,
+          "failed": 0
+        },
+        "zero_width": {
+          "cases": 13,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.019185474468775346
+    },
+    "terms": {
+      "actions": {
+        "allow": 35,
+        "block": 265
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "clean_decoy": {
+          "cases": 35,
+          "failed": 0
+        },
+        "marker_banner": {
+          "cases": 33,
+          "failed": 0
+        },
+        "marker_keyed": {
+          "cases": 34,
+          "failed": 0
+        },
+        "term_b64": {
+          "cases": 23,
+          "failed": 0
+        },
+        "term_case": {
+          "cases": 26,
+          "failed": 0
+        },
+        "term_homoglyph": {
+          "cases": 27,
+          "failed": 0
+        },
+        "term_plain": {
+          "cases": 57,
+          "failed": 0
+        },
+        "term_sep": {
+          "cases": 30,
+          "failed": 0
+        },
+        "term_zero": {
+          "cases": 35,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    }
+  },
+  "standards_clauses": {
+    "actions": {
+      "allow": 1500,
+      "redact": 2
+    },
+    "by_detector": {
+      "D5.email": {
+        "clauses": 2,
+        "ids": [
+          "NIST-SP-800-53:AC-4(20)",
+          "NIST-SP-800-53:SC-46"
+        ]
+      },
+      "D6": {
+        "clauses": 1,
+        "ids": [
+          "NIST-SP-800-53:PM-17"
+        ]
+      }
+    },
+    "clauses": 1502
+  }
+}

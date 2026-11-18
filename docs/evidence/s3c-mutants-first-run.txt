@@ -1,0 +1,18 @@
+crates/approvals/src/lib.rs:74:9: replace ActionClass::is_hard_rule -> bool with false
+crates/approvals/src/lib.rs:248:9: replace <impl std::fmt::Display for ApprovalError>::fmt -> std::fmt::Result with Ok(Default::default())
+crates/approvals/src/codec.rs:8:37: replace - with +
+crates/approvals/src/codec.rs:8:37: replace - with /
+crates/approvals/src/codec.rs:21:22: replace match guard !bytes.is_empty() with true in key_id
+crates/approvals/src/codec.rs:95:13: replace > with == in validate
+crates/approvals/src/codec.rs:95:13: replace > with >= in validate
+crates/approvals/src/codec.rs:99:20: replace match guard !lower_hex(s, len) with false in validate
+crates/approvals/src/codec.rs:295:9: replace || with && in decode
+crates/approvals/src/codec.rs:294:9: replace || with && in decode
+crates/approvals/src/codec.rs:293:9: replace || with && in decode
+crates/approvals/src/codec.rs:293:22: replace > with < in decode
+crates/approvals/src/replay.rs:100:13: replace > with >= in apply
+crates/approvals/src/replay.rs:111:17: replace || with && in apply
+crates/approvals/src/replay.rs:111:63: replace == with != in apply
+crates/approvals/src/replay.rs:155:21: replace > with >= in apply
+crates/approvals/src/replay.rs:192:12: replace > with >= in evaluate
+# first run: 145 mutants, 116 caught, 17 missed, 12 unviable

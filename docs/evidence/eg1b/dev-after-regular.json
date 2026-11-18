@@ -1,0 +1,463 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "abuse": {
+      "actions": {
+        "allow": 35,
+        "block": 265
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "attachment_many": {
+          "cases": 29,
+          "failed": 0
+        },
+        "attachment_type": {
+          "cases": 23,
+          "failed": 0
+        },
+        "bad_utf8": {
+          "cases": 26,
+          "failed": 0
+        },
+        "bomb": {
+          "cases": 35,
+          "failed": 0
+        },
+        "deep": {
+          "cases": 23,
+          "failed": 0
+        },
+        "dup_keys": {
+          "cases": 26,
+          "failed": 0
+        },
+        "nul": {
+          "cases": 24,
+          "failed": 0
+        },
+        "oversize": {
+          "cases": 28,
+          "failed": 0
+        },
+        "t0": {
+          "cases": 30,
+          "failed": 0
+        },
+        "truncated_json": {
+          "cases": 31,
+          "failed": 0
+        },
+        "wide": {
+          "cases": 25,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "clean": {
+      "actions": {
+        "allow": 272,
+        "block": 28
+      },
+      "cases": 300,
+      "failed": 28,
+      "failed_ids": [
+        "clean-015",
+        "clean-034",
+        "clean-046",
+        "clean-063",
+        "clean-071",
+        "clean-075",
+        "clean-077",
+        "clean-083",
+        "clean-085",
+        "clean-102",
+        "clean-113",
+        "clean-134",
+        "clean-137",
+        "clean-139",
+        "clean-140",
+        "clean-161",
+        "clean-171",
+        "clean-175",
+        "clean-207",
+        "clean-212",
+        "clean-223",
+        "clean-225",
+        "clean-230",
+        "clean-236",
+        "clean-239",
+        "clean-255",
+        "clean-268",
+        "clean-270"
+      ],
+      "families": {
+        "code": {
+          "cases": 103,
+          "failed": 0
+        },
+        "mixed": {
+          "cases": 52,
+          "failed": 8
+        },
+        "prose": {
+          "cases": 145,
+          "failed": 20
+        }
+      },
+      "upper95_of_failure_rate": 0.12471203226892463
+    },
+    "destination": {
+      "actions": {
+        "block": 300
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "body_dns": {
+          "cases": 64,
+          "failed": 0
+        },
+        "body_path": {
+          "cases": 32,
+          "failed": 0
+        },
+        "body_query": {
+          "cases": 22,
+          "failed": 0
+        },
+        "body_userinfo": {
+          "cases": 22,
+          "failed": 0
+        },
+        "destination": {
+          "cases": 160,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "personal": {
+      "actions": {
+        "allow": 44,
+        "block": 177,
+        "redact": 87
+      },
+      "cases": 308,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "card_embedded": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_formatted": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_plain": {
+          "cases": 22,
+          "failed": 0
+        },
+        "dob": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email_obf": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "phone": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn_obf": {
+          "cases": 22,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.009679255008705256
+    },
+    "secrets": {
+      "actions": {
+        "block": 312
+      },
+      "cases": 312,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "attachment": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base32": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base64": {
+          "cases": 13,
+          "failed": 0
+        },
+        "case": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain2": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain3": {
+          "cases": 13,
+          "failed": 0
+        },
+        "conn": {
+          "cases": 13,
+          "failed": 0
+        },
+        "entity": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_u": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_x": {
+          "cases": 13,
+          "failed": 0
+        },
+        "hex": {
+          "cases": 13,
+          "failed": 0
+        },
+        "homoglyph": {
+          "cases": 13,
+          "failed": 0
+        },
+        "json_arg": {
+          "cases": 13,
+          "failed": 0
+        },
+        "jwt": {
+          "cases": 13,
+          "failed": 0
+        },
+        "percent": {
+          "cases": 13,
+          "failed": 0
+        },
+        "plain": {
+          "cases": 13,
+          "failed": 0
+        },
+        "private_key": {
+          "cases": 13,
+          "failed": 0
+        },
+        "reverse": {
+          "cases": 13,
+          "failed": 0
+        },
+        "rot13": {
+          "cases": 13,
+          "failed": 0
+        },
+        "separators": {
+          "cases": 13,
+          "failed": 0
+        },
+        "split_fields": {
+          "cases": 13,
+          "failed": 0
+        },
+        "split_tail": {
+          "cases": 13,
+          "failed": 0
+        },
+        "url_query": {
+          "cases": 13,
+          "failed": 0
+        },
+        "zero_width": {
+          "cases": 13,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.009555756807037352
+    },
+    "terms": {
+      "actions": {
+        "allow": 35,
+        "block": 265
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "clean_decoy": {
+          "cases": 35,
+          "failed": 0
+        },
+        "marker_banner": {
+          "cases": 33,
+          "failed": 0
+        },
+        "marker_keyed": {
+          "cases": 34,
+          "failed": 0
+        },
+        "term_b64": {
+          "cases": 23,
+          "failed": 0
+        },
+        "term_case": {
+          "cases": 26,
+          "failed": 0
+        },
+        "term_homoglyph": {
+          "cases": 27,
+          "failed": 0
+        },
+        "term_plain": {
+          "cases": 57,
+          "failed": 0
+        },
+        "term_sep": {
+          "cases": 30,
+          "failed": 0
+        },
+        "term_zero": {
+          "cases": 35,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    }
+  },
+  "standards_clauses": {
+    "actions": {
+      "allow": 1434,
+      "block": 66,
+      "redact": 2
+    },
+    "by_detector": {
+      "D1": {
+        "clauses": 66,
+        "ids": [
+          "DORA-RTS:Art.25",
+          "DORA-RTS:Art.28",
+          "DORA-RTS:Art.3",
+          "DORA-RTS:Art.31",
+          "EU-AI-ACT:Annex VII",
+          "EU-AI-ACT:Art.10",
+          "EU-AI-ACT:Art.11",
+          "EU-AI-ACT:Art.12",
+          "EU-AI-ACT:Art.13",
+          "EU-AI-ACT:Art.14",
+          "EU-AI-ACT:Art.16",
+          "EU-AI-ACT:Art.17",
+          "EU-AI-ACT:Art.22",
+          "EU-AI-ACT:Art.23",
+          "EU-AI-ACT:Art.24",
+          "EU-AI-ACT:Art.25",
+          "EU-AI-ACT:Art.26",
+          "EU-AI-ACT:Art.27",
+          "EU-AI-ACT:Art.31",
+          "EU-AI-ACT:Art.34",
+          "EU-AI-ACT:Art.36",
+          "EU-AI-ACT:Art.43",
+          "EU-AI-ACT:Art.46",
+          "EU-AI-ACT:Art.47",
+          "EU-AI-ACT:Art.48",
+          "EU-AI-ACT:Art.52",
+          "EU-AI-ACT:Art.53",
+          "EU-AI-ACT:Art.55",
+          "EU-AI-ACT:Art.56",
+          "EU-AI-ACT:Art.57",
+          "EU-AI-ACT:Art.59",
+          "EU-AI-ACT:Art.6",
+          "EU-AI-ACT:Art.65",
+          "EU-AI-ACT:Art.66",
+          "EU-AI-ACT:Art.68",
+          "EU-AI-ACT:Art.7",
+          "EU-AI-ACT:Art.70",
+          "EU-AI-ACT:Art.73",
+          "EU-AI-ACT:Art.74",
+          "EU-AI-ACT:Art.75",
+          "EU-AI-ACT:Art.79",
+          "EU-AI-ACT:Art.80",
+          "EU-AI-ACT:Art.86",
+          "EU-AI-ACT:Art.88",
+          "EU-AI-ACT:Art.9",
+          "EU-AI-ACT:Art.92",
+          "NIST-SP-800-53:AC-2(9)",
+          "NIST-SP-800-53:AU-14",
+          "NIST-SP-800-53:AU-2",
+          "NIST-SP-800-53:AU-3",
+          "NIST-SP-800-53:CM-3",
+          "NIST-SP-800-53:IA-2(5)",
+          "NIST-SP-800-53:IA-5(17)",
+          "NIST-SP-800-53:IA-6",
+          "NIST-SP-800-53:IR-4(10)",
+          "NIST-SP-800-53:MP-6(3)",
+          "NIST-SP-800-53:PT-2",
+          "NIST-SP-800-53:PT-3",
+          "NIST-SP-800-53:PT-4",
+          "NIST-SP-800-53:RA-8",
+          "NIST-SP-800-53:SA-10(1)",
+          "NIST-SP-800-53:SA-8(23)",
+          "NIST-SP-800-53:SA-9",
+          "NIST-SP-800-53:SC-34",
+          "NIST-SP-800-53:SC-7(15)",
+          "PCI-DSS:1.5"
+        ]
+      },
+      "D5.email": {
+        "clauses": 2,
+        "ids": [
+          "NIST-SP-800-53:AC-4(20)",
+          "NIST-SP-800-53:SC-46"
+        ]
+      },
+      "D6": {
+        "clauses": 1,
+        "ids": [
+          "NIST-SP-800-53:PM-17"
+        ]
+      }
+    },
+    "clauses": 1502
+  }
+}

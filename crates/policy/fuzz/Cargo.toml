@@ -1,0 +1,33 @@
+[package]
+name = "entropa-policy-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+entropa-policy = { path = "..", features = ["trust-request-fields"] }
+entropa-approvals = { path = "../../approvals" }
+
+[workspace]
+
+[[bin]]
+name = "policy_load"
+path = "fuzz_targets/policy_load.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "request_builder"
+path = "fuzz_targets/request_builder.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "record_decode"
+path = "fuzz_targets/record_decode.rs"
+test = false
+doc = false

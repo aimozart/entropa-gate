@@ -1,0 +1,36 @@
+---
+source: crates/api/tests/firebase_contract.rs
+expression: json
+---
+{
+  "independent_verification": {
+    "hash_recomputed_and_matches": true,
+    "note": "These two checks were re-performed fresh, right now, against the raw block data — not read from a cached or stored 'verified' flag.",
+    "signature_verified": true
+  },
+  "plain_english": {
+    "summary": "This action was permanently recorded by Entropa at height 0. It has been cryptographically signed and independently re-verified just now — it cannot be altered or deleted without that tampering being immediately detectable. You do not need to trust Entropa's word for this; you or your auditor can recompute every check below yourselves.",
+    "the_fingerprint": "The block hash below is a unique digital fingerprint of this exact record. Changing even one character of the underlying data would produce a completely different fingerprint — so a matching fingerprint is proof nothing has been altered.",
+    "the_ordering_proof": "The beacon value proves the recording order wasn't manipulated by Entropa itself — it comes from a public randomness source (drand) that Entropa does not control.",
+    "the_signature": "The signature proves this specific, identifiable Probe created this record — using a post-quantum signature scheme (ML-DSA), designed to stay secure even against future quantum computers, not just today's.",
+    "what_happened": "Probe \"test-partner\" recorded a \"attest\" action."
+  },
+  "receipt_id": "948c69aeb3a858085cb9a6d4878148c0de756a210efaaf1371dd8015cc247f05",
+  "status": "confirmed",
+  "technical": {
+    "beacon": "BEACON-71e0a99173564931",
+    "block_hash": "[redacted]",
+    "block_index": 0,
+    "block_timestamp": 1000,
+    "hash_algorithm": "BLAKE3",
+    "proposer_id": "[redacted]",
+    "proposer_pubkey": "[redacted]",
+    "signature": "[redacted]",
+    "signature_algorithm": "ML-DSA-65 (NIST FIPS-204)"
+  },
+  "transaction": {
+    "from": "test-partner",
+    "kind": "attest",
+    "payload": "contract-test-payload"
+  }
+}

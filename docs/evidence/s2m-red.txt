@@ -1,0 +1,81 @@
+8 mismatches:
+"at now <<< 'rm -r x'": want Deny/D1, got Silent/
+"at now + 1 minute <<< 'rm -r x'": want Deny/D1, got Silent/
+"batch <<< 'rm -r x'": want Deny/D1, got Silent/
+"at now <<'EOF'\nrm -r x\nEOF\n": want Deny/D1, got Silent/
+"echo 'rm -r x' | at now": want Deny/D1, got Silent/
+"printf 'rm -r x' | batch": want Deny/D1, got Silent/
+"cat f | at now": want Ask/R4, got Silent/
+"curl http://x | at now": want Deny/R1, got Silent/
+10 mismatches:
+"sudo setsid ionice -c3 rm -r x": want Deny/D1, got Ask/R3
+"setsid sudo ls": want Ask/R3, got Silent/
+"env nice setsid taskset 0x1 chrt 10 rm -r x": want Deny/D1, got Silent/
+"nohup setsid flock /tmp/l systemd-run --wait rm -r x": want Deny/D1, got Silent/
+"xargs setsid rm": want Deny/D1, got Silent/
+"setsid setsid setsid setsid rm -r x": want Deny/D1, got Silent/
+"setsid setsid setsid setsid setsid rm -r x": want Ask/R2, got Silent/
+"ionice ionice ionice ionice ionice rm -r x": want Ask/R2, got Silent/
+"setsid sh -c 'rm -r x'": want Deny/D1, got Silent/
+"setsid fish -c 'rm -r x'": want Deny/D1, got Silent/
+26 mismatches:
+"flock /tmp/l rm -rf x": want Deny/D1, got Silent/
+"flock -x /tmp/l rm -r x": want Deny/D1, got Silent/
+"flock -n /tmp/l rm -r x": want Deny/D1, got Silent/
+"flock -w 5 /tmp/l rm -r x": want Deny/D1, got Silent/
+"flock --timeout 5 /tmp/l rm -r x": want Deny/D1, got Silent/
+"flock -E 9 /tmp/l rm -r x": want Deny/D1, got Silent/
+"flock /tmp/l -c 'rm -r x'": want Deny/D1, got Silent/
+"flock -x /tmp/l --command 'rm -r x'": want Deny/D1, got Silent/
+"script -c 'rm -r x' /dev/null": want Deny/D1, got Silent/
+"script -q -c 'rm -r x' out.log": want Deny/D1, got Silent/
+"script --command 'rm -r x' out.log": want Deny/D1, got Silent/
+"su -c 'rm -r x'": want Deny/D1, got Silent/
+"su root -c 'rm -r x'": want Deny/D1, got Silent/
+"su -c 'rm -r x' root": want Deny/D1, got Silent/
+"su -lc 'rm -r x' root": want Deny/D1, got Silent/
+"su --command 'rm -r x'": want Deny/D1, got Silent/
+"su -c 'ls'": want Ask/R3, got Silent/
+"su root": want Ask/R3, got Silent/
+"su": want Ask/R3, got Silent/
+"runuser -u bob rm -r x": want Deny/D1, got Silent/
+"runuser -u bob -- rm -r x": want Deny/D1, got Silent/
+"runuser bob -c 'rm -r x'": want Deny/D1, got Silent/
+"runuser -l bob -c 'rm -r x'": want Deny/D1, got Silent/
+"runuser -u bob ls": want Ask/R3, got Silent/
+"runuser -u bob -- ls": want Ask/R3, got Silent/
+"runuser -c 'ls' bob": want Ask/R3, got Silent/
+32 mismatches:
+"setsid rm -r x": want Deny/D1, got Silent/
+"setsid -f rm -r x": want Deny/D1, got Silent/
+"setsid -w -c rm -r x": want Deny/D1, got Silent/
+"setsid --fork rm -r x": want Deny/D1, got Silent/
+"ionice rm -r x": want Deny/D1, got Silent/
+"ionice -c3 rm -r x": want Deny/D1, got Silent/
+"ionice -c 3 rm -r x": want Deny/D1, got Silent/
+"ionice -c 2 -n 7 rm -r x": want Deny/D1, got Silent/
+"ionice -t rm -r x": want Deny/D1, got Silent/
+"ionice --class idle rm -r x": want Deny/D1, got Silent/
+"taskset 0x1 rm -r x": want Deny/D1, got Silent/
+"taskset -c 0,1 rm -r x": want Deny/D1, got Silent/
+"taskset --cpu-list 0 rm -r x": want Deny/D1, got Silent/
+"chrt 10 rm -r x": want Deny/D1, got Silent/
+"chrt -f 10 rm -r x": want Deny/D1, got Silent/
+"chrt --rr 10 rm -r x": want Deny/D1, got Silent/
+"chrt -b 0 rm -r x": want Deny/D1, got Silent/
+"unshare rm -r x": want Deny/D1, got Silent/
+"unshare -r rm -r x": want Deny/D1, got Silent/
+"unshare --map-root-user --mount rm -r x": want Deny/D1, got Silent/
+"unshare --propagation private rm -r x": want Deny/D1, got Silent/
+"nsenter -t 1 -m rm -r x": want Deny/D1, got Silent/
+"nsenter --target 1 --mount rm -r x": want Deny/D1, got Silent/
+"nsenter -t 1 -S 0 -G 0 rm -r x": want Deny/D1, got Silent/
+"chroot /srv rm -r x": want Deny/D1, got Silent/
+"chroot --userspec=u:g /srv rm -r x": want Deny/D1, got Silent/
+"systemd-run rm -r x": want Deny/D1, got Silent/
+"systemd-run --user rm -r x": want Deny/D1, got Silent/
+"systemd-run --unit foo --property=Nice=5 rm -r x": want Deny/D1, got Silent/
+"systemd-run -u foo -p Nice=5 --wait rm -r x": want Deny/D1, got Silent/
+"systemd-run --on-active=5m rm -r x": want Deny/D1, got Silent/
+"systemd-run --uid root --gid root rm -r x": want Deny/D1, got Silent/
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

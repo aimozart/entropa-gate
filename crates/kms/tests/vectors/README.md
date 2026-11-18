@@ -1,0 +1,3 @@
+# aws_kms_ml_dsa_65.json: PUBLIC TEST DATA
+Not a secret. The file holds one AWS KMS **public key** (ML-DSA-65, as the 22-byte SPKI prefix plus the 1952-byte raw key), one message, and the 3309-byte signature that the real KMS key produced over that message on 2026-10-20 (key alias `alias/entropa-checkpoint-signer`, us-west-2). It contains no private key: the private key never leaves KMS. It exists so the signature can be verified offline with Entropa's own verifier (`tests/aws_kms_vector.rs`); the live test (`tests/aws_live.rs`, ignored by default) checks that the live key still equals this public key.
+Long hex strings like these look like secrets to scanners; `.gitleaks.toml` allowlists this directory with that reason.

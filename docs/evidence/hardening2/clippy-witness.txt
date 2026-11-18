@@ -1,0 +1,26 @@
+crates/witness/src/decode.rs:31:19: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/decode.rs:77:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/decode.rs:119:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/statement.rs:9:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:32:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:39:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:42:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/witness/src/statement.rs:55:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/strict_json.rs:8:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/strict_json.rs:13:15: warning: indexing may panic
+crates/witness/src/strict_json.rs:21:17: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:22:38: warning: indexing may panic
+crates/witness/src/strict_json.rs:23:24: warning: indexing may panic
+crates/witness/src/strict_json.rs:24:25: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:26:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:29:29: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:30:47: warning: indexing may panic
+crates/witness/src/strict_json.rs:31:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:33:35: warning: indexing may panic
+crates/witness/src/strict_json.rs:45:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/witness/src/strict_json.rs:51:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:22:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:54:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:95:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:97:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:104:5: warning: docs for function returning `Result` missing `# Errors` section

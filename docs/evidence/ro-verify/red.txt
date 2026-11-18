@@ -1,0 +1,7 @@
+test ro2_a_missing_directory_is_an_error_and_is_not_created ... ok
+test ro4_every_write_on_a_read_only_store_is_refused_and_changes_nothing ... FAILED
+test ro3_it_works_while_a_writer_holds_the_store_and_leaves_the_writers_lock_alone ... FAILED
+test ro6_a_corrupt_ledger_is_refused_in_read_only_mode_for_the_right_reason ... FAILED
+test ro1_a_read_only_directory_loads_and_nothing_is_created ... FAILED
+test ro5_the_node_verifier_and_the_reader_command_verify_a_read_only_ledger ... FAILED
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s

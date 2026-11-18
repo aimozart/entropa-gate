@@ -1,0 +1,5 @@
+Found 68 mutants to test
+ok       Unmutated baseline in 14s build + 22s test
+MISSED   crates/ledger/src/store.rs:60:19: replace || with && in Core::prefix_root in 0s build + 3s test
+MISSED   crates/ledger/src/store.rs:94:34: replace < with <= in Core::push in 0s build + 3s test
+68 mutants tested in 4m: 2 missed, 66 caught

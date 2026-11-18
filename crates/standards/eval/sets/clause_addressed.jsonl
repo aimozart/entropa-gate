@@ -1,0 +1,60 @@
+{"qid": "ca-01", "query": "What does NIST SP 800-53 control AC-2 require?", "standard": "NIST-SP-800-53", "expected": "AC-2", "form": "id"}
+{"qid": "ca-02", "query": "Quote the requirement of NIST SP 800-53 AU-9(3).", "standard": "NIST-SP-800-53", "expected": "AU-9(3)", "form": "id"}
+{"qid": "ca-03", "query": "NIST 800-53 AU-10: what is required?", "standard": "NIST-SP-800-53", "expected": "AU-10", "form": "id"}
+{"qid": "ca-04", "query": "What does control SC-12 of NIST SP 800-53 say?", "standard": "NIST-SP-800-53", "expected": "SC-12", "form": "id"}
+{"qid": "ca-05", "query": "Explain NIST SP 800-53 SC-13.", "standard": "NIST-SP-800-53", "expected": "SC-13", "form": "id"}
+{"qid": "ca-06", "query": "What does NIST SP 800-53 IA-5 require?", "standard": "NIST-SP-800-53", "expected": "IA-5", "form": "id"}
+{"qid": "ca-07", "query": "Summarize CM-6 in NIST SP 800-53.", "standard": "NIST-SP-800-53", "expected": "CM-6", "form": "id"}
+{"qid": "ca-08", "query": "What does NIST SP 800-53 control IR-4 require?", "standard": "NIST-SP-800-53", "expected": "IR-4", "form": "id"}
+{"qid": "ca-09", "query": "NIST SP 800-53 CP-9 requirements.", "standard": "NIST-SP-800-53", "expected": "CP-9", "form": "id"}
+{"qid": "ca-10", "query": "What does NIST SP 800-53 SI-4 require?", "standard": "NIST-SP-800-53", "expected": "SI-4", "form": "id"}
+{"qid": "ca-11", "query": "Which NIST control protects information stored on disk from unauthorized disclosure and modification?", "standard": "NIST-SP-800-53", "expected": "SC-28", "form": "description"}
+{"qid": "ca-12", "query": "Which NIST control protects the confidentiality and integrity of information while it is transmitted?", "standard": "NIST-SP-800-53", "expected": "SC-8", "form": "description"}
+{"qid": "ca-13", "query": "Which NIST control calls for reviewing and analyzing audit records for signs of inappropriate or unusual activity?", "standard": "NIST-SP-800-53", "expected": "AU-6", "form": "description"}
+{"qid": "ca-14", "query": "Which NIST control requires scanning systems and applications for vulnerabilities and fixing them?", "standard": "NIST-SP-800-53", "expected": "RA-5", "form": "description"}
+{"qid": "ca-15", "query": "Which NIST control sets up continuous monitoring of how well the security controls are working?", "standard": "NIST-SP-800-53", "expected": "CA-7", "form": "description"}
+{"qid": "ca-16", "query": "Which NIST control requires security and privacy literacy training for system users?", "standard": "NIST-SP-800-53", "expected": "AT-2", "form": "description"}
+{"qid": "ca-17", "query": "Which NIST control governs who may physically enter a facility and how that access is enforced?", "standard": "NIST-SP-800-53", "expected": "PE-3", "form": "description"}
+{"qid": "ca-18", "query": "Which NIST control requires a documented contingency plan for keeping essential missions running during a disruption?", "standard": "NIST-SP-800-53", "expected": "CP-2", "form": "description"}
+{"qid": "ca-19", "query": "Which NIST control requires processes to protect the supply chain against compromise?", "standard": "NIST-SP-800-53", "expected": "SR-3", "form": "description"}
+{"qid": "ca-20", "query": "Which NIST control requires cleaning or destroying storage media before disposal or reuse?", "standard": "NIST-SP-800-53", "expected": "MP-6", "form": "description"}
+{"qid": "ca-21", "query": "What does PCI DSS requirement 3.5.1 say?", "standard": "PCI-DSS", "expected": "3.5.1", "form": "id"}
+{"qid": "ca-22", "query": "PCI DSS 4.2.1: what must be done to protect PAN during transmission?", "standard": "PCI-DSS", "expected": "4.2.1", "form": "id"}
+{"qid": "ca-23", "query": "What does PCI DSS requirement 6.3.3 require?", "standard": "PCI-DSS", "expected": "6.3.3", "form": "id"}
+{"qid": "ca-24", "query": "Explain PCI DSS 8.4.2.", "standard": "PCI-DSS", "expected": "8.4.2", "form": "id"}
+{"qid": "ca-25", "query": "What does PCI DSS 10.2.1 require?", "standard": "PCI-DSS", "expected": "10.2.1", "form": "id"}
+{"qid": "ca-26", "query": "What does PCI DSS requirement 10.5.1 require?", "standard": "PCI-DSS", "expected": "10.5.1", "form": "id"}
+{"qid": "ca-27", "query": "What does PCI DSS requirement 11.3.1 require?", "standard": "PCI-DSS", "expected": "11.3.1", "form": "id"}
+{"qid": "ca-28", "query": "What does PCI DSS 12.1.1 require?", "standard": "PCI-DSS", "expected": "12.1.1", "form": "id"}
+{"qid": "ca-29", "query": "Which PCI DSS requirement sets a minimum length for passwords used to access the cardholder data environment?", "standard": "PCI-DSS", "expected": "8.3.6", "form": "description"}
+{"qid": "ca-30", "query": "Which PCI DSS requirement requires anti-malware protection on systems that are at risk of malware?", "standard": "PCI-DSS", "expected": "5.2.1", "form": "description"}
+{"qid": "ca-31", "query": "Which PCI DSS requirement says configuration standards for network security controls must be defined, implemented and maintained?", "standard": "PCI-DSS", "expected": "1.2.1", "form": "description"}
+{"qid": "ca-32", "query": "Which PCI DSS requirement requires an access control model that grants access by need to know and job function?", "standard": "PCI-DSS", "expected": "7.2.1", "form": "description"}
+{"qid": "ca-33", "query": "Which PCI DSS requirement covers the physical protection of media that contain cardholder data?", "standard": "PCI-DSS", "expected": "9.4.1", "form": "description"}
+{"qid": "ca-34", "query": "Which PCI DSS requirement requires an incident response plan that is ready to be activated?", "standard": "PCI-DSS", "expected": "12.10.1", "form": "description"}
+{"qid": "ca-35", "query": "Which PCI DSS requirement requires procedures to protect the keys used to protect stored account data from disclosure and misuse?", "standard": "PCI-DSS", "expected": "3.6.1", "form": "description"}
+{"qid": "ca-36", "query": "What does Article 9 of the EU AI Act require?", "standard": "EU-AI-ACT", "expected": "Art.9", "form": "id"}
+{"qid": "ca-37", "query": "What does Article 12 of the EU AI Act require?", "standard": "EU-AI-ACT", "expected": "Art.12", "form": "id"}
+{"qid": "ca-38", "query": "EU AI Act Article 14: what is required?", "standard": "EU-AI-ACT", "expected": "Art.14", "form": "id"}
+{"qid": "ca-39", "query": "Summarize Article 17 of the EU AI Act.", "standard": "EU-AI-ACT", "expected": "Art.17", "form": "id"}
+{"qid": "ca-40", "query": "What does Article 50 of the EU AI Act require?", "standard": "EU-AI-ACT", "expected": "Art.50", "form": "id"}
+{"qid": "ca-41", "query": "Which article of the EU AI Act sets quality rules for the data used to train, validate and test high-risk systems?", "standard": "EU-AI-ACT", "expected": "Art.10", "form": "description"}
+{"qid": "ca-42", "query": "Which article of the EU AI Act requires high-risk systems to be transparent enough for deployers to interpret their output?", "standard": "EU-AI-ACT", "expected": "Art.13", "form": "description"}
+{"qid": "ca-43", "query": "Which article of the EU AI Act requires an appropriate level of accuracy, robustness and cybersecurity?", "standard": "EU-AI-ACT", "expected": "Art.15", "form": "description"}
+{"qid": "ca-44", "query": "Which article of the EU AI Act obliges providers to keep the automatically generated logs for at least six months?", "standard": "EU-AI-ACT", "expected": "Art.19", "form": "description"}
+{"qid": "ca-45", "query": "Which article of the EU AI Act describes conformity assessment procedures before a high-risk system is placed on the market?", "standard": "EU-AI-ACT", "expected": "Art.43", "form": "description"}
+{"qid": "ca-46", "query": "What does Article 6 of the DORA RTS 2024/1774 require?", "standard": "DORA-RTS", "expected": "Art.6", "form": "id"}
+{"qid": "ca-47", "query": "DORA RTS Article 7: what is required?", "standard": "DORA-RTS", "expected": "Art.7", "form": "id"}
+{"qid": "ca-48", "query": "What does Article 12 of the DORA RTS on ICT risk management require?", "standard": "DORA-RTS", "expected": "Art.12", "form": "id"}
+{"qid": "ca-49", "query": "Summarize Article 10 of the DORA RTS 2024/1774.", "standard": "DORA-RTS", "expected": "Art.10", "form": "id"}
+{"qid": "ca-50", "query": "Which article of the DORA RTS covers how financial entities manage and segment their networks?", "standard": "DORA-RTS", "expected": "Art.13", "form": "description"}
+{"qid": "ca-51", "query": "Which article of the DORA RTS requires a documented process for approving and testing changes to ICT systems?", "standard": "DORA-RTS", "expected": "Art.17", "form": "description"}
+{"qid": "ca-52", "query": "Which article of the DORA RTS covers the policy for handling ICT-related incidents?", "standard": "DORA-RTS", "expected": "Art.22", "form": "description"}
+{"qid": "ca-53", "query": "Which article of the DORA RTS covers protecting information while it is in transit?", "standard": "DORA-RTS", "expected": "Art.14", "form": "description"}
+{"qid": "ca-54", "query": "What does 45 CFR 164.312(a) require?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(a)", "form": "id"}
+{"qid": "ca-55", "query": "What does 45 CFR 164.312(b) require?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(b)", "form": "id"}
+{"qid": "ca-56", "query": "Explain 164.312(e) of the HIPAA Security Rule.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(e)", "form": "id"}
+{"qid": "ca-57", "query": "Which HIPAA technical safeguard requires mechanisms that record and examine activity in systems holding ePHI?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(b)", "form": "description"}
+{"qid": "ca-58", "query": "Which HIPAA technical safeguard requires protecting ePHI from improper alteration or destruction?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(c)", "form": "description"}
+{"qid": "ca-59", "query": "Which HIPAA technical safeguard requires verifying that a person seeking access to ePHI is the one claimed?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(d)", "form": "description"}
+{"qid": "ca-60", "query": "Which HIPAA technical safeguard requires guarding against unauthorized access to ePHI that is sent over an electronic network?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(e)", "form": "description"}

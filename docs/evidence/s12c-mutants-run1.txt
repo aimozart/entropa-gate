@@ -1,0 +1,53 @@
+mutants: jobs=4 timeout=90s fast_tests=1 limits: memory=24g swap=24g cpus=12 pids=4096
+Found 636 mutants to test
+ok       Unmutated baseline in 15s build + 1s test
+MISSED   crates/council/src/lib.rs:133:30: replace || with && in independent in 15s build + 0s test
+MISSED   crates/council/src/event.rs:189:9: delete match arm "evaluation.recorded" in invariants in 0s build + 0s test
+MISSED   crates/council/src/event.rs:174:47: replace < with <= in invariants in 0s build + 0s test
+MISSED   crates/council/src/event.rs:174:81: replace > with >= in invariants in 0s build + 0s test
+MISSED   crates/council/src/event.rs:185:17: replace && with || in invariants in 0s build + 0s test
+MISSED   crates/council/src/planted.rs:248:38: delete ! in evaluate in 0s build + 0s test
+MISSED   crates/council/src/planted.rs:250:30: replace += with *= in evaluate in 0s build + 0s test
+MISSED   crates/council/src/provenance.rs:79:17: replace > with == in admit in 0s build + 0s test
+MISSED   crates/council/src/provenance.rs:79:17: replace > with >= in admit in 0s build + 0s test
+MISSED   crates/council/src/provenance.rs:96:13: replace || with && in Index::build in 0s build + 0s test
+MISSED   crates/council/src/provenance.rs:197:19: replace > with >= in precedent_reference in 1s build + 0s test
+MISSED   crates/council/src/render.rs:38:9: delete match arm "rebuttal.submitted" in line in 0s build + 0s test
+MISSED   crates/council/src/render.rs:53:9: delete match arm "outcome.recorded" in line in 1s build + 0s test
+MISSED   crates/council/src/session.rs:50:55: replace && with || in Quorum::valid in 0s build + 0s test
+MISSED   crates/council/src/session.rs:50:28: replace && with || in Quorum::valid in 0s build + 0s test
+MISSED   crates/council/src/session.rs:168:13: delete match arm "change.linked" in Session::apply in 1s build + 0s test
+MISSED   crates/council/src/session.rs:169:13: delete match arm "proof.recorded" in Session::apply in 1s build + 0s test
+MISSED   crates/council/src/session.rs:176:9: replace Session::known_item -> Result<(), CouncilError> with Ok(()) in 0s build + 0s test
+MISSED   crates/council/src/session.rs:177:24: replace match guard self.findings.contains_key(f) with true in Session::known_item in 0s build + 0s test
+MISSED   crates/council/src/session.rs:177:24: replace match guard self.findings.contains_key(f) with false in Session::known_item in 0s build + 0s test
+MISSED   crates/council/src/session.rs:218:14: replace > with == in Session::report in 0s build + 0s test
+MISSED   crates/council/src/session.rs:218:14: replace > with >= in Session::report in 1s build + 0s test
+MISSED   crates/council/src/session.rs:344:9: replace Session::change -> Result<(), CouncilError> with Ok(()) in 1s build + 0s test
+MISSED   crates/council/src/session.rs:347:20: replace match guard d.accepted && Some(d.change_kind.as_str()) == ev.str_field("change_kind") with true in Session::change in 0s build + 0s test
+MISSED   crates/council/src/session.rs:347:31: replace && with || in Session::change in 0s build + 0s test
+MISSED   crates/council/src/session.rs:347:20: replace match guard d.accepted && Some(d.change_kind.as_str()) == ev.str_field("change_kind") with false in Session::change in 1s build + 0s test
+MISSED   crates/council/src/session.rs:347:63: replace == with != in Session::change in 0s build + 0s test
+MISSED   crates/council/src/session.rs:391:24: replace && with || in Session::close in 0s build + 0s test
+MISSED   crates/council/src/session.rs:391:20: replace > with >= in Session::close in 0s build + 0s test
+MISSED   crates/council/src/session.rs:449:41: replace && with || in Session::approved_changes in 1s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:71:23: replace - with / in ssn in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:81:49: replace || with && in is_reserved_invalid_ssn in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:81:22: replace || with && in is_reserved_invalid_ssn in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:114:37: replace % with + in name in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:114:37: replace % with / in name in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:118:36: replace % with / in name in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:118:36: replace % with + in name in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:155:21: replace + with - in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:155:48: replace % with / in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:155:48: replace % with + in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:156:19: replace + with * in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:156:47: replace % with / in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:156:47: replace % with + in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:157:17: replace + with * in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:157:43: replace % with / in patient in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:157:43: replace % with + in patient in 0s build + 0s test
+TIMEOUT  crates/synthetic/src/lib.rs:180:26: replace + with * in scan in 0s build + 90s test
+TIMEOUT  crates/synthetic/src/lib.rs:190:31: replace + with * in scan in 0s build + 90s test
+636 mutants tested in 5m: 46 missed, 563 caught, 25 unviable, 2 timeouts
+exit 3

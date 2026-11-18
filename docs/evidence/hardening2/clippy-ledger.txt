@@ -1,0 +1,127 @@
+crates/ledger/src/generator.rs:300:13: warning: binding's name is too similar to existing binding
+crates/ledger/src/scenarios.rs:43:9: warning: 5 bindings with single-character names in scope
+crates/ledger/src/store.rs:85:13: warning: 5 bindings with single-character names in scope
+crates/ledger/src/bundle.rs:69:1: warning: this function has too many lines (122/100)
+crates/ledger/src/bundle.rs:208:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:244:28: warning: indexing may panic
+crates/ledger/src/bundle.rs:244:38: warning: indexing may panic
+crates/ledger/src/bundle.rs:248:36: warning: slicing may panic
+crates/ledger/src/bundle.rs:323:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:323:1: warning: this function has too many lines (210/100)
+crates/ledger/src/bundle.rs:422:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:471:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:472:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:490:21: warning: indexing may panic
+crates/ledger/src/bundle.rs:497:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:501:8: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:506:24: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:33: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:37: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:524:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/bundle.rs:540:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/council.rs:44:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:138:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:143:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:146:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/ledger/src/event.rs:152:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:164:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: this function has too many lines (118/100)
+crates/ledger/src/event.rs:374:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/evidence.rs:95:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:69:50: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:117:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:231:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:232:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:235:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:244:12: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:294:13: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:373:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:375:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:392:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:408:28: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:411:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:413:41: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:465:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:483:46: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:486:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:486:58: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:488:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:490:16: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:491:50: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/generator.rs:496:46: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/keys.rs:29:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/keys.rs:44:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:9:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:42:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/plain.rs:55:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:55:1: warning: this function has too many lines (162/100)
+crates/ledger/src/plain.rs:116:27: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:44:10: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:45:18: warning: slicing may panic
+crates/ledger/src/platinum.rs:45:23: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:46:50: warning: indexing may panic
+crates/ledger/src/platinum.rs:47:35: warning: indexing may panic
+crates/ledger/src/platinum.rs:47:37: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:48:17: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:48:39: warning: indexing may panic
+crates/ledger/src/platinum.rs:48:41: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/platinum.rs:51:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:53:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:55:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:56:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:57:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:58:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:59:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:71:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/scenarios.rs:29:32: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:29:48: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:35:29: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:39:5: warning: this function has too many lines (216/100)
+crates/ledger/src/scenarios.rs:84:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:94:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:107:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:126:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:139:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:152:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:154:87: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:174:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:184:44: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:186:47: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:196:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:199:87: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:224:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:241:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:254:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/scenarios.rs:256:83: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:17:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:28:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:32:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:69:20: warning: indexing may panic
+crates/ledger/src/store.rs:73:20: warning: indexing may panic
+crates/ledger/src/store.rs:73:32: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:78:30: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:78:45: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:88:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:90:18: warning: indexing may panic
+crates/ledger/src/store.rs:90:30: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:90:38: warning: indexing may panic
+crates/ledger/src/store.rs:90:50: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:92:18: warning: indexing may panic
+crates/ledger/src/store.rs:92:30: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:92:37: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:92:45: warning: indexing may panic
+crates/ledger/src/store.rs:92:57: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:92:64: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:97:13: warning: indexing may panic
+crates/ledger/src/store.rs:97:25: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:98:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:101:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/ledger/src/store.rs:198:10: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/store.rs:221:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:243:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/vocab.rs:164:61: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:166:64: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:168:80: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:246:19: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:317:12: warning: this method could have a `#[must_use]` attribute

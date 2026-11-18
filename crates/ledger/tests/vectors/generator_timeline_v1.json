@@ -1,0 +1,726 @@
+{
+ "format": "entropa explorer generator timeline v1",
+ "generated_by": "independent Python model of the documented rules, not the Rust code",
+ "cases": [
+  {
+   "seed": 7,
+   "scenarios": 12,
+   "start": 1700000000,
+   "records": [
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000060
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000120
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000125
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000130
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000132
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000180
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000185
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000190
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000192
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000200
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000240
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000245
+    },
+    {
+     "kind": "approval.deny",
+     "ts": 1700000250
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000252
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000300
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000302
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000360
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000370
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000372
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000380
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000420
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000480
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000485
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000490
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000492
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000540
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000545
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000550
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000552
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000560
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000600
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000605
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000610
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000612
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000620
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000660
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000662
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000720
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000730
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000732
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000740
+    }
+   ],
+   "checkpoint_ts": [
+    1700000001,
+    1700000303,
+    1700000621,
+    1700000741
+   ],
+   "metas": [
+    {
+     "scenario": 0,
+     "input_tokens": 3287,
+     "output_tokens": 197,
+     "cost_micro_usd": 244
+    },
+    {
+     "scenario": 1,
+     "input_tokens": 3409,
+     "output_tokens": 206,
+     "cost_micro_usd": 253
+    },
+    {
+     "scenario": 2,
+     "input_tokens": 1838,
+     "output_tokens": 135,
+     "cost_micro_usd": 142
+    },
+    {
+     "scenario": 3,
+     "input_tokens": 2040,
+     "output_tokens": 141,
+     "cost_micro_usd": 156
+    },
+    {
+     "scenario": 4,
+     "input_tokens": 1516,
+     "output_tokens": 411,
+     "cost_micro_usd": 189
+    },
+    {
+     "scenario": 6,
+     "input_tokens": 2519,
+     "output_tokens": 151,
+     "cost_micro_usd": 187
+    },
+    {
+     "scenario": 7,
+     "input_tokens": 2242,
+     "output_tokens": 154,
+     "cost_micro_usd": 171
+    },
+    {
+     "scenario": 8,
+     "input_tokens": 3064,
+     "output_tokens": 215,
+     "cost_micro_usd": 235
+    },
+    {
+     "scenario": 9,
+     "input_tokens": 3267,
+     "output_tokens": 155,
+     "cost_micro_usd": 233
+    },
+    {
+     "scenario": 10,
+     "input_tokens": 3416,
+     "output_tokens": 426,
+     "cost_micro_usd": 307
+    }
+   ]
+  },
+  {
+   "seed": 8,
+   "scenarios": 13,
+   "start": 1700000000,
+   "records": [
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000060
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000120
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000125
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000130
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000132
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000180
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000185
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000190
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000192
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000200
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000240
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000245
+    },
+    {
+     "kind": "approval.deny",
+     "ts": 1700000250
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000252
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000300
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000302
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000360
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000370
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000372
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000380
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000420
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000480
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000485
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000490
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000492
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000540
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000545
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000550
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000552
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000560
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000600
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000605
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000610
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000612
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000620
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000660
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000662
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000720
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000730
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000732
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000740
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000780
+    }
+   ],
+   "checkpoint_ts": [
+    1700000001,
+    1700000303,
+    1700000621,
+    1700000781
+   ],
+   "metas": [
+    {
+     "scenario": 0,
+     "input_tokens": 1422,
+     "output_tokens": 139,
+     "cost_micro_usd": 118
+    },
+    {
+     "scenario": 1,
+     "input_tokens": 1319,
+     "output_tokens": 426,
+     "cost_micro_usd": 181
+    },
+    {
+     "scenario": 2,
+     "input_tokens": 1597,
+     "output_tokens": 336,
+     "cost_micro_usd": 176
+    },
+    {
+     "scenario": 3,
+     "input_tokens": 1470,
+     "output_tokens": 278,
+     "cost_micro_usd": 154
+    },
+    {
+     "scenario": 4,
+     "input_tokens": 3219,
+     "output_tokens": 144,
+     "cost_micro_usd": 227
+    },
+    {
+     "scenario": 6,
+     "input_tokens": 3203,
+     "output_tokens": 75,
+     "cost_micro_usd": 210
+    },
+    {
+     "scenario": 7,
+     "input_tokens": 3087,
+     "output_tokens": 316,
+     "cost_micro_usd": 261
+    },
+    {
+     "scenario": 8,
+     "input_tokens": 3159,
+     "output_tokens": 374,
+     "cost_micro_usd": 279
+    },
+    {
+     "scenario": 9,
+     "input_tokens": 3439,
+     "output_tokens": 78,
+     "cost_micro_usd": 225
+    },
+    {
+     "scenario": 10,
+     "input_tokens": 2254,
+     "output_tokens": 151,
+     "cost_micro_usd": 171
+    },
+    {
+     "scenario": 12,
+     "input_tokens": 1978,
+     "output_tokens": 269,
+     "cost_micro_usd": 183
+    }
+   ]
+  },
+  {
+   "seed": 0,
+   "scenarios": 6,
+   "start": 1700000000,
+   "records": [
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "directory.actor",
+     "ts": 1700000000
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000060
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000120
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000125
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000130
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000132
+    },
+    {
+     "kind": "tx.screened",
+     "ts": 1700000180
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000185
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000190
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000192
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000200
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000240
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000245
+    },
+    {
+     "kind": "approval.deny",
+     "ts": 1700000250
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000252
+    },
+    {
+     "kind": "agent.invocation",
+     "ts": 1700000300
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000302
+    },
+    {
+     "kind": "approval.request",
+     "ts": 1700000360
+    },
+    {
+     "kind": "approval.approve",
+     "ts": 1700000370
+    },
+    {
+     "kind": "policy.decision",
+     "ts": 1700000372
+    },
+    {
+     "kind": "approval.consume",
+     "ts": 1700000380
+    }
+   ],
+   "checkpoint_ts": [
+    1700000001,
+    1700000303,
+    1700000381
+   ],
+   "metas": [
+    {
+     "scenario": 0,
+     "input_tokens": 1335,
+     "output_tokens": 387,
+     "cost_micro_usd": 172
+    },
+    {
+     "scenario": 1,
+     "input_tokens": 2886,
+     "output_tokens": 398,
+     "cost_micro_usd": 268
+    },
+    {
+     "scenario": 2,
+     "input_tokens": 2781,
+     "output_tokens": 318,
+     "cost_micro_usd": 243
+    },
+    {
+     "scenario": 3,
+     "input_tokens": 1542,
+     "output_tokens": 208,
+     "cost_micro_usd": 142
+    },
+    {
+     "scenario": 4,
+     "input_tokens": 2782,
+     "output_tokens": 326,
+     "cost_micro_usd": 245
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: entropa-decisions-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: entropa
+      POSTGRES_PASSWORD: entropa_local_dev
+      POSTGRES_DB: entropa_decisions
+    ports:
+      - "5433:5432"
+    volumes:
+      - entropa_decisions_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U entropa -d entropa_decisions"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: entropa-decisions-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@entropa.space
+      PGADMIN_DEFAULT_PASSWORD: entropa_local_dev
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5051:80"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - entropa_pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  entropa_decisions_data:
+  entropa_pgadmin_data:

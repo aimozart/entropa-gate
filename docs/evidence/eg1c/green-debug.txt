@@ -1,0 +1,69 @@
+     Running unittests src/lib.rs (target/debug/deps/entropa_egress-2a6b7660e894fef1)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/egress-eval.rs (target/debug/deps/egress_eval-75c2887e63ec394d)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/aws_alphabet.rs (target/debug/deps/aws_alphabet-b6a5eb62b5be9318)
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+     Running tests/decide.rs (target/debug/deps/decide-c3f7beca42c0083d)
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+     Running tests/detectors.rs (target/debug/deps/detectors-675713fa7875e6b2)
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+     Running tests/eg1b_families.rs (target/debug/deps/eg1b_families-d3dcc27f358048cb)
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+     Running tests/eg1c_families.rs (target/debug/deps/eg1c_families-ce405c376ac66d0e)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+     Running tests/invariants.rs (target/debug/deps/invariants-bf0a186c6fa40e3b)
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 320.21s
+     Running tests/multibyte.rs (target/debug/deps/multibyte-9d261d7f60477879)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 174.29s
+     Running tests/nul.rs (target/debug/deps/nul-3976ad9fd4a3daa2)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+     Running tests/policy.rs (target/debug/deps/policy-a7b3ce8d093e250b)
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/sealed_runner.rs (target/debug/deps/sealed_runner-16d65c7ce593f0d5)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.05s
+     Running tests/survivors_a.rs (target/debug/deps/survivors_a-5a426e2cec416816)
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+     Running tests/survivors_b.rs (target/debug/deps/survivors_b-d67d51b159aff9fc)
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.81s
+     Running tests/survivors_c.rs (target/debug/deps/survivors_c-8e7f996aff9174e3)
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+     Running tests/survivors_chunked.rs (target/debug/deps/survivors_chunked-2f4497f86b552d3e)
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/survivors_d.rs (target/debug/deps/survivors_d-25ec2004b111f40f)
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+     Running tests/survivors_e.rs (target/debug/deps/survivors_e-3115e719cc39eaf3)
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+     Running tests/survivors_f.rs (target/debug/deps/survivors_f-4b6c75bdcdd9205e)
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+     Running tests/survivors_g.rs (target/debug/deps/survivors_g-f43e46beeef94abd)
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/survivors_h.rs (target/debug/deps/survivors_h-9f740b7aad6c2b33)
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+     Running tests/survivors_i.rs (target/debug/deps/survivors_i-2aeabbde42e6205d)
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+     Running tests/survivors_iban.rs (target/debug/deps/survivors_iban-71da793d739dccaa)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.07s
+     Running tests/survivors_j.rs (target/debug/deps/survivors_j-4d423593b102c080)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+     Running tests/survivors_k.rs (target/debug/deps/survivors_k-5c6d2e78e6050505)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+     Running tests/survivors_l.rs (target/debug/deps/survivors_l-fad5aa749368286a)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+     Running tests/views.rs (target/debug/deps/views-589e7d2737229c03)
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+     Running tests/zz_probe2.rs (target/debug/deps/zz_probe2-bbc58646ee47ee3f)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/zz_probe3.rs (target/debug/deps/zz_probe3-294b5ad9e0e6bce6)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/zz_probe4.rs (target/debug/deps/zz_probe4-eb304378420b24c1)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/zz_probe5.rs (target/debug/deps/zz_probe5-0e3acb2be83afb37)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/zz_probe6.rs (target/debug/deps/zz_probe6-e90a7b9b9d1219b8)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/zz_probe7.rs (target/debug/deps/zz_probe7-9f727eee7ddf5ed0)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+     Running tests/zz_probe8.rs (target/debug/deps/zz_probe8-bf05260307e248ca)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

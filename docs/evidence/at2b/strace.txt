@@ -1,0 +1,10 @@
+at2: network syscalls = 0
+at2b: network syscalls = 0
+at2b_battery: network syscalls = 0
+battery: network syscalls = 0
+cedar: network syscalls = 0
+latency: network syscalls = 0
+props: network syscalls = 0
+record_hash: network syscalls = 0
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

@@ -1,0 +1,10 @@
+== mutation: s/unknown field: /unknown key: /
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test p1_the_two_writers_are_deterministic_and_the_observed_behaviour_equals_the_golden ... FAILED
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+== mutation: s/probe, \&fields/probe, \&fields/;s/fields.ts)/fields.ts + 1)/
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test p2_the_two_writers_write_identical_bytes_for_the_same_requests_and_key ... FAILED
+test p1_the_two_writers_are_deterministic_and_the_observed_behaviour_equals_the_golden ... FAILED
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+0

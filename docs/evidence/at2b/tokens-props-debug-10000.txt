@@ -1,0 +1,13 @@
+test p4_what_the_reader_accepts_is_a_canonical_fixed_point ... ok
+test p1_hostile_bytes_never_panic_and_always_give_a_closed_deterministic_answer ... ok
+test p2_a_mutated_design_a_token_never_verifies ... ok
+test p3_a_mutated_design_c_token_never_verifies ... ok
+test p5_random_narrowing_chains_never_exceed_the_root has been running for over 60 seconds
+test p6_valid_tokens_verify_and_round_trip has been running for over 60 seconds
+test p6_valid_tokens_verify_and_round_trip ... ok
+test p5_random_narrowing_chains_never_exceed_the_root ... ok
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1769.23s
+
+real	29m29.334s
+user	38m21.660s
+sys	0m4.817s

@@ -1,0 +1,1734 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "clean": {
+      "actions": {
+        "allow": 487,
+        "block": 143
+      },
+      "cases": 630,
+      "failed": 143,
+      "failed_ids": [
+        "f-ps_assign-0000",
+        "f-ps_assign-0001",
+        "f-ps_assign-0002",
+        "f-ps_assign-0003",
+        "f-ps_assign-0004",
+        "f-ps_assign-0005",
+        "f-ps_assign-0006",
+        "f-ps_assign-0007",
+        "f-ps_assign-0008",
+        "f-ps_assign-0009",
+        "f-ps_assign-0010",
+        "f-ps_assign-0011",
+        "f-ps_assign-0012",
+        "f-ps_assign-0013",
+        "f-ps_assign-0014",
+        "f-ps_assign-0015",
+        "f-ps_assign-0016",
+        "f-ps_assign-0017",
+        "f-ps_assign-0018",
+        "f-ps_assign-0019",
+        "f-ps_assign-0020",
+        "f-ps_assign-0021",
+        "f-ps_assign-0022",
+        "f-ps_assign-0023",
+        "f-ps_assign-0024",
+        "f-ps_assign-0025",
+        "f-ps_assign-0026",
+        "f-ps_assign-0027",
+        "f-ps_assign-0028",
+        "f-ps_assign-0029",
+        "f-ps_assign-0030",
+        "f-ps_assign-0031",
+        "f-ps_assign-0032",
+        "f-ps_assign-0033",
+        "f-ps_assign-0034",
+        "f-ps_assign-0035",
+        "f-ps_assign-0036",
+        "f-ps_assign-0037",
+        "f-ps_assign-0038",
+        "f-ps_assign-0039",
+        "f-ps_assign-0040",
+        "f-ps_assign-0041",
+        "f-ps_assign-0042",
+        "f-ps_assign-0043",
+        "f-ps_assign-0044",
+        "f-ps_assign-0045",
+        "f-ps_assign-0046",
+        "f-ps_assign-0047",
+        "f-ps_assign-0048",
+        "f-ps_assign-0049",
+        "f-ps_assign-0050",
+        "f-ps_assign-0051",
+        "f-ps_assign-0052",
+        "f-ps_assign-0053",
+        "f-ps_assign-0054",
+        "f-ps_assign-0055",
+        "f-ps_assign-0056",
+        "f-ps_assign-0057",
+        "f-ps_assign-0058",
+        "f-ps_assign-0059",
+        "f-ps_assign-0060",
+        "f-ps_assign-0061",
+        "f-ps_assign-0062",
+        "f-ps_assign-0063",
+        "f-ps_assign-0064",
+        "f-ps_assign-0065",
+        "f-ps_assign-0066",
+        "f-ps_assign-0067",
+        "f-ps_assign-0068",
+        "f-ps_assign-0069",
+        "f-ps_assign-0070",
+        "f-ps_assign-0071",
+        "f-ps_assign-0072",
+        "f-ps_assign-0073",
+        "f-ps_assign-0074",
+        "f-ps_assign-0075",
+        "f-ps_assign-0076",
+        "f-ps_assign-0077",
+        "f-ps_assign-0078",
+        "f-ps_assign-0079",
+        "f-ps_assign-0080",
+        "f-ps_assign-0081",
+        "f-ps_assign-0082",
+        "f-ps_assign-0083",
+        "f-ps_assign-0084",
+        "f-ps_assign-0085",
+        "f-ps_assign-0086",
+        "f-ps_assign-0087",
+        "f-ps_assign-0088",
+        "f-ps_assign-0089",
+        "f-ps_assign-0090",
+        "f-ps_assign-0091",
+        "f-ps_assign-0092",
+        "f-ps_assign-0093",
+        "f-ps_assign-0094",
+        "f-ps_assign-0095",
+        "f-ps_assign-0096",
+        "f-ps_assign-0097",
+        "f-ps_assign-0098",
+        "f-ps_assign-0099",
+        "f-ps_assign-0100",
+        "f-ps_assign-0101",
+        "f-ps_assign-0102",
+        "f-ps_assign-0103",
+        "f-ps_assign-0104",
+        "f-ps_assign-0105",
+        "f-ps_assign-0106",
+        "f-ps_assign-0107",
+        "f-ps_assign-0108",
+        "f-ps_assign-0109",
+        "f-php_assign-0111",
+        "f-php_assign-0123",
+        "f-php_assign-0126",
+        "f-php_assign-0127",
+        "f-php_assign-0140",
+        "f-php_assign-0143",
+        "f-php_assign-0149",
+        "f-php_assign-0153",
+        "f-php_assign-0154",
+        "f-php_assign-0158",
+        "f-php_assign-0167",
+        "f-php_assign-0175",
+        "f-php_assign-0177",
+        "f-php_assign-0178",
+        "f-php_assign-0181",
+        "f-php_assign-0182",
+        "f-php_assign-0195",
+        "f-php_assign-0198",
+        "f-php_assign-0202",
+        "f-php_assign-0203",
+        "f-php_assign-0206",
+        "f-php_assign-0207",
+        "f-php_assign-0210",
+        "f-php_assign-0211",
+        "f-php_assign-0214",
+        "f-placeholder-0232",
+        "f-placeholder-0236",
+        "f-placeholder-0243",
+        "f-placeholder-0273",
+        "f-placeholder-0321",
+        "f-placeholder-0322",
+        "f-placeholder-0336",
+        "f-placeholder-0348"
+      ],
+      "families": {
+        "ids": {
+          "cases": 60,
+          "failed": 0
+        },
+        "php_assign": {
+          "cases": 110,
+          "failed": 25
+        },
+        "placeholder": {
+          "cases": 130,
+          "failed": 8
+        },
+        "props": {
+          "cases": 80,
+          "failed": 0
+        },
+        "prose": {
+          "cases": 140,
+          "failed": 0
+        },
+        "ps_assign": {
+          "cases": 110,
+          "failed": 110
+        }
+      },
+      "upper95_of_failure_rate": 0.2555707541902025
+    },
+    "secrets": {
+      "actions": {
+        "allow": 492,
+        "block": 588
+      },
+      "cases": 1080,
+      "failed": 492,
+      "failed_ids": [
+        "f-lit-0001",
+        "f-lit-0005",
+        "f-lit-0006",
+        "f-lit-0007",
+        "f-lit-0009",
+        "f-lit-0021",
+        "f-lit-0022",
+        "f-lit-0023",
+        "f-lit-0024",
+        "f-lit-0025",
+        "f-lit-0026",
+        "f-lit-0027",
+        "f-lit-0028",
+        "f-lit-0029",
+        "f-lit-0030",
+        "f-lit-0031",
+        "f-lit-0032",
+        "f-lit-0033",
+        "f-lit-0034",
+        "f-lit-0035",
+        "f-lit-0036",
+        "f-lit-0037",
+        "f-lit-0038",
+        "f-lit-0039",
+        "f-lit-0040",
+        "f-lit-0041",
+        "f-lit-0042",
+        "f-lit-0043",
+        "f-lit-0044",
+        "f-lit-0045",
+        "f-lit-0046",
+        "f-lit-0047",
+        "f-lit-0048",
+        "f-lit-0049",
+        "f-lit-0050",
+        "f-lit-0051",
+        "f-lit-0052",
+        "f-lit-0053",
+        "f-lit-0054",
+        "f-lit-0055",
+        "f-lit-0056",
+        "f-lit-0057",
+        "f-lit-0058",
+        "f-lit-0059",
+        "f-lit-0060",
+        "f-lit-0061",
+        "f-lit-0062",
+        "f-lit-0063",
+        "f-lit-0064",
+        "f-lit-0065",
+        "f-lit-0066",
+        "f-lit-0067",
+        "f-lit-0068",
+        "f-lit-0069",
+        "f-lit-0070",
+        "f-lit-0071",
+        "f-lit-0073",
+        "f-lit-0074",
+        "f-lit-0083",
+        "f-lit-0086",
+        "f-lit-0088",
+        "f-lit-0093",
+        "f-lit-0094",
+        "f-lit-0095",
+        "f-lit-0117",
+        "f-lit-0118",
+        "f-lit-0119",
+        "f-lit-0141",
+        "f-lit-0142",
+        "f-lit-0143",
+        "f-lit-0145",
+        "f-lit-0146",
+        "f-lit-0149",
+        "f-lit-0151",
+        "f-lit-0189",
+        "f-lit-0190",
+        "f-lit-0191",
+        "f-lit-0213",
+        "f-lit-0214",
+        "f-lit-0215",
+        "f-lit-0217",
+        "f-lit-0224",
+        "f-lit-0231",
+        "f-lit-0237",
+        "f-lit-0238",
+        "f-lit-0239",
+        "f-lit-0241",
+        "f-lit-0246",
+        "f-lit-0248",
+        "f-lit-0250",
+        "f-lit-0253",
+        "f-lit-0255",
+        "f-lit-0256",
+        "f-lit-0261",
+        "f-lit-0262",
+        "f-lit-0263",
+        "f-lit-0268",
+        "f-lit-0275",
+        "f-lit-0278",
+        "f-lit-0281",
+        "f-lit-0285",
+        "f-lit-0286",
+        "f-lit-0287",
+        "f-lit-0289",
+        "f-lit-0292",
+        "f-lit-0299",
+        "f-lit-0309",
+        "f-lit-0310",
+        "f-lit-0311",
+        "f-lit-0312",
+        "f-lit-0313",
+        "f-lit-0314",
+        "f-lit-0315",
+        "f-lit-0316",
+        "f-lit-0317",
+        "f-lit-0318",
+        "f-lit-0319",
+        "f-lit-0320",
+        "f-lit-0321",
+        "f-lit-0322",
+        "f-lit-0323",
+        "f-lit-0324",
+        "f-lit-0325",
+        "f-lit-0326",
+        "f-lit-0327",
+        "f-lit-0328",
+        "f-lit-0329",
+        "f-lit-0330",
+        "f-lit-0331",
+        "f-lit-0332",
+        "f-lit-0333",
+        "f-lit-0334",
+        "f-lit-0335",
+        "f-lit-0338",
+        "f-lit-0360",
+        "f-lit-0366",
+        "f-lit-0374",
+        "f-lit-0375",
+        "f-lit-0376",
+        "f-lit-0377",
+        "f-lit-0378",
+        "f-lit-0381",
+        "f-lit-0382",
+        "f-lit-0383",
+        "f-lit-0384",
+        "f-lit-0385",
+        "f-lit-0386",
+        "f-lit-0387",
+        "f-lit-0388",
+        "f-lit-0389",
+        "f-lit-0390",
+        "f-lit-0391",
+        "f-lit-0392",
+        "f-lit-0393",
+        "f-lit-0394",
+        "f-lit-0395",
+        "f-lit-0396",
+        "f-lit-0397",
+        "f-lit-0398",
+        "f-lit-0399",
+        "f-lit-0400",
+        "f-lit-0401",
+        "f-lit-0402",
+        "f-lit-0403",
+        "f-lit-0404",
+        "f-lit-0405",
+        "f-lit-0406",
+        "f-lit-0407",
+        "f-lit-0412",
+        "f-lit-0415",
+        "f-lit-0428",
+        "f-lit-0429",
+        "f-lit-0430",
+        "f-lit-0431",
+        "f-lit-0433",
+        "f-lit-0448",
+        "f-lit-0452",
+        "f-lit-0453",
+        "f-lit-0454",
+        "f-lit-0455",
+        "f-lit-0456",
+        "f-lit-0457",
+        "f-lit-0458",
+        "f-lit-0459",
+        "f-lit-0460",
+        "f-lit-0461",
+        "f-lit-0462",
+        "f-lit-0463",
+        "f-lit-0464",
+        "f-lit-0465",
+        "f-lit-0466",
+        "f-lit-0467",
+        "f-lit-0468",
+        "f-lit-0469",
+        "f-lit-0470",
+        "f-lit-0471",
+        "f-lit-0472",
+        "f-lit-0473",
+        "f-lit-0474",
+        "f-lit-0475",
+        "f-lit-0476",
+        "f-lit-0477",
+        "f-lit-0478",
+        "f-lit-0479",
+        "f-lit-0480",
+        "f-lit-0481",
+        "f-lit-0482",
+        "f-lit-0483",
+        "f-lit-0484",
+        "f-lit-0485",
+        "f-lit-0486",
+        "f-lit-0487",
+        "f-lit-0488",
+        "f-lit-0489",
+        "f-lit-0490",
+        "f-lit-0491",
+        "f-lit-0492",
+        "f-lit-0493",
+        "f-lit-0494",
+        "f-lit-0495",
+        "f-lit-0496",
+        "f-lit-0497",
+        "f-lit-0498",
+        "f-lit-0499",
+        "f-lit-0500",
+        "f-lit-0501",
+        "f-lit-0502",
+        "f-lit-0503",
+        "f-lit-0525",
+        "f-lit-0526",
+        "f-lit-0527",
+        "f-lit-0528",
+        "f-lit-0529",
+        "f-lit-0530",
+        "f-lit-0531",
+        "f-lit-0532",
+        "f-lit-0533",
+        "f-lit-0534",
+        "f-lit-0535",
+        "f-lit-0536",
+        "f-lit-0537",
+        "f-lit-0538",
+        "f-lit-0539",
+        "f-lit-0540",
+        "f-lit-0541",
+        "f-lit-0542",
+        "f-lit-0543",
+        "f-lit-0544",
+        "f-lit-0545",
+        "f-lit-0546",
+        "f-lit-0547",
+        "f-lit-0548",
+        "f-lit-0549",
+        "f-lit-0550",
+        "f-lit-0551",
+        "f-lit-0552",
+        "f-lit-0553",
+        "f-lit-0561",
+        "f-lit-0573",
+        "f-lit-0574",
+        "f-lit-0575",
+        "f-lit-0600",
+        "f-lit-0601",
+        "f-lit-0602",
+        "f-lit-0603",
+        "f-lit-0604",
+        "f-lit-0605",
+        "f-lit-0606",
+        "f-lit-0607",
+        "f-lit-0608",
+        "f-lit-0609",
+        "f-lit-0610",
+        "f-lit-0611",
+        "f-lit-0612",
+        "f-lit-0613",
+        "f-lit-0614",
+        "f-lit-0615",
+        "f-lit-0616",
+        "f-lit-0617",
+        "f-lit-0618",
+        "f-lit-0619",
+        "f-lit-0620",
+        "f-lit-0621",
+        "f-lit-0622",
+        "f-lit-0623",
+        "f-lit-0630",
+        "f-lit-0631",
+        "f-lit-0632",
+        "f-lit-0634",
+        "f-lit-0640",
+        "f-lit-0645",
+        "f-lit-0646",
+        "f-lit-0647",
+        "f-lit-0655",
+        "f-lit-0666",
+        "f-lit-0669",
+        "f-lit-0670",
+        "f-lit-0671",
+        "f-lit-0672",
+        "f-lit-0673",
+        "f-lit-0674",
+        "f-lit-0679",
+        "f-lit-0680",
+        "f-lit-0686",
+        "f-lit-0690",
+        "f-lit-0693",
+        "f-lit-0694",
+        "f-lit-0695",
+        "f-lit-0700",
+        "f-lit-0701",
+        "f-lit-0702",
+        "f-lit-0708",
+        "f-lit-0717",
+        "f-lit-0718",
+        "f-lit-0719",
+        "f-lit-0722",
+        "f-lit-0723",
+        "f-lit-0728",
+        "f-lit-0736",
+        "f-hmid-0744",
+        "f-hmid-0746",
+        "f-hmid-0753",
+        "f-hmid-0754",
+        "f-hmid-0755",
+        "f-hmid-0756",
+        "f-hmid-0757",
+        "f-hmid-0758",
+        "f-hmid-0759",
+        "f-hmid-0760",
+        "f-hmix-0771",
+        "f-hmix-0772",
+        "f-hmix-0773",
+        "f-hmix-0774",
+        "f-hmix-0775",
+        "f-hmix-0778",
+        "f-hmid-0780",
+        "f-hmid-0781",
+        "f-hmid-0782",
+        "f-hmid-0783",
+        "f-hmid-0788",
+        "f-hmid-0789",
+        "f-hmid-0790",
+        "f-hmid-0791",
+        "f-hmid-0792",
+        "f-hmid-0793",
+        "f-hmid-0794",
+        "f-hmid-0795",
+        "f-hmid-0796",
+        "f-hmid-0797",
+        "f-hmix-0800",
+        "f-hmix-0801",
+        "f-hmix-0807",
+        "f-hmix-0808",
+        "f-hmix-0809",
+        "f-hmix-0810",
+        "f-hmix-0811",
+        "f-hmix-0813",
+        "f-hmix-0815",
+        "f-hmid-0825",
+        "f-hmid-0826",
+        "f-hmid-0827",
+        "f-hmix-0843",
+        "f-hmix-0844",
+        "f-hmix-0845",
+        "f-hmid-0852",
+        "f-hmid-0853",
+        "f-hmid-0854",
+        "f-hmid-0855",
+        "f-hmid-0856",
+        "f-hmid-0857",
+        "f-hmid-0858",
+        "f-hmid-0859",
+        "f-hmid-0860",
+        "f-hmid-0861",
+        "f-hmid-0862",
+        "f-hmid-0863",
+        "f-hmid-0864",
+        "f-hmid-0865",
+        "f-hmid-0866",
+        "f-hmid-0867",
+        "f-hmid-0868",
+        "f-hmid-0869",
+        "f-hmix-0870",
+        "f-hmix-0871",
+        "f-hmix-0872",
+        "f-hmix-0873",
+        "f-hmix-0874",
+        "f-hmix-0875",
+        "f-hmix-0876",
+        "f-hmix-0877",
+        "f-hmix-0878",
+        "f-hmix-0879",
+        "f-hmix-0880",
+        "f-hmix-0881",
+        "f-hmix-0882",
+        "f-hmix-0883",
+        "f-hmix-0884",
+        "f-hmix-0885",
+        "f-hmix-0886",
+        "f-hmix-0887",
+        "f-hmid-0889",
+        "f-hmid-0891",
+        "f-hmid-0892",
+        "f-hmid-0893",
+        "f-hmid-0897",
+        "f-hmid-0898",
+        "f-hmid-0899",
+        "f-hmid-0900",
+        "f-hmid-0901",
+        "f-hmid-0902",
+        "f-hmid-0904",
+        "f-hmid-0905",
+        "f-hmix-0906",
+        "f-hmix-0907",
+        "f-hmix-0915",
+        "f-hmix-0916",
+        "f-hmix-0917",
+        "f-hmix-0919",
+        "f-hmix-0920",
+        "f-hmix-0922",
+        "f-hmix-0923",
+        "f-hmid-0924",
+        "f-hmid-0925",
+        "f-hmid-0926",
+        "f-hmid-0927",
+        "f-hmid-0928",
+        "f-hmid-0929",
+        "f-hmid-0930",
+        "f-hmid-0931",
+        "f-hmid-0932",
+        "f-hmid-0933",
+        "f-hmid-0934",
+        "f-hmid-0935",
+        "f-hmid-0936",
+        "f-hmid-0937",
+        "f-hmid-0938",
+        "f-hmid-0939",
+        "f-hmid-0940",
+        "f-hmid-0941",
+        "f-hmix-0942",
+        "f-hmix-0943",
+        "f-hmix-0944",
+        "f-hmix-0945",
+        "f-hmix-0946",
+        "f-hmix-0947",
+        "f-hmix-0948",
+        "f-hmix-0949",
+        "f-hmix-0950",
+        "f-hmix-0951",
+        "f-hmix-0952",
+        "f-hmix-0953",
+        "f-hmix-0954",
+        "f-hmix-0955",
+        "f-hmix-0956",
+        "f-hmix-0957",
+        "f-hmix-0958",
+        "f-hmix-0959",
+        "f-nskey-0963",
+        "f-nskey-0965",
+        "f-nskey-0966",
+        "f-nskey-0967",
+        "f-nskey-0970",
+        "f-nskey-0976",
+        "f-nskey-0977",
+        "f-nskey-0984",
+        "f-nskey-0987",
+        "f-nskey-0990",
+        "f-nskey-0993",
+        "f-nskey-0995",
+        "f-nskey-1000",
+        "f-nskey-1001",
+        "f-nskey-1002",
+        "f-nskey-1004",
+        "f-nskey-1008",
+        "f-nskey-1010",
+        "f-nskey-1011",
+        "f-nskey-1013",
+        "f-nskey-1017",
+        "f-nskey-1022",
+        "f-nskey-1027",
+        "f-nskey-1040",
+        "f-nskey-1053",
+        "f-nskey-1056",
+        "f-nskey-1059",
+        "f-nskey-1061",
+        "f-nskey-1062",
+        "f-nskey-1066",
+        "f-nskey-1071",
+        "f-nskey-1074",
+        "f-nskey-1075",
+        "f-nskey-1076",
+        "f-nskey-1078"
+      ],
+      "families": {
+        "hmid:colon": {
+          "cases": 18,
+          "failed": 18
+        },
+        "hmid:dotdash": {
+          "cases": 18,
+          "failed": 3
+        },
+        "hmid:old": {
+          "cases": 18,
+          "failed": 14
+        },
+        "hmid:plain": {
+          "cases": 18,
+          "failed": 10
+        },
+        "hmid:slash": {
+          "cases": 18,
+          "failed": 18
+        },
+        "hmid:space": {
+          "cases": 18,
+          "failed": 12
+        },
+        "hmix:colon": {
+          "cases": 18,
+          "failed": 18
+        },
+        "hmix:dotdash": {
+          "cases": 18,
+          "failed": 3
+        },
+        "hmix:old": {
+          "cases": 18,
+          "failed": 9
+        },
+        "hmix:plain": {
+          "cases": 18,
+          "failed": 6
+        },
+        "hmix:slash": {
+          "cases": 18,
+          "failed": 18
+        },
+        "hmix:space": {
+          "cases": 18,
+          "failed": 9
+        },
+        "lit:bash:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:bash:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:bash:dash": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:bash:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:bash:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag2:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:cli_flag:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:csharp:alnum": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:csharp:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:csharp:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:csharp:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:csharp:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:curl_hdr:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:curl_hdr_sq:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:docker_e:alnum": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:docker_e:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:docker_e:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:docker_e:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:env_file:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:env_file:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:env_file:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:env_file:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:go:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:snake": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:go:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:hdr_auth_tok:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:hdr_key:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:java:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:java:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:dash": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:java:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:java:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:snake": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:java:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:json:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:json:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:json:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:json:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:kotlin:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:kotlin:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:dash": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:kotlin:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:kotlin:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:kotlin:rand": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:kotlin:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:lua:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:lua:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:lua:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:lua:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:lua:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:php:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:php:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:php:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:php_arr:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:props:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:props:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ps:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ps:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ps:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps:snake": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ps:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ps_secure:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ruby:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:camel": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:snake": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:ruby_env:alnum": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby_env:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby_env:snake": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:ruby_env:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:rust:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:camel": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:rust:dash": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:rust:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:mixed": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:rust:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_ident:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:sql_pw:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:swift:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:tf:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:toml:alnum": {
+          "cases": 3,
+          "failed": 2
+        },
+        "lit:toml:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:toml:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:wget:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:alnum": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:camel": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:dot": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:mixed": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:rand": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:snake": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:xml:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:yaml:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:dash": {
+          "cases": 3,
+          "failed": 3
+        },
+        "lit:yaml:dot": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:yaml:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:rand": {
+          "cases": 3,
+          "failed": 1
+        },
+        "lit:yaml:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:spaced": {
+          "cases": 3,
+          "failed": 3
+        },
+        "nskey": {
+          "cases": 120,
+          "failed": 35
+        }
+      },
+      "upper95_of_failure_rate": 0.4805645184244487
+    }
+  }
+}

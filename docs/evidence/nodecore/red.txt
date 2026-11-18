@@ -1,0 +1,21 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test n1_four_decision_appends_write_the_golden_bytes_and_receipts ... FAILED
+test n4_a_duplicated_key_is_refused_in_all_three_schemas ... FAILED
+test n3_every_refusal_text_equals_the_unmoved_platinum_text_except_the_duplicate_key_decision ... FAILED
+test n6_a_failing_signer_leaves_the_ledger_exactly_as_it_was ... FAILED
+test n5_verify_failures_have_the_unmoved_platinum_texts ... FAILED
+test n2_evidence_and_council_events_equal_the_platinum_bytes ... FAILED
+test n7_the_dependency_tree_holds_no_network_or_cloud_crate ... ok
+thread 'n1_four_decision_appends_write_the_golden_bytes_and_receipts' (3173645) panicked at crates/nodecore/tests/nodecore.rs:54:31:
+thread 'n4_a_duplicated_key_is_refused_in_all_three_schemas' (3173648) panicked at crates/nodecore/tests/nodecore.rs:160:5:
+assertion `left == right` failed
+  left: Io("not implemented")
+ right: Invalid("request is not JSON (or has a duplicated key)")
+thread 'n3_every_refusal_text_equals_the_unmoved_platinum_text_except_the_duplicate_key_decision' (3173647) panicked at crates/nodecore/tests/nodecore.rs:138:9:
+thread 'n6_a_failing_signer_leaves_the_ledger_exactly_as_it_was' (3173650) panicked at crates/nodecore/tests/nodecore.rs:233:27:
+thread 'n5_verify_failures_have_the_unmoved_platinum_texts' (3173649) panicked at crates/nodecore/tests/nodecore.rs:174:31:
+thread 'n2_evidence_and_council_events_equal_the_platinum_bytes' (3173646) panicked at crates/nodecore/tests/nodecore.rs:76:57:
+test result: FAILED. 1 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+error: test failed, to rerun pass `-p entropa-nodecore --test nodecore`
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: 1 target failed:

@@ -1,0 +1,5 @@
+Found 13 mutants to test
+ok       Unmutated baseline in 15s build + 25s test
+MISSED   crates/tiers/src/adapters.rs:173:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "" in 0s build + 3s test
+MISSED   crates/tiers/src/adapters.rs:173:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "xyzzy" in 0s build + 3s test
+13 mutants tested in 2m: 2 missed, 11 caught

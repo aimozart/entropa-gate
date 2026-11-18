@@ -1,0 +1,25 @@
+# The transparency-log service. Still needs the admin-ui build stage, though:
+# entropa-api's lib.rs (which this binary depends on) embeds the admin UI via
+# include_str! at compile time regardless of which binary is being built — found the
+# hard way on the first build attempt (2026-08-25). See
+# a stage record (not published).
+
+FROM node:20-slim AS admin-ui-builder
+WORKDIR /build/admin-ui
+COPY admin-ui/package.json admin-ui/package-lock.json* ./
+RUN npm install
+COPY admin-ui/ .
+RUN npm run build
+
+FROM rust:1-slim-bookworm AS builder
+WORKDIR /build
+COPY . .
+COPY --from=admin-ui-builder /build/admin-ui/dist ./admin-ui/dist
+RUN cargo build --release -p entropa-api --bin transparency_service
+
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=builder /build/target/release/transparency_service /usr/local/bin/transparency_service
+EXPOSE 8080
+CMD ["transparency_service"]

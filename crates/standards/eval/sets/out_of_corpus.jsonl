@@ -1,0 +1,20 @@
+{"qid": "oc-01", "query": "What does SOC 2 criterion CC6.1 require for logical access?"}
+{"qid": "oc-02", "query": "Which SOC 2 trust services criterion covers availability commitments?"}
+{"qid": "oc-03", "query": "What does SOC 2 CC7.2 say about monitoring for anomalies?"}
+{"qid": "oc-04", "query": "What does ISO/IEC 27001 Annex A control 8.15 require about logging?"}
+{"qid": "oc-05", "query": "Which clause of ISO/IEC 42001 covers AI system impact assessment?"}
+{"qid": "oc-06", "query": "What does Article 21 of NIS2 require for cybersecurity risk-management measures?"}
+{"qid": "oc-07", "query": "What does HITRUST CSF control 09.aa require about audit logging?"}
+{"qid": "oc-08", "query": "Which HITRUST requirement addresses mobile device encryption?"}
+{"qid": "oc-09", "query": "What does GDPR Article 32 require for security of processing?"}
+{"qid": "oc-10", "query": "What is the GDPR time limit for notifying a supervisory authority of a personal data breach?"}
+{"qid": "oc-11", "query": "What does CMMC Level 2 require for multi-factor authentication?"}
+{"qid": "oc-12", "query": "What is the CNSA 2.0 timeline for moving to quantum-resistant algorithms?"}
+{"qid": "oc-13", "query": "What does NIST SP 800-171 requirement 3.3.8 say about protecting audit information?"}
+{"qid": "oc-14", "query": "What does NYDFS 23 NYCRR 500.15 require about encryption of nonpublic information?"}
+{"qid": "oc-15", "query": "What does NIST SP 800-53 control AU-99 require?"}
+{"qid": "oc-16", "query": "What does PCI DSS requirement 99.9.9 say?"}
+{"qid": "oc-17", "query": "What obligations does Article 150 of the EU AI Act set?"}
+{"qid": "oc-18", "query": "What does Article 77 of the DORA RTS require?"}
+{"qid": "oc-19", "query": "What is the best way to bake sourdough bread at home?"}
+{"qid": "oc-20", "query": "How does TCP congestion control avoid network collapse?"}

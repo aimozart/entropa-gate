@@ -1,0 +1,12 @@
+{
+ "files": {
+  "eg_abuse.jsonl": "b53971706752b46b4163e6c028385d9fd2d13983db88043beabed18b46cf4c3d",
+  "eg_clean.jsonl": "134a902cc233e559bbd9e1ebcf614a32987bee5fdce9f7593e873cb3694f6416",
+  "eg_destination.jsonl": "2b2456f61867dd28675c545a5308238c83dd5dcf5f1262987183025d38893b3f",
+  "eg_personal.jsonl": "a69882b59fb9b0d40b3102e8d1e6ec1cf59ab3a7de5b610a95d1942afd4302c8",
+  "eg_policy_extra.json": "d3a4a5e1c03309a4bc5f04a4d6d9ed0b2d8d9c6729f6bca9ff14eda0c0181eb8",
+  "eg_secrets.jsonl": "8f45419422d673b45927aaf7e1f6e07196acb7d7ea51d0290ebe3c58cce8748c",
+  "eg_terms.jsonl": "c391ee35f06ca94c710c7239ef9e704a934e7b730a20c79e7e71a70e8086fcac"
+ },
+ "note": "sha256 of each DEV file, written before any engine change in task 3"
+}

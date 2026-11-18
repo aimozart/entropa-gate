@@ -1,0 +1,35 @@
+ok   ignored: .env
+FAIL NOT ignored: .env.local
+FAIL NOT ignored: .env.production
+FAIL NOT ignored: id_rsa
+FAIL NOT ignored: id_ed25519
+FAIL NOT ignored: server.pem
+FAIL NOT ignored: server.key
+FAIL NOT ignored: cert.p12
+FAIL NOT ignored: cert.pfx
+FAIL NOT ignored: keystore.jks
+FAIL NOT ignored: .aws/credentials
+FAIL NOT ignored: credentials.json
+FAIL NOT ignored: service-account.json
+FAIL NOT ignored: service-account-prod.json
+ok   ignored: .claude/settings.local.json
+ok   ignored: .claude/hook-audit.jsonl
+FAIL NOT ignored: terraform.tfstate
+FAIL NOT ignored: terraform.tfstate.backup
+FAIL NOT ignored: .terraform/x
+FAIL NOT ignored: secrets/x
+FAIL NOT ignored: .npmrc
+FAIL NOT ignored: .netrc
+FAIL NOT ignored: node_modules/x
+ok   ignored: target/x
+ok   ignored: .DS_Store
+FAIL NOT ignored: debug.log
+FAIL NOT ignored: vault.gpg
+ok   .env.example is tracked
+ok   .env.example is not ignored
+ok   .gitignore has no duplicate line
+ok   no tracked file (outside the fuzz corpora) is covered by an ignore pattern
+ok   the vendored preflight matches its recorded hash
+gitleaks tree: clean
+gitleaks history: clean
+PREFLIGHT FAIL

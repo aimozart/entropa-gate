@@ -1,0 +1,15 @@
+# reader steps inside a clean container (image entropa-dev:1, Debian 12, glibc 2.36, NO network, read-only root, read-only mounts)
+# binary sha256 36c46f3b1b703528... from branch ro-verify 21677f6
+$ docker run --rm --network none --read-only -v BIN:/usr/local/bin/entropa-mockview:ro -v LED:/led:ro entropa-dev:1 entropa-mockview verify /led PUBLIC_KEY_HEX
+OK records=1000 checkpoints=1000
+exit: 0
+# a copy with one byte of records.log changed: must refuse
+refused: Corrupt("a checkpoint does not match the records")
+exit: 1
+# wrong public key on the good copy: must refuse
+refused: record 0: signature does not verify
+exit: 1
+# a directory that holds no ledger: must refuse
+refused: no ledger found in that directory (expected evidence-ledger/ inside it)
+exit: 1
+ldd (Debian GLIBC 2.36-9+deb12u14) 2.36

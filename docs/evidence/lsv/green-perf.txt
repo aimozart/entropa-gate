@@ -1,0 +1,9 @@
+    Finished `release` profile [optimized] target(s) in 0.09s
+     Running tests/store_perf.rs (target/release/deps/store_perf-4c8b102c49011ee0)
+
+running 1 test
+open of 6,000 records with 6,000 checkpoints: 0.010 s; put_checkpoint first 10 avg 3303.2 us, last 10 avg 3273.0 us (ratio 1.0)
+test p1_open_of_6000_records_with_a_checkpoint_each_is_fast_and_put_checkpoint_does_not_grow ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 41.62s
+

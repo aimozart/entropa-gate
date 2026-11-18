@@ -1,0 +1,11 @@
+case                                         isError  fields
+T1 log_head                                  false    {"signature_valid": true, "signer_trusted": true, "size": 5}
+T2 verify_checkpoint valid                   false    {"signature_valid": true, "signer_trusted": true, "size": 5}
+T3 verify_checkpoint tampered size           false    {"signature_valid": false, "signer_trusted": false, "size": 6}
+T4 verify_receipt valid                      false    {"valid": true, "signature_valid": true, "signer_trusted": true, "inclusion_valid": true}
+T5 verify_receipt tampered record            false    {"valid": false, "signature_valid": true, "signer_trusted": true, "inclusion_valid": false}
+T6 verify_receipt wrong index                false    {"valid": false, "signature_valid": true, "signer_trusted": true, "inclusion_valid": false}
+T7 verify_receipt untrusted signer           false    {"valid": false, "signature_valid": true, "signer_trusted": false, "inclusion_valid": true}
+T8 list_records limit 2                      false    {"total": 5, "next_since_index": 2, "payloads": ["agent-run-started", "tool-call-approved"]}
+T9 explain_proof valid                       false    {"root_matches": true}
+T10 invalid arguments (uppercase hex)        true     {"error": "invalid_arguments"}

@@ -1,0 +1,64 @@
+== sdk
+rc=0
+== evidence
+== p0
+docs/DECISION_OUTCOMES.md:1413: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1415: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1417: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1418: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1420: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1421: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1423: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1425: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1427: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1429: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1430: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1431: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1433: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1435: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1436: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1438: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1439: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1441: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1443: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1445: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1447: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1449: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1451: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1452: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1454: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1456: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1458: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1460: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1462: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1463: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1465: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1467: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1469: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1473: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1475: dated 2026-10-21, no P0 answer
+docs/DECISION_OUTCOMES.md:1477: dated 2026-10-22, no P0 answer
+== wording
+== wording (website/public-main, website/public-scryon, root docs)
+website/public-main/resume.html:72: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:73: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:84: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:103: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:154: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:162: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:163: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:164: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:212: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/resume.html:214: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/glossary.html:209: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:71: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:72: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:85: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:95: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:106: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:140: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:147: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:148: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:149: claims compliance or certification without an aligned-with / mapped-to context
+website/public-main/hire.html:175: claims compliance or certification without an aligned-with / mapped-to context
+findings: 21

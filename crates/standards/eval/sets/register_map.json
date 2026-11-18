@@ -1,0 +1,70 @@
+{
+ "DORA-6": [
+  "DORA-RTS",
+  "Art.6"
+ ],
+ "DORA-7": [
+  "DORA-RTS",
+  "Art.7"
+ ],
+ "DORA-12-2-d": [
+  "DORA-RTS",
+  "Art.12"
+ ],
+ "PCI-10-3-2": [
+  "PCI-DSS",
+  "10.3.2"
+ ],
+ "PCI-10-3-4": [
+  "PCI-DSS",
+  "10.3.4"
+ ],
+ "PCI-10-5-1": [
+  "PCI-DSS",
+  "10.5.1"
+ ],
+ "PCI-12-3-3": [
+  "PCI-DSS",
+  "12.3.3"
+ ],
+ "NIST-AU-9": [
+  "NIST-SP-800-53",
+  "AU-9"
+ ],
+ "NIST-AU-9-2": [
+  "NIST-SP-800-53",
+  "AU-9(2)"
+ ],
+ "NIST-AU-9-3": [
+  "NIST-SP-800-53",
+  "AU-9(3)"
+ ],
+ "NIST-AU-10": [
+  "NIST-SP-800-53",
+  "AU-10"
+ ],
+ "EUAIA-12": [
+  "EU-AI-ACT",
+  "Art.12"
+ ],
+ "EUAIA-19": [
+  "EU-AI-ACT",
+  "Art.19"
+ ],
+ "EUAIA-26-6": [
+  "EU-AI-ACT",
+  "Art.26"
+ ],
+ "HIPAA-164-312-b": [
+  "HIPAA-SECURITY-RULE",
+  "164.312(b)"
+ ],
+ "HIPAA-164-312-c1": [
+  "HIPAA-SECURITY-RULE",
+  "164.312(c)"
+ ],
+ "HIPAA-164-312-c2": [
+  "HIPAA-SECURITY-RULE",
+  "164.312(c)"
+ ]
+}

@@ -1,0 +1,16 @@
+test t4_the_ssn_shape_finder_itself_works ... ok
+test t4b_the_space_separated_finder_itself_works ... ok
+test t6_the_card_finder_and_the_allowlist_parser_work ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... ok
+test t1_no_canary_appears_anywhere_outside_the_gate ... ok
+test t5_every_luhn_valid_card_shaped_number_in_the_repository_is_on_the_allowlist_with_a_source ... FAILED
+test t3b_every_space_separated_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... ok
+test t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... ok
+
+--
+thread 't5_every_luhn_valid_card_shaped_number_in_the_repository_is_on_the_allowlist_with_a_source' (3810651) panicked at crates/synthetic/tests/repo_scan.rs:375:5:
+card-shaped numbers not on the allowlist (file: masked value, count): {"crates/egress/eval_dev/eg_personal.jsonl: 40…(16 digits)": 100, "crates/egress/eval_dev/eg_personal.jsonl: 51…(16 digits)": 32, "crates/egress/eval_dev_d/eg_secrets.jsonl: 40…(16 digits)": 134, "crates/egress/eval_dev_d/eg_secrets.jsonl: 41…(16 digits)": 1, "crates/egress/eval_dev_d/eg_secrets.jsonl: 42…(16 digits)": 1, "crates/egress/eval_dev_d/eg_secrets.jsonl: 45…(16 digits)": 1, "crates/egress/eval_dev_d/eg_secrets.jsonl: 51…(16 digits)": 132, "crates/egress/eval_dev_d/eg_secrets.jsonl: 55…(16 digits)": 125, "crates/egress/eval_dev_d/eg_secrets.jsonl: 60…(16 digits)": 129, "crates/egress/tests/detectors.rs: 35…(16 digits)": 1, "crates/egress/tests/detectors.rs: 37…(15 digits)": 1, "crates/egress/tests/detectors.rs: 60…(16 digits)": 1, "crates/egress/tests/survivors_g.rs: 41…(16 digits)": 1, "crates/egress/tests/zz_probe2.rs: 37…(15 digits)": 3, "crates/egress/tests/zz_probe2.rs: 60…(16 digits)": 1, "crates/synthetic/tests/repo_scan.rs: 37…(15 digits)": 2, "a stage record (not published): 30…(14 digits)": 1}
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+--
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+

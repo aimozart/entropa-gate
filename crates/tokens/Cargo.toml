@@ -1,0 +1,19 @@
+[package]
+name = "entropa-tokens"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "AT1 spike: ML-DSA-65 signed capability tokens that verify fully offline. Design A (single signed token) and design C (append-only chain of signed blocks), signed revocation lists, canonical JSON."
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+blake3 = { workspace = true }
+hex = { workspace = true }
+
+[dev-dependencies]
+proptest = "1"
+
+[lints]
+workspace = true

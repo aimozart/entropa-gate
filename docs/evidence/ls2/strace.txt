@@ -1,0 +1,1 @@
+ls2 test binary incl. node and the CLI children: network syscalls = 0

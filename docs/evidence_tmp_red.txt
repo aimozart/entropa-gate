@@ -1,0 +1,49 @@
+ok   a clean tree passes
+FAIL a private key block: expected exit 1 and FINDING private_key, got exit 0: 
+FAIL an AWS access key id: expected exit 1 and FINDING aws_key, got exit 0: 
+FAIL an AWS temporary key id: expected exit 1 and FINDING aws_key, got exit 0: 
+FAIL a GitHub token: expected exit 1 and FINDING vcs_token, got exit 0: 
+FAIL a GitHub OAuth token: expected exit 1 and FINDING vcs_token, got exit 0: 
+FAIL an sk- API key: expected exit 1 and FINDING api_key_sk, got exit 0: 
+FAIL a Stripe live key: expected exit 1 and FINDING stripe_key, got exit 0: 
+FAIL a Stripe restricted key: expected exit 1 and FINDING stripe_key, got exit 0: 
+FAIL a JWT-shaped string: expected exit 1 and FINDING jwt, got exit 0: 
+FAIL a service-account JSON: expected exit 1 and FINDING service_account, got exit 0: 
+FAIL a private_key_id field: expected exit 1 and FINDING service_account, got exit 0: 
+FAIL an email address: expected exit 1 and FINDING email, got exit 0: 
+FAIL a the project rules content marker: expected exit 1 and FINDING claude_marker, got exit 0: 
+FAIL a second the project rules marker: expected exit 1 and FINDING claude_marker, got exit 0: 
+FAIL a licensed phrase split over lines and cases: expected exit 1 and FINDING licensed_text, got exit 0: 
+ok   a licensed-phrase file that matches nothing passes
+FAIL a file over 5 MB: expected exit 1 and FINDING big_file, got exit 0: 
+FAIL path the project rules: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path docs/archive/CLAUDE.entropa-original.md: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path the project notes: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path docs/the project notes.entropa-original.md: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path the project history: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path the project history02.md: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path notes/a.txt: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path docs/working-notes.md: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path .claude/settings.json: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path .env: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path platinum.key: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path secrets/node.pem: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path zz_probe1.rs: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path crates/x/tests/zz_probe9.rs: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path docs/standards/x.txt: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path standards-store/c1/clauses.jsonl: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path crates/x/fuzz/corpus/target/a1: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path crates/x/fuzz/artifacts/crash-1: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path instructions-notes.md: expected exit 1 and FINDING path_excluded, got exit 0: 
+FAIL path target/debug/x: expected exit 1 and FINDING path_excluded, got exit 0: 
+ok   .env.example is allowed passes
+ok   noreply and example addresses passes
+ok   the documented AWS example key passes
+ok   a reasoned allowlist line passes
+FAIL allowlist without reason: exit 0
+FAIL an allowlist for another rule does not help: expected exit 1 and FINDING aws_key, got exit 0: 
+FAIL an allowlist for another path does not help: expected exit 1 and FINDING aws_key, got exit 0: 
+ok   a finding does not print the secret
+FAIL finding format: 
+FAIL --report: exit 0: 
+FAILED

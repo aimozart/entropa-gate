@@ -1,0 +1,77 @@
+4 mismatches:
+"nohup python3 -c \"import os; os.remove('x')\"": want Ask/R6, got Silent/
+"env FOO=1 node -e \"require('fs').rmSync('x')\"": want Ask/R6, got Silent/
+"xargs -I{} python3 -c \"import os; os.remove('{}')\"": want Ask/R6, got Silent/
+"timeout 5 perl -e 'unlink \"x\"'": want Ask/R6, got Silent/
+6 mismatches:
+"python3 <<'EOF'\nimport os\nos.remove('x')\nEOF\n": want Ask/R6, got Silent/
+"python3 <<< \"import os; os.remove('x')\"": want Ask/R6, got Silent/
+"perl <<'EOF'\nunlink 'x';\nEOF\n": want Ask/R6, got Silent/
+"echo \"import os; os.remove('x')\" | python3": want Ask/R6, got Silent/
+"printf 'unlink \"x\"' | perl": want Ask/R6, got Silent/
+"cat <<'EOF' | python3\nimport shutil\nEOF\n": want Ask/R6, got Silent/
+6 mismatches:
+"python3 -c \"open('.env').read()\"": want Deny/S1, got Silent/
+"perl -e 'open F, \"/home/u/.ssh/id_ed25519\"'": want Deny/S1, got Silent/
+"ruby -e 'File.read(\"server.pem\")'": want Deny/S1, got Silent/
+"python3 -c \"import os; os.system('git push --force origin main')\"": want Deny/G1, got Silent/
+"python3 -c \"import subprocess; subprocess.run(['git','push','--force'])\"": want Deny/G1, got Silent/
+"node -e \"require('child_process').execSync('git push -f github x')\"": want Deny/G1, got Silent/
+24 mismatches:
+"setpriv --reuid 1 rm x": want Deny/D1, got Silent/
+"setpriv --reuid=1 --regid=1 --clear-groups rm -r x": want Deny/D1, got Silent/
+"setpriv --reuid 1 --regid 1 --init-groups rm -r x": want Deny/D1, got Silent/
+"unbuffer rm -rf x": want Deny/D1, got Silent/
+"unbuffer -p rm -rf x": want Deny/D1, got Silent/
+"eatmydata rm -rf x": want Deny/D1, got Silent/
+"faketime '2020-01-01' rm -rf x": want Deny/D1, got Silent/
+"faketime -m '2020-01-01' rm -rf x": want Deny/D1, got Silent/
+"proxychains rm -rf x": want Deny/D1, got Silent/
+"proxychains4 -q rm -rf x": want Deny/D1, got Silent/
+"proxychains4 -f /etc/pc.conf rm -rf x": want Deny/D1, got Silent/
+"torsocks rm -rf x": want Deny/D1, got Silent/
+"torsocks -i rm -rf x": want Deny/D1, got Silent/
+"sg staff -c 'rm -r x'": want Deny/D1, got Silent/
+"sg staff 'rm -r x'": want Deny/D1, got Silent/
+"busybox rm -r x": want Deny/D1, got Silent/
+"busybox sh -c 'rm -r x'": want Deny/D1, got Silent/
+"strace rm -r x": want Deny/D1, got Silent/
+"strace -f -o out.txt rm -r x": want Deny/D1, got Silent/
+"strace -e trace=file rm -r x": want Deny/D1, got Silent/
+"ltrace rm -r x": want Deny/D1, got Silent/
+"ltrace -o out.txt rm -r x": want Deny/D1, got Silent/
+"env -S 'rm -r x'": want Deny/D1, got Silent/
+"env --split-string='rm -r x'": want Deny/D1, got Silent/
+31 mismatches:
+"python3 -c \"import os; os.remove('x')\"": want Ask/R6, got Silent/
+"python -c \"import os; os.unlink('x')\"": want Ask/R6, got Silent/
+"python3.12 -c \"import shutil; shutil.rmtree('x')\"": want Ask/R6, got Silent/
+"python3 -c \"import subprocess; subprocess.run(['rm','x'])\"": want Ask/R6, got Silent/
+"python3 -c \"import os; os.system('ls')\"": want Ask/R6, got Silent/
+"python3 -c \"exec('print(1)')\"": want Ask/R6, got Silent/
+"python3 -Bc \"import os; os.remove('x')\"": want Ask/R6, got Silent/
+"perl -e 'unlink \"x\"'": want Ask/R6, got Silent/
+"perl -e 'system(\"ls\")'": want Ask/R6, got Silent/
+"perl -pi -e 'unlink' f": want Ask/R6, got Silent/
+"perl -E 'qx(ls)'": want Ask/R6, got Silent/
+"ruby -e 'File.delete(\"x\")'": want Ask/R6, got Silent/
+"ruby -e 'system(\"ls\")'": want Ask/R6, got Silent/
+"ruby -e 'FileUtils.rm_rf(\"x\")'": want Ask/R6, got Silent/
+"node -e \"require('fs').rmSync('x')\"": want Ask/R6, got Silent/
+"node -e \"require('child_process').execSync('ls')\"": want Ask/R6, got Silent/
+"node --eval \"require('fs').unlinkSync('x')\"": want Ask/R6, got Silent/
+"nodejs -e \"require('fs').rmdirSync('x')\"": want Ask/R6, got Silent/
+"node -p \"require('child_process').execSync('ls')\"": want Ask/R6, got Silent/
+"php -r 'unlink(\"x\");'": want Ask/R6, got Silent/
+"php -r 'system(\"ls\");'": want Ask/R6, got Silent/
+"php -r 'shell_exec(\"ls\");'": want Ask/R6, got Silent/
+"awk 'BEGIN{system(\"ls\")}'": want Ask/R6, got Silent/
+"gawk 'BEGIN{\"ls\" | getline x}'": want Ask/R6, got Silent/
+"awk '{print $1 | \"sh\"}' f": want Ask/R6, got Silent/
+"sed 's/a/b/e' f": want Ask/R6, got Silent/
+"sed -e 's/a/b/w out.txt' f": want Ask/R6, got Silent/
+"sed 'e ls' f": want Ask/R6, got Silent/
+"sed '1e ls' f": want Ask/R6, got Silent/
+"sed -n 'w out.txt' f": want Ask/R6, got Silent/
+"sed '/x/{e ls\n}' f": want Ask/R6, got Silent/
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

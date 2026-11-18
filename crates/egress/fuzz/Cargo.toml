@@ -1,0 +1,38 @@
+[package]
+name = "entropa-egress-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+entropa-egress = { path = ".." }
+
+[workspace]
+
+[[bin]]
+name = "decide_request"
+path = "fuzz_targets/decide_request.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "views_spans"
+path = "fuzz_targets/views_spans.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "detect_scan"
+path = "fuzz_targets/detect_scan.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "policy_parse"
+path = "fuzz_targets/policy_parse.rs"
+test = false
+doc = false

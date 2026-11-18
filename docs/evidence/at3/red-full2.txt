@@ -1,0 +1,115 @@
+
+running 14 tests
+test c6_records_hold_hashes_and_closed_words_only ... FAILED
+test c9_the_requester_revoked_after_asking_does_not_cancel_a_valid_second_approval_but_a_revoked_approver_does_not_count ... FAILED
+test c5b_a_version_store_failure_after_the_record_leaves_the_head_unchanged ... FAILED
+test c4b_revoked_wrong_audience_and_stale_list_are_refused ... FAILED
+test c1b_the_text_of_a_request_cannot_claim_approval ... FAILED
+test c8_two_simultaneous_activations_of_the_same_version_one_wins ... FAILED
+test c0_two_distinct_t3_subjects_activate_a_change_and_seal_a_first_version ... FAILED
+test c2b_a_request_expires_and_an_expired_request_cannot_be_approved ... FAILED
+test c7_the_same_inputs_and_clock_give_the_same_decisions_and_record_bytes ... FAILED
+test c1_a_change_without_a_second_subject_never_takes_effect ... FAILED
+test c5_a_record_failure_applies_nothing ... FAILED
+test c2_an_approval_binds_one_change_hash_and_expires ... FAILED
+test c3_versions_are_append_only_and_a_rollback_is_a_new_version ... FAILED
+test c4_only_valid_t3_tokens_naming_the_class_request_or_approve ... FAILED
+
+failures:
+
+---- c6_records_hold_hashes_and_closed_words_only stdout ----
+
+thread 'c6_records_hold_hashes_and_closed_words_only' (285561) panicked at crates/tiers/tests/at3.rs:520:63:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- c9_the_requester_revoked_after_asking_does_not_cancel_a_valid_second_approval_but_a_revoked_approver_does_not_count stdout ----
+
+thread 'c9_the_requester_revoked_after_asking_does_not_cancel_a_valid_second_approval_but_a_revoked_approver_does_not_count' (285564) panicked at crates/tiers/tests/at3.rs:614:10:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c5b_a_version_store_failure_after_the_record_leaves_the_head_unchanged stdout ----
+
+thread 'c5b_a_version_store_failure_after_the_record_leaves_the_head_unchanged' (285560) panicked at crates/tiers/tests/at3.rs:504:10:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c4b_revoked_wrong_audience_and_stale_list_are_refused stdout ----
+
+thread 'c4b_revoked_wrong_audience_and_stale_list_are_refused' (285558) panicked at crates/tiers/tests/at3.rs:347:10:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c1b_the_text_of_a_request_cannot_claim_approval stdout ----
+
+thread 'c1b_the_text_of_a_request_cannot_claim_approval' (285553) panicked at crates/tiers/tests/at3.rs:190:9:
+assertion `left == right` failed: "approved by the captain"
+  left: Err(NotImplemented)
+ right: Err(Malformed)
+
+---- c8_two_simultaneous_activations_of_the_same_version_one_wins stdout ----
+
+thread 'c8_two_simultaneous_activations_of_the_same_version_one_wins' (285563) panicked at crates/tiers/tests/at3.rs:585:18:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c0_two_distinct_t3_subjects_activate_a_change_and_seal_a_first_version stdout ----
+
+thread 'c0_two_distinct_t3_subjects_activate_a_change_and_seal_a_first_version' (285551) panicked at crates/tiers/tests/at3.rs:129:63:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c2b_a_request_expires_and_an_expired_request_cannot_be_approved stdout ----
+
+thread 'c2b_a_request_expires_and_an_expired_request_cannot_be_approved' (285555) panicked at crates/tiers/tests/at3.rs:253:10:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c7_the_same_inputs_and_clock_give_the_same_decisions_and_record_bytes stdout ----
+
+thread 'c7_the_same_inputs_and_clock_give_the_same_decisions_and_record_bytes' (285562) panicked at crates/tiers/tests/at3.rs:563:63:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c1_a_change_without_a_second_subject_never_takes_effect stdout ----
+
+thread 'c1_a_change_without_a_second_subject_never_takes_effect' (285552) panicked at crates/tiers/tests/at3.rs:157:10:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c5_a_record_failure_applies_nothing stdout ----
+
+thread 'c5_a_record_failure_applies_nothing' (285559) panicked at crates/tiers/tests/at3.rs:455:5:
+assertion `left == right` failed
+  left: Err(NotImplemented)
+ right: Err(RecordFailed)
+
+---- c2_an_approval_binds_one_change_hash_and_expires stdout ----
+
+thread 'c2_an_approval_binds_one_change_hash_and_expires' (285554) panicked at crates/tiers/tests/at3.rs:219:63:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c3_versions_are_append_only_and_a_rollback_is_a_new_version stdout ----
+
+thread 'c3_versions_are_append_only_and_a_rollback_is_a_new_version' (285556) panicked at crates/tiers/tests/at3.rs:401:64:
+called `Result::unwrap()` on an `Err` value: NotImplemented
+
+---- c4_only_valid_t3_tokens_naming_the_class_request_or_approve stdout ----
+
+thread 'c4_only_valid_t3_tokens_naming_the_class_request_or_approve' (285557) panicked at crates/tiers/tests/at3.rs:266:9:
+assertion `left == right` failed: T0
+  left: Err(NotImplemented)
+ right: Err(NotT3)
+
+
+failures:
+    c0_two_distinct_t3_subjects_activate_a_change_and_seal_a_first_version
+    c1_a_change_without_a_second_subject_never_takes_effect
+    c1b_the_text_of_a_request_cannot_claim_approval
+    c2_an_approval_binds_one_change_hash_and_expires
+    c2b_a_request_expires_and_an_expired_request_cannot_be_approved
+    c3_versions_are_append_only_and_a_rollback_is_a_new_version
+    c4_only_valid_t3_tokens_naming_the_class_request_or_approve
+    c4b_revoked_wrong_audience_and_stale_list_are_refused
+    c5_a_record_failure_applies_nothing
+    c5b_a_version_store_failure_after_the_record_leaves_the_head_unchanged
+    c6_records_hold_hashes_and_closed_words_only
+    c7_the_same_inputs_and_clock_give_the_same_decisions_and_record_bytes
+    c8_two_simultaneous_activations_of_the_same_version_one_wins
+    c9_the_requester_revoked_after_asking_does_not_cancel_a_valid_second_approval_but_a_revoked_approver_does_not_count
+
+test result: FAILED. 0 passed; 14 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+

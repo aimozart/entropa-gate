@@ -1,0 +1,84 @@
+crates/try-http/src/lib.rs:12:5: replace client_key -> String with String::new()
+crates/try-http/src/lib.rs:12:5: replace client_key -> String with "xyzzy".into()
+crates/try-http/src/lib.rs:12:21: replace > with == in client_key
+crates/try-http/src/lib.rs:12:21: replace > with < in client_key
+crates/try-http/src/lib.rs:12:21: replace > with >= in client_key
+crates/try-http/src/lib.rs:15:30: replace >= with < in client_key
+crates/try-http/src/lib.rs:16:55: replace - with + in client_key
+crates/try-http/src/lib.rs:16:55: replace - with / in client_key
+crates/try-http/src/lib.rs:26:5: replace render -> String with String::new()
+crates/try-http/src/lib.rs:26:5: replace render -> String with "xyzzy".into()
+crates/try-http/src/lib.rs:36:5: replace slash64 -> String with String::new()
+crates/try-http/src/lib.rs:36:5: replace slash64 -> String with "xyzzy".into()
+crates/try-http/src/lib.rs:79:9: replace Caps::admit -> Result<(), CapRefusal> with Ok(())
+crates/try-http/src/lib.rs:79:23: replace / with % in Caps::admit
+crates/try-http/src/lib.rs:79:23: replace / with * in Caps::admit
+crates/try-http/src/lib.rs:80:26: replace || with && in Caps::admit
+crates/try-http/src/lib.rs:80:12: delete ! in Caps::admit
+crates/try-http/src/lib.rs:80:33: replace != with == in Caps::admit
+crates/try-http/src/lib.rs:84:26: replace || with && in Caps::admit
+crates/try-http/src/lib.rs:84:12: delete ! in Caps::admit
+crates/try-http/src/lib.rs:84:33: replace >= with < in Caps::admit
+crates/try-http/src/lib.rs:91:27: replace > with == in Caps::admit
+crates/try-http/src/lib.rs:91:27: replace > with < in Caps::admit
+crates/try-http/src/lib.rs:91:27: replace > with >= in Caps::admit
+crates/try-http/src/lib.rs:94:41: replace * with + in Caps::admit
+crates/try-http/src/lib.rs:94:41: replace * with / in Caps::admit
+crates/try-http/src/lib.rs:94:36: replace + with - in Caps::admit
+crates/try-http/src/lib.rs:94:36: replace + with * in Caps::admit
+crates/try-http/src/lib.rs:97:30: replace > with == in Caps::admit
+crates/try-http/src/lib.rs:97:30: replace > with < in Caps::admit
+crates/try-http/src/lib.rs:97:30: replace > with >= in Caps::admit
+crates/try-http/src/lib.rs:100:49: replace + with - in Caps::admit
+crates/try-http/src/lib.rs:100:49: replace + with * in Caps::admit
+crates/try-http/src/server.rs:44:9: replace Shared::count with ()
+crates/try-http/src/server.rs:44:52: replace == with != in Shared::count
+crates/try-http/src/server.rs:49:9: replace Shared::stats_line -> String with String::new()
+crates/try-http/src/server.rs:49:9: replace Shared::stats_line -> String with "xyzzy".into()
+crates/try-http/src/server.rs:60:5: replace now_secs -> u64 with 0
+crates/try-http/src/server.rs:60:5: replace now_secs -> u64 with 1
+crates/try-http/src/server.rs:72:5: replace reply -> Resp with Default::default()
+crates/try-http/src/server.rs:87:8: delete ! in reply
+crates/try-http/src/server.rs:112:5: replace empty -> Resp with Default::default()
+crates/try-http/src/server.rs:115:5: replace error -> Resp with Default::default()
+crates/try-http/src/server.rs:125:5: replace header -> Option<&'a str> with None
+crates/try-http/src/server.rs:125:5: replace header -> Option<&'a str> with Some("")
+crates/try-http/src/server.rs:125:5: replace header -> Option<&'a str> with Some("xyzzy")
+crates/try-http/src/server.rs:129:5: replace preflight -> Resp with Default::default()
+crates/try-http/src/server.rs:129:43: replace == with != in preflight
+crates/try-http/src/server.rs:130:66: replace == with != in preflight
+crates/try-http/src/server.rs:134:35: replace || with && in preflight
+crates/try-http/src/server.rs:134:40: replace == with != in preflight
+crates/try-http/src/server.rs:136:8: delete ! in preflight
+crates/try-http/src/server.rs:136:33: replace && with || in preflight
+crates/try-http/src/server.rs:136:20: replace && with || in preflight
+crates/try-http/src/server.rs:157:5: replace post_try -> Resp with Default::default()
+crates/try-http/src/server.rs:158:24: replace == with != in post_try
+crates/try-http/src/server.rs:169:16: replace > with == in post_try
+crates/try-http/src/server.rs:169:16: replace > with < in post_try
+crates/try-http/src/server.rs:169:16: replace > with >= in post_try
+crates/try-http/src/server.rs:192:35: replace + with - in post_try
+crates/try-http/src/server.rs:202:34: replace > with == in post_try
+crates/try-http/src/server.rs:202:34: replace > with < in post_try
+crates/try-http/src/server.rs:202:34: replace > with >= in post_try
+crates/try-http/src/server.rs:221:5: replace route -> Resp with Default::default()
+crates/try-http/src/server.rs:222:9: delete match arm (Method::GET, "/healthz") in route
+crates/try-http/src/server.rs:223:9: delete match arm (_, "/healthz") in route
+crates/try-http/src/server.rs:224:9: delete match arm (Method::POST, "/try") in route
+crates/try-http/src/server.rs:225:9: delete match arm (Method::OPTIONS, "/try") in route
+crates/try-http/src/server.rs:226:9: delete match arm (_, "/try") in route
+crates/try-http/src/server.rs:232:5: replace handle -> Result<Resp, Infallible> with Ok(Default::default())
+crates/try-http/src/server.rs:241:5: replace serve with ()
+crates/try-http/src/server.rs:254:5: replace line with ()
+crates/try-http/src/server.rs:261:5: replace run -> Result<(), String> with Ok(())
+crates/try-http/src/server.rs:270:13: delete field salt from struct Config expression in run
+crates/try-http/src/settings.rs:59:9: replace || with && in parse_args
+crates/try-http/src/settings.rs:58:9: replace || with && in parse_args
+crates/try-http/src/settings.rs:57:8: delete ! in parse_args
+crates/try-http/src/settings.rs:57:44: replace && with || in parse_args
+crates/try-http/src/settings.rs:57:30: delete ! in parse_args
+crates/try-http/src/settings.rs:57:47: delete ! in parse_args
+crates/try-http/src/settings.rs:59:12: delete ! in parse_args
+crates/try-http/src/settings.rs:63:18: replace || with && in parse_args
+crates/try-http/src/settings.rs:63:13: replace == with != in parse_args
+crates/try-http/src/settings.rs:63:27: replace == with != in parse_args

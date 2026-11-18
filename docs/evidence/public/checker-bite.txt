@@ -1,0 +1,9 @@
+== s/| grep -v .\\\[evidence:.)/| grep -v "ZZZ")/
+ 1 file changed, 31 insertions(+), 3 deletions(-)
+FAIL good rc=1 problem: docs/public/ARCH.md:2: claim bullet has no evi
+RESULT: 8 passed, 1 failed; scratch <build-dir>/tmp
+== s/\[ -n "$(git ls-files -- "$p" | head -1)" \] || say/true || say/
+ 1 file changed, 31 insertions(+), 3 deletions(-)
+FAIL miss rc=0 
+FAIL untr rc=0 
+RESULT: 7 passed, 2 failed; scratch <build-dir>/tmp

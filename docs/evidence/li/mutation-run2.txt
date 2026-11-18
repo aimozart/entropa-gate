@@ -1,0 +1,11 @@
+Found 55 mutants to test
+ok       Unmutated baseline in 15s build + 23s test
+MISSED   crates/tiers/src/append.rs:26:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "" in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:26:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "xyzzy" in 0s build + 2s test
+TIMEOUT  crates/tiers/src/append.rs:92:27: replace match guard start.elapsed() < self.lock_timeout with true in IncrementalLedger::lock in 0s build + 60s test
+MISSED   crates/tiers/src/append.rs:92:43: replace < with <= in IncrementalLedger::lock in 0s build + 2s test
+TIMEOUT  crates/tiers/src/append.rs:101:32: replace > with == in IncrementalLedger::lock in 0s build + 60s test
+MISSED   crates/tiers/src/append.rs:101:32: replace > with < in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:101:32: replace > with >= in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:124:27: replace match guard e.kind() == std::io::ErrorKind::NotFound with true in IncrementalLedger::rebuild in 0s build + 2s test
+55 mutants tested in 5m: 6 missed, 42 caught, 5 unviable, 2 timeouts

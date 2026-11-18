@@ -1,0 +1,8 @@
+host-1: tampered copy fails                  0.014 s  FAIL (the tampered copy verified)
+host-1: explorer, intact -> OK page          0.005 s  FAIL
+host-1: explorer, tampered -> FAIL page      0.006 s  FAIL
+host-1: tampered licence refused             0.012 s  FAIL (a tampered licence was accepted)
+== container entropa-gate:s1-4a74a15cfc7a, --read-only --network none --cap-drop ALL, 1 run
+container-1: init                            0.124 s
+container-1: record x3                       0.370 s
+container-1: verify (expect OK records=3)    0.124 s  ok

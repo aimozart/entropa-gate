@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Internal Explorer — Entropa</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root{--bg:#070a16;--head:#f5f7fd;--muted:#8a97bd;--accent2:#34d1ff}
+  *{box-sizing:border-box}
+  html,body{min-height:100%;margin:0}
+  body{background:var(--bg);color:#c7d0e6;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+  header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 0 24px}
+  .brand{font-weight:800;font-size:20px;color:var(--head)}
+  .brand small{font-weight:600;font-size:12px;color:var(--muted);display:block;letter-spacing:.5px}
+  .badge{font-size:11px;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:999px;background:linear-gradient(135deg,#e24b7c,#ff9d4b);color:#04070f}
+
+  .stat-bar{display:flex;gap:0;background:rgba(10,14,30,.5);border:1px solid rgba(129,140,248,.18);border-radius:16px;overflow:hidden;margin-bottom:20px}
+  .stat{flex:1;text-align:center;padding:14px 10px;border-right:1px solid rgba(129,140,248,.14)}
+  .stat:last-child{border-right:none}
+  .stat .n{font-size:20px;font-weight:700;color:var(--head)}
+  .stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .dot.green{background:#5ce8c9;box-shadow:0 0 8px #5ce8c9}
+  .dot.red{background:#ff5c5c;box-shadow:0 0 8px #ff5c5c}
+  .dot.yellow{background:#f5c542;box-shadow:0 0 8px #f5c542;animation:pulse 1.2s ease-in-out infinite}
+  @keyframes pulse{50%{opacity:.35}}
+
+  .panel{background:rgba(10,14,30,.45);border:1px solid rgba(129,140,248,.18);border-radius:18px;padding:18px 20px;margin-bottom:20px}
+  .panel h3{margin:0 0 4px;font-size:14px;color:var(--head)}
+  .panel p{margin:0 0 12px;font-size:12.5px;color:var(--muted)}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+  .row label{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+  input{padding:9px 12px;font:inherit;font-size:13px;border-radius:10px;border:1px solid rgba(129,140,248,.28);background:rgba(10,14,30,.5);color:var(--head);outline:none}
+  input:focus{border-color:#7c5cff}
+  .btn{padding:10px 18px;border-radius:10px;font-weight:700;font-size:13px;border:none;cursor:pointer;background:linear-gradient(135deg,#7c5cff,#34d1ff);color:#04070f}
+  .btn.ghost{background:rgba(129,140,248,.1);color:var(--head);border:1px solid rgba(129,140,248,.28)}
+  .result{margin-top:10px;font-size:12.5px;color:var(--muted)}
+  .result a{font-weight:700;color:var(--accent2)}
+
+  .searchbar input{width:100%;padding:14px 18px;font-size:15px;border-radius:14px}
+  .hint{font-size:12px;color:var(--muted);margin:6px 0 20px}
+
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid rgba(129,140,248,.1);font-size:13px}
+  th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted)}
+  .empty{padding:40px;text-align:center;color:var(--muted)}
+  .payload{max-width:360px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  tbody a{color:var(--accent2);text-decoration:none}
+  tbody a:hover{text-decoration:underline}
+  tbody tr:hover{background:rgba(129,140,248,.05)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <div class="brand">Entropa<small>/ customer dashboard</small></div>
+      </div>
+      <span class="badge">INTERNAL — NOT PUBLIC</span>
+    </header>
+
+    <div class="stat-bar" id="stat-bar">
+      <div class="stat"><div class="n" id="stat-height">—</div><div class="l">Height (this partner)</div></div>
+      <div class="stat"><div class="n" id="stat-customers">—</div><div class="l">Total customers</div></div>
+      <div class="stat"><div class="n" id="stat-sig">—</div><div class="l">Signature</div></div>
+      <div class="stat"><div class="n"><span class="dot yellow" id="status-dot"></span><span id="stat-status">checking…</span></div><div class="l">Status</div></div>
+    </div>
+
+    <div class="panel">
+      <h3>Viewing partner</h3>
+      <p>Each customer has their own private tree — pick which one's records to browse below. Defaults to the soak-test simulation partner.</p>
+      <div class="row">
+        <div><label for="view-partner">Partner slug</label><input id="view-partner" type="text" value="soak-test-customer" /></div>
+        <button class="btn" id="view-partner-btn" type="button">Load</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>API key rotator</h3>
+      <p>Issues a fresh key for a partner and immediately invalidates the old one. Shown once — copy or download it now.</p>
+      <div class="row">
+        <div><label for="rotate-slug">Partner slug</label><input id="rotate-slug" type="text" placeholder="acme-corp" /></div>
+        <button class="btn" id="rotate-btn" type="button">Rotate key</button>
+      </div>
+      <div class="result" id="rotate-result"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Date-range export</h3>
+      <p>Pulls up to 2000 of the most recent records and filters client-side by timestamp — a preview of the real per-customer export.</p>
+      <div class="row">
+        <div><label for="from">From</label><input id="from" type="date" /></div>
+        <div><label for="to">To</label><input id="to" type="date" /></div>
+        <button class="btn" id="filter-btn" type="button">Filter &amp; export</button>
+        <button class="btn ghost" id="reset-btn" type="button">Reset</button>
+      </div>
+      <div class="result" id="result"></div>
+    </div>
+
+    <div class="searchbar">
+      <input id="search" type="text" placeholder="Search by index, hash, or payload…" autocomplete="off" />
+    </div>
+    <div class="hint">Try a record number, a partial hash, or any text from a payload.</div>
+
+    <div class="panel">
+      <table>
+        <thead><tr><th style="width:70px">#</th><th style="width:160px">Timestamp (UTC)</th><th>Label</th><th style="width:180px">Payload (hash)</th><th>Leaf hash</th></tr></thead>
+        <tbody id="body"><tr><td colspan="5" class="empty">loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+<script>
+(function () {
+  "use strict";
+  const API = "https://entropa-transparency-1032137727494.us-central1.run.app";
+  let all = [];
+  let view = [];
+  let partner = document.getElementById("view-partner").value.trim() || "soak-test-customer";
+
+  function short(s, n) { return s && s.length > n ? s.slice(0, n) + "…" : (s || ""); }
+  function esc(s) { return (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+  function setStatus(state, label) {
+    document.getElementById("status-dot").className = "dot " + state;
+    document.getElementById("stat-status").textContent = label;
+  }
+
+  async function load() {
+    setStatus("yellow", "checking…");
+    try {
+      const [healthRes, chainRes] = await Promise.all([
+        fetch(API + "/api/health"),
+        fetch(API + "/api/chain/" + encodeURIComponent(partner) + "?limit=2000"),
+      ]);
+      if (!healthRes.ok || !chainRes.ok) throw new Error("bad response");
+      const health = await healthRes.json();
+      all = await chainRes.json();
+      view = all;
+
+      const total = chainRes.headers.get("x-chain-total");
+      document.getElementById("stat-height").textContent = total !== null ? total : all.length;
+      document.getElementById("stat-customers").textContent = health.customers ?? "—";
+      document.getElementById("stat-sig").textContent = health.signature || "—";
+      setStatus(health.status === "ok" ? "green" : "red", health.status === "ok" ? "live" : "degraded");
+      render(document.getElementById("search").value);
+    } catch (e) {
+      setStatus("red", "offline");
+      document.getElementById("body").innerHTML = "<tr><td colspan='5' class='empty'>Could not load — the sequencer may be busy. Try again shortly.</td></tr>";
+    }
+  }
+
+  function matches(r, q) {
+    if (!q) return true;
+    q = q.toLowerCase();
+    return String(r.index).includes(q) || (r.hash || "").toLowerCase().includes(q) || (r.payload || "").toLowerCase().includes(q) || (r.label || "").toLowerCase().includes(q);
+  }
+
+  function render(query) {
+    const body = document.getElementById("body");
+    const filtered = view.filter((r) => matches(r, query)).slice().reverse();
+    if (!filtered.length) {
+      body.innerHTML = "<tr><td colspan='5' class='empty'>no records match</td></tr>";
+      return;
+    }
+    body.innerHTML = filtered.map((r) => {
+      const iso = new Date(r.timestamp * 1000).toISOString();
+      const detailUrl = API + "/block/" + encodeURIComponent(partner) + "/" + r.index;
+      const labelCell = r.label ? esc(r.label) : "<span style='color:var(--muted)'>— no label —</span>";
+      const openDetail = "window.open('" + detailUrl + "', '_blank'); return false;";
+      return "<tr><td><a href='" + detailUrl + "' target='_blank' rel='noopener noreferrer' onclick=\"" + openDetail + "\">#" + r.index + "</a></td><td class='mono'>" + iso + "</td><td><a href='" + detailUrl + "' target='_blank' rel='noopener noreferrer' onclick=\"" + openDetail + "\" style='color:inherit;text-decoration:none'>" + labelCell +
+        "</a></td><td class='mono payload'>" + short(r.payload, 20) + "</td><td class='mono'>" + short(r.hash, 24) + "</td></tr>";
+    }).join("");
+  }
+
+  document.getElementById("view-partner-btn").addEventListener("click", () => {
+    partner = document.getElementById("view-partner").value.trim() || "soak-test-customer";
+    load();
+  });
+
+  document.getElementById("search").addEventListener("input", (e) => render(e.target.value));
+
+  document.getElementById("filter-btn").addEventListener("click", () => {
+    const fromVal = document.getElementById("from").value;
+    const toVal = document.getElementById("to").value;
+    const resultEl = document.getElementById("result");
+    if (!fromVal || !toVal) {
+      resultEl.textContent = "Pick both a start and end date.";
+      return;
+    }
+    const fromSecs = new Date(fromVal + "T00:00:00Z").getTime() / 1000;
+    const toSecs = new Date(toVal + "T23:59:59Z").getTime() / 1000;
+    view = all.filter((r) => r.timestamp >= fromSecs && r.timestamp <= toSecs);
+    render(document.getElementById("search").value);
+
+    if (!view.length) {
+      resultEl.textContent = "No records in that range (within the most recent 2000 fetched).";
+      return;
+    }
+    const lines = ["ENTROPA INTERNAL AUDIT EXPORT", `Range: ${fromVal} to ${toVal}`, `Records: ${view.length}`, "", "INDEX\tTIMESTAMP (UTC)\tPAYLOAD\tLEAF HASH"];
+    view.forEach((r) => lines.push(`${r.index}\t${new Date(r.timestamp * 1000).toISOString()}\t${r.payload}\t${r.hash}`));
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    resultEl.innerHTML = `${view.length} record(s). <a href="${url}" download="entropa-internal-export-${fromVal}-to-${toVal}.txt">Download →</a>`;
+  });
+
+  document.getElementById("rotate-btn").addEventListener("click", async () => {
+    const slug = document.getElementById("rotate-slug").value.trim();
+    const resultEl = document.getElementById("rotate-result");
+    if (!slug) {
+      resultEl.textContent = "Enter a partner slug first.";
+      return;
+    }
+    resultEl.textContent = "Rotating…";
+    try {
+      const resp = await fetch(`/api/admin/partners/${encodeURIComponent(slug)}/regenerate-key`, {
+        method: "POST",
+        credentials: "same-origin",
+      });
+      const data = await resp.json();
+      if (!resp.ok) {
+        resultEl.textContent = data.error || "Rotate failed — check the slug and try again.";
+        return;
+      }
+      const rawKey = data.raw_key;
+      const blob = new Blob([`Entropa API key — ${slug}\n\n${rawKey}\n\nShown once. The previous key stopped working immediately.\n`], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      resultEl.innerHTML = `<code class="mono">${esc(rawKey)}</code> &nbsp; <a href="${url}" download="entropa-${slug}-api-key.txt">Download →</a>`;
+    } catch (e) {
+      resultEl.textContent = "Rotate failed — network error.";
+    }
+  });
+
+  document.getElementById("reset-btn").addEventListener("click", () => {
+    view = all;
+    document.getElementById("from").value = "";
+    document.getElementById("to").value = "";
+    document.getElementById("result").textContent = "";
+    render(document.getElementById("search").value);
+  });
+
+  load();
+  setInterval(load, 15000);
+})();
+</script>
+</body>
+</html>

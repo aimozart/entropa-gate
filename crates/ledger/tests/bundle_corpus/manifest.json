@@ -1,0 +1,360 @@
+{
+  "schema": "bundle-corpus-1",
+  "hash": "blake3 hex of the file bytes",
+  "cases": [
+    {
+      "id": "valid-small",
+      "file": "valid-small.json",
+      "sha256_blake3": "4cf74cd8bdf3d819eb6653a52c27dba61c99c5ffeb6fdd7a45fa2100e710f583",
+      "bytes": 238056,
+      "verdict": {
+        "class": "ok",
+        "records": 10,
+        "checkpoints": 2,
+        "receipts": 10,
+        "consistency": 1,
+        "witnesses": 2,
+        "signatures": 10
+      }
+    },
+    {
+      "id": "valid-medium",
+      "file": "valid-medium.json",
+      "sha256_blake3": "d5519ce471f897708d9c2f037f25ec19e1c603c3f5a44e9c126b9958b12c933c",
+      "bytes": 1022600,
+      "verdict": {
+        "class": "ok",
+        "records": 60,
+        "checkpoints": 4,
+        "receipts": 60,
+        "consistency": 3,
+        "witnesses": 4,
+        "signatures": 60
+      }
+    },
+    {
+      "id": "tamper-record-byte",
+      "file": "tamper-record-byte.json",
+      "sha256_blake3": "0b98f6d93d5d91b6e2133c6cca8f76f3f3d1af80aaa9c602564b0d0eafe85658",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-head-root",
+      "file": "tamper-head-root.json",
+      "sha256_blake3": "99c5c8bf4280cb0db9cb21a889d327e4524788192d80e89d1ba4a1c2dd69f3e9",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-head-size",
+      "file": "tamper-head-size.json",
+      "sha256_blake3": "411f2e0e398463ef1e7de346cdd02ca432d0d839e4fa0140b5b3a6ab3e4d2358",
+      "bytes": 238055,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-checkpoint-signature-short",
+      "file": "tamper-checkpoint-signature-short.json",
+      "sha256_blake3": "7aef7a9872d43d9b936f50dbec476b78c97fb92e082f203eab651600fad664ce",
+      "bytes": 231458,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "tamper-receipt-dropped",
+      "file": "tamper-receipt-dropped.json",
+      "sha256_blake3": "a071bc1f2a776f0047c46a2e75a50acce5a7ca33e2aa31164c0735a465fd1633",
+      "bytes": 237848,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-receipt-swapped",
+      "file": "tamper-receipt-swapped.json",
+      "sha256_blake3": "12c0240bb16accfe007e2d1e3d0d1b322157b4903c5f84761017e071ea2277cb",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "tamper-consistency-dropped",
+      "file": "tamper-consistency-dropped.json",
+      "sha256_blake3": "b7b02be752697479c8dc2934661e24c1012911f206e4bc59201e2f71a24c7906",
+      "bytes": 237817,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-witness-size",
+      "file": "tamper-witness-size.json",
+      "sha256_blake3": "331111f63e1366f6a1e6ab616532fcfa4d159afc3f8d3beab9361a25a66ca979",
+      "bytes": 238057,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "tamper-handle-internal-name",
+      "file": "tamper-handle-internal-name.json",
+      "sha256_blake3": "5112d063d3cc0e238afef864a33419915ce6c8071f0afb790dd5a4032ed1762a",
+      "bytes": 238046,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-actor-key-swapped",
+      "file": "tamper-actor-key-swapped.json",
+      "sha256_blake3": "6793a470824de490ddbe7112e4e54ca5dbdda7937171307fda598a7534680ba2",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-synthetic-false",
+      "file": "tamper-synthetic-false.json",
+      "sha256_blake3": "b2d194264d15e84fa0b7ae740e164b63b6d7e508ddc81751dcade9ad588c4838",
+      "bytes": 238057,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-unknown-top-level-field",
+      "file": "tamper-unknown-top-level-field.json",
+      "sha256_blake3": "976a49a5d28070b9d348a037e473d92fb1c8654ce0f13645ef3a8002dbad17ec",
+      "bytes": 238066,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "tamper-log-key-replaced",
+      "file": "tamper-log-key-replaced.json",
+      "sha256_blake3": "ba147510b04fec81d72ef8e0117056bd86e37caa824b780e5e7d2e8945adc835",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-00",
+      "file": "flip-record-00.json",
+      "sha256_blake3": "ef16a916f8fcf0273a5a275e2f7232e6bc2aa2b68f10b59a37a596afa7178d20",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "flip-record-01",
+      "file": "flip-record-01.json",
+      "sha256_blake3": "dc74e6a8d55e2c2b404b180538d554cf7572895cf7058f545f5f0ee4387385b5",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "flip-record-02",
+      "file": "flip-record-02.json",
+      "sha256_blake3": "6c2693e0f4b405810b873bd06f07eea37ce2daa8066b508d0a6ad28038a9ece4",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-03",
+      "file": "flip-record-03.json",
+      "sha256_blake3": "f3d147a8653a3a324a6f1ab7c6a2e57d2d47f99161d48ac6b6f5e71134638862",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-04",
+      "file": "flip-record-04.json",
+      "sha256_blake3": "556c8d60f730da37ef90938927f14f0b3de8ef8e86430c95f8eaf8f97aee8a8e",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-05",
+      "file": "flip-record-05.json",
+      "sha256_blake3": "ecbc31ffa8a70613ca42fe72181549fcd9b93e70eac3ac3781feeff0a00c297a",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-06",
+      "file": "flip-record-06.json",
+      "sha256_blake3": "97702d20d8da1bb9a668d390e1bc74e640675b5f2d8169a4d3b3d0dcccb8de0b",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-07",
+      "file": "flip-record-07.json",
+      "sha256_blake3": "20a3b026fd4ed1dea4141b56aa8a56c53c926c255b493cf590101d55a632befb",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "flip-record-08",
+      "file": "flip-record-08.json",
+      "sha256_blake3": "6db4d0df70532dc8929f0dc57e62ade554cb5cdee422a00c180d2f3f662645c9",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "flip-record-09",
+      "file": "flip-record-09.json",
+      "sha256_blake3": "b7a510ae031c598bc7dd0bd7cc9f1918ad3d53169584ad8a92795de90d57ae0a",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "flip-checkpoint-signature-00",
+      "file": "flip-checkpoint-signature-00.json",
+      "sha256_blake3": "4c2e9d3e7a4c370065d04e9686c13abfcef6912d2a7b4bdcaeadf2bdd05f1c49",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "flip-checkpoint-signature-01",
+      "file": "flip-checkpoint-signature-01.json",
+      "sha256_blake3": "bfcc53798044194cfea64ce80304da8ccba5afbdb9f2490e9af595a33c6f91bc",
+      "bytes": 238056,
+      "verdict": {
+        "class": "Verify"
+      }
+    },
+    {
+      "id": "truncated-25",
+      "file": "truncated-25.json",
+      "sha256_blake3": "1c569f363d6b2b2fd07eea7bd354667a263a77480fb49a6d486a61abebd1f481",
+      "bytes": 59514,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "truncated-50",
+      "file": "truncated-50.json",
+      "sha256_blake3": "5d47b26ba063bbc4487056c8cf6f09b4e5d4e715e6eb65e5ccaff62997446283",
+      "bytes": 119028,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "truncated-90",
+      "file": "truncated-90.json",
+      "sha256_blake3": "a84d5d7d967cd6685391a5623c77df40b46f08a8951277bdb49dacd9e5e4dc2c",
+      "bytes": 214250,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "duplicate-top-level-key",
+      "file": "duplicate-top-level-key.json",
+      "sha256_blake3": "fab8b40b1180d71b91e35f85c53aecfb8404806e3a6568b35e61053f0bbc9f30",
+      "bytes": 1022612,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "nesting-300",
+      "file": "nesting-300.json",
+      "sha256_blake3": "4bae8319609fc4ad3925f884824a9ed93f1315d192e4e6cf77fa6e5af10c6eee",
+      "bytes": 600,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "malformed-empty-string",
+      "file": "malformed-empty-string.json",
+      "sha256_blake3": "af1349b9f5f9a1a6a0404dea36dcc9499bcb25c9adc112b7cc9a93cae41f3262",
+      "bytes": 0,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "malformed-open-brace",
+      "file": "malformed-open-brace.json",
+      "sha256_blake3": "a9c15fc199fb1090f4b19d8fec19e728800d8d458e0ecf0ab1b3b0592721d0cb",
+      "bytes": 1,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "malformed-empty-array",
+      "file": "malformed-empty-array.json",
+      "sha256_blake3": "d53d18c23212ea7b6300594bb89bce60218f6eff2b9d628b8cc42d3e79bbd5ab",
+      "bytes": 2,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "malformed-null",
+      "file": "malformed-null.json",
+      "sha256_blake3": "03f88b99c3d8073bba8948d6e762aac443b265f606cc05abd4d172f03a4def6a",
+      "bytes": 4,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "malformed-number",
+      "file": "malformed-number.json",
+      "sha256_blake3": "da136474d7575c325f702bb7aa75f1123864033cc488bf7d9c074eadaf9bd0d3",
+      "bytes": 2,
+      "verdict": {
+        "class": "Invalid"
+      }
+    },
+    {
+      "id": "oversize-generated",
+      "generate": {
+        "pad_bytes": 5242881
+      },
+      "verdict": {
+        "class": "Limit"
+      }
+    }
+  ]
+}

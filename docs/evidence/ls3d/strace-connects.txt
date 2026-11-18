@@ -1,0 +1,5 @@
+strace -f -e trace=connect,bind,listen,sendto on try-sealed (release) running 2 scenarios against the release entropa-try-http
+AF_INET connect calls: 4
+distinct destination addresses: ['127.0.0.1']
+AF_INET6 lines: 0
+bind/listen lines are the SERVER process (it listens on 127.0.0.1)

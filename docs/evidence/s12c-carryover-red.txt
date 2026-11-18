@@ -1,0 +1,239 @@
+warning: variant `TokenList64` is never constructed
+  --> crates/council/src/schema.rs:27:5
+   |
+ 5 | pub(crate) enum Kind {
+   |                 ---- variant in this enum
+...
+27 |     TokenList64,
+   |     ^^^^^^^^^^^
+   |
+   = note: `Kind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `entropa-council` (lib) generated 1 warning
+   Compiling entropa-council v0.2.0 (/work/crates/council)
+warning: `entropa-council` (lib test) generated 1 warning (1 duplicate)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.22s
+     Running unittests src/lib.rs (target/debug/deps/entropa_council-6fc6ac4c8ceb1691)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/carryover.rs (target/debug/deps/carryover-5da5e8b761576910)
+
+running 8 tests
+test k2_the_plan_does_not_depend_on_the_order_of_the_input ... FAILED
+test k1_the_surplus_is_the_lowest_ranked_in_a_stable_order ... FAILED
+test k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact ... FAILED
+test k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap ... FAILED
+test k5_the_event_schema_is_closed_and_consistent ... FAILED
+test k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision ... FAILED
+test k6_the_session_records_the_carry_over_once_after_the_report ... FAILED
+test k8_the_carry_over_does_not_change_the_quorum_or_approve_anything ... FAILED
+
+failures:
+
+---- k2_the_plan_does_not_depend_on_the_order_of_the_input stdout ----
+
+thread 'k2_the_plan_does_not_depend_on_the_order_of_the_input' (123) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k1_the_surplus_is_the_lowest_ranked_in_a_stable_order stdout ----
+
+thread 'k1_the_surplus_is_the_lowest_ranked_in_a_stable_order' (122) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact stdout ----
+
+thread 'k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact' (124) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap stdout ----
+
+thread 'k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap' (125) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k5_the_event_schema_is_closed_and_consistent stdout ----
+
+thread 'k5_the_event_schema_is_closed_and_consistent' (126) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+---- k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision stdout ----
+
+thread 'k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision' (128) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+---- k6_the_session_records_the_carry_over_once_after_the_report stdout ----
+
+thread 'k6_the_session_records_the_carry_over_once_after_the_report' (127) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+---- k8_the_carry_over_does_not_change_the_quorum_or_approve_anything stdout ----
+
+thread 'k8_the_carry_over_does_not_change_the_quorum_or_approve_anything' (129) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+
+failures:
+    k1_the_surplus_is_the_lowest_ranked_in_a_stable_order
+    k2_the_plan_does_not_depend_on_the_order_of_the_input
+    k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact
+    k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap
+    k5_the_event_schema_is_closed_and_consistent
+    k6_the_session_records_the_carry_over_once_after_the_report
+    k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision
+    k8_the_carry_over_does_not_change_the_quorum_or_approve_anything
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test carryover`
+     Running tests/events.rs (target/debug/deps/events-c8e69c8ee9f043c7)
+
+running 10 tests
+test e10_providers_families_and_the_independence_rule ... ok
+test e4_the_signed_digest_is_domain_separated ... ok
+test e9_the_role_that_may_write_each_event_type ... FAILED
+test e1_golden_canonical_bytes_and_digests_match_an_independent_implementation ... ok
+test e2_every_event_type_decodes_and_reports_its_type_and_session ... FAILED
+test e6_the_decoder_refuses_bad_values_in_every_other_type ... ok
+test e5_the_decoder_refuses_every_bad_finding ... ok
+test e7_no_free_text_field_exists_in_any_event_type ... ok
+test e8_a_canary_token_can_never_enter_an_event ... ok
+test e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys ... FAILED
+
+failures:
+
+---- e9_the_role_that_may_write_each_event_type stdout ----
+
+thread 'e9_the_role_that_may_write_each_event_type' (140) panicked at crates/council/tests/events.rs:372:9:
+assertion `left == right` failed: carryover.recorded
+  left: None
+ right: Some(Orchestrator)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- e2_every_event_type_decodes_and_reports_its_type_and_session stdout ----
+
+thread 'e2_every_event_type_decodes_and_reports_its_type_and_session' (133) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+---- e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys stdout ----
+
+thread 'e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys' (134) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+
+failures:
+    e2_every_event_type_decodes_and_reports_its_type_and_session
+    e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys
+    e9_the_role_that_may_write_each_event_type
+
+test result: FAILED. 7 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+error: test failed, to rerun pass `-p entropa-council --test events`
+     Running tests/planted.rs (target/debug/deps/planted-92cf575096175356)
+
+running 8 tests
+test p1_the_numbers_of_a_mixed_reviewer ... ok
+test p4_a_perfect_reviewer_meets_the_thresholds ... ok
+test p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer ... ok
+test p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven ... ok
+test p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection ... ok
+test p7_a_hindsight_pair_needs_both_members ... ok
+test p6_the_outputs_must_match_the_suite ... ok
+test p8_the_evaluation_is_deterministic ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/provenance.rs (target/debug/deps/provenance-c003b5016e981518)
+
+running 9 tests
+test v3_building_refuses_bad_indexes ... ok
+test v1_the_index_hash_matches_an_independent_implementation ... ok
+test v5_search_is_reproducible_bit_for_bit ... ok
+test v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else ... ok
+test v4_exact_cosine_search_with_ties_broken_by_id ... ok
+test v6_search_refuses_bad_queries_and_oversize_k ... ok
+test v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic ... ok
+test v8_only_signed_accepted_decisions_enter_the_corpus ... ok
+test v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/reliability.rs (target/debug/deps/reliability-fe0d169ed7bf6fd4)
+
+running 7 tests
+test r2_deferred_findings_are_ignored ... ok
+test r1_the_score_is_the_smoothed_weighted_acceptance_rate ... ok
+test r6_scores_are_kept_per_reviewer_and_per_class ... ok
+test r4_no_data_is_one_half ... ok
+test r5_only_decisions_inside_the_rolling_window_count ... ok
+test r3_severity_weights_are_one_two_three_four ... ok
+test r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/render.rs (target/debug/deps/render-3a1a3fe5a2954e2f)
+
+running 4 tests
+test m1_the_rendering_is_the_documented_closed_code_text ... ok
+test m3_nothing_but_codes_references_and_layout_reaches_the_model ... ok
+test m4_only_reviewable_events_can_be_rendered ... ok
+test m2_the_order_of_the_events_does_not_change_the_rendering ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/replay.rs (target/debug/deps/replay-07c453fa5b1298ef)
+
+running 7 tests
+test x1_counts_for_a_stricter_candidate ... ok
+test x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report ... ok
+test x4_an_input_that_does_not_match_its_recorded_hash_is_refused ... ok
+test x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests ... ok
+test x7_duplicate_ids_are_refused ... ok
+test x6_the_input_hash_matches_an_independent_implementation ... ok
+test x2_counts_for_a_candidate_that_also_loosens ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/session.rs (target/debug/deps/session-eec8fc01d0c4c30f)
+
+running 15 tests
+test s15_the_window_and_findings_hashes_match_an_independent_implementation ... ok
+test s2_events_out_of_order_are_refused ... ok
+test s13_no_quorum_means_no_change_and_closes_as_no_quorum ... ok
+test s6_the_window_hash_binds_the_scope ... ok
+test s4_wrong_session_duplicates_and_session_less_events ... ok
+test s11_nothing_changes_without_a_recorded_human_decision ... ok
+test s1_a_session_walks_every_state_in_order ... ok
+test s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing ... ok
+test s12_an_absent_human_means_pending_and_no_change ... ok
+test s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused ... ok
+test s5_the_independence_rule_is_enforced_in_code ... ok
+test s3_every_event_type_refuses_the_wrong_role ... ok
+test s7_the_report_and_the_packet_must_be_complete ... ok
+test s10_decision_rules_attestation_approval_and_hard_rule_items ... ok
+test s8_a_session_holds_at_most_twelve_findings ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/static_checks.rs (target/debug/deps/static_checks-c5ef3623250be8bd)
+
+running 4 tests
+test g2_the_manifest_holds_no_network_cloud_or_model_dependency ... ok
+test g4_no_source_file_is_over_five_hundred_lines ... ok
+test g3_no_crew_names_in_the_source_tests_or_vectors ... ok
+test g1_the_source_is_pure_no_io_no_clock_no_environment_no_unsafe ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_council
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 2 targets failed:
+    `-p entropa-council --test carryover`
+    `-p entropa-council --test events`

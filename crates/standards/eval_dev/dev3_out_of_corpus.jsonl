@@ -1,0 +1,30 @@
+{"qid": "o3-01", "kind": "everyday", "query": "What is a good recipe for sourdough bread with a crispy crust?"}
+{"qid": "o3-02", "kind": "everyday", "query": "How many miles is it from Phoenix to Tucson by car?"}
+{"qid": "o3-03", "kind": "everyday", "query": "Which team won the baseball world series in 2019?"}
+{"qid": "o3-04", "kind": "everyday", "query": "Can you suggest a name for my new golden retriever puppy?"}
+{"qid": "o3-05", "kind": "everyday", "query": "How do I get a red wine stain out of a cotton shirt?"}
+{"qid": "o3-06", "kind": "everyday", "query": "What is the capital city of Australia?"}
+{"qid": "o3-07", "kind": "everyday", "query": "How do I choose a strong password for my home wifi router?"}
+{"qid": "o3-08", "kind": "everyday", "query": "My laptop battery drains quickly after the latest update, what should I do?"}
+{"qid": "o3-09", "kind": "unindexed", "query": "What does FERPA say about releasing student records to parents?"}
+{"qid": "o3-10", "kind": "unindexed", "query": "Which COPPA rule covers verifiable parental consent for children under thirteen?"}
+{"qid": "o3-11", "kind": "unindexed", "query": "What does the Gramm-Leach-Bliley Safeguards Rule require for a written information security program?"}
+{"qid": "o3-12", "kind": "unindexed", "query": "How does the OWASP Top Ten describe broken access control?"}
+{"qid": "o3-13", "kind": "unindexed", "query": "What does the Cyber Essentials scheme expect for boundary firewalls?"}
+{"qid": "o3-14", "kind": "unindexed", "query": "Which MITRE ATT&CK technique covers dumping credentials from memory?"}
+{"qid": "o3-15", "kind": "unindexed", "query": "What does the SWIFT customer security programme say about operator session confidentiality?"}
+{"qid": "o3-16", "kind": "unindexed", "query": "Under Basel III, how is the liquidity coverage ratio calculated?"}
+{"qid": "o3-17", "kind": "unindexed", "query": "What does the FDA expect in a premarket submission for software as a medical device?"}
+{"qid": "o3-18", "kind": "unindexed", "query": "What are the CIS benchmark level one settings for disabling unused services?"}
+{"qid": "o3-19", "kind": "id_nist", "query": "Explain NIST SP 800-53 control AC-99.", "standard": "NIST-SP-800-53", "id": "AC-99"}
+{"qid": "o3-20", "kind": "id_nist", "query": "What does control ZZ-3 in the NIST catalog require?", "standard": "NIST-SP-800-53", "id": "ZZ-3"}
+{"qid": "o3-21", "kind": "id_nist", "query": "Summarise enhancement SC-7(6) of the NIST 800-53 catalog.", "standard": "NIST-SP-800-53", "id": "SC-7(6)"}
+{"qid": "o3-22", "kind": "id_pci", "query": "What does PCI DSS requirement 8.3.6.2 say?", "standard": "PCI-DSS", "id": "8.3.6.2"}
+{"qid": "o3-23", "kind": "id_pci", "query": "Explain requirement 13.1 of PCI DSS.", "standard": "PCI-DSS", "id": "13.1"}
+{"qid": "o3-24", "kind": "id_eu", "query": "What does Article 150 of the EU AI Act require?", "standard": "EU-AI-ACT", "id": "Art.150"}
+{"qid": "o3-25", "kind": "id_eu", "query": "Describe Annex XV of the AI Act.", "standard": "EU-AI-ACT", "id": "Annex XV"}
+{"qid": "o3-26", "kind": "id_dora", "query": "What does Article 43 of the DORA RTS require?", "standard": "DORA-RTS", "id": "Art.43"}
+{"qid": "o3-27", "kind": "id_dora", "query": "Summarise DORA RTS Article 77.", "standard": "DORA-RTS", "id": "Art.77"}
+{"qid": "o3-28", "kind": "id_hipaa", "query": "What does 45 CFR 164.320(a) require?", "standard": "HIPAA-SECURITY-RULE", "id": "164.320(a)"}
+{"qid": "o3-29", "kind": "id_hipaa", "query": "Explain HIPAA 164.312(f).", "standard": "HIPAA-SECURITY-RULE", "id": "164.312(f)"}
+{"qid": "o3-30", "kind": "id_hipaa", "query": "What does 164.308(a)(1)(ii)(A) say about risk analysis?", "standard": "HIPAA-SECURITY-RULE", "id": "164.308(a)(1)(ii)(A)"}

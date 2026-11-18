@@ -1,0 +1,54 @@
+3 mismatches:
+"mv x /dev/null": want Deny/D1, got Silent/
+"mv -f x /dev/null": want Deny/D1, got Silent/
+"mv a b /dev/null": want Deny/D1, got Silent/
+10 mismatches:
+"parallel rm ::: a b": want Deny/D1, got Silent/
+"parallel -j4 rm {} ::: a": want Deny/D1, got Silent/
+"parallel -j 4 rm {}": want Deny/D1, got Silent/
+"parallel --jobs 2 rm": want Deny/D1, got Silent/
+"parallel rm -r /tmp/x ::: a": want Deny/D1, got Silent/
+"parallel shred ::: a": want Deny/D1, got Silent/
+"watch rm x": want Deny/D1, got Silent/
+"watch -n 5 rm -r /tmp/x": want Deny/D1, got Silent/
+"watch --interval 5 rm x": want Deny/D1, got Silent/
+"watch 'rm -r x'": want Deny/D1, got Silent/
+6 mismatches:
+"find . -exec truncate -s 0 {} +": want Deny/D1, got Silent/
+"find . -exec dd of=x {} +": want Deny/R1, got Silent/
+"find . -exec mkfs.ext4 {} +": want Deny/R1, got Silent/
+"find . -exec sh -c 'rm -r x' {} +": want Deny/D1, got Silent/
+"find . -exec mv {} /dev/null \\;": want Deny/D1, got Silent/
+"find . -exec git clean -fd \\;": want Deny/D1, got Silent/
+30 mismatches:
+"xargs rm": want Deny/D1, got Silent/
+"ls | xargs rm": want Deny/D1, got Silent/
+"ls | xargs -0 rm -f": want Deny/D1, got Silent/
+"xargs -n1 rm": want Deny/D1, got Silent/
+"xargs -n 1 rm": want Deny/D1, got Silent/
+"xargs -I{} rm {}": want Deny/D1, got Silent/
+"xargs -I {} rm {}": want Deny/D1, got Silent/
+"xargs -P 4 -n 1 rm": want Deny/D1, got Silent/
+"xargs --max-args 1 rm": want Deny/D1, got Silent/
+"xargs --max-args=1 rm": want Deny/D1, got Silent/
+"xargs --max-procs 4 --delimiter , rm": want Deny/D1, got Silent/
+"xargs -0 -r rm -rf": want Deny/D1, got Silent/
+"xargs -t -p rm": want Deny/D1, got Silent/
+"xargs -- rm": want Deny/D1, got Silent/
+"xargs rm -r /tmp/x": want Deny/D1, got Silent/
+"xargs rm /tmp/x": want Deny/D1, got Silent/
+"xargs /bin/rm": want Deny/D1, got Silent/
+"xargs env rm": want Deny/D1, got Silent/
+"xargs nice rm": want Deny/D1, got Silent/
+"xargs rmdir": want Deny/D1, got Silent/
+"xargs shred": want Deny/D1, got Silent/
+"xargs unlink": want Deny/D1, got Silent/
+"xargs truncate -s 0": want Deny/D1, got Silent/
+"xargs git clean -fd": want Deny/D1, got Silent/
+"xargs dd of=x": want Deny/R1, got Silent/
+"xargs mkfs.ext4": want Deny/R1, got Silent/
+"xargs sh -c 'rm -r x'": want Deny/D1, got Silent/
+"xargs -I{} mv {} /dev/null": want Deny/D1, got Silent/
+"xargs -0 -I{} sudo rm {}": want Deny/D1, got Silent/
+"xargs sudo ls": want Ask/R3, got Silent/
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

@@ -1,0 +1,27 @@
+# reader rehearsal 2026-11-16 on branch ls6-content b7f8697; throwaway keys; ledger 1,000 mock records; refusal = exit exactly 1
+== step 1: check the program against the manifest and the minisign signature
+PASS s1-manifest (want ok; exit 0; OK entropa-mockview 0.0.0-rehearsal artifacts=4 key_id=eb67f)
+PASS s1-minisign (want ok; exit 0; Signature and comment signature verified
+Trusted comment: ti)
+== step 2: unpack the ledger (exactly the three files)
+<build-dir>/tmpdir/rehearsal-1794837642/work/led: MOCK-DATA.txt evidence-ledger <build-dir>/tmpdir/rehearsal-1794837642/work/led/evidence-ledger: checkpoints.log records.log 
+== step 3: verify
+PASS s3-verify-good (want ok; exit 0; OK records=1000 checkpoints=1000)
+== tampers (each on a fresh copy; each must be refused)
+PASS t1-flipped-byte (want refuse; exit 1; refused: Corrupt("a checkpoint does not match the records"))
+PASS t2-wrong-key (want refuse; exit 1; refused: record 0: signature does not verify)
+PASS t3-truncated-records (want refuse; exit 1; refused: Corrupt("file ends with a partial line"))
+PASS t4-last-checkpoint-missing (want refuse; exit 1; refused: the last checkpoint does not cover every record)
+PASS t5-no-ledger-directory (want refuse; exit 1; refused: no ledger found in that directory (expected evidence-ledger/ inside it))
+PASS t6-read-only-good (want ok; exit 0; OK records=1000 checkpoints=1000)
+PASS t7-read-only-tampered (want refuse; exit 1; refused: Corrupt("a checkpoint line is not valid"))
+PASS t8-tampered-program-manifest (want refuse; exit 1; refused: Mismatch("entropa-mockview-linux-x86_64 does not match the manifest"))
+PASS t8-tampered-program-minisign (want refuse; exit 1; Signature verification failed)
+PASS t9-tampered-tar-manifest (want refuse; exit 1; refused: Mismatch("ledger.tar does not match the manifest"))
+PASS t10-extra-file (want refuse; exit 1; refused: Mismatch("4 files listed, 5 given"))
+PASS t11-missing-sbom (want refuse; exit 1; refused: Mismatch("4 files listed, 3 given"))
+PASS t12-wrong-release-key (want refuse; exit 1; refused: Signature("the key id does not match the given key"))
+PASS t13-container-read-only-good (want ok; exit 0; OK records=1000 checkpoints=1000)
+PASS t13-container-read-only-tampered (want refuse; exit 1; refused: Corrupt("a checkpoint does not match the records"))
+RESULT: 18 passed, 0 failed (work dir <build-dir>/tmpdir/rehearsal-1794837642/work, kept)
+exit: 0

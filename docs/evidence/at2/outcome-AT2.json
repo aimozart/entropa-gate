@@ -1,0 +1,9 @@
+{
+ "evidence_kind": "outcome",
+ "run_id": "outcome-AT2",
+ "stage": "AT2",
+ "note": "receipt on the local scratch node <build-dir>/at2-scratch-node (index 0, the only record), not the live node. The bars of a stage record (not published) are met for the scope built (token verifier and Cedar are real adapters; the egress, retrieval and sink adapters are NOT built: stated in the plan). Acceptance is pending the 100,000-case DEBUG tokens run and the ledger kill-check.",
+ "plan_sha256_at_receipt": "8f80e4e6835c5a3fe64ba81975198f510283069843521adaba9665ce003cfb5e",
+ "receipt_response": {"index":0,"subject_hash":"55a6116862a153d57b8595a60927d6ec7dc2f4a4432f51e9b9eeb4e8e7a1b211","size":1,"root":"5f32ee8729d1b1034fc0ec8833e35390e9db253d1ac3fea379bd0ce8fb82d19a"},
+ "counts": {"entropa_tiers_tests_debug": 24, "entropa_tiers_tests_release": 24, "attack_classes": 18, "cases_per_class": 300, "accepted": 0, "control_allowed": "300 of 300", "tiers_mutants": "26 caught, 0 missed, 7 unviable", "tokens_mutants": "263 caught, 6 missed (4 argued, 2 killed after), 1 non-terminating, 15 unviable", "cedar_p95_ms": 0.0077, "decision_p95_ms": 0.31, "network_syscalls": 0}
+}

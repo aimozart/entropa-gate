@@ -1,0 +1,9 @@
+at3: network syscalls = 0
+at3b: network syscalls = 0
+at3_gaps: network syscalls = 0
+at3_props: network syscalls = 0
+at3_battery: network syscalls = 0
+at2: network syscalls = 0
+at2b: network syscalls = 0
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

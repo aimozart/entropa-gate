@@ -1,0 +1,5 @@
+test c1_a_new_key_is_registered_and_an_identical_re_registration_is_idempotent ... FAILED
+test c2_the_same_key_with_another_role_is_refused_for_every_pair_and_changes_nothing ... FAILED
+test c4_two_different_keys_are_two_actors ... FAILED
+test c3_a_changed_scope_or_a_revocation_is_not_a_silent_re_registration ... FAILED
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

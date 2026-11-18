@@ -1,0 +1,93 @@
+mutants: jobs=2 timeout=180s limits: memory=24g swap=24g cpus=12 pids=4096
+Found 420 mutants to test
+ok       Unmutated baseline in 15s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:19:5: replace crew_names -> Vec<String> with vec![] in 0s build + 18s test
+MISSED   crates/ledger/src/bundle.rs:19:5: replace crew_names -> Vec<String> with vec!["xyzzy".into()] in 0s build + 20s test
+MISSED   crates/ledger/src/bundle.rs:84:49: replace || with && in describe in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:240:51: replace || with && in Generator::export_bundle in 1s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:289:23: replace > with == in Generator::export_bundle in 0s build + 18s test
+MISSED   crates/ledger/src/bundle.rs:289:23: replace > with >= in Generator::export_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:319:19: replace > with >= in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:349:9: replace || with && in verify_bundle in 0s build + 17s test
+MISSED   crates/ledger/src/bundle.rs:348:9: replace || with && in verify_bundle in 0s build + 20s test
+MISSED   crates/ledger/src/bundle.rs:378:13: replace || with && in verify_bundle in 0s build + 18s test
+MISSED   crates/ledger/src/bundle.rs:377:13: replace || with && in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:397:47: replace < with == in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:397:47: replace < with <= in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:439:13: replace || with && in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:438:13: replace || with && in verify_bundle in 0s build + 21s test
+MISSED   crates/ledger/src/bundle.rs:437:13: replace || with && in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:436:13: replace || with && in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:447:26: replace || with && in verify_bundle in 0s build + 16s test
+MISSED   crates/ledger/src/bundle.rs:487:13: replace || with && in verify_bundle in 0s build + 18s test
+MISSED   crates/ledger/src/bundle.rs:495:33: replace || with && in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/bundle.rs:496:30: replace && with || in verify_bundle in 0s build + 22s test
+MISSED   crates/ledger/src/bundle.rs:496:46: replace || with && in verify_bundle in 0s build + 21s test
+MISSED   crates/ledger/src/bundle.rs:496:41: replace == with != in verify_bundle in 0s build + 21s test
+MISSED   crates/ledger/src/bundle.rs:496:56: replace == with != in verify_bundle in 0s build + 20s test
+MISSED   crates/ledger/src/bundle.rs:515:54: replace && with || in verify_bundle in 0s build + 19s test
+MISSED   crates/ledger/src/event.rs:144:19: replace > with == in encode_event in 0s build + 19s test
+MISSED   crates/ledger/src/event.rs:144:19: replace > with >= in encode_event in 0s build + 17s test
+MISSED   crates/ledger/src/event.rs:227:22: replace > with >= in decode_event in 0s build + 19s test
+MISSED   crates/ledger/src/event.rs:305:70: replace && with || in decode_event in 0s build + 21s test
+MISSED   crates/ledger/src/event.rs:305:31: replace && with || in decode_event in 0s build + 20s test
+MISSED   crates/ledger/src/generator.rs:69:52: replace + with * in <impl StateStore for WitnessStore>::compare_and_swap in 0s build + 19s test
+MISSED   crates/ledger/src/generator.rs:205:9: replace Generator::handles -> BTreeMap<String, Handle> with BTreeMap::new() in 0s build + 21s test
+MISSED   crates/ledger/src/generator.rs:407:31: replace + with - in Generator::checkpoint in 0s build + 19s test
+MISSED   crates/ledger/src/generator.rs:407:31: replace + with * in Generator::checkpoint in 0s build + 19s test
+MISSED   crates/ledger/src/generator.rs:412:44: replace + with - in Generator::checkpoint in 0s build + 21s test
+MISSED   crates/ledger/src/generator.rs:412:44: replace + with * in Generator::checkpoint in 0s build + 18s test
+MISSED   crates/ledger/src/generator.rs:450:34: replace == with != in Generator::register in 0s build + 20s test
+MISSED   crates/ledger/src/generator.rs:470:22: replace > with >= in Generator::run in 0s build + 18s test
+MISSED   crates/ledger/src/generator.rs:482:59: replace + with - in Generator::run in 0s build + 17s test
+MISSED   crates/ledger/src/generator.rs:482:59: replace + with * in Generator::run in 0s build + 18s test
+MISSED   crates/ledger/src/generator.rs:485:31: replace + with - in Generator::run in 0s build + 18s test
+MISSED   crates/ledger/src/generator.rs:485:36: replace * with + in Generator::run in 0s build + 17s test
+MISSED   crates/ledger/src/generator.rs:485:36: replace * with / in Generator::run in 0s build + 16s test
+TIMEOUT  crates/ledger/src/generator.rs:470:22: replace > with == in Generator::run in 1s build + 180s test
+MISSED   crates/ledger/src/generator.rs:485:48: replace + with * in Generator::run in 0s build + 19s test
+MISSED   crates/ledger/src/generator.rs:485:71: replace + with - in Generator::run in 0s build + 22s test
+MISSED   crates/ledger/src/generator.rs:490:63: replace + with - in Generator::run in 0s build + 22s test
+MISSED   crates/ledger/src/generator.rs:489:19: replace + with * in Generator::run in 0s build + 23s test
+MISSED   crates/ledger/src/generator.rs:490:63: replace + with * in Generator::run in 0s build + 16s test
+MISSED   crates/ledger/src/generator.rs:495:59: replace + with - in Generator::run in 0s build + 21s test
+MISSED   crates/ledger/src/generator.rs:495:59: replace + with * in Generator::run in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:17:5: replace mix -> u64 with 0 in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:17:5: replace mix -> u64 with 1 in 1s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:18:12: replace ^ with | in mix in 0s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:18:12: replace ^ with & in mix in 1s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:18:17: replace >> with << in mix in 0s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:19:12: replace ^ with | in mix in 0s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:19:12: replace ^ with & in mix in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:19:17: replace >> with << in mix in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:20:7: replace ^ with | in mix in 0s build + 17s test
+MISSED   crates/ledger/src/scenarios.rs:20:7: replace ^ with & in mix in 0s build + 18s test
+MISSED   crates/ledger/src/scenarios.rs:20:12: replace >> with << in mix in 0s build + 18s test
+MISSED   crates/ledger/src/scenarios.rs:29:40: replace % with / in Generator::meta in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:29:51: replace + with * in Generator::meta in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:29:63: replace % with / in Generator::meta in 0s build + 21s test
+MISSED   crates/ledger/src/scenarios.rs:29:63: replace % with + in Generator::meta in 0s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:29:56: replace >> with << in Generator::meta in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:35:55: replace / with % in Generator::meta in 0s build + 21s test
+MISSED   crates/ledger/src/scenarios.rs:35:55: replace / with * in Generator::meta in 0s build + 18s test
+MISSED   crates/ledger/src/scenarios.rs:35:40: replace + with * in Generator::meta in 0s build + 17s test
+MISSED   crates/ledger/src/scenarios.rs:35:36: replace * with + in Generator::meta in 0s build + 18s test
+MISSED   crates/ledger/src/scenarios.rs:35:36: replace * with / in Generator::meta in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:35:49: replace * with + in Generator::meta in 0s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:35:49: replace * with / in Generator::meta in 0s build + 20s test
+MISSED   crates/ledger/src/scenarios.rs:46:31: replace ^ with | in Generator::scenario in 1s build + 19s test
+MISSED   crates/ledger/src/scenarios.rs:46:31: replace ^ with & in Generator::scenario in 0s build + 18s test
+MISSED   crates/ledger/src/scenarios.rs:53:13: delete match arm 0 in Generator::scenario in 0s build + 25s test
+MISSED   crates/ledger/src/scenarios.rs:68:13: delete match arm 1 in Generator::scenario in 0s build + 21s test
+MISSED   crates/ledger/src/scenarios.rs:203:13: delete match arm 4 in Generator::scenario in 0s build + 21s test
+MISSED   crates/ledger/src/scenarios.rs:183:38: replace / with * in Generator::scenario in 0s build + 21s test
+MISSED   crates/ledger/src/store.rs:22:9: replace LedgerStore::is_empty -> bool with true in 0s build + 16s test
+MISSED   crates/ledger/src/store.rs:50:22: replace > with >= in Core::check_record in 0s build + 19s test
+MISSED   crates/ledger/src/store.rs:79:24: replace < with <= in Core::check_checkpoint in 0s build + 17s test
+MISSED   crates/ledger/src/store.rs:79:72: replace != with == in Core::check_checkpoint in 0s build + 21s test
+MISSED   crates/ledger/src/store.rs:90:13: replace || with && in Core::check_witness in 0s build + 21s test
+MISSED   crates/ledger/src/store.rs:89:20: replace > with == in Core::check_witness in 0s build + 18s test
+MISSED   crates/ledger/src/store.rs:89:20: replace > with >= in Core::check_witness in 0s build + 20s test
+MISSED   crates/ledger/src/store.rs:164:19: replace match guard e.kind() == std::io::ErrorKind::NotFound with true in lines in 0s build + 18s test
+MISSED   crates/ledger/src/store.rs:167:8: delete ! in lines in 0s build + 19s test
+420 mutants tested in 47m: 88 missed, 305 caught, 26 unviable, 1 timeouts

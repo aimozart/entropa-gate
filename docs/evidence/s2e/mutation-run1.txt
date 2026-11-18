@@ -1,0 +1,7 @@
+Found 45 mutants to test
+ok       Unmutated baseline in 2s build + 3s test
+MISSED   crates/release/src/lib.rs:476:20: replace + with - in cli::read_capped in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:476:20: replace + with * in cli::read_capped in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:479:27: replace > with == in cli::read_capped in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:479:27: replace > with >= in cli::read_capped in 0s build + 1s test
+45 mutants tested in 60s: 4 missed, 39 caught, 2 unviable

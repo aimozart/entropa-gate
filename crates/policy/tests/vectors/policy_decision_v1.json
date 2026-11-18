@@ -1,0 +1,47 @@
+{
+ "format": "entropa policy decision records v1 (docs/ARCHITECTURE-CEDAR.md section 7)",
+ "generated_by": "independent Python script (json + blake3), not by the Rust code",
+ "fixed": {
+  "actor": "0123456789abcdef",
+  "principal": "fedcba9876543210",
+  "subject_hash": "43af90dea40d307941fb9c681d7979e84bd8aa0ffd52b9758e1702467049f5a8",
+  "policy_set_hash": "c39a14042c4a88be1a14696f5ef9e8467f727fc929cb4e62f8e54c7e160f98dc",
+  "ts": 1700000000
+ },
+ "cases": [
+  {
+   "name": "allow_delete",
+   "params": {
+    "action": "delete",
+    "cedar": "allow",
+    "determining": [
+     "humans-with-approval-do-hard-rule-actions"
+    ],
+    "error_policies": [],
+    "approval_state": "approved",
+    "approval_attested": false,
+    "outcome": "allow",
+    "reason": "allowed",
+    "enforced": true
+   },
+   "canonical": "{\"action\":\"delete\",\"actor\":\"0123456789abcdef\",\"approval_attested\":false,\"approval_state\":\"approved\",\"cedar\":\"allow\",\"determining\":[\"humans-with-approval-do-hard-rule-actions\"],\"enforced\":true,\"errors\":[],\"final\":\"allow\",\"policy_set_hash\":\"c39a14042c4a88be1a14696f5ef9e8467f727fc929cb4e62f8e54c7e160f98dc\",\"principal\":\"fedcba9876543210\",\"reason\":\"allowed\",\"subject_hash\":\"43af90dea40d307941fb9c681d7979e84bd8aa0ffd52b9758e1702467049f5a8\",\"ts\":1700000000,\"type\":\"policy.decision\",\"v\":1}",
+   "digest_hex": "572624b494d3c7648b0104f608c2d2052c80254a25ac030a0c810bb93eb235f0"
+  },
+  {
+   "name": "deny_deploy_pending",
+   "params": {
+    "action": "deploy",
+    "cedar": "deny",
+    "determining": [],
+    "error_policies": [],
+    "approval_state": "pending",
+    "approval_attested": false,
+    "outcome": "deny",
+    "reason": "gate_pending",
+    "enforced": false
+   },
+   "canonical": "{\"action\":\"deploy\",\"actor\":\"0123456789abcdef\",\"approval_attested\":false,\"approval_state\":\"pending\",\"cedar\":\"deny\",\"determining\":[],\"enforced\":false,\"errors\":[],\"final\":\"deny\",\"policy_set_hash\":\"c39a14042c4a88be1a14696f5ef9e8467f727fc929cb4e62f8e54c7e160f98dc\",\"principal\":\"fedcba9876543210\",\"reason\":\"gate_pending\",\"subject_hash\":\"43af90dea40d307941fb9c681d7979e84bd8aa0ffd52b9758e1702467049f5a8\",\"ts\":1700000000,\"type\":\"policy.decision\",\"v\":1}",
+   "digest_hex": "80f353901b867133798035379954fbfc9129eec5baf7b44b3b08a62685aef7c1"
+  }
+ ]
+}

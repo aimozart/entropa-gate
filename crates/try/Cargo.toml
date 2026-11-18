@@ -1,0 +1,21 @@
+[package]
+name = "entropa-try"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "The 'Try the gate' request handler (LS3): a pure, network-free function from one HTTP-shaped request to one decision and one signed record (a stage record (not published))"
+publish = false
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-egress = { path = "../egress" }
+entropa-ledger = { path = "../ledger" }
+entropa-nodecore = { path = "../nodecore" }
+entropa-witness = { path = "../witness" }
+blake3 = { workspace = true }
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

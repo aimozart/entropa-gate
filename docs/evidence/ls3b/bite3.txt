@@ -1,0 +1,1 @@
+settings: star origin allowed: KILLED by h1 

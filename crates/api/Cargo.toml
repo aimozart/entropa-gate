@@ -1,0 +1,39 @@
+[package]
+name = "entropa-api"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Entropa API — the single-writer Merkle transparency log's ingest and sequencing services."
+
+[dependencies]
+entropa-core = { path = "../core" }
+axum = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "net"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tower = { version = "0.5", features = ["util"] }
+tower-http = { version = "0.6", features = ["cors"] }
+blake3 = { workspace = true }
+hex = { workspace = true }
+rand = "0.8"
+base64 = { workspace = true }
+hmac = "0.12"
+sha2 = "0.10"
+jsonwebtoken = "9"
+time = { version = "0.3", features = ["macros"] }
+
+[dev-dependencies]
+insta = { version = "1", features = ["json", "redactions"] }
+
+# api is the legacy service layer: only the safety lints apply for now; the strict
+# library lints (docs, unwrap/expect/panic) are tracked in docs/AUDIT-STANDARDS.md.
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+dbg_macro = "deny"
+todo = "deny"
+unimplemented = "deny"

@@ -1,0 +1,7 @@
+FMT_OK
+error: could not compile `entropa-approvals` (test "events") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+   Generated /work/target/doc/entropa_api/index.html and 7 other files
+advisories ok, bans ok, licenses ok, sources ok
+    Checking entropa-api v0.2.0 (/work/crates/api)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s

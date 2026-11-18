@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "entropa-log": {
+      "type": "stdio",
+      "command": "${ENTROPA_MCP_BIN:-target/release/entropa-mcp}",
+      "args": [],
+      "env": {
+        "ENTROPA_LOG_FILE": "${ENTROPA_DEMO_DIR:-target/mcp-demo}/log.json",
+        "ENTROPA_TRUSTED_PUBKEYS": "${ENTROPA_DEMO_PUBKEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+mutants: jobs=4 timeout=90s fast_tests=1 limits: memory=24g swap=24g cpus=12 pids=4096
+Found 174 mutants to test
+ok       Unmutated baseline in 15s build + 19s test
+MISSED   crates/explorer/src/lib.rs:147:27: replace > with >= in Explorer::handle in 1s build + 21s test
+MISSED   crates/explorer/src/lib.rs:148:32: replace > with >= in Explorer::handle in 0s build + 24s test
+MISSED   crates/explorer/src/lib.rs:169:54: replace > with >= in Explorer::handle in 0s build + 21s test
+MISSED   crates/explorer/src/lib.rs:177:9: replace Explorer::tracked_clients -> usize with 0 in 0s build + 21s test
+MISSED   crates/explorer/src/lib.rs:210:40: replace match guard a.status == 200 with true in finish in 1s build + 21s test
+MISSED   crates/explorer/src/lib.rs:211:36: replace match guard a.status == 200 with true in finish in 0s build + 22s test
+MISSED   crates/explorer/src/api.rs:189:31: replace > with >= in page in 1s build + 23s test
+MISSED   crates/explorer/src/limiter.rs:34:9: replace Limiter::tracked -> usize with 0 in 1s build + 23s test
+MISSED   crates/explorer/src/limiter.rs:72:23: replace - with + in Limiter::take in 0s build + 24s test
+MISSED   crates/explorer/src/query.rs:21:17: replace && with || in parse in 1s build + 24s test
+MISSED   crates/explorer/src/query.rs:24:22: replace || with && in parse in 0s build + 26s test
+MISSED   crates/explorer/src/query.rs:42:9: replace || with && in decimal in 1s build + 21s test
+MISSED   crates/explorer/src/query.rs:41:9: replace || with && in decimal in 1s build + 21s test
+174 mutants tested in 6m: 13 missed, 143 caught, 18 unviable
+exit 2

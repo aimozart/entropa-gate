@@ -1,0 +1,5 @@
+FMT_OK
+    Checking entropa-policy v0.2.0 (/work/crates/policy)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 10.83s
+   Generated /work/target/doc/entropa_api/index.html and 8 other files
+advisories ok, bans ok, licenses ok, sources ok

@@ -1,0 +1,7 @@
+# S0b evidence (2026-10-20)
+## mutants: scripts/mutants.sh entropa-core entropa-kms (after fixing shared CARGO_TARGET_DIR)
+212 mutants: 195 caught, 16 unviable, 1 timeout (infinite loop, merkle.rs:42 *= -> /=, counted as detected), 0 missed. Kill rate 195/196 viable = 99.5% (196/196 counting the hang).
+First run (before new tests): 212 tested, 17 missed, 181 caught, 14 unviable = 91.4% of 198 viable. Missed mutants were InMemoryStore (13), TransparencyLog::len/is_empty, Probe::pubkey_hex via the trait, receipts_for guard.
+## fuzz: scripts/fuzz.sh <target> 60
+decode_record: Done 21952428 runs in 61 second(s), no crash after the NUL fix to the target (earlier crash input [3,0,10] = finding F4)
+receipt_json: Done 6553128 runs in 61 second(s), no crash

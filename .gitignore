@@ -1,0 +1,33 @@
+# build output and local state
+/target/
+**/target/
+node_modules/
+*.log
+# secrets and local configuration: never commit these
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*
+service-account*.json
+secrets/
+.aws/
+.config/
+# editor and OS files
+.DS_Store
+*.swp
+.idea/
+.vscode/
+# tool state and private operating notes
+.claude/
+CLAUDE*.md
+the project notes*
+The project history*
+notes/
+working-notes*
+# fuzz corpora and crash artifacts are generated, not tracked
+**/fuzz/corpus/
+**/fuzz/artifacts/

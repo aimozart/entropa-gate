@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Mock feed explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p id="label" class="banner">mock data, real signed records</p>
+<h1>Mock feed explorer</h1>
+</header>
+<main>
+<section id="about" aria-label="What is mock and what is real"></section>
+<section id="verify" aria-label="Verify it yourself"></section>
+<section aria-label="Records">
+<div id="pager-top" class="pager"></div>
+<div id="records" role="table"></div>
+<div id="pager" class="pager"></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

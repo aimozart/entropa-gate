@@ -1,0 +1,8 @@
+docs/public/ARCHITECTURE.md
+docs/public/GLOSSARY.md
+docs/public/KNOWN-LIMITS.md
+docs/public/README.md
+docs/public/RESULTS.md
+docs/public/RUN-IN-CONTAINER.md
+docs/public/THREAT-MODEL.md
+docs/public/VERIFYING.md

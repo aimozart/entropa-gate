@@ -1,0 +1,4 @@
+decide_request exit 0
+detect_scan exit 0
+views_spans exit 0
+policy_parse exit 0

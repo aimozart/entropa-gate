@@ -1,0 +1,41 @@
+{
+ "attacks": [
+  {"class":"algorithm_and_key_id_confusion","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_algorithm": 50, "bad_signature": 50, "malformed": 150, "unknown_key": 50}},
+  {"class":"algorithm_and_key_id_confusion","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_algorithm": 50, "bad_signature": 50, "malformed": 150, "unknown_key": 50}},
+  {"class":"clock_skew_boundaries","design":"A","n":500,"accepted":0,"upper95":0.0060,"reasons":{"expired": 100, "not_yet_valid": 100, "revocation_stale": 150, "ttl_too_long": 150}},
+  {"class":"clock_skew_boundaries","design":"C","n":500,"accepted":0,"upper95":0.0060,"reasons":{"expired": 100, "not_yet_valid": 100, "revocation_stale": 150, "ttl_too_long": 150}},
+  {"class":"cross_audience_replay","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"wrong_audience": 300}},
+  {"class":"cross_audience_replay","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"wrong_audience": 300}},
+  {"class":"document_kind_confusion","design":"A","n":600,"accepted":0,"upper95":0.0050,"reasons":{"malformed": 300, "revocation_invalid": 300}},
+  {"class":"document_kind_confusion","design":"C","n":600,"accepted":0,"upper95":0.0050,"reasons":{"malformed": 300, "revocation_invalid": 300}},
+  {"class":"duplicate_key_and_unicode_tricks","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"duplicate_key": 168, "malformed": 116, "not_canonical": 16}},
+  {"class":"duplicate_key_and_unicode_tricks","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"duplicate_key": 185, "malformed": 99, "not_canonical": 16}},
+  {"class":"forged_or_edited_claims","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 300}},
+  {"class":"forged_or_edited_claims","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 299, "malformed": 1}},
+  {"class":"replay_after_expiry","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"expired": 300}},
+  {"class":"replay_after_expiry","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"expired": 300}},
+  {"class":"revoked","design":"A","n":600,"accepted":0,"upper95":0.0050,"reasons":{"revoked": 600}},
+  {"class":"revoked","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"revoked": 300}},
+  {"class":"signature_over_a_different_message","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 300}},
+  {"class":"signature_over_a_different_message","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 300}},
+  {"class":"spliced_chain_blocks","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 300}},
+  {"class":"stale_or_missing_revocation_list","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"revocation_invalid": 224, "revocation_missing": 38, "revocation_stale": 38}},
+  {"class":"stale_or_missing_revocation_list","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"revocation_invalid": 224, "revocation_missing": 38, "revocation_stale": 38}},
+  {"class":"stripped_signature","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 150, "malformed": 150}},
+  {"class":"stripped_signature","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 150, "malformed": 150}},
+  {"class":"swapped_signature","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 300}},
+  {"class":"swapped_signature","design":"C","n":301,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 301}},
+  {"class":"truncated_and_padded_encodings","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 60, "malformed": 240}},
+  {"class":"truncated_and_padded_encodings","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"bad_signature": 60, "malformed": 240}},
+  {"class":"widened_child","design":"A","n":300,"accepted":0,"upper95":0.0100,"reasons":{"widened": 300}},
+  {"class":"widened_child","design":"C","n":300,"accepted":0,"upper95":0.0100,"reasons":{"widened": 300}}
+ ],
+ "controls": [
+  {"class":"clock_skew_boundaries_accept","design":"A","n":400,"accepted":400},
+  {"class":"clock_skew_boundaries_accept","design":"C","n":400,"accepted":400},
+  {"class":"valid_chains","design":"A","n":200,"accepted":200},
+  {"class":"valid_chains","design":"C","n":200,"accepted":200},
+  {"class":"valid_tokens","design":"A","n":600,"accepted":600},
+  {"class":"valid_tokens","design":"C","n":600,"accepted":600}
+ ]
+}

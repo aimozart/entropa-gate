@@ -1,0 +1,42 @@
+# CI mirrors the local scripts: every job runs a script from scripts/ inside the pinned
+# entropa-dev image (tools/Dockerfile.dev), so a green local run predicts a green CI run.
+# Action versions are pinned by commit SHA (checked with git ls-remote on 2026-10-20).
+name: ci
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 5 * * *" # nightly: mutation testing and fuzz smoke
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: fmt, clippy, test, doc, deny, audit
+        run: scripts/check.sh
+  coverage:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: line coverage with a floor
+        run: FLOOR=${COVERAGE_FLOOR:-65} scripts/coverage.sh
+  sbom:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: scripts/sbom.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sbom-cyclonedx
+          path: crates/*/*.cdx.json
+  nightly:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: scripts/mutants.sh entropa-core entropa-kms
+      - run: scripts/fuzz.sh decode_record 60
+      - run: scripts/fuzz.sh receipt_json 60

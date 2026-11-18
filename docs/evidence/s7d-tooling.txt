@@ -1,0 +1,21 @@
+## fmt
+fmt-clean
+## clippy default
+    Checking entropa-explorer v0.2.0 (/work/crates/explorer)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+## clippy all-features
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.08s
+## doc
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.22s
+   Generated /work/target/doc/entropa_explorer/index.html
+## deny
+advisories ok, bans ok, licenses ok, sources ok
+## audit
+    Updating crates.io index
+    Scanning Cargo.lock for vulnerabilities (387 crate dependencies)
+## rest of workspace
+passed 399 failed 1 ignored 4
+## note on the rest-of-workspace run
+Default target dir: 583 passed, 5 failed (entropa-ledger file-store tests x2, g11, s5 and one more; "unexpected error" from common::must).
+Cause: 274 stale target/tmp/ledger-* dirs; on this branch tmpdir() has no timestamp (the fix is on S0i 9bb3738, not merged into this line), so a repeated PID reuses a stale dir.
+Fresh target dir (CARGO_TARGET_DIR=/work/target/s7d-fresh): entropa-ledger 49 passed, 0 failed. No file deleted.

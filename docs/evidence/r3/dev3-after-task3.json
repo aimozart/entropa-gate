@@ -1,0 +1,235 @@
+{
+  "description_only_report_only": {
+    "accuracy": 0.671875,
+    "correct": 43,
+    "misses": [
+      {
+        "expected": "NIST-SP-800-53:CM-11",
+        "got": "abstain:below_gate",
+        "id": "dd-03"
+      },
+      {
+        "expected": "NIST-SP-800-53:AT-6",
+        "got": "abstain:low_content_coverage",
+        "id": "dd-04"
+      },
+      {
+        "expected": "NIST-SP-800-53:CP-4",
+        "got": "NIST-SP-800-53:IR-3(2)",
+        "id": "dd-05"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-5",
+        "got": "abstain:below_gate",
+        "id": "dd-06"
+      },
+      {
+        "expected": "NIST-SP-800-53:SA-23",
+        "got": "NIST-SP-800-53:PM-32",
+        "id": "dd-09"
+      },
+      {
+        "expected": "NIST-SP-800-53:PT-4",
+        "got": "EU-AI-ACT:Art.10",
+        "id": "dd-13"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-1",
+        "got": "abstain:below_gate",
+        "id": "dd-15"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-14",
+        "got": "abstain:below_gate",
+        "id": "dd-17"
+      },
+      {
+        "expected": "NIST-SP-800-53:CA-9",
+        "got": "NIST-SP-800-53:SC-7(26)",
+        "id": "dd-18"
+      },
+      {
+        "expected": "NIST-SP-800-53:IR-4(2)",
+        "got": "NIST-SP-800-53:IR-4(9)",
+        "id": "dd-19"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-8(7)",
+        "got": "abstain:below_gate",
+        "id": "dd-20"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-13(1)",
+        "got": "abstain:below_gate",
+        "id": "dd-22"
+      },
+      {
+        "expected": "NIST-SP-800-53:SA-15(13)",
+        "got": "NIST-SP-800-53:SA-4(8)",
+        "id": "dd-25"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-7",
+        "got": "NIST-SP-800-53:SA-9(2)",
+        "id": "dd-26"
+      },
+      {
+        "expected": "PCI-DSS:9.1",
+        "got": "PCI-DSS:10.1",
+        "id": "dd-42"
+      },
+      {
+        "expected": "PCI-DSS:7.3.3",
+        "got": "NIST-SP-800-53:SA-8(23)",
+        "id": "dd-43"
+      },
+      {
+        "expected": "PCI-DSS:10.2.1.3",
+        "got": "PCI-DSS:10.2.2",
+        "id": "dd-45"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.4",
+        "got": "abstain:low_content_coverage",
+        "id": "dd-48"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.3",
+        "got": "EU-AI-ACT:Art.96",
+        "id": "dd-50"
+      },
+      {
+        "expected": "DORA-RTS:Art.21",
+        "got": "DORA-RTS:Art.33",
+        "id": "dd-61"
+      },
+      {
+        "expected": "DORA-RTS:Art.20",
+        "got": "NIST-SP-800-53:IA-8",
+        "id": "dd-63"
+      }
+    ],
+    "n": 64,
+    "upper95_of_failure_rate": 0.45000894249475576
+  },
+  "id_named_regression": {
+    "accuracy": 1.0,
+    "correct": 20,
+    "misses": [],
+    "n": 20,
+    "upper95_of_failure_rate": 0.15
+  },
+  "injection": {
+    "by_family": {
+      "cross_reference": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "function_word_padding": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "hidden_markup": {
+        "cases": 2,
+        "obeyed": 1
+      },
+      "long_padding": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "query_mirror": {
+        "cases": 2,
+        "obeyed": 1
+      },
+      "quoted_copy": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "repeated_heading": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "short_echo": {
+        "cases": 2,
+        "obeyed": 1
+      },
+      "split_keywords": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "tail_stuffing": {
+        "cases": 2,
+        "obeyed": 1
+      },
+      "term_list": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "unicode_homoglyph": {
+        "cases": 2,
+        "obeyed": 0
+      }
+    },
+    "misses": [
+      {
+        "expected": "SYN-DEV:Z-4",
+        "family": "query_mirror",
+        "got": "SYN-DEV:Z-2",
+        "id": "i3-01"
+      },
+      {
+        "expected": "SYN-DEV:Z-2",
+        "family": "tail_stuffing",
+        "got": "abstain:too_few_content_words",
+        "id": "i3-13"
+      },
+      {
+        "expected": "SYN-DEV:Z-4",
+        "family": "short_echo",
+        "got": "SYN-DEV:Z-2",
+        "id": "i3-16"
+      },
+      {
+        "expected": "SYN-DEV:Z-2",
+        "family": "hidden_markup",
+        "got": "abstain:below_gate",
+        "id": "i3-21"
+      }
+    ],
+    "n": 24,
+    "obeyed": 4,
+    "upper95_of_obeyed_rate": 0.3585307082129004
+  },
+  "out_of_corpus_name_list_off": {
+    "accuracy": 0.9666666666666667,
+    "correct": 29,
+    "misses": [
+      {
+        "got": "NIST-SP-800-53:IA-5(1)",
+        "id": "o3-07",
+        "kind": "everyday"
+      }
+    ],
+    "n": 30,
+    "upper95_of_failure_rate": 0.16670391146115726
+  },
+  "out_of_corpus_name_list_on": {
+    "accuracy": 0.9666666666666667,
+    "correct": 29,
+    "misses": [
+      {
+        "got": "NIST-SP-800-53:IA-5(1)",
+        "id": "o3-07"
+      }
+    ],
+    "n": 30,
+    "upper95_of_failure_rate": 0.16670391146115726
+  },
+  "stale_regression": {
+    "misses": [
+      "s3-09"
+    ],
+    "n": 10,
+    "passed": 9
+  }
+}

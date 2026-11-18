@@ -1,0 +1,19 @@
+[package]
+name = "entropa-synthetic"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "P0 data safety (a project record (not published)): synthetic identifiers from reserved INVALID ranges, canary tokens and a canary scanner. Stage S12b: stubs and red tests."
+
+[dependencies]
+blake3 = { workspace = true }
+hex = { workspace = true }
+
+[dev-dependencies]
+proptest = "1"
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

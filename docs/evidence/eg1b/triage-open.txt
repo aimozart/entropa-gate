@@ -1,0 +1,36 @@
+caught: 1  missed: 8  timeout: 0  unviable: 31
+--- caught only by SIGKILL (NOT counted as caught):
+crates__egress__src__decide.rs_line_1132_col_43.log
+crates__egress__src__decide.rs_line_1133_col_17.log
+crates__egress__src__decide.rs_line_1136_col_49.log
+crates__egress__src__decide.rs_line_1158_col_5.log
+crates__egress__src__decide.rs_line_643_col_20.log
+crates__egress__src__decide.rs_line_786_col_63_001.log
+crates__egress__src__decide.rs_line_786_col_63_002.log
+crates__egress__src__decide.rs_line_789_col_37.log
+crates__egress__src__decide.rs_line_789_col_44.log
+crates__egress__src__decide.rs_line_789_col_53_001.log
+crates__egress__src__decide.rs_line_789_col_53_002.log
+crates__egress__src__decide.rs_line_789_col_53.log
+crates__egress__src__decide.rs_line_789_col_58.log
+crates__egress__src__decide.rs_line_789_col_67_001.log
+crates__egress__src__decide.rs_line_789_col_67_002.log
+crates__egress__src__decide.rs_line_789_col_67.log
+crates__egress__src__decide.rs_line_790_col_24.log
+crates__egress__src__decide.rs_line_828_col_9.log
+crates__egress__src__detect.rs_line_233_col_18.log
+crates__egress__src__detect.rs_line_319_col_33_001.log
+crates__egress__src__detect.rs_line_319_col_33.log
+crates__egress__src__views.rs_line_180_col_28.log
+crates__egress__src__views.rs_line_192_col_51.log
+crates__egress__src__views.rs_line_256_col_41.log
+--- missed:
+crates/egress/src/decide.rs:393:14: replace > with >= in Budget::take
+crates/egress/src/decide.rs:396:16: replace -= with += in Budget::take
+crates/egress/src/decide.rs:445:9: replace <impl Visitor<'de> for V<'a>>::expecting -> std::fmt::Result with Ok(Default::default())
+crates/egress/src/decide.rs:580:15: replace != with == in scan_text
+crates/egress/src/decide.rs:599:26: replace < with == in scan_text
+crates/egress/src/decide.rs:599:26: replace < with > in scan_text
+crates/egress/src/decide.rs:600:24: replace += with -= in scan_text
+crates/egress/src/decide.rs:775:36: replace + with * in scan_all
+DONE

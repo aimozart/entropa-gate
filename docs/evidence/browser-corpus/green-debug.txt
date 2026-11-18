@@ -1,0 +1,6 @@
+test k3_the_corpus_is_small_and_synthetic ... ok
+test k1_the_committed_corpus_matches_its_manifest_and_a_fresh_generation ... ok
+test k2_every_case_has_a_refusal_or_a_known_ok_and_none_panics ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.11s
+

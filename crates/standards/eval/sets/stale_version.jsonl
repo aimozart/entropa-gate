@@ -1,0 +1,10 @@
+{"qid": "stale-01", "standard": "SYN-STALE", "clause": "Art.1", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "31 days", "v2_contains": "91 days"}
+{"qid": "stale-02", "standard": "SYN-STALE", "clause": "Art.2", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "32 days", "v2_contains": "92 days"}
+{"qid": "stale-03", "standard": "SYN-STALE", "clause": "Art.3", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "33 days", "v2_contains": "93 days"}
+{"qid": "stale-04", "standard": "SYN-STALE", "clause": "Art.4", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "34 days", "v2_contains": "94 days"}
+{"qid": "stale-05", "standard": "SYN-STALE", "clause": "Art.5", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "35 days", "v2_contains": "95 days"}
+{"qid": "stale-06", "standard": "SYN-STALE", "clause": "Art.6", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "36 days", "v2_contains": "96 days"}
+{"qid": "stale-07", "standard": "SYN-STALE", "clause": "Art.7", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "37 days", "v2_contains": "97 days"}
+{"qid": "stale-08", "standard": "SYN-STALE", "clause": "Art.8", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "38 days", "v2_contains": "98 days"}
+{"qid": "stale-09", "standard": "SYN-STALE", "clause": "Art.9", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "39 days", "v2_contains": "99 days"}
+{"qid": "stale-10", "standard": "SYN-STALE", "clause": "Art.10", "v1_version": "syn-stale-1", "v2_version": "syn-stale-2", "v1_contains": "40 days", "v2_contains": "100 days"}

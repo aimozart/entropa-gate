@@ -1,0 +1,42 @@
+{
+  "alertStrategy": {
+    "autoClose": "1800s"
+  },
+  "combiner": "OR",
+  "conditions": [
+    {
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "300s",
+            "perSeriesAligner": "ALIGN_SUM"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"entropa-scryon\" AND metric.type=\"run.googleapis.com/request_count\" AND metric.labels.response_code_class=\"5xx\"",
+        "thresholdValue": 2.0
+      },
+      "displayName": "5xx request count > 0",
+      "name": "projects/entropa-testnet/alertPolicies/14978570310802240731/conditions/14978570310802239980"
+    }
+  ],
+  "creationRecord": {
+    "mutateTime": "2026-08-12T12:20:16.188603257Z",
+    "mutatedBy": "aimozart@entropa.space"
+  },
+  "displayName": "Entropa: Cloud Run 5xx errors",
+  "documentation": {
+    "content": "entropa-scryon is returning server errors -- check gcloud run services logs read entropa-scryon --region=us-central1 --project=entropa-testnet",
+    "mimeType": "text/markdown"
+  },
+  "enabled": true,
+  "mutationRecord": {
+    "mutateTime": "2026-08-12T12:20:16.188603257Z",
+    "mutatedBy": "aimozart@entropa.space"
+  },
+  "name": "projects/entropa-testnet/alertPolicies/14978570310802240731",
+  "notificationChannels": [
+    "projects/entropa-testnet/notificationChannels/1430532887923694351"
+  ]
+}

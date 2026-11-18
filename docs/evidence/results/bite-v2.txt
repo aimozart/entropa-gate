@@ -1,0 +1,8 @@
+== s/                if chk.get("file") not in listed:/                if False:
+FAIL: test_r16_a_check_on_a_file_the_row_does_not_list_as_a_source_is_refused (test_results.T.test_r16_a_check
+Ran 17 tests in 0.783s
+FAILED (failures=1)
+== s/    if path != root and not path.startswith(root + os.sep):/    if False:/
+FAIL: test_r17_a_source_outside_the_repository_is_refused (test_results.T.test_r17_a_source_outside_the_reposi
+Ran 17 tests in 0.766s
+FAILED (failures=1)

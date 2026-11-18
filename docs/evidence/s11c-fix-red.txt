@@ -1,0 +1,8 @@
+== red (before the fix)
+      1 AttributeError: module 'probe_bedrock' has no attribute 'canonical_request'
+      1 ERROR: test_the_message_is_cut_at_120_characters_and_masks_account_ids_and_key_ids (__main__.ErrorOutput.test_the_message_is_cut_at_120_characters_and_masks_account_ids_and_key_ids)
+      1 ERROR: test_the_sent_path_and_the_canonical_uri_for_real_model_ids (__main__.ModelIdEncoding.test_the_sent_path_and_the_canonical_uri_for_real_model_ids)
+      1 FAILED (failures=2, errors=2)
+      1 FAIL: test_pasted_whitespace_in_credentials_is_stripped (__main__.Hardening.test_pasted_whitespace_in_credentials_is_stripped)
+      1 FAIL: test_the_error_type_comes_from_the_header_and_loses_its_url_suffix (__main__.ErrorOutput.test_the_error_type_comes_from_the_header_and_loses_its_url_suffix)
+      1 Ran 18 tests in 0.002s

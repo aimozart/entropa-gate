@@ -1,0 +1,24 @@
+sha not checked before parsing: KILLED by s1,s11 
+duplicate keys accepted: KILLED by s1 
+2,000-scenario limit raised: KILLED by s1 
+unknown top-level field accepted: KILLED by s1 
+unknown scenario field accepted: KILLED by s1,s11 
+unknown op field accepted: KILLED by s1 
+status set ignored: KILLED by s13,s14,s4,s9 
+or_close alone accepts a response: SURVIVED 
+header expectations ignored: KILLED by s5 
+json body expectation ignored: KILLED by s5 
+burst counts ignored: KILLED by s5 
+stats totals ignored: SURVIVED 
+escape pass never applied to a burst: KILLED by s14 
+escape pass never applied to a request: KILLED by s14 
+scenario deadline never reached by a nap: KILLED by s6 
+attack flag never counted: KILLED by s13,s4 
+scenario-level attack never counted: KILLED by s13 
+scenario-level attack counts a timeout: KILLED by s13 
+alive check skipped: KILLED by s7 
+secrets not scanned: KILLED by s7 
+stderr not checked: KILLED by s7 
+stdout lines not checked: KILLED by s7 
+bound formula wrong: KILLED by s2 
+hold never expires: PATTERN NOT FOUND

@@ -1,0 +1,4 @@
+test p3_a_refused_request_leaves_the_ledger_empty_in_both_writers ... ok
+test p2_the_two_writers_write_identical_bytes_for_the_same_requests_and_key ... ok
+test p1_the_two_writers_are_deterministic_and_the_observed_behaviour_equals_the_golden ... ok
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s

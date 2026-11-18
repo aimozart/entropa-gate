@@ -1,0 +1,6 @@
+test ingest::tests::the_ingest_router_serves_no_signup_or_stripe_routes ... FAILED
+thread 'ingest::tests::the_ingest_router_serves_no_signup_or_stripe_routes' (443) panicked at crates/api/src/ingest.rs:375:13:
+assertion `left == right` failed: POST /api/signup
+  left: 415
+ right: 404
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 160 filtered out; finished in 0.00s

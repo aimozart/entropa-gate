@@ -1,0 +1,15 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test m4_the_manifest_text_is_deterministic_and_sorted_and_binds_the_sbom ... FAILED
+test s5_a_lock_that_is_not_a_lock_is_refused ... FAILED
+test s3_every_planted_fault_is_found_by_the_cross_check ... FAILED
+test s4_the_sbom_text_is_identical_on_two_runs_and_reads_back ... FAILED
+test s2_the_sbom_agrees_with_cargo_metadata_on_the_real_workspace ... FAILED
+test m3_malformed_envelopes_are_refused_with_the_manifest_error ... FAILED
+test s1_the_sbom_has_one_component_per_lock_package ... FAILED
+test m2_every_tamper_class_is_refused ... FAILED
+test m1_a_signed_manifest_verifies_with_the_right_key_and_the_right_files ... FAILED
+test x1_minisign_round_trip_and_the_three_refusals ... FAILED
+test result: FAILED. 0 passed; 10 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: test failed, to rerun pass `-p entropa-release --test s2`
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: 1 target failed:

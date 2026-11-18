@@ -1,0 +1,5 @@
+test l1_the_latency_command_reports_ordered_percentiles_per_size ... FAILED
+assertion `left == right` failed: usage: egress-eval dev-eval --dir D [--policy P] [--store S --version V] [--out F] | heldout-eg --file F --sha H --out R [--policy P] [--store S --version V] | make-policy --extra E --out F
+  left: 2
+ right: 0
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 3 filtered out; finished in 0.00s

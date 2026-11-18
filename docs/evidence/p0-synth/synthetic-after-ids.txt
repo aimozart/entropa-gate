@@ -1,0 +1,14 @@
+     Running tests/canary.rs (target/release/deps/canary-0dd7530ea1905e37)
+test c2_the_scanner_finds_every_canary_in_order_and_nothing_else ... ok
+test c4_every_patient_record_carries_its_canary ... ok
+test c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... ok
+test t1_no_canary_appears_anywhere_outside_the_gate ... ok
+synthetic release: 23 passed 0 failed 0 ignored
+     Running tests/canary.rs (target/debug/deps/canary-37fee5ac9c24dfb2)
+test c2_the_scanner_finds_every_canary_in_order_and_nothing_else ... ok
+test c4_every_patient_record_carries_its_canary ... ok
+test c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... ok
+test t1_no_canary_appears_anywhere_outside_the_gate ... ok
+synthetic debug: 23 passed 0 failed 0 ignored

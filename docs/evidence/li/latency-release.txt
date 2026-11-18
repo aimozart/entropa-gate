@@ -1,0 +1,8 @@
+append #1: 3233 us
+append #300: 315 us
+append #3000: 1866 us
+append #30000: 669 us
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 21.74s
+p95 first 1000: 1343 us; around 3000: 1348 us; last 1000 of 30000: 1332 us; ratio 0.99
+test p95_over_30000_appends_stays_within_3x_of_the_first_thousand ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 21.69s

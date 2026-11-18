@@ -1,0 +1,23 @@
+ok   binary exists
+ok   report exists
+ok   static: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, stripped
+ok   no shared library is needed
+ok   report sha256 matches the file
+ok   init, 3 records, verify on the static binary
+ok   0 network syscalls in a full cycle
+ok   FROM scratch
+ok   numeric non-root USER
+ok   a data volume
+ok   no RUN, SHELL, EXPOSE or remote ADD
+ok   exec-form entrypoint, no shell
+ok   image entropa-gate:s1-4a74a15cfc7a exists
+ok   image user 65532:65532
+ok   container init
+ok   container verify OK records=3
+ok   a write outside the volume is refused
+ok   binary sha256 line
+ok   second build sha256 line
+ok   image id line
+ok   reproducible: yes, and the two hashes are equal
+ok   no unmeasured claim in the report
+ALL PACKAGING CHECKS PASSED

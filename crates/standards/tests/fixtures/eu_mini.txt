@@ -1,0 +1,33 @@
+Synthetic Regulation (EU) 0000/0001
+OJ L, 1.1.2000
+EN
+Preamble text that is not an article.
+CHAPTER I
+GENERAL PROVISIONS
+Article 1
+Subject matter
+1.
+This Regulation lays down rules about widgets.
+2.
+It also covers gadgets.
+1/9
+Article 2
+Scope
+This Regulation applies to widget makers
+and to gadget makers.
+ELI: http://example.invalid/eli/x
+CHAPTER II
+REQUIREMENTS
+Article 3
+Record-keeping
+1.
+Widget systems shall record events over their lifetime.
+Article 3
+Record-keeping
+1.
+Widget systems shall record events over their lifetime.
+2.
+The records shall allow traceability.
+ANNEX I
+List of widget kinds
+Kind A and kind B.

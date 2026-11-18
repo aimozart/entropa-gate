@@ -1,0 +1,8 @@
+test a1_references_are_allowed ... FAILED
+test b3_a_compound_of_two_disguises_is_seen ... FAILED
+test b2_irregular_hyphens_through_the_phrase_are_seen ... FAILED
+test b1_a_hyphen_grouping_that_starts_mid_line_is_seen ... FAILED
+test a3_a_literal_inside_a_call_is_still_a_credential ... FAILED
+test a2_literal_credentials_stay_blocked_in_every_form ... FAILED
+test b4_ordinary_hyphenated_text_stays_allowed ... ok
+test result: FAILED. 1 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s

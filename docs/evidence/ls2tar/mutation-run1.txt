@@ -1,0 +1,7 @@
+Found 49 mutants to test
+ok       Unmutated baseline in 14s build + 26s test
+MISSED   crates/mockview/src/lib.rs:115:23: replace > with == in ustar in 0s build + 5s test
+MISSED   crates/mockview/src/lib.rs:115:23: replace > with >= in ustar in 0s build + 5s test
+MISSED   crates/mockview/src/lib.rs:136:63: replace % with + in ustar in 0s build + 5s test
+MISSED   crates/mockview/src/lib.rs:144:18: replace match guard !b.is_empty() with true in key_id in 0s build + 5s test
+49 mutants tested in 5m: 4 missed, 43 caught, 2 unviable

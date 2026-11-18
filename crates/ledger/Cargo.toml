@@ -1,0 +1,23 @@
+[package]
+name = "entropa-ledger"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Public explorer ledger core (docs/ARCHITECTURE-EXPLORER.md): closed-code event schema, append-only store, synthetic scenario generator, static bundle export. Stage S7b: stubs and red tests."
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-approvals = { path = "../approvals" }
+entropa-policy = { path = "../policy" }
+entropa-witness = { path = "../witness" }
+blake3 = { workspace = true }
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+proptest = "1"
+
+[lints]
+workspace = true

@@ -1,0 +1,13 @@
+test an_empty_payload_with_a_label_differs_from_a_payload_that_looks_like_it ... ok
+test a_payload_that_looks_like_an_encoded_record_does_not_collide_with_it ... ok
+test every_payload_label_split_of_one_string_is_distinct ... ok
+test the_f4_pair_encodes_differently ... ok
+test golden_vectors_pin_the_exact_bytes_and_leaf_hashes ... ok
+test maximum_size_fields_are_accepted_and_one_more_byte_is_rejected ... ok
+test every_accepted_byte_string_is_canonical ... ok
+test encoding_is_injective_over_resplits_of_one_string ... ok
+test every_accepted_one_byte_mutation_of_a_valid_encoding_is_canonical ... ok
+test encoding_is_injective ... ok
+test decode_of_encode_is_the_identity ... ok
+test truncations_and_extensions_of_a_valid_encoding_are_rejected ... ok
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s

@@ -1,0 +1,5 @@
+t1
+class=c1 decision=accept
+class=c1 decision=accept
+class=c2 decision=accept severity=high
+class=c1 decision=accept reason=r1

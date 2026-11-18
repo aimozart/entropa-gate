@@ -1,0 +1,39 @@
+[package]
+name = "entropa-kms"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+description = "Checkpoint signer for entropa-core backed by a managed-KMS ML-DSA-65 key, with an optional real AWS KMS client behind the `aws` feature."
+repository = "https://github.com/aimozart/entropa-gate"
+homepage = "https://entropa.space"
+readme = "README.md"
+documentation = "https://docs.rs/entropa-kms"
+rust-version = "1.99"
+keywords = ["kms", "aws", "ml-dsa", "post-quantum", "signing"]
+categories = ["cryptography"]
+include = ["src/**", "tests/**", "README.md", "LICENSE-MIT", "Cargo.toml"]
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+hex = { workspace = true }
+thiserror = { workspace = true }
+aws-sdk-kms = { version = "1", default-features = false, features = ["default-https-client", "rt-tokio"], optional = true }
+aws-config = { version = "1", default-features = false, features = ["behavior-version-latest"], optional = true }
+tokio = { version = "1", features = ["rt", "time"], optional = true }
+base64 = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "blocking"], optional = true }
+
+[features]
+default = []
+# Real AWS KMS client (docs/adr/0012, 0013). Off by default: the default build compiles no AWS crate.
+aws = ["dep:aws-sdk-kms", "dep:aws-config", "dep:tokio"]
+# Google Cloud KMS client (ML-DSA-65, PQ_SIGN_ML_DSA_65). Off by default.
+gcp = ["dep:base64", "dep:serde_json", "dep:reqwest"]
+
+[dev-dependencies]
+proptest = "1"
+
+[lints]
+workspace = true

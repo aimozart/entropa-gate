@@ -1,0 +1,14 @@
+Found 56 mutants to test
+ok       Unmutated baseline in 3s build + 4s test
+MISSED   crates/egress/src/detect.rs:375:9: replace || with && in bearer_placeholder in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:374:9: replace || with && in bearer_placeholder in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:373:9: replace || with && in bearer_placeholder in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:383:63: replace == with != in bearer_placeholder in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:396:16: replace + with - in assign_is_literal in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:396:27: replace - with / in assign_is_literal in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:399:16: replace < with <= in assign_is_literal in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:419:13: replace || with && in assign_is_literal in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:456:13: replace < with <= in placeholder_words_only in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:494:53: replace + with - in strip_separators in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:494:53: replace + with * in strip_separators in 0s build + 2s test
+56 mutants tested in 3m: 11 missed, 45 caught

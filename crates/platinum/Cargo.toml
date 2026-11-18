@@ -1,0 +1,32 @@
+[package]
+name = "entropa-platinum"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Local CLI that records platinum-layer AI decisions as signed, data-minimal ledger events (stage P1)."
+
+[[bin]]
+name = "entropa-platinum"
+path = "src/main.rs"
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-approvals = { path = "../approvals" }
+entropa-ledger = { path = "../ledger" }
+entropa-nodecore = { path = "../nodecore" }
+entropa-kms = { path = "../kms", features = ["gcp"] }
+entropa-witness = { path = "../witness" }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "blocking"] }
+blake3 = { workspace = true }
+hex = { workspace = true }
+axum = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "net"] }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+entropa-witnessd = { path = "../witnessd" }
+
+[lints]
+workspace = true

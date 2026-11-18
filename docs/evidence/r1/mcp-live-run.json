@@ -1,0 +1,89 @@
+{
+ "evidence_kind": "mcp_live_run",
+ "corpus_version": "c2026-11-13",
+ "run_under": "unshare -rn (an empty network namespace: no interface but loopback-less)",
+ "server_exit_status": 0,
+ "calls": [
+  {
+   "tool": "search",
+   "outcome": "answered",
+   "top_clause": "AU-9(3)",
+   "licensed_quote_words": null
+  },
+  {
+   "tool": "search",
+   "outcome": "answered",
+   "top_clause": "12.10.1",
+   "licensed_quote_words": null
+  },
+  {
+   "tool": "search",
+   "outcome": "not_in_corpus",
+   "top_clause": null,
+   "licensed_quote_words": null
+  },
+  {
+   "tool": "lookup_clause",
+   "outcome": "found",
+   "top_clause": null,
+   "licensed_quote_words": 25
+  },
+  {
+   "tool": "cite_check",
+   "outcome": "ok",
+   "top_clause": null,
+   "licensed_quote_words": null
+  },
+  {
+   "tool": "cite_check",
+   "outcome": "drift",
+   "top_clause": null,
+   "licensed_quote_words": null
+  },
+  {
+   "tool": "list_versions",
+   "outcome": "listed",
+   "top_clause": null,
+   "licensed_quote_words": null
+  }
+ ],
+ "node_verify": "OK records=9 checkpoints=9",
+ "retrieval_records": [
+  {
+   "index": 2,
+   "label": "retrieval_record",
+   "plain": "Retrieval: 1 passage was returned from the sealed standards corpus. Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 3,
+   "label": "retrieval_record",
+   "plain": "Retrieval: 5 passages were returned from the sealed standards corpus. Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 4,
+   "label": "retrieval_record",
+   "plain": "Retrieval: nothing in the corpus matched, so no answer was given (not in the corpus). Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 5,
+   "label": "retrieval_record",
+   "plain": "Retrieval: 1 passage was returned from the sealed standards corpus. Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 6,
+   "label": "retrieval_record",
+   "plain": "Retrieval: 1 passage was returned from the sealed standards corpus. Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 7,
+   "label": "retrieval_record",
+   "plain": "Retrieval: nothing in the corpus matched, so no answer was given (not in the corpus). Supports EU AI Act Art. 12."
+  },
+  {
+   "index": 8,
+   "label": "retrieval_record",
+   "plain": "Retrieval: 1 passage was returned from the sealed standards corpus. Supports EU AI Act Art. 12."
+  }
+ ],
+ "note": "the corpus and the node are outside the repository; only closed codes and sentences are recorded here"
+}

@@ -1,0 +1,15 @@
+test admin::store::tests::an_old_stored_document_with_stripe_fields_still_reads ... ok
+test admin::store::tests::stored_partner_fields_carry_no_stripe_or_billing_keys ... FAILED
+test admin::store::tests::the_admin_json_carries_no_stripe_or_billing_keys ... FAILED
+test ingest::tests::a_partner_whose_old_record_says_canceled_is_still_accepted_never_402 ... FAILED
+thread 'admin::store::tests::stored_partner_fields_carry_no_stripe_or_billing_keys' (445) panicked at crates/api/src/admin/store.rs:186:13:
+stored document still has stripe: {"fields":{"api_key_hash":{"stringValue":"hash"},"billing_status":{"stringValue":"active"},"display_name":{"stringValue":"Acme"},"email":{"stringValue":"a@example.com"},"notes":{"stringValue":"n"},"stripe_customer_id":{"stringValue":"cus_x"},"stripe_subscription_id":{"stringValue":"sub_x"}}}
+thread 'admin::store::tests::the_admin_json_carries_no_stripe_or_billing_keys' (446) panicked at crates/api/src/admin/store.rs:194:13:
+admin json still has stripe: {"billing_status":"active","display_name":"Acme","email":"a@example.com","notes":"n","slug":"acme","stripe_customer_id":"cus_x"}
+thread 'ingest::tests::a_partner_whose_old_record_says_canceled_is_still_accepted_never_402' (447) panicked at crates/api/src/ingest.rs:331:9:
+test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 130 filtered out; finished in 0.00s
+dead /signup references found:
+website/public-main/sitemap.xml:9:    <loc>https://entropa.space/signup</loc>
+website/public-main/index.html:248:      <a class="btn small primary" href="/signup" style="padding:6px 14px">Try the demo</a>
+website/public-main/index.html:261:        <a class="btn primary" href="/signup">Try the demo →</a>
+website/public-main/index.html:319:      <a class="btn primary" href="/signup">Try the demo →</a>

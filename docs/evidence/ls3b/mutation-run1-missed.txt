@@ -1,0 +1,10 @@
+crates/try-http/src/server.rs:44:52: replace == with != in Shared::count
+crates/try-http/src/server.rs:60:5: replace now_secs -> u64 with 0
+crates/try-http/src/server.rs:60:5: replace now_secs -> u64 with 1
+crates/try-http/src/server.rs:169:16: replace > with >= in post_try
+crates/try-http/src/server.rs:202:34: replace > with >= in post_try
+crates/try-http/src/server.rs:270:13: delete field salt from struct Config expression in run
+crates/try-http/src/server.rs:293:61: replace + with - in run
+crates/try-http/src/settings.rs:55:31: replace < with == in parse_args
+crates/try-http/src/settings.rs:55:31: replace < with <= in parse_args
+crates/try-http/src/settings.rs:60:18: replace || with && in parse_args

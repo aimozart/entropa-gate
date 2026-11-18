@@ -1,0 +1,25 @@
+crates/egress/src/contain.rs:76:9: replace <impl serde::de::Visitor<'de> for PairsVisitor>::expecting -> std::fmt::Result with Ok(Default::default())
+crates/egress/src/context.rs:112:21: replace || with && in tail
+crates/egress/src/context.rs:111:36: replace < with > in tail
+crates/egress/src/context.rs:112:40: replace < with > in tail
+crates/egress/src/context.rs:185:5: replace mask -> bool with false
+crates/egress/src/context.rs:185:5: delete ! in mask
+crates/egress/src/context.rs:200:9: replace || with && in reference
+crates/egress/src/context.rs:228:13: replace || with && in reference
+crates/egress/src/context.rs:234:20: replace || with && in is_variable
+crates/egress/src/context.rs:234:16: replace < with == in is_variable
+crates/egress/src/context.rs:234:16: replace < with <= in is_variable
+crates/egress/src/context.rs:248:13: delete match arm b'(' in is_variable
+crates/egress/src/context.rs:292:39: replace < with <= in value_at
+crates/egress/src/context.rs:292:35: replace + with - in value_at
+crates/egress/src/context.rs:292:35: replace + with * in value_at
+crates/egress/src/context.rs:306:13: delete match arm b'<' in value_at
+crates/egress/src/context.rs:311:23: replace + with * in value_at
+crates/egress/src/context.rs:333:32: replace && with || in value_at
+crates/egress/src/context.rs:333:28: replace > with >= in value_at
+crates/egress/src/context.rs:388:35: replace + with * in analyze
+crates/egress/src/context.rs:439:28: replace > with >= in is_reference
+crates/egress/src/context.rs:533:36: replace + with - in assignment
+crates/egress/src/context.rs:628:32: replace > with >= in assignment
+crates/egress/src/v2.rs:88:42: replace < with <= in decide_v2
+crates/egress/src/v2.rs:88:61: replace < with <= in decide_v2

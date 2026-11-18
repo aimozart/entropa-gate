@@ -1,0 +1,377 @@
+info: cargo-llvm-cov currently setting cfg(coverage); you can opt-out it by passing --no-cfg-coverage
+   Compiling entropa-core v0.1.2 (/work/crates/core)
+   Compiling entropa-api v0.1.2 (/work/crates/api)
+   Compiling entropa-kms v0.1.2 (/work/crates/kms)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.06s
+     Running unittests src/lib.rs (target/llvm-cov-target/debug/deps/entropa_api-eee3a4682e50bc1a)
+
+running 160 tests
+test admin::auth::tests::auth_cookie_also_fails_closed_when_secret_unconfigured ... ok
+test admin::auth::tests::auth_accepts_correct_bearer_token ... ok
+test admin::auth::tests::auth_accepts_correct_session_cookie ... ok
+test admin::auth::tests::auth_fails_closed_when_secret_is_unconfigured ... ok
+test admin::auth::tests::auth_rejects_wrong_session_cookie ... ok
+test admin::auth::tests::auth_rejects_missing_header ... ok
+test admin::auth::tests::auth_rejects_wrong_token ... ok
+test admin::crypto::tests::generate_key_produces_48_hex_chars ... ok
+test admin::crypto::tests::generate_key_is_random_each_time ... ok
+test admin::crypto::tests::hash_key_differs_for_different_keys ... ok
+test admin::crypto::tests::hash_key_is_deterministic_and_never_reversible_looking ... ok
+test admin::crypto::tests::slugify_basic_name ... ok
+test admin::crypto::tests::slugify_collapses_punctuation_and_case ... ok
+test admin::crypto::tests::slugify_falls_back_when_nothing_alphanumeric_survives ... ok
+test admin::crypto::tests::slugify_trims_trailing_dash ... ok
+test admin::model::tests::active_and_trial_permit_submission ... ok
+test admin::model::tests::billing_status_parse_defaults_to_unbilled_for_garbage ... ok
+test admin::model::tests::billing_status_round_trips_through_its_string_form ... ok
+test admin::model::tests::past_due_and_canceled_do_not_permit_submission ... ok
+test admin::model::tests::unbilled_permits_submission ... ok
+test contact::pure_logic_tests::a_well_formed_submission_is_valid ... ok
+test contact::pure_logic_tests::an_email_without_an_at_sign_is_rejected ... ok
+test contact::pure_logic_tests::an_empty_message_is_rejected ... ok
+test contact::pure_logic_tests::an_empty_name_is_rejected ... ok
+test contact::pure_logic_tests::an_oversized_message_is_rejected ... ok
+test contact::pure_logic_tests::build_contact_email_body_carries_sender_identity_and_message ... ok
+test contact::pure_logic_tests::build_contact_email_carries_the_reason_in_the_subject ... ok
+test contact::pure_logic_tests::build_contact_email_falls_back_to_a_default_reason_when_blank ... ok
+test dashboard::auth::generate_login_code_tests::is_random_each_time ... ok
+test dashboard::auth::is_code_within_ttl_tests::a_fresh_code_is_within_the_window ... ok
+test dashboard::auth::generate_login_code_tests::produces_a_six_digit_numeric_code ... ok
+test dashboard::auth::is_code_within_ttl_tests::exactly_at_the_ttl_boundary_is_still_valid ... ok
+test dashboard::auth::is_code_within_ttl_tests::past_the_ttl_is_rejected ... ok
+test dashboard::auth::session_tests::a_malformed_token_never_panics ... ok
+test dashboard::auth::session_tests::a_genuine_session_verifies_and_returns_the_slug ... ok
+test dashboard::auth::session_tests::a_tampered_expiry_is_rejected ... ok
+test dashboard::auth::session_tests::a_tampered_slug_is_rejected ... ok
+test dashboard::auth::session_tests::an_expired_session_is_rejected ... ok
+test dashboard::store::tests::doc_id_differs_per_email ... ok
+test dashboard::store::tests::doc_id_is_deterministic_and_case_insensitive ... ok
+test dashboard::auth::session_tests::the_wrong_secret_is_rejected ... ok
+test dashboard::store::tests::missing_attempts_field_defaults_to_zero ... ok
+test dashboard::store::tests::rejects_a_document_missing_required_fields ... ok
+test gmail::build_jwt_claims_tests::carries_the_expected_fields ... ok
+test dashboard::store::tests::round_trips_through_its_firestore_field_shape ... ok
+test gmail::build_raw_email_tests::a_non_ascii_subject_is_rfc2047_encoded_not_left_as_raw_utf8 ... ok
+test gmail::build_raw_email_tests::encoding_has_no_padding_or_url_unsafe_characters ... ok
+test gmail::build_raw_email_tests::produces_a_valid_rfc2822_message_base64url_encoded ... ok
+test gmail::parse_message_list_tests::a_malformed_response_yields_an_empty_vec_not_a_panic ... ok
+test gmail::parse_message_list_tests::a_zero_match_response_yields_an_empty_vec ... ok
+test gmail::parse_message_list_tests::extracts_ids_from_a_real_list_response ... ok
+test gmail::parse_message_summary_tests::extracts_headers_and_snippet_from_a_real_metadata_response ... ok
+test gmail::parse_message_summary_tests::missing_headers_yield_empty_strings_not_a_panic ... ok
+test gmail::parse_message_summary_tests::header_lookup_is_case_insensitive ... ok
+test gmail::parse_message_summary_tests::missing_id_yields_none ... ok
+test heartbeat::tests::does_not_emit_before_the_interval_has_elapsed ... ok
+test heartbeat::tests::does_not_emit_exactly_one_second_before_the_boundary ... ok
+test heartbeat::tests::emits_once_the_interval_has_fully_elapsed ... ok
+test heartbeat::tests::emits_well_past_the_interval ... ok
+test ingest::tests::extract_bearer_token_reads_a_well_formed_header ... ok
+test ingest::tests::a_canceled_partners_key_is_rejected_with_payment_required ... ok
+test ingest::tests::a_submission_is_published_with_the_partners_slug_as_the_ordering_key ... ok
+test ingest::tests::extract_bearer_token_returns_none_for_a_non_bearer_scheme ... ok
+test partner_directory::tests::find_by_raw_key_matches_the_correct_partner ... ok
+test partner_directory::tests::fake_directory_authenticates_a_known_key ... ok
+test partner_directory::tests::fake_directory_rejects_an_unknown_key ... ok
+test ingest::tests::a_request_with_no_authorization_header_is_rejected ... ok
+test ingest::tests::a_valid_submission_is_accepted_and_published ... ok
+test ingest::tests::a_publisher_failure_is_reported_as_service_unavailable ... ok
+test ingest::tests::a_valid_submission_actually_publishes_the_payload ... ok
+test ingest::tests::a_request_with_an_unknown_key_is_rejected ... ok
+test partner_directory::tests::find_by_raw_key_returns_none_for_an_unknown_key ... ok
+test ingest::tests::per_key_rate_limit_is_independent_per_partner ... ok
+test partner_directory::tests::cache_past_ttl_is_not_fresh ... ok
+test partner_directory::tests::cache_within_ttl_is_still_fresh ... ok
+test persistence::tests::a_token_exactly_at_the_margin_boundary_is_not_fresh ... ok
+test persistence::tests::a_token_inside_the_safety_margin_is_not_fresh ... ok
+test pubsub::tests::fake_publisher_records_every_published_message ... ok
+test pubsub::tests::fake_publisher_records_the_ordering_key_per_message ... ok
+test ingest::tests::malformed_json_is_a_client_error_not_a_crash ... ok
+test ingest::tests::extract_bearer_token_returns_none_when_header_is_missing ... ok
+test persistence::tests::a_token_well_before_expiry_is_still_fresh ... ok
+test persistence::tests::a_token_past_its_expiry_is_not_fresh ... ok
+test pubsub::tests::fake_publisher_configured_to_fail_never_records_anything ... ok
+test pubsub::tests::fake_publisher_returns_distinct_message_ids_in_order ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_30th_rolls_to_the_3rd_of_next_month ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_28th_in_february_rolls_to_march_3rd ... ok
+test pull_subscriber::tests::fake_subscriber_pull_on_empty_queue_returns_empty ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_31st_rolls_to_the_3rd_of_next_month ... ok
+test pull_subscriber::tests::fake_subscriber_pulls_up_to_max_messages ... ok
+test pull_subscriber::tests::fake_subscriber_records_acked_ids ... ok
+test signup::alert::build_signup_alert_email_tests::body_carries_display_name_slug_and_email ... ok
+test signup::alert::build_signup_alert_email_tests::subject_names_the_new_partner ... ok
+test signup::checkout::next_billing_anchor_tests::december_rolls_over_the_year_boundary ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_before_the_anchor_day_this_month_anchors_this_month ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_exactly_on_the_anchor_day_rolls_to_next_month ... ok
+test signup::is_within_reveal_window_tests::a_clock_that_moved_backward_never_panics ... ok
+test signup::is_within_reveal_window_tests::a_fresh_signup_is_within_the_window ... ok
+test signup::is_within_reveal_window_tests::exactly_at_the_ttl_boundary_is_still_within_the_window ... ok
+test signup::is_within_reveal_window_tests::past_the_ttl_is_rejected ... ok
+test signup::pending_store::tests::rejects_a_document_missing_required_fields ... ok
+test signup::pending_store::tests::round_trips_through_its_firestore_field_shape ... ok
+test signup::webhook::extract_checkout_completed_tests::a_missing_subscription_id_falls_back_to_empty_rather_than_failing_the_whole_parse ... ok
+test signup::webhook::extract_checkout_completed_tests::extracts_the_fields_a_real_completed_session_carries ... ok
+test ingest::tests::exceeding_the_per_partner_rate_limit_returns_429 ... ok
+test signup::webhook::extract_checkout_completed_tests::falls_back_to_a_sensible_display_name_when_metadata_is_missing ... ok
+test signup::webhook::extract_checkout_completed_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_checkout_completed_tests::rejects_a_completed_event_missing_an_email ... ok
+test signup::webhook::extract_payment_failed_tests::extracts_the_customer_id_from_a_real_payment_failed_event ... ok
+test signup::webhook::extract_payment_failed_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_payment_failed_tests::rejects_an_event_missing_a_customer_id ... ok
+test signup::webhook::extract_subscription_deleted_tests::extracts_the_customer_id_from_a_real_subscription_deleted_event ... ok
+test signup::webhook::extract_subscription_deleted_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_subscription_deleted_tests::rejects_an_event_missing_a_customer_id ... ok
+test signup::webhook::verify_stripe_signature_tests::a_malformed_header_is_rejected_not_panicking ... ok
+test ingest::tests::a_rate_limited_request_never_reaches_the_publisher ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_is_a_noop_when_there_is_no_gap ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_keeps_the_first_occurrence_of_a_duplicate_index ... ok
+test signup::webhook::verify_stripe_signature_tests::a_genuine_signature_verifies ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_on_empty_input_returns_empty ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_pads_before_the_first_record_if_index_zero_is_missing ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_preserves_original_index_positions_across_a_gap ... ok
+test signup::webhook::verify_stripe_signature_tests::a_stale_timestamp_outside_tolerance_is_rejected ... ok
+test transparency_persistence::tests::record_from_fields_accepts_a_pre_existing_document_with_no_submission_timestamp ... ok
+test signup::webhook::verify_stripe_signature_tests::a_tampered_payload_is_rejected ... ok
+test transparency_persistence::tests::record_from_fields_rejects_missing_fields_wrapper ... ok
+test transparency_persistence::tests::record_from_fields_decodes_a_real_document_shape_with_its_real_submission_timestamp ... ok
+test transparency_persistence::tests::record_from_fields_rejects_non_hex_content ... ok
+test transparency_proto::export::export_range_tests::both_bounds_together_form_a_closed_interval ... ok
+test transparency_proto::export::export_range_tests::lower_bound_excludes_earlier_records ... ok
+test transparency_proto::export::export_range_tests::unbounded_range_accepts_everything ... ok
+test transparency_proto::export::export_range_tests::upper_bound_excludes_later_records ... ok
+test transparency_proto::push::tests::a_matching_token_is_valid ... ok
+test transparency_proto::push::tests::a_wrong_token_is_rejected ... ok
+test signup::webhook::verify_stripe_signature_tests::the_wrong_secret_is_rejected ... ok
+test transparency_proto::push::tests::an_empty_configured_secret_never_validates_anything ... ok
+test transparency_persistence::tests::record_from_fields_rejects_a_document_missing_its_index ... ok
+test transparency_proto::push::tests::rejects_a_body_that_isnt_a_pubsub_envelope_at_all ... ok
+test transparency_proto::rate_tier::tests::classify_rate_at_elevated_threshold_is_elevated ... ok
+test transparency_proto::rate_tier::tests::classify_rate_at_high_volume_threshold_is_high_volume ... ok
+test transparency_proto::push::tests::rejects_a_message_data_field_that_isnt_valid_base64 ... ok
+test transparency_proto::push::tests::decodes_a_real_pubsub_push_envelope_shape ... ok
+test transparency_proto::push::tests::push_is_rejected_when_no_secret_is_configured_at_all ... ok
+test transparency_proto::rate_tier::tests::classify_rate_below_elevated_threshold_is_base ... ok
+test transparency_proto::rate_tier::tests::record_and_count_keeps_an_entry_exactly_at_the_one_hour_boundary ... ok
+test transparency_proto::rate_tier::tests::record_and_count_prunes_entries_older_than_one_hour ... ok
+test transparency_proto::rate_tier::tests::record_and_count_keeps_entries_within_the_rolling_hour ... ok
+test transparency_proto::rate_tier::tests::tier_ordering_lets_a_plain_greater_than_detect_an_upward_crossing ... ok
+test sequencer::tests::an_empty_queue_processes_nothing_without_error ... ok
+test transparency_proto::state::tests::a_partner_with_no_submissions_yet_has_an_empty_tree ... ok
+test transparency_proto::export::export_record_tests::a_records_own_json_never_embeds_the_checkpoint_signature ... ok
+test sequencer::tests::acks_only_the_messages_it_actually_ingested ... ok
+test transparency_proto::state::tests::ingest_tracks_rate_and_starts_at_the_base_tier ... ok
+test sequencer::tests::a_malformed_message_does_not_block_processing_the_rest_of_the_batch ... ok
+test transparency_proto::state::tests::ingest_result_is_immediately_fetchable_as_a_verified_receipt ... ok
+test transparency_proto::state::tests::deleting_one_partners_tree_never_touches_another_partners_data ... ok
+test transparency_proto::state::tests::ingest_appends_and_returns_the_assigned_index ... ok
+test transparency_proto::state::tests::two_partners_never_share_a_tree ... ok
+test sequencer::tests::drains_and_ingests_every_valid_message_in_order ... ok
+test transparency_proto::state::tests::ingest_advances_the_alerted_tier_once_the_rate_crosses_elevated ... ok
+
+test result: ok. 160 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.65s
+
+     Running unittests src/bin/ingest_service.rs (target/llvm-cov-target/debug/deps/ingest_service-f6ae08a95b908ba2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/transparency_service.rs (target/llvm-cov-target/debug/deps/transparency_service-278fa555846ea1ba)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/transparency_log_prototype.rs (target/llvm-cov-target/debug/deps/transparency_log_prototype-b286dda79ac243ad)
+
+running 16 tests
+test submitting_without_a_partner_is_a_client_error ... ok
+test receipt_for_an_index_beyond_the_log_is_404 ... ok
+test submitting_malformed_json_is_a_client_error_not_a_crash ... ok
+test receipt_for_an_unknown_partner_is_404_not_another_customers_data ... ok
+test record_page_missing_index_is_404 ... ok
+test submit_then_fetch_receipt_round_trips_and_verifies_end_to_end ... ok
+test record_page_renders_and_confirms_independent_verification ... ok
+test a_submitted_label_is_disclosed_in_chain_but_never_changes_the_payload ... ok
+test chain_returns_records_oldest_first_with_real_payloads ... ok
+test chain_for_an_unknown_partner_is_an_empty_array_not_another_customers_data ... ok
+test a_tampered_receipt_over_the_real_wire_format_fails_verification ... ok
+test health_reports_honest_status_no_fake_consensus_fields ... ok
+test chain_reports_true_total_via_header_even_when_page_is_capped ... ok
+test multiple_submissions_each_get_their_own_verifiable_receipt ... ok
+test health_aggregates_across_multiple_private_trees_without_mixing_their_content ... ok
+test chain_respects_the_limit_query_param ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src/lib.rs (target/llvm-cov-target/debug/deps/entropa_core-dae47e92ce7d902b)
+
+running 63 tests
+test merkle::tests::consistency_proof_at_equal_sizes_is_empty_and_requires_matching_roots ... ok
+test merkle::tests::consistency_proof_rejects_a_tampered_old_root ... ok
+test merkle::tests::consistency_proof_rejects_a_history_rewrite_after_the_checkpoint ... ok
+test merkle::tests::consistency_proof_with_old_size_greater_than_new_size_is_none ... ok
+test merkle::tests::consistency_proof_with_zero_old_size_is_none ... ok
+test merkle::tests::empty_tree_has_no_root ... ok
+test merkle::tests::inclusion_proof_out_of_range_index_is_none ... ok
+test merkle::tests::inclusion_proof_rejects_a_tampered_sibling ... ok
+test merkle::tests::inclusion_proof_rejects_the_wrong_root ... ok
+test merkle::tests::inclusion_proof_verifies_for_every_index_in_a_real_tree ... ok
+test merkle::tests::inclusion_proof_rejects_a_forged_leaf ... ok
+test merkle::tests::leaf_hash_and_node_hash_are_domain_separated ... ok
+test merkle::tests::root_changes_if_any_leaf_changes ... ok
+test merkle::tests::root_is_deterministic ... ok
+test merkle::tests::single_leaf_root_is_its_own_leaf_hash ... ok
+test merkle::tests::verify_consistency_rejects_a_zero_or_larger_old_size_even_with_an_empty_proof ... ok
+test pqc::tests::malformed_hex_is_rejected ... ok
+test merkle::tests::consistency_proof_round_trips_across_many_size_pairs ... ok
+test pqc::tests::wrong_length_key_is_rejected ... ok
+test transparency_log::batch_receipt::tests::a_single_receipt_call_stays_fast_regardless_of_existing_log_size ... ignored
+test transparency_log::batch_receipt::tests::exporting_every_record_in_a_large_log_stays_near_linear_not_quadratic ... ignored
+test signer::tests::the_checkpoint_digest_fits_a_kms_raw_signing_limit ... ok
+test transparency_log::checkpoint::tests::checkpoint_digest_has_a_fixed_width_golden_layout ... ok
+test transparency_log::record::tests::a_payload_containing_the_separator_decodes_as_payload_plus_label ... ok
+test transparency_log::record::tests::an_empty_label_decodes_the_same_as_no_label ... ok
+test transparency_log::record::tests::bytes_with_no_separator_at_all_decode_as_payload_only ... ok
+test transparency_log::record::tests::round_trips_a_payload_with_a_label ... ok
+test transparency_log::record::tests::two_different_labels_produce_two_different_encodings ... ok
+test transparency_log::store::tests::a_new_store_is_empty_and_reads_nothing ... ok
+test transparency_log::store::tests::append_returns_sequential_indices_and_read_returns_the_exact_bytes ... ok
+test transparency_log::record::tests::round_trips_a_payload_with_no_label ... ok
+test transparency_log::tests::a_single_additional_checkpoint_stays_fast_regardless_of_existing_log_size ... ignored
+test transparency_log::tests::appending_a_record_returns_its_index_and_advances_size ... ok
+test transparency_log::tests::checkpoint_cost_at_real_production_scale ... ignored
+test signer::tests::a_failing_backend_returns_an_error_and_leaves_the_log_unchanged ... ok
+test pqc::tests::id_is_stable_and_prefixed ... ok
+test transparency_log::tests::len_and_is_empty_track_appends ... ok
+test transparency_log::tests::incremental_root_matches_a_full_rebuild_for_every_size ... ok
+test transparency_log::receipt::tests::receipt_survives_a_real_json_round_trip_and_still_verifies ... ok
+test signer::tests::a_probe_reports_its_algorithm_and_signs_through_the_trait ... ok
+test pqc::tests::exported_key_reconstructs_the_same_identity ... ok
+test transparency_log::tests::checkpoint_root_matches_the_appended_records ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_rejects_a_different_probes_pubkey ... ok
+test pqc::tests::restored_probe_signs_identically_to_the_original ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_checkpoint_from_a_different_signer ... ok
+test pqc::tests::rejects_tampered_message ... ok
+test transparency_log::tests::receipt_against_a_checkpoint_older_than_the_current_log_still_verifies ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_rejects_a_tampered_root ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_tampered_proof ... ok
+test transparency_log::tests::receipt_out_of_range_index_is_none ... ok
+test pqc::tests::rejects_wrong_key ... ok
+test pqc::tests::sign_and_verify_round_trip ... ok
+test pqc::tests::sign_hex_determinism_check ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_forged_record ... ok
+test transparency_log::tests::receipt_cannot_prove_an_index_the_checkpoint_did_not_yet_cover ... ok
+test transparency_log::tests::receipts_for_against_an_empty_log_returns_all_none ... ok
+test transparency_log::tests::receipts_are_refused_for_a_zero_size_or_oversized_checkpoint ... ok
+test transparency_log::tests::receipt_for_a_real_record_verifies_independently ... ok
+test transparency_log::tests::receipts_for_returns_independently_verifiable_receipts_in_request_order ... ok
+test transparency_log::tests::a_history_rewrite_after_checkpointing_is_detected_end_to_end ... ok
+test signer::tests::checkpoint_with_a_remote_backend_verifies_under_its_pubkey ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_verifies_against_the_signing_probe ... ok
+test merkle::tests::inclusion_proof_length_grows_logarithmically_not_linearly ... ok
+
+test result: ok. 59 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/nist_kat.rs (target/llvm-cov-target/debug/deps/nist_kat-8c5cfc284d894f81)
+
+running 5 tests
+test nist_keygen_matches_reference_bytes ... ok
+test rejects_tampered_nist_signatures ... ok
+test nist_sign_internal_matches_reference_bytes ... ok
+test nist_sign_external_pure_matches_reference_bytes ... ok
+test verifies_nist_reference_signatures ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running tests/properties.rs (target/llvm-cov-target/debug/deps/properties-20a6f76bf7996143)
+
+running 5 tests
+test out_of_range_indices_have_no_proof ... ok
+test every_leaf_has_a_valid_inclusion_proof_and_a_tampered_one_fails ... ok
+test consistency_proofs_verify_for_every_prefix ... ok
+test incremental_root_equals_full_rebuild ... ok
+test signed_receipts_verify_for_any_record_and_fail_under_another_key ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.51s
+
+     Running unittests src/lib.rs (target/llvm-cov-target/debug/deps/entropa_kms-fb9d93b41cde287d)
+
+running 16 tests
+test tests::audit_a_wrong_length_public_key_from_the_client_is_rejected_at_construction ... ok
+test tests::audit_guard_spki_edges_one_flipped_prefix_bit_and_off_by_one_lengths ... ok
+test tests::raw_key_from_spki_rejects_a_wrong_prefix_or_length ... ok
+test tests::raw_key_from_spki_strips_the_22_byte_wrapper ... ok
+test tests::other_parameter_sets_are_rejected_because_verifiers_use_ml_dsa_65 ... ok
+test tests::new_caches_the_public_key_and_reports_ml_dsa_65 ... ok
+test tests::a_public_key_fetch_failure_fails_construction ... ok
+test tests::a_message_over_the_raw_limit_is_rejected_without_calling_the_backend ... ok
+test tests::a_sign_failure_becomes_a_backend_error_and_leaves_the_log_unchanged ... ok
+test tests::audit_a_wrong_length_signature_from_the_client_is_rejected ... ok
+test tests::audit_guard_empty_log_checkpoint_signs_and_verifies ... ok
+test tests::a_checkpoint_signed_through_kms_verifies_with_plain_verify_hex ... ok
+test tests::audit_guard_max_timestamp_and_message_exactly_at_the_limit ... ok
+test tests::audit_checkpoint_with_rejects_a_signature_that_does_not_verify_under_the_reported_pubkey ... ok
+test tests::audit_guard_empty_log_and_one_empty_record_have_the_same_root_but_different_signed_digests ... ok
+test tests::prop_kms_signed_checkpoints_always_verify ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.57s
+
+     Running tests/aws_kms_vector.rs (target/llvm-cov-target/debug/deps/aws_kms_vector-8efee89e546f2e91)
+
+running 3 tests
+test spki_wrapper_is_the_22_byte_prefix_before_the_raw_key ... ok
+test a_real_kms_signature_verifies_with_entropas_verifier ... ok
+test the_kms_signature_does_not_verify_a_different_message ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+Filename                                       Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover    Branches   Missed Branches     Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+api/src/admin/auth.rs                              142                18    87.32%          18                 3    83.33%          90                14    84.44%           0                 0         -
+api/src/admin/crypto.rs                             95                 0   100.00%          12                 0   100.00%          55                 0   100.00%           0                 0         -
+api/src/admin/explorer.rs                            4                 4     0.00%           2                 2     0.00%           4                 4     0.00%           0                 0         -
+api/src/admin/handlers.rs                          122               122     0.00%          16                16     0.00%          98                98     0.00%           0                 0         -
+api/src/admin/mod.rs                                50                 0   100.00%           2                 0   100.00%          30                 0   100.00%           0                 0         -
+api/src/admin/model.rs                              61                 0   100.00%           8                 0   100.00%          45                 0   100.00%           0                 0         -
+api/src/admin/store.rs                             250               250     0.00%          27                27     0.00%         148               148     0.00%           0                 0         -
+api/src/admin/ui.rs                                 12                12     0.00%           6                 6     0.00%          18                18     0.00%           0                 0         -
+api/src/billing.rs                                  92                88     4.35%           5                 4    20.00%          60                56     6.67%           0                 0         -
+api/src/bin/ingest_service.rs                       25                25     0.00%           3                 3     0.00%          14                14     0.00%           0                 0         -
+api/src/bin/transparency_service.rs                 81                81     0.00%           6                 6     0.00%          57                57     0.00%           0                 0         -
+api/src/contact.rs                                 122                25    79.51%          13                 2    84.62%          80                24    70.00%           0                 0         -
+api/src/dashboard/auth.rs                          166                 9    94.58%          18                 1    94.44%          83                 3    96.39%           0                 0         -
+api/src/dashboard/handlers.rs                      143               143     0.00%          18                18     0.00%         120               120     0.00%           0                 0         -
+api/src/dashboard/mod.rs                            34                 0   100.00%           1                 0   100.00%          21                 0   100.00%           0                 0         -
+api/src/dashboard/store.rs                         245               130    46.94%          16                 5    68.75%         133                69    48.12%           0                 0         -
+api/src/gmail.rs                                   469               186    60.34%          39                 6    84.62%         313               121    61.34%           0                 0         -
+api/src/heartbeat.rs                                20                 0   100.00%           5                 0   100.00%          15                 0   100.00%           0                 0         -
+api/src/html.rs                                      7                 0   100.00%           1                 0   100.00%           6                 0   100.00%           0                 0         -
+api/src/ingest.rs                                  505                11    97.82%          43                 1    97.67%         346                 9    97.40%           0                 0         -
+api/src/partner_directory.rs                       142                45    68.31%          19                 5    73.68%          91                32    64.84%           0                 0         -
+api/src/persistence.rs                              84                61    27.38%          13                 7    46.15%          63                41    34.92%           0                 0         -
+api/src/pubsub.rs                                  165                57    65.45%          15                 5    66.67%          86                32    62.79%           0                 0         -
+api/src/pull_subscriber.rs                         202               105    48.02%          21                10    52.38%         115                65    43.48%           0                 0         -
+api/src/sequencer.rs                               131                 3    97.71%          10                 0   100.00%          63                 0   100.00%           0                 0         -
+api/src/signup/alert.rs                             26                 0   100.00%           3                 0   100.00%          23                 0   100.00%           0                 0         -
+api/src/signup/checkout.rs                         179                89    50.28%          12                 5    58.33%         127                82    35.43%           0                 0         -
+api/src/signup/mod.rs                               64                23    64.06%          10                 4    60.00%          56                20    64.29%           0                 0         -
+api/src/signup/pending_store.rs                    157                98    37.58%          11                 7    36.36%          77                44    42.86%           0                 0         -
+api/src/signup/webhook.rs                          529               137    74.10%          34                 8    76.47%         335               102    69.55%           0                 0         -
+api/src/transparency_persistence.rs                489               259    47.03%          29                13    55.17%         283               158    44.17%           0                 0         -
+api/src/transparency_proto/export.rs               163                69    57.67%          14                 5    64.29%          91                47    48.35%           0                 0         -
+api/src/transparency_proto/handlers.rs             342                71    79.24%          23                 7    69.57%         231                68    70.56%           0                 0         -
+api/src/transparency_proto/push.rs                 135                25    81.48%          16                 3    81.25%          72                17    76.39%           0                 0         -
+api/src/transparency_proto/rate_tier.rs             98                 0   100.00%          10                 0   100.00%          56                 0   100.00%           0                 0         -
+api/src/transparency_proto/state.rs                378                73    80.69%          32                 3    90.62%         226                51    77.43%           0                 0         -
+core/src/merkle.rs                                 623                21    96.63%          35                 1    97.14%         315                 6    98.10%           0                 0         -
+core/src/pqc.rs                                    212                 6    97.17%          18                 0   100.00%         100                 6    94.00%           0                 0         -
+core/src/signer.rs                                 117                 3    97.44%          11                 1    90.91%          63                 3    95.24%           0                 0         -
+core/src/transparency_log/batch_receipt.rs         186                73    60.75%           9                 4    55.56%         106                34    67.92%           0                 0         -
+core/src/transparency_log/checkpoint.rs            103                 0   100.00%           7                 0   100.00%          48                 0   100.00%           0                 0         -
+core/src/transparency_log/mod.rs                   546                53    90.29%          30                 2    93.33%         279                30    89.25%           0                 0         -
+core/src/transparency_log/receipt.rs               142                 1    99.30%           8                 0   100.00%          58                 0   100.00%           0                 0         -
+core/src/transparency_log/record.rs                102                 0   100.00%           9                 0   100.00%          54                 0   100.00%           0                 0         -
+core/src/transparency_log/store.rs                  67                 0   100.00%           6                 0   100.00%          31                 0   100.00%           0                 0         -
+kms/src/lib.rs                                     435                 4    99.08%          28                 0   100.00%         220                 7    96.82%           0                 0         -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                             8462              2380    71.87%         692               190    72.54%        5005              1600    68.03%           0                 0         -

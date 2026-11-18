@@ -1,0 +1,200 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.08s
+     Running tests/at2b.rs (target/debug/deps/at2b-1f8e3d544861eb8d)
+
+running 24 tests
+test m1_spend_cap_is_recorded_across_calls_and_the_overrun_is_refused ... FAILED
+test m2_rate_cap_is_a_sliding_minute_and_tokens_do_not_share_usage ... FAILED
+test m3_release_gives_the_reservation_back ... FAILED
+test r2_an_unknown_short_or_uppercase_hash_is_an_error_not_a_default ... ok
+test r1_a_held_corpus_hash_is_searched_and_only_that_version ... FAILED
+test m4_concurrent_callers_never_overrun_a_cap_and_the_cap_is_reached ... FAILED
+test r3_an_abstention_is_a_normal_answer_that_says_so ... FAILED
+test r4_passages_are_marked_untrusted ... FAILED
+test e3_a_redact_outcome_is_a_block_at_the_gate ... FAILED
+test e2_a_planted_key_is_blocked_plain_json_nested_and_after_multibyte_text ... FAILED
+test e4_t0_wrong_destination_oversize_and_invalid_input_never_allow ... FAILED
+test e1_clean_text_is_allowed_at_t1 ... FAILED
+test l1_records_are_appended_signed_and_verify_with_the_platinum_verifier ... FAILED
+test l2_every_denial_word_maps_to_the_closed_vocabulary_and_is_accepted ... FAILED
+test l3_a_failing_signer_writes_nothing_and_the_ledger_still_verifies ... FAILED
+test g5_a_denial_before_the_limits_step_never_reserves ... ok
+test g4_a_retrieval_error_gives_the_reservation_back ... FAILED
+test g1_an_allowed_call_records_its_usage_and_is_never_released ... FAILED
+test w2_attacks_through_the_real_parts_are_denied_and_each_leaves_one_record ... FAILED
+test g6_a_panic_after_the_reservation_is_a_denial_and_the_reservation_is_released ... FAILED
+test g3_every_later_denial_gives_the_reservation_back ... FAILED
+test w1_control_300_valid_requests_through_the_real_parts_one_verifying_record_each ... FAILED
+test g2_the_spend_cap_holds_across_calls_through_the_gate ... FAILED
+test e5_through_the_gate_a_blocked_payload_is_egress_blocked_and_released ... FAILED
+
+failures:
+
+---- m1_spend_cap_is_recorded_across_calls_and_the_overrun_is_refused stdout ----
+
+thread 'm1_spend_cap_is_recorded_across_calls_and_the_overrun_is_refused' (3828446) panicked at crates/tiers/tests/at2b.rs:26:5:
+assertion `left == right` failed: usage must be recorded
+  left: 0
+ right: 800
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- m2_rate_cap_is_a_sliding_minute_and_tokens_do_not_share_usage stdout ----
+
+thread 'm2_rate_cap_is_a_sliding_minute_and_tokens_do_not_share_usage' (3828447) panicked at crates/tiers/tests/at2b.rs:48:5:
+assertion `left == right` failed
+  left: Ok(())
+ right: Err(Rate)
+
+---- m3_release_gives_the_reservation_back stdout ----
+
+thread 'm3_release_gives_the_reservation_back' (3828448) panicked at crates/tiers/tests/at2b.rs:69:5:
+assertion `left == right` failed
+  left: Ok(())
+ right: Err(Rate)
+
+---- r1_a_held_corpus_hash_is_searched_and_only_that_version stdout ----
+
+thread 'r1_a_held_corpus_hash_is_searched_and_only_that_version' (3828450) panicked at crates/tiers/tests/at2b.rs:575:88:
+called `Result::unwrap()` on an `Err` value: "not implemented"
+
+---- m4_concurrent_callers_never_overrun_a_cap_and_the_cap_is_reached stdout ----
+
+thread 'm4_concurrent_callers_never_overrun_a_cap_and_the_cap_is_reached' (3828449) panicked at crates/tiers/tests/at2b.rs:119:17:
+assertion `left == right` failed: threads 2 spend true: admitted 1000
+  left: 1000
+ right: 50
+
+---- r3_an_abstention_is_a_normal_answer_that_says_so stdout ----
+
+thread 'r3_an_abstention_is_a_normal_answer_that_says_so' (3828453) panicked at crates/tiers/tests/at2b.rs:602:59:
+called `Result::unwrap()` on an `Err` value: "not implemented"
+
+---- r4_passages_are_marked_untrusted stdout ----
+
+thread 'r4_passages_are_marked_untrusted' (3828455) panicked at crates/tiers/tests/at2b.rs:610:91:
+called `Result::unwrap()` on an `Err` value: "not implemented"
+
+---- e3_a_redact_outcome_is_a_block_at_the_gate stdout ----
+
+thread 'e3_a_redact_outcome_is_a_block_at_the_gate' (3828434) panicked at crates/tiers/tests/at2b.rs:487:5:
+assertion `left == right` failed
+  left: Err("not implemented")
+ right: Ok(Block)
+
+---- e2_a_planted_key_is_blocked_plain_json_nested_and_after_multibyte_text stdout ----
+
+thread 'e2_a_planted_key_is_blocked_plain_json_nested_and_after_multibyte_text' (3828433) panicked at crates/tiers/tests/at2b.rs:475:5:
+assertion `left == right` failed
+  left: Err("not implemented")
+ right: Ok(Block)
+
+---- e4_t0_wrong_destination_oversize_and_invalid_input_never_allow stdout ----
+
+thread 'e4_t0_wrong_destination_oversize_and_invalid_input_never_allow' (3828435) panicked at crates/tiers/tests/at2b.rs:492:5:
+assertion `left == right` failed: T0 has no egress
+  left: Err("not implemented")
+ right: Ok(Block)
+
+---- e1_clean_text_is_allowed_at_t1 stdout ----
+
+thread 'e1_clean_text_is_allowed_at_t1' (3828432) panicked at crates/tiers/tests/at2b.rs:464:5:
+assertion `left == right` failed
+  left: Err("not implemented")
+ right: Ok(Allow)
+
+---- l1_records_are_appended_signed_and_verify_with_the_platinum_verifier stdout ----
+
+thread 'l1_records_are_appended_signed_and_verify_with_the_platinum_verifier' (3828443) panicked at crates/tiers/tests/at2b.rs:655:42:
+called `Result::unwrap()` on an `Err` value: "not implemented"
+
+---- l2_every_denial_word_maps_to_the_closed_vocabulary_and_is_accepted stdout ----
+
+thread 'l2_every_denial_word_maps_to_the_closed_vocabulary_and_is_accepted' (3828444) panicked at crates/tiers/tests/at2b.rs:671:58:
+expired: not implemented
+
+---- l3_a_failing_signer_writes_nothing_and_the_ledger_still_verifies stdout ----
+
+thread 'l3_a_failing_signer_writes_nothing_and_the_ledger_still_verifies' (3828445) panicked at crates/tiers/tests/at2b.rs:694:42:
+called `Result::unwrap()` on an `Err` value: "not implemented"
+
+---- g4_a_retrieval_error_gives_the_reservation_back stdout ----
+
+thread 'g4_a_retrieval_error_gives_the_reservation_back' (3828440) panicked at crates/tiers/tests/at2b.rs:390:5:
+assertion `left == right` failed
+  left: 0
+ right: 1
+
+---- g1_an_allowed_call_records_its_usage_and_is_never_released stdout ----
+
+thread 'g1_an_allowed_call_records_its_usage_and_is_never_released' (3828437) panicked at crates/tiers/tests/at2b.rs:284:5:
+assertion `left == right` failed: one reservation
+  left: 0
+ right: 1
+
+---- w2_attacks_through_the_real_parts_are_denied_and_each_leaves_one_record stdout ----
+
+thread 'w2_attacks_through_the_real_parts_are_denied_and_each_leaves_one_record' (3828457) panicked at crates/tiers/tests/at2b.rs:772:9:
+assertion `left == right` failed
+  left: Denied(RecordFailed)
+ right: Denied(EgressBlocked)
+
+---- g6_a_panic_after_the_reservation_is_a_denial_and_the_reservation_is_released stdout ----
+
+thread 'g6_a_panic_after_the_reservation_is_a_denial_and_the_reservation_is_released' (3828442) panicked at crates/tiers/tests/at2b.rs:148:9:
+engine blew up
+
+---- g3_every_later_denial_gives_the_reservation_back stdout ----
+
+thread 'g3_every_later_denial_gives_the_reservation_back' (3828439) panicked at crates/tiers/tests/at2b.rs:350:9:
+assertion `left == right` failed: policy denied: reserved
+  left: 0
+ right: 1
+
+---- w1_control_300_valid_requests_through_the_real_parts_one_verifying_record_each stdout ----
+
+thread 'w1_control_300_valid_requests_through_the_real_parts_one_verifying_record_each' (3828456) panicked at crates/tiers/tests/at2b.rs:729:9:
+assertion `left == right` failed: request 0
+  left: Denied(RecordFailed)
+ right: Allowed
+
+---- g2_the_spend_cap_holds_across_calls_through_the_gate stdout ----
+
+thread 'g2_the_spend_cap_holds_across_calls_through_the_gate' (3828438) panicked at crates/tiers/tests/at2b.rs:312:5:
+assertion `left == right` failed: usage must accumulate across calls: 800 + 400 > 1000
+  left: Allowed
+ right: Denied(SpendCap)
+
+---- e5_through_the_gate_a_blocked_payload_is_egress_blocked_and_released stdout ----
+
+thread 'e5_through_the_gate_a_blocked_payload_is_egress_blocked_and_released' (3828436) panicked at crates/tiers/tests/at2b.rs:531:5:
+assertion `left == right` failed
+  left: Denied(EgressError)
+ right: Denied(EgressBlocked)
+
+
+failures:
+    e1_clean_text_is_allowed_at_t1
+    e2_a_planted_key_is_blocked_plain_json_nested_and_after_multibyte_text
+    e3_a_redact_outcome_is_a_block_at_the_gate
+    e4_t0_wrong_destination_oversize_and_invalid_input_never_allow
+    e5_through_the_gate_a_blocked_payload_is_egress_blocked_and_released
+    g1_an_allowed_call_records_its_usage_and_is_never_released
+    g2_the_spend_cap_holds_across_calls_through_the_gate
+    g3_every_later_denial_gives_the_reservation_back
+    g4_a_retrieval_error_gives_the_reservation_back
+    g6_a_panic_after_the_reservation_is_a_denial_and_the_reservation_is_released
+    l1_records_are_appended_signed_and_verify_with_the_platinum_verifier
+    l2_every_denial_word_maps_to_the_closed_vocabulary_and_is_accepted
+    l3_a_failing_signer_writes_nothing_and_the_ledger_still_verifies
+    m1_spend_cap_is_recorded_across_calls_and_the_overrun_is_refused
+    m2_rate_cap_is_a_sliding_minute_and_tokens_do_not_share_usage
+    m3_release_gives_the_reservation_back
+    m4_concurrent_callers_never_overrun_a_cap_and_the_cap_is_reached
+    r1_a_held_corpus_hash_is_searched_and_only_that_version
+    r3_an_abstention_is_a_normal_answer_that_says_so
+    r4_passages_are_marked_untrusted
+    w1_control_300_valid_requests_through_the_real_parts_one_verifying_record_each
+    w2_attacks_through_the_real_parts_are_denied_and_each_leaves_one_record
+
+test result: FAILED. 2 passed; 22 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+error: test failed, to rerun pass `-p entropa-tiers --test at2b`

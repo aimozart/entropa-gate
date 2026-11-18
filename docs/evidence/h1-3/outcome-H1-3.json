@@ -1,0 +1,18 @@
+{
+ "stage": "H1.3",
+ "run_id": "outcome-H1-3",
+ "plan_sha256": "2cff9f8e54d74dfe413ac33e054caf9c1f372171a6e1b36d0222633e8c4fa08d",
+ "violations_found_at_start": 7,
+ "after_fixes": "0 violations in 100000 cases per property (hermetic), I1/I2/I3/I7 also 100000 on the real store, 0 fuzz crashes in 8 targets of 601 s",
+ "limits_documented": 6,
+ "receipt": {
+  "index": 0,
+  "subject_hash": "8742f4f1a55ec6e177d1891f3b348efba1411f3d237437342e38cf5038af563c",
+  "root": "68e65644ee4a3ff847aeaba4716285e18aacbf4564b2581040c65b1492eb2869",
+  "size": 1,
+  "label": "code_change",
+  "control": "hitrust_10_sdlc",
+  "reason": "check_failed"
+ },
+ "note": "check_failed on purpose: invariants were violated at the start (V1-V7). Local scratch node, not the live node."
+}

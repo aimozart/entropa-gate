@@ -1,0 +1,6 @@
+ERROR: test_m3_every_failed_bar_of_the_data_appears_with_its_counts (test_public_md.T.test_m3_every_
+ERROR: test_m4_no_banned_words_no_emails_no_paths_and_a_bad_input_writes_nothing (test_public_md.T.t
+FAIL: test_m1_the_committed_page_equals_a_fresh_generation (test_public_md.T.test_m1_the_committed_p
+FAIL: test_m2_failures_come_first_all_17_and_every_bullet_has_an_evidence_pointer (test_public_md.T.
+Ran 4 tests in 0.028s
+FAILED (failures=2, errors=2)

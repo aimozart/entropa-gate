@@ -1,0 +1,17 @@
+// Entropa policy schema (docs/ARCHITECTURE-CEDAR.md section 3). Validated at load, strict mode.
+entity Actor = { role: String, has_key: Bool };
+entity Subject = { kind: String };
+type Approval = { state: String, attested: Bool, approver_role: String };
+type Ctx = { now: Long, env: String, approval: Approval };
+
+action read_log appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action append_record appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action call_tool appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action delete appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action spend appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action publish appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action merge appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action deploy appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action direction appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action policy_change appliesTo { principal: [Actor], resource: [Subject], context: Ctx };
+action credentials_change appliesTo { principal: [Actor], resource: [Subject], context: Ctx };

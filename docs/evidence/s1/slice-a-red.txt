@@ -1,0 +1,23 @@
+test a2_the_config_has_closed_keys ... FAILED
+test a5_300_planted_canaries_never_reach_a_file_a_receipt_or_stdout ... FAILED
+test a10_a_gate_ledger_verifies_with_the_platinum_verifier_and_the_other_way_round ... FAILED
+test a7_a_key_file_that_others_can_read_is_refused ... FAILED
+test a9_only_keys_rs_names_the_key_file_and_no_public_function_returns_key_bytes ... ok
+test a6_one_changed_byte_in_a_copy_fails_verification_at_five_of_five_positions ... FAILED
+test a1_init_makes_a_private_key_in_a_private_directory_and_never_prints_it ... FAILED
+test a3_init_record_verify_status_round_trip_on_the_command_line ... FAILED
+test a4_record_refuses_bad_requests_and_changes_nothing ... FAILED
+test a8_the_library_holds_no_network_code_and_never_reads_the_cloud_key_variables ... ok
+thread 'a2_the_config_has_closed_keys' (4009592) panicked at crates/gate/tests/slice_a.rs:92:114:
+thread 'a5_300_planted_canaries_never_reach_a_file_a_receipt_or_stdout' (4009595) panicked at crates/gate/tests/slice_a.rs:164:20:
+thread 'a10_a_gate_ledger_verifies_with_the_platinum_verifier_and_the_other_way_round' (4009590) panicked at crates/gate/tests/slice_a.rs:290:20:
+thread 'a7_a_key_file_that_others_can_read_is_refused' (4009597) panicked at crates/gate/tests/slice_a.rs:237:20:
+thread 'a6_one_changed_byte_in_a_copy_fails_verification_at_five_of_five_positions' (4009596) panicked at crates/gate/tests/slice_a.rs:197:20:
+thread 'a1_init_makes_a_private_key_in_a_private_directory_and_never_prints_it' (4009591) panicked at crates/gate/tests/slice_a.rs:76:5:
+  left: 1
+ right: 0
+thread 'a3_init_record_verify_status_round_trip_on_the_command_line' (4009593) panicked at crates/gate/tests/slice_a.rs:118:5:
+  left: 1
+ right: 0
+thread 'a4_record_refuses_bad_requests_and_changes_nothing' (4009594) panicked at crates/gate/tests/slice_a.rs:157:5:
+test result: FAILED. 2 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s

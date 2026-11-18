@@ -1,0 +1,6 @@
+Found 145 mutants to test
+ok       Unmutated baseline in 2s build + 2s test
+ INFO Auto-set test timeout to 20s
+MISSED   crates/approvals/src/lib.rs:74:9: replace ActionClass::is_hard_rule -> bool with false in 0s build + 3s test
+145 mutants tested in 50s: 1 missed, 132 caught, 12 unviable
+# accepted survivor: ActionClass::is_hard_rule -> false is an equivalent mutant: evaluate() already blocks every attested approval whose class is not Direction, so the hard-rule check is defense in depth that no input can distinguish

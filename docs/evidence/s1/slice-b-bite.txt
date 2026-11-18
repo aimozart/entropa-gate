@@ -1,0 +1,18 @@
+KILLED   N1 '<' not escaped -> b2 :: test b2_300_hostile_config_values_create_no_tag_or_attribute_of_their_own ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtere
+KILLED   N2 '"' not escaped -> b2 :: test b2_300_hostile_config_values_create_no_tag_or_attribute_of_their_own ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtere
+KILLED   N3 '&' not escaped -> b2 :: test b2_300_hostile_config_values_create_no_tag_or_attribute_of_their_own ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtere
+KILLED   N4 no CSP -> b1 :: test b1_the_site_makes_no_external_request_and_holds_one_script_and_one_stylesheet ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 
+KILLED   N5 a tampered ledger shown as OK -> b3 :: test b3_a_tampered_copy_shows_a_visible_fail_and_an_intact_one_shows_ok ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered 
+KILLED   N6 wall clock in the page -> b5 :: test b5_twenty_runs_give_byte_identical_output ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.26s | 
+KILLED   N7 honest sentence removed -> b4 :: test b4_the_page_never_claims_browser_side_verification_or_safety ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   N8 stylesheet from a CDN -> b1 :: test b1_the_site_makes_no_external_request_and_holds_one_script_and_one_stylesheet ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 
+KILLED   N9 no output directory marker check -> b6 :: test b6_the_output_directory_and_the_logo_are_handled_safely ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finish
+KILLED   N10 no logo size limit -> b6 :: test b6_the_output_directory_and_the_logo_are_handled_safely ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finish
+KILLED   N11 accent colour length not checked -> b6 :: test b6_the_output_directory_and_the_logo_are_handled_safely ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finish
+KILLED   N12 fetch in the script -> b1 :: test b1_the_site_makes_no_external_request_and_holds_one_script_and_one_stylesheet ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 
+Traceback (most recent call last):
+  File "/tmp/claude-1000/-home-scott--cache-<build-dir>-<worktree>/3019ce34-5628-4cec-9fbd-a62b066f1a93/scratchpad/bite_gate_b.py", line 25, in <module>
+    assert old in orig, f"pattern not found for {name}"
+           ^^^^^^^^^^^
+AssertionError: pattern not found for N13 tier names unrestricted
+KILLED   N13 tier names unrestricted -> b6 :: test b6_the_output_directory_and_the_logo_are_handled_safely ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finish

@@ -1,0 +1,53 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+test x10_a_query_must_be_small_well_formed_and_free_of_canaries ... ok
+test x14_the_harness_computes_recall_mrr_abstention_and_violations ... ok
+test x11_search_is_deterministic ... ok
+test x15_a_miss_a_noisy_abstention_and_a_forbidden_hit_are_all_counted ... ok
+test x13_the_memory_hash_binds_a_decision_to_the_precedents_it_saw ... ok
+test x17_the_default_acceptance_thresholds ... ok
+test x12_terms_of_a_precedent_come_from_the_finding_and_its_accepted_decision ... ok
+test x16_k_limits_the_recall_window_and_a_metric_that_was_not_measured_fails ... ok
+test x1_the_default_scorer_is_the_documented_one ... ok
+test x9_below_the_threshold_nothing_is_returned_and_an_unlisted_field_weighs_one ... ok
+test x7_results_are_best_first_ties_go_to_the_lower_id_and_k_caps_the_list ... ok
+test x8_a_tenant_reads_only_its_own_precedents_and_an_unknown_tenant_gets_nothing ... ok
+test x6_building_refuses_bad_precedents ... ok
+test x5_a_revoked_precedent_is_left_out_of_the_index_but_stays_in_the_manifest ... ok
+test x2_the_index_and_manifest_hashes_match_an_independent_implementation ... ok
+test x3_retrieval_matches_the_independent_scorer ... ok
+test x18_the_planted_suite_is_deterministic_and_well_formed ... ok
+test x4_the_hash_ignores_input_order_and_changes_with_everything_that_matters ... ok
+test x20_an_index_that_forgot_the_revocations_is_caught_by_the_gate ... ok
+test x19_the_lexical_index_passes_the_planted_gate_for_several_seeds ... ok
+test result: ok. 20 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test y4_the_scheduler_signs_index_versions_and_the_human_principal_signs_revocations ... ok
+test y3_every_revocation_reason_is_a_closed_code ... ok
+test y6_a_session_does_not_take_them ... ok
+test y1_both_events_decode_and_are_not_session_bound ... ok
+test y2_the_decoder_refuses_every_bad_field ... ok
+test y5_both_events_sign_and_verify_and_tampering_or_another_key_fails ... ok
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test x2_counts_for_a_candidate_that_also_loosens ... ok
+test x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report ... ok
+test x4_an_input_that_does_not_match_its_recorded_hash_is_refused ... ok
+test x1_counts_for_a_stricter_candidate ... ok
+test x7_duplicate_ids_are_refused ... ok
+test x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests ... ok
+test x6_the_input_hash_matches_an_independent_implementation ... ok
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test y2_loosening_a_policy_shows_up_as_newly_allowed ... ok
+test y1_a_stricter_candidate_policy_denies_what_it_should_and_nothing_else ... ok
+test y2b_a_cedar_permit_alone_does_not_allow_a_guarded_action_the_approvals_gate_must_agree ... ok
+test y3_the_unchanged_policy_set_changes_nothing_and_the_baseline_is_what_the_policies_say ... ok
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

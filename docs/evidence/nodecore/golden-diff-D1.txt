@@ -1,0 +1,10 @@
+diff --git a/crates/gate/tests/pins/nodecore.json b/crates/gate/tests/pins/nodecore.json
+index 823c464..46e0c75 100644
+--- a/crates/gate/tests/pins/nodecore.json
++++ b/crates/gate/tests/pins/nodecore.json
+@@ -76 +76 @@
+-      "a": "request is not JSON",
++      "a": "request is not JSON (or has a duplicated key)",
+@@ -126 +126 @@
+-      "Ok": "accepted"
++      "Err": "request is not JSON (or has a duplicated key)"

@@ -1,0 +1,54 @@
+{
+ "format": "entropa record v2 (docs/adr/0011-record-encoding-v2.md)",
+ "generated_by": "independent Python script (struct + blake3), not by the Rust encoder",
+ "cases": [
+  {
+   "payload": "",
+   "label": null,
+   "encoded_hex": "020000000000",
+   "leaf_hash_hex": "478f371a94cb7405e922d3549778e855e753d7b91c3c7f832f064d29d5b1e198"
+  },
+  {
+   "payload": "",
+   "label": "",
+   "encoded_hex": "02000000000100000000",
+   "leaf_hash_hex": "d189ef8b84a93ae5095208ce908ebc802d5de68fb5d7eb1787b734ab4e892618"
+  },
+  {
+   "payload": "a",
+   "label": null,
+   "encoded_hex": "02000000016100",
+   "leaf_hash_hex": "1374eb73c64fbb87decbb433d886bb72df1c5495fd08c3d58e35d5ebb70ee80f"
+  },
+  {
+   "payload": "a\u0000b",
+   "label": null,
+   "encoded_hex": "020000000361006200",
+   "leaf_hash_hex": "98f8444e29864b2801598d87679f9742dbf4ed568692536f0e62094f3de59a78"
+  },
+  {
+   "payload": "a",
+   "label": "b\u0000",
+   "encoded_hex": "02000000016101000000026200",
+   "leaf_hash_hex": "647be6ba3d7eebeadd5d8d90c2843689c6b33cce4e4bcc607f4c937f9c42abe8"
+  },
+  {
+   "payload": "abc123hash",
+   "label": "loan-underwriting:approved",
+   "encoded_hex": "020000000a61626331323368617368010000001a6c6f616e2d756e64657277726974696e673a617070726f766564",
+   "leaf_hash_hex": "8995309374aac560aadacd5a44958cf1d1ccb43caa46ee92214d6e025b6f36ad"
+  },
+  {
+   "payload": "\u0002\u0001",
+   "label": "\u0000",
+   "encoded_hex": "02000000020201010000000100",
+   "leaf_hash_hex": "fce21457c6cb2b295fcd945a4fc3c145ac81c7a7a89a78eb785a92b4e1f12714"
+  },
+  {
+   "payload": "é",
+   "label": null,
+   "encoded_hex": "0200000002c3a900",
+   "leaf_hash_hex": "91feb51d2558be8c32601a897a75b9f8652d805d1916df72b3e158fb4a412c64"
+  }
+ ]
+}

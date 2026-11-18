@@ -1,0 +1,24 @@
+# The elastic ingest tier — a separate Dockerfile since, unlike
+# transparency_service, this binary doesn't even need the admin-ui build stage
+# (ingest_service.rs never touches crate::admin). See
+# a stage record (not published).
+
+FROM node:20-slim AS admin-ui-builder
+WORKDIR /build/admin-ui
+COPY admin-ui/package.json admin-ui/package-lock.json* ./
+RUN npm install
+COPY admin-ui/ .
+RUN npm run build
+
+FROM rust:1-slim-bookworm AS builder
+WORKDIR /build
+COPY . .
+COPY --from=admin-ui-builder /build/admin-ui/dist ./admin-ui/dist
+RUN cargo build --release -p entropa-api --bin ingest_service
+
+FROM debian:bookworm-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=builder /build/target/release/ingest_service /usr/local/bin/ingest_service
+EXPOSE 8080
+CMD ["ingest_service"]

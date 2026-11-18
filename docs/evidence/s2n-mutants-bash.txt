@@ -1,0 +1,49 @@
+Found 616 mutants to test
+ok       Unmutated baseline in 1s build + 0s test
+TIMEOUT  crates/hook/src/bash.rs:72:32: replace + with - in scan_text in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:133:15: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:139:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:144:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:144:27: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:153:23: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:159:19: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:162:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:167:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:167:27: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:173:68: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:175:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:177:23: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:177:23: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:182:19: replace += with *= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:187:27: replace += with -= in resolve in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:187:27: replace += with *= in resolve in 0s build + 30s test
+MISSED   crates/hook/src/bash.rs:229:14: replace > with >= in pipeline_rules in 0s build + 0s test
+TIMEOUT  crates/hook/src/bash.rs:539:11: replace += with *= in inline_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:552:15: replace += with *= in awk_program in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:556:15: replace += with *= in awk_program in 0s build + 30s test
+ WARN Unclassified failure for mutant Mutant(Mutant { name: "crates/hook/src/bash.rs:576:15: replace += with *= in sed_scripts", source_file: SourceFile { package: Package { name: "entropa-hook", version: "0.2.0", relative_dir: "crates/hook", top_sources: ["crates/hook/src/lib.rs", "crates/hook/src/main.rs"] }, tree_relative_path: "crates/hook/src/bash.rs", is_top: false }, function: Some(Function { function_name: "sed_scripts", return_type: "-> Vec<String>", span: Span(564, 1, 599, 2) }), span: Span(576, 15, 576, 17), short_replaced: None, replacement: "*=", genre: BinaryOperator, target: None })
+FAILED   crates/hook/src/bash.rs:576:15: replace += with *= in sed_scripts in 0s build + 10s test
+ WARN Unclassified failure for mutant Mutant(Mutant { name: "crates/hook/src/bash.rs:577:29: replace || with && in sed_scripts", source_file: SourceFile { package: Package { name: "entropa-hook", version: "0.2.0", relative_dir: "crates/hook", top_sources: ["crates/hook/src/lib.rs", "crates/hook/src/main.rs"] }, tree_relative_path: "crates/hook/src/bash.rs", is_top: false }, function: Some(Function { function_name: "sed_scripts", return_type: "-> Vec<String>", span: Span(564, 1, 599, 2) }), span: Span(577, 29, 577, 31), short_replaced: None, replacement: "&&", genre: BinaryOperator, target: None })
+FAILED   crates/hook/src/bash.rs:577:29: replace || with && in sed_scripts in 0s build
+TIMEOUT  crates/hook/src/bash.rs:579:15: replace += with *= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:581:15: replace += with *= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:585:15: replace += with *= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:587:15: replace += with *= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:592:15: replace += with -= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:592:15: replace += with *= in sed_scripts in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:612:15: replace += with -= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:612:15: replace += with *= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:629:24: replace += with *= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:634:27: replace += with -= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:636:23: replace += with *= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:649:31: replace += with -= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:651:27: replace += with -= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:651:27: replace += with *= in sed_risky in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:659:23: replace += with *= in sed_risky in 0s build + 30s test
+MISSED   crates/hook/src/bash.rs:665:19: replace += with *= in sed_risky in 0s build + 0s test
+TIMEOUT  crates/hook/src/bash.rs:665:19: replace += with -= in sed_risky in 0s build + 30s test
+MISSED   crates/hook/src/bash.rs:799:61: replace + with * in simple_rules_with in 0s build + 0s test
+TIMEOUT  crates/hook/src/bash.rs:739:15: replace += with *= in after_options in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:1223:92: replace += with *= in git_rules in 0s build + 30s test
+TIMEOUT  crates/hook/src/bash.rs:1224:42: replace += with *= in git_rules in 0s build + 30s test
+616 mutants tested in 13m: 3 missed, 570 caught, 2 unviable, 39 timeouts

@@ -1,0 +1,12 @@
+caught 263 missed 6 timeout 1 unviable 15
+--- SIGKILL (not counted as caught):
+--- missed:
+crates/tokens/src/canon.rs:278:9: replace Json::has_only -> bool with true
+crates/tokens/src/design_a.rs:15:9: delete match arm CanonError::TooLarge in canon_deny
+crates/tokens/src/design_a.rs:41:20: replace > with == in issue_a
+crates/tokens/src/design_a.rs:41:20: replace > with >= in issue_a
+crates/tokens/src/revoke.rs:105:9: replace || with && in read_revocations
+crates/tokens/src/verify.rs:58:9: replace Deny::as_str -> &'static str with "xyzzy"
+--- timeout:
+crates/tokens/src/canon.rs:161:20: replace += with *= in P<'_>::number
+DONE

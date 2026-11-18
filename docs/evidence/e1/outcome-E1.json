@@ -1,0 +1,26 @@
+{
+ "evidence_kind": "outcome",
+ "note": "forecast versus measured is in the report (plan_vs_outcome) and in a stage record (not published); the receipt is on the local scratch node, not the live node",
+ "receipt": {
+  "control": "hitrust_10_sdlc",
+  "index": 4,
+  "label": "code_change",
+  "root": "6a0a06787c8822b5989971514d4b3c7e767e69979e3eb5d6056bd1cd0a8b4ab9",
+  "size": 5,
+  "subject_hash": "bce8a93993b639279c643674d9720e3dca6d41f2f929b0029117dc332b87b1d4"
+ },
+ "report_file": "controls-report-at-outcome.json",
+ "report_note": "the exact report version the receipt was bound to; the current controls-report.json is revision 2 (adds a dated limits note; statuses, rubric and evidence unchanged)",
+ "report_sha256": "2cd6dfc50da68093d4ee942791039a2ede1baa540e5f22527b1a38cdd32459f8",
+ "run_id": "outcome-E1",
+ "stage": "E1",
+ "summary": {
+  "GAP": 5,
+  "MET BY EVIDENCE": 1,
+  "PARTIAL": 11,
+  "primary_quotes_verified": 14,
+  "quotes_verified": "17/17",
+  "secondary_rows": 3
+ },
+ "tests_passed": 99
+}

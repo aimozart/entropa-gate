@@ -1,0 +1,31 @@
+crates/gate/src/cli.rs:10:32: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/cli.rs:32:23: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/config.rs:28:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/config.rs:82:36: warning: indexing may panic
+crates/gate/src/config.rs:82:53: warning: slicing may panic
+crates/gate/src/explorer.rs:31:8: warning: this function could have a `#[must_use]` attribute
+crates/gate/src/explorer.rs:32:39: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:54:24: warning: casting `u64` to `i64` may wrap around the value: help: if this is intentional, use `cast_signed()` instead: `(ts / 86400).cast_signed()`
+crates/gate/src/explorer.rs:55:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:58:15: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:59:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:60:15: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:61:14: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:62:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:63:26: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:63:42: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:64:25: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:105:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/explorer.rs:105:1: warning: this function has too many lines (147/100)
+crates/gate/src/explorer.rs:170:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/explorer.rs:259:5: warning: use of `format!` to build up a string from an iterator
+crates/gate/src/keys.rs:14:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/licence.rs:75:16: warning: item in documentation is missing backticks
+crates/gate/src/licence.rs:83:12: warning: this method could have a `#[must_use]` attribute
+crates/gate/src/licence.rs:128:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/licence.rs:191:28: warning: slicing may panic
+crates/gate/src/licence.rs:193:12: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/gate/src/node.rs:27:12: warning: this method could have a `#[must_use]` attribute
+crates/gate/src/node.rs:62:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/node.rs:78:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/gate/src/node.rs:89:1: warning: docs for function returning `Result` missing `# Errors` section

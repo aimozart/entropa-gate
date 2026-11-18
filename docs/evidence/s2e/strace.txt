@@ -1,0 +1,1 @@
+cli test binary incl. the program as child: network syscalls = 0

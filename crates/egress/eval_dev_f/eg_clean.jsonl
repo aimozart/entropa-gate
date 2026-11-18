@@ -1,0 +1,630 @@
+{"body": "$secret = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0000", "planted": [], "tier": "T1"}
+{"body": "$secret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0001", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0002", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0003", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0004", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0005", "planted": [], "tier": "T1"}
+{"body": "$token = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0006", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0007", "planted": [], "tier": "T1"}
+{"body": "$token = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0008", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0009", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0010", "planted": [], "tier": "T1"}
+{"body": "$token = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0011", "planted": [], "tier": "T1"}
+{"body": "$secret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0012", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0013", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0014", "planted": [], "tier": "T1"}
+{"body": "$secret = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0015", "planted": [], "tier": "T1"}
+{"body": "$password = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0016", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0017", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0018", "planted": [], "tier": "T1"}
+{"body": "$token = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0019", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0020", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0021", "planted": [], "tier": "T1"}
+{"body": "$secret = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0022", "planted": [], "tier": "T1"}
+{"body": "$password = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0023", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0024", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0025", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0026", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0027", "planted": [], "tier": "T1"}
+{"body": "$apiKey = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0028", "planted": [], "tier": "T1"}
+{"body": "$apiKey = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0029", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0030", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0031", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0032", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0033", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0034", "planted": [], "tier": "T1"}
+{"body": "$password = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0035", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0036", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0037", "planted": [], "tier": "T1"}
+{"body": "$token = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0038", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0039", "planted": [], "tier": "T1"}
+{"body": "$secret = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0040", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0041", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0042", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0043", "planted": [], "tier": "T1"}
+{"body": "$secret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0044", "planted": [], "tier": "T1"}
+{"body": "$token = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0045", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0046", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0047", "planted": [], "tier": "T1"}
+{"body": "$password = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0048", "planted": [], "tier": "T1"}
+{"body": "$password = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0049", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0050", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0051", "planted": [], "tier": "T1"}
+{"body": "$password = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0052", "planted": [], "tier": "T1"}
+{"body": "$secret = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0053", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0054", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0055", "planted": [], "tier": "T1"}
+{"body": "$token = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0056", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0057", "planted": [], "tier": "T1"}
+{"body": "$secret = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0058", "planted": [], "tier": "T1"}
+{"body": "$secret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0059", "planted": [], "tier": "T1"}
+{"body": "$token = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0060", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0061", "planted": [], "tier": "T1"}
+{"body": "$password = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0062", "planted": [], "tier": "T1"}
+{"body": "$token = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0063", "planted": [], "tier": "T1"}
+{"body": "$secret = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0064", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0065", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0066", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0067", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0068", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0069", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0070", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0071", "planted": [], "tier": "T1"}
+{"body": "$secret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0072", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0073", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0074", "planted": [], "tier": "T1"}
+{"body": "$secret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0075", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0076", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0077", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0078", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0079", "planted": [], "tier": "T1"}
+{"body": "$password = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0080", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0081", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0082", "planted": [], "tier": "T1"}
+{"body": "$password = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0083", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0084", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0085", "planted": [], "tier": "T1"}
+{"body": "$secret = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0086", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0087", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0088", "planted": [], "tier": "T1"}
+{"body": "$token = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0089", "planted": [], "tier": "T1"}
+{"body": "$apiKey = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0090", "planted": [], "tier": "T1"}
+{"body": "$password = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0091", "planted": [], "tier": "T1"}
+{"body": "$token = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0092", "planted": [], "tier": "T1"}
+{"body": "$password = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0093", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0094", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0095", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0096", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0097", "planted": [], "tier": "T1"}
+{"body": "$token = $args[0]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0098", "planted": [], "tier": "T1"}
+{"body": "$password = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0099", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0100", "planted": [], "tier": "T1"}
+{"body": "$token = Read-Host 'Enter password' -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0101", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $config.ApiKey", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0102", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0103", "planted": [], "tier": "T1"}
+{"body": "$clientSecret = Read-Host -AsSecureString", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0104", "planted": [], "tier": "T1"}
+{"body": "$secret = $Secret:Prod", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0105", "planted": [], "tier": "T1"}
+{"body": "$dbPassword = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0106", "planted": [], "tier": "T1"}
+{"body": "$password = $env:DB_PASSWORD", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0107", "planted": [], "tier": "T1"}
+{"body": "$apiKey = Get-Secret -Name ProdDb -AsPlainText", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0108", "planted": [], "tier": "T1"}
+{"body": "$apiKey = (Get-Credential).Password", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ps_assign", "id": "f-ps_assign-0109", "planted": [], "tier": "T1"}
+{"body": "$token = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0110", "planted": [], "tier": "T1"}
+{"body": "$db_password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0111", "planted": [], "tier": "T1"}
+{"body": "$token = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0112", "planted": [], "tier": "T1"}
+{"body": "$password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0113", "planted": [], "tier": "T1"}
+{"body": "$token = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0114", "planted": [], "tier": "T1"}
+{"body": "$secret = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0115", "planted": [], "tier": "T1"}
+{"body": "$api_key = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0116", "planted": [], "tier": "T1"}
+{"body": "$api_key = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0117", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0118", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0119", "planted": [], "tier": "T1"}
+{"body": "$db_password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0120", "planted": [], "tier": "T1"}
+{"body": "$password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0121", "planted": [], "tier": "T1"}
+{"body": "$secret = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0122", "planted": [], "tier": "T1"}
+{"body": "$password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0123", "planted": [], "tier": "T1"}
+{"body": "$secret = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0124", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0125", "planted": [], "tier": "T1"}
+{"body": "$secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0126", "planted": [], "tier": "T1"}
+{"body": "$password = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0127", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0128", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0129", "planted": [], "tier": "T1"}
+{"body": "$api_key = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0130", "planted": [], "tier": "T1"}
+{"body": "$api_key = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0131", "planted": [], "tier": "T1"}
+{"body": "$token = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0132", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0133", "planted": [], "tier": "T1"}
+{"body": "$db_password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0134", "planted": [], "tier": "T1"}
+{"body": "$secret = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0135", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0136", "planted": [], "tier": "T1"}
+{"body": "$password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0137", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0138", "planted": [], "tier": "T1"}
+{"body": "$api_key = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0139", "planted": [], "tier": "T1"}
+{"body": "$password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0140", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0141", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0142", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0143", "planted": [], "tier": "T1"}
+{"body": "$client_secret = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0144", "planted": [], "tier": "T1"}
+{"body": "$api_key = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0145", "planted": [], "tier": "T1"}
+{"body": "$token = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0146", "planted": [], "tier": "T1"}
+{"body": "$client_secret = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0147", "planted": [], "tier": "T1"}
+{"body": "$api_key = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0148", "planted": [], "tier": "T1"}
+{"body": "$password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0149", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0150", "planted": [], "tier": "T1"}
+{"body": "$db_password = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0151", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0152", "planted": [], "tier": "T1"}
+{"body": "$db_password = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0153", "planted": [], "tier": "T1"}
+{"body": "$secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0154", "planted": [], "tier": "T1"}
+{"body": "$client_secret = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0155", "planted": [], "tier": "T1"}
+{"body": "$api_key = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0156", "planted": [], "tier": "T1"}
+{"body": "$db_password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0157", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0158", "planted": [], "tier": "T1"}
+{"body": "$token = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0159", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0160", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0161", "planted": [], "tier": "T1"}
+{"body": "$secret = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0162", "planted": [], "tier": "T1"}
+{"body": "$token = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0163", "planted": [], "tier": "T1"}
+{"body": "$client_secret = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0164", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0165", "planted": [], "tier": "T1"}
+{"body": "$token = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0166", "planted": [], "tier": "T1"}
+{"body": "$api_key = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0167", "planted": [], "tier": "T1"}
+{"body": "$api_key = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0168", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0169", "planted": [], "tier": "T1"}
+{"body": "$api_key = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0170", "planted": [], "tier": "T1"}
+{"body": "$token = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0171", "planted": [], "tier": "T1"}
+{"body": "$secret = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0172", "planted": [], "tier": "T1"}
+{"body": "$client_secret = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0173", "planted": [], "tier": "T1"}
+{"body": "$client_secret = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0174", "planted": [], "tier": "T1"}
+{"body": "$db_password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0175", "planted": [], "tier": "T1"}
+{"body": "$token = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0176", "planted": [], "tier": "T1"}
+{"body": "$password = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0177", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0178", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0179", "planted": [], "tier": "T1"}
+{"body": "$token = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0180", "planted": [], "tier": "T1"}
+{"body": "$token = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0181", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0182", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0183", "planted": [], "tier": "T1"}
+{"body": "$secret = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0184", "planted": [], "tier": "T1"}
+{"body": "$client_secret = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0185", "planted": [], "tier": "T1"}
+{"body": "$client_secret = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0186", "planted": [], "tier": "T1"}
+{"body": "$password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0187", "planted": [], "tier": "T1"}
+{"body": "$api_key = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0188", "planted": [], "tier": "T1"}
+{"body": "$password = getenv('DB_PASSWORD');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0189", "planted": [], "tier": "T1"}
+{"body": "$client_secret = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0190", "planted": [], "tier": "T1"}
+{"body": "$db_password = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0191", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0192", "planted": [], "tier": "T1"}
+{"body": "$api_key = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0193", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0194", "planted": [], "tier": "T1"}
+{"body": "$secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0195", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0196", "planted": [], "tier": "T1"}
+{"body": "$db_password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0197", "planted": [], "tier": "T1"}
+{"body": "$token = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0198", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0199", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0200", "planted": [], "tier": "T1"}
+{"body": "$db_password = getenv('X') ?: '';", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0201", "planted": [], "tier": "T1"}
+{"body": "$api_key = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0202", "planted": [], "tier": "T1"}
+{"body": "$db_password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0203", "planted": [], "tier": "T1"}
+{"body": "$password = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0204", "planted": [], "tier": "T1"}
+{"body": "$password = env('API_KEY');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0205", "planted": [], "tier": "T1"}
+{"body": "$secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0206", "planted": [], "tier": "T1"}
+{"body": "$secret = $request->input('password');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0207", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0208", "planted": [], "tier": "T1"}
+{"body": "$password = $_ENV['TOKEN'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0209", "planted": [], "tier": "T1"}
+{"body": "$client_secret = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0210", "planted": [], "tier": "T1"}
+{"body": "$token = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0211", "planted": [], "tier": "T1"}
+{"body": "$db_password = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0212", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0213", "planted": [], "tier": "T1"}
+{"body": "$password = $this->secret;", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0214", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0215", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0216", "planted": [], "tier": "T1"}
+{"body": "$secret = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0217", "planted": [], "tier": "T1"}
+{"body": "$token = $_POST['password'];", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0218", "planted": [], "tier": "T1"}
+{"body": "$password = config('app.secret');", "body_is_json": false, "class": "clean", "expect": "allow", "family": "php_assign", "id": "f-php_assign-0219", "planted": [], "tier": "T1"}
+{"body": "passwd = \"\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0220", "planted": [], "tier": "T1"}
+{"body": "secret = \"TODO\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0221", "planted": [], "tier": "T1"}
+{"body": "auth_token: {{ token }}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0222", "planted": [], "tier": "T1"}
+{"body": "<api_key>None</api_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0223", "planted": [], "tier": "T1"}
+{"body": "<secret></secret>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0224", "planted": [], "tier": "T1"}
+{"body": "secret_key = \"null\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0225", "planted": [], "tier": "T1"}
+{"body": "<access_key><your-api-key></access_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0226", "planted": [], "tier": "T1"}
+{"body": "'secret_key' => 'REPLACE_ME',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0227", "planted": [], "tier": "T1"}
+{"body": "SECRET=xxxxxxxx", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0228", "planted": [], "tier": "T1"}
+{"body": "SECRET_KEY=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0229", "planted": [], "tier": "T1"}
+{"body": "secret_key = \"<password>\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0230", "planted": [], "tier": "T1"}
+{"body": "'token' => '[REDACTED]',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0231", "planted": [], "tier": "T1"}
+{"body": "PASSWD=[REDACTED]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0232", "planted": [], "tier": "T1"}
+{"body": "'password' => '{{ token }}',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0233", "planted": [], "tier": "T1"}
+{"body": "'apikey' => 'TODO',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0234", "planted": [], "tier": "T1"}
+{"body": "<auth_token>[REDACTED]</auth_token>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0235", "planted": [], "tier": "T1"}
+{"body": "apikey: REPLACE_ME", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0236", "planted": [], "tier": "T1"}
+{"body": "<client_secret>********</client_secret>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0237", "planted": [], "tier": "T1"}
+{"body": "'api_key' => 'xxxxxxxx',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0238", "planted": [], "tier": "T1"}
+{"body": "AUTH_TOKEN=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0239", "planted": [], "tier": "T1"}
+{"body": "'client_secret' => 'REPLACE_ME',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0240", "planted": [], "tier": "T1"}
+{"body": "secret_key = \"None\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0241", "planted": [], "tier": "T1"}
+{"body": "password: ", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0242", "planted": [], "tier": "T1"}
+{"body": "auth_token: [REDACTED]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0243", "planted": [], "tier": "T1"}
+{"body": "'access_key' => '<password>',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0244", "planted": [], "tier": "T1"}
+{"body": "apikey: null", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0245", "planted": [], "tier": "T1"}
+{"body": "private_key: undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0246", "planted": [], "tier": "T1"}
+{"body": "CLIENT_SECRET=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0247", "planted": [], "tier": "T1"}
+{"body": "password = \"\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0248", "planted": [], "tier": "T1"}
+{"body": "secret_key: null", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0249", "planted": [], "tier": "T1"}
+{"body": "access_key = \"TODO\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0250", "planted": [], "tier": "T1"}
+{"body": "APIKEY=None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0251", "planted": [], "tier": "T1"}
+{"body": "API_KEY=null", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0252", "planted": [], "tier": "T1"}
+{"body": "'token' => '',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0253", "planted": [], "tier": "T1"}
+{"body": "client_secret = \"TODO\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0254", "planted": [], "tier": "T1"}
+{"body": "password = \"undefined\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0255", "planted": [], "tier": "T1"}
+{"body": "'token' => '',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0256", "planted": [], "tier": "T1"}
+{"body": "PRIVATE_KEY=undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0257", "planted": [], "tier": "T1"}
+{"body": "private_key: your-password-here", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0258", "planted": [], "tier": "T1"}
+{"body": "'password' => '{{ token }}',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0259", "planted": [], "tier": "T1"}
+{"body": "secret_key = \"<your-api-key>\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0260", "planted": [], "tier": "T1"}
+{"body": "<private_key>null</private_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0261", "planted": [], "tier": "T1"}
+{"body": "PASSWD=None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0262", "planted": [], "tier": "T1"}
+{"body": "'client_secret' => 'undefined',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0263", "planted": [], "tier": "T1"}
+{"body": "'private_key' => 'null',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0264", "planted": [], "tier": "T1"}
+{"body": "apikey: changeme", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0265", "planted": [], "tier": "T1"}
+{"body": "db_password: <your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0266", "planted": [], "tier": "T1"}
+{"body": "client_secret = \"\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0267", "planted": [], "tier": "T1"}
+{"body": "'private_key' => 'None',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0268", "planted": [], "tier": "T1"}
+{"body": "auth_token = \"<password>\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0269", "planted": [], "tier": "T1"}
+{"body": "private_key: None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0270", "planted": [], "tier": "T1"}
+{"body": "PRIVATE_KEY=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0271", "planted": [], "tier": "T1"}
+{"body": "passwd: TODO", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0272", "planted": [], "tier": "T1"}
+{"body": "access_key: your-password-here", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0273", "planted": [], "tier": "T1"}
+{"body": "'password' => 'REPLACE_ME',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0274", "planted": [], "tier": "T1"}
+{"body": "'token' => '',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0275", "planted": [], "tier": "T1"}
+{"body": "secret: changeme", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0276", "planted": [], "tier": "T1"}
+{"body": "secret = \"xxxxxxxx\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0277", "planted": [], "tier": "T1"}
+{"body": "<private_key><your-api-key></private_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0278", "planted": [], "tier": "T1"}
+{"body": "'api_key' => 'undefined',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0279", "planted": [], "tier": "T1"}
+{"body": "PASSWORD=None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0280", "planted": [], "tier": "T1"}
+{"body": "CLIENT_SECRET=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0281", "planted": [], "tier": "T1"}
+{"body": "<apikey>TODO</apikey>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0282", "planted": [], "tier": "T1"}
+{"body": "<secret>your-password-here</secret>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0283", "planted": [], "tier": "T1"}
+{"body": "password = \"xxxxxxxx\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0284", "planted": [], "tier": "T1"}
+{"body": "access_key: TODO", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0285", "planted": [], "tier": "T1"}
+{"body": "CLIENT_SECRET=undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0286", "planted": [], "tier": "T1"}
+{"body": "AUTH_TOKEN=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0287", "planted": [], "tier": "T1"}
+{"body": "PASSWD=<your-api-key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0288", "planted": [], "tier": "T1"}
+{"body": "PRIVATE_KEY=${SECRET}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0289", "planted": [], "tier": "T1"}
+{"body": "<secret>your-password-here</secret>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0290", "planted": [], "tier": "T1"}
+{"body": "'secret' => '',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0291", "planted": [], "tier": "T1"}
+{"body": "<apikey>REPLACE_ME</apikey>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0292", "planted": [], "tier": "T1"}
+{"body": "apikey: ********", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0293", "planted": [], "tier": "T1"}
+{"body": "'passwd' => '${SECRET}',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0294", "planted": [], "tier": "T1"}
+{"body": "'password' => 'TODO',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0295", "planted": [], "tier": "T1"}
+{"body": "'auth_token' => '[REDACTED]',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0296", "planted": [], "tier": "T1"}
+{"body": "token: {{ token }}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0297", "planted": [], "tier": "T1"}
+{"body": "token = \"xxxxxxxx\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0298", "planted": [], "tier": "T1"}
+{"body": "ACCESS_KEY=None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0299", "planted": [], "tier": "T1"}
+{"body": "secret_key = \"xxxxxxxx\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0300", "planted": [], "tier": "T1"}
+{"body": "<api_key>your-password-here</api_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0301", "planted": [], "tier": "T1"}
+{"body": "api_key = \"<your-api-key>\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0302", "planted": [], "tier": "T1"}
+{"body": "DB_PASSWORD=${SECRET}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0303", "planted": [], "tier": "T1"}
+{"body": "private_key = \"your-password-here\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0304", "planted": [], "tier": "T1"}
+{"body": "'db_password' => '',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0305", "planted": [], "tier": "T1"}
+{"body": "api_key: ", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0306", "planted": [], "tier": "T1"}
+{"body": "secret_key: ${SECRET}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0307", "planted": [], "tier": "T1"}
+{"body": "access_key: <password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0308", "planted": [], "tier": "T1"}
+{"body": "secret = \"undefined\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0309", "planted": [], "tier": "T1"}
+{"body": "access_key: None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0310", "planted": [], "tier": "T1"}
+{"body": "'apikey' => '<password>',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0311", "planted": [], "tier": "T1"}
+{"body": "apikey: xxxxxxxx", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0312", "planted": [], "tier": "T1"}
+{"body": "TOKEN=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0313", "planted": [], "tier": "T1"}
+{"body": "api_key: undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0314", "planted": [], "tier": "T1"}
+{"body": "<db_password>None</db_password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0315", "planted": [], "tier": "T1"}
+{"body": "auth_token = \"<password>\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0316", "planted": [], "tier": "T1"}
+{"body": "secret_key: <password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0317", "planted": [], "tier": "T1"}
+{"body": "'private_key' => '{{ token }}',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0318", "planted": [], "tier": "T1"}
+{"body": "'access_key' => '********',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0319", "planted": [], "tier": "T1"}
+{"body": "<password><your-api-key></password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0320", "planted": [], "tier": "T1"}
+{"body": "access_key: REPLACE_ME", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0321", "planted": [], "tier": "T1"}
+{"body": "TOKEN=[REDACTED]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0322", "planted": [], "tier": "T1"}
+{"body": "access_key = \"changeme\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0323", "planted": [], "tier": "T1"}
+{"body": "PASSWD=undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0324", "planted": [], "tier": "T1"}
+{"body": "API_KEY=null", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0325", "planted": [], "tier": "T1"}
+{"body": "APIKEY=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0326", "planted": [], "tier": "T1"}
+{"body": "APIKEY=TODO", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0327", "planted": [], "tier": "T1"}
+{"body": "PASSWORD={{ token }}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0328", "planted": [], "tier": "T1"}
+{"body": "CLIENT_SECRET=<password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0329", "planted": [], "tier": "T1"}
+{"body": "password: changeme", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0330", "planted": [], "tier": "T1"}
+{"body": "<secret_key><your-api-key></secret_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0331", "planted": [], "tier": "T1"}
+{"body": "auth_token: changeme", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0332", "planted": [], "tier": "T1"}
+{"body": "ACCESS_KEY={{ token }}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0333", "planted": [], "tier": "T1"}
+{"body": "token: undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0334", "planted": [], "tier": "T1"}
+{"body": "<api_key>xxxxxxxx</api_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0335", "planted": [], "tier": "T1"}
+{"body": "PASSWD=your-password-here", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0336", "planted": [], "tier": "T1"}
+{"body": "CLIENT_SECRET=xxxxxxxx", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0337", "planted": [], "tier": "T1"}
+{"body": "private_key: None", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0338", "planted": [], "tier": "T1"}
+{"body": "'api_key' => '[REDACTED]',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0339", "planted": [], "tier": "T1"}
+{"body": "access_key = \"REPLACE_ME\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0340", "planted": [], "tier": "T1"}
+{"body": "<auth_token>${SECRET}</auth_token>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0341", "planted": [], "tier": "T1"}
+{"body": "'auth_token' => 'xxxxxxxx',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0342", "planted": [], "tier": "T1"}
+{"body": "<password>xxxxxxxx</password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0343", "planted": [], "tier": "T1"}
+{"body": "api_key: undefined", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0344", "planted": [], "tier": "T1"}
+{"body": "'client_secret' => '********',", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0345", "planted": [], "tier": "T1"}
+{"body": "<password>changeme</password>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0346", "planted": [], "tier": "T1"}
+{"body": "passwd = \"{{ token }}\"", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0347", "planted": [], "tier": "T1"}
+{"body": "client_secret: [REDACTED]", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0348", "planted": [], "tier": "T1"}
+{"body": "<access_key>None</access_key>", "body_is_json": false, "class": "clean", "expect": "allow", "family": "placeholder", "id": "f-placeholder-0349", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${env:SECRET_0}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0350", "planted": [], "tier": "T1"}
+{"body": "api.token=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0351", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0352", "planted": [], "tier": "T1"}
+{"body": "secret.key=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0353", "planted": [], "tier": "T1"}
+{"body": "api.token=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0354", "planted": [], "tier": "T1"}
+{"body": "api.token=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0355", "planted": [], "tier": "T1"}
+{"body": "secret.key=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0356", "planted": [], "tier": "T1"}
+{"body": "# auth.secret=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0357", "planted": [], "tier": "T1"}
+{"body": "secret.key=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0358", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0359", "planted": [], "tier": "T1"}
+{"body": "db.password=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0360", "planted": [], "tier": "T1"}
+{"body": "# api.token=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0361", "planted": [], "tier": "T1"}
+{"body": "secret.key=${env:SECRET_12}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0362", "planted": [], "tier": "T1"}
+{"body": "api.token=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0363", "planted": [], "tier": "T1"}
+{"body": "secret.key=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0364", "planted": [], "tier": "T1"}
+{"body": "# auth.secret=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0365", "planted": [], "tier": "T1"}
+{"body": "db.password=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0366", "planted": [], "tier": "T1"}
+{"body": "auth.secret=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0367", "planted": [], "tier": "T1"}
+{"body": "auth.secret=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0368", "planted": [], "tier": "T1"}
+{"body": "db.password=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0369", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0370", "planted": [], "tier": "T1"}
+{"body": "# db.password=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0371", "planted": [], "tier": "T1"}
+{"body": "# db.password=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0372", "planted": [], "tier": "T1"}
+{"body": "# secret.key=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0373", "planted": [], "tier": "T1"}
+{"body": "secret.key=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0374", "planted": [], "tier": "T1"}
+{"body": "db.password=${env:SECRET_25}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0375", "planted": [], "tier": "T1"}
+{"body": "secret.key=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0376", "planted": [], "tier": "T1"}
+{"body": "db.password=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0377", "planted": [], "tier": "T1"}
+{"body": "api.token=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0378", "planted": [], "tier": "T1"}
+{"body": "# auth.secret=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0379", "planted": [], "tier": "T1"}
+{"body": "auth.secret=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0380", "planted": [], "tier": "T1"}
+{"body": "db.password=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0381", "planted": [], "tier": "T1"}
+{"body": "secret.key=${env:SECRET_32}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0382", "planted": [], "tier": "T1"}
+{"body": "secret.key=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0383", "planted": [], "tier": "T1"}
+{"body": "db.password=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0384", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0385", "planted": [], "tier": "T1"}
+{"body": "auth.secret=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0386", "planted": [], "tier": "T1"}
+{"body": "api.token=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0387", "planted": [], "tier": "T1"}
+{"body": "auth.secret=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0388", "planted": [], "tier": "T1"}
+{"body": "secret.key=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0389", "planted": [], "tier": "T1"}
+{"body": "secret.key=${env:SECRET_40}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0390", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0391", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0392", "planted": [], "tier": "T1"}
+{"body": "# api.token=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0393", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0394", "planted": [], "tier": "T1"}
+{"body": "auth.secret=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0395", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${env:SECRET_46}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0396", "planted": [], "tier": "T1"}
+{"body": "# api.token=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0397", "planted": [], "tier": "T1"}
+{"body": "auth.secret=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0398", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0399", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0400", "planted": [], "tier": "T1"}
+{"body": "# auth.secret=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0401", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0402", "planted": [], "tier": "T1"}
+{"body": "db.password=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0403", "planted": [], "tier": "T1"}
+{"body": "api.token=${env:SECRET_54}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0404", "planted": [], "tier": "T1"}
+{"body": "secret.key=${env:SECRET_55}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0405", "planted": [], "tier": "T1"}
+{"body": "api.token=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0406", "planted": [], "tier": "T1"}
+{"body": "api.token=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0407", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0408", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0409", "planted": [], "tier": "T1"}
+{"body": "api.token=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0410", "planted": [], "tier": "T1"}
+{"body": "db.password=${env:SECRET_61}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0411", "planted": [], "tier": "T1"}
+{"body": "secret.key=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0412", "planted": [], "tier": "T1"}
+{"body": "# db.password=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0413", "planted": [], "tier": "T1"}
+{"body": "api.token=${env:SECRET_64}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0414", "planted": [], "tier": "T1"}
+{"body": "# api.token=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0415", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0416", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0417", "planted": [], "tier": "T1"}
+{"body": "secret.key=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0418", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0419", "planted": [], "tier": "T1"}
+{"body": "db.password=%(secret)s", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0420", "planted": [], "tier": "T1"}
+{"body": "db.password=${env:SECRET_71}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0421", "planted": [], "tier": "T1"}
+{"body": "# auth.secret=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0422", "planted": [], "tier": "T1"}
+{"body": "db.password=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0423", "planted": [], "tier": "T1"}
+{"body": "auth.secret=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0424", "planted": [], "tier": "T1"}
+{"body": "# db.password=set in the vault", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0425", "planted": [], "tier": "T1"}
+{"body": "api.token=${env:SECRET_76}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0426", "planted": [], "tier": "T1"}
+{"body": "api.token=", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0427", "planted": [], "tier": "T1"}
+{"body": "db.password=${env:SECRET_78}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0428", "planted": [], "tier": "T1"}
+{"body": "api.token=${DB_PASS}", "body_is_json": false, "class": "clean", "expect": "allow", "family": "props", "id": "f-props-0429", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nThe access token lifetime is one hour.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0430", "planted": [], "tier": "T1"}
+{"body": "Token expired, please log in again.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0431", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nUse a password manager for your credentials.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0432", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nToken expired, please log in again.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0433", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0434", "planted": [], "tier": "T1"}
+{"body": "See below\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0435", "planted": [], "tier": "T1"}
+{"body": "The secret santa list is ready.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0436", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nBearer tokens must be sent over HTTPS.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0437", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nA client secret is shown only once at creation.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0438", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nThe password policy requires at least twelve characters.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0439", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nAPI key rotation happens every ninety days.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0440", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nThe access token lifetime is one hour.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0441", "planted": [], "tier": "T1"}
+{"body": "Bearer tokens must be sent over HTTPS.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0442", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0443", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nAPI key rotation happens every ninety days.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0444", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0445", "planted": [], "tier": "T1"}
+{"body": "The password policy requires at least twelve characters.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0446", "planted": [], "tier": "T1"}
+{"body": "Bearer tokens must be sent over HTTPS.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0447", "planted": [], "tier": "T1"}
+{"body": "See below\nThe password policy requires at least twelve characters.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0448", "planted": [], "tier": "T1"}
+{"body": "Token expired, please log in again.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0449", "planted": [], "tier": "T1"}
+{"body": "See below\nBearer tokens must be sent over HTTPS.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0450", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0451", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0452", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nToken expired, please log in again.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0453", "planted": [], "tier": "T1"}
+{"body": "See below\nBearer tokens must be sent over HTTPS.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0454", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0455", "planted": [], "tier": "T1"}
+{"body": "See below\nA client secret is shown only once at creation.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0456", "planted": [], "tier": "T1"}
+{"body": "The secret santa list is ready.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0457", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0458", "planted": [], "tier": "T1"}
+{"body": "See below\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0459", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0460", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nToken expired, please log in again.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0461", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nWhere is the private key stored?\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0462", "planted": [], "tier": "T1"}
+{"body": "The password policy requires at least twelve characters.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0463", "planted": [], "tier": "T1"}
+{"body": "Bearer tokens must be sent over HTTPS.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0464", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nBearer tokens must be sent over HTTPS.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0465", "planted": [], "tier": "T1"}
+{"body": "The secret santa list is ready.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0466", "planted": [], "tier": "T1"}
+{"body": "A client secret is shown only once at creation.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0467", "planted": [], "tier": "T1"}
+{"body": "Reset your password from the account page.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0468", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nThe secret santa list is ready.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0469", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nReset your password from the account page.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0470", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0471", "planted": [], "tier": "T1"}
+{"body": "Reset your password from the account page.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0472", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nReset your password from the account page.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0473", "planted": [], "tier": "T1"}
+{"body": "Reset your password from the account page.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0474", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nUse a password manager for your credentials.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0475", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nUse a password manager for your credentials.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0476", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0477", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nToken expired, please log in again.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0478", "planted": [], "tier": "T1"}
+{"body": "Never share your password with anyone.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0479", "planted": [], "tier": "T1"}
+{"body": "A client secret is shown only once at creation.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0480", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nReset your password from the account page.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0481", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nUse a password manager for your credentials.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0482", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0483", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0484", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0485", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nThe password policy requires at least twelve characters.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0486", "planted": [], "tier": "T1"}
+{"body": "Never share your password with anyone.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0487", "planted": [], "tier": "T1"}
+{"body": "The password policy requires at least twelve characters.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0488", "planted": [], "tier": "T1"}
+{"body": "The secret santa list is ready.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0489", "planted": [], "tier": "T1"}
+{"body": "See below\nAPI key rotation happens every ninety days.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0490", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0491", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nThe secret santa list is ready.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0492", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nWhere is the private key stored?\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0493", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0494", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0495", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0496", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0497", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nA client secret is shown only once at creation.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0498", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0499", "planted": [], "tier": "T1"}
+{"body": "See below\nBearer tokens must be sent over HTTPS.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0500", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nWhere is the private key stored?\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0501", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nWhere is the private key stored?\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0502", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0503", "planted": [], "tier": "T1"}
+{"body": "A client secret is shown only once at creation.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0504", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0505", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nNever share your password with anyone.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0506", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nReset your password from the account page.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0507", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0508", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nWhere is the private key stored?\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0509", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0510", "planted": [], "tier": "T1"}
+{"body": "The password policy requires at least twelve characters.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0511", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0512", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nThe password policy requires at least twelve characters.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0513", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nThe access token lifetime is one hour.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0514", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nNever share your password with anyone.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0515", "planted": [], "tier": "T1"}
+{"body": "Reset your password from the account page.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0516", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0517", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0518", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nAPI key rotation happens every ninety days.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0519", "planted": [], "tier": "T1"}
+{"body": "See below\nThe password policy requires at least twelve characters.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0520", "planted": [], "tier": "T1"}
+{"body": "Bearer tokens must be sent over HTTPS.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0521", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nReset your password from the account page.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0522", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0523", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0524", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nReset your password from the account page.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0525", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nThe password policy requires at least twelve characters.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0526", "planted": [], "tier": "T1"}
+{"body": "Bearer tokens must be sent over HTTPS.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0527", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0528", "planted": [], "tier": "T1"}
+{"body": "A client secret is shown only once at creation.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0529", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nAPI key rotation happens every ninety days.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0530", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nThe password policy requires at least twelve characters.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0531", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nNever share your password with anyone.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0532", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0533", "planted": [], "tier": "T1"}
+{"body": "The access token lifetime is one hour.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0534", "planted": [], "tier": "T1"}
+{"body": "Keep the secret key out of the repository.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0535", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0536", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0537", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nThe password policy requires at least twelve characters.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0538", "planted": [], "tier": "T1"}
+{"body": "Never share your password with anyone.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0539", "planted": [], "tier": "T1"}
+{"body": "Token expired, please log in again.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0540", "planted": [], "tier": "T1"}
+{"body": "Reset your password from the account page.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0541", "planted": [], "tier": "T1"}
+{"body": "See below\nA client secret is shown only once at creation.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0542", "planted": [], "tier": "T1"}
+{"body": "See below\nThe secret santa list is ready.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0543", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0544", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0545", "planted": [], "tier": "T1"}
+{"body": "See below\nThe secret santa list is ready.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0546", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nReset your password from the account page.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0547", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0548", "planted": [], "tier": "T1"}
+{"body": "Here is the snippet I mentioned\nWhere is the private key stored?\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0549", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0550", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nUse a password manager for your credentials.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0551", "planted": [], "tier": "T1"}
+{"body": "See below\nAPI key rotation happens every ninety days.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0552", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nA client secret is shown only once at creation.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0553", "planted": [], "tier": "T1"}
+{"body": "API key rotation happens every ninety days.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0554", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nKeep the secret key out of the repository.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0555", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nUse a password manager for your credentials.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0556", "planted": [], "tier": "T1"}
+{"body": "A client secret is shown only once at creation.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0557", "planted": [], "tier": "T1"}
+{"body": "Use a password manager for your credentials.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0558", "planted": [], "tier": "T1"}
+{"body": "Never share your password with anyone.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0559", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nThe access token lifetime is one hour.\nThat is all.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0560", "planted": [], "tier": "T1"}
+{"body": "Never share your password with anyone.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0561", "planted": [], "tier": "T1"}
+{"body": "Where is the private key stored?", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0562", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nToken expired, please log in again.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0563", "planted": [], "tier": "T1"}
+{"body": "Please forward this to the support desk\nKeep the secret key out of the repository.\nThanks.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0564", "planted": [], "tier": "T1"}
+{"body": "Can you check this config\nUse a password manager for your credentials.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0565", "planted": [], "tier": "T1"}
+{"body": "Notes from the call\nThe password policy requires at least twelve characters.\nLet me know if that helps.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0566", "planted": [], "tier": "T1"}
+{"body": "The password policy requires at least twelve characters.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0567", "planted": [], "tier": "T1"}
+{"body": "Meeting moved to Thursday\nA client secret is shown only once at creation.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0568", "planted": [], "tier": "T1"}
+{"body": "See below\nAPI key rotation happens every ninety days.\nRegards, the team.", "body_is_json": false, "class": "clean", "expect": "allow", "family": "prose", "id": "f-prose-0569", "planted": [], "tier": "T1"}
+{"body": "sku TS-2601-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0570", "planted": [], "tier": "T1"}
+{"body": "sku TS-4031-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0571", "planted": [], "tier": "T1"}
+{"body": "commit 9be7a926b17c6ac221fc86127f50bc6a6d24d4b0", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0572", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0573", "planted": [], "tier": "T1"}
+{"body": "request id req_xXAu9wgYlkJiTSxT9eeC", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0574", "planted": [], "tier": "T1"}
+{"body": "commit b97d1153f8681ea687c1d03d59238b4640cba9fc", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0575", "planted": [], "tier": "T1"}
+{"body": "commit cde4dde20d9cd8bcfb665d7fec9bd20c0830c643", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0576", "planted": [], "tier": "T1"}
+{"body": "sku TS-6807-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0577", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0578", "planted": [], "tier": "T1"}
+{"body": "commit a660954221d89282bcb7dee9be7a4aaee2bf8551", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0579", "planted": [], "tier": "T1"}
+{"body": "commit 9a520d07e9f419a9db66256c2efb1fd23d6ad9d1", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0580", "planted": [], "tier": "T1"}
+{"body": "request id req_kUTM7qvpBYXs34RZKimU", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0581", "planted": [], "tier": "T1"}
+{"body": "sku TS-1694-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0582", "planted": [], "tier": "T1"}
+{"body": "sku TS-8713-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0583", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0584", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0585", "planted": [], "tier": "T1"}
+{"body": "request id req_9B4zKGbb7YoglG94Hsix", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0586", "planted": [], "tier": "T1"}
+{"body": "commit e047b943e31c716583b9f3c9e8ae17bc46d2a36e", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0587", "planted": [], "tier": "T1"}
+{"body": "commit b2c1ed6819ac314efcbc33e2ef9be0c8a39ba81a", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0588", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0589", "planted": [], "tier": "T1"}
+{"body": "commit 671ddc409349e136571dbff05163489be27c113b", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0590", "planted": [], "tier": "T1"}
+{"body": "request id req_iszHR2EcxqahFPP57BJS", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0591", "planted": [], "tier": "T1"}
+{"body": "request id req_d49azdzGlWIuOSBQdTp8", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0592", "planted": [], "tier": "T1"}
+{"body": "request id req_c8mKhkesN0oULXHkGpwO", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0593", "planted": [], "tier": "T1"}
+{"body": "request id req_4AxGRFGhEb0856e3Jej2", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0594", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0595", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0596", "planted": [], "tier": "T1"}
+{"body": "request id req_Sy4SN3Vqp9cMQV4yUc8m", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0597", "planted": [], "tier": "T1"}
+{"body": "sku TS-5804-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0598", "planted": [], "tier": "T1"}
+{"body": "request id req_lUE0nsFoSIRAWfnNYMIc", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0599", "planted": [], "tier": "T1"}
+{"body": "request id req_rwfolfscEPbCDM0ghZab", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0600", "planted": [], "tier": "T1"}
+{"body": "request id req_9sR7sozAymUv5Wde13KU", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0601", "planted": [], "tier": "T1"}
+{"body": "commit 97e1cebba12ec598a0654b7f94577e9d4c5c5437", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0602", "planted": [], "tier": "T1"}
+{"body": "sku TS-7913-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0603", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0604", "planted": [], "tier": "T1"}
+{"body": "sku TS-8665-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0605", "planted": [], "tier": "T1"}
+{"body": "commit 190900efd5905ef8f9c6236f2b4508c75ebd40c5", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0606", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0607", "planted": [], "tier": "T1"}
+{"body": "sku TS-3306-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0608", "planted": [], "tier": "T1"}
+{"body": "request id req_PzXV4NM6DsP1Oi76sJzN", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0609", "planted": [], "tier": "T1"}
+{"body": "sku TS-2539-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0610", "planted": [], "tier": "T1"}
+{"body": "sku TS-9929-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0611", "planted": [], "tier": "T1"}
+{"body": "commit a3690de9e962021d7bbeacc608f9a13cc9a9270c", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0612", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0613", "planted": [], "tier": "T1"}
+{"body": "request id req_wGsUpvdSthW1rgnzBLMn", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0614", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0615", "planted": [], "tier": "T1"}
+{"body": "request id req_Lq10KDYIy872CMLVHY8G", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0616", "planted": [], "tier": "T1"}
+{"body": "commit 3497d0cf1cf7ed1b1a7891a282fd2021e8f6414d", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0617", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0618", "planted": [], "tier": "T1"}
+{"body": "sku TS-4822-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0619", "planted": [], "tier": "T1"}
+{"body": "request id req_zOVrW7ljm0aJIfT0Naxn", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0620", "planted": [], "tier": "T1"}
+{"body": "request id req_7l4OowTyHnmMzwpvMKvo", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0621", "planted": [], "tier": "T1"}
+{"body": "request id req_WPBgQRwpKaa7vKkJACyY", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0622", "planted": [], "tier": "T1"}
+{"body": "commit 1b9a2b549b5ce8df9ad9da3bbaf437d18c498f1f", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0623", "planted": [], "tier": "T1"}
+{"body": "order 4f3a9c1e-2b7d-4e8a-9c01-5d6e7f8a9b0c shipped", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0624", "planted": [], "tier": "T1"}
+{"body": "sku TS-6597-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0625", "planted": [], "tier": "T1"}
+{"body": "request id req_OGMzshrPKtP9NTl0GFWj", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0626", "planted": [], "tier": "T1"}
+{"body": "request id req_MbaEeonFlaZeMgVuMWnO", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0627", "planted": [], "tier": "T1"}
+{"body": "commit f64bd3caa27d5b1f702bd89c274260625dd1e5ca", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0628", "planted": [], "tier": "T1"}
+{"body": "sku TS-7188-B", "body_is_json": false, "class": "clean", "expect": "allow", "family": "ids", "id": "f-ids-0629", "planted": [], "tier": "T1"}

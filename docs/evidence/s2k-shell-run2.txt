@@ -1,0 +1,86 @@
+Found 369 mutants to test
+ok       Unmutated baseline in 1s build + 0s test
+MISSED   crates/hook/src/shell.rs:57:24: replace > with == in parse_delim in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:57:24: replace > with >= in parse_delim in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:67:24: replace += with *= in parse_delim in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:101:15: replace < with <= in skip_body in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:115:23: replace > with == in skip_body in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:115:23: replace > with >= in skip_body in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:115:37: replace + with - in skip_body in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:115:37: replace + with * in skip_body in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:125:38: replace + with * in balanced_end in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:98:16: replace += with *= in skip_body in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:126:23: replace + with * in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:130:26: replace > with == in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:130:26: replace > with >= in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:174:21: replace match guard !pending.is_empty() with true in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:150:25: delete match arm '\\' in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:151:32: replace match guard chars.get(i + 1) == Some(&'(') with true in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:151:32: replace match guard chars.get(i + 1) == Some(&'(') with false in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:150:35: replace += with -= in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:150:35: replace += with *= in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:151:49: replace == with != in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:151:44: replace + with - in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:151:44: replace + with * in balanced_end in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:137:23: replace += with *= in balanced_end in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:152:32: replace += with *= in balanced_end in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:158:32: replace + with * in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:159:32: replace + with - in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:159:32: replace + with * in balanced_end in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:156:23: replace += with -= in balanced_end in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:175:19: replace += with -= in balanced_end in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:175:19: replace += with *= in balanced_end in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:167:23: replace += with *= in balanced_end in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:182:19: replace += with -= in balanced_end in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:182:19: replace += with *= in balanced_end in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:191:20: replace += with -= in balanced_end in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:191:20: replace += with *= in balanced_end in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:233:13: replace || with && in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:232:13: replace || with && in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:231:23: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:231:23: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:231:37: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:231:37: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:232:27: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:232:27: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:232:41: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:232:41: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:233:26: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:233:26: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:233:44: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:233:44: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:233:30: replace * with + in tokenize in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:204:5: replace copy_subst -> Result<(), String> with Ok(()) in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:241:19: replace += with *= in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:258:25: replace < with == in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:258:25: replace < with > in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:258:51: replace != with == in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:259:23: replace += with *= in tokenize in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:266:34: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:266:34: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:266:52: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:266:52: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:266:38: replace * with + in tokenize in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:264:19: replace += with -= in tokenize in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:286:34: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:286:34: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:286:52: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:286:52: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:286:38: replace * with + in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:306:38: replace match guard chars.get(i + 1) == Some(&'(') with true in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:323:34: replace > with == in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:323:34: replace > with >= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:323:52: replace + with - in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:323:52: replace + with * in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:323:38: replace * with + in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:379:23: replace += with *= in tokenize in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:385:32: replace + with * in tokenize in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:271:31: replace += with -= in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:402:23: replace += with *= in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:427:23: replace += with -= in tokenize in 0s build + 30s test
+MISSED   crates/hook/src/shell.rs:503:21: replace || with && in parse in 0s build + 0s test
+MISSED   crates/hook/src/shell.rs:540:28: replace && with || in substitutions in 0s build + 0s test
+TIMEOUT  crates/hook/src/shell.rs:432:27: replace += with *= in tokenize in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:560:15: replace += with -= in substitutions in 0s build + 30s test
+TIMEOUT  crates/hook/src/shell.rs:560:15: replace += with *= in substitutions in 0s build + 30s test
+369 mutants tested in 7m: 60 missed, 283 caught, 3 unviable, 23 timeouts

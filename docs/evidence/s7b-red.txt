@@ -1,0 +1,47 @@
+S7b red run (stubs): crates/ledger
+test b1_the_bundle_has_the_documented_shape FAILED
+test b2_a_fresh_bundle_verifies_and_the_counts_add_up FAILED
+test b3_the_actors_section_uses_handles_fingerprints_and_the_attestation_chain FAILED
+test b4_no_secret_key_material_is_ever_exported FAILED
+test b5_tampering_is_always_caught_and_never_panics FAILED
+test b6_a_hundred_scenarios_fit_comfortably_under_the_size_limit FAILED
+test b7_the_receipts_are_bound_to_the_head_and_verify_with_the_core_verifier FAILED
+test b8_every_exported_receipt_verifies_for_random_seeds_and_sizes FAILED
+test e1_golden_vectors_match_an_independent_implementation FAILED
+test e2_sign_encode_decode_verify_round_trip FAILED
+test e3_the_vocabularies_are_closed_and_exactly_these FAILED
+test e4_the_decoder_is_strict_and_never_echoes_input FAILED
+test e5_a_directory_event_carries_its_extra_fields_and_other_kinds_must_not FAILED
+test e6_tampering_and_the_wrong_key_fail_verification FAILED
+test g10_absurd_scenario_counts_are_refused FAILED
+test g11_a_run_into_the_file_store_equals_a_run_into_memory FAILED
+test g1_the_same_seed_gives_byte_identical_output_and_another_seed_does_not FAILED
+test g2_every_record_signature_verifies_and_the_bundle_is_self_consistent FAILED
+test g3_the_real_cedar_gate_decided_with_the_reference_policies FAILED
+test g4_attestation_only_ever_opens_direction_and_the_replay_rejects_nothing FAILED
+test g5_all_three_tenants_and_all_scenario_kinds_appear FAILED
+test g6_every_checkpoint_gets_a_verifying_witness_statement_from_the_real_witness_crate FAILED
+test g7_nothing_public_names_the_crew_and_every_event_is_synthetic FAILED
+test g8_timestamps_never_go_backwards_and_start_where_asked FAILED
+test g9_a_second_run_extends_the_same_ledger_without_duplicating_the_directory FAILED
+test n1_no_network_process_unsafe_clock_or_environment_access ok
+test n1_the_manifest_has_no_http_or_cloud_dependency ok
+test n2_no_crew_name_in_the_sources ok
+test n3_the_limits_are_the_documented_ones ok
+test s1_the_memory_store_follows_the_contract FAILED
+test s2_the_file_store_follows_the_same_contract FAILED
+test s3_the_file_store_survives_a_restart FAILED
+test s4_a_changed_record_is_caught_on_open_because_the_checkpoint_no_longer_matches FAILED
+test s5_a_torn_last_line_is_refused_not_silently_repaired FAILED
+test s6_only_one_writer_may_have_the_store_open FAILED
+test s7_a_file_store_never_rewrites_what_it_wrote FAILED
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test result: FAILED. 0 passed; 11 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+panic reasons:
+     47 not yet implemented
+      1 Test failed: not yet implemented.

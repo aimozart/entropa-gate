@@ -1,0 +1,45 @@
+Found 139 mutants to test
+ok       Unmutated baseline in 3s build + 4s test
+MISSED   crates/egress/src/detect.rs:361:9: replace && with || in looks_like_secret in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:371:13: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:370:59: replace == with != in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:375:13: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:376:39: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:376:54: replace >= with < in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:378:52: replace || with && in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:392:36: replace == with != in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:392:32: replace % with / in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:392:32: replace % with + in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:398:17: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:396:17: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:395:21: replace >= with < in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:397:56: replace || with && in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/detect.rs:410:52: replace && with || in reference_value in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:346:49: replace == with != in leaf_expansions in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:370:8: delete ! in leaf_ops in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:393:36: replace == with != in leaf_ops in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:424:33: replace || with && in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:434:21: replace && with || in join_split_keywords in 0s build + 2s test
+TIMEOUT  crates/egress/src/views.rs:433:21: replace && with || in join_split_keywords in 0s build + 300s test
+MISSED   crates/egress/src/views.rs:432:29: replace > with >= in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:433:29: replace < with <= in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:434:30: replace < with <= in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:434:26: replace + with * in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:436:28: replace + with - in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:436:28: replace + with * in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:445:29: replace && with || in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:445:37: replace > with >= in join_split_keywords in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:464:5: replace remove_hyphen_window -> Option<String> with None in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:464:5: replace remove_hyphen_window -> Option<String> with Some(String::new()) in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:467:27: replace + with - in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:467:27: replace + with * in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:468:40: replace + with - in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:468:40: replace + with * in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:468:44: replace * with + in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:468:49: replace + with - in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:468:49: replace + with * in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:469:59: replace == with != in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:472:30: replace < with == in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:472:30: replace < with > in remove_hyphen_window in 0s build + 2s test
+MISSED   crates/egress/src/views.rs:472:51: replace == with != in remove_hyphen_window in 0s build + 2s test
+139 mutants tested in 12m: 41 missed, 97 caught, 1 timeouts

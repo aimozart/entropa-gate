@@ -1,0 +1,7 @@
+test a1_keys_with_digits_outside_base32_are_blocked ... FAILED
+test a2_the_base32_example_key_is_still_blocked ... ok
+test a3_near_misses_are_still_allowed ... ok
+assertion `left == right` failed: AKIAQWERTY0189ABCDEF
+  left: Allow
+ right: Block
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

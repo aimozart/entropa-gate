@@ -1,0 +1,12 @@
+LS3c packaging report (20261117T014506)
+binary sha256: f0c66c33d893dfde56d07988f9316ab517bd6d4a682f5dbad69affc0fe6f77ae
+second build sha256: f0c66c33d893dfde56d07988f9316ab517bd6d4a682f5dbad69affc0fe6f77ae
+binary bytes: 5400344
+reproducible: yes (two builds in different host target directories, the same container, source and cargo cache, gave the same SHA-256)
+build: container rust:1.99.1-bookworm (image id sha256:e12566d5abc1) --network none, source mounted read-only, memory 6g
+link: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, stripped
+base image: scratch (nothing pulled)
+image tag: entropa-try-http:ls3c-f0c66c33d893
+image id: sha256:03d937b30fbc5a794b624531d8e53d3cfd71688e7c163425fd7926b3cc602cd8
+image bytes: 2258299
+scope: built and tested on this machine only (linux x86_64, glibc static); no image signature, no SBOM (S2); not pushed; a static glibc binary can differ from a musl one

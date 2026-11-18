@@ -1,0 +1,9 @@
+# S12d-c mutation results (memory.rs, memory_eval.rs)
+Command: `cargo mutants --package entropa-council --file crates/council/src/memory.rs --file crates/council/src/memory_eval.rs --jobs 4 --timeout 60` (inside the dev container).
+Run 1 (docs: s12d-c run in the scratchpad): 173 mutants, 146 caught, 22 missed, 5 unviable. Real gaps found: the exactly-16-terms boundary, the type check of `precedent_terms`, the field-weight validation, the inclusive thresholds of `meets`, and the near-case reason formula. Closed by `tests/mutation_gaps_memory.rs` (z1-z5, new file, accepted tests untouched).
+Run 2 (docs/evidence/s12d-c-mutants-run2.txt): 173 mutants, 155 caught, 13 missed, 5 unviable. The 13 survivors, each with its reason:
+- `memory.rs:123 || -> &&` in `precedent_terms`: equivalent. A wrong event type that the first check would catch is still refused by the next check (`decision` must equal `accept`, the finding id must match).
+- `memory.rs:224 is_empty -> false`: equivalent. `build` refuses an empty index, so `is_empty` is always false for a value that exists.
+- `memory_eval.rs:149-151` (9 mutants in the splitmix64 mixing steps of `Rng::next`): the generator is a deterministic source of varied choices; the suite properties (unique triples, tenant, revoked, case kinds, gate results for seeds 1-3) hold for any such stream, and the exact stream is not specified. Not pinned on purpose; a port with golden values would only fix an implementation detail.
+- `memory_eval.rs:189 + -> *` (shuffle index `i + 1` becomes `i * 1`): still a permutation, only the distribution changes; not a behaviour the tests promise.
+- `memory_eval.rs:209:51 - -> /` in the near-case reason: `N_REASONS / 1` still gives a different valid reason in range after `% 6` for the seeds covered; z5 checks the property (exactly the reason differs, index below 6). Accepted as equivalent for the property.

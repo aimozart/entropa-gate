@@ -1,0 +1,8 @@
+crates/try-http/src/server.rs:51:15: replace += with -= in Shared::stats_line
+crates/try-http/src/server.rs:51:15: replace += with *= in Shared::stats_line
+crates/try-http/src/server.rs:53:11: replace + with - in Shared::stats_line
+crates/try-http/src/server.rs:53:11: replace + with * in Shared::stats_line
+crates/try-http/src/server.rs:192:35: replace + with * in post_try
+crates/try-http/src/server.rs:293:61: replace + with * in run
+crates/try-http/src/settings.rs:24:5: replace number -> Result<T, String> with Ok(Default::default())
+crates/try-http/src/settings.rs:30:5: replace parse_args -> Result<Settings, String> with Ok(Default::default())

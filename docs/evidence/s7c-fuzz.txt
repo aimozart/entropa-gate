@@ -1,0 +1,4 @@
+== fuzz event_decode for 60s
+Done 7469042 runs in 61 second(s)
+== fuzz bundle_verify for 60s
+Done 4252 runs in 61 second(s)

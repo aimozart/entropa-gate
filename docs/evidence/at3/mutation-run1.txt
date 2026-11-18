@@ -1,0 +1,6 @@
+Found 57 mutants to test
+ok       Unmutated baseline in 15s build + 26s test
+MISSED   crates/tiers/src/change.rs:243:33: replace > with >= in ChangeControl<'_>::request in 0s build + 4s test
+MISSED   crates/tiers/src/change.rs:254:24: replace <= with > in ChangeControl<'_>::request in 0s build + 4s test
+MISSED   crates/tiers/src/change.rs:301:44: replace != with == in ChangeControl<'_>::approve in 0s build + 4s test
+57 mutants tested in 3m: 3 missed, 48 caught, 6 unviable

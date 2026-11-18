@@ -1,0 +1,67 @@
+{
+ "format": "entropa approval events v1 (docs/ARCHITECTURE-APPROVALS.md sections 3 and 4)",
+ "generated_by": "independent Python script (json + blake3), not by the Rust code",
+ "request_id": "f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037",
+ "cases": [
+  {
+   "kind": "request",
+   "params": {
+    "actor": "0123456789abcdef",
+    "ts": 1700000000,
+    "action_class": "delete",
+    "subject_hash": "43af90dea40d307941fb9c681d7979e84bd8aa0ffd52b9758e1702467049f5a8",
+    "subject_ref": "stage:S3b",
+    "valid_for_secs": 86400
+   },
+   "canonical": "{\"action_class\":\"delete\",\"actor\":\"0123456789abcdef\",\"request_id\":\"f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037\",\"subject_hash\":\"43af90dea40d307941fb9c681d7979e84bd8aa0ffd52b9758e1702467049f5a8\",\"subject_ref\":\"stage:S3b\",\"ts\":1700000000,\"type\":\"request\",\"v\":1,\"valid_for_secs\":86400}",
+   "digest_hex": "de4a5403dca4e2d09794a40e06cbe691216a5928339999adaedabe23de3170d0"
+  },
+  {
+   "kind": "approve",
+   "params": {
+    "actor": "fedcba9876543210",
+    "ts": 1700000100,
+    "request_id": "f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037",
+    "on_behalf_of": "00ff00ff00ff00ff",
+    "basis_hash": "99a9aa141456a59942654e907411e739679051cff914e16f58dc87d7ee434b6a"
+   },
+   "canonical": "{\"actor\":\"fedcba9876543210\",\"basis_hash\":\"99a9aa141456a59942654e907411e739679051cff914e16f58dc87d7ee434b6a\",\"on_behalf_of\":\"00ff00ff00ff00ff\",\"request_id\":\"f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037\",\"ts\":1700000100,\"type\":\"approve\",\"v\":1}",
+   "digest_hex": "d061ca5104e1117c71b2fe789f61ccc567576287ded05d12a1bddf8a9ba00c4c"
+  },
+  {
+   "kind": "approve",
+   "params": {
+    "actor": "fedcba9876543210",
+    "ts": 1700000100,
+    "request_id": "f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037",
+    "on_behalf_of": null,
+    "basis_hash": null
+   },
+   "canonical": "{\"actor\":\"fedcba9876543210\",\"request_id\":\"f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037\",\"ts\":1700000100,\"type\":\"approve\",\"v\":1}",
+   "digest_hex": "a68fad058c0ca864f09a1d987607ea08b485befc4277aac9b1a02db7af627369"
+  },
+  {
+   "kind": "deny",
+   "params": {
+    "actor": "fedcba9876543210",
+    "ts": 1700000200,
+    "request_id": "f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037",
+    "reason": "too_risky",
+    "on_behalf_of": null,
+    "basis_hash": null
+   },
+   "canonical": "{\"actor\":\"fedcba9876543210\",\"reason_code\":\"too_risky\",\"request_id\":\"f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037\",\"ts\":1700000200,\"type\":\"deny\",\"v\":1}",
+   "digest_hex": "fcf55b0e96915ac283ad3a19b7f1ad9693a83982b43618d1c9e6ce63724f7b9c"
+  },
+  {
+   "kind": "consume",
+   "params": {
+    "actor": "0123456789abcdef",
+    "ts": 1700000300,
+    "request_id": "f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037"
+   },
+   "canonical": "{\"actor\":\"0123456789abcdef\",\"request_id\":\"f0487ab00eb8cf85b02f17db3281b20de9feae2ddc2be2e9506fc9fd3d342037\",\"ts\":1700000300,\"type\":\"consume\",\"v\":1}",
+   "digest_hex": "e6ea72214e3e77f3b0ecd8b4d5d708b857e9dc33267db2f631f3359004fcded9"
+  }
+ ]
+}

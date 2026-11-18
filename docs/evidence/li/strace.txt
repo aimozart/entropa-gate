@@ -1,0 +1,8 @@
+incremental: network syscalls = 0 (the 17 lines of the first count were SIGCHLD and SIGABRT notices of the child processes the tests start, not syscalls)
+incremental_big: network syscalls = 0
+at2b: network syscalls = 0
+at3b: network syscalls = 0
+at3: network syscalls = 0
+at2b_battery: network syscalls = 0
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

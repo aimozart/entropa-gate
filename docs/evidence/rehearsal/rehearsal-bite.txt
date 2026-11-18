@@ -1,0 +1,16 @@
+# BITE (verify program = /bin/true)
+== step 1: check the program against the manifest and the minisign signature
+== step 2: unpack the ledger (exactly the three files)
+<build-dir>/tmpdir/rehearsal-1794837642/work-bite/led: MOCK-DATA.txt evidence-ledger <build-dir>/tmpdir/rehearsal-1794837642/work-bite/led/evidence-ledger: checkpoints.log records.log 
+== step 3: verify
+PASS s3-verify-good (want ok; exit 0; )
+== tampers (each on a fresh copy; each must be refused)
+FAIL t1-flipped-byte (want refuse; exit 0; )
+FAIL t2-wrong-key (want refuse; exit 0; )
+FAIL t3-truncated-records (want refuse; exit 0; )
+FAIL t4-last-checkpoint-missing (want refuse; exit 0; )
+FAIL t5-no-ledger-directory (want refuse; exit 0; )
+PASS t6-read-only-good (want ok; exit 0; )
+FAIL t7-read-only-tampered (want refuse; exit 0; )
+RESULT: 2 passed, 6 failed (work dir <build-dir>/tmpdir/rehearsal-1794837642/work-bite, kept)
+exit: 1

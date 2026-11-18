@@ -1,0 +1,12 @@
+no self-approval check => c1_a_change_without_a_second_subject_never_takes_effect result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.36s error: failed, to rerun pass `-p entropa-tiers --test at3` 
+no T3 check => c4_only_valid_t3_tokens_naming_the_class_request_or_approve result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.10s error: failed, to rerun pass `-p entropa-tiers --test at3` 
+no class check at approve => 
+no request expiry => c2b_a_request_expires_and_an_expired_request_cannot_be_approved result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.28s error: failed, to rerun pass `-p entropa-tiers --test at3` 
+approval expiry ignored => c2_an_approval_binds_one_change_hash_and_expires result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.00s error: failed, to rerun pass `-p entropa-tiers --test at3` 
+parent/head not compared => c8_two_simultaneous_activations_of_the_same_version_one_wins c3_versions_are_append_only_and_a_rollback_is_a_new_version result: FAILED. 12 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s error: failed, to rerun pass `-p entropa-tiers --test at3` 
+requester counts as approver => 
+no class check at approve => c4_only_valid_t3_tokens_naming_the_class_request_or_approve result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.25s error: failed, to
+requester counts as approver => 
+record after append (swap order): record failure ignored => c5_a_record_failure_applies_nothing result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.00s error: fai
+requester counts as approver (store-held self-approval) => test g1_an_approval_by_the_requester_found_in_the_store_does_not_count ... FAILED
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

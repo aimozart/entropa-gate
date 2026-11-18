@@ -1,0 +1,20 @@
+FAIL e1 rc=99 export-docs: not implemented
+FAIL e2 crates/x/src/lib.rs rc=99
+FAIL e2 .env rc=99
+FAIL e2 docs/secret.key rc=99
+FAIL e2 target/x.md rc=99
+FAIL e2 docs/standards-store/c1.json rc=99
+FAIL e3 ../x rc=99
+FAIL e3 /etc/passwd rc=99
+FAIL e3 docs/../crates/x/src/lib.rs rc=99
+FAIL e4 rc=99 export-docs: not implemented
+FAIL e5 rc=99 export-docs: not implemented
+FAIL e6 rc=99 export-docs: not implemented
+FAIL e10 rc=99 export-docs: not implemented
+FAIL e7 rc=99 export-docs: not implemented
+FAIL e8 rc=99 export-docs: not implemented
+FAIL e9 rc=99
+FAIL e11 rc=99 export-docs: not implemented
+FAIL e13a
+FAIL e13b rc=99
+RESULT: 0 passed, 19 failed; scratch <build-dir>/tmpdir/export-test.zEoFEZ

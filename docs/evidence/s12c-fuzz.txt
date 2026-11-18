@@ -1,0 +1,9 @@
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz event_decode for 60s
+Done 5952949 runs in 61 second(s)
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz session_apply for 60s
+Done 102692 runs in 61 second(s)
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz carryover for 60s
+Done 3287895 runs in 61 second(s)

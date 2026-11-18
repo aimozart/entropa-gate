@@ -1,0 +1,38 @@
+test c1_keygen_writes_a_private_file_prints_only_the_public_key_and_never_overwrites ... FAILED
+test c4_sign_refuses_a_bad_key_an_existing_output_a_subdirectory_and_an_empty_directory ... FAILED
+test c5_usage_errors_exit_two ... FAILED
+test c2_the_full_flow_sign_then_verify_exits_zero ... FAILED
+test c3_verify_exits_one_for_every_tamper_class ... FAILED
+test c6_a_manifest_stored_inside_the_release_directory_is_not_one_of_its_artifacts ... FAILED
+
+failures:
+--
+thread 'c1_keygen_writes_a_private_file_prints_only_the_public_key_and_never_overwrites' (3394150) panicked at crates/release/tests/cli.rs:86:5:
+assertion `left == right` failed: not implemented
+
+--
+thread 'c4_sign_refuses_a_bad_key_an_existing_output_a_subdirectory_and_an_empty_directory' (3394153) panicked at crates/release/tests/cli.rs:38:5:
+assertion `left == right` failed: keygen failed
+  left: 1
+--
+thread 'c5_usage_errors_exit_two' (3394154) panicked at crates/release/tests/cli.rs:234:9:
+assertion `left == right` failed: []: not implemented
+
+--
+thread 'c2_the_full_flow_sign_then_verify_exits_zero' (3394151) panicked at crates/release/tests/cli.rs:38:5:
+assertion `left == right` failed: keygen failed
+  left: 1
+--
+thread 'c3_verify_exits_one_for_every_tamper_class' (3394152) panicked at crates/release/tests/cli.rs:38:5:
+assertion `left == right` failed: keygen failed
+  left: 1
+--
+thread 'c6_a_manifest_stored_inside_the_release_directory_is_not_one_of_its_artifacts' (3394155) panicked at crates/release/tests/cli.rs:38:5:
+assertion `left == right` failed: keygen failed
+  left: 1
+--
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-release --test cli`
+error: 1 target failed:
+    `-p entropa-release --test cli`

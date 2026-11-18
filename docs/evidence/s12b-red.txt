@@ -1,0 +1,1111 @@
+   Compiling entropa-council v0.2.0 (/work/crates/council)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.21s
+     Running unittests src/lib.rs (target/debug/deps/entropa_council-6fc6ac4c8ceb1691)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/events.rs (target/debug/deps/events-c8e69c8ee9f043c7)
+
+running 10 tests
+test e10_providers_families_and_the_independence_rule ... FAILED
+test e2_every_event_type_decodes_and_reports_its_type_and_session ... FAILED
+test e4_the_signed_digest_is_domain_separated ... FAILED
+test e1_golden_canonical_bytes_and_digests_match_an_independent_implementation ... FAILED
+test e6_the_decoder_refuses_bad_values_in_every_other_type ... FAILED
+test e7_no_free_text_field_exists_in_any_event_type ... FAILED
+test e8_a_canary_token_can_never_enter_an_event ... FAILED
+test e9_the_role_that_may_write_each_event_type ... FAILED
+test e5_the_decoder_refuses_every_bad_finding ... FAILED
+test e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys ... FAILED
+
+failures:
+
+---- e10_providers_families_and_the_independence_rule stdout ----
+
+thread 'e10_providers_families_and_the_independence_rule' (123) panicked at crates/council/src/lib.rs:112:9:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- e2_every_event_type_decodes_and_reports_its_type_and_session stdout ----
+
+thread 'e2_every_event_type_decodes_and_reports_its_type_and_session' (125) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- e4_the_signed_digest_is_domain_separated stdout ----
+
+thread 'e4_the_signed_digest_is_domain_separated' (127) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+---- e1_golden_canonical_bytes_and_digests_match_an_independent_implementation stdout ----
+
+thread 'e1_golden_canonical_bytes_and_digests_match_an_independent_implementation' (124) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+---- e6_the_decoder_refuses_bad_values_in_every_other_type stdout ----
+
+thread 'e6_the_decoder_refuses_bad_values_in_every_other_type' (129) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- e7_no_free_text_field_exists_in_any_event_type stdout ----
+
+thread 'e7_no_free_text_field_exists_in_any_event_type' (130) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- e8_a_canary_token_can_never_enter_an_event stdout ----
+
+thread 'e8_a_canary_token_can_never_enter_an_event' (131) panicked at crates/synthetic/src/lib.rs:101:5:
+not yet implemented
+
+---- e9_the_role_that_may_write_each_event_type stdout ----
+
+thread 'e9_the_role_that_may_write_each_event_type' (132) panicked at crates/council/src/lib.rs:127:5:
+not yet implemented
+
+---- e5_the_decoder_refuses_every_bad_finding stdout ----
+
+thread 'e5_the_decoder_refuses_every_bad_finding' (128) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+---- e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys stdout ----
+
+thread 'e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys' (126) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+
+failures:
+    e10_providers_families_and_the_independence_rule
+    e1_golden_canonical_bytes_and_digests_match_an_independent_implementation
+    e2_every_event_type_decodes_and_reports_its_type_and_session
+    e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys
+    e4_the_signed_digest_is_domain_separated
+    e5_the_decoder_refuses_every_bad_finding
+    e6_the_decoder_refuses_bad_values_in_every_other_type
+    e7_no_free_text_field_exists_in_any_event_type
+    e8_a_canary_token_can_never_enter_an_event
+    e9_the_role_that_may_write_each_event_type
+
+test result: FAILED. 0 passed; 10 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+error: test failed, to rerun pass `-p entropa-council --test events`
+     Running tests/planted.rs (target/debug/deps/planted-92cf575096175356)
+
+running 8 tests
+test p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection ... FAILED
+test p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven ... FAILED
+test p1_the_numbers_of_a_mixed_reviewer ... FAILED
+test p4_a_perfect_reviewer_meets_the_thresholds ... FAILED
+test p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer ... FAILED
+test p6_the_outputs_must_match_the_suite ... FAILED
+test p7_a_hindsight_pair_needs_both_members ... FAILED
+test p8_the_evaluation_is_deterministic ... FAILED
+
+failures:
+
+---- p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection stdout ----
+
+thread 'p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection' (135) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven stdout ----
+
+thread 'p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven' (136) panicked at crates/council/src/planted.rs:109:9:
+not yet implemented
+
+---- p1_the_numbers_of_a_mixed_reviewer stdout ----
+
+thread 'p1_the_numbers_of_a_mixed_reviewer' (134) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+---- p4_a_perfect_reviewer_meets_the_thresholds stdout ----
+
+thread 'p4_a_perfect_reviewer_meets_the_thresholds' (137) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+---- p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer stdout ----
+
+thread 'p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer' (138) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+---- p6_the_outputs_must_match_the_suite stdout ----
+
+thread 'p6_the_outputs_must_match_the_suite' (139) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+---- p7_a_hindsight_pair_needs_both_members stdout ----
+
+thread 'p7_a_hindsight_pair_needs_both_members' (140) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+---- p8_the_evaluation_is_deterministic stdout ----
+
+thread 'p8_the_evaluation_is_deterministic' (141) panicked at crates/council/src/planted.rs:122:5:
+not yet implemented
+
+
+failures:
+    p1_the_numbers_of_a_mixed_reviewer
+    p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection
+    p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven
+    p4_a_perfect_reviewer_meets_the_thresholds
+    p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer
+    p6_the_outputs_must_match_the_suite
+    p7_a_hindsight_pair_needs_both_members
+    p8_the_evaluation_is_deterministic
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test planted`
+     Running tests/provenance.rs (target/debug/deps/provenance-c003b5016e981518)
+
+running 9 tests
+test v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else ... FAILED
+test v3_building_refuses_bad_indexes ... FAILED
+test v4_exact_cosine_search_with_ties_broken_by_id ... FAILED
+test v5_search_is_reproducible_bit_for_bit ... FAILED
+test v1_the_index_hash_matches_an_independent_implementation ... FAILED
+test v6_search_refuses_bad_queries_and_oversize_k ... FAILED
+test v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used ... FAILED
+test v8_only_signed_accepted_decisions_enter_the_corpus ... FAILED
+test v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic ... FAILED
+
+failures:
+
+---- v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else stdout ----
+
+thread 'v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else' (144) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- v3_building_refuses_bad_indexes stdout ----
+
+thread 'v3_building_refuses_bad_indexes' (145) panicked at crates/synthetic/src/lib.rs:101:5:
+not yet implemented
+
+---- v4_exact_cosine_search_with_ties_broken_by_id stdout ----
+
+thread 'v4_exact_cosine_search_with_ties_broken_by_id' (146) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+
+---- v5_search_is_reproducible_bit_for_bit stdout ----
+
+thread 'v5_search_is_reproducible_bit_for_bit' (147) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+
+---- v1_the_index_hash_matches_an_independent_implementation stdout ----
+
+thread 'v1_the_index_hash_matches_an_independent_implementation' (143) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+
+---- v6_search_refuses_bad_queries_and_oversize_k stdout ----
+
+thread 'v6_search_refuses_bad_queries_and_oversize_k' (148) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+
+---- v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used stdout ----
+
+thread 'v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used' (149) panicked at crates/council/src/provenance.rs:62:9:
+not yet implemented
+
+---- v8_only_signed_accepted_decisions_enter_the_corpus stdout ----
+
+thread 'v8_only_signed_accepted_decisions_enter_the_corpus' (150) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+---- v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic stdout ----
+
+thread 'v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic' (151) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+
+failures:
+    v1_the_index_hash_matches_an_independent_implementation
+    v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else
+    v3_building_refuses_bad_indexes
+    v4_exact_cosine_search_with_ties_broken_by_id
+    v5_search_is_reproducible_bit_for_bit
+    v6_search_refuses_bad_queries_and_oversize_k
+    v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used
+    v8_only_signed_accepted_decisions_enter_the_corpus
+    v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic
+
+test result: FAILED. 0 passed; 9 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test provenance`
+     Running tests/reliability.rs (target/debug/deps/reliability-fe0d169ed7bf6fd4)
+
+running 7 tests
+test r1_the_score_is_the_smoothed_weighted_acceptance_rate ... FAILED
+test r3_severity_weights_are_one_two_three_four ... FAILED
+test r2_deferred_findings_are_ignored ... FAILED
+test r5_only_decisions_inside_the_rolling_window_count ... FAILED
+test r4_no_data_is_one_half ... FAILED
+test r6_scores_are_kept_per_reviewer_and_per_class ... FAILED
+test r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range ... FAILED
+
+failures:
+
+---- r1_the_score_is_the_smoothed_weighted_acceptance_rate stdout ----
+
+thread 'r1_the_score_is_the_smoothed_weighted_acceptance_rate' (153) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- r3_severity_weights_are_one_two_three_four stdout ----
+
+thread 'r3_severity_weights_are_one_two_three_four' (155) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+---- r2_deferred_findings_are_ignored stdout ----
+
+thread 'r2_deferred_findings_are_ignored' (154) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+---- r5_only_decisions_inside_the_rolling_window_count stdout ----
+
+thread 'r5_only_decisions_inside_the_rolling_window_count' (157) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+---- r4_no_data_is_one_half stdout ----
+
+thread 'r4_no_data_is_one_half' (156) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+---- r6_scores_are_kept_per_reviewer_and_per_class stdout ----
+
+thread 'r6_scores_are_kept_per_reviewer_and_per_class' (158) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+---- r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range stdout ----
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/src/reliability.rs:38:9:
+not yet implemented
+
+thread 'r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range' (159) panicked at crates/council/tests/reliability.rs:84:1:
+Test failed: not yet implemented.
+minimal failing input: a = 0, rej = 0, extra = 1
+	successes: 0
+	local rejects: 0
+	global rejects: 0
+
+
+
+failures:
+    r1_the_score_is_the_smoothed_weighted_acceptance_rate
+    r2_deferred_findings_are_ignored
+    r3_severity_weights_are_one_two_three_four
+    r4_no_data_is_one_half
+    r5_only_decisions_inside_the_rolling_window_count
+    r6_scores_are_kept_per_reviewer_and_per_class
+    r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range
+
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test reliability`
+     Running tests/render.rs (target/debug/deps/render-3a1a3fe5a2954e2f)
+
+running 4 tests
+test m1_the_rendering_is_the_documented_closed_code_text ... FAILED
+test m4_only_reviewable_events_can_be_rendered ... FAILED
+test m2_the_order_of_the_events_does_not_change_the_rendering ... FAILED
+test m3_nothing_but_codes_references_and_layout_reaches_the_model ... FAILED
+
+failures:
+
+---- m1_the_rendering_is_the_documented_closed_code_text stdout ----
+
+thread 'm1_the_rendering_is_the_documented_closed_code_text' (161) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- m4_only_reviewable_events_can_be_rendered stdout ----
+
+thread 'm4_only_reviewable_events_can_be_rendered' (164) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- m2_the_order_of_the_events_does_not_change_the_rendering stdout ----
+
+thread 'm2_the_order_of_the_events_does_not_change_the_rendering' (162) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+---- m3_nothing_but_codes_references_and_layout_reaches_the_model stdout ----
+
+thread 'm3_nothing_but_codes_references_and_layout_reaches_the_model' (163) panicked at crates/council/src/event.rs:31:5:
+not yet implemented
+
+
+failures:
+    m1_the_rendering_is_the_documented_closed_code_text
+    m2_the_order_of_the_events_does_not_change_the_rendering
+    m3_nothing_but_codes_references_and_layout_reaches_the_model
+    m4_only_reviewable_events_can_be_rendered
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test render`
+     Running tests/replay.rs (target/debug/deps/replay-07c453fa5b1298ef)
+
+running 7 tests
+test x2_counts_for_a_candidate_that_also_loosens ... FAILED
+test x1_counts_for_a_stricter_candidate ... FAILED
+test x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report ... FAILED
+test x4_an_input_that_does_not_match_its_recorded_hash_is_refused ... FAILED
+test x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests ... FAILED
+test x7_duplicate_ids_are_refused ... FAILED
+test x6_the_input_hash_matches_an_independent_implementation ... FAILED
+
+failures:
+
+---- x2_counts_for_a_candidate_that_also_loosens stdout ----
+
+thread 'x2_counts_for_a_candidate_that_also_loosens' (167) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+---- x1_counts_for_a_stricter_candidate stdout ----
+
+thread 'x1_counts_for_a_stricter_candidate' (166) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report stdout ----
+
+thread 'x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report' (168) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+---- x4_an_input_that_does_not_match_its_recorded_hash_is_refused stdout ----
+
+thread 'x4_an_input_that_does_not_match_its_recorded_hash_is_refused' (169) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+---- x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests stdout ----
+
+thread 'x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests' (170) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+---- x7_duplicate_ids_are_refused stdout ----
+
+thread 'x7_duplicate_ids_are_refused' (172) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+---- x6_the_input_hash_matches_an_independent_implementation stdout ----
+
+thread 'x6_the_input_hash_matches_an_independent_implementation' (171) panicked at crates/council/src/replay.rs:55:5:
+not yet implemented
+
+
+failures:
+    x1_counts_for_a_stricter_candidate
+    x2_counts_for_a_candidate_that_also_loosens
+    x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report
+    x4_an_input_that_does_not_match_its_recorded_hash_is_refused
+    x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests
+    x6_the_input_hash_matches_an_independent_implementation
+    x7_duplicate_ids_are_refused
+
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test replay`
+     Running tests/session.rs (target/debug/deps/session-eec8fc01d0c4c30f)
+
+running 15 tests
+test s11_nothing_changes_without_a_recorded_human_decision ... FAILED
+test s10_decision_rules_attestation_approval_and_hard_rule_items ... FAILED
+test s12_an_absent_human_means_pending_and_no_change ... FAILED
+test s13_no_quorum_means_no_change_and_closes_as_no_quorum ... FAILED
+test s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing ... FAILED
+test s1_a_session_walks_every_state_in_order ... FAILED
+test s2_events_out_of_order_are_refused ... FAILED
+test s3_every_event_type_refuses_the_wrong_role ... FAILED
+test s4_wrong_session_duplicates_and_session_less_events ... FAILED
+test s15_the_window_and_findings_hashes_match_an_independent_implementation ... FAILED
+test s5_the_independence_rule_is_enforced_in_code ... FAILED
+test s6_the_window_hash_binds_the_scope ... FAILED
+test s7_the_report_and_the_packet_must_be_complete ... FAILED
+test s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused ... FAILED
+test s8_a_session_holds_at_most_twelve_findings ... FAILED
+
+failures:
+
+---- s11_nothing_changes_without_a_recorded_human_decision stdout ----
+
+thread 's11_nothing_changes_without_a_recorded_human_decision' (175) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- s10_decision_rules_attestation_approval_and_hard_rule_items stdout ----
+
+thread 's10_decision_rules_attestation_approval_and_hard_rule_items' (174) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s12_an_absent_human_means_pending_and_no_change stdout ----
+
+thread 's12_an_absent_human_means_pending_and_no_change' (176) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s13_no_quorum_means_no_change_and_closes_as_no_quorum stdout ----
+
+thread 's13_no_quorum_means_no_change_and_closes_as_no_quorum' (177) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing stdout ----
+
+thread 's14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing' (178) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s1_a_session_walks_every_state_in_order stdout ----
+
+thread 's1_a_session_walks_every_state_in_order' (180) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s2_events_out_of_order_are_refused stdout ----
+
+thread 's2_events_out_of_order_are_refused' (181) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s3_every_event_type_refuses_the_wrong_role stdout ----
+
+thread 's3_every_event_type_refuses_the_wrong_role' (182) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s4_wrong_session_duplicates_and_session_less_events stdout ----
+
+thread 's4_wrong_session_duplicates_and_session_less_events' (183) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s15_the_window_and_findings_hashes_match_an_independent_implementation stdout ----
+
+thread 's15_the_window_and_findings_hashes_match_an_independent_implementation' (179) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s5_the_independence_rule_is_enforced_in_code stdout ----
+
+thread 's5_the_independence_rule_is_enforced_in_code' (184) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s6_the_window_hash_binds_the_scope stdout ----
+
+thread 's6_the_window_hash_binds_the_scope' (185) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s7_the_report_and_the_packet_must_be_complete stdout ----
+
+thread 's7_the_report_and_the_packet_must_be_complete' (186) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused stdout ----
+
+thread 's9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused' (188) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+---- s8_a_session_holds_at_most_twelve_findings stdout ----
+
+thread 's8_a_session_holds_at_most_twelve_findings' (187) panicked at crates/council/src/session.rs:62:5:
+not yet implemented
+
+
+failures:
+    s10_decision_rules_attestation_approval_and_hard_rule_items
+    s11_nothing_changes_without_a_recorded_human_decision
+    s12_an_absent_human_means_pending_and_no_change
+    s13_no_quorum_means_no_change_and_closes_as_no_quorum
+    s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing
+    s15_the_window_and_findings_hashes_match_an_independent_implementation
+    s1_a_session_walks_every_state_in_order
+    s2_events_out_of_order_are_refused
+    s3_every_event_type_refuses_the_wrong_role
+    s4_wrong_session_duplicates_and_session_less_events
+    s5_the_independence_rule_is_enforced_in_code
+    s6_the_window_hash_binds_the_scope
+    s7_the_report_and_the_packet_must_be_complete
+    s8_a_session_holds_at_most_twelve_findings
+    s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused
+
+test result: FAILED. 0 passed; 15 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test session`
+     Running tests/static_checks.rs (target/debug/deps/static_checks-c5ef3623250be8bd)
+
+running 4 tests
+test g2_the_manifest_holds_no_network_cloud_or_model_dependency ... ok
+test g4_no_source_file_is_over_five_hundred_lines ... ok
+test g1_the_source_is_pure_no_io_no_clock_no_environment_no_unsafe ... ok
+test g3_no_crew_names_in_the_source_tests_or_vectors ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/entropa_synthetic-cecca8dd62376414)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/canary.rs (target/debug/deps/canary-4dc9ff1c3d30c91b)
+
+running 4 tests
+test c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed ... FAILED
+test c2_the_scanner_finds_every_canary_in_order_and_nothing_else ... FAILED
+test c3_near_misses_are_not_canaries_but_the_prefix_alone_is_never_ignored_silently ... FAILED
+test c4_every_patient_record_carries_its_canary ... FAILED
+
+failures:
+
+---- c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed stdout ----
+
+thread 'c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed' (196) panicked at crates/synthetic/src/lib.rs:101:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- c2_the_scanner_finds_every_canary_in_order_and_nothing_else stdout ----
+
+thread 'c2_the_scanner_finds_every_canary_in_order_and_nothing_else' (197) panicked at crates/synthetic/src/lib.rs:101:5:
+not yet implemented
+
+---- c3_near_misses_are_not_canaries_but_the_prefix_alone_is_never_ignored_silently stdout ----
+
+thread 'c3_near_misses_are_not_canaries_but_the_prefix_alone_is_never_ignored_silently' (198) panicked at crates/synthetic/src/lib.rs:106:5:
+not yet implemented
+
+---- c4_every_patient_record_carries_its_canary stdout ----
+
+thread 'c4_every_patient_record_carries_its_canary' (199) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+
+failures:
+    c1_a_canary_is_prefix_plus_sixteen_lowercase_hex_digits_unique_per_seed
+    c2_the_scanner_finds_every_canary_in_order_and_nothing_else
+    c3_near_misses_are_not_canaries_but_the_prefix_alone_is_never_ignored_silently
+    c4_every_patient_record_carries_its_canary
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-synthetic --test canary`
+     Running tests/ids.rs (target/debug/deps/ids-229289d5fc66dfb5)
+
+running 6 tests
+test i1_the_ssn_validator_knows_the_never_issued_ranges ... FAILED
+test i4_generation_is_deterministic_in_the_seed_and_varied_across_seeds ... FAILED
+test i5_mrn_phone_and_email_validators ... FAILED
+test i6_the_fake_name_lists_are_closed_and_marked ... ok
+test i2_the_generator_cannot_emit_a_valid_range_ssn ... FAILED
+test i3_every_identifier_of_a_patient_is_in_a_reserved_range ... FAILED
+
+failures:
+
+---- i1_the_ssn_validator_knows_the_never_issued_ranges stdout ----
+
+thread 'i1_the_ssn_validator_knows_the_never_issued_ranges' (201) panicked at crates/synthetic/src/lib.rs:61:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- i4_generation_is_deterministic_in_the_seed_and_varied_across_seeds stdout ----
+
+thread 'i4_generation_is_deterministic_in_the_seed_and_varied_across_seeds' (204) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+---- i5_mrn_phone_and_email_validators stdout ----
+
+thread 'i5_mrn_phone_and_email_validators' (205) panicked at crates/synthetic/src/lib.rs:71:5:
+not yet implemented
+
+---- i2_the_generator_cannot_emit_a_valid_range_ssn stdout ----
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/src/lib.rs:56:5:
+not yet implemented
+
+thread 'i2_the_generator_cannot_emit_a_valid_range_ssn' (202) panicked at crates/synthetic/tests/ids.rs:63:1:
+Test failed: not yet implemented.
+minimal failing input: seed = 0
+	successes: 0
+	local rejects: 0
+	global rejects: 0
+
+
+---- i3_every_identifier_of_a_patient_is_in_a_reserved_range stdout ----
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/src/lib.rs:96:5:
+not yet implemented
+
+thread 'i3_every_identifier_of_a_patient_is_in_a_reserved_range' (203) panicked at crates/synthetic/tests/ids.rs:63:1:
+Test failed: not yet implemented.
+minimal failing input: seed = 0
+	successes: 0
+	local rejects: 0
+	global rejects: 0
+
+
+
+failures:
+    i1_the_ssn_validator_knows_the_never_issued_ranges
+    i2_the_generator_cannot_emit_a_valid_range_ssn
+    i3_every_identifier_of_a_patient_is_in_a_reserved_range
+    i4_generation_is_deterministic_in_the_seed_and_varied_across_seeds
+    i5_mrn_phone_and_email_validators
+
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-synthetic --test ids`
+     Running tests/repo_scan.rs (target/debug/deps/repo_scan-d07d876f8ff0b3f1)
+
+running 4 tests
+test t4_the_ssn_shape_finder_itself_works ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... FAILED
+test t1_no_canary_appears_anywhere_outside_the_gate ... FAILED
+test t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... FAILED
+
+failures:
+
+---- t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary stdout ----
+
+thread 't2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary' (209) panicked at crates/synthetic/src/lib.rs:106:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- t1_no_canary_appears_anywhere_outside_the_gate stdout ----
+
+thread 't1_no_canary_appears_anywhere_outside_the_gate' (208) panicked at crates/synthetic/src/lib.rs:106:5:
+not yet implemented
+
+---- t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range stdout ----
+
+thread 't3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range' (210) panicked at crates/synthetic/src/lib.rs:61:5:
+not yet implemented
+
+
+failures:
+    t1_no_canary_appears_anywhere_outside_the_gate
+    t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary
+    t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range
+
+test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `-p entropa-synthetic --test repo_scan`
+     Running tests/static_checks.rs (target/debug/deps/static_checks-ded33d94bdf95e51)
+
+running 2 tests
+test g2_the_manifest_has_only_hashing_dependencies ... ok
+test g1_the_crate_has_no_io_network_clock_or_randomness_and_no_stored_records ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_council
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_synthetic
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 10 targets failed:
+    `-p entropa-council --test events`
+    `-p entropa-council --test planted`
+    `-p entropa-council --test provenance`
+    `-p entropa-council --test reliability`
+    `-p entropa-council --test render`
+    `-p entropa-council --test replay`
+    `-p entropa-council --test session`
+    `-p entropa-synthetic --test canary`
+    `-p entropa-synthetic --test ids`
+    `-p entropa-synthetic --test repo_scan`

@@ -1,0 +1,14 @@
+test aws::tests::a_non_ml_dsa_65_key_is_rejected ... ok
+test aws::tests::config_defaults_the_region_to_us_west_2 ... FAILED
+test aws::tests::config_error_names_the_variable_not_a_value ... FAILED
+test aws::tests::config_requires_a_key_id_and_rejects_a_blank_one ... ok
+test aws::tests::error_messages_never_carry_free_text_secrets ... ok
+test aws::tests::config_takes_an_explicit_region ... FAILED
+test aws::tests::other_codes_are_reported_by_code_and_unknown_is_generic ... FAILED
+test aws::tests::request_constants_are_raw_and_ml_dsa_shake_256 ... ok
+test aws::tests::sign_rejects_messages_over_4096_bytes_before_any_network_call ... FAILED
+test aws::tests::the_public_key_is_stripped_with_raw_key_from_spki ... FAILED
+test aws::tests::throttling_and_access_denied_map_to_distinct_readable_errors ... FAILED
+test result: FAILED. 4 passed; 7 failed; 0 ignored; 0 measured; 16 filtered out; finished in 0.00s
+error: test failed, to rerun pass `-p entropa-kms --lib`
+# 7 failed with KmsError("not yet implemented"); 4 passed immediately (negative assertions satisfied by the stub's Err, and two constants): guards, not proof of the real logic.

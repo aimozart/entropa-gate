@@ -1,0 +1,61 @@
+# Runs this repo's canonical scripts/ci.sh on a self-hosted Gitea Actions runner
+# (private infra — the proprietary transparency-log/ingest source never leaves
+# this host). Same checks scripts/ci.sh already runs manually before every push;
+# this just makes it automatic instead of relying on remembering to run it.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  ci:
+    # Deliberately no `container: rust:latest` override here - actions/checkout@v4
+    # (and any other JS-based action) needs Node.js, which only the default
+    # runner image (ghcr.io/catthehacker/ubuntu:act-latest) has. Install Rust as
+    # a plain shell step instead of relying on a Rust-preloaded image.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build admin UI
+        # admin-ui/dist/* is gitignored (real build output) but crates/api/src/admin/ui.rs
+        # embeds it at compile time via include_str! - a fresh clone has no dist/ at all
+        # until this runs, unlike a local dev machine that's already built it once.
+        run: |
+          cd admin-ui
+          npm ci
+          npm run build
+      - name: Install Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --component rustfmt,clippy
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          URL=$(curl -sSf https://api.github.com/repos/gitleaks/gitleaks/releases/latest \
+            | grep -o '"browser_download_url": *"[^"]*linux_x64\.tar\.gz"' \
+            | head -1 | cut -d'"' -f4)
+          echo "Resolved latest gitleaks URL: $URL"
+          curl --fail -sSL -o /tmp/gitleaks.tar.gz "$URL"
+          tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks
+      - name: Install cargo-audit
+        run: cargo install cargo-audit --locked
+      - name: Install bats
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/bats-core/bats-core.git /tmp/bats-core
+          /tmp/bats-core/install.sh /usr/local
+      - name: Script harness tests
+        run: bats scripts/tests/*.bats
+      - name: Leader lease unit tests (pure decision functions)
+        run: cargo test -p entropa-api --lib leader::
+      - name: Leader lease lifecycle tests (fake store/clock, real acquire/renew/release path)
+        run: cargo test -p entropa-api --test leader_lease_lifecycle
+      - name: API/Firebase contract tests
+        env:
+          INSTA_UPDATE: "no"
+        run: cargo test -p entropa-api --test firebase_contract
+      - name: Run scripts/ci.sh
+        run: ./scripts/ci.sh

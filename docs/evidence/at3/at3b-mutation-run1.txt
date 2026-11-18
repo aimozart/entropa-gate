@@ -1,0 +1,7 @@
+Found 82 mutants to test
+ok       Unmutated baseline in 15s build + 31s test
+MISSED   crates/tiers/src/change.rs:257:9: replace <impl VersionStore for MemoryVersions>::append -> Result<(), AppendError> with Ok(()) in 0s build + 8s test
+MISSED   crates/tiers/src/change.rs:262:57: replace != with == in <impl VersionStore for MemoryVersions>::append in 0s build + 8s test
+MISSED   crates/tiers/src/change.rs:457:41: replace == with != in ChangeControl<'_>::activate in 0s build + 8s test
+MISSED   crates/tiers/src/change.rs:463:35: replace += with -= in ChangeControl<'_>::activate in 0s build + 8s test
+82 mutants tested in 4m: 4 missed, 66 caught, 12 unviable

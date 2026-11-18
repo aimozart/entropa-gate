@@ -1,0 +1,58 @@
+caught: 171  missed: 54  timeout: 10  unviable: 0
+--- caught only by SIGKILL (NOT counted as caught):
+--- missed:
+crates/egress/src/decide.rs:393:14: replace > with >= in Budget::take
+crates/egress/src/decide.rs:396:16: replace -= with += in Budget::take
+crates/egress/src/decide.rs:445:9: replace <impl Visitor<'de> for V<'a>>::expecting -> std::fmt::Result with Ok(Default::default())
+crates/egress/src/decide.rs:580:15: replace != with == in scan_text
+crates/egress/src/decide.rs:599:26: replace < with == in scan_text
+crates/egress/src/decide.rs:599:26: replace < with > in scan_text
+crates/egress/src/decide.rs:599:26: replace < with <= in scan_text
+crates/egress/src/decide.rs:600:24: replace += with -= in scan_text
+crates/egress/src/decide.rs:643:20: replace > with >= in plausible_chunked
+crates/egress/src/decide.rs:775:36: replace + with * in scan_all
+crates/egress/src/decide.rs:775:49: replace + with * in scan_all
+crates/egress/src/decide.rs:779:21: replace > with >= in scan_all
+crates/egress/src/decide.rs:786:63: replace > with == in scan_all
+crates/egress/src/decide.rs:786:63: replace > with < in scan_all
+crates/egress/src/decide.rs:786:63: replace > with >= in scan_all
+crates/egress/src/decide.rs:789:58: replace && with || in scan_all
+crates/egress/src/decide.rs:789:44: replace && with || in scan_all
+crates/egress/src/decide.rs:789:37: replace == with != in scan_all
+crates/egress/src/decide.rs:789:53: replace < with == in scan_all
+crates/egress/src/decide.rs:789:53: replace < with > in scan_all
+crates/egress/src/decide.rs:789:53: replace < with <= in scan_all
+crates/egress/src/decide.rs:789:67: replace > with == in scan_all
+crates/egress/src/decide.rs:789:67: replace > with < in scan_all
+crates/egress/src/decide.rs:789:67: replace > with >= in scan_all
+crates/egress/src/decide.rs:790:24: replace && with || in scan_all
+crates/egress/src/decide.rs:952:17: replace < with <= in core
+crates/egress/src/decide.rs:953:15: replace += with -= in core
+crates/egress/src/decide.rs:1066:44: replace && with || in core
+crates/egress/src/decide.rs:1066:40: replace < with <= in core
+crates/egress/src/decide.rs:1066:50: replace > with >= in core
+crates/egress/src/decide.rs:1133:17: replace || with && in core
+crates/egress/src/decide.rs:1132:43: replace != with == in core
+crates/egress/src/decide.rs:1136:49: replace != with == in core
+crates/egress/src/decide.rs:1158:5: replace _use -> Option<crate::policy::ParsedUrl> with None
+crates/egress/src/detect.rs:233:18: replace > with >= in luhn
+crates/egress/src/detect.rs:319:33: replace < with == in iban_ok
+crates/egress/src/detect.rs:319:33: replace < with <= in iban_ok
+crates/egress/src/detect.rs:403:5: replace der_private -> bool with true
+crates/egress/src/detect.rs:403:21: replace || with && in der_private
+crates/egress/src/detect.rs:403:16: replace < with == in der_private
+crates/egress/src/detect.rs:403:16: replace < with <= in der_private
+crates/egress/src/detect.rs:407:50: replace == with != in der_private
+crates/egress/src/detect.rs:410:35: replace + with * in der_private
+crates/egress/src/detect.rs:419:49: replace == with != in der_private
+crates/egress/src/detect.rs:661:47: replace < with <= in run_stripped_rest
+crates/egress/src/detect.rs:667:21: replace && with || in run_stripped_rest
+crates/egress/src/detect.rs:668:28: replace + with - in run_stripped_rest
+crates/egress/src/detect.rs:702:36: replace + with - in run_stripped_rest
+crates/egress/src/detect.rs:817:69: replace == with != in dedupe
+crates/egress/src/views.rs:180:28: replace | with ^ in b32_decode
+crates/egress/src/views.rs:192:51: replace || with && in hex_decode
+crates/egress/src/views.rs:256:41: replace - with + in rot13
+crates/egress/src/views.rs:298:54: replace == with != in decoded
+crates/egress/src/views.rs:312:39: replace > with >= in decoded
+DONE

@@ -1,0 +1,14 @@
+python (tools/results):
+Ran 28 tests in 1.428s
+
+OK
+export-docs:
+RESULT: 19 passed, 0 failed; scratch <build-dir>/tmpdir/export-test.sEjvi6
+check-public-docs:
+RESULT: 9 passed, 0 failed; scratch <build-dir>/tmpdir/cpd-test.dwVQuy
+repro-compare:
+PASS repro-compare (3 cases); scratch <build-dir>/tmpdir/repro-test.PgXn57
+public docs check:
+ok: 8 files, all pointers tracked
+export of the real allowlist:
+exported 8 files to <build-dir>/tmpdir/pe-3660409 (gitleaks, email and banned-word scans clean)

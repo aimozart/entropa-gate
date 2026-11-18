@@ -1,0 +1,7 @@
+entropa_tiers-e21dd150bf1a2ea8: network syscalls = 0
+battery-b97dc184b9cf4e2d: network syscalls = 0
+at2-2d34b9b1400dd99e: network syscalls = 0
+cedar-c6cc0788ed90a17e: network syscalls = 0
+latency-bd9509a517520889: network syscalls = 0
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

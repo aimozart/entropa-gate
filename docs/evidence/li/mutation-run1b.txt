@@ -1,0 +1,22 @@
+Found 51 mutants to test
+ok       Unmutated baseline in 15s build + 23s test
+MISSED   crates/tiers/src/append.rs:26:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "" in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:26:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "xyzzy" in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:85:27: replace match guard start.elapsed() < Duration::from_secs(20) with true in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:85:27: replace match guard start.elapsed() < Duration::from_secs(20) with false in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:85:43: replace < with == in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:85:43: replace < with <= in IncrementalLedger::lock in 0s build + 2s test
+TIMEOUT  crates/tiers/src/append.rs:94:32: replace > with == in IncrementalLedger::lock in 0s build + 120s test
+MISSED   crates/tiers/src/append.rs:94:32: replace > with < in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:94:32: replace > with >= in IncrementalLedger::lock in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:117:27: replace match guard e.kind() == std::io::ErrorKind::NotFound with true in IncrementalLedger::rebuild in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:139:23: replace > with == in IncrementalLedger::rebuild in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:139:23: replace > with < in IncrementalLedger::rebuild in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:139:23: replace > with >= in IncrementalLedger::rebuild in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:231:23: replace match guard e.kind() == std::io::ErrorKind::NotFound with true in IncrementalLedger::len in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:231:23: replace match guard e.kind() == std::io::ErrorKind::NotFound with false in IncrementalLedger::len in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:231:32: replace == with != in IncrementalLedger::len in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:238:9: replace IncrementalLedger::is_empty -> Result<bool, String> with Ok(true) in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:238:9: replace IncrementalLedger::is_empty -> Result<bool, String> with Ok(false) in 0s build + 2s test
+MISSED   crates/tiers/src/append.rs:238:30: replace == with != in IncrementalLedger::is_empty in 0s build + 2s test
+51 mutants tested in 5m: 18 missed, 29 caught, 3 unviable, 1 timeouts

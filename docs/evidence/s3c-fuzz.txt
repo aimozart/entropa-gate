@@ -1,0 +1,2 @@
+== fuzz event_decode for 60s
+Done 7324000 runs in 61 second(s)

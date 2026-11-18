@@ -1,0 +1,15 @@
+# NEGATIVE: an empty release directory
+FAIL s1-manifest (want ok; exit 1; refused: cannot open an input file)
+FAIL s1-minisign (want ok; exit 2; <build-dir>/tmpdir/rehearsal-1794837642/work-empty/reade
+FAIL s3-verify-good (want ok; exit 127; scripts/reader-rehearsal.sh: line 13: <build-dir>/t
+FAIL t1-flipped-byte (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/<build-dir>
+FAIL t2-wrong-key (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/<build-dir>
+FAIL t3-truncated-records (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/.cache/spo
+FAIL t4-last-checkpoint-missing (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/.cac
+FAIL t5-no-ledger-directory (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/.cache/s
+FAIL t6-read-only-good (want ok; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/<build-dir>
+FAIL t7-read-only-tampered (want refuse; exit 127; scripts/reader-rehearsal.sh: line 13: <home>/.cache/sp
+FAIL t8-tampered-program-minisign (want refuse; exit 2; <build-dir>/tmpdir/rehearsal-179483
+FAIL t13-container-read-only-good (want ok; exit 127; docker: Error response from daemon: failed to create tas
+FAIL t13-container-read-only-tampered (want refuse; exit 127; docker: Error response from daemon: failed to cr
+RESULT: 5 passed, 13 failed (work dir <build-dir>/tmpdir/rehearsal-1794837642/work-empty, k

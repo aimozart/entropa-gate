@@ -1,0 +1,23 @@
+[package]
+name = "entropa-mockview"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Static explorer bundle for a mock evidence ledger, labelled 'mock data, real signed records' (LS2, a stage record (not published))"
+publish = false
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-ledger = { path = "../ledger" }
+entropa-nodecore = { path = "../nodecore" }
+entropa-witness = { path = "../witness" }
+hex = { workspace = true }
+blake3 = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+entropa-platinum = { path = "../platinum" }
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+# Phrases that may use "certified" because they name a credential the Human Principal holds (his statement; one exact phrase per line).
+# Anything else must say "aligned with" or "mapped to" (docs/CONTROLS-MAP.md section 1).
+AWS Certified
+# Reason: the owner's stated work-history facts about former employers (and credentials he holds), not a claim about this project. The 17 lines of website/public-main/{hire,resume,glossary}.html found by the S14b scan), not a claim about this project. Exact lines; no blanket allow.
+<span class="badge ok">✓ Databricks Certified Associate Developer for Apache Spark</span>
+across a global fleet. Backed by security and compliance work: official <strong>HITRUST certification</strong>, HIPAA, enterprise EDR
+<p>I hold an <strong>SCCM Administration certificate</strong> (instructor-led course taught by a Microsoft Certified Trainer, final exam passed).
+<div class="skillrow"><strong>Cloud & Storage:</strong> GCP (Cloud Run, Cloud Build, Firestore, Secret Manager, IAM, Dataproc, BigQuery, GCS, CMEK) — primary, production hands-on. AWS (S3, EC2, IAM, KMS) — certified at Associate level.</div>
+<li><strong>Databricks Certified Associate Developer for Apache Spark (Scala)</strong> — Databricks (Issued March 2024) — <a href="https://credentials.databricks.com/96e65e17-56d5-4682-a8f4-c9e77b2a7251#acc.CKquJ7Br" target="_blank" rel="noopener noreferrer" style="color:var(--accent2)">verify</a></li>
+<li><strong>SCCM (Microsoft Configuration Manager) Administration certificate</strong> — instructor-led course taught by a Microsoft Certified Trainer; final exam passed</li>
+<p class="meta">Healthcare chart-retrieval, HITRUST-certified org · April 2014 – October 2017</p>
+HITRUST certification and continuous HIPAA compliance; managed secure PHI chain of custody.</p>
+<dd>A widely-recognized security certification, common in healthcare, that proves an organization
+<span class="badge ok">✓ Databricks Certified Associate Developer for Apache Spark</span>
+healthcare organization to official <strong>HITRUST certification</strong>, ran enterprise EDR and privileged access
+<p>I hold an <strong>SCCM Administration certificate</strong> (instructor-led course taught by a Microsoft Certified Trainer, final exam passed),
+<li><strong>2014 – 2017, ECS:</strong> heavy Windows administration: Active Directory, Group Policy and SCCM; Windows XP → 7 → 10; a legacy NT domain and servers to Server 2012 R2; a HIPAA environment taken to HITRUST certification.</li>
+<div class="skillrow"><strong>Cloud &amp; systems:</strong> AWS (certified: VPC, IAM, KMS, PrivateLink), GCP, Azure (Entra ID, RBAC, Policy, Key Vault, Defender for Cloud, Sentinel, Bicep), Linux (Ubuntu and RHEL), IBM i.</div>
+<li><strong>SCCM (Microsoft Configuration Manager) Administration certificate</strong> — instructor-led course taught by a Microsoft Certified Trainer; final exam passed</li>
+<li><strong>Databricks Certified Associate Developer for Apache Spark (Scala)</strong> — Databricks (Issued March 2024) — <a href="https://credentials.databricks.com/96e65e17-56d5-4682-a8f4-c9e77b2a7251#acc.CKquJ7Br" target="_blank" rel="noopener noreferrer" style="color:var(--accent2)">verify</a></li>
+<p>Heavy Windows administration: Active Directory, Group Policy, and SCCM (OS imaging, policy, node setups, PXE servers, application deployment to users); migrated Windows XP → 7 → 10, and a legacy Windows NT domain (about 300 users) and NT servers to Windows Server 2012 R2, policies and user accounts included. Co-authored the security-policy framework and drove remediation to official HITRUST certification; wrote the program's SOPs; owned the security stack; PHI chain of custody on FIPS 140-2 media; MySQL in a HIPAA environment.</p>

@@ -1,0 +1,6 @@
+trial log copy lines: 384
+audit chain ok: 384 line(s)
+exit=0
+Ran 18 tests in 0.001s
+
+OK

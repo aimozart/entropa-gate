@@ -1,0 +1,1 @@
+placeholder so the image has a /data directory owned by the non-root user; the client mounts a volume here for keys and the ledger

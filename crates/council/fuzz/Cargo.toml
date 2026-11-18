@@ -1,0 +1,39 @@
+[package]
+name = "entropa-council-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+serde_json = "1"
+entropa-council = { path = ".." }
+
+[workspace]
+
+[[bin]]
+name = "event_decode"
+path = "fuzz_targets/event_decode.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "session_apply"
+path = "fuzz_targets/session_apply.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "carryover"
+path = "fuzz_targets/carryover.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "memory_search"
+path = "fuzz_targets/memory_search.rs"
+test = false
+doc = false

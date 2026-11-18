@@ -1,0 +1,9 @@
+## default build (no features): lines mentioning aws in 'cargo tree -p entropa-kms --locked -e normal' (expect 0)
+0
+## default build: lines mentioning aws-sdk, aws-config or smithy in the whole workspace tree (expect 0)
+0
+## with --features aws: the three expected direct dependencies
+├── aws-config v1.13.0
+├── aws-sdk-kms v1.124.0
+└── tokio v1.53.1
+## note: an earlier version of this file printed 8 under the first heading; that grep also counted 'tokio', which the default build reaches through entropa-core -> reqwest (not through the aws feature). It was a wrong grep, not an AWS crate.

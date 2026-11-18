@@ -1,0 +1,11 @@
+test s10_the_container_target_runs_the_same_scenarios ... ignored, needs docker and the image named in LS3D_IMAGE
+test s9_the_report_holds_no_case_text_and_a_second_run_is_refused ... FAILED
+test s1_every_refusal_happens_before_anything_is_parsed_or_run ... FAILED
+test s7_a_server_that_is_not_alive_at_the_end_leaks_or_prints_anything_but_status_counts_fails ... FAILED
+test s2_scenarios_that_hold_pass_with_the_exact_bound_and_the_report_has_the_documented_shape ... FAILED
+test s6_a_server_that_never_answers_a_response_that_never_comes_and_a_scenario_over_its_time_are_timeouts ... FAILED
+test s4_a_wrong_status_is_a_failure_and_an_attack_step_makes_it_an_accepted_attack ... FAILED
+test s8_a_target_that_cannot_be_started_is_a_runner_error_per_scenario_not_a_crash ... FAILED
+test s5_header_body_and_count_expectations_are_each_checked_and_filed_under_their_reason ... FAILED
+test s3_the_real_server_behaviours_are_driven_with_raw_steps ... FAILED
+test result: FAILED. 0 passed; 9 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s

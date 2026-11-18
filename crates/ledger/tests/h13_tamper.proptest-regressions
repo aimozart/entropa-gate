@@ -1,0 +1,10 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 81c57da673abec309d306edcd20896fa00117998d5410f151ede76c02405056b # shrinks to path_pick = 10639181163117886075, how = 0, pos = 0, x = 0
+cc 7a7d8b52385fea67491085690ccd66f145be89b53fe8a5eb22354b48375e5332 # shrinks to path_pick = 6535635053521990780, how = 1, pos = 0, x = 0
+cc de0b2fe7ca46f7455b3f1175d0dbb43693bb3cd04e7389af3f48423872f9d41f # shrinks to o = Flip(11370251119099312408, 32), o2 = None
+cc d37d63e524129410101dd34a53f22e070e2bb1d01220150a9fc7d76209458a7c # shrinks to o = DupRange(8139199203179391589, 116), o2 = None

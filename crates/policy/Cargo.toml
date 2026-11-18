@@ -1,0 +1,28 @@
+[package]
+name = "entropa-policy"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Cedar policy gate combined with the approvals gate (docs/ARCHITECTURE-CEDAR.md). Stage S4b: stubs and red tests."
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-approvals = { path = "../approvals" }
+cedar-policy = "=4.14.0"
+blake3 = { workspace = true }
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[features]
+default = []
+# Engines that trust role and has_key from the request. Tests and fuzzing only (ADR 0019).
+trust-request-fields = []
+
+[dev-dependencies]
+proptest = "1"
+entropa-policy = { path = ".", features = ["trust-request-fields"] }
+
+[lints]
+workspace = true

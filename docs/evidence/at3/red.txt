@@ -1,0 +1,15 @@
+test c6_records_hold_hashes_and_closed_words_only ... FAILED
+test c9_the_requester_revoked_after_asking_does_not_cancel_a_valid_second_approval_but_a_revoked_approver_does_not_count ... FAILED
+test c5b_a_version_store_failure_after_the_record_leaves_the_head_unchanged ... FAILED
+test c4b_revoked_wrong_audience_and_stale_list_are_refused ... FAILED
+test c1b_the_text_of_a_request_cannot_claim_approval ... FAILED
+test c8_two_simultaneous_activations_of_the_same_version_one_wins ... FAILED
+test c0_two_distinct_t3_subjects_activate_a_change_and_seal_a_first_version ... FAILED
+test c2b_a_request_expires_and_an_expired_request_cannot_be_approved ... FAILED
+test c7_the_same_inputs_and_clock_give_the_same_decisions_and_record_bytes ... FAILED
+test c1_a_change_without_a_second_subject_never_takes_effect ... FAILED
+test c5_a_record_failure_applies_nothing ... FAILED
+test c2_an_approval_binds_one_change_hash_and_expires ... FAILED
+test c3_versions_are_append_only_and_a_rollback_is_a_new_version ... FAILED
+test c4_only_valid_t3_tokens_naming_the_class_request_or_approve ... FAILED
+test result: FAILED. 0 passed; 14 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s

@@ -1,0 +1,25 @@
+{
+ "calls": 13,
+ "counts": {
+  "opens": {
+   "system": 88,
+   "store": 2,
+   "node": 76
+  },
+  "write_opens": {
+   "system": 13,
+   "node": 39
+  },
+  "mutations": {
+   "node": 14
+  },
+  "network": []
+ },
+ "exec": [
+  "entropa-platinum",
+  "entropa-standards-mcp"
+ ],
+ "network_syscalls": 0,
+ "violations": [],
+ "store_opened_read_only": true
+}

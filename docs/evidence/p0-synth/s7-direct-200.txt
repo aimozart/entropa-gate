@@ -1,0 +1,2 @@
+OLD: 9 failures in 200 runs; first: test s1_health_log_verify_over_http ... FAILED test s7_the_evidence_endpoint_logs_and_verifies_over_http ... FAILED 
+NEW: 0 failures in 200 runs; first: 

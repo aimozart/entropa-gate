@@ -1,0 +1,41 @@
+{
+  "alertStrategy": {
+    "autoClose": "1800s"
+  },
+  "combiner": "OR",
+  "conditions": [
+    {
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "60s",
+            "perSeriesAligner": "ALIGN_COUNT"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type=\"cloud_run_revision\" AND metric.type=\"logging.googleapis.com/user/entropa_chain_rollback\""
+      },
+      "displayName": "CHAIN_ROLLBACK log entry seen",
+      "name": "projects/entropa-testnet/alertPolicies/12346153867782493605/conditions/12346153867782495412"
+    }
+  ],
+  "creationRecord": {
+    "mutateTime": "2026-08-14T04:36:40.588085699Z",
+    "mutatedBy": "entropa-deployer@entropa-testnet.iam.gserviceaccount.com"
+  },
+  "displayName": "Entropa: chain rollback detected",
+  "documentation": {
+    "content": "The chain's persistence layer discarded blocks on resume (CHAIN_ROLLBACK). This means a block save silently failed at some point in the past and needs investigation. Check Cloud Logging for the exact CHAIN_ROLLBACK message for details on how many blocks were lost.",
+    "mimeType": "text/markdown"
+  },
+  "enabled": true,
+  "mutationRecord": {
+    "mutateTime": "2026-08-14T04:36:40.588085699Z",
+    "mutatedBy": "entropa-deployer@entropa-testnet.iam.gserviceaccount.com"
+  },
+  "name": "projects/entropa-testnet/alertPolicies/12346153867782493605",
+  "notificationChannels": [
+    "projects/entropa-testnet/notificationChannels/1430532887923694351"
+  ]
+}

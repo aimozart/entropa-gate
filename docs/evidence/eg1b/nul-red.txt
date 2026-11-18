@@ -1,0 +1,17 @@
+test n1_a_json_escaped_nul_in_a_string_value_is_refused ... FAILED
+test n2_a_json_escaped_nul_in_a_key_is_refused ... FAILED
+test n3_a_raw_nul_in_a_plain_body_header_or_attachment_is_refused ... FAILED
+test n4_the_same_text_without_a_nul_is_allowed ... ok
+thread 'n1_a_json_escaped_nul_in_a_string_value_is_refused' (3847686) panicked at crates/egress/tests/nul.rs:23:9:
+assertion `left == right` failed: {"note":"hello\u0000world"}
+  left: (Allow, Clean)
+ right: (Block, MalformedRequest)
+thread 'n2_a_json_escaped_nul_in_a_key_is_refused' (3847687) panicked at crates/egress/tests/nul.rs:33:5:
+assertion `left == right` failed
+  left: (Allow, Clean)
+ right: (Block, MalformedRequest)
+thread 'n3_a_raw_nul_in_a_plain_body_header_or_attachment_is_refused' (3847688) panicked at crates/egress/tests/nul.rs:47:5:
+assertion `left == right` failed
+  left: (Allow, Clean)
+ right: (Block, MalformedRequest)
+test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s

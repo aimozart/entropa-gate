@@ -1,0 +1,3 @@
+FAIL: test_micro_and_pro_have_their_own_prices (test_probe_bedrock.Output.test_micro_and_pro_have_their_own_prices)
+Ran 23 tests in 0.001s
+FAILED (failures=1)

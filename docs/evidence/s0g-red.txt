@@ -1,0 +1,33 @@
+test merkle::tests::consistency_proof_at_equal_sizes_is_empty_and_requires_matching_roots ... ok
+test merkle::tests::consistency_proof_with_old_size_greater_than_new_size_is_none ... ok
+test merkle::tests::consistency_proof_with_zero_old_size_is_none ... ok
+test merkle::tests::inclusion_proof_out_of_range_index_is_none ... ok
+test merkle::tests::inclusion_proof_verifies_for_every_index_in_a_real_tree ... ok
+test merkle::tests::verify_consistency_rejects_a_zero_or_larger_old_size_even_with_an_empty_proof ... ok
+test transparency_log::batch_receipt::tests::a_single_receipt_call_stays_fast_regardless_of_existing_log_size ... ignored
+test merkle::tests::consistency_proof_round_trips_across_many_size_pairs ... ok
+test transparency_log::record::tests::size_limits_are_enforced_at_the_boundary ... ok
+test transparency_log::record::tests::the_decoder_rejects_oversize_length_prefixes_without_allocating ... ok
+test transparency_log::tests::a_single_additional_checkpoint_stays_fast_regardless_of_existing_log_size ... ignored
+test transparency_log::tests::appending_a_record_returns_its_index_and_advances_size ... ok
+test transparency_log::tests::incremental_root_matches_a_full_rebuild_for_every_size ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_an_index_at_or_beyond_the_checkpoint_size ... FAILED
+test transparency_log::tests::receipt_cannot_prove_an_index_the_checkpoint_did_not_yet_cover ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_receipt_whose_index_does_not_match_its_proof ... FAILED
+test transparency_log::tests::receipt_out_of_range_index_is_none ... ok
+test transparency_log::tests::receipts_are_refused_for_a_zero_size_or_oversized_checkpoint ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_signed_checkpoint_with_the_wrong_tree_size ... FAILED
+test transparency_log::receipt::tests::verify_receipt_accepts_every_index_of_every_size_up_to_17 ... ok
+thread 'transparency_log::receipt::tests::verify_receipt_rejects_an_index_at_or_beyond_the_checkpoint_size' (872) panicked at crates/core/src/transparency_log/receipt.rs:78:13:
+thread 'transparency_log::receipt::tests::verify_receipt_rejects_a_receipt_whose_index_does_not_match_its_proof' (869) panicked at crates/core/src/transparency_log/receipt.rs:67:9:
+thread 'transparency_log::receipt::tests::verify_receipt_rejects_a_signed_checkpoint_with_the_wrong_tree_size' (870) panicked at crates/core/src/transparency_log/receipt.rs:99:9:
+test result: FAILED. 62 passed; 3 failed; 4 ignored; 0 measured; 0 filtered out; 
+test out_of_range_indices_have_no_proof ... ok
+test consistency_proofs_verify_for_every_prefix ... ok
+test incremental_root_equals_full_rebuild ... ok
+test every_leaf_has_a_valid_inclusion_proof_and_a_tampered_one_fails ... ok
+test signed_receipts_verify_for_any_record_and_fail_under_another_key ... ok
+test a_receipt_verifies_only_at_its_own_index ... FAILED
+thread 'a_receipt_verifies_only_at_its_own_index' (18) panicked at crates/core/tests/properties.rs:85:1:
+minimal failing input: recs = [
+test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; 

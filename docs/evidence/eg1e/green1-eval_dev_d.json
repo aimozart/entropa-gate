@@ -1,0 +1,430 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "clean": {
+      "actions": {
+        "allow": 2255,
+        "block": 5
+      },
+      "cases": 2260,
+      "failed": 5,
+      "failed_ids": [
+        "d-chy-0142",
+        "d-chy-0151",
+        "d-cneg-0084",
+        "d-cneg-0170",
+        "d-cneg-0242"
+      ],
+      "families": {
+        "assign_clean:docker": {
+          "cases": 146,
+          "failed": 0
+        },
+        "assign_clean:go": {
+          "cases": 148,
+          "failed": 0
+        },
+        "assign_clean:java": {
+          "cases": 144,
+          "failed": 0
+        },
+        "assign_clean:js": {
+          "cases": 138,
+          "failed": 0
+        },
+        "assign_clean:prose": {
+          "cases": 60,
+          "failed": 0
+        },
+        "assign_clean:python": {
+          "cases": 158,
+          "failed": 0
+        },
+        "assign_clean:rust": {
+          "cases": 147,
+          "failed": 0
+        },
+        "assign_clean:shell": {
+          "cases": 147,
+          "failed": 0
+        },
+        "assign_clean:terraform": {
+          "cases": 138,
+          "failed": 0
+        },
+        "assign_clean:yaml": {
+          "cases": 134,
+          "failed": 0
+        },
+        "card_neg:0": {
+          "cases": 25,
+          "failed": 1
+        },
+        "card_neg:1": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:10": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:11": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:2": {
+          "cases": 25,
+          "failed": 2
+        },
+        "card_neg:3": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:4": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:5": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:6": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:7": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:8": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_neg:9": {
+          "cases": 25,
+          "failed": 0
+        },
+        "clean_hyphen:0": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:1": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:2": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:3": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:4": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:5": {
+          "cases": 67,
+          "failed": 0
+        },
+        "clean_hyphen:6": {
+          "cases": 66,
+          "failed": 0
+        },
+        "clean_hyphen:7": {
+          "cases": 66,
+          "failed": 2
+        },
+        "clean_hyphen:8": {
+          "cases": 66,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00453813852474804
+    },
+    "secrets": {
+      "actions": {
+        "block": 2630
+      },
+      "cases": 2630,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "assign_literal:hyphen:0": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:hyphen:1": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:10": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:hyphen:11": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:12": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:2": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:3": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:4": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:5": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:6": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:7": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:8": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:hyphen:9": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:plain:0": {
+          "cases": 70,
+          "failed": 0
+        },
+        "assign_literal:plain:1": {
+          "cases": 70,
+          "failed": 0
+        },
+        "assign_literal:plain:10": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:11": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:12": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:2": {
+          "cases": 70,
+          "failed": 0
+        },
+        "assign_literal:plain:3": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:4": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:5": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:6": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:7": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:8": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:plain:9": {
+          "cases": 69,
+          "failed": 0
+        },
+        "assign_literal:reverse:0": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:1": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:reverse:10": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:11": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:reverse:12": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:2": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:3": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:4": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:5": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:6": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:7": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:8": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:reverse:9": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:0": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:1": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:10": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:11": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:12": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:rot13:2": {
+          "cases": 3,
+          "failed": 0
+        },
+        "assign_literal:rot13:3": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:4": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:5": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:6": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:7": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:8": {
+          "cases": 4,
+          "failed": 0
+        },
+        "assign_literal:rot13:9": {
+          "cases": 4,
+          "failed": 0
+        },
+        "card_pos:0": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:1": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:10": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:11": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:2": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:3": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:4": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:5": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:6": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:7": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:8": {
+          "cases": 25,
+          "failed": 0
+        },
+        "card_pos:9": {
+          "cases": 25,
+          "failed": 0
+        },
+        "hyphen_mid:compound": {
+          "cases": 320,
+          "failed": 0
+        },
+        "hyphen_mid:irregular": {
+          "cases": 320,
+          "failed": 0
+        },
+        "hyphen_mid:regular_mid": {
+          "cases": 320,
+          "failed": 0
+        },
+        "hyphen_mid:split_keyword": {
+          "cases": 320,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.0011384132164364846
+    }
+  }
+}

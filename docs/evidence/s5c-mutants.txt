@@ -1,0 +1,4 @@
+mutants: jobs=2 timeout=60s limits: memory=24g swap=24g cpus=12 pids=4096
+Found 97 mutants to test
+ok       Unmutated baseline in 3s build + 10s test
+97 mutants tested in 65s: 89 caught, 8 unviable

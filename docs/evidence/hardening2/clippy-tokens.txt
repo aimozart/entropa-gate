@@ -1,0 +1,53 @@
+crates/tokens/src/canon.rs:58:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/canon.rs:79:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:90:12: warning: slicing may panic
+crates/tokens/src/canon.rs:91:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:98:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:107:17: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:110:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:122:33: warning: this `continue` expression is redundant
+crates/tokens/src/canon.rs:116:40: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:133:17: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:136:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:142:33: warning: this `continue` expression is redundant
+crates/tokens/src/canon.rs:140:43: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:161:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/canon.rs:163:23: warning: slicing may panic
+crates/tokens/src/canon.rs:164:32: warning: indexing may panic
+crates/tokens/src/canon.rs:206:17: warning: consider adding a `;` to the last statement for consistent formatting: help: add a `;` here: `out.extend_from_slice(format!("\\u{:04x}", c as u32).as_bytes());`
+crates/tokens/src/canon.rs:253:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:261:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:268:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:277:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:284:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:291:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:21:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:30:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:83:26: warning: indexing may panic
+crates/tokens/src/claims.rs:83:33: warning: indexing may panic
+crates/tokens/src/claims.rs:88:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/claims.rs:143:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/claims.rs:204:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:31:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:106:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:115:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:95:78: warning: indexing may panic
+crates/tokens/src/design_c.rs:95:85: warning: indexing may panic
+crates/tokens/src/design_c.rs:140:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `next.corpora.clone_from(c)`
+crates/tokens/src/design_c.rs:143:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `next.actions.clone_from(a)`
+crates/tokens/src/design_c.rs:206:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:353:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `signer_pk.clone_from(&b.next_pubkey)`
+crates/tokens/src/design_c.rs:354:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `prev_sig.clone_from(&b.sig)`
+crates/tokens/src/design_c.rs:360:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:376:20: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/tokens/src/design_c.rs:454:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/revoke.rs:65:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/revoke.rs:83:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:9:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:17:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:25:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:34:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:57:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:143:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:156:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:162:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers

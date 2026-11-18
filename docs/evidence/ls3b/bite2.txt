@@ -1,0 +1,10 @@
+server: header block 1 MiB: KILLED by h8 
+server: 1000 headers: KILLED by h8 
+server: body read limit off: KILLED by h9 
+server: preflight ignores headers: KILLED by h13 
+server: prints the client key: KILLED by h14 
+server: prints the content type: KILLED by h14 
+server: 200 for unknown paths: KILLED by h2 
+settings: hops default: KILLED by h1 
+settings: star origin allowed: SURVIVED 
+settings: list of origins allowed: KILLED by h1 

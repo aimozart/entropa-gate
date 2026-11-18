@@ -1,0 +1,7 @@
+caught 24 missed 2 timeout 0 unviable 7
+--- SIGKILL (not counted as caught):
+--- missed:
+crates/tiers/src/lib.rs:218:5: replace request_hash -> String with String::new()
+crates/tiers/src/lib.rs:218:5: replace request_hash -> String with "xyzzy".into()
+--- timeout:
+DONE

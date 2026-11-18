@@ -1,0 +1,37 @@
+Synthetic Stale Standard
+Article 1
+Retention
+Operators shall retain widget logs for 91 days. This version also requires encryption.
+Article 2
+Retention
+Operators shall retain widget logs for 92 days. This version also requires encryption.
+Article 3
+Retention
+Operators shall retain widget logs for 93 days. This version also requires encryption.
+Article 4
+Retention
+Operators shall retain widget logs for 94 days. This version also requires encryption.
+Article 5
+Retention
+Operators shall retain widget logs for 95 days. This version also requires encryption.
+Article 6
+Retention
+Operators shall retain widget logs for 96 days. This version also requires encryption.
+Article 7
+Retention
+Operators shall retain widget logs for 97 days. This version also requires encryption.
+Article 8
+Retention
+Operators shall retain widget logs for 98 days. This version also requires encryption.
+Article 9
+Retention
+Operators shall retain widget logs for 99 days. This version also requires encryption.
+Article 10
+Retention
+Operators shall retain widget logs for 100 days. This version also requires encryption.
+Article 11
+Retention
+Operators shall retain widget logs for 41 days.
+Article 12
+Retention
+Operators shall retain widget logs for 42 days.

@@ -1,0 +1,11 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -f
+      - Dockerfile.transparency
+      - -t
+      - us-central1-docker.pkg.dev/entropa-testnet/cloud-run-source-deploy/entropa-transparency:latest
+      - .
+images:
+  - us-central1-docker.pkg.dev/entropa-testnet/cloud-run-source-deploy/entropa-transparency:latest

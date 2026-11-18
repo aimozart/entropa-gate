@@ -1,0 +1,2 @@
+caught: 461  missed: 193  timeout: 27  unviable: 6
+--- caught only by SIGKILL (NOT counted as caught):

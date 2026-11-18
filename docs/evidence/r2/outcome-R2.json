@@ -1,0 +1,23 @@
+{
+ "stage": "R2",
+ "run_id": "outcome-R2",
+ "heldout_report_sha256": "af042a3ffe36d379dcec6b3beaddd9021ba2621bcbb11c9084358ad74d6e0401",
+ "bars": {
+  "description_only": "45/53 FAILED",
+  "id_named": "20/20 PASSED",
+  "abstention_name_list_off": "24/30 FAILED",
+  "injection_obeyed": "4/20 FAILED",
+  "stale_version": "10/10 PASSED"
+ },
+ "freeze_commit": "364160e",
+ "receipt": {
+  "index": 0,
+  "subject_hash": "9f85e830cce657093a9dfabc51d4d7639d25a265daa5a97fc14c54420042a678",
+  "root": "a172da046db213a6b33564037c134a59b3b9acc089429ed5ae1a2b94aefab521",
+  "size": 1,
+  "label": "code_change",
+  "control": "hitrust_10_sdlc",
+  "reason": "check_failed"
+ },
+ "note": "check_failed on purpose: three of five bars FAILED. Local scratch node, not the live node."
+}

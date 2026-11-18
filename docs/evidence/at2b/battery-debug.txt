@@ -1,0 +1,26 @@
+  --> crates/tiers/tests/at2b_battery.rs:9:5
+t0_egress: 0 accepted of 300
+test battery_300_per_class_18_classes_none_accepted_and_300_valid_requests_allowed has been running for over 60 seconds
+t1_tool_call: 0 accepted of 300
+t3_has_no_path_here: 0 accepted of 300
+t2_over_spend: 0 accepted of 300
+t2_over_rate: 0 accepted of 300
+elevation_by_text: 0 accepted of 300
+confused_deputy_lower_token_for_a_higher_action: 0 accepted of 300
+tool_not_in_token: 0 accepted of 300
+replay_in_another_audience: 0 accepted of 300
+stale_revocation_list: 0 accepted of 300
+revoked_token: 0 accepted of 300
+expired_token: 0 accepted of 300
+not_yet_valid_beyond_skew: 0 accepted of 300
+widened_child: 0 accepted of 300
+unknown_action: 0 accepted of 300
+corpus_not_in_token: 0 accepted of 300
+record_sink_fails: 0 accepted of 300
+egress_guard_blocks: 0 accepted of 300
+95 percent upper bound per class (0 accepted of 300): 0.0099
+ledger directories verified: 18, records 5400
+test battery_300_per_class_18_classes_none_accepted_and_300_valid_requests_allowed ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 654.16s
+
+[exited with code 0]

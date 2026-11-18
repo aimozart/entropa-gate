@@ -1,0 +1,10 @@
+ok   good-passes
+ok   bullet-without-evidence
+ok   pointer-to-missing-file
+ok   pointer-to-untracked-file
+ok   pointer-escape
+ok   email
+ok   banned-word
+ok   readme-needs-the-wording
+ok   empty-directory
+RESULT: 9 passed, 0 failed; scratch <build-dir>/tmpdir/cpd-test.AVUoBf

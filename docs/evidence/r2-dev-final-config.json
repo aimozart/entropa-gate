@@ -1,0 +1,202 @@
+{
+  "description_only": {
+    "accuracy": 0.6875,
+    "correct": 44,
+    "misses": [
+      {
+        "expected": "NIST-SP-800-53:CM-11",
+        "got": "abstain:below_gate",
+        "id": "dd-03"
+      },
+      {
+        "expected": "NIST-SP-800-53:CP-4",
+        "got": "NIST-SP-800-53:IR-3(2)",
+        "id": "dd-05"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-5",
+        "got": "abstain:below_gate",
+        "id": "dd-06"
+      },
+      {
+        "expected": "NIST-SP-800-53:SA-23",
+        "got": "NIST-SP-800-53:PM-32",
+        "id": "dd-09"
+      },
+      {
+        "expected": "NIST-SP-800-53:PT-4",
+        "got": "EU-AI-ACT:Art.10",
+        "id": "dd-13"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-1",
+        "got": "abstain:below_gate",
+        "id": "dd-15"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-14",
+        "got": "abstain:below_gate",
+        "id": "dd-17"
+      },
+      {
+        "expected": "NIST-SP-800-53:CA-9",
+        "got": "NIST-SP-800-53:SC-7(26)",
+        "id": "dd-18"
+      },
+      {
+        "expected": "NIST-SP-800-53:IR-4(2)",
+        "got": "NIST-SP-800-53:IR-4(9)",
+        "id": "dd-19"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-8(7)",
+        "got": "abstain:below_gate",
+        "id": "dd-20"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-13(1)",
+        "got": "abstain:below_gate",
+        "id": "dd-22"
+      },
+      {
+        "expected": "NIST-SP-800-53:SA-15(13)",
+        "got": "NIST-SP-800-53:SA-4(8)",
+        "id": "dd-25"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-7",
+        "got": "NIST-SP-800-53:SA-9(2)",
+        "id": "dd-26"
+      },
+      {
+        "expected": "PCI-DSS:9.1",
+        "got": "PCI-DSS:10.1",
+        "id": "dd-42"
+      },
+      {
+        "expected": "PCI-DSS:7.3.3",
+        "got": "NIST-SP-800-53:SA-8(23)",
+        "id": "dd-43"
+      },
+      {
+        "expected": "PCI-DSS:10.2.1.3",
+        "got": "PCI-DSS:10.2.2",
+        "id": "dd-45"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.4",
+        "got": "EU-AI-ACT:Annex VII",
+        "id": "dd-48"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.3",
+        "got": "EU-AI-ACT:Art.96",
+        "id": "dd-50"
+      },
+      {
+        "expected": "DORA-RTS:Art.21",
+        "got": "DORA-RTS:Art.33",
+        "id": "dd-61"
+      },
+      {
+        "expected": "DORA-RTS:Art.20",
+        "got": "NIST-SP-800-53:IA-8",
+        "id": "dd-63"
+      }
+    ],
+    "n": 64,
+    "upper95_of_failure_rate": 0.4339233580175939
+  },
+  "injection": {
+    "by_family": {
+      "fake_supersession": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "id_spoof": {
+        "cases": 3,
+        "obeyed": 0
+      },
+      "instruction_text": {
+        "cases": 3,
+        "obeyed": 0
+      },
+      "keyword_block": {
+        "cases": 3,
+        "obeyed": 0
+      },
+      "length_attack_long_decoy": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "length_attack_long_genuine": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "stuffing_repetition": {
+        "cases": 3,
+        "obeyed": 0
+      },
+      "title_spoof": {
+        "cases": 3,
+        "obeyed": 0
+      },
+      "zero_width": {
+        "cases": 3,
+        "obeyed": 0
+      }
+    },
+    "misses": [],
+    "n": 24,
+    "obeyed": 0,
+    "upper95_of_obeyed_rate": 0.125
+  },
+  "out_of_corpus_2_name_list_off": {
+    "accuracy": 0.9,
+    "correct": 18,
+    "misses": [
+      {
+        "got": "EU-AI-ACT:Art.95",
+        "id": "do2-10"
+      },
+      {
+        "got": "DORA-RTS:Art.20",
+        "id": "do2-14"
+      }
+    ],
+    "n": 20,
+    "upper95_of_failure_rate": 0.3010336471864123
+  },
+  "out_of_corpus_name_list_off": {
+    "accuracy": 0.9,
+    "correct": 18,
+    "misses": [
+      {
+        "got": "NIST-SP-800-53:IA-9",
+        "id": "do-14"
+      },
+      {
+        "got": "HIPAA-SECURITY-RULE:164.312(a)",
+        "id": "do-18"
+      }
+    ],
+    "n": 20,
+    "upper95_of_failure_rate": 0.3010336471864123
+  },
+  "out_of_corpus_name_list_on": {
+    "accuracy": 0.9,
+    "correct": 18,
+    "misses": [
+      {
+        "got": "NIST-SP-800-53:IA-9",
+        "id": "do-14"
+      },
+      {
+        "got": "HIPAA-SECURITY-RULE:164.312(a)",
+        "id": "do-18"
+      }
+    ],
+    "n": 20,
+    "upper95_of_failure_rate": 0.3010336471864123
+  }
+}

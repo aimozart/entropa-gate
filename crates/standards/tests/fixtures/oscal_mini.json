@@ -1,0 +1,8 @@
+{"catalog":{"uuid":"x","metadata":{"title":"Synthetic mini catalog","version":"0.0.1"},
+ "groups":[{"id":"zz","title":"Synthetic family","controls":[
+  {"id":"zz-1","title":"Policy and Procedures","parts":[
+    {"name":"statement","parts":[{"name":"item","prose":"Develop and document a {{ insert: param, zz-01_odp }} policy for widgets."},{"name":"item","prose":"Review the policy every {{ insert: param, zz-01_odp.02 }}."}]},
+    {"name":"guidance","prose":"Synthetic guidance about widget policy and review cadence."}],
+   "controls":[{"id":"zz-1.2","title":"Automated Review","parts":[{"name":"statement","prose":"Employ automated mechanisms to review widget policy."},{"name":"guidance","prose":"Synthetic enhancement guidance."}]}]},
+  {"id":"zz-2","title":"Withdrawn Control","props":[{"name":"status","value":"withdrawn"}],"parts":[]},
+  {"id":"zz-3","title":"Gadget Inventory","parts":[{"name":"statement","prose":"Maintain an inventory of gadgets."}]}]}]}}

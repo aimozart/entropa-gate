@@ -1,0 +1,5 @@
+ok   no failure: one npm ci, then the build
+FAIL one timeout (rc=1 attempts=1 built=0)
+FAIL retry not announced: npm error code EIDLETIMEOUT
+FAIL two timeouts (rc=1 attempts=1 built=0)
+FAIL three timeouts (rc=1 attempts=1 built=0)

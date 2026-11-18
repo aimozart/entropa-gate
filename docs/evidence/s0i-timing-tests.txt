@@ -1,0 +1,2 @@
+passed 49 failed 0  ENTROPA_FAST_TESTS=0 wall=26.7s
+passed 49 failed 0  ENTROPA_FAST_TESTS=1 wall=12.5s

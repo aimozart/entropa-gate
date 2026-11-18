@@ -1,0 +1,18 @@
+KILLED   L1 signature not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L2 canonical bytes not required -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.17s | er
+KILLED   L3 unknown fields allowed -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L4 version not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L5 algorithm not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L6 product not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L7 expiry not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L8 not_before not checked -> c4 :: test c4_planted_attacks_300_per_class_in_14_classes_none_accepted ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; f
+KILLED   L9 tolerance ignored -> c3 :: test c3_the_clock_tolerance_is_24_hours_on_both_ends_with_exact_boundaries ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filter
+KILLED   L10 window length not limited -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.28s | er
+KILLED   L11 duplicate entitlements allowed -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.30s | er
+KILLED   L12 entitlement count not limited -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.31s | er
+KILLED   L13 field forms not checked -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.13s | er
+KILLED   L14 wrong signature domain -> c1 :: test c1_a_good_licence_is_accepted_and_its_claims_are_read_back ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; fin
+KILLED   L15 required entitlement ignored -> c1 :: test c1_a_good_licence_is_accepted_and_its_claims_are_read_back ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; fin
+KILLED   L16 size limit removed -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.11s | er
+KILLED   L17 unknown key accepted -> c2 :: test c2_each_refusal_has_its_own_closed_code ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.11s | er
+KILLED   L18 clock read in the licence path -> c5 :: test c5_the_licence_path_holds_no_clock_no_network_and_no_issuer ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; fi

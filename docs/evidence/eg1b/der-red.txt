@@ -1,0 +1,8 @@
+test k1_each_algorithm_identifier_marks_a_private_key ... ok
+test k2_the_first_byte_the_sequence_position_and_the_window_are_exact ... ok
+test k3_real_openssl_private_keys_are_detected_and_the_matching_public_keys_are_not ... FAILED
+
+--
+thread 'k3_real_openssl_private_keys_are_detected_and_the_matching_public_keys_are_not' (2012423) panicked at crates/egress/tests/survivors_k.rs:130:9:
+ec: a real private key was not detected
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

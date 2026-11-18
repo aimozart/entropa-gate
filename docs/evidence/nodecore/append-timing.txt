@@ -1,0 +1,6 @@
+OLD append at ~10k records: 5.659211543 s
+NEW append at ~10k records: .448371282 s
+OLD append at ~10k records: 5.572961158 s
+NEW append at ~10k records: .459233281 s
+OLD append at ~10k records: 5.578271166 s
+NEW append at ~10k records: .457398132 s

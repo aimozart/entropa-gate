@@ -1,0 +1,25 @@
+  File "<home>/entropa-rust/scripts/tests/test_probe_bedrock.py", line 92, in test_an_unknown_model_is_recorded_with_a_null_estimate
+    self.assertIsNone(rec["est_cost_usd"])
+AssertionError: 3.5e-06 is not None
+
+======================================================================
+FAIL: test_the_cost_estimate_is_model_aware_for_every_nova_id_form (test_probe_bedrock.Output.test_the_cost_estimate_is_model_aware_for_every_nova_id_form)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<home>/entropa-rust/scripts/tests/test_probe_bedrock.py", line 75, in test_the_cost_estimate_is_model_aware_for_every_nova_id_form
+    self.assertIn(lite, self.run_with("us.amazon.nova-lite-v1:0"))
+AssertionError: 'est_cost_usd=0.0000019' not found in 'model_id=us.amazon.nova-lite-v1:0\nregion=us-west-2\nhttp_status=200\nrequest_id=req-123\ninput_tokens=20\noutput_tokens=3\nstop_reason=end_turn\nest_cost_usd=0.0000035\n'
+
+======================================================================
+FAIL: test_the_cost_estimate_uses_the_nova_lite_price_list_numbers (test_probe_bedrock.Output.test_the_cost_estimate_uses_the_nova_lite_price_list_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<home>/entropa-rust/scripts/tests/test_probe_bedrock.py", line 71, in test_the_cost_estimate_uses_the_nova_lite_price_list_numbers
+    self.assertIn("est_cost_usd=0.0000019", self.run_with("amazon.nova-lite-v1:0"))  # 20 x 0.06/1M + 3 x 0.24/1M
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'est_cost_usd=0.0000019' not found in 'model_id=amazon.nova-lite-v1:0\nregion=us-west-2\nhttp_status=200\nrequest_id=req-123\ninput_tokens=20\noutput_tokens=3\nstop_reason=end_turn\nest_cost_usd=0.0000035\n'
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.002s
+
+FAILED (failures=4)

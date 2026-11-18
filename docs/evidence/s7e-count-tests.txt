@@ -1,0 +1,4 @@
+transparency_log_prototype              16       0        0
+transparency_service                     0       0        0
+vectors                                  2       0        0
+TOTAL                                  647       0        5

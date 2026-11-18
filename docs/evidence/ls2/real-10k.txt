@@ -1,0 +1,5 @@
+OK records=10000 pages=50 bytes=5792778 key_id=5141c3f819d14559
+generation wall 2.99s, max rss 331768 KB
+bundle bytes: 5792778
+data files: 51
+largest file bytes: 115765

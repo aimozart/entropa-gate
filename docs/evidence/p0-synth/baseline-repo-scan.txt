@@ -1,0 +1,23 @@
+test t4_the_ssn_shape_finder_itself_works ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... ok
+test t1_no_canary_appears_anywhere_outside_the_gate ... FAILED
+test t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... FAILED
+
+failures:
+
+--
+thread 't1_no_canary_appears_anywhere_outside_the_gate' (3728081) panicked at crates/synthetic/tests/repo_scan.rs:77:5:
+canary tokens found outside the gate: ["<build-dir>/<worktree>/crates/try/tests/contract.rs"]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range stdout ----
+--
+thread 't3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range' (3728083) panicked at crates/synthetic/tests/repo_scan.rs:151:5:
+valid-range SSN-shaped values (could look like real data): ["crates/egress/tests/hardening_panic.rs: DDD-DD-DDDD"]
+
+
+failures:
+--
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `-p entropa-synthetic --test repo_scan`

@@ -1,0 +1,14 @@
+Found 32 mutants to test
+ok       Unmutated baseline in 14s build + 26s test
+MISSED   crates/mockview/src/lib.rs:37:9: replace <impl std::fmt::Display for ViewError>::fmt -> std::fmt::Result with Ok(Default::default()) in 0s build + 5s test
+MISSED   crates/mockview/src/lib.rs:90:16: replace > with >= in read_marker in 0s build + 5s test
+MISSED   crates/mockview/src/lib.rs:106:18: replace match guard !b.is_empty() with true in key_id in 0s build + 5s test
+MISSED   crates/mockview/src/main.rs:6:5: replace main with () in 0s build + 5s test
+MISSED   crates/mockview/src/main.rs:7:20: replace || with && in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:16: replace < with == in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:16: replace < with > in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:16: replace < with <= in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:31: replace > with == in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:31: replace > with < in main in 0s build + 4s test
+MISSED   crates/mockview/src/main.rs:7:31: replace > with >= in main in 0s build + 4s test
+32 mutants tested in 3m: 11 missed, 19 caught, 2 unviable

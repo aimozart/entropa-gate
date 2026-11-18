@@ -1,0 +1,2 @@
+strace (cargo test of nodecore incl. its cargo tree call) network syscalls: 0
+test binary alone: 0

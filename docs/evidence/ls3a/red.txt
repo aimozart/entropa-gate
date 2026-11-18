@@ -1,0 +1,71 @@
+ --> crates/try/tests/contract.rs:4:20
+  |
+4 | use entropa_core::{CheckpointSigner, Probe};
+--
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contract.rs (target/release/deps/contract-e5928e53a0ef486b)
+--
+test k10_the_handler_takes_the_time_from_the_caller_and_the_dependency_tree_has_no_network_crate ... FAILED
+test k3_every_tier_answers_with_the_same_shape_and_an_unknown_tier_is_refused ... FAILED
+test k9_every_answer_has_a_status_from_the_table_and_an_error_code_from_the_closed_list ... FAILED
+test k2_a_secret_shaped_text_is_blocked_with_closed_reason_codes_and_a_deny_record ... FAILED
+test k1_an_ordinary_text_is_allowed_with_a_signed_record_and_exactly_the_documented_fields ... FAILED
+test k5_malformed_bodies_are_refused_with_their_own_code_and_never_echoed ... FAILED
+test k6_the_rate_limit_counts_per_client_resets_with_the_window_and_tells_when_to_retry ... FAILED
+test k8_nothing_the_visitor_sent_is_echoed_or_stored_in_the_answer_or_the_record ... FAILED
+test k4_the_size_limit_is_exact_and_the_content_type_must_be_json ... FAILED
+test k7_the_limiter_remembers_a_bounded_number_of_clients ... FAILED
+
+failures:
+--
+thread 'k10_the_handler_takes_the_time_from_the_caller_and_the_dependency_tree_has_no_network_crate' (3663679) panicked at crates/try/tests/contract.rs:465:18:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+--
+thread 'k3_every_tier_answers_with_the_same_shape_and_an_unknown_tier_is_refused' (3663682) panicked at crates/try/tests/contract.rs:94:9:
+assertion `left == right` failed: T0: {"error":"not_implemented"}
+  left: 501
+--
+thread 'k9_every_answer_has_a_status_from_the_table_and_an_error_code_from_the_closed_list' (3663688) panicked at crates/try/tests/contract.rs:436:9:
+status 501 on "\"T1\"\"T1\"😀Bearer \\\""
+
+--
+thread 'k2_a_secret_shaped_text_is_blocked_with_closed_reason_codes_and_a_deny_record' (3663681) panicked at crates/try/tests/contract.rs:69:5:
+assertion `left == right` failed: {"error":"not_implemented"}
+  left: 501
+--
+thread 'k1_an_ordinary_text_is_allowed_with_a_signed_record_and_exactly_the_documented_fields' (3663680) panicked at crates/try/tests/contract.rs:46:5:
+assertion `left == right` failed: {"error":"not_implemented"}
+  left: 501
+--
+thread 'k5_malformed_bodies_are_refused_with_their_own_code_and_never_echoed' (3663684) panicked at crates/try/tests/contract.rs:223:9:
+assertion `left == right` failed: invalid utf-8: {"error":"not_implemented"}
+  left: (501, "not_implemented")
+--
+thread 'k6_the_rate_limit_counts_per_client_resets_with_the_window_and_tells_when_to_retry' (3663685) panicked at crates/try/tests/contract.rs:245:9:
+assertion `left == right` failed: request 0
+  left: 501
+--
+thread 'k8_nothing_the_visitor_sent_is_echoed_or_stored_in_the_answer_or_the_record' (3663687) panicked at crates/try/tests/contract.rs:343:5:
+assertion `left == right` failed
+  left: 501
+--
+thread 'k4_the_size_limit_is_exact_and_the_content_type_must_be_json' (3663683) panicked at crates/try/tests/contract.rs:118:5:
+assertion `left == right` failed: exactly the limit is accepted
+  left: 501
+--
+thread 'k7_the_limiter_remembers_a_bounded_number_of_clients' (3663686) panicked at crates/try/tests/contract.rs:323:5:
+the limiter forgot far more than it had to: 0
+
+--
+test result: FAILED. 0 passed; 10 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-try --test contract`
+   Doc-tests entropa_try
+
+--
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 1 target failed:
+    `-p entropa-try --test contract`

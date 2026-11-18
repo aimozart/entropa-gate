@@ -1,0 +1,22 @@
+[package]
+name = "entropa-nodecore"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "One network-free append and verify core for the Entropa node, the gate and the tiers (NODECORE, a stage record (not published))"
+publish = false
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-ledger = { path = "../ledger" }
+entropa-approvals = { path = "../approvals" }
+entropa-witness = { path = "../witness" }
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+entropa-platinum = { path = "../platinum" }
+
+[lints]
+workspace = true

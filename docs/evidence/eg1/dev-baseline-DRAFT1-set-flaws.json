@@ -1,0 +1,477 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "abuse": {
+      "actions": {
+        "allow": 49,
+        "block": 251
+      },
+      "cases": 300,
+      "failed": 24,
+      "failed_ids": [
+        "abuse-008",
+        "abuse-010",
+        "abuse-021",
+        "abuse-023",
+        "abuse-035",
+        "abuse-043",
+        "abuse-061",
+        "abuse-075",
+        "abuse-077",
+        "abuse-133",
+        "abuse-148",
+        "abuse-151",
+        "abuse-160",
+        "abuse-173",
+        "abuse-182",
+        "abuse-203",
+        "abuse-211",
+        "abuse-223",
+        "abuse-229",
+        "abuse-231",
+        "abuse-234",
+        "abuse-255",
+        "abuse-257",
+        "abuse-283"
+      ],
+      "families": {
+        "attachment_many": {
+          "cases": 30,
+          "failed": 0
+        },
+        "attachment_type": {
+          "cases": 25,
+          "failed": 0
+        },
+        "bad_utf8": {
+          "cases": 25,
+          "failed": 0
+        },
+        "bomb": {
+          "cases": 25,
+          "failed": 0
+        },
+        "deep": {
+          "cases": 24,
+          "failed": 0
+        },
+        "dup_keys": {
+          "cases": 32,
+          "failed": 0
+        },
+        "nul": {
+          "cases": 33,
+          "failed": 0
+        },
+        "oversize": {
+          "cases": 24,
+          "failed": 24
+        },
+        "t0": {
+          "cases": 28,
+          "failed": 0
+        },
+        "truncated_json": {
+          "cases": 27,
+          "failed": 0
+        },
+        "wide": {
+          "cases": 27,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.10967830689124394
+    },
+    "clean": {
+      "actions": {
+        "allow": 300
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "code": {
+          "cases": 103,
+          "failed": 0
+        },
+        "mixed": {
+          "cases": 52,
+          "failed": 0
+        },
+        "prose": {
+          "cases": 145,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "destination": {
+      "actions": {
+        "block": 300
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "body_dns": {
+          "cases": 64,
+          "failed": 0
+        },
+        "body_path": {
+          "cases": 32,
+          "failed": 0
+        },
+        "body_query": {
+          "cases": 22,
+          "failed": 0
+        },
+        "body_userinfo": {
+          "cases": 22,
+          "failed": 0
+        },
+        "destination": {
+          "cases": 160,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    },
+    "personal": {
+      "actions": {
+        "allow": 62,
+        "block": 159,
+        "redact": 87
+      },
+      "cases": 308,
+      "failed": 40,
+      "failed_ids": [
+        "personal-134",
+        "personal-139",
+        "personal-151",
+        "personal-155",
+        "personal-163",
+        "personal-165",
+        "personal-171",
+        "personal-173",
+        "personal-178",
+        "personal-179",
+        "personal-180",
+        "personal-181",
+        "personal-183",
+        "personal-185",
+        "personal-186",
+        "personal-192",
+        "personal-193",
+        "personal-196",
+        "personal-287",
+        "personal-288",
+        "personal-289",
+        "personal-290",
+        "personal-291",
+        "personal-292",
+        "personal-293",
+        "personal-294",
+        "personal-295",
+        "personal-296",
+        "personal-297",
+        "personal-298",
+        "personal-299",
+        "personal-300",
+        "personal-301",
+        "personal-302",
+        "personal-303",
+        "personal-304",
+        "personal-305",
+        "personal-306",
+        "personal-307",
+        "personal-308"
+      ],
+      "families": {
+        "card_embedded": {
+          "cases": 22,
+          "failed": 10
+        },
+        "card_formatted": {
+          "cases": 22,
+          "failed": 5
+        },
+        "card_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "card_plain": {
+          "cases": 22,
+          "failed": 3
+        },
+        "dob": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email": {
+          "cases": 22,
+          "failed": 0
+        },
+        "email_obf": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban": {
+          "cases": 22,
+          "failed": 0
+        },
+        "iban_near_miss": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs": {
+          "cases": 22,
+          "failed": 0
+        },
+        "nhs_near_miss": {
+          "cases": 22,
+          "failed": 22
+        },
+        "phone": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn": {
+          "cases": 22,
+          "failed": 0
+        },
+        "ssn_obf": {
+          "cases": 22,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.16463055315608757
+    },
+    "secrets": {
+      "actions": {
+        "allow": 16,
+        "block": 296
+      },
+      "cases": 312,
+      "failed": 16,
+      "failed_ids": [
+        "secrets-196",
+        "secrets-197",
+        "secrets-198",
+        "secrets-200",
+        "secrets-202",
+        "secrets-203",
+        "secrets-206",
+        "secrets-207",
+        "secrets-208",
+        "secrets-210",
+        "secrets-213",
+        "secrets-214",
+        "secrets-215",
+        "secrets-216",
+        "secrets-218",
+        "secrets-220"
+      ],
+      "families": {
+        "attachment": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base32": {
+          "cases": 13,
+          "failed": 0
+        },
+        "base64": {
+          "cases": 13,
+          "failed": 0
+        },
+        "case": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain2": {
+          "cases": 13,
+          "failed": 0
+        },
+        "chain3": {
+          "cases": 13,
+          "failed": 0
+        },
+        "conn": {
+          "cases": 13,
+          "failed": 0
+        },
+        "entity": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_u": {
+          "cases": 13,
+          "failed": 0
+        },
+        "escape_x": {
+          "cases": 13,
+          "failed": 0
+        },
+        "hex": {
+          "cases": 13,
+          "failed": 0
+        },
+        "homoglyph": {
+          "cases": 13,
+          "failed": 0
+        },
+        "json_arg": {
+          "cases": 13,
+          "failed": 0
+        },
+        "jwt": {
+          "cases": 13,
+          "failed": 0
+        },
+        "percent": {
+          "cases": 13,
+          "failed": 0
+        },
+        "plain": {
+          "cases": 13,
+          "failed": 0
+        },
+        "private_key": {
+          "cases": 13,
+          "failed": 0
+        },
+        "reverse": {
+          "cases": 13,
+          "failed": 0
+        },
+        "rot13": {
+          "cases": 13,
+          "failed": 0
+        },
+        "separators": {
+          "cases": 13,
+          "failed": 9
+        },
+        "split_fields": {
+          "cases": 13,
+          "failed": 7
+        },
+        "split_tail": {
+          "cases": 13,
+          "failed": 0
+        },
+        "url_query": {
+          "cases": 13,
+          "failed": 0
+        },
+        "zero_width": {
+          "cases": 13,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.07595448551968048
+    },
+    "terms": {
+      "actions": {
+        "allow": 35,
+        "block": 265
+      },
+      "cases": 300,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "clean_decoy": {
+          "cases": 35,
+          "failed": 0
+        },
+        "marker_banner": {
+          "cases": 33,
+          "failed": 0
+        },
+        "marker_keyed": {
+          "cases": 34,
+          "failed": 0
+        },
+        "term_b64": {
+          "cases": 23,
+          "failed": 0
+        },
+        "term_case": {
+          "cases": 26,
+          "failed": 0
+        },
+        "term_homoglyph": {
+          "cases": 27,
+          "failed": 0
+        },
+        "term_plain": {
+          "cases": 57,
+          "failed": 0
+        },
+        "term_sep": {
+          "cases": 30,
+          "failed": 0
+        },
+        "term_zero": {
+          "cases": 35,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00993608194445772
+    }
+  },
+  "standards_clauses": {
+    "actions": {
+      "allow": 1474,
+      "block": 26,
+      "redact": 2
+    },
+    "by_detector": {
+      "D1": {
+        "clauses": 26,
+        "ids": [
+          "DORA-RTS:Art.1",
+          "DORA-RTS:Art.19",
+          "DORA-RTS:Art.21",
+          "DORA-RTS:Art.23",
+          "EU-AI-ACT:Annex I",
+          "EU-AI-ACT:Annex III",
+          "EU-AI-ACT:Annex X",
+          "EU-AI-ACT:Art.102",
+          "EU-AI-ACT:Art.103",
+          "EU-AI-ACT:Art.104",
+          "EU-AI-ACT:Art.105",
+          "EU-AI-ACT:Art.106",
+          "EU-AI-ACT:Art.107",
+          "EU-AI-ACT:Art.108",
+          "EU-AI-ACT:Art.109",
+          "EU-AI-ACT:Art.110",
+          "EU-AI-ACT:Art.111",
+          "EU-AI-ACT:Art.112",
+          "EU-AI-ACT:Art.113",
+          "EU-AI-ACT:Art.78",
+          "EU-AI-ACT:Art.79",
+          "EU-AI-ACT:Art.97",
+          "NIST-SP-800-53:CA-2(3)",
+          "NIST-SP-800-53:IR-8",
+          "NIST-SP-800-53:SA-21",
+          "NIST-SP-800-53:SI-19"
+        ]
+      },
+      "D5.email": {
+        "clauses": 2,
+        "ids": [
+          "NIST-SP-800-53:AC-4(20)",
+          "NIST-SP-800-53:SC-46"
+        ]
+      },
+      "D6": {
+        "clauses": 1,
+        "ids": [
+          "NIST-SP-800-53:PM-17"
+        ]
+      }
+    },
+    "clauses": 1502
+  }
+}

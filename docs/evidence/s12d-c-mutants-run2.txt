@@ -1,0 +1,14 @@
+MISSED   crates/council/src/memory.rs:123:52: replace || with && in precedent_terms in 0s build + 1s test
+MISSED   crates/council/src/memory.rs:224:9: replace LexicalIndex::is_empty -> bool with false in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:149:16: replace ^ with | in Rng::next in 1s build + 0s test
+MISSED   crates/council/src/memory_eval.rs:149:16: replace ^ with & in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:149:21: replace >> with << in Rng::next in 0s build + 0s test
+MISSED   crates/council/src/memory_eval.rs:150:16: replace ^ with | in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:150:16: replace ^ with & in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:150:21: replace >> with << in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:151:11: replace ^ with | in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:151:11: replace ^ with & in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:151:16: replace >> with << in Rng::next in 0s build + 1s test
+MISSED   crates/council/src/memory_eval.rs:189:37: replace + with * in planted_retrieval_suite in 0s build + 0s test
+MISSED   crates/council/src/memory_eval.rs:209:51: replace - with / in planted_retrieval_suite in 0s build + 0s test
+173 mutants tested in 2m: 13 missed, 155 caught, 5 unviable

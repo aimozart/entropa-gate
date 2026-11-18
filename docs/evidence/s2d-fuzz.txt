@@ -1,0 +1,3 @@
+## S2d fuzz (scripts/fuzz.sh, 60 s each, FUZZ_CRATE=mcp)
+tool_args: Done 6750984 runs in 61 second(s), no crash
+line_pump: Done 2375815 runs in 61 second(s), no crash

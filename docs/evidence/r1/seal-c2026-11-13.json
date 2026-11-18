@@ -1,0 +1,67 @@
+{
+ "evidence_kind": "corpus_seal",
+ "corpus_version": "c2026-11-13",
+ "corpus_hash": "0e8066afcbcee42f3839e1e6d091452dbcf6a63384adb76fc8daf434276de2e8",
+ "manifest_file": "manifest-c2026-11-13.json",
+ "manifest_sha256": "b3e817addea2d08a09dc8b42cf1c855dd878aac534d4dd2775f2331323df795b",
+ "sources": [
+  {
+   "standard": "DORA-RTS",
+   "std_version": "2024-1774",
+   "tier": "OPEN",
+   "clauses": 42,
+   "source_sha256": "0643fbe55849bea1800066ce0da2996339eca57d0d183f52269b536f9ce3ffff"
+  },
+  {
+   "standard": "EU-AI-ACT",
+   "std_version": "2024-1689",
+   "tier": "OPEN",
+   "clauses": 126,
+   "source_sha256": "bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e"
+  },
+  {
+   "standard": "HIPAA-SECURITY-RULE",
+   "std_version": "45CFR164.312",
+   "tier": "OPEN",
+   "clauses": 5,
+   "source_sha256": "0ace4571763b61223edd271d3e2bca0d31c99fb6877beceecb0223e21da2679e"
+  },
+  {
+   "standard": "NIST-SP-800-53",
+   "std_version": "5.2.0",
+   "tier": "OPEN",
+   "clauses": 1016,
+   "source_sha256": "64ca6b4161de51ab6af098a7d101d326f14c95e1abf721396cd8a049e8115eeb"
+  },
+  {
+   "standard": "PCI-DSS",
+   "std_version": "4.0.1",
+   "tier": "LICENSED",
+   "clauses": 313,
+   "source_sha256": "5e6b9093b84007b973097d20126a3768ea2f0a1d4200255c849b0fb3bf04ebc7"
+  }
+ ],
+ "clauses": 1502,
+ "receipts": [
+  {
+   "index": 0,
+   "what": "sealed",
+   "label": "corpus_version",
+   "kind": "evidence.change",
+   "control": "nist_800_53_au_9",
+   "subject_hash": "b3cc1cc65b5e8b20fd87917219490702da7d608257ade52a502604d9366b5a01",
+   "plain": "A standards corpus version was sealed: 1,502 clauses from 5 sources. Supports NIST SP 800-53 AU-9."
+  },
+  {
+   "index": 1,
+   "what": "refused_change_under_same_version_name",
+   "label": "corpus_version",
+   "kind": "evidence.change",
+   "control": "nist_800_53_au_9",
+   "subject_hash": "0326eb824e8647de24e02cc48582cc0c27399d3460132203dfa7a7990c6ffc05",
+   "plain": "A standards corpus version was refused: a source changed under the same version name, so nothing was overwritten. Supports NIST SP 800-53 AU-9."
+  }
+ ],
+ "verify": "OK records=2 checkpoints=2",
+ "note": "the manifest holds clause ids and text hashes only; no clause text is in this repository. The sealed store (with text) lives outside every repository. Receipts are on a local scratch node, not the live node."
+}

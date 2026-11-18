@@ -1,0 +1,26 @@
+[package]
+name = "entropa-ledger-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+entropa-ledger = { path = ".." }
+
+[workspace]
+
+[[bin]]
+name = "event_decode"
+path = "fuzz_targets/event_decode.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "bundle_verify"
+path = "fuzz_targets/bundle_verify.rs"
+test = false
+doc = false

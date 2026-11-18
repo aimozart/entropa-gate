@@ -1,0 +1,39 @@
+[package]
+name = "entropa-gate"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "The client-installed app (S1): init (the client's own key), hash-only records, offline verify, static explorer, offline licence check. No network code."
+
+[[bin]]
+name = "entropa-gate"
+path = "src/main.rs"
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-ledger = { path = "../ledger" }
+entropa-nodecore = { path = "../nodecore" }
+entropa-approvals = { path = "../approvals" }
+entropa-witness = { path = "../witness" }
+entropa-tokens = { path = "../tokens" }
+hex = { workspace = true }
+serde_json = { workspace = true }
+toml = "1"
+
+[[example]]
+name = "issue_test_licence"
+required-features = ["issue"]
+
+[features]
+# issuing a licence needs the issuer key, which stays with the owner: the capability is compiled only for tests and the issuer tool
+issue = []
+
+[dev-dependencies]
+entropa-gate = { path = ".", features = ["issue"] }
+entropa-platinum = { path = "../platinum" }
+tempfile = "3"
+
+[lints]
+workspace = true

@@ -1,0 +1,26 @@
+old verifies original:
+/bin/bash: line 1: <build-dir>/tmpdir/platinum-old: No such file or directory
+new verifies original:
+OK records=10000 checkpoints=10000
+2.62s
+new appends to n1:
+{"index":10000,"subject_hash":"864b042bdecb8f565be004bd0e7094f81743c075db3014a96a97923e39ad36fe","size":10001,"root":"40
+old verifies the file written by new:
+/bin/bash: line 1: <build-dir>/tmpdir/platinum-old: No such file or directory
+old appends to n2:
+/bin/bash: line 1: <build-dir>/tmpdir/platinum-old: No such file or directory
+new verifies file written by old:
+OK records=10000 checkpoints=10000
+OLD binary = <worktree> build of 2026-11-15 (before LSV and before the move)
+old verifies original:
+OK records=10000 checkpoints=10000
+old verifies the 10001-record file written by new:
+OK records=10001 checkpoints=10001
+old appends to n2:
+{"index":10000,"subject_hash":"864b042bdecb8f565be004bd0e7094f81743c075db3014a96a97923e39ad36fe","size":10001,
+new verifies the file written by old:
+OK records=10001 checkpoints=10001
+same request, same key, new vs old: files equal?
+/dev/fd/63 /dev/fd/62 differ: byte 1, line 1
+<build-dir>/tmpdir/nc-compat/n1/evidence-ledger/checkpoints.log <build-dir>/tmpdir/nc-compat/n2/evidence-ledger/checkpoints.log differ: byte 106688904, line 10001
+NOTE: the appended line 10001 differs because the request carries no ts (default now); cmp's first difference at line 10001 of checkpoints.log means the 10,000 earlier lines are byte-identical between the two files

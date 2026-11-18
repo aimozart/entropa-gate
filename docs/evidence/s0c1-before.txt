@@ -1,0 +1,7 @@
+before: api src rust lines 6120; workspace rust lines 9894; website files 34
+crates/api/src/signup/checkout.rs:6
+crates/api/src/signup/alert.rs:2
+crates/api/src/signup/pending_store.rs:2
+crates/api/src/billing.rs:0
+crates/api/src/signup/webhook.rs:16
+crates/api/src/signup/mod.rs:4

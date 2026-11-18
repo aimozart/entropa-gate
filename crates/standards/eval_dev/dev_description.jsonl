@@ -1,0 +1,64 @@
+{"qid": "dd-01", "query": "Which control covers trusting identity cards issued by outside organisations, such as federated or PKI credentials, once they have been verified?", "standard": "NIST-SP-800-53", "expected": "IA-8(5)", "form": "description"}
+{"qid": "dd-02", "query": "Using digital signatures or hashes to spot unauthorised modification of firmware and software.", "standard": "NIST-SP-800-53", "expected": "SI-7(6)", "form": "description"}
+{"qid": "dd-03", "query": "Rules on whether employees may install software on their own and how the organisation enforces them.", "standard": "NIST-SP-800-53", "expected": "CM-11", "form": "description"}
+{"qid": "dd-04", "query": "Giving staff and managers feedback on how well the security training is working.", "standard": "NIST-SP-800-53", "expected": "AT-6", "form": "description"}
+{"qid": "dd-05", "query": "Exercising the disaster recovery plan to find out whether it would really work.", "standard": "NIST-SP-800-53", "expected": "CP-4", "form": "description"}
+{"qid": "dd-06", "query": "Protecting a system from being knocked offline by floods of traffic or resource exhaustion.", "standard": "NIST-SP-800-53", "expected": "SC-5", "form": "description"}
+{"qid": "dd-07", "query": "Keeping a list of every hardware and software component in the system with no duplicates.", "standard": "NIST-SP-800-53", "expected": "CM-8", "form": "description"}
+{"qid": "dd-08", "query": "Helping users decide whether to share information with a partner when the partner's access has to match the restrictions on the data.", "standard": "NIST-SP-800-53", "expected": "AC-21", "form": "description"}
+{"qid": "dd-09", "query": "Applying specialised hardening or design to mission-essential components so the organisation can trust them more.", "standard": "NIST-SP-800-53", "expected": "SA-23", "form": "description"}
+{"qid": "dd-10", "query": "A plan for protecting critical infrastructure and key resources.", "standard": "NIST-SP-800-53", "expected": "PM-8", "form": "description"}
+{"qid": "dd-11", "query": "Agreements with suppliers to be told when the supply chain has been compromised.", "standard": "NIST-SP-800-53", "expected": "SR-8", "form": "description"}
+{"qid": "dd-12", "query": "Hardware-based mechanisms that keep domains separated and enforce policy between them.", "standard": "NIST-SP-800-53", "expected": "SC-49", "form": "description"}
+{"qid": "dd-13", "query": "Letting people agree before their personal data is collected and used.", "standard": "NIST-SP-800-53", "expected": "PT-4", "form": "description"}
+{"qid": "dd-14", "query": "Writing security and privacy responsibilities into job descriptions.", "standard": "NIST-SP-800-53", "expected": "PS-9", "form": "description"}
+{"qid": "dd-15", "query": "Having a documented access control policy with procedures, reviewed on a schedule, and a named official in charge.", "standard": "NIST-SP-800-53", "expected": "AC-1", "form": "description"}
+{"qid": "dd-16", "query": "Contract terms that give us priority at the backup processing site when recovery time targets must be met.", "standard": "NIST-SP-800-53", "expected": "CP-7(3)", "form": "description"}
+{"qid": "dd-17", "query": "Components that start in a clean known state and are shut down after use so an attacker cannot persist.", "standard": "NIST-SP-800-53", "expected": "SI-14", "form": "description"}
+{"qid": "dd-18", "query": "Approving and documenting the connections between components inside our own system boundary.", "standard": "NIST-SP-800-53", "expected": "CA-9", "form": "description"}
+{"qid": "dd-19", "query": "Changing the system configuration on the fly as part of responding to an incident.", "standard": "NIST-SP-800-53", "expected": "IR-4(2)", "form": "description"}
+{"qid": "dd-20", "query": "One central place that holds the inventory of system components.", "standard": "NIST-SP-800-53", "expected": "CM-8(7)", "form": "description"}
+{"qid": "dd-21", "query": "A documented policy and procedures for system maintenance.", "standard": "NIST-SP-800-53", "expected": "MA-1", "form": "description"}
+{"qid": "dd-22", "query": "Scanning public sites with automated tools for signs that organisational information is being disclosed.", "standard": "NIST-SP-800-53", "expected": "AU-13(1)", "form": "description"}
+{"qid": "dd-23", "query": "Letting authorised individuals change the values of security attributes attached to data.", "standard": "NIST-SP-800-53", "expected": "AC-16(2)", "form": "description"}
+{"qid": "dd-24", "query": "Software-based mechanisms that separate domains and enforce policy between them.", "standard": "NIST-SP-800-53", "expected": "SC-50", "form": "description"}
+{"qid": "dd-25", "query": "Requiring developers to use a defined format for logging, saying what to log and at what level of detail.", "standard": "NIST-SP-800-53", "expected": "SA-15(13)", "form": "description"}
+{"qid": "dd-26", "query": "Configuring systems to run only the functions, ports, protocols and services that are needed and switching the rest off.", "standard": "NIST-SP-800-53", "expected": "CM-7", "form": "description"}
+{"qid": "dd-27", "query": "Authorising the people who perform maintenance, and escorting anyone who is not authorised.", "standard": "NIST-SP-800-53", "expected": "MA-5", "form": "description"}
+{"qid": "dd-28", "query": "Letting privileged administrators configure the filters that enforce information flow policies.", "standard": "NIST-SP-800-53", "expected": "AC-4(11)", "form": "description"}
+{"qid": "dd-29", "query": "Making sure there is enough processing, telecommunications and environmental capacity while operating under the contingency plan.", "standard": "NIST-SP-800-53", "expected": "CP-2(2)", "form": "description"}
+{"qid": "dd-30", "query": "Telling individuals how their personal information will be processed, in a notice.", "standard": "NIST-SP-800-53", "expected": "PT-5", "form": "description"}
+{"qid": "dd-31", "query": "Making sure the system can generate audit records for the events that have been chosen for logging.", "standard": "NIST-SP-800-53", "expected": "AU-12", "form": "description"}
+{"qid": "dd-32", "query": "Rules for people connecting to the system from outside, such as remote access sessions.", "standard": "NIST-SP-800-53", "expected": "AC-17", "form": "description"}
+{"qid": "dd-33", "query": "Watching physical access to the facility and reviewing the logs to detect incidents.", "standard": "NIST-SP-800-53", "expected": "PE-6", "form": "description"}
+{"qid": "dd-34", "query": "Reviewing and approving changes to the system before they are made, and keeping a record of them.", "standard": "NIST-SP-800-53", "expected": "CM-3", "form": "description"}
+{"qid": "dd-35", "query": "Assessing the likelihood and impact of harm so that risk to operations and individuals is understood.", "standard": "NIST-SP-800-53", "expected": "RA-3", "form": "description"}
+{"qid": "dd-36", "query": "Written agreements in which third-party service providers acknowledge responsibility for the security of the customer's account data.", "standard": "PCI-DSS", "expected": "12.9.1", "form": "description"}
+{"qid": "dd-37", "query": "Service providers who connect remotely to customer sites must use a different authentication factor for each customer.", "standard": "PCI-DSS", "expected": "8.2.3", "form": "description"}
+{"qid": "dd-38", "query": "Protecting audit logs from destruction and unauthorised modification.", "standard": "PCI-DSS", "expected": "10.3", "form": "description"}
+{"qid": "dd-39", "query": "How often malware scans must run when an entity chooses scans and defines the frequency by a targeted risk analysis.", "standard": "PCI-DSS", "expected": "5.3.2.1", "form": "description"}
+{"qid": "dd-40", "query": "Detecting network intrusions and unexpected file changes and responding to them.", "standard": "PCI-DSS", "expected": "11.5", "form": "description"}
+{"qid": "dd-41", "query": "What a service provider must tell its customers about changing passwords when passwords are the only authentication factor.", "standard": "PCI-DSS", "expected": "8.3.10", "form": "description"}
+{"qid": "dd-42", "query": "Having the processes for restricting physical access to cardholder data defined and understood.", "standard": "PCI-DSS", "expected": "9.1", "form": "description"}
+{"qid": "dd-43", "query": "The access control system should refuse everything by default unless access is explicitly allowed.", "standard": "PCI-DSS", "expected": "7.3.3", "form": "description"}
+{"qid": "dd-44", "query": "Monitoring individual physical access to sensitive areas with cameras or access control mechanisms.", "standard": "PCI-DSS", "expected": "9.2.1.1", "form": "description"}
+{"qid": "dd-45", "query": "Making sure the audit logs record every access to the audit logs themselves.", "standard": "PCI-DSS", "expected": "10.2.1.3", "form": "description"}
+{"qid": "dd-46", "query": "Changing wireless encryption keys when people who knew them leave or a key may have been compromised.", "standard": "PCI-DSS", "expected": "2.3.2", "form": "description"}
+{"qid": "dd-47", "query": "Keeping system clocks in step using time synchronisation technology.", "standard": "PCI-DSS", "expected": "10.6.1", "form": "description"}
+{"qid": "dd-48", "query": "A duty to make sure staff who operate AI systems understand them well enough.", "standard": "EU-AI-ACT", "expected": "Art.4", "form": "description"}
+{"qid": "dd-49", "query": "What distributors must check before making a high-risk AI system available, such as the CE marking.", "standard": "EU-AI-ACT", "expected": "Art.24", "form": "description"}
+{"qid": "dd-50", "query": "Definitions of the terms used in the regulation, such as what counts as an AI system.", "standard": "EU-AI-ACT", "expected": "Art.3", "form": "description"}
+{"qid": "dd-51", "query": "Detailed rules for how AI regulatory sandboxes work, to be set by implementing acts.", "standard": "EU-AI-ACT", "expected": "Art.58", "form": "description"}
+{"qid": "dd-52", "query": "Reusing personal data lawfully collected for another purpose inside a sandbox for public-interest AI.", "standard": "EU-AI-ACT", "expected": "Art.59", "form": "description"}
+{"qid": "dd-53", "query": "The general duty that high-risk AI systems comply with the requirements, taking account of their intended purpose.", "standard": "EU-AI-ACT", "expected": "Art.8", "form": "description"}
+{"qid": "dd-54", "query": "An advisory forum giving technical expertise to the Board and the Commission.", "standard": "EU-AI-ACT", "expected": "Art.67", "form": "description"}
+{"qid": "dd-55", "query": "Conformity assessment bodies from third countries with which the Union has an agreement.", "standard": "EU-AI-ACT", "expected": "Art.39", "form": "description"}
+{"qid": "dd-56", "query": "Extra duties for providers of general-purpose models that carry systemic risk, such as adversarial testing.", "standard": "EU-AI-ACT", "expected": "Art.55", "form": "description"}
+{"qid": "dd-57", "query": "Fines the European Data Protection Supervisor can impose on EU institutions.", "standard": "EU-AI-ACT", "expected": "Art.100", "form": "description"}
+{"qid": "dd-58", "query": "Who in the financial entity is responsible for the internal governance and control framework for ICT security.", "standard": "DORA-RTS", "expected": "Art.28", "form": "description"}
+{"qid": "dd-59", "query": "Physical security measures for ICT assets, based on the threat landscape and environmental risks.", "standard": "DORA-RTS", "expected": "Art.32", "form": "description"}
+{"qid": "dd-60", "query": "ICT risk management policies, including approval by the management body and a statement of risk tolerance.", "standard": "DORA-RTS", "expected": "Art.3", "form": "description"}
+{"qid": "dd-61", "query": "A policy for assigning access rights on a need-to-know and least-privilege basis.", "standard": "DORA-RTS", "expected": "Art.21", "form": "description"}
+{"qid": "dd-62", "query": "ICT security elements that belong in the human resources policy, such as roles and responsibilities of staff.", "standard": "DORA-RTS", "expected": "Art.19", "form": "description"}
+{"qid": "dd-63", "query": "Identity management that makes sure every user is uniquely identified and authenticated.", "standard": "DORA-RTS", "expected": "Art.20", "form": "description"}
+{"qid": "dd-64", "query": "Detecting anomalous activities and the criteria that trigger incident detection and response.", "standard": "DORA-RTS", "expected": "Art.23", "form": "description"}

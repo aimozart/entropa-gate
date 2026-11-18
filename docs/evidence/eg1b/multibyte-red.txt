@@ -1,0 +1,16 @@
+      1     "\"DE89 3704 0044 0532 0130 0K\" (Block)",
+      1     "\"KB 12 34 56 A\" (Block)",
+      1     "\"KK 12 34 56 A\" (Block)",
+      1     "\"Number KB123456C here\" (Block)",
+      1 test m1_the_sealed_panic_input_does_not_panic ... FAILED
+      1 test m2_random_multibyte_text_never_panics_in_any_leaf_kind ... FAILED
+      1 test m3_targeted_slices_in_detectors_do_not_panic ... FAILED
+      1 test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.83s
+      1 thread 'm1_the_sealed_panic_input_does_not_panic' (3847559) panicked at crates/egress/src/decide.rs:659:28:
+      1 thread 'm1_the_sealed_panic_input_does_not_panic' (3847559) panicked at crates/egress/tests/multibyte.rs:95:9:
+    493 thread 'm2_random_multibyte_text_never_panics_in_any_leaf_kind' (3847560) panicked at crates/egress/src/decide.rs:659:28:
+      2 thread 'm2_random_multibyte_text_never_panics_in_any_leaf_kind' (3847560) panicked at crates/egress/src/detect.rs:532:54:
+      1 thread 'm2_random_multibyte_text_never_panics_in_any_leaf_kind' (3847560) panicked at crates/egress/tests/multibyte.rs:134:5:
+      3 thread 'm3_targeted_slices_in_detectors_do_not_panic' (3847561) panicked at crates/egress/src/detect.rs:513:24:
+      1 thread 'm3_targeted_slices_in_detectors_do_not_panic' (3847561) panicked at crates/egress/src/detect.rs:532:54:
+      1 thread 'm3_targeted_slices_in_detectors_do_not_panic' (3847561) panicked at crates/egress/tests/multibyte.rs:162:5:

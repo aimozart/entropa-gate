@@ -1,0 +1,10 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test n3_every_refusal_text_equals_the_unmoved_platinum_text_except_the_duplicate_key_decision ... ok
+test n4_a_duplicated_key_is_refused_in_all_three_schemas ... ok
+test n6_a_failing_signer_leaves_the_ledger_exactly_as_it_was ... ok
+test n2_evidence_and_council_events_equal_the_platinum_bytes ... ok
+test n1_four_decision_appends_write_the_golden_bytes_and_receipts ... ok
+test n5_verify_failures_have_the_unmoved_platinum_texts ... ok
+test n7_the_dependency_tree_holds_no_network_or_cloud_crate ... ok
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

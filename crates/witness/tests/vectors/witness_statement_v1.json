@@ -1,0 +1,87 @@
+{
+ "format": "entropa witness statements v1 (docs/ARCHITECTURE-WITNESS.md section 2)",
+ "generated_by": "independent Python script (json + blake3), not by the Rust code",
+ "fixed": {
+  "type": "witness.cosign",
+  "v": 1,
+  "witness_pubkey": "abababababababababababababababababababababababababababababababab",
+  "no_previous_root": "0000000000000000000000000000000000000000000000000000000000000000"
+ },
+ "cases": [
+  {
+   "name": "first_checkpoint",
+   "fields": {
+    "log_id": "e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123",
+    "size": 3,
+    "root": "d3d8508e1af6b58d8cba53eb94f2a6a5bf74987997230cd8aa4e3f284a4d6b83",
+    "log_timestamp": 1699999000,
+    "witness_time": 1700000000,
+    "previous_size": 0,
+    "previous_root": "0000000000000000000000000000000000000000000000000000000000000000",
+    "witness_pubkey": "abababababababababababababababababababababababababababababababab"
+   },
+   "canonical": "{\"log_id\":\"e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123\",\"log_timestamp\":1699999000,\"previous_root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"previous_size\":0,\"root\":\"d3d8508e1af6b58d8cba53eb94f2a6a5bf74987997230cd8aa4e3f284a4d6b83\",\"size\":3,\"type\":\"witness.cosign\",\"v\":1,\"witness_pubkey\":\"abababababababababababababababababababababababababababababababab\",\"witness_time\":1700000000}",
+   "digest_hex": "97234bdded967ecdc0a09d3be01ba5e4843c47431f4a09812b3fbde94103fdb9"
+  },
+  {
+   "name": "extension",
+   "fields": {
+    "log_id": "e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123",
+    "size": 7,
+    "root": "b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087",
+    "log_timestamp": 1699999010,
+    "witness_time": 1700000005,
+    "previous_size": 3,
+    "previous_root": "d3d8508e1af6b58d8cba53eb94f2a6a5bf74987997230cd8aa4e3f284a4d6b83",
+    "witness_pubkey": "abababababababababababababababababababababababababababababababab"
+   },
+   "canonical": "{\"log_id\":\"e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123\",\"log_timestamp\":1699999010,\"previous_root\":\"d3d8508e1af6b58d8cba53eb94f2a6a5bf74987997230cd8aa4e3f284a4d6b83\",\"previous_size\":3,\"root\":\"b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087\",\"size\":7,\"type\":\"witness.cosign\",\"v\":1,\"witness_pubkey\":\"abababababababababababababababababababababababababababababababab\",\"witness_time\":1700000005}",
+   "digest_hex": "f708179b560da2b19716912f5a95397bdbcf62193f2c3dd7e173e296e59ccff3"
+  },
+  {
+   "name": "same_checkpoint_again",
+   "fields": {
+    "log_id": "e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123",
+    "size": 7,
+    "root": "b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087",
+    "log_timestamp": 1699999010,
+    "witness_time": 1700000006,
+    "previous_size": 7,
+    "previous_root": "b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087",
+    "witness_pubkey": "abababababababababababababababababababababababababababababababab"
+   },
+   "canonical": "{\"log_id\":\"e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123\",\"log_timestamp\":1699999010,\"previous_root\":\"b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087\",\"previous_size\":7,\"root\":\"b6fc07b4ef501e64a348977ad7e8b136baeec1d2b925c5d5283ab90f80bfc087\",\"size\":7,\"type\":\"witness.cosign\",\"v\":1,\"witness_pubkey\":\"abababababababababababababababababababababababababababababababab\",\"witness_time\":1700000006}",
+   "digest_hex": "c5953865dad8b91dbe4535852a7900f51f0fb3a3c19360cb1514daabade4dd3b"
+  },
+  {
+   "name": "empty_log_first",
+   "fields": {
+    "log_id": "e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123",
+    "size": 0,
+    "root": "6bdf3fe55052831d222fc6b82b2ba03f32b3599410fafd317642e21925c38f16",
+    "log_timestamp": 1,
+    "witness_time": 2,
+    "previous_size": 0,
+    "previous_root": "0000000000000000000000000000000000000000000000000000000000000000",
+    "witness_pubkey": "abababababababababababababababababababababababababababababababab"
+   },
+   "canonical": "{\"log_id\":\"e3820e1931ecb41bcfaa52e614b17ec6c7983116b8457b4bd38a348935cf8123\",\"log_timestamp\":1,\"previous_root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"previous_size\":0,\"root\":\"6bdf3fe55052831d222fc6b82b2ba03f32b3599410fafd317642e21925c38f16\",\"size\":0,\"type\":\"witness.cosign\",\"v\":1,\"witness_pubkey\":\"abababababababababababababababababababababababababababababababab\",\"witness_time\":2}",
+   "digest_hex": "af672c04fe3523bcd0b44b57dabd5c43f021ab42e054c7dcdc0f443446d64208"
+  },
+  {
+   "name": "largest_numbers",
+   "fields": {
+    "log_id": "c466e001179276bbd401ce456ec4d8f599b80deab4c16dcb82a95b4f81c92e97",
+    "size": 9007199254740991,
+    "root": "d7878c2a851573f74fc185f23581e46d790ed0d9604b5dfe9d103afc9c6c02b8",
+    "log_timestamp": 9007199254740991,
+    "witness_time": 9007199254740991,
+    "previous_size": 9007199254740990,
+    "previous_root": "00eb55a4bf2a0d146db27ced830ebfe8fd86f78723eb0af9bb65bbf9a10cabce",
+    "witness_pubkey": "abababababababababababababababababababababababababababababababab"
+   },
+   "canonical": "{\"log_id\":\"c466e001179276bbd401ce456ec4d8f599b80deab4c16dcb82a95b4f81c92e97\",\"log_timestamp\":9007199254740991,\"previous_root\":\"00eb55a4bf2a0d146db27ced830ebfe8fd86f78723eb0af9bb65bbf9a10cabce\",\"previous_size\":9007199254740990,\"root\":\"d7878c2a851573f74fc185f23581e46d790ed0d9604b5dfe9d103afc9c6c02b8\",\"size\":9007199254740991,\"type\":\"witness.cosign\",\"v\":1,\"witness_pubkey\":\"abababababababababababababababababababababababababababababababab\",\"witness_time\":9007199254740991}",
+   "digest_hex": "fb5f087450f0318db0a8271b6fdacb01a47a7e1f5bb915d3cef563f6ee22d820"
+  }
+ ]
+}

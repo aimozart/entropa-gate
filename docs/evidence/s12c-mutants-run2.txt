@@ -1,0 +1,9 @@
+mutants: jobs=4 timeout=90s fast_tests=1 limits: memory=24g swap=24g cpus=12 pids=4096
+Found 634 mutants to test
+ok       Unmutated baseline in 15s build + 1s test
+MISSED   crates/council/src/planted.rs:248:38: delete ! in evaluate in 0s build + 0s test
+MISSED   crates/synthetic/src/lib.rs:73:20: replace + with * in ssn in 0s build + 0s test
+TIMEOUT  crates/synthetic/src/lib.rs:180:26: replace + with * in scan in 0s build + 90s test
+TIMEOUT  crates/synthetic/src/lib.rs:190:31: replace + with * in scan in 0s build + 90s test
+634 mutants tested in 6m: 2 missed, 605 caught, 25 unviable, 2 timeouts
+exit 3

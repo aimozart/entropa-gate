@@ -1,0 +1,2 @@
+== fuzz classify_bash for 90s
+Done 2219104 runs in 91 second(s)

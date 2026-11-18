@@ -1,0 +1,3 @@
+trial log copy lines: 262
+audit chain ok: 262 line(s)
+exit=0

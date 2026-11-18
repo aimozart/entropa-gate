@@ -1,0 +1,27 @@
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:CN=host.example.test
+   i:CN=Example Test CA
+   a:PKEY: EC, (prime256v1); sigalg: ecdsa-with-SHA256
+   v:NotBefore: Oct  1 00:00:00 2026 GMT; NotAfter: Jan  1 00:00:00 2027 GMT
+-----BEGIN CERTIFICATE-----
+CCCC
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=CN=host.example.test
+issuer=CN=Example Test CA
+---
+Peer signing digest: SHA256
+Peer signature type: ECDSA
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1500 bytes and written 400 bytes
+Verification error: hostname mismatch
+---
+New, TLSv1.2, Cipher is ECDHE-ECDSA-AES128-GCM-SHA256
+Server public key is 256 bit
+Secure Renegotiation IS supported
+Verify return code: 62 (Hostname mismatch, certificate is not valid for 'host.example.test'.)
+---

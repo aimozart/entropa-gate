@@ -1,0 +1,41 @@
+     Running unittests src/lib.rs (target/debug/deps/entropa_tiers-8e3d7b1554ae88f5)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/at2.rs (target/debug/deps/at2-3c8a3912b3a18149)
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+     Running tests/at2b.rs (target/debug/deps/at2b-c8757246cd2d3818)
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 14.43s
+     Running tests/at2b_battery.rs (target/debug/deps/at2b_battery-324e208756c693c8)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 304.67s
+     Running tests/at2b_latency.rs (target/debug/deps/at2b_latency-b7a9b4a80be6691d)
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/at2b_survivors.rs (target/debug/deps/at2b_survivors-3df8b2bcc0ac8009)
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+     Running tests/at3.rs (target/debug/deps/at3-ff82a53e34b43f0e)
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.04s
+     Running tests/at3_battery.rs (target/debug/deps/at3_battery-3f1eae10c04606fe)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1007.86s
+     Running tests/at3_gaps.rs (target/debug/deps/at3_gaps-d1cf3bc6873a299b)
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+     Running tests/at3_latency.rs (target/debug/deps/at3_latency-45cf74c00e98666b)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/at3_props.rs (target/debug/deps/at3_props-a8d413454929aeaf)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 164.63s
+     Running tests/at3b.rs (target/debug/deps/at3b-86e9a5da74b2dc07)
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 43.64s
+     Running tests/battery.rs (target/debug/deps/battery-5c46180e3b8c08fd)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 111.27s
+     Running tests/cedar.rs (target/debug/deps/cedar-0d3fb5ea489fc614)
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+     Running tests/incremental.rs (target/debug/deps/incremental-e3f7690a14d3e4f4)
+test result: ok. 13 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 9.33s
+     Running tests/incremental_big.rs (target/debug/deps/incremental_big-f324af1c351a42ac)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 820.09s
+     Running tests/incremental_perf.rs (target/debug/deps/incremental_perf-5e54ffef629209db)
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/latency.rs (target/debug/deps/latency-69adad7f4feed593)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 116.37s
+     Running tests/props.rs (target/debug/deps/props-bfe5461d299687d6)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 64.28s
+     Running tests/record_hash.rs (target/debug/deps/record_hash-9f908d904b639987)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

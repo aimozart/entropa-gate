@@ -1,0 +1,7 @@
+{
+ "added_on": "2026-11-13",
+ "note": "A second DEV out-of-corpus set, ADDED AFTER the R1-regression run showed that DEV set 1 (written to avoid common standard names, as the order required) overstated abstention. It names well-known standards in my own words; written and frozen before the change that uses it. DEV_FROZEN.json (set 1) is unchanged.",
+ "files": {
+  "dev_out_of_corpus_2.jsonl": "8fb9a8e6bda8775db38e15f7dac7380c0c6b74d4854e9934cc9e842abe55fcce"
+ }
+}

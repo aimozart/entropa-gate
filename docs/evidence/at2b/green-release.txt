@@ -1,0 +1,19 @@
+     Running unittests src/lib.rs (target/release/deps/entropa_tiers-83bddecd82361690)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/at2.rs (target/release/deps/at2-8c5617ef7c480b2d)
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/at2b.rs (target/release/deps/at2b-5c044501f1f2b7bb)
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.46s
+     Running tests/at2b_battery.rs (target/release/deps/at2b_battery-03b340683fac01c1)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 35.49s
+     Running tests/battery.rs (target/release/deps/battery-e4b2f883e1e13db7)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.56s
+     Running tests/cedar.rs (target/release/deps/cedar-3783df7aa9f2892b)
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+     Running tests/latency.rs (target/release/deps/latency-9f4d14c920261e21)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.34s
+     Running tests/props.rs (target/release/deps/props-987237382179333e)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.05s
+     Running tests/record_hash.rs (target/release/deps/record_hash-17d91ed3f523476e)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

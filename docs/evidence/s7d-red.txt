@@ -1,0 +1,508 @@
+   Compiling entropa-explorer v0.2.0 (/work/crates/explorer)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.17s
+     Running unittests src/lib.rs (target/debug/deps/entropa_explorer-5a44dd6f6a2fb4d4)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bundle.rs (target/debug/deps/bundle-2a5822085626afec)
+
+running 3 tests
+test b1_the_fixture_loads ... FAILED
+test b3_an_oversized_bundle_is_refused_before_parsing ... FAILED
+test b2_tampered_bundles_are_refused_on_load ... FAILED
+
+failures:
+
+---- b1_the_fixture_loads stdout ----
+
+thread 'b1_the_fixture_loads' (85) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- b3_an_oversized_bundle_is_refused_before_parsing stdout ----
+
+thread 'b3_an_oversized_bundle_is_refused_before_parsing' (87) panicked at crates/explorer/tests/bundle.rs:9:47:
+not yet implemented
+
+---- b2_tampered_bundles_are_refused_on_load stdout ----
+
+thread 'b2_tampered_bundles_are_refused_on_load' (86) panicked at crates/explorer/tests/bundle.rs:9:47:
+not yet implemented
+
+
+failures:
+    b1_the_fixture_loads
+    b2_tampered_bundles_are_refused_on_load
+    b3_an_oversized_bundle_is_refused_before_parsing
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p entropa-explorer --test bundle`
+     Running tests/contract.rs (target/debug/deps/contract-cb0fbb94ec68b181)
+
+running 8 tests
+test c3_record_detail_receipt_and_proof_verify_with_the_core_verifier ... FAILED
+test c2_records_page_newest_first_and_the_cursor_walks_every_record_once ... FAILED
+test c5_only_get_and_options_are_allowed ... FAILED
+test c4_a_receipt_asked_for_another_size_or_a_missing_record_is_refused ... FAILED
+test c1_health_and_head_report_the_loaded_log ... FAILED
+test c7_actor_pages_use_role_handles_only ... FAILED
+test c8_witness_statements_filter_by_size ... FAILED
+test c6_a_request_with_a_body_is_refused_and_unknown_paths_are_404 ... FAILED
+
+failures:
+
+---- c3_record_detail_receipt_and_proof_verify_with_the_core_verifier stdout ----
+
+thread 'c3_record_detail_receipt_and_proof_verify_with_the_core_verifier' (91) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- c2_records_page_newest_first_and_the_cursor_walks_every_record_once stdout ----
+
+thread 'c2_records_page_newest_first_and_the_cursor_walks_every_record_once' (90) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c5_only_get_and_options_are_allowed stdout ----
+
+thread 'c5_only_get_and_options_are_allowed' (93) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c4_a_receipt_asked_for_another_size_or_a_missing_record_is_refused stdout ----
+
+thread 'c4_a_receipt_asked_for_another_size_or_a_missing_record_is_refused' (92) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c1_health_and_head_report_the_loaded_log stdout ----
+
+thread 'c1_health_and_head_report_the_loaded_log' (89) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c7_actor_pages_use_role_handles_only stdout ----
+
+thread 'c7_actor_pages_use_role_handles_only' (95) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c8_witness_statements_filter_by_size stdout ----
+
+thread 'c8_witness_statements_filter_by_size' (96) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- c6_a_request_with_a_body_is_refused_and_unknown_paths_are_404 stdout ----
+
+thread 'c6_a_request_with_a_body_is_refused_and_unknown_paths_are_404' (94) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+
+failures:
+    c1_health_and_head_report_the_loaded_log
+    c2_records_page_newest_first_and_the_cursor_walks_every_record_once
+    c3_record_detail_receipt_and_proof_verify_with_the_core_verifier
+    c4_a_receipt_asked_for_another_size_or_a_missing_record_is_refused
+    c5_only_get_and_options_are_allowed
+    c6_a_request_with_a_body_is_refused_and_unknown_paths_are_404
+    c7_actor_pages_use_role_handles_only
+    c8_witness_statements_filter_by_size
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-explorer --test contract`
+     Running tests/fixture.rs (target/debug/deps/fixture-db941731af0f74a5)
+
+running 1 test
+test f1_the_fixture_is_the_ledger_generators_output ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.51s
+
+     Running tests/golden.rs (target/debug/deps/golden-15ae0ca5f2ab841f)
+
+running 2 tests
+test g1_every_golden_target_answers_byte_for_byte ... FAILED
+test g2_bodies_are_canonical_compact_json ... FAILED
+
+failures:
+
+---- g1_every_golden_target_answers_byte_for_byte stdout ----
+
+thread 'g1_every_golden_target_answers_byte_for_byte' (100) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- g2_bodies_are_canonical_compact_json stdout ----
+
+thread 'g2_bodies_are_canonical_compact_json' (101) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+
+failures:
+    g1_every_golden_target_answers_byte_for_byte
+    g2_bodies_are_canonical_compact_json
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p entropa-explorer --test golden`
+     Running tests/headers.rs (target/debug/deps/headers-10b83a073d3e81c4)
+
+running 5 tests
+test h2_no_cookies_no_auth_challenges_no_credentials ... FAILED
+test h3_cache_classes ... FAILED
+test h5_request_headers_never_change_the_response_or_appear_in_it ... FAILED
+test h1_every_response_carries_the_same_static_security_headers ... FAILED
+test h4_the_preflight_answers_with_methods_and_no_credentials ... FAILED
+
+failures:
+
+---- h2_no_cookies_no_auth_challenges_no_credentials stdout ----
+
+thread 'h2_no_cookies_no_auth_challenges_no_credentials' (104) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- h3_cache_classes stdout ----
+
+thread 'h3_cache_classes' (105) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- h5_request_headers_never_change_the_response_or_appear_in_it stdout ----
+
+thread 'h5_request_headers_never_change_the_response_or_appear_in_it' (107) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- h1_every_response_carries_the_same_static_security_headers stdout ----
+
+thread 'h1_every_response_carries_the_same_static_security_headers' (103) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- h4_the_preflight_answers_with_methods_and_no_credentials stdout ----
+
+thread 'h4_the_preflight_answers_with_methods_and_no_credentials' (106) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+
+failures:
+    h1_every_response_carries_the_same_static_security_headers
+    h2_no_cookies_no_auth_challenges_no_credentials
+    h3_cache_classes
+    h4_the_preflight_answers_with_methods_and_no_credentials
+    h5_request_headers_never_change_the_response_or_appear_in_it
+
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-explorer --test headers`
+     Running tests/hostile.rs (target/debug/deps/hostile-8baeaaad1a99b7ad)
+
+running 3 tests
+test x2_a_huge_limit_cannot_widen_the_page ... FAILED
+test x1_known_attacks_get_fixed_answers_without_an_echo ... FAILED
+test x3_any_path_and_query_gives_valid_json_and_no_echo ... FAILED
+
+failures:
+
+---- x2_a_huge_limit_cannot_widen_the_page stdout ----
+
+thread 'x2_a_huge_limit_cannot_widen_the_page' (110) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- x1_known_attacks_get_fixed_answers_without_an_echo stdout ----
+
+thread 'x1_known_attacks_get_fixed_answers_without_an_echo' (109) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- x3_any_path_and_query_gives_valid_json_and_no_echo stdout ----
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+thread 'x3_any_path_and_query_gives_valid_json_and_no_echo' (111) panicked at crates/explorer/tests/hostile.rs:42:1:
+Test failed: not yet implemented.
+minimal failing input: path = "", query = ""
+	successes: 0
+	local rejects: 0
+	global rejects: 0
+
+
+
+failures:
+    x1_known_attacks_get_fixed_answers_without_an_echo
+    x2_a_huge_limit_cannot_widen_the_page
+    x3_any_path_and_query_gives_valid_json_and_no_echo
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-explorer --test hostile`
+     Running tests/limiter.rs (target/debug/deps/limiter-720430937cd8d6ca)
+
+running 7 tests
+test l2_tokens_refill_one_per_second_up_to_the_burst ... FAILED
+test l6_a_clock_that_goes_backwards_never_panics_or_mints_tokens ... FAILED
+test l7_limited_responses_still_carry_the_security_and_cors_headers ... FAILED
+test l1_the_twenty_first_request_in_the_same_second_is_limited ... FAILED
+test l3_sixty_requests_in_a_minute_is_the_ceiling ... FAILED
+test l5_the_tracked_client_table_is_bounded ... FAILED
+test l4_clients_are_independent_and_forwarded_headers_are_ignored ... FAILED
+
+failures:
+
+---- l2_tokens_refill_one_per_second_up_to_the_burst stdout ----
+
+thread 'l2_tokens_refill_one_per_second_up_to_the_burst' (114) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- l6_a_clock_that_goes_backwards_never_panics_or_mints_tokens stdout ----
+
+thread 'l6_a_clock_that_goes_backwards_never_panics_or_mints_tokens' (118) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- l7_limited_responses_still_carry_the_security_and_cors_headers stdout ----
+
+thread 'l7_limited_responses_still_carry_the_security_and_cors_headers' (119) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- l1_the_twenty_first_request_in_the_same_second_is_limited stdout ----
+
+thread 'l1_the_twenty_first_request_in_the_same_second_is_limited' (113) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- l3_sixty_requests_in_a_minute_is_the_ceiling stdout ----
+
+thread 'l3_sixty_requests_in_a_minute_is_the_ceiling' (115) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- l5_the_tracked_client_table_is_bounded stdout ----
+
+thread 'l5_the_tracked_client_table_is_bounded' (117) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- l4_clients_are_independent_and_forwarded_headers_are_ignored stdout ----
+
+thread 'l4_clients_are_independent_and_forwarded_headers_are_ignored' (116) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+
+failures:
+    l1_the_twenty_first_request_in_the_same_second_is_limited
+    l2_tokens_refill_one_per_second_up_to_the_burst
+    l3_sixty_requests_in_a_minute_is_the_ceiling
+    l4_clients_are_independent_and_forwarded_headers_are_ignored
+    l5_the_tracked_client_table_is_bounded
+    l6_a_clock_that_goes_backwards_never_panics_or_mints_tokens
+    l7_limited_responses_still_carry_the_security_and_cors_headers
+
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-explorer --test limiter`
+     Running tests/query.rs (target/debug/deps/query-fbc308ea44d0ceac)
+
+running 5 tests
+error: test failed, to rerun pass `-p entropa-explorer --test query`
+     Running tests/static_checks.rs (target/debug/deps/static_checks-59b78adf25a421ba)
+test q3_filters_combine_with_and ... FAILED
+test q1_these_queries_are_all_bad_requests ... FAILED
+test q2_limits_at_the_edge_are_accepted ... FAILED
+test q4_path_and_query_caps_and_path_shape ... FAILED
+test q5_a_response_over_the_size_cap_is_refused_not_truncated ... FAILED
+
+failures:
+
+---- q3_filters_combine_with_and stdout ----
+
+thread 'q3_filters_combine_with_and' (123) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- q1_these_queries_are_all_bad_requests stdout ----
+
+thread 'q1_these_queries_are_all_bad_requests' (121) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- q2_limits_at_the_edge_are_accepted stdout ----
+
+thread 'q2_limits_at_the_edge_are_accepted' (122) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- q4_path_and_query_caps_and_path_shape stdout ----
+
+thread 'q4_path_and_query_caps_and_path_shape' (124) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+---- q5_a_response_over_the_size_cap_is_refused_not_truncated stdout ----
+
+thread 'q5_a_response_over_the_size_cap_is_refused_not_truncated' (125) panicked at crates/explorer/tests/common/mod.rs:33:47:
+not yet implemented
+
+
+failures:
+    q1_these_queries_are_all_bad_requests
+    q2_limits_at_the_edge_are_accepted
+    q3_filters_combine_with_and
+    q4_path_and_query_caps_and_path_shape
+    q5_a_response_over_the_size_cap_is_refused_not_truncated
+
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 5 tests
+test s1_no_write_paths_in_the_source ... ok
+test s2_no_network_client_no_process_no_ambient_clock_or_environment ... ok
+test s3_no_http_or_cloud_dependency_in_the_manifest ... ok
+test s5_the_source_never_names_a_cookie_or_a_session ... ok
+test s4_no_crew_names_in_the_source_the_fixture_or_the_golden_responses ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_explorer
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 7 targets failed:
+    `-p entropa-explorer --test bundle`
+    `-p entropa-explorer --test contract`
+    `-p entropa-explorer --test golden`
+    `-p entropa-explorer --test headers`
+    `-p entropa-explorer --test hostile`
+    `-p entropa-explorer --test limiter`
+    `-p entropa-explorer --test query`

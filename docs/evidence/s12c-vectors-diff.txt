@@ -1,0 +1,46 @@
+diff --git a/crates/council/tests/vectors/council_v1.json b/crates/council/tests/vectors/council_v1.json
+index 8f0c9d8..21ecc31 100644
+--- a/crates/council/tests/vectors/council_v1.json
++++ b/crates/council/tests/vectors/council_v1.json
+@@ -1,10 +1,11 @@
+ {
+  "cases": [
+   {
+-   "canonical": "{\"actor\":\"0123456789abcdef\",\"cadence\":\"weekly\",\"expires\":1800604800,\"n_decisions\":4,\"period_end\":1799600000,\"period_start\":1799000000,\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"trigger\":\"schedule\",\"ts\":1800000000,\"type\":\"session.opened\",\"v\":1,\"window_hash\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+-   "digest": "97d2bc2aff9d83e6d4cb60603d16afedc8459e18cfe23b114053d8913d785530",
++   "canonical": "{\"actor\":\"0123456789abcdef\",\"alg\":\"ML-DSA-65\",\"cadence\":\"weekly\",\"expires\":1800604800,\"n_decisions\":4,\"period_end\":1799600000,\"period_start\":1799000000,\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"trigger\":\"schedule\",\"ts\":1800000000,\"type\":\"session.opened\",\"v\":1,\"window_hash\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
++   "digest": "55c2bcfe676d8b53ad8ab614e78ddbca96085f6d7f663e564beaee1329094287",
+    "event": {
+     "actor": "0123456789abcdef",
++    "alg": "ML-DSA-65",
+     "cadence": "weekly",
+     "expires": 1800604800,
+     "n_decisions": 4,
+@@ -20,10 +21,11 @@
+    "name": "session.opened"
+   },
+   {
+-   "canonical": "{\"actor\":\"0123456789abcdef\",\"class\":\"missing_approval\",\"confidence\":\"medium\",\"evidence\":[{\"kind\":\"ledger_index\",\"ref\":\"idx:1\"},{\"kind\":\"event_hash\",\"ref\":\"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\"}],\"finding_id\":\"f-1\",\"model_id\":\"gemini-flash\",\"proposed_change\":\"test\",\"provider\":\"vertex\",\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"severity\":\"high\",\"subject_ref\":\"idx:1\",\"text_hash\":null,\"ts\":1800000100,\"type\":\"finding.submitted\",\"v\":1}",
+-   "digest": "7d4dead875b5bf2a68cebf2694032310bd6a9c11d1ddce6b7480a3c74897a9cf",
++   "canonical": "{\"actor\":\"0123456789abcdef\",\"alg\":\"ML-DSA-65\",\"class\":\"missing_approval\",\"confidence\":\"medium\",\"evidence\":[{\"kind\":\"ledger_index\",\"ref\":\"idx:1\"},{\"kind\":\"event_hash\",\"ref\":\"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\"}],\"finding_id\":\"f-1\",\"model_id\":\"gemini-flash\",\"proposed_change\":\"test\",\"provider\":\"vertex\",\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"severity\":\"high\",\"subject_ref\":\"idx:1\",\"text_hash\":null,\"ts\":1800000100,\"type\":\"finding.submitted\",\"v\":1}",
++   "digest": "25dd27c85b9c73732095717ef375914ead84d60aaf7f76028aeb2eb6b159077a",
+    "event": {
+     "actor": "0123456789abcdef",
++    "alg": "ML-DSA-65",
+     "class": "missing_approval",
+     "confidence": "medium",
+     "evidence": [
+@@ -51,10 +53,11 @@
+    "name": "finding.submitted"
+   },
+   {
+-   "canonical": "{\"actor\":\"fedcba9876543210\",\"approval_ref\":\"appr-1\",\"attested\":false,\"auth_ref\":\"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\"change_kind\":\"test\",\"decision\":\"accept\",\"finding_id\":\"f-1\",\"reason\":\"evidence_sufficient\",\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"ts\":1800000900,\"type\":\"decision.recorded\",\"v\":1}",
+-   "digest": "9b2f9a35a7d4d1a165336afd43b6d480c17efa733493646cecb10fb3004c3ebf",
++   "canonical": "{\"actor\":\"fedcba9876543210\",\"alg\":\"ML-DSA-65\",\"approval_ref\":\"appr-1\",\"attested\":false,\"auth_ref\":\"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\"change_kind\":\"test\",\"decision\":\"accept\",\"finding_id\":\"f-1\",\"reason\":\"evidence_sufficient\",\"session_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"ts\":1800000900,\"type\":\"decision.recorded\",\"v\":1}",
++   "digest": "103672352856e09c9ff34ac1f74e26d62cfeb1b8e99e511e9cfcf30015e1ac9c",
+    "event": {
+     "actor": "fedcba9876543210",
++    "alg": "ML-DSA-65",
+     "approval_ref": "appr-1",
+     "attested": false,
+     "auth_ref": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",

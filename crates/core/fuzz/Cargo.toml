@@ -1,0 +1,27 @@
+[package]
+name = "entropa-core-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+serde_json = "1"
+entropa-core = { path = ".." }
+
+[workspace]
+
+[[bin]]
+name = "decode_record"
+path = "fuzz_targets/decode_record.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "receipt_json"
+path = "fuzz_targets/receipt_json.rs"
+test = false
+doc = false

@@ -1,0 +1,5 @@
+crates/egress/src/context.rs:533:25: replace && with || in assignment
+crates/egress/src/context.rs:533:17: replace == with != in assignment
+crates/egress/src/context.rs:533:41: replace != with == in assignment
+crates/egress/src/context.rs:533:36: replace + with - in assignment
+crates/egress/src/context.rs:533:36: replace + with * in assignment

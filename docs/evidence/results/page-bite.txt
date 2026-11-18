@@ -1,0 +1,17 @@
+== no sort of bars
+FAIL: test_p4_inside_a_row_failed_bars_precede_passed_bars_and_every_row_says_set_spent (test_p
+Ran 7 tests in 0.564s
+FAILED (failures=1)
+== no failed section
+FAIL: test_p3_failures_come_first_and_all_17_are_listed (test_page.P.test_p3_failures_come_firs
+Ran 7 tests in 0.566s
+FAILED (failures=1)
+== no JSON escaping
+1
+FAIL: test_p2_hostile_text_in_the_data_never_becomes_markup (test_page.P.test_p2_hostile_text_i
+Ran 7 tests in 0.484s
+FAILED (failures=1)
+== summary not checked
+FAIL: test_p6_deterministic_and_refusals_write_nothing (test_page.P.test_p6_deterministic_and_r
+Ran 7 tests in 0.566s
+FAILED (failures=1)

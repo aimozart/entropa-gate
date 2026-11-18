@@ -1,0 +1,10 @@
+Found 182 mutants to test
+ok       Unmutated baseline in 15s build + 25s test
+MISSED   crates/ledger/src/bundle.rs:240:51: replace || with && in Generator::export_bundle in 1s build + 26s test
+MISSED   crates/ledger/src/bundle.rs:289:23: replace > with == in Generator::export_bundle in 0s build + 25s test
+MISSED   crates/ledger/src/bundle.rs:289:23: replace > with >= in Generator::export_bundle in 0s build + 26s test
+MISSED   crates/ledger/src/bundle.rs:447:26: replace || with && in verify_bundle in 0s build + 24s test
+MISSED   crates/ledger/src/bundle.rs:495:33: replace || with && in verify_bundle in 0s build + 26s test
+MISSED   crates/ledger/src/event.rs:144:19: replace > with == in encode_event in 0s build + 26s test
+MISSED   crates/ledger/src/event.rs:144:19: replace > with >= in encode_event in 0s build + 27s test
+182 mutants tested in 9m: 7 missed, 164 caught, 11 unviable

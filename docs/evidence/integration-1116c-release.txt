@@ -1,0 +1,4 @@
+test s7_the_evidence_endpoint_logs_and_verifies_over_http ... FAILED
+error: test failed, to rerun pass `-p entropa-platinum --test serve`
+error: 1 target failed:
+537 passed 1 failed 15 ignored

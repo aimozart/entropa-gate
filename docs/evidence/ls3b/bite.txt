@@ -1,0 +1,22 @@
+client key: leftmost entry: KILLED by h4,h5,k1,k2 
+client key: no /64 reduction: KILLED by h7,k4 
+client key: header trusted with zero hops: KILLED by k3 
+caps: daily cap off: KILLED by h12,k6,k7 
+caps: global cap off: KILLED by h12,k5 
+server: no header read timeout: KILLED by h10 
+server: header block 1 MiB: SURVIVED 
+server: 1000 headers: SURVIVED 
+server: declared length not checked: KILLED by h9 
+server: body timeout 60 s: KILLED by h10,h9 
+server: request timeout and body timeout 60 s: SURVIVED 
+server: body read limit off: SURVIVED 
+server: no concurrency limit: KILLED by h11 
+server: caps not applied: KILLED by h12 
+server: any origin allowed: KILLED by h13 
+server: preflight ignores origin: KILLED by h13 
+server: preflight ignores method: KILLED by h13 
+Traceback (most recent call last):
+  File "<build-dir>/ls3b-bite.py", line 34, in <module>
+    assert old in orig,(name,'pattern not found')
+           ^^^^^^^^^^^
+AssertionError: ('server: preflight ignores headers', 'pattern not found')

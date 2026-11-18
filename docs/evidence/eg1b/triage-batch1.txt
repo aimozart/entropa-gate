@@ -1,0 +1,9 @@
+caught: 50  missed: 5  timeout: 0  unviable: 3
+--- caught only by SIGKILL (NOT counted as caught):
+--- missed:
+crates/egress/src/decide.rs:393:14: replace > with == in Budget::take
+crates/egress/src/decide.rs:393:14: replace > with >= in Budget::take
+crates/egress/src/decide.rs:396:16: replace -= with += in Budget::take
+crates/egress/src/decide.rs:643:20: replace > with >= in plausible_chunked
+crates/egress/src/detect.rs:233:18: replace > with >= in luhn
+DONE

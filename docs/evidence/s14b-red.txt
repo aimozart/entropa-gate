@@ -1,0 +1,17 @@
+FAIL wording: allowed phrasing passes (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL wording: 'compliant' alone fails and names the line (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL wording: 'certified' alone fails (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL wording: one bad file among good ones fails (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL wording: a missing file is an error, not a pass (exit 127, wanted 2): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL sdk: a model SDK outside the agent crate fails and names the crate (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL sdk: the KMS SDK and the agent crate are allowed (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL sdk: a missing workspace is an error (exit 127, wanted 2): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL evidence: every named file exists (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL evidence: a named file that is missing fails and is named (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL testchange: adding a test file needs no reason (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL testchange: changing an accepted test without a reason fails and names the commit (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL testchange: a commit with a reason line passes (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL p0: a dated line from the cutoff on that answers the P0 question passes (older lines are exempt) (exit 127, wanted 0): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL p0: a line from the cutoff on without the answer fails and names the line (exit 127, wanted 1): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+FAIL p0: unknown check name is an error (exit 127, wanted 2): ./scripts/tests/governance-checks.sh: line 15: scripts/governance-checks.sh: No such file or directory
+exit 1

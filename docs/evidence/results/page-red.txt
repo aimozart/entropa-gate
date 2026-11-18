@@ -1,0 +1,9 @@
+FAIL: test_p1_the_page_is_four_static_files_with_the_label_and_the_csp (test_page.P.test_p1_the_page
+FAIL: test_p2_hostile_text_in_the_data_never_becomes_markup (test_page.P.test_p2_hostile_text_in_the
+FAIL: test_p3_failures_come_first_and_all_17_are_listed (test_page.P.test_p3_failures_come_first_and
+FAIL: test_p4_inside_a_row_failed_bars_precede_passed_bars_and_every_row_says_set_spent (test_page.P
+FAIL: test_p5_wording_no_banned_words_no_paths_no_emails (test_page.P.test_p5_wording_no_banned_word
+FAIL: test_p6_deterministic_and_refusals_write_nothing (test_page.P.test_p6_deterministic_and_refusa
+FAIL: test_p7_unverified_and_parked_rows_are_marked_on_the_page (test_page.P.test_p7_unverified_and_
+Ran 7 tests in 0.063s
+FAILED (failures=7)

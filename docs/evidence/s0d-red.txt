@@ -1,0 +1,28 @@
+test the_f4_pair_encodes_differently ... FAILED
+test every_payload_label_split_of_one_string_is_distinct ... FAILED
+test encoding_is_injective ... FAILED
+test an_empty_payload_with_a_label_differs_from_a_payload_that_looks_like_it ... FAILED
+test encoding_is_injective_over_resplits_of_one_string ... FAILED
+thread 'the_f4_pair_encodes_differently' (22) panicked at crates/core/tests/record_encoding.rs:27:5:
+  left: [97, 0, 98, 0]
+ right: [97, 0, 98, 0]
+thread 'every_payload_label_split_of_one_string_is_distinct' (21) panicked at crates/core/tests/record_encoding.rs:37:9:
+thread 'encoding_is_injective' (19) panicked at crates/core/tests/record_encoding.rs:54:1:
+  left: `("", Some(""))`,
+ right: `("", None)` at crates/core/tests/record_encoding.rs:60.
+minimal failing input: a = (
+    "",
+        "",
+), b = (
+    "",
+thread 'an_empty_payload_with_a_label_differs_from_a_payload_that_looks_like_it' (18) panicked at crates/core/tests/record_encoding.rs:51:5:
+  left: [0]
+ right: [0]
+thread 'encoding_is_injective_over_resplits_of_one_string' (20) panicked at crates/core/tests/record_encoding.rs:93:1:
+  left: `[0]`,
+ right: `[0]` at crates/core/tests/record_encoding.rs:100.
+minimal failing input: (a, b) = (
+        "",
+            "",
+        "",
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

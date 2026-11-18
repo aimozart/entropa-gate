@@ -1,0 +1,23 @@
+[package]
+name = "entropa-egress"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Egress Guard engine (EG1): a deterministic, offline check of every outbound model or tool request: detectors, redaction, tier policy, fail closed, hash-only records."
+
+[dependencies]
+sha2 = "0.10"
+hex = { workspace = true }
+base64 = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+regex = "1"
+
+[dev-dependencies]
+tempfile = "3"
+proptest = "1"
+
+[lints]
+workspace = true

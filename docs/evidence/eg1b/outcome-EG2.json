@@ -1,0 +1,13 @@
+{
+ "evidence_kind": "outcome",
+ "run_id": "outcome-EG2",
+ "stage": "EG1b round 2",
+ "note": "check_failed on purpose: the secrets bar (0 leaked) was not met. The receipt is on the local scratch node <build-dir>/eg2-scratch-node (index 0, the only record), not the live node. The plan hash below is of a stage record (not published) at the time of the receipt (before this file was added).",
+ "plan_sha256_at_receipt": "745fea518eaa040ec9a8e901a3b46bbf380df8e16d301a0c5a6581a57a7e17ba",
+ "receipt": {"index": 0, "kind": "evidence.change", "label": "code_change", "decision": "deny", "reason": "check_failed", "control": "hitrust_10_sdlc", "total": 2135, "passed": 2115, "flagged": 20,
+             "subject_hash": "6ac1a189771fd241e974f3f50fbff9edfb6b1a3529d2e5c451efde8860ba1506", "root": "ce0207afe3d29ad37fdbf6562efc822c9198206a0695e8199eb2a384d5798587"},
+ "counts": {"evaluated": 2135, "failed": 20, "secrets_leaked": 17, "clean_false_positives": 3},
+ "misses_by_subclass": {"bearer:case_sep": "6 of 6", "bearer:reverse": "6 of 6", "bearer:rot13": "5 of 5"},
+ "report": "brain repo docs/research/EG2-round2-heldout-report-2026-11-15.json",
+ "limits": "see the ROUND 2 OUTCOME section of a stage record (not published)"
+}

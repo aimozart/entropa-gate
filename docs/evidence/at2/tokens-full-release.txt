@@ -1,0 +1,29 @@
+     Running unittests src/lib.rs (target/release/deps/entropa_tokens-e002d81277e264b0)
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/api_a.rs (target/release/deps/api_a-b13125ff8b0afb04)
+running 5 tests
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/api_c.rs (target/release/deps/api_c-6060eea7ca4647b0)
+running 7 tests
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/battery.rs (target/release/deps/battery-811ec45fc61dc7e6)
+running 1 test
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.16s
+     Running tests/canon.rs (target/release/deps/canon-f9ea006a6f633baa)
+running 4 tests
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/cross_context.rs (target/release/deps/cross_context-916cb7cd855fbcc2)
+running 7 tests
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+     Running tests/measure.rs (target/release/deps/measure-31f30bfaef23098d)
+running 1 test
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/props.rs (target/release/deps/props-517540131c988b23)
+running 6 tests
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 537.10s
+     Running tests/survivors_t1.rs (target/release/deps/survivors_t1-08d9414934cf8cb3)
+running 13 tests
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+running 0 tests
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

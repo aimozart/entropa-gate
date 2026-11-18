@@ -1,0 +1,4 @@
+== mutation 1: s/found=1/found=0/g -> failing cases: 7
+== mutation 2: s/\[MD\]/[Z]/ -> failing cases: 1
+== mutation 3: s/compliant\|certified\|certification/neverxyz/ -> failing cases: 3
+== mutation 4: s/\[\[ ! "\$d" < "\$2" \]\]/true/ -> failing cases: 1

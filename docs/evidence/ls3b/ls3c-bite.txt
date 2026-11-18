@@ -1,0 +1,4 @@
+no USER (root): KILLED: the image user is '' | the process runs as 'root' | D
+extra file in the image: KILLED: unexpected files in the image: entropa-try-http | D
+secret-looking ENV: KILLED: the image environment holds a secret-looking name | D
+default command: KILLED: the image has a default command: ["--trusted-hops","1","--allow-origin","https://try.examp | no refusal without settings (exit 137): entropa-try-http listening 0.0.0.0:8080 trusted_ho

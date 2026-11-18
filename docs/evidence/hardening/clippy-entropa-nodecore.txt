@@ -1,0 +1,192 @@
+crates/core/src/merkle.rs:18:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:26:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:49:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:52:19: warning: indexing may panic
+crates/core/src/merkle.rs:55:30: warning: slicing may panic
+crates/core/src/merkle.rs:56:31: warning: slicing may panic
+crates/core/src/merkle.rs:88:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:93:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:104:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:112:34: warning: slicing may panic
+crates/core/src/merkle.rs:114:54: warning: slicing may panic
+crates/core/src/merkle.rs:123:34: warning: slicing may panic
+crates/core/src/merkle.rs:125:54: warning: slicing may panic
+crates/core/src/merkle.rs:148:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:165:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:208:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:229:19: warning: slicing may panic
+crates/core/src/merkle.rs:230:32: warning: slicing may panic
+crates/core/src/merkle.rs:234:19: warning: slicing may panic
+crates/core/src/merkle.rs:235:32: warning: slicing may panic
+crates/core/src/merkle.rs:244:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:24:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:31:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:36:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:41:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:46:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:56:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:67:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:73:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:80:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/signer.rs:27:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/batch_receipt.rs:38:9: warning: indexing may panic
+crates/core/src/transparency_log/batch_receipt.rs:41:39: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:42:40: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:71:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:73:58: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:81:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:83:58: warning: slicing may panic
+crates/core/src/transparency_log/checkpoint.rs:35:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/receipt.rs:42:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/record.rs:59:28: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/core/src/transparency_log/record.rs:66:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:104:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:106:19: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:111:16: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:126:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/store.rs:14:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/store.rs:16:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/mod.rs:54:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:65:39: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:70:13: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`
+crates/core/src/transparency_log/mod.rs:73:21: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:80:25: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:90:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:100:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:115:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:128:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:146:9: warning: unused `self` argument
+crates/core/src/transparency_log/mod.rs:165:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/mod.rs:189:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:201:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:209:23: warning: slicing may panic
+crates/core/src/transparency_log/mod.rs:217:29: warning: indexing may panic
+crates/approvals/src/codec.rs:19:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:193:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:197:42: warning: item in documentation is missing backticks
+crates/approvals/src/codec.rs:205:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:209:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/approvals/src/codec.rs:215:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:227:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:256:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:334:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/directory.rs:7:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/directory.rs:50:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/replay.rs:39:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/replay.rs:213:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:56:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:69:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:73:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:157:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:216:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:324:5: warning: item in documentation is missing backticks
+crates/witness/src/decode.rs:77:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/decode.rs:119:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/statement.rs:9:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:32:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:39:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:42:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/witness/src/statement.rs:55:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/strict_json.rs:8:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/strict_json.rs:13:15: warning: indexing may panic
+crates/witness/src/strict_json.rs:22:38: warning: indexing may panic
+crates/witness/src/strict_json.rs:23:24: warning: indexing may panic
+crates/witness/src/strict_json.rs:30:47: warning: indexing may panic
+crates/witness/src/strict_json.rs:33:35: warning: indexing may panic
+crates/witness/src/strict_json.rs:51:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:22:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:54:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:95:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:97:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:104:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/engine.rs:57:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/engine.rs:109:66: warning: redundant closure: help: replace the closure with the method itself: `std::string::ToString::to_string`
+crates/policy/src/engine.rs:171:5: warning: this function has too many lines (115/100)
+crates/policy/src/engine.rs:199:9: warning: this could be rewritten as `let...else`: help: consider writing: `let Ok(entities) = self.entities(req, role, has_key) else { return invalid() };`
+crates/policy/src/engine.rs:291:12: warning: unused `self` argument
+crates/policy/src/engine.rs:360:39: warning: casting `u64` to `i64` may wrap around the value: help: if this is intentional, use `cast_signed()` instead: `req.now.cast_signed()`
+crates/policy/src/record.rs:37:9: warning: these match arms have identical bodies
+crates/policy/src/record.rs:94:8: warning: this function could have a `#[must_use]` attribute
+crates/policy/src/record.rs:105:8: warning: this function could have a `#[must_use]` attribute
+crates/policy/src/record.rs:108:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/policy/src/record.rs:114:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/record.rs:133:50: warning: item in documentation is missing backticks
+crates/policy/src/record.rs:170:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/record.rs:212:8: warning: this boolean expression can be simplified: help: try: `m["ts"].as_u64().is_none_or(|t| t > MAX_SAFE_INT)`
+crates/policy/src/record.rs:174:5: warning: adding items after statements is confusing, since items exist from the start of the scope
+crates/policy/src/record.rs:196:8: warning: indexing may panic
+crates/policy/src/record.rs:212:9: warning: indexing may panic
+crates/policy/src/record.rs:227:8: warning: indexing may panic
+crates/policy/src/record.rs:227:54: warning: indexing may panic
+crates/policy/src/record.rs:242:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/lib.rs:53:12: warning: this method could have a `#[must_use]` attribute
+crates/policy/src/lib.rs:71:12: warning: this method could have a `#[must_use]` attribute
+crates/policy/src/lib.rs:150:56: warning: item in documentation is missing backticks
+crates/policy/src/lib.rs:150:68: warning: item in documentation is missing backticks
+crates/ledger/src/generator.rs:300:13: warning: binding's name is too similar to existing binding
+crates/ledger/src/scenarios.rs:43:9: warning: 5 bindings with single-character names in scope
+crates/ledger/src/store.rs:85:13: warning: 5 bindings with single-character names in scope
+crates/ledger/src/bundle.rs:69:1: warning: this function has too many lines (122/100)
+crates/ledger/src/bundle.rs:208:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:244:28: warning: indexing may panic
+crates/ledger/src/bundle.rs:244:38: warning: indexing may panic
+crates/ledger/src/bundle.rs:248:36: warning: slicing may panic
+crates/ledger/src/bundle.rs:323:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:323:1: warning: this function has too many lines (210/100)
+crates/ledger/src/bundle.rs:490:21: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:24: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:33: warning: indexing may panic
+crates/ledger/src/council.rs:44:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:138:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:143:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:146:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/ledger/src/event.rs:152:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:164:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: this function has too many lines (118/100)
+crates/ledger/src/event.rs:374:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/evidence.rs:95:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:117:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:244:12: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:294:13: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:465:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/keys.rs:29:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/keys.rs:44:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:9:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:55:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:55:1: warning: this function has too many lines (162/100)
+crates/ledger/src/platinum.rs:45:18: warning: slicing may panic
+crates/ledger/src/platinum.rs:46:50: warning: indexing may panic
+crates/ledger/src/platinum.rs:47:35: warning: indexing may panic
+crates/ledger/src/platinum.rs:48:39: warning: indexing may panic
+crates/ledger/src/platinum.rs:51:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:53:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:55:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:56:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:57:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:58:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:59:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:71:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/scenarios.rs:39:5: warning: this function has too many lines (216/100)
+crates/ledger/src/store.rs:17:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:28:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:32:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:69:20: warning: indexing may panic
+crates/ledger/src/store.rs:73:20: warning: indexing may panic
+crates/ledger/src/store.rs:90:18: warning: indexing may panic
+crates/ledger/src/store.rs:90:38: warning: indexing may panic
+crates/ledger/src/store.rs:92:18: warning: indexing may panic
+crates/ledger/src/store.rs:92:45: warning: indexing may panic
+crates/ledger/src/store.rs:97:13: warning: indexing may panic
+crates/ledger/src/store.rs:195:10: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/store.rs:218:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/vocab.rs:164:61: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:166:64: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:168:80: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:246:19: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:317:12: warning: this method could have a `#[must_use]` attribute
+crates/nodecore/src/lib.rs:158:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/nodecore/src/lib.rs:174:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/nodecore/src/lib.rs:193:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/nodecore/src/lib.rs:225:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/nodecore/src/lib.rs:267:1: warning: docs for function returning `Result` missing `# Errors` section

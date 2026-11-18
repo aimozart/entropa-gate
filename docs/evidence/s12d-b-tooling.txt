@@ -1,0 +1,42 @@
+## doc
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.86s
+   Generated /work/target/doc/entropa_council/index.html
+## deny
+advisories ok, bans ok, licenses ok, sources ok
+## audit
+    Scanning Cargo.lock for vulnerabilities (389 crate dependencies)
+## council: every test binary except the two new red ones
+     Running tests/memory.rs (target/debug/deps/memory-b76c9918985a378c)
+test x11_search_is_deterministic ... FAILED
+test x10_a_query_must_be_small_well_formed_and_free_of_canaries ... FAILED
+test x14_the_harness_computes_recall_mrr_abstention_and_violations ... FAILED
+test x15_a_miss_a_noisy_abstention_and_a_forbidden_hit_are_all_counted ... FAILED
+test x12_terms_of_a_precedent_come_from_the_finding_and_its_accepted_decision ... FAILED
+test x16_k_limits_the_recall_window_and_a_metric_that_was_not_measured_fails ... FAILED
+test x13_the_memory_hash_binds_a_decision_to_the_precedents_it_saw ... FAILED
+test x17_the_default_acceptance_thresholds ... FAILED
+test x18_the_planted_suite_is_deterministic_and_well_formed ... FAILED
+test x19_the_lexical_index_passes_the_planted_gate_for_several_seeds ... FAILED
+test x1_the_default_scorer_is_the_documented_one ... FAILED
+test x20_an_index_that_forgot_the_revocations_is_caught_by_the_gate ... FAILED
+test x7_results_are_best_first_ties_go_to_the_lower_id_and_k_caps_the_list ... FAILED
+test x6_building_refuses_bad_precedents ... FAILED
+test x9_below_the_threshold_nothing_is_returned_and_an_unlisted_field_weighs_one ... FAILED
+test x8_a_tenant_reads_only_its_own_precedents_and_an_unknown_tenant_gets_nothing ... FAILED
+test x5_a_revoked_precedent_is_left_out_of_the_index_but_stays_in_the_manifest ... FAILED
+test x4_the_hash_ignores_input_order_and_changes_with_everything_that_matters ... FAILED
+test x2_the_index_and_manifest_hashes_match_an_independent_implementation ... FAILED
+test x3_retrieval_matches_the_independent_scorer ... FAILED
+test result: FAILED. 0 passed; 20 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/memory_events.rs (target/debug/deps/memory_events-9705ba0427d6befd)
+test y4_the_scheduler_signs_index_versions_and_the_human_principal_signs_revocations ... FAILED
+test y1_both_events_decode_and_are_not_session_bound ... FAILED
+test y2_the_decoder_refuses_every_bad_field ... FAILED
+test y3_every_revocation_reason_is_a_closed_code ... FAILED
+test y6_a_session_does_not_take_them ... FAILED
+test y5_both_events_sign_and_verify_and_tampering_or_another_key_fails ... FAILED
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+council overall: passed 96 failed 26
+## clippy (default and all features) and fmt
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.10s
+fmt-clean

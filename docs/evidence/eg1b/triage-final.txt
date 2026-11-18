@@ -1,0 +1,22 @@
+scripts/eg1-mutants-subset.sh: line 10: 2068992 Killed                     timeout 14400 systemd-run --user --scope -q -p MemoryMax=6G -p MemorySwapMax=0 -p OOMPolicy=continue cargo mutants -p entropa-egress -f crates/egress/src/decide.rs -f crates/egress/src/detect.rs -f crates/egress/src/views.rs -f crates/egress/src/policy.rs -f crates/egress/src/send.rs --re "$re" --jobs 3 --timeout 120 --build-timeout 600 --output "$out" > "$out.log" 2>&1
+caught: 6  missed: 3  timeout: 0  unviable: 18
+--- caught only by SIGKILL (NOT counted as caught):
+crates__egress__src__decide.rs_line_600_col_24_001.log
+crates__egress__src__decide.rs_line_603_col_20.log
+crates__egress__src__decide.rs_line_634_col_24.log
+crates__egress__src__decide.rs_line_634_col_27.log
+crates__egress__src__decide.rs_line_634_col_8.log
+crates__egress__src__decide.rs_line_643_col_20_001.log
+crates__egress__src__decide.rs_line_643_col_20_002.log
+crates__egress__src__decide.rs_line_643_col_20.log
+crates__egress__src__decide.rs_line_644_col_22.log
+crates__egress__src__decide.rs_line_647_col_22.log
+crates__egress__src__decide.rs_line_650_col_19_001.log
+crates__egress__src__decide.rs_line_650_col_19.log
+crates__egress__src__decide.rs_line_654_col_22_001.log
+crates__egress__src__decide.rs_line_654_col_22.log
+--- missed:
+crates/egress/src/decide.rs:393:14: replace > with >= in Budget::take
+crates/egress/src/decide.rs:396:16: replace -= with += in Budget::take
+crates/egress/src/decide.rs:580:15: replace != with == in scan_text
+DONE

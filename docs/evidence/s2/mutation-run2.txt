@@ -1,0 +1,4 @@
+Found 71 mutants to test
+ok       Unmutated baseline in 2s build + 3s test
+MISSED   crates/release/src/lib.rs:229:22: replace match guard !b.is_empty() with true in manifest::key_id in 0s build + 1s test
+71 mutants tested in 2m: 1 missed, 64 caught, 6 unviable

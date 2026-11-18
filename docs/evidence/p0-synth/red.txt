@@ -1,0 +1,22 @@
+test t4_the_ssn_shape_finder_itself_works ... ok
+test t4b_the_space_separated_finder_itself_works ... ok
+test t2_the_explorer_bundle_its_golden_responses_and_the_ledger_vectors_hold_no_canary ... ok
+test t1_no_canary_appears_anywhere_outside_the_gate ... FAILED
+test t3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... FAILED
+test t3b_every_space_separated_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range ... FAILED
+
+--
+thread 't1_no_canary_appears_anywhere_outside_the_gate' (3728689) panicked at crates/synthetic/tests/repo_scan.rs:77:5:
+canary tokens found outside the gate: ["<build-dir>/<worktree>/crates/try/tests/contract.rs"]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+--
+thread 't3_every_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range' (3728691) panicked at crates/synthetic/tests/repo_scan.rs:151:5:
+valid-range SSN-shaped values (could look like real data): ["crates/egress/tests/hardening_panic.rs: DDD-DD-DDDD"]
+
+--
+thread 't3b_every_space_separated_ssn_shaped_value_in_the_repository_is_from_a_reserved_invalid_range' (3728692) panicked at crates/synthetic/tests/repo_scan.rs:219:5:
+valid-range SSN-shaped values with spaces (could look like real data): ["crates/egress/tests/hardening_panic.rs: DDD-DD-DDDD", "crates/egress/tests/detectors.rs: DDD-DD-DDDD"]
+
+--
+test result: FAILED. 3 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+

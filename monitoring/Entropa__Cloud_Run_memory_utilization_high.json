@@ -1,0 +1,43 @@
+{
+  "alertStrategy": {
+    "autoClose": "1800s"
+  },
+  "combiner": "OR",
+  "conditions": [
+    {
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "300s",
+            "crossSeriesReducer": "REDUCE_MAX",
+            "perSeriesAligner": "ALIGN_PERCENTILE_99"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "60s",
+        "filter": "resource.type=\"cloud_run_revision\" AND resource.labels.service_name=\"entropa-scryon\" AND metric.type=\"run.googleapis.com/container/memory/utilizations\"",
+        "thresholdValue": 0.8
+      },
+      "displayName": "memory utilization > 80%",
+      "name": "projects/entropa-testnet/alertPolicies/16412183967976564018/conditions/16412183967976563011"
+    }
+  ],
+  "creationRecord": {
+    "mutateTime": "2026-08-15T23:52:42.375032684Z",
+    "mutatedBy": "entropa-deployer@entropa-testnet.iam.gserviceaccount.com"
+  },
+  "displayName": "Entropa: Cloud Run memory utilization high",
+  "documentation": {
+    "content": "entropa-scryon memory usage is above 80% of its Cloud Run limit (currently 1Gi). This is an early warning for the known O(n)-with-height in-memory chain growth (see the project notes § Bounded-memory chain architecture) - check gcloud run services describe entropa-scryon and current chain height before it hits the limit and causes a block-production gap.",
+    "mimeType": "text/markdown"
+  },
+  "enabled": true,
+  "mutationRecord": {
+    "mutateTime": "2026-08-15T23:52:42.375032684Z",
+    "mutatedBy": "entropa-deployer@entropa-testnet.iam.gserviceaccount.com"
+  },
+  "name": "projects/entropa-testnet/alertPolicies/16412183967976564018",
+  "notificationChannels": [
+    "projects/entropa-testnet/notificationChannels/1430532887923694351"
+  ]
+}

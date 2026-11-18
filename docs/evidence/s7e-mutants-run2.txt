@@ -1,0 +1,5 @@
+mutants: jobs=4 timeout=90s fast_tests=1 limits: memory=24g swap=24g cpus=12 pids=4096
+Found 168 mutants to test
+ok       Unmutated baseline in 15s build + 20s test
+168 mutants tested in 5m: 150 caught, 18 unviable
+exit 0

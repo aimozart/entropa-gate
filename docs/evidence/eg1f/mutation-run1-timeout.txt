@@ -1,0 +1,19 @@
+crates/egress/src/context.rs:54:5: replace loose -> Option<(usize, bool)> with Some((0, true))
+crates/egress/src/context.rs:54:5: replace loose -> Option<(usize, bool)> with Some((0, false))
+crates/egress/src/context.rs:54:5: replace loose -> Option<(usize, bool)> with Some((1, true))
+crates/egress/src/context.rs:54:5: replace loose -> Option<(usize, bool)> with Some((1, false))
+crates/egress/src/context.rs:90:49: replace && with || in tail
+crates/egress/src/context.rs:90:24: replace && with || in tail
+crates/egress/src/context.rs:246:92: replace += with *= in is_variable
+crates/egress/src/context.rs:247:54: replace += with -= in is_variable
+crates/egress/src/context.rs:250:30: replace += with -= in is_variable
+crates/egress/src/context.rs:293:19: replace += with -= in value_at
+crates/egress/src/context.rs:295:15: replace += with *= in value_at
+crates/egress/src/context.rs:313:15: replace += with *= in value_at
+crates/egress/src/context.rs:344:11: replace += with *= in value_at
+crates/egress/src/context.rs:368:15: replace += with -= in analyze
+crates/egress/src/context.rs:368:15: replace += with *= in analyze
+crates/egress/src/context.rs:393:12: delete ! in analyze
+crates/egress/src/context.rs:394:15: replace += with -= in analyze
+crates/egress/src/context.rs:394:15: replace += with *= in analyze
+crates/egress/src/context.rs:404:11: replace -= with /= in ident_start

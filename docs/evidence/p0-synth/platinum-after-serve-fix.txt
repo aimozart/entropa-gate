@@ -1,0 +1,2 @@
+platinum release: 45 passed 0 failed 0 ignored
+platinum debug: 45 passed 0 failed 0 ignored

@@ -1,0 +1,6 @@
+{
+ "size_bytes": {"A_token": 7220, "A_narrowed_child": 7247, "C_root": 11162, "C_with_blocks_1_to_7": [21816, 32471, 43126, 53781, 64436, 75091, 85746], "C_growth_per_block_bytes": 10654},
+ "time_us": {"A_issue": [318, 849], "A_narrow_by_issuer": [550, 586], "A_verify": [286, 313], "A_verify_with_parent": [433, 463], "C_issue_root": [428, 931], "C_append_block": [493, 958], "C_verify_by_blocks": {"0": [337, 363], "1": [534, 575], "3": [925, 980], "7": [1731, 1798]}},
+ "peak_rss_growth_kb_over_200_verifies": {"A": 0, "C_8_blocks": 0},
+ "lines_of_code": {"shared": 752, "design_A": 133, "design_C": 433, "tests": 1816}
+}

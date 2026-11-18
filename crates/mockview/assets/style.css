@@ -1,0 +1,11 @@
+:root{color-scheme:light dark;--bg:#fff;--fg:#1a1a1a;--muted:#555;--line:#d0d0d0;--banner:#fff3c4;--bannerfg:#4a3b00}
+@media (prefers-color-scheme:dark){:root{--bg:#141414;--fg:#e8e8e8;--muted:#a0a0a0;--line:#333;--banner:#4a3b00;--bannerfg:#ffeaa0}}
+body{margin:0;padding:0 16px 32px;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,sans-serif}
+.banner{background:var(--banner);color:var(--bannerfg);padding:8px 12px;margin:0 -16px;font-weight:600}
+h1{font-size:1.4rem}
+section{margin:16px 0}
+.row{display:grid;grid-template-columns:5rem 1fr;gap:4px 12px;border-top:1px solid var(--line);padding:8px 0}
+.row .idx{color:var(--muted)}
+.row .meta{color:var(--muted);font-size:.85rem;overflow-wrap:anywhere}
+.pager a,.pager span{margin-right:12px}
+code,.mono{font-family:ui-monospace,monospace;overflow-wrap:anywhere}

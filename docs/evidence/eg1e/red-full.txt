@@ -1,0 +1,81 @@
+   Compiling entropa-egress v0.2.0 (<build-dir>/<worktree>/crates/egress)
+    Finished `release` profile [optimized] target(s) in 0.26s
+     Running tests/eg1e_families.rs (target/release/deps/eg1e_families-9a5f773a9bfd7698)
+
+running 8 tests
+test c4_the_ini_shape_is_a_stated_limit_not_a_claim ... ok
+test c3_an_unquoted_value_in_a_key_value_line_is_a_literal_but_a_variable_in_code_position_is_not ... FAILED
+test c2_a_quoted_value_is_a_literal_in_every_language ... FAILED
+test c1_symbol_rich_bearer_values_are_blocked_in_every_curl_shape ... FAILED
+test c5_a_placeholder_is_allowed_only_when_nothing_of_four_characters_is_left ... FAILED
+test c7_a_phrase_chopped_by_mixed_separators_keyword_and_value_is_seen ... FAILED
+test c6_one_level_of_parentheses_is_stripped_and_the_inside_is_judged ... FAILED
+test c8_a_chopped_phrase_in_the_middle_of_a_prose_line_is_seen ... FAILED
+
+failures:
+
+---- c3_an_unquoted_value_in_a_key_value_line_is_a_literal_but_a_variable_in_code_position_is_not stdout ----
+
+thread 'c3_an_unquoted_value_in_a_key_value_line_is_a_literal_but_a_variable_in_code_position_is_not' (2696482) panicked at crates/egress/tests/eg1e_families.rs:12:5:
+assertion `left == right` failed: password: correct_horse_battery
+  left: Allow
+ right: Block
+
+---- c2_a_quoted_value_is_a_literal_in_every_language stdout ----
+
+thread 'c2_a_quoted_value_is_a_literal_in_every_language' (2696481) panicked at crates/egress/tests/eg1e_families.rs:12:5:
+assertion `left == right` failed: password = "correct_horse_battery_staple"
+  left: Allow
+ right: Block
+
+---- c1_symbol_rich_bearer_values_are_blocked_in_every_curl_shape stdout ----
+
+thread 'c1_symbol_rich_bearer_values_are_blocked_in_every_curl_shape' (2696480) panicked at crates/egress/tests/eg1e_families.rs:48:17:
+assertion `left == right` failed: curl -H "Authorization: Bearer AaA#aA9aaA!!9aA^AA" https://x.example:8443/v1/items
+  left: Allow
+ right: Block
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- c5_a_placeholder_is_allowed_only_when_nothing_of_four_characters_is_left stdout ----
+
+thread 'c5_a_placeholder_is_allowed_only_when_nothing_of_four_characters_is_left' (2696484) panicked at crates/egress/tests/eg1e_families.rs:123:9:
+assertion `left == right` failed: changeme-placeholder
+  left: Block
+ right: Allow
+
+---- c7_a_phrase_chopped_by_mixed_separators_keyword_and_value_is_seen stdout ----
+
+thread 'c7_a_phrase_chopped_by_mixed_separators_keyword_and_value_is_seen' (2696486) panicked at crates/egress/tests/eg1e_families.rs:170:9:
+assertion `left == right` failed: ap-i_-key=Xk9fQ2zLp7WmN4rT6vB1
+  left: Allow
+ right: Block
+
+---- c6_one_level_of_parentheses_is_stripped_and_the_inside_is_judged stdout ----
+
+thread 'c6_one_level_of_parentheses_is_stripped_and_the_inside_is_judged' (2696485) panicked at crates/egress/tests/eg1e_families.rs:20:5:
+assertion `left == right` failed: secret = (cfg.token)
+  left: Block
+ right: Allow
+
+---- c8_a_chopped_phrase_in_the_middle_of_a_prose_line_is_seen stdout ----
+
+thread 'c8_a_chopped_phrase_in_the_middle_of_a_prose_line_is_seen' (2696487) panicked at crates/egress/tests/eg1e_families.rs:189:9:
+assertion `left == right` failed: alpha beta gamma delta api_-key=Xk9fQ2zLp7WmN4rT6vB1x one two
+  left: Allow
+ right: Block
+
+
+failures:
+    c1_symbol_rich_bearer_values_are_blocked_in_every_curl_shape
+    c2_a_quoted_value_is_a_literal_in_every_language
+    c3_an_unquoted_value_in_a_key_value_line_is_a_literal_but_a_variable_in_code_position_is_not
+    c5_a_placeholder_is_allowed_only_when_nothing_of_four_characters_is_left
+    c6_one_level_of_parentheses_is_stripped_and_the_inside_is_judged
+    c7_a_phrase_chopped_by_mixed_separators_keyword_and_value_is_seen
+    c8_a_chopped_phrase_in_the_middle_of_a_prose_line_is_seen
+
+test result: FAILED. 1 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p entropa-egress --test eg1e_families`
+error: 1 target failed:
+    `-p entropa-egress --test eg1e_families`

@@ -1,0 +1,7 @@
+yaml_tag accepts any bang => n1_a_yaml_tag_is_a_reference_but_a result: FAILED. 5 passed; 1 failed 
+digits stripped from the placeholder remainder => n5_a_placeholder_word_does_not_hid result: FAILED. 5 passed; 1 failed 
+curl -u rule dead => n3_curl_basic_auth_with_a_literal_ result: FAILED. 5 passed; 1 failed 
+dollar value always a variable => n2_a_dollar_variable_is_a_referenc result: FAILED. 5 passed; 1 failed 
+leading parentheses not stripped => 
+separator removal needs no adjacency => c8_a_chopped_phrase_in_the_middle_ result: FAILED. 7 passed; 1 failed n6_the_separator_removal_has_exact result: FAILED. 5 passed; 1 failed 
+leading parentheses not stripped (whole statement) => n4_nested_parentheses_are_stripped result: FAILED. 5 passed; 1 failed 

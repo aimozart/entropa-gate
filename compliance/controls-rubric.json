@@ -1,0 +1,225 @@
+{
+ "fixed_on": "2026-11-13",
+ "fixed_before_any_result": true,
+ "wording": "evidence mapped to the control; never compliant, certified or secure",
+ "status_rules": {
+  "MET BY EVIDENCE": "every required evidence kind has a verifying receipt, the row has no known gap attached, and the quote was verified against a PRIMARY source text",
+  "PARTIAL": "at least one required evidence kind has a verifying receipt, but another required kind is absent, a known gap is attached, or the source is secondary",
+  "GAP": "no required evidence kind has a verifying receipt, or a known gap directly contradicts the clause"
+ },
+ "evidence_kinds": {
+  "crypto_inventory": "CycloneDX CBOM of the TLS posture of our own hosts, with a verifying receipt of its hash",
+  "log_tamper_detection": "a COPY of a ledger with one byte changed fails offline verification while the original passes, with a verifying receipt",
+  "signed_records": "ledger events are signed with ML-DSA-65 and the signed chain verifies offline, with a verifying receipt",
+  "separate_storage": "recorded facts about where each ledger and witness is stored, with a verifying receipt",
+  "crypto_policy_document": "a written cryptographic policy document (process; not provable by E1)",
+  "key_lifecycle_evidence": "records of key generation, renewal, storage, revocation, destruction (not produced by E1)",
+  "access_control_on_logs": "evidence that individuals cannot modify audit logs (not produced by E1)",
+  "alerting_on_change": "alerts raised when audit data changes (not produced by E1)",
+  "annual_review_record": "a record of a review of cryptographic suites at least every 12 months (process; not produced by E1)",
+  "retention_evidence": "evidence that logs are retained for the required period (not produced by E1)",
+  "audit_review_process": "a process that reviews audit records (process; not produced by E1)",
+  "integrity_policy_document": "policies to protect data from improper alteration (process; not produced by E1)",
+  "distinct_signing_keys": "each ledger or actor signs with its own key (contradicted today, see ledgers_share_one_key)"
+ },
+ "known_gaps": {
+  "ledgers_share_one_key": {
+   "text": "three ledgers share one signing key",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-10"
+   ]
+  },
+  "witness_only_ai_ledger": {
+   "text": "only the AI ledger is witnessed",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-9-2"
+   ]
+  },
+  "gcp_service_account_keys_4": {
+   "text": "four GCP service-account keys exist",
+   "affects": [
+    "DORA-7"
+   ]
+  },
+  "aws_cli_key_not_retired": {
+   "text": "the AWS CLI key has not been retired",
+   "affects": [
+    "DORA-7"
+   ]
+  },
+  "csp_report_only": {
+   "text": "content security policy is report-only on the public sites",
+   "affects": []
+  },
+  "dnssec_off": {
+   "text": "DNSSEC is off",
+   "affects": []
+  },
+  "council_sessions_manual": {
+   "text": "council sessions are run by hand",
+   "affects": []
+  },
+  "node_dir_two_ledgers_one_key": {
+   "text": "one node directory holds two ledgers (ledger and evidence-ledger) signed by the single platinum.key",
+   "affects": [
+    "DORA-12-2-d",
+    "NIST-AU-10"
+   ]
+  },
+  "crypto_agility_plan_missing": {
+   "text": "an inventory exists, but a documented plan for changing certificate algorithms is not yet written; certificates are classical and the hybrid key exchange is supplied by the hosting platforms",
+   "affects": [
+    "PCI-12-3-3",
+    "DORA-6"
+   ]
+  }
+ },
+ "controls": {
+  "DORA-6": {
+   "required": [
+    "crypto_inventory",
+    "crypto_policy_document"
+   ],
+   "gaps": [
+    "crypto_agility_plan_missing"
+   ]
+  },
+  "DORA-7": {
+   "required": [
+    "key_lifecycle_evidence"
+   ],
+   "gaps": [
+    "gcp_service_account_keys_4",
+    "aws_cli_key_not_retired"
+   ]
+  },
+  "DORA-12-2-d": {
+   "required": [
+    "log_tamper_detection",
+    "separate_storage",
+    "signed_records"
+   ],
+   "gaps": [
+    "ledgers_share_one_key",
+    "witness_only_ai_ledger",
+    "node_dir_two_ledgers_one_key"
+   ]
+  },
+  "PCI-10-3-2": {
+   "required": [
+    "log_tamper_detection",
+    "access_control_on_logs"
+   ],
+   "gaps": []
+  },
+  "PCI-10-3-4": {
+   "required": [
+    "log_tamper_detection",
+    "alerting_on_change"
+   ],
+   "gaps": []
+  },
+  "PCI-10-5-1": {
+   "required": [
+    "retention_evidence"
+   ],
+   "gaps": []
+  },
+  "PCI-12-3-3": {
+   "required": [
+    "crypto_inventory",
+    "annual_review_record"
+   ],
+   "gaps": [
+    "crypto_agility_plan_missing"
+   ]
+  },
+  "NIST-AU-9": {
+   "required": [
+    "log_tamper_detection",
+    "access_control_on_logs"
+   ],
+   "gaps": []
+  },
+  "NIST-AU-9-2": {
+   "required": [
+    "separate_storage"
+   ],
+   "gaps": [
+    "witness_only_ai_ledger"
+   ]
+  },
+  "NIST-AU-9-3": {
+   "required": [
+    "signed_records",
+    "log_tamper_detection"
+   ],
+   "gaps": []
+  },
+  "NIST-AU-10": {
+   "required": [
+    "signed_records",
+    "distinct_signing_keys"
+   ],
+   "gaps": [
+    "ledgers_share_one_key",
+    "node_dir_two_ledgers_one_key"
+   ]
+  },
+  "EUAIA-12": {
+   "required": [
+    "signed_records",
+    "retention_evidence"
+   ],
+   "gaps": []
+  },
+  "EUAIA-19": {
+   "required": [
+    "retention_evidence"
+   ],
+   "gaps": []
+  },
+  "EUAIA-26-6": {
+   "required": [
+    "retention_evidence"
+   ],
+   "gaps": []
+  },
+  "HIPAA-164-312-b": {
+   "required": [
+    "signed_records",
+    "audit_review_process"
+   ],
+   "gaps": []
+  },
+  "HIPAA-164-312-c1": {
+   "required": [
+    "log_tamper_detection",
+    "integrity_policy_document"
+   ],
+   "gaps": []
+  },
+  "HIPAA-164-312-c2": {
+   "required": [
+    "log_tamper_detection"
+   ],
+   "gaps": []
+  }
+ },
+ "amendments": [
+  {
+   "date": "2026-11-13",
+   "by": "the reviewer's instruction, recorded by the author",
+   "before_any_result": true,
+   "change": "added the known gap node_dir_two_ledgers_one_key (observed: one node directory holds two ledgers, ledger and evidence-ledger, signed by the single platinum.key) and attached it to DORA-12-2-d and NIST-AU-10; no status rule changed"
+  },
+  {
+   "date": "2026-11-13",
+   "by": "the reviewer's instruction, recorded by the author",
+   "before_any_result": false,
+   "change": "AFTER the first crypto inventory existed: added the known gap crypto_agility_plan_missing (an inventory exists; a documented plan for changing certificate algorithms is not yet written; the certificates are classical and the hybrid key exchange is supplied by the hosting platforms) and attached it to PCI-12-3-3 and DORA-6. No status rule changed and no row's status changes (both rows were PARTIAL by the existing rule: required evidence kinds are missing); the gap is listed in the report's gap list."
+  }
+ ]
+}

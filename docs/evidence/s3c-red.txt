@@ -1,0 +1,6 @@
+test r11d_a_policy_that_omits_direction_blocks_even_direction ... ok
+test r11c_an_attestation_for_any_class_other_than_direction_is_not_accepted ... FAILED
+thread 'r11c_an_attestation_for_any_class_other_than_direction_is_not_accepted' (86) panicked at crates/approvals/tests/attestation_scope.rs:25:13:
+  left: Allowed { request_id: "467dc96f9d8f2ae7927d72c324ea00eca7e1f77f2cababec61de608efd628b8b", approver: "5fcb8decfd64a3cb", attested: true }
+ right: Blocked(AttestationNotAccepted)
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; 

@@ -1,0 +1,20 @@
+{"qid": "n3-01", "query": "What does AC-2 (4) require?", "standard": "NIST-SP-800-53", "expected": "AC-2(4)", "form": "id_named"}
+{"qid": "n3-02", "query": "NIST SP 800-53 Rev. 5 control SC-7(5): what is it about?", "standard": "NIST-SP-800-53", "expected": "SC-7(5)", "form": "id_named"}
+{"qid": "n3-03", "query": "Please explain enhancement AU-6(3).", "standard": "NIST-SP-800-53", "expected": "AU-6(3)", "form": "id_named"}
+{"qid": "n3-04", "query": "tell me about cm-6", "standard": "NIST-SP-800-53", "expected": "CM-6", "form": "id_named"}
+{"qid": "n3-05", "query": "Under 800-53, what is SI-4(2)?", "standard": "NIST-SP-800-53", "expected": "SI-4(2)", "form": "id_named"}
+{"qid": "n3-06", "query": "Which requirements sit under RA-5?", "standard": "NIST-SP-800-53", "expected": "RA-5", "form": "id_named"}
+{"qid": "n3-07", "query": "Quote control IR-6 of the NIST catalog.", "standard": "NIST-SP-800-53", "expected": "IR-6", "form": "id_named"}
+{"qid": "n3-08", "query": "NIST MP-6: summarise.", "standard": "NIST-SP-800-53", "expected": "MP-6", "form": "id_named"}
+{"qid": "n3-09", "query": "PCI DSS 4.0 requirement 8.3.6, what does it say?", "standard": "PCI-DSS", "expected": "8.3.6", "form": "id_named"}
+{"qid": "n3-10", "query": "Requirement 3.4.1 of PCI DSS v4.0.1 says what?", "standard": "PCI-DSS", "expected": "3.4.1", "form": "id_named"}
+{"qid": "n3-11", "query": "What does 10.2.1.7 require?", "standard": "PCI-DSS", "expected": "10.2.1.7", "form": "id_named"}
+{"qid": "n3-12", "query": "PCI 4.2.1 explained.", "standard": "PCI-DSS", "expected": "4.2.1", "form": "id_named"}
+{"qid": "n3-13", "query": "Explain PCI DSS 11.3.1.3.", "standard": "PCI-DSS", "expected": "11.3.1.3", "form": "id_named"}
+{"qid": "n3-14", "query": "What does Article 15 of the EU AI Act say?", "standard": "EU-AI-ACT", "expected": "Art.15", "form": "id_named"}
+{"qid": "n3-15", "query": "Summarise art. 113 of the AI Act.", "standard": "EU-AI-ACT", "expected": "Art.113", "form": "id_named"}
+{"qid": "n3-16", "query": "AI Act Annex III, what is in it?", "standard": "EU-AI-ACT", "expected": "Annex III", "form": "id_named"}
+{"qid": "n3-17", "query": "DORA RTS Article 9: what does it set out?", "standard": "DORA-RTS", "expected": "Art.9", "form": "id_named"}
+{"qid": "n3-18", "query": "Tell me about article 42 of the DORA RTS.", "standard": "DORA-RTS", "expected": "Art.42", "form": "id_named"}
+{"qid": "n3-19", "query": "45 CFR \u00a7164.312(e): explain.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(e)", "form": "id_named"}
+{"qid": "n3-20", "query": "What is HIPAA 164.312 (a)?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(a)", "form": "id_named"}

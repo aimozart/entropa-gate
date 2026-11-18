@@ -1,0 +1,81 @@
+crates/core/src/merkle.rs:18:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:26:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:41:11: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:42:9: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:49:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:52:19: warning: indexing may panic
+crates/core/src/merkle.rs:55:30: warning: slicing may panic
+crates/core/src/merkle.rs:56:31: warning: slicing may panic
+crates/core/src/merkle.rs:88:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:93:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:104:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:112:34: warning: slicing may panic
+crates/core/src/merkle.rs:114:54: warning: slicing may panic
+crates/core/src/merkle.rs:123:34: warning: slicing may panic
+crates/core/src/merkle.rs:123:47: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:125:54: warning: slicing may panic
+crates/core/src/merkle.rs:148:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:165:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:175:42: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:208:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:229:19: warning: slicing may panic
+crates/core/src/merkle.rs:230:32: warning: slicing may panic
+crates/core/src/merkle.rs:234:19: warning: slicing may panic
+crates/core/src/merkle.rs:234:32: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:234:39: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:235:32: warning: slicing may panic
+crates/core/src/merkle.rs:244:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:282:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:290:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:293:60: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:293:67: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/merkle.rs:295:13: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/pqc.rs:24:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:31:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:36:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:41:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:46:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:56:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:67:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:73:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:80:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/signer.rs:27:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/batch_receipt.rs:38:9: warning: indexing may panic
+crates/core/src/transparency_log/batch_receipt.rs:41:39: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:42:40: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:42:53: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/batch_receipt.rs:71:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:73:58: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:73:71: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/batch_receipt.rs:81:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:81:47: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/batch_receipt.rs:81:59: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/batch_receipt.rs:83:58: warning: slicing may panic
+crates/core/src/transparency_log/checkpoint.rs:35:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/receipt.rs:42:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/record.rs:59:28: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/core/src/transparency_log/record.rs:66:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:67:38: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/record.rs:104:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:106:19: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:111:16: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:126:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/store.rs:14:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/store.rs:16:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/store.rs:38:12: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/mod.rs:54:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:65:39: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:70:13: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`
+crates/core/src/transparency_log/mod.rs:73:21: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:74:21: warning: arithmetic operation that can potentially result in unexpected side-effects
+crates/core/src/transparency_log/mod.rs:80:25: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:90:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:100:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:115:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:128:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:146:9: warning: unused `self` argument
+crates/core/src/transparency_log/mod.rs:165:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/mod.rs:189:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:201:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:209:23: warning: slicing may panic
+crates/core/src/transparency_log/mod.rs:217:29: warning: indexing may panic

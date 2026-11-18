@@ -1,0 +1,32 @@
+ok   binary exists
+ok   report exists
+ok   static: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, stripped
+ok   no shared library is needed
+ok   report sha256 matches the file
+ok   report states a second build
+ok   two builds are identical
+ok   built in a container with no network
+ok   report records the base image: scratch
+ok   report records the image size
+ok   FROM scratch
+ok   numeric non-root USER
+ok   no RUN, SHELL, remote ADD, HEALTHCHECK or VOLUME
+ok   exec-form entrypoint, no shell
+ok   no secret-looking ENV
+ok   image entropa-try-http:ls3c-f0c66c33d893 exists
+ok   image user 65532:65532
+ok   no secret-looking environment in the image
+ok   no default command: the settings must be given
+ok   the image holds one file: the binary
+ok   refuses to start without --trusted-hops (exit 2)
+ok   starts read-only, with no capabilities and no network
+ok   still running
+ok   GET /healthz 200
+ok   POST /try answers with a signed record
+ok   unknown path 404
+ok   preflight for the one origin 204
+ok   preflight for another origin 403
+ok   the process runs as 65532 (not root)
+ok   the log holds no canary
+ok   the log holds only the start line and status counts
+ALL OK

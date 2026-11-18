@@ -1,0 +1,4 @@
+trial binary (S2h build, unchanged, md5 verified):
+32 shapes: {'ask/R2': 6, 'silent': 26}
+v2 (S2i build, target/release/entropa-hook-v2):
+32 shapes: {'silent': 32}

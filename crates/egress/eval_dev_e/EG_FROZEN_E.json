@@ -1,0 +1,35 @@
+{
+ "counts": {
+  "attacks": 5120,
+  "clean": 3000,
+  "families": {
+   "clean_ctl": 800,
+   "curl": 300,
+   "curl_sym": 700,
+   "harmless_assign": 1600,
+   "hyphen_midline": 800,
+   "hyphen_mix": 700,
+   "hyphen_mix_wide": 700,
+   "hyphen_mix_x": 300,
+   "ini_limit": 120,
+   "paren_literal": 300,
+   "paren_ref": 300,
+   "phrase_export": 90,
+   "phrase_json": 90,
+   "phrase_quoted": 630,
+   "phrase_yaml": 90,
+   "placeholder_literal": 300,
+   "placeholder_ok": 300
+  }
+ },
+ "files": {
+  "eg_abuse.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_clean.jsonl": "056f34d3e3302638fdb37235acb0e7ec028cfd96c65ea38a30f4214252529a7b",
+  "eg_destination.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_personal.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_policy_extra.json": "bd7a1804c86b13db1f4b2eaf51d0a35382658f0c6bcf23ba133993a9087f7cf5",
+  "eg_secrets.jsonl": "a25d3fdb0eccc1b136690758715864870979cf4af1fffc31094e5c603973d93e",
+  "eg_terms.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "seed": 20261218
+}

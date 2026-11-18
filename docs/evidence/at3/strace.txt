@@ -1,0 +1,8 @@
+at3: network syscalls = 0 (target/release/deps/at3-bf27710dd4afdc08)
+at3_gaps: network syscalls = 0 (target/release/deps/at3_gaps-06ac0ab7ec1eadfa)
+at3_props: network syscalls = 0 (target/release/deps/at3_props-e51b3daa0b8cd0d6)
+at3_battery: network syscalls = 0 (target/release/deps/at3_battery-127a5867ac4e6a34)
+at2: network syscalls = 0 (target/release/deps/at2-8c5617ef7c480b2d)
+at2b: network syscalls = 0 (target/release/deps/at2b-5c044501f1f2b7bb)
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

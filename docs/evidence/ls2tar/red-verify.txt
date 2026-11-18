@@ -1,0 +1,7 @@
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test l6_output_is_deterministic_and_the_verify_block_is_exact ... FAILED
+test result: FAILED. 8 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.05s
+test v2_the_reader_command_refuses_a_wrong_key_a_changed_byte_and_bad_usage ... FAILED
+test v1_the_reader_command_verifies_the_extracted_tar_with_only_the_public_key ... FAILED
+test t3_meta_describes_the_tar_and_without_the_option_there_is_none ... FAILED
+test result: FAILED. 5 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s

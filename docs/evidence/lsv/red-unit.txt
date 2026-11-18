@@ -1,0 +1,33 @@
+   Compiling entropa-ledger v0.2.0 (<build-dir>/<worktree>/crates/ledger)
+    Finished `release` profile [optimized] target(s) in 0.37s
+     Running unittests src/lib.rs (target/release/deps/entropa_ledger-f504c95a3f98051a)
+
+running 2 tests
+test store::prefix_tests::d1_prefix_root_equals_the_from_scratch_root_for_every_size_up_to_300 ... FAILED
+test store::prefix_tests::d2_prefix_root_equals_the_from_scratch_root_for_random_sizes_up_to_20000 ... FAILED
+
+failures:
+
+---- store::prefix_tests::d1_prefix_root_equals_the_from_scratch_root_for_every_size_up_to_300 stdout ----
+
+thread 'store::prefix_tests::d1_prefix_root_equals_the_from_scratch_root_for_every_size_up_to_300' (2382240) panicked at crates/ledger/src/store.rs:285:13:
+assertion `left == right` failed: size 1
+  left: None
+ right: Some([214, 108, 192, 206, 77, 170, 90, 101, 148, 104, 94, 166, 54, 251, 113, 104, 210, 152, 6, 0, 252, 189, 195, 110, 196, 196, 166, 158, 137, 185, 198, 222])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- store::prefix_tests::d2_prefix_root_equals_the_from_scratch_root_for_random_sizes_up_to_20000 stdout ----
+
+thread 'store::prefix_tests::d2_prefix_root_equals_the_from_scratch_root_for_random_sizes_up_to_20000' (2382241) panicked at crates/ledger/src/store.rs:298:13:
+assertion `left == right` failed: size 6147
+  left: None
+ right: Some([32, 232, 171, 82, 7, 123, 21, 134, 148, 91, 42, 76, 194, 161, 5, 208, 130, 83, 53, 60, 72, 242, 57, 34, 99, 223, 120, 70, 8, 224, 9, 22])
+
+
+failures:
+    store::prefix_tests::d1_prefix_root_equals_the_from_scratch_root_for_every_size_up_to_300
+    store::prefix_tests::d2_prefix_root_equals_the_from_scratch_root_for_random_sizes_up_to_20000
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-ledger --lib`

@@ -1,0 +1,17 @@
+{
+ "counts": {
+  "clean": 630,
+  "secrets": 1080
+ },
+ "files": {
+  "eg_abuse.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_clean.jsonl": "88e65308139c2bb60e9426d2727dd71c5af62aa7ba501ec906757aecb7d2e64a",
+  "eg_destination.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_personal.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_policy_extra.json": "bd7a1804c86b13db1f4b2eaf51d0a35382658f0c6bcf23ba133993a9087f7cf5",
+  "eg_secrets.jsonl": "6a6fbd3804e2805c5732e74bacaf1d492e9d80691df6600930cc3bdcdb573997",
+  "eg_terms.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "note": "frozen before any engine code; digit runs capped at 6",
+ "seed": 20261226
+}

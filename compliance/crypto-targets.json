@@ -1,0 +1,71 @@
+{
+ "note": "The ONLY hosts the crypto-inventory collector may contact: our own assets. One TLS handshake each, nothing else. The collector also refuses any host outside our own domains, whatever this file says.",
+ "targets": [
+  {
+   "name": "entropa.space",
+   "host": "entropa.space",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "bigironbank.online",
+   "host": "bigironbank.online",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "hippagrchealthcare.site",
+   "host": "hippagrchealthcare.site",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "docs.entropa.space",
+   "host": "docs.entropa.space",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "scryon.entropa.space",
+   "host": "scryon.entropa.space",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "scryon-health.entropa.space",
+   "host": "scryon-health.entropa.space",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "scryon-council.entropa.space",
+   "host": "scryon-council.entropa.space",
+   "port": 443,
+   "reason": "public site"
+  },
+  {
+   "name": "entropa-platinum (Cloud Run node)",
+   "host": "entropa-platinum-loqc3sut7a-uc.a.run.app",
+   "port": 443,
+   "reason": "the Cloud Run node"
+  },
+  {
+   "name": "entropa-ingest (Cloud Run)",
+   "host": "entropa-ingest-loqc3sut7a-uc.a.run.app",
+   "port": 443,
+   "reason": "our Cloud Run service"
+  },
+  {
+   "name": "entropa-transparency (Cloud Run)",
+   "host": "entropa-transparency-1032137727494.us-central1.run.app",
+   "port": 443,
+   "reason": "our Cloud Run service"
+  },
+  {
+   "name": "localhost",
+   "host": "localhost",
+   "port": 443,
+   "reason": "this PC"
+  }
+ ]
+}

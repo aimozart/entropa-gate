@@ -1,0 +1,23 @@
+[package]
+name = "entropa-release"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Release supply chain with no installs: an SBOM from Cargo.lock cross-checked against cargo metadata, a signed release manifest (ML-DSA-65) and a minisign wrapper (S2, a stage record (not published))"
+publish = false
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-tokens = { path = "../tokens" }
+entropa-witness = { path = "../witness" }
+sha2 = "0.10"
+toml = "1"
+hex = { workspace = true }
+blake3 = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+
+[lints]
+workspace = true

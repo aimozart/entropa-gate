@@ -1,0 +1,3 @@
+{"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2025-11-25","capabilities":{"tools":{}},"serverInfo":{"name":"smoke","version":"0.0.0"},"instructions":"smoke"}}
+{"jsonrpc":"2.0","id":2,"result":{"tools":[{"name":"ping","description":"Smoke test tool.","inputSchema":{"$schema":"https://json-schema.org/draft/2020-12/schema","additionalProperties":true,"title":"Map_of_AnyValue","type":"object"},"outputSchema":{"$schema":"https://json-schema.org/draft/2020-12/schema","properties":{"ok":{"ty
+{"jsonrpc":"2.0","id":3,"result":{"content":[{"type":"text","text":"{\"ok\":true}"}],"structuredContent":{"ok":true},"isError":false}}

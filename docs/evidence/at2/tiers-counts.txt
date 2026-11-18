@@ -1,0 +1,4 @@
+== --release
+passed 24 failed 0 ignored 0
+== debug
+passed 24 failed 0 ignored 0

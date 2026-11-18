@@ -1,0 +1,2 @@
+test k1_the_committed_corpus_matches_its_manifest_and_a_fresh_generation ... FAILED
+test result: FAILED. 2 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s

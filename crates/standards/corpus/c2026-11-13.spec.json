@@ -1,0 +1,45 @@
+{
+ "corpus_version": "c2026-11-13",
+ "sources": [
+  {
+   "standard": "NIST-SP-800-53",
+   "std_version": "5.2.0",
+   "tier": "OPEN",
+   "format": "oscal",
+   "file": "nist-800-53-rev5-catalog.json",
+   "sha256": "64ca6b4161de51ab6af098a7d101d326f14c95e1abf721396cd8a049e8115eeb"
+  },
+  {
+   "standard": "EU-AI-ACT",
+   "std_version": "2024-1689",
+   "tier": "OPEN",
+   "format": "eu_text",
+   "file": "EU_AI_Act_2024_1689.pdf",
+   "sha256": "bba630444b3278e881066774002a1d7824308934f49ccfa203e65be43692f55e"
+  },
+  {
+   "standard": "DORA-RTS",
+   "std_version": "2024-1774",
+   "tier": "OPEN",
+   "format": "eu_text",
+   "file": "DORA_RTS_ICT_Risk_2024_1774.pdf",
+   "sha256": "0643fbe55849bea1800066ce0da2996339eca57d0d183f52269b536f9ce3ffff"
+  },
+  {
+   "standard": "HIPAA-SECURITY-RULE",
+   "std_version": "45CFR164.312",
+   "tier": "OPEN",
+   "format": "html",
+   "file": "hipaa-164-312-source.html",
+   "sha256": "0ace4571763b61223edd271d3e2bca0d31c99fb6877beceecb0223e21da2679e"
+  },
+  {
+   "standard": "PCI-DSS",
+   "std_version": "4.0.1",
+   "tier": "LICENSED",
+   "format": "pci_text",
+   "file": "PCI-DSS-v4_0_1.pdf",
+   "sha256": "5e6b9093b84007b973097d20126a3768ea2f0a1d4200255c849b0fb3bf04ebc7"
+  }
+ ]
+}

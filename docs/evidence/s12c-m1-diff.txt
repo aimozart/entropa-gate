@@ -1,0 +1,19 @@
+# S12c: m1 (tests/render.rs) golden text is byte-identical to S12b's; only the input event changed
+diff --git a/crates/council/tests/render.rs b/crates/council/tests/render.rs
+index 2c9ed6a..c049af8 100644
+--- a/crates/council/tests/render.rs
++++ b/crates/council/tests/render.rs
+@@ -6,8 +6,9 @@ use serde_json::json;
+ 
+ #[test]
+ fn m1_the_rendering_is_the_documented_closed_code_text() {
++    // the default finding event (subject idx:1), not the finding(1) helper, whose subject is idx:2
+     let out = must(render_for_model(&[
+-        finding(1),
++        ev("finding.submitted", json!({})),
+         ev("decision.recorded", json!({})),
+     ]));
+     assert_eq!(
+## golden string lines, S12b vs now:
+rerust-s12b-council-tests 298b2d044f6e6eff1518f5762a4cfec7  -
+WORKTREE 298b2d044f6e6eff1518f5762a4cfec7  -

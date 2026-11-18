@@ -1,0 +1,8 @@
+{
+ "evidence_kind": "outcome",
+ "run_id": "outcome-AT3",
+ "stage": "AT3",
+ "note": "receipt on the local scratch node <build-dir>/at2-scratch-node (index 2; 0 is outcome-AT2, 1 is outcome-AT2b), not the live node.",
+ "plan_sha256_at_receipt": "bc07c58ce102587fac8cfce3e7661d2fc1fa4a26edafd50ddeacf62f7bb1599a",
+ "counts": {"entropa_tiers_tests_debug": 73, "entropa_tiers_tests_release": 73, "attack_classes": 18, "cases_per_class": 300, "activated": 0, "control_activated": "300 of 300", "ledger_records_verified": 17700, "mutants": "51 caught of 51 testable, 6 unviable", "request_p95_ms": 0.286, "network_syscalls": 0}
+}

@@ -1,0 +1,37 @@
+ --> crates/mockview/tests/ls2_tar.rs:4:20
+  |
+4 | use entropa_core::{CheckpointSigner, Probe};
+--
+test t2_a_key_file_and_any_other_file_in_the_ledger_directory_never_enter_the_tar ... FAILED
+test t5_the_page_links_the_tar_with_textcontent_only_and_the_csp_still_holds ... FAILED
+test t4_the_tar_is_deterministic_and_a_refusal_writes_no_tar ... FAILED
+test t3_meta_describes_the_tar_and_without_the_option_there_is_none ... FAILED
+test t1_the_tar_holds_exactly_the_marker_records_and_checkpoints_and_the_copy_verifies ... FAILED
+
+failures:
+--
+thread 't2_a_key_file_and_any_other_file_in_the_ledger_directory_never_enter_the_tar' (3474953) panicked at crates/mockview/tests/ls2_tar.rs:47:5:
+tar -tf failed: tar: <build-dir>/tmpdir/ls2tar-t2-out-3474951/ledger.tar: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+--
+thread 't5_the_page_links_the_tar_with_textcontent_only_and_the_csp_still_holds' (3474956) panicked at crates/mockview/tests/ls2_tar.rs:182:5:
+app.js does not show the download
+
+--
+thread 't4_the_tar_is_deterministic_and_a_refusal_writes_no_tar' (3474955) panicked at crates/mockview/tests/ls2_tar.rs:162:45:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+--
+thread 't3_meta_describes_the_tar_and_without_the_option_there_is_none' (3474954) panicked at crates/mockview/tests/ls2_tar.rs:142:53:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+--
+thread 't1_the_tar_holds_exactly_the_marker_records_and_checkpoints_and_the_copy_verifies' (3474952) panicked at crates/mockview/tests/ls2_tar.rs:67:5:
+no ledger.tar
+
+--
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+error: test failed, to rerun pass `-p entropa-mockview --test ls2_tar`
+error: 1 target failed:
+    `-p entropa-mockview --test ls2_tar`

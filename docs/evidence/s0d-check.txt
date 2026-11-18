@@ -1,0 +1,859 @@
++ cargo fmt --all -- --check
++ cargo clippy --workspace --all-targets --locked -- -D warnings
+    Checking entropa-core v0.2.0 (/work/crates/core)
+    Checking entropa-api v0.2.0 (/work/crates/api)
+    Checking entropa-kms v0.2.0 (/work/crates/kms)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.08s
++ cargo test --workspace --locked
+   Compiling entropa-core v0.2.0 (/work/crates/core)
+   Compiling entropa-api v0.2.0 (/work/crates/api)
+   Compiling entropa-kms v0.2.0 (/work/crates/kms)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.96s
+     Running unittests src/lib.rs (target/debug/deps/entropa_api-5123ed381ec489a4)
+
+running 160 tests
+test admin::auth::tests::auth_cookie_also_fails_closed_when_secret_unconfigured ... ok
+test admin::auth::tests::auth_accepts_correct_bearer_token ... ok
+test admin::auth::tests::auth_fails_closed_when_secret_is_unconfigured ... ok
+test admin::auth::tests::auth_accepts_correct_session_cookie ... ok
+test admin::auth::tests::auth_rejects_missing_header ... ok
+test admin::auth::tests::auth_rejects_wrong_session_cookie ... ok
+test admin::auth::tests::auth_rejects_wrong_token ... ok
+test admin::crypto::tests::generate_key_produces_48_hex_chars ... ok
+test admin::crypto::tests::generate_key_is_random_each_time ... ok
+test admin::crypto::tests::hash_key_differs_for_different_keys ... ok
+test admin::crypto::tests::hash_key_is_deterministic_and_never_reversible_looking ... ok
+test admin::crypto::tests::slugify_basic_name ... ok
+test admin::crypto::tests::slugify_collapses_punctuation_and_case ... ok
+test admin::crypto::tests::slugify_falls_back_when_nothing_alphanumeric_survives ... ok
+test admin::crypto::tests::slugify_trims_trailing_dash ... ok
+test admin::model::tests::active_and_trial_permit_submission ... ok
+test admin::model::tests::billing_status_parse_defaults_to_unbilled_for_garbage ... ok
+test admin::model::tests::billing_status_round_trips_through_its_string_form ... ok
+test admin::model::tests::past_due_and_canceled_do_not_permit_submission ... ok
+test admin::model::tests::unbilled_permits_submission ... ok
+test contact::pure_logic_tests::a_well_formed_submission_is_valid ... ok
+test contact::pure_logic_tests::an_email_without_an_at_sign_is_rejected ... ok
+test contact::pure_logic_tests::an_empty_message_is_rejected ... ok
+test contact::pure_logic_tests::an_empty_name_is_rejected ... ok
+test contact::pure_logic_tests::an_oversized_message_is_rejected ... ok
+test contact::pure_logic_tests::build_contact_email_body_carries_sender_identity_and_message ... ok
+test contact::pure_logic_tests::build_contact_email_carries_the_reason_in_the_subject ... ok
+test contact::pure_logic_tests::build_contact_email_falls_back_to_a_default_reason_when_blank ... ok
+test dashboard::auth::generate_login_code_tests::is_random_each_time ... ok
+test dashboard::auth::is_code_within_ttl_tests::exactly_at_the_ttl_boundary_is_still_valid ... ok
+test dashboard::auth::generate_login_code_tests::produces_a_six_digit_numeric_code ... ok
+test dashboard::auth::is_code_within_ttl_tests::a_fresh_code_is_within_the_window ... ok
+test dashboard::auth::is_code_within_ttl_tests::past_the_ttl_is_rejected ... ok
+test gmail::parse_message_list_tests::a_malformed_response_yields_an_empty_vec_not_a_panic ... ok
+test gmail::build_raw_email_tests::produces_a_valid_rfc2822_message_base64url_encoded ... ok
+test dashboard::auth::session_tests::a_malformed_token_never_panics ... ok
+test dashboard::auth::session_tests::a_genuine_session_verifies_and_returns_the_slug ... ok
+test gmail::parse_message_list_tests::extracts_ids_from_a_real_list_response ... ok
+test dashboard::auth::session_tests::a_tampered_expiry_is_rejected ... ok
+test dashboard::auth::session_tests::the_wrong_secret_is_rejected ... ok
+test dashboard::store::tests::missing_attempts_field_defaults_to_zero ... ok
+test dashboard::auth::session_tests::an_expired_session_is_rejected ... ok
+test gmail::build_raw_email_tests::encoding_has_no_padding_or_url_unsafe_characters ... ok
+test gmail::build_raw_email_tests::a_non_ascii_subject_is_rfc2047_encoded_not_left_as_raw_utf8 ... ok
+test dashboard::store::tests::doc_id_is_deterministic_and_case_insensitive ... ok
+test dashboard::store::tests::rejects_a_document_missing_required_fields ... ok
+test dashboard::store::tests::round_trips_through_its_firestore_field_shape ... ok
+test dashboard::store::tests::doc_id_differs_per_email ... ok
+test gmail::parse_message_list_tests::a_zero_match_response_yields_an_empty_vec ... ok
+test gmail::parse_message_summary_tests::extracts_headers_and_snippet_from_a_real_metadata_response ... ok
+test ingest::tests::a_canceled_partners_key_is_rejected_with_payment_required ... ok
+test gmail::parse_message_summary_tests::header_lookup_is_case_insensitive ... ok
+test gmail::parse_message_summary_tests::missing_headers_yield_empty_strings_not_a_panic ... ok
+test gmail::parse_message_summary_tests::missing_id_yields_none ... ok
+test heartbeat::tests::does_not_emit_before_the_interval_has_elapsed ... ok
+test heartbeat::tests::does_not_emit_exactly_one_second_before_the_boundary ... ok
+test heartbeat::tests::emits_once_the_interval_has_fully_elapsed ... ok
+test dashboard::auth::session_tests::a_tampered_slug_is_rejected ... ok
+test heartbeat::tests::emits_well_past_the_interval ... ok
+test gmail::build_jwt_claims_tests::carries_the_expected_fields ... ok
+test ingest::tests::extract_bearer_token_reads_a_well_formed_header ... ok
+test ingest::tests::extract_bearer_token_returns_none_for_a_non_bearer_scheme ... ok
+test ingest::tests::extract_bearer_token_returns_none_when_header_is_missing ... ok
+test partner_directory::tests::cache_past_ttl_is_not_fresh ... ok
+test partner_directory::tests::cache_within_ttl_is_still_fresh ... ok
+test ingest::tests::per_key_rate_limit_is_independent_per_partner ... ok
+test ingest::tests::a_request_with_an_unknown_key_is_rejected ... ok
+test partner_directory::tests::find_by_raw_key_matches_the_correct_partner ... ok
+test partner_directory::tests::find_by_raw_key_returns_none_for_an_unknown_key ... ok
+test ingest::tests::a_request_with_no_authorization_header_is_rejected ... ok
+test ingest::tests::a_publisher_failure_is_reported_as_service_unavailable ... ok
+test persistence::tests::a_token_exactly_at_the_margin_boundary_is_not_fresh ... ok
+test partner_directory::tests::fake_directory_authenticates_a_known_key ... ok
+test partner_directory::tests::fake_directory_rejects_an_unknown_key ... ok
+test persistence::tests::a_token_inside_the_safety_margin_is_not_fresh ... ok
+test persistence::tests::a_token_past_its_expiry_is_not_fresh ... ok
+test ingest::tests::a_submission_is_published_with_the_partners_slug_as_the_ordering_key ... ok
+test persistence::tests::a_token_well_before_expiry_is_still_fresh ... ok
+test ingest::tests::a_valid_submission_is_accepted_and_published ... ok
+test ingest::tests::a_valid_submission_actually_publishes_the_payload ... ok
+test pubsub::tests::fake_publisher_configured_to_fail_never_records_anything ... ok
+test ingest::tests::malformed_json_is_a_client_error_not_a_crash ... ok
+test pubsub::tests::fake_publisher_records_every_published_message ... ok
+test pubsub::tests::fake_publisher_records_the_ordering_key_per_message ... ok
+test pull_subscriber::tests::fake_subscriber_pull_on_empty_queue_returns_empty ... ok
+test pubsub::tests::fake_publisher_returns_distinct_message_ids_in_order ... ok
+test pull_subscriber::tests::fake_subscriber_pulls_up_to_max_messages ... ok
+test pull_subscriber::tests::fake_subscriber_records_acked_ids ... ok
+test signup::alert::build_signup_alert_email_tests::body_carries_display_name_slug_and_email ... ok
+test signup::alert::build_signup_alert_email_tests::subject_names_the_new_partner ... ok
+test signup::checkout::next_billing_anchor_tests::december_rolls_over_the_year_boundary ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_before_the_anchor_day_this_month_anchors_this_month ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_exactly_on_the_anchor_day_rolls_to_next_month ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_28th_in_february_rolls_to_march_3rd ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_30th_rolls_to_the_3rd_of_next_month ... ok
+test signup::checkout::next_billing_anchor_tests::signing_up_on_the_31st_rolls_to_the_3rd_of_next_month ... ok
+test signup::is_within_reveal_window_tests::a_clock_that_moved_backward_never_panics ... ok
+test signup::is_within_reveal_window_tests::a_fresh_signup_is_within_the_window ... ok
+test signup::is_within_reveal_window_tests::exactly_at_the_ttl_boundary_is_still_within_the_window ... ok
+test signup::is_within_reveal_window_tests::past_the_ttl_is_rejected ... ok
+test signup::pending_store::tests::rejects_a_document_missing_required_fields ... ok
+test signup::pending_store::tests::round_trips_through_its_firestore_field_shape ... ok
+test signup::webhook::extract_checkout_completed_tests::a_missing_subscription_id_falls_back_to_empty_rather_than_failing_the_whole_parse ... ok
+test signup::webhook::extract_checkout_completed_tests::extracts_the_fields_a_real_completed_session_carries ... ok
+test signup::webhook::extract_checkout_completed_tests::falls_back_to_a_sensible_display_name_when_metadata_is_missing ... ok
+test signup::webhook::extract_checkout_completed_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_checkout_completed_tests::rejects_a_completed_event_missing_an_email ... ok
+test signup::webhook::extract_payment_failed_tests::extracts_the_customer_id_from_a_real_payment_failed_event ... ok
+test signup::webhook::extract_payment_failed_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_payment_failed_tests::rejects_an_event_missing_a_customer_id ... ok
+test signup::webhook::extract_subscription_deleted_tests::extracts_the_customer_id_from_a_real_subscription_deleted_event ... ok
+test signup::webhook::extract_subscription_deleted_tests::ignores_events_of_a_different_type ... ok
+test signup::webhook::extract_subscription_deleted_tests::rejects_an_event_missing_a_customer_id ... ok
+test signup::webhook::verify_stripe_signature_tests::a_malformed_header_is_rejected_not_panicking ... ok
+test signup::webhook::verify_stripe_signature_tests::a_genuine_signature_verifies ... ok
+test signup::webhook::verify_stripe_signature_tests::a_stale_timestamp_outside_tolerance_is_rejected ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_is_a_noop_when_there_is_no_gap ... ok
+test signup::webhook::verify_stripe_signature_tests::a_tampered_payload_is_rejected ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_keeps_the_first_occurrence_of_a_duplicate_index ... ok
+test signup::webhook::verify_stripe_signature_tests::the_wrong_secret_is_rejected ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_on_empty_input_returns_empty ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_pads_before_the_first_record_if_index_zero_is_missing ... ok
+test transparency_persistence::tests::pad_gaps_with_tombstones_preserves_original_index_positions_across_a_gap ... ok
+test transparency_persistence::tests::record_from_fields_accepts_a_pre_existing_document_with_no_submission_timestamp ... ok
+test transparency_persistence::tests::record_from_fields_decodes_a_real_document_shape_with_its_real_submission_timestamp ... ok
+test transparency_persistence::tests::record_from_fields_rejects_a_document_missing_its_index ... ok
+test transparency_persistence::tests::record_from_fields_rejects_missing_fields_wrapper ... ok
+test transparency_persistence::tests::record_from_fields_rejects_non_hex_content ... ok
+test transparency_proto::export::export_range_tests::both_bounds_together_form_a_closed_interval ... ok
+test transparency_proto::export::export_range_tests::lower_bound_excludes_earlier_records ... ok
+test transparency_proto::export::export_range_tests::unbounded_range_accepts_everything ... ok
+test transparency_proto::export::export_range_tests::upper_bound_excludes_later_records ... ok
+test transparency_proto::push::tests::a_matching_token_is_valid ... ok
+test transparency_proto::push::tests::a_wrong_token_is_rejected ... ok
+test transparency_proto::push::tests::an_empty_configured_secret_never_validates_anything ... ok
+test transparency_proto::push::tests::push_is_rejected_when_no_secret_is_configured_at_all ... ok
+test transparency_proto::push::tests::rejects_a_body_that_isnt_a_pubsub_envelope_at_all ... ok
+test transparency_proto::push::tests::decodes_a_real_pubsub_push_envelope_shape ... ok
+test transparency_proto::push::tests::rejects_a_message_data_field_that_isnt_valid_base64 ... ok
+test transparency_proto::rate_tier::tests::classify_rate_at_elevated_threshold_is_elevated ... ok
+test transparency_proto::rate_tier::tests::classify_rate_at_high_volume_threshold_is_high_volume ... ok
+test transparency_proto::rate_tier::tests::classify_rate_below_elevated_threshold_is_base ... ok
+test transparency_proto::rate_tier::tests::record_and_count_keeps_an_entry_exactly_at_the_one_hour_boundary ... ok
+test transparency_proto::rate_tier::tests::record_and_count_keeps_entries_within_the_rolling_hour ... ok
+test transparency_proto::rate_tier::tests::record_and_count_prunes_entries_older_than_one_hour ... ok
+test transparency_proto::rate_tier::tests::tier_ordering_lets_a_plain_greater_than_detect_an_upward_crossing ... ok
+test ingest::tests::exceeding_the_per_partner_rate_limit_returns_429 ... ok
+test ingest::tests::a_rate_limited_request_never_reaches_the_publisher ... ok
+test sequencer::tests::an_empty_queue_processes_nothing_without_error ... ok
+test sequencer::tests::a_malformed_message_does_not_block_processing_the_rest_of_the_batch ... ok
+test transparency_proto::state::tests::ingest_tracks_rate_and_starts_at_the_base_tier ... ok
+test sequencer::tests::acks_only_the_messages_it_actually_ingested ... ok
+test transparency_proto::state::tests::a_partner_with_no_submissions_yet_has_an_empty_tree ... ok
+test transparency_proto::state::tests::ingest_appends_and_returns_the_assigned_index ... ok
+test transparency_proto::export::export_record_tests::a_records_own_json_never_embeds_the_checkpoint_signature ... ok
+test transparency_proto::state::tests::deleting_one_partners_tree_never_touches_another_partners_data ... ok
+test sequencer::tests::drains_and_ingests_every_valid_message_in_order ... ok
+test transparency_proto::state::tests::ingest_result_is_immediately_fetchable_as_a_verified_receipt ... ok
+test transparency_proto::state::tests::two_partners_never_share_a_tree ... ok
+test transparency_proto::state::tests::ingest_advances_the_alerted_tier_once_the_rate_crosses_elevated ... ok
+
+test result: ok. 160 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.98s
+
+     Running unittests src/bin/ingest_service.rs (target/debug/deps/ingest_service-ce88f0195473d03c)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/transparency_service.rs (target/debug/deps/transparency_service-b6b1b55c172f460f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/transparency_log_prototype.rs (target/debug/deps/transparency_log_prototype-2891a2cd9abe8128)
+
+running 16 tests
+test submitting_malformed_json_is_a_client_error_not_a_crash ... ok
+test submitting_without_a_partner_is_a_client_error ... ok
+test record_page_missing_index_is_404 ... ok
+test chain_for_an_unknown_partner_is_an_empty_array_not_another_customers_data ... ok
+test record_page_renders_and_confirms_independent_verification ... ok
+test receipt_for_an_unknown_partner_is_404_not_another_customers_data ... ok
+test health_reports_honest_status_no_fake_consensus_fields ... ok
+test receipt_for_an_index_beyond_the_log_is_404 ... ok
+test submit_then_fetch_receipt_round_trips_and_verifies_end_to_end ... ok
+test a_submitted_label_is_disclosed_in_chain_but_never_changes_the_payload ... ok
+test chain_returns_records_oldest_first_with_real_payloads ... ok
+test a_tampered_receipt_over_the_real_wire_format_fails_verification ... ok
+test health_aggregates_across_multiple_private_trees_without_mixing_their_content ... ok
+test multiple_submissions_each_get_their_own_verifiable_receipt ... ok
+test chain_respects_the_limit_query_param ... ok
+test chain_reports_true_total_via_header_even_when_page_is_capped ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running unittests src/lib.rs (target/debug/deps/entropa_core-e89732e5406cdf34)
+
+running 65 tests
+test merkle::tests::consistency_proof_rejects_a_history_rewrite_after_the_checkpoint ... ok
+test merkle::tests::consistency_proof_with_old_size_greater_than_new_size_is_none ... ok
+test merkle::tests::empty_tree_has_no_root ... ok
+test merkle::tests::consistency_proof_at_equal_sizes_is_empty_and_requires_matching_roots ... ok
+test merkle::tests::inclusion_proof_out_of_range_index_is_none ... ok
+test merkle::tests::consistency_proof_with_zero_old_size_is_none ... ok
+test merkle::tests::inclusion_proof_rejects_a_forged_leaf ... ok
+test merkle::tests::consistency_proof_rejects_a_tampered_old_root ... ok
+test merkle::tests::inclusion_proof_rejects_the_wrong_root ... ok
+test merkle::tests::inclusion_proof_verifies_for_every_index_in_a_real_tree ... ok
+test merkle::tests::root_changes_if_any_leaf_changes ... ok
+test merkle::tests::inclusion_proof_rejects_a_tampered_sibling ... ok
+test merkle::tests::leaf_hash_and_node_hash_are_domain_separated ... ok
+test merkle::tests::root_is_deterministic ... ok
+test merkle::tests::single_leaf_root_is_its_own_leaf_hash ... ok
+test merkle::tests::verify_consistency_rejects_a_zero_or_larger_old_size_even_with_an_empty_proof ... ok
+test pqc::tests::malformed_hex_is_rejected ... ok
+test transparency_log::batch_receipt::tests::a_single_receipt_call_stays_fast_regardless_of_existing_log_size ... ignored
+test transparency_log::batch_receipt::tests::exporting_every_record_in_a_large_log_stays_near_linear_not_quadratic ... ignored
+test merkle::tests::consistency_proof_round_trips_across_many_size_pairs ... ok
+test pqc::tests::wrong_length_key_is_rejected ... ok
+test signer::tests::the_checkpoint_digest_fits_a_kms_raw_signing_limit ... ok
+test transparency_log::checkpoint::tests::checkpoint_digest_has_a_fixed_width_golden_layout ... ok
+test transparency_log::record::tests::an_empty_label_is_a_different_record_from_no_label ... ok
+test transparency_log::record::tests::display_helper_marks_undecodable_bytes ... ok
+test transparency_log::record::tests::f4_the_old_colliding_pair_now_encodes_differently ... ok
+test transparency_log::record::tests::round_trips_with_and_without_a_label ... ok
+test transparency_log::record::tests::the_decoder_rejects_every_malformed_shape ... ok
+test transparency_log::record::tests::the_decoder_rejects_oversize_length_prefixes_without_allocating ... ok
+test transparency_log::record::tests::two_different_labels_produce_two_different_encodings ... ok
+test transparency_log::store::tests::a_new_store_is_empty_and_reads_nothing ... ok
+test transparency_log::store::tests::append_returns_sequential_indices_and_read_returns_the_exact_bytes ... ok
+test signer::tests::a_failing_backend_returns_an_error_and_leaves_the_log_unchanged ... ok
+test transparency_log::tests::a_single_additional_checkpoint_stays_fast_regardless_of_existing_log_size ... ignored
+test transparency_log::tests::appending_a_record_returns_its_index_and_advances_size ... ok
+test transparency_log::tests::checkpoint_cost_at_real_production_scale ... ignored
+test pqc::tests::id_is_stable_and_prefixed ... ok
+test transparency_log::record::tests::size_limits_are_enforced_at_the_boundary ... ok
+test transparency_log::tests::len_and_is_empty_track_appends ... ok
+test transparency_log::tests::incremental_root_matches_a_full_rebuild_for_every_size ... ok
+test pqc::tests::sign_and_verify_round_trip ... ok
+test transparency_log::receipt::tests::receipt_survives_a_real_json_round_trip_and_still_verifies ... ok
+test pqc::tests::exported_key_reconstructs_the_same_identity ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_rejects_a_tampered_root ... ok
+test signer::tests::checkpoint_with_a_remote_backend_verifies_under_its_pubkey ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_tampered_proof ... ok
+test pqc::tests::sign_hex_determinism_check ... ok
+test signer::tests::a_probe_reports_its_algorithm_and_signs_through_the_trait ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_forged_record ... ok
+test transparency_log::tests::receipt_out_of_range_index_is_none ... ok
+test pqc::tests::rejects_wrong_key ... ok
+test transparency_log::receipt::tests::verify_receipt_rejects_a_checkpoint_from_a_different_signer ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_rejects_a_different_probes_pubkey ... ok
+test transparency_log::checkpoint::tests::checkpoint_signature_verifies_against_the_signing_probe ... ok
+test pqc::tests::rejects_tampered_message ... ok
+test transparency_log::tests::receipt_for_a_real_record_verifies_independently ... ok
+test transparency_log::tests::receipt_against_a_checkpoint_older_than_the_current_log_still_verifies ... ok
+test transparency_log::tests::checkpoint_root_matches_the_appended_records ... ok
+test transparency_log::tests::receipts_for_against_an_empty_log_returns_all_none ... ok
+test transparency_log::tests::receipts_for_returns_independently_verifiable_receipts_in_request_order ... ok
+test transparency_log::tests::a_history_rewrite_after_checkpointing_is_detected_end_to_end ... ok
+test pqc::tests::restored_probe_signs_identically_to_the_original ... ok
+test transparency_log::tests::receipt_cannot_prove_an_index_the_checkpoint_did_not_yet_cover ... ok
+test merkle::tests::inclusion_proof_length_grows_logarithmically_not_linearly ... ok
+test transparency_log::tests::receipts_are_refused_for_a_zero_size_or_oversized_checkpoint ... ok
+
+test result: ok. 61 passed; 0 failed; 4 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+     Running tests/nist_kat.rs (target/debug/deps/nist_kat-d64cd228cc018384)
+
+running 5 tests
+test nist_keygen_matches_reference_bytes ... ok
+test rejects_tampered_nist_signatures ... ok
+test nist_sign_internal_matches_reference_bytes ... ok
+test verifies_nist_reference_signatures ... ok
+test nist_sign_external_pure_matches_reference_bytes ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+     Running tests/properties.rs (target/debug/deps/properties-fad7fee869d3d268)
+
+running 5 tests
+test out_of_range_indices_have_no_proof ... ok
+test consistency_proofs_verify_for_every_prefix ... ok
+test every_leaf_has_a_valid_inclusion_proof_and_a_tampered_one_fails ... ok
+test incremental_root_equals_full_rebuild ... ok
+test signed_receipts_verify_for_any_record_and_fail_under_another_key ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.54s
+
+     Running tests/record_encoding.rs (target/debug/deps/record_encoding-47e861f840e568bf)
+
+running 12 tests
+test a_payload_that_looks_like_an_encoded_record_does_not_collide_with_it ... ok
+test an_empty_payload_with_a_label_differs_from_a_payload_that_looks_like_it ... ok
+test every_payload_label_split_of_one_string_is_distinct ... ok
+test golden_vectors_pin_the_exact_bytes_and_leaf_hashes ... ok
+test the_f4_pair_encodes_differently ... ok
+test maximum_size_fields_are_accepted_and_one_more_byte_is_rejected ... ok
+test every_accepted_byte_string_is_canonical ... ok
+test encoding_is_injective_over_resplits_of_one_string ... ok
+test every_accepted_one_byte_mutation_of_a_valid_encoding_is_canonical ... ok
+test encoding_is_injective ... ok
+test decode_of_encode_is_the_identity ... ok
+test truncations_and_extensions_of_a_valid_encoding_are_rejected ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running unittests src/lib.rs (target/debug/deps/entropa_kms-8de8626a8bf679df)
+
+running 16 tests
+test tests::audit_a_wrong_length_public_key_from_the_client_is_rejected_at_construction ... ok
+test tests::audit_guard_spki_edges_one_flipped_prefix_bit_and_off_by_one_lengths ... ok
+test tests::raw_key_from_spki_rejects_a_wrong_prefix_or_length ... ok
+test tests::raw_key_from_spki_strips_the_22_byte_wrapper ... ok
+test tests::other_parameter_sets_are_rejected_because_verifiers_use_ml_dsa_65 ... ok
+test tests::a_public_key_fetch_failure_fails_construction ... ok
+test tests::a_message_over_the_raw_limit_is_rejected_without_calling_the_backend ... ok
+test tests::audit_a_wrong_length_signature_from_the_client_is_rejected ... ok
+test tests::a_sign_failure_becomes_a_backend_error_and_leaves_the_log_unchanged ... ok
+test tests::new_caches_the_public_key_and_reports_ml_dsa_65 ... ok
+test tests::audit_checkpoint_with_rejects_a_signature_that_does_not_verify_under_the_reported_pubkey ... ok
+test tests::audit_guard_empty_log_checkpoint_signs_and_verifies ... ok
+test tests::audit_guard_empty_log_and_one_empty_record_have_the_same_root_but_different_signed_digests ... ok
+test tests::a_checkpoint_signed_through_kms_verifies_with_plain_verify_hex ... ok
+test tests::audit_guard_max_timestamp_and_message_exactly_at_the_limit ... ok
+test tests::prop_kms_signed_checkpoints_always_verify ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.48s
+
+     Running tests/aws_kms_vector.rs (target/debug/deps/aws_kms_vector-f43ceac6e9883ba5)
+
+running 3 tests
+test spki_wrapper_is_the_22_byte_prefix_before_the_raw_key ... ok
+test the_kms_signature_does_not_verify_a_different_message ... ok
+   Doc-tests entropa_api
+test a_real_kms_signature_verifies_with_entropas_verifier ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_kms
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
++ RUSTDOCFLAGS='-D warnings'
++ cargo doc --workspace --no-deps --locked
+    Checking entropa-core v0.2.0 (/work/crates/core)
+ Documenting entropa-core v0.2.0 (/work/crates/core)
+ Documenting entropa-api v0.2.0 (/work/crates/api)
+    Checking entropa-api v0.2.0 (/work/crates/api)
+ Documenting entropa-kms v0.2.0 (/work/crates/kms)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.87s
+   Generated /work/target/doc/entropa_api/index.html and 4 other files
++ cargo deny check
+warning[license-not-encountered]: license was not encountered
+  ┌─ /work/deny.toml:7:159
+  │
+7 │ allow = ["MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "Unicode-DFS-2016", "CC0-1.0", "Zlib", "MPL-2.0", "OpenSSL", "CDLA-Permissive-2.0"]
+  │                                                                                                                                                               ━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+  ┌─ /work/deny.toml:7:170
+  │
+7 │ allow = ["MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "Unicode-DFS-2016", "CC0-1.0", "Zlib", "MPL-2.0", "OpenSSL", "CDLA-Permissive-2.0"]
+  │                                                                                                                                                                          ━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+  ┌─ /work/deny.toml:7:120
+  │
+7 │ allow = ["MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "Unicode-DFS-2016", "CC0-1.0", "Zlib", "MPL-2.0", "OpenSSL", "CDLA-Permissive-2.0"]
+  │                                                                                                                        ━━━━━━━━━━━━━━━━ unmatched license allowance
+
+warning[license-not-encountered]: license was not encountered
+  ┌─ /work/deny.toml:7:151
+  │
+7 │ allow = ["MIT", "Apache-2.0", "Apache-2.0 WITH LLVM-exception", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Unicode-3.0", "Unicode-DFS-2016", "CC0-1.0", "Zlib", "MPL-2.0", "OpenSSL", "CDLA-Permissive-2.0"]
+  │                                                                                                                                                       ━━━━ unmatched license allowance
+
+warning[duplicate]: found 2 duplicate entries for crate 'cpufeatures'
+   ┌─ /work/Cargo.lock:23:1
+   │  
+23 │ ╭ cpufeatures 0.2.17 registry+https://github.com/rust-lang/crates.io-index
+24 │ │ cpufeatures 0.3.0 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰───────────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ cpufeatures v0.2.17
+     ├── keccak v0.1.6
+     │   └── sha3 v0.10.9
+     │       └── entropa-core v0.2.0
+     │           ├── entropa-api v0.2.0
+     │           └── entropa-kms v0.2.0
+     └── sha2 v0.10.9
+         ├── entropa-api v0.2.0 (*)
+         └── (build) pest_meta v2.8.6
+             └── pest_generator v2.8.6
+                 └── pest_derive v2.8.6
+                     └── insta v1.48.0
+                         └── (dev) entropa-api v0.2.0 (*)
+   ├ cpufeatures v0.3.0
+     ├── blake3 v1.8.6
+     │   ├── entropa-api v0.2.0
+     │   └── entropa-core v0.2.0
+     │       ├── entropa-api v0.2.0 (*)
+     │       └── entropa-kms v0.2.0
+     ├── chacha20 v0.10.2
+     │   └── proptest v1.12.0
+     │       ├── (dev) entropa-core v0.2.0 (*)
+     │       └── (dev) entropa-kms v0.2.0 (*)
+     └── keccak v0.2.1
+         └── shake v0.1.0
+             └── ml-dsa v0.1.1
+                 └── entropa-core v0.2.0 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'crypto-common'
+   ┌─ /work/Cargo.lock:25:1
+   │  
+25 │ ╭ crypto-common 0.1.7 registry+https://github.com/rust-lang/crates.io-index
+26 │ │ crypto-common 0.2.2 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰─────────────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ crypto-common v0.1.7
+     └── digest v0.10.7
+         ├── hmac v0.12.1
+         │   └── entropa-api v0.2.0
+         ├── sha2 v0.10.9
+         │   ├── entropa-api v0.2.0 (*)
+         │   └── (build) pest_meta v2.8.6
+         │       └── pest_generator v2.8.6
+         │           └── pest_derive v2.8.6
+         │               └── insta v1.48.0
+         │                   └── (dev) entropa-api v0.2.0 (*)
+         └── sha3 v0.10.9
+             └── entropa-core v0.2.0
+                 ├── entropa-api v0.2.0 (*)
+                 └── entropa-kms v0.2.0
+   ├ crypto-common v0.2.2
+     ├── digest v0.11.3
+     │   ├── shake v0.1.0
+     │   │   └── ml-dsa v0.1.1
+     │   │       └── entropa-core v0.2.0
+     │   │           ├── entropa-api v0.2.0
+     │   │           └── entropa-kms v0.2.0
+     │   └── signature v3.0.0
+     │       └── ml-dsa v0.1.1 (*)
+     └── ml-dsa v0.1.1 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'digest'
+   ┌─ /work/Cargo.lock:30:1
+   │  
+30 │ ╭ digest 0.10.7 registry+https://github.com/rust-lang/crates.io-index
+31 │ │ digest 0.11.3 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰───────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ digest v0.10.7
+     ├── hmac v0.12.1
+     │   └── entropa-api v0.2.0
+     ├── sha2 v0.10.9
+     │   ├── entropa-api v0.2.0 (*)
+     │   └── (build) pest_meta v2.8.6
+     │       └── pest_generator v2.8.6
+     │           └── pest_derive v2.8.6
+     │               └── insta v1.48.0
+     │                   └── (dev) entropa-api v0.2.0 (*)
+     └── sha3 v0.10.9
+         └── entropa-core v0.2.0
+             ├── entropa-api v0.2.0 (*)
+             └── entropa-kms v0.2.0
+   ├ digest v0.11.3
+     ├── shake v0.1.0
+     │   └── ml-dsa v0.1.1
+     │       └── entropa-core v0.2.0
+     │           ├── entropa-api v0.2.0
+     │           └── entropa-kms v0.2.0
+     └── signature v3.0.0
+         └── ml-dsa v0.1.1 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'getrandom'
+   ┌─ /work/Cargo.lock:47:1
+   │  
+47 │ ╭ getrandom 0.2.17 registry+https://github.com/rust-lang/crates.io-index
+48 │ │ getrandom 0.4.3 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰─────────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ getrandom v0.2.17
+     ├── rand_core v0.6.4
+     │   ├── rand v0.8.7
+     │   │   └── entropa-api v0.2.0
+     │   └── rand_chacha v0.3.1
+     │       └── rand v0.8.7 (*)
+     └── ring v0.17.14
+         ├── jsonwebtoken v9.3.1
+         │   └── entropa-api v0.2.0 (*)
+         ├── rustls v0.23.46
+         │   ├── hyper-rustls v0.27.9
+         │   │   └── reqwest v0.12.28
+         │   │       ├── entropa-api v0.2.0 (*)
+         │   │       └── entropa-core v0.2.0
+         │   │           ├── entropa-api v0.2.0 (*)
+         │   │           └── entropa-kms v0.2.0
+         │   ├── reqwest v0.12.28 (*)
+         │   └── tokio-rustls v0.26.4
+         │       ├── hyper-rustls v0.27.9 (*)
+         │       └── reqwest v0.12.28 (*)
+         └── rustls-webpki v0.103.16
+             └── rustls v0.23.46 (*)
+   ├ getrandom v0.4.3
+     ├── crypto-common v0.2.2
+     │   ├── digest v0.11.3
+     │   │   ├── shake v0.1.0
+     │   │   │   └── ml-dsa v0.1.1
+     │   │   │       └── entropa-core v0.2.0
+     │   │   │           ├── entropa-api v0.2.0
+     │   │   │           └── entropa-kms v0.2.0
+     │   │   └── signature v3.0.0
+     │   │       └── ml-dsa v0.1.1 (*)
+     │   └── ml-dsa v0.1.1 (*)
+     ├── rand v0.10.2
+     │   └── proptest v1.12.0
+     │       ├── (dev) entropa-core v0.2.0 (*)
+     │       └── (dev) entropa-kms v0.2.0 (*)
+     └── tempfile v3.27.0
+         ├── insta v1.48.0
+         │   └── (dev) entropa-api v0.2.0 (*)
+         ├── proptest v1.12.0 (*)
+         └── rusty-fork v0.3.1
+             └── proptest v1.12.0 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'keccak'
+   ┌─ /work/Cargo.lock:74:1
+   │  
+74 │ ╭ keccak 0.1.6 registry+https://github.com/rust-lang/crates.io-index
+75 │ │ keccak 0.2.1 registry+https://github.com/rust-lang/crates.io-index
+   │ ╰──────────────────────────────────────────────────────────────────┘ lock entries
+   │  
+   ├ keccak v0.1.6
+     └── sha3 v0.10.9
+         └── entropa-core v0.2.0
+             ├── entropa-api v0.2.0
+             └── entropa-kms v0.2.0
+   ├ keccak v0.2.1
+     └── shake v0.1.0
+         └── ml-dsa v0.1.1
+             └── entropa-core v0.2.0
+                 ├── entropa-api v0.2.0
+                 └── entropa-kms v0.2.0
+
+warning[duplicate]: found 2 duplicate entries for crate 'rand_core'
+    ┌─ /work/Cargo.lock:110:1
+    │  
+110 │ ╭ rand_core 0.6.4 registry+https://github.com/rust-lang/crates.io-index
+111 │ │ rand_core 0.10.1 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰──────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ rand_core v0.6.4
+      ├── rand v0.8.7
+      │   └── entropa-api v0.2.0
+      └── rand_chacha v0.3.1
+          └── rand v0.8.7 (*)
+    ├ rand_core v0.10.1
+      ├── chacha20 v0.10.2
+      │   └── proptest v1.12.0
+      │       ├── (dev) entropa-core v0.2.0
+      │       │   ├── entropa-api v0.2.0
+      │       │   └── entropa-kms v0.2.0
+      │       └── (dev) entropa-kms v0.2.0 (*)
+      ├── crypto-common v0.2.2
+      │   ├── digest v0.11.3
+      │   │   ├── shake v0.1.0
+      │   │   │   └── ml-dsa v0.1.1
+      │   │   │       └── entropa-core v0.2.0 (*)
+      │   │   └── signature v3.0.0
+      │   │       └── ml-dsa v0.1.1 (*)
+      │   └── ml-dsa v0.1.1 (*)
+      ├── getrandom v0.4.3
+      │   ├── crypto-common v0.2.2 (*)
+      │   ├── rand v0.10.2
+      │   │   └── proptest v1.12.0 (*)
+      │   └── tempfile v3.27.0
+      │       ├── insta v1.48.0
+      │       │   └── (dev) entropa-api v0.2.0 (*)
+      │       ├── proptest v1.12.0 (*)
+      │       └── rusty-fork v0.3.1
+      │           └── proptest v1.12.0 (*)
+      ├── rand v0.10.2 (*)
+      ├── rand_xorshift v0.5.0
+      │   └── proptest v1.12.0 (*)
+      └── signature v3.0.0 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'syn'
+    ┌─ /work/Cargo.lock:143:1
+    │  
+143 │ ╭ syn 2.0.119 registry+https://github.com/rust-lang/crates.io-index
+144 │ │ syn 3.0.3 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰───────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ syn v2.0.119
+      ├── pest_generator v2.8.6
+      │   └── pest_derive v2.8.6
+      │       └── insta v1.48.0
+      │           └── (dev) entropa-api v0.2.0
+      ├── synstructure v0.13.2
+      │   ├── yoke-derive v0.8.2
+      │   │   └── yoke v0.8.3
+      │   │       ├── icu_collections v2.2.0
+      │   │       │   ├── icu_normalizer v2.2.0
+      │   │       │   │   └── idna_adapter v1.2.2
+      │   │       │   │       └── idna v1.1.0
+      │   │       │   │           └── url v2.5.8
+      │   │       │   │               ├── reqwest v0.12.28
+      │   │       │   │               │   ├── entropa-api v0.2.0 (*)
+      │   │       │   │               │   └── entropa-core v0.2.0
+      │   │       │   │               │       ├── entropa-api v0.2.0 (*)
+      │   │       │   │               │       └── entropa-kms v0.2.0
+      │   │       │   │               └── tower-http v0.6.11
+      │   │       │   │                   ├── entropa-api v0.2.0 (*)
+      │   │       │   │                   └── reqwest v0.12.28 (*)
+      │   │       │   └── icu_properties v2.2.0
+      │   │       │       └── idna_adapter v1.2.2 (*)
+      │   │       ├── icu_provider v2.2.0
+      │   │       │   ├── icu_normalizer v2.2.0 (*)
+      │   │       │   └── icu_properties v2.2.0 (*)
+      │   │       ├── zerotrie v0.2.4
+      │   │       │   ├── icu_properties v2.2.0 (*)
+      │   │       │   └── icu_provider v2.2.0 (*)
+      │   │       └── zerovec v0.11.6
+      │   │           ├── icu_collections v2.2.0 (*)
+      │   │           ├── icu_locale_core v2.2.0
+      │   │           │   ├── icu_properties v2.2.0 (*)
+      │   │           │   └── icu_provider v2.2.0 (*)
+      │   │           ├── icu_normalizer v2.2.0 (*)
+      │   │           ├── icu_properties v2.2.0 (*)
+      │   │           ├── icu_provider v2.2.0 (*)
+      │   │           ├── potential_utf v0.1.5
+      │   │           │   └── icu_collections v2.2.0 (*)
+      │   │           └── tinystr v0.8.3
+      │   │               └── icu_locale_core v2.2.0 (*)
+      │   └── zerofrom-derive v0.1.7
+      │       └── zerofrom v0.1.8
+      │           ├── icu_collections v2.2.0 (*)
+      │           ├── icu_provider v2.2.0 (*)
+      │           ├── yoke v0.8.3 (*)
+      │           ├── zerotrie v0.2.4 (*)
+      │           └── zerovec v0.11.6 (*)
+      ├── wasm-bindgen-macro-support v0.2.127
+      │   └── wasm-bindgen-macro v0.2.127
+      │       └── wasm-bindgen v0.2.127
+      │           ├── getrandom v0.2.17
+      │           │   ├── rand_core v0.6.4
+      │           │   │   ├── rand v0.8.7
+      │           │   │   │   └── entropa-api v0.2.0 (*)
+      │           │   │   └── rand_chacha v0.3.1
+      │           │   │       └── rand v0.8.7 (*)
+      │           │   └── ring v0.17.14
+      │           │       ├── jsonwebtoken v9.3.1
+      │           │       │   └── entropa-api v0.2.0 (*)
+      │           │       ├── rustls v0.23.46
+      │           │       │   ├── hyper-rustls v0.27.9
+      │           │       │   │   └── reqwest v0.12.28 (*)
+      │           │       │   ├── reqwest v0.12.28 (*)
+      │           │       │   └── tokio-rustls v0.26.4
+      │           │       │       ├── hyper-rustls v0.27.9 (*)
+      │           │       │       └── reqwest v0.12.28 (*)
+      │           │       └── rustls-webpki v0.103.16
+      │           │           └── rustls v0.23.46 (*)
+      │           ├── js-sys v0.3.104
+      │           │   ├── getrandom v0.2.17 (*)
+      │           │   ├── jsonwebtoken v9.3.1 (*)
+      │           │   ├── reqwest v0.12.28 (*)
+      │           │   ├── wasm-bindgen-futures v0.4.77
+      │           │   │   └── reqwest v0.12.28 (*)
+      │           │   └── web-sys v0.3.104
+      │           │       └── reqwest v0.12.28 (*)
+      │           ├── reqwest v0.12.28 (*)
+      │           ├── wasm-bindgen-futures v0.4.77 (*)
+      │           └── web-sys v0.3.104 (*)
+      ├── yoke-derive v0.8.2 (*)
+      ├── zerofrom-derive v0.1.7 (*)
+      └── zerovec-derive v0.11.3
+          └── zerovec v0.11.6 (*)
+    ├ syn v3.0.3
+      ├── displaydoc v0.2.7
+      │   ├── icu_collections v2.2.0
+      │   │   ├── icu_normalizer v2.2.0
+      │   │   │   └── idna_adapter v1.2.2
+      │   │   │       └── idna v1.1.0
+      │   │   │           └── url v2.5.8
+      │   │   │               ├── reqwest v0.12.28
+      │   │   │               │   ├── entropa-api v0.2.0
+      │   │   │               │   └── entropa-core v0.2.0
+      │   │   │               │       ├── entropa-api v0.2.0 (*)
+      │   │   │               │       └── entropa-kms v0.2.0
+      │   │   │               └── tower-http v0.6.11
+      │   │   │                   ├── entropa-api v0.2.0 (*)
+      │   │   │                   └── reqwest v0.12.28 (*)
+      │   │   └── icu_properties v2.2.0
+      │   │       └── idna_adapter v1.2.2 (*)
+      │   ├── icu_locale_core v2.2.0
+      │   │   ├── icu_properties v2.2.0 (*)
+      │   │   └── icu_provider v2.2.0
+      │   │       ├── icu_normalizer v2.2.0 (*)
+      │   │       └── icu_properties v2.2.0 (*)
+      │   ├── icu_provider v2.2.0 (*)
+      │   ├── tinystr v0.8.3
+      │   │   └── icu_locale_core v2.2.0 (*)
+      │   └── zerotrie v0.2.4
+      │       ├── icu_properties v2.2.0 (*)
+      │       └── icu_provider v2.2.0 (*)
+      ├── serde_derive v1.0.229
+      │   └── serde v1.0.229
+      │       ├── entropa-api v0.2.0 (*)
+      │       ├── entropa-core v0.2.0 (*)
+      │       ├── insta v1.48.0
+      │       │   └── (dev) entropa-api v0.2.0 (*)
+      │       ├── jsonwebtoken v9.3.1
+      │       │   └── entropa-api v0.2.0 (*)
+      │       ├── reqwest v0.12.28 (*)
+      │       └── serde_urlencoded v0.7.1
+      │           ├── axum v0.8.9
+      │           │   └── entropa-api v0.2.0 (*)
+      │           └── reqwest v0.12.28 (*)
+      ├── thiserror-impl v2.0.20
+      │   └── thiserror v2.0.20
+      │       ├── entropa-core v0.2.0 (*)
+      │       ├── entropa-kms v0.2.0 (*)
+      │       └── simple_asn1 v0.6.4
+      │           └── jsonwebtoken v9.3.1 (*)
+      └── tokio-macros v2.7.2
+          └── tokio v1.53.1
+              ├── axum v0.8.9 (*)
+              ├── entropa-api v0.2.0 (*)
+              ├── hyper v1.11.0
+              │   ├── axum v0.8.9 (*)
+              │   ├── hyper-rustls v0.27.9
+              │   │   └── reqwest v0.12.28 (*)
+              │   ├── hyper-util v0.1.20
+              │   │   ├── axum v0.8.9 (*)
+              │   │   ├── hyper-rustls v0.27.9 (*)
+              │   │   └── reqwest v0.12.28 (*)
+              │   └── reqwest v0.12.28 (*)
+              ├── hyper-rustls v0.27.9 (*)
+              ├── hyper-util v0.1.20 (*)
+              ├── reqwest v0.12.28 (*)
+              ├── tokio-rustls v0.26.4
+              │   ├── hyper-rustls v0.27.9 (*)
+              │   └── reqwest v0.12.28 (*)
+              └── tower v0.5.3
+                  ├── axum v0.8.9 (*)
+                  ├── entropa-api v0.2.0 (*)
+                  ├── reqwest v0.12.28 (*)
+                  └── tower-http v0.6.11 (*)
+
+warning[duplicate]: found 2 duplicate entries for crate 'windows-sys'
+    ┌─ /work/Cargo.lock:183:1
+    │  
+183 │ ╭ windows-sys 0.52.0 registry+https://github.com/rust-lang/crates.io-index
+184 │ │ windows-sys 0.61.2 registry+https://github.com/rust-lang/crates.io-index
+    │ ╰────────────────────────────────────────────────────────────────────────┘ lock entries
+    │  
+    ├ windows-sys v0.52.0
+      └── ring v0.17.14
+          ├── jsonwebtoken v9.3.1
+          │   └── entropa-api v0.2.0
+          ├── rustls v0.23.46
+          │   ├── hyper-rustls v0.27.9
+          │   │   └── reqwest v0.12.28
+          │   │       ├── entropa-api v0.2.0 (*)
+          │   │       └── entropa-core v0.2.0
+          │   │           ├── entropa-api v0.2.0 (*)
+          │   │           └── entropa-kms v0.2.0
+          │   ├── reqwest v0.12.28 (*)
+          │   └── tokio-rustls v0.26.4
+          │       ├── hyper-rustls v0.27.9 (*)
+          │       └── reqwest v0.12.28 (*)
+          └── rustls-webpki v0.103.16
+              └── rustls v0.23.46 (*)
+    ├ windows-sys v0.61.2
+      ├── console v0.16.4
+      │   └── insta v1.48.0
+      │       └── (dev) entropa-api v0.2.0
+      ├── errno v0.3.14
+      │   └── rustix v1.1.4
+      │       └── tempfile v3.27.0
+      │           ├── insta v1.48.0 (*)
+      │           ├── proptest v1.12.0
+      │           │   ├── (dev) entropa-core v0.2.0
+      │           │   │   ├── entropa-api v0.2.0 (*)
+      │           │   │   └── entropa-kms v0.2.0
+      │           │   └── (dev) entropa-kms v0.2.0 (*)
+      │           └── rusty-fork v0.3.1
+      │               └── proptest v1.12.0 (*)
+      ├── mio v1.2.2
+      │   └── tokio v1.53.1
+      │       ├── axum v0.8.9
+      │       │   └── entropa-api v0.2.0 (*)
+      │       ├── entropa-api v0.2.0 (*)
+      │       ├── hyper v1.11.0
+      │       │   ├── axum v0.8.9 (*)
+      │       │   ├── hyper-rustls v0.27.9
+      │       │   │   └── reqwest v0.12.28
+      │       │   │       ├── entropa-api v0.2.0 (*)
+      │       │   │       └── entropa-core v0.2.0 (*)
+      │       │   ├── hyper-util v0.1.20
+      │       │   │   ├── axum v0.8.9 (*)
+      │       │   │   ├── hyper-rustls v0.27.9 (*)
+      │       │   │   └── reqwest v0.12.28 (*)
+      │       │   └── reqwest v0.12.28 (*)
+      │       ├── hyper-rustls v0.27.9 (*)
+      │       ├── hyper-util v0.1.20 (*)
+      │       ├── reqwest v0.12.28 (*)
+      │       ├── tokio-rustls v0.26.4
+      │       │   ├── hyper-rustls v0.27.9 (*)
+      │       │   └── reqwest v0.12.28 (*)
+      │       └── tower v0.5.3
+      │           ├── axum v0.8.9 (*)
+      │           ├── entropa-api v0.2.0 (*)
+      │           ├── reqwest v0.12.28 (*)
+      │           └── tower-http v0.6.11
+      │               ├── entropa-api v0.2.0 (*)
+      │               └── reqwest v0.12.28 (*)
+      ├── rustix v1.1.4 (*)
+      ├── socket2 v0.6.5
+      │   ├── hyper-util v0.1.20 (*)
+      │   └── tokio v1.53.1 (*)
+      ├── tempfile v3.27.0 (*)
+      └── tokio v1.53.1 (*)
+
+advisories ok, bans ok, licenses ok, sources ok
++ cargo audit
+    Fetching advisory database from `https://github.com/RustSec/advisory-db.git`
+      Loaded 1348 security advisories (from /cargo/advisory-db)
+    Updating crates.io index
+    Scanning Cargo.lock for vulnerabilities (226 crate dependencies)

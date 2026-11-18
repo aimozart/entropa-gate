@@ -1,0 +1,20 @@
+   Compiling entropa-ledger v0.2.0 (<build-dir>/<worktree>/crates/ledger)
+    Finished `release` profile [optimized] target(s) in 1.85s
+     Running tests/store_perf.rs (target/release/deps/store_perf-4c8b102c49011ee0)
+
+running 1 test
+open of 6,000 records with 6,000 checkpoints: 1.853 s; put_checkpoint first 10 avg 2140.9 us, last 10 avg 4483.9 us (ratio 2.1)
+
+thread 'p1_open_of_6000_records_with_a_checkpoint_each_is_fast_and_put_checkpoint_does_not_grow' (2382326) panicked at crates/ledger/tests/store_perf.rs:39:5:
+open took 1.852707569 s
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test p1_open_of_6000_records_with_a_checkpoint_each_is_fast_and_put_checkpoint_does_not_grow ... FAILED
+
+failures:
+
+failures:
+    p1_open_of_6000_records_with_a_checkpoint_each_is_fast_and_put_checkpoint_does_not_grow
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.95s
+
+error: test failed, to rerun pass `-p entropa-ledger --test store_perf`

@@ -1,0 +1,23 @@
+[package]
+name = "entropa-mcp"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "Read-only MCP server (stdio) for inspecting and verifying an Entropa transparency log."
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+blake3 = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rmcp = { version = "=3.6.0", default-features = false, features = ["server", "macros", "transport-io", "transport-async-rw"] }
+tokio = { version = "1", features = ["rt", "macros", "io-util", "io-std", "sync"] }
+
+[dev-dependencies]
+proptest = "1"
+
+[lints]
+workspace = true

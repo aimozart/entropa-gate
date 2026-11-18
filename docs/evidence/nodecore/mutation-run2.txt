@@ -1,0 +1,5 @@
+Found 35 mutants to test
+ok       Unmutated baseline in 14s build + 21s test
+MISSED   crates/nodecore/src/lib.rs:65:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "" in 0s build + 1s test
+MISSED   crates/nodecore/src/lib.rs:65:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "xyzzy" in 0s build + 1s test
+35 mutants tested in 2m: 2 missed, 26 caught, 7 unviable

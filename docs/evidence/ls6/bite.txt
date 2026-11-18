@@ -1,0 +1,17 @@
+== mutation: s/\[A-Za-z0-9._%+-\]+@/[A-Za-z0-9._%+-]+QQQ/
+ 1 file changed, 56 insertions(+), 3 deletions(-)
+FAIL e4 rc=0 
+RESULT: 18 passed, 1 failed; scratch <build-dir>/tmpdir/expor
+== mutation: s/^  gitleaks detect --no-git/  true # gitleaks detect --no-git/
+ 1 file changed, 56 insertions(+), 3 deletions(-)
+FAIL e1 rc=1 <build-dir>/<worktree>/scripts/export-docs.s
+FAIL e4 rc=1 <build-dir>/<worktree>/scripts/export-docs.s
+FAIL e5 rc=1 <build-dir>/<worktree>/scripts/export-docs.s
+FAIL e6 rc=1 <build-dir>/<worktree>/scripts/export-docs.s
+FAIL e10 rc=1 <build-dir>/<worktree>/scripts/export-docs.
+FAIL e8 rc=1 <build-dir>/<worktree>/scripts/export-docs.s
+RESULT: 13 passed, 6 failed; scratch <build-dir>/tmpdir/expor
+== mutation: s/\\b(secure|compliant|certified)\\b/\\b(zzzz)\\b/
+ 1 file changed, 56 insertions(+), 3 deletions(-)
+FAIL e5 rc=0 
+RESULT: 18 passed, 1 failed; scratch <build-dir>/tmpdir/expor

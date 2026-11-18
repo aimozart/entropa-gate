@@ -1,0 +1,903 @@
+{
+ "bomFormat": "CycloneDX",
+ "components": [
+  {
+   "bom-ref": "crypto/algorithm/aes-128-gcm",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt",
+      "tag"
+     ],
+     "parameterSetIdentifier": "AES-128-GCM",
+     "primitive": "ae"
+    },
+    "assetType": "algorithm"
+   },
+   "name": "AES-128-GCM",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/algorithm/sha-256",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "parameterSetIdentifier": "SHA-256",
+     "primitive": "hash"
+    },
+    "assetType": "algorithm"
+   },
+   "name": "SHA-256",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/algorithm/x25519mlkem768",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "keygen",
+      "encapsulate",
+      "decapsulate"
+     ],
+     "parameterSetIdentifier": "X25519MLKEM768",
+     "primitive": "key-agree"
+    },
+    "assetType": "algorithm"
+   },
+   "description": "hybrid key exchange: ML-KEM-768 combined with X25519",
+   "name": "X25519MLKEM768",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/algorithm/sha256withrsaencryption",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "sign",
+      "verify"
+     ],
+     "parameterSetIdentifier": "sha256WithRSAEncryption",
+     "primitive": "signature"
+    },
+    "assetType": "algorithm"
+   },
+   "name": "sha256WithRSAEncryption",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/algorithm/aes-256-gcm",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "encrypt",
+      "decrypt",
+      "tag"
+     ],
+     "parameterSetIdentifier": "AES-256-GCM",
+     "primitive": "ae"
+    },
+    "assetType": "algorithm"
+   },
+   "name": "AES-256-GCM",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/algorithm/sha-384",
+   "cryptoProperties": {
+    "algorithmProperties": {
+     "cryptoFunctions": [
+      "digest"
+     ],
+     "parameterSetIdentifier": "SHA-384",
+     "primitive": "hash"
+    },
+    "assetType": "algorithm"
+   },
+   "name": "SHA-384",
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-01-19T23:29:28Z",
+     "notValidBefore": "2026-10-21T22:30:07Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=bigironbank.online"
+    }
+   },
+   "name": "Certificate for entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "bigironbank.online,hippagrchealthcare.site,www.hippagrchealthcare.site,entropa.space,scryon.entropa.space,www.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "67"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/bigironbank.online:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS bigironbank.online:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/bigironbank.online:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-01-19T23:29:28Z",
+     "notValidBefore": "2026-10-21T22:30:07Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=bigironbank.online"
+    }
+   },
+   "name": "Certificate for bigironbank.online:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "bigironbank.online,hippagrchealthcare.site,www.hippagrchealthcare.site,entropa.space,scryon.entropa.space,www.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "67"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/hippagrchealthcare.site:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS hippagrchealthcare.site:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/hippagrchealthcare.site:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-01-19T23:29:28Z",
+     "notValidBefore": "2026-10-21T22:30:07Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=bigironbank.online"
+    }
+   },
+   "name": "Certificate for hippagrchealthcare.site:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "bigironbank.online,hippagrchealthcare.site,www.hippagrchealthcare.site,entropa.space,scryon.entropa.space,www.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "67"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/docs.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS docs.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/docs.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-02-03T08:38:23Z",
+     "notValidBefore": "2026-11-05T07:47:38Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=docs.entropa.space"
+    }
+   },
+   "name": "Certificate for docs.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "docs.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "81"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/scryon.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS scryon.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/scryon.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-01-19T23:29:28Z",
+     "notValidBefore": "2026-10-21T22:30:07Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=bigironbank.online"
+    }
+   },
+   "name": "Certificate for scryon.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "bigironbank.online,hippagrchealthcare.site,www.hippagrchealthcare.site,entropa.space,scryon.entropa.space,www.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "67"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/scryon-health.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS scryon-health.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/scryon-health.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-02-03T08:38:34Z",
+     "notValidBefore": "2026-11-05T07:50:46Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=scryon-health.entropa.space"
+    }
+   },
+   "name": "Certificate for scryon-health.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "scryon-health.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "81"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/scryon-council.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-128-gcm",
+        "crypto/algorithm/sha-256",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_128_GCM_SHA256"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS scryon-council.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "rsa_pss_rsae_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/scryon-council.entropa.space:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR3",
+     "notValidAfter": "2027-02-03T11:02:53Z",
+     "notValidBefore": "2026-11-05T10:12:05Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=scryon-council.entropa.space"
+    }
+   },
+   "name": "Certificate for scryon-council.entropa.space:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "RSA, 2048 (bit)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "scryon-council.entropa.space"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "81"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/protocol/entropa-platinum-loqc3sut7a-uc.a.run.app:443",
+   "cryptoProperties": {
+    "assetType": "protocol",
+    "protocolProperties": {
+     "cipherSuites": [
+      {
+       "algorithms": [
+        "crypto/algorithm/aes-256-gcm",
+        "crypto/algorithm/sha-384",
+        "crypto/algorithm/x25519mlkem768"
+       ],
+       "identifiers": [],
+       "name": "TLS_AES_256_GCM_SHA384"
+      }
+     ],
+     "type": "tls",
+     "version": "1.3"
+    }
+   },
+   "name": "TLS entropa-platinum-loqc3sut7a-uc.a.run.app:443",
+   "properties": [
+    {
+     "name": "entropa:group",
+     "value": "X25519MLKEM768"
+    },
+    {
+     "name": "entropa:group_source",
+     "value": "negotiated_tls13_group"
+    },
+    {
+     "name": "entropa:hybrid_pq_kex",
+     "value": "true"
+    },
+    {
+     "name": "entropa:peer_signature_type",
+     "value": "ecdsa_secp256r1_sha256"
+    },
+    {
+     "name": "entropa:hostname_in_san",
+     "value": "true"
+    },
+    {
+     "name": "entropa:verification",
+     "value": "OK"
+    }
+   ],
+   "type": "cryptographic-asset"
+  },
+  {
+   "bom-ref": "crypto/certificate/entropa-platinum-loqc3sut7a-uc.a.run.app:443",
+   "cryptoProperties": {
+    "assetType": "certificate",
+    "certificateProperties": {
+     "certificateFormat": "X.509",
+     "issuerName": "C=US, O=Google Trust Services, CN=WR2",
+     "notValidAfter": "2027-01-26T08:26:21Z",
+     "notValidBefore": "2026-11-03T08:26:22Z",
+     "signatureAlgorithmRef": "crypto/algorithm/sha256withrsaencryption",
+     "subjectName": "CN=*.a.run.app"
+    }
+   },
+   "name": "Certificate for entropa-platinum-loqc3sut7a-uc.a.run.app:443",
+   "properties": [
+    {
+     "name": "entropa:public_key",
+     "value": "EC, (prime256v1)"
+    },
+    {
+     "name": "entropa:san",
+     "value": "*.a.run.app,run.app,*.africa-south1.run.app,*.asia-east1.run.app,*.asia-east2.run.app,*.asia-northeast1.run.app,*.asia-northeast2.run.app,*.asia-northeast3.run.app,*.asia-south1.run.app,*.asia-south2.run.app,*.asia-southeast1.run.app,*.asia-southeast2.run.app,*.asia-southeast3.run.app,*.asia-southeast4.run.app,*.australia-southeast1.run.app,*.australia-southeast2.run.app,*.europe-central2.run.app,*.europe-north1.run.app,*.europe-north2.run.app,*.europe-north3.run.app,*.europe-southwest1.run.app,*.europe-west1.run.app,*.europe-west10.run.app,*.europe-west12.run.app,*.europe-west15.run.app,*.europe-west2.run.app,*.europe-west3.run.app,*.europe-west4.run.app,*.europe-west5.run.app,*.europe-west6.run.app,*.europe-west8.run.app,*.europe-west9.run.app,*.me-central1.run.app,*.me-central2.run.app,*.me-west1.run.app,*.northamerica-northeast1.run.app,*.northamerica-northeast2.run.app,*.northamerica-south1.run.app,*.southamerica-east1.run.app,*.southamerica-west1.run.app,*.us-central1.run.app,*.us-central2.run.app,*.us-east1.run.app,*.us-east4.run.app,*.us-east5.run.app,*.us-east7.run.app,*.us-south1.run.app,*.us-west1.run.app,*.us-west2.run.app,*.us-west3.run.app,*.us-west4.run.app,*.us-west8.run.app,*.africa-south1.mtls.run.app,*.asia-east1.mtls.run.app,*.asia-east2.mtls.run.app,*.asia-northeast1.mtls.run.app,*.asia-northeast2.mtls.run.app,*.asia-northeast3.mtls.run.app,*.asia-south1.mtls.run.app,*.asia-south2.mtls.run.app,*.asia-southeast1.mtls.run.app,*.asia-southeast2.mtls.run.app,*.asia-southeast3.mtls.run.app,*.asia-southeast4.mtls.run.app,*.australia-southeast1.mtls.run.app,*.australia-southeast2.mtls.run.app,*.europe-central2.mtls.run.app,*.europe-north1.mtls.run.app,*.europe-north2.mtls.run.app,*.europe-north3.mtls.run.app,*.europe-southwest1.mtls.run.app,*.europe-west1.mtls.run.app,*.europe-west10.mtls.run.app,*.europe-west12.mtls.run.app,*.europe-west15.mtls.run.app,*.europe-west2.mtls.run.app,*.europe-west3.mtls.run.app,*.europe-west4.mtls.run.app,*.europe-west5.mtls.run.app,*.europe-west6.mtls.run.app,*.europe-west8.mtls.run.app,*.europe-west9.mtls.run.app,*.me-central1.mtls.run.app,*.me-central2.mtls.run.app,*.me-west1.mtls.run.app,*.northamerica-northeast1.mtls.run.app,*.northamerica-northeast2.mtls.run.app,*.northamerica-south1.mtls.run.app,*.southamerica-east1.mtls.run.app,*.southamerica-west1.mtls.run.app,*.us-central1.mtls.run.app,*.us-central2.mtls.run.app,*.us-east1.mtls.run.app,*.us-east4.mtls.run.app,*.us-east5.mtls.run.app,*.us-east7.mtls.run.app,*.us-south1.mtls.run.app,*.us-west1.mtls.run.app,*.us-west2.mtls.run.app,*.us-west3.mtls.run.app,*.us-west4.mtls.run.app,*.us-west8.mtls.run.app,*.ssh.run.app,*.cloud.run,*.ai.studio"
+    },
+    {
+     "name": "entropa:days_to_expiry",
+     "value": "73"
+    }
+   ],
+   "type": "cryptographic-asset"
+  }
+ ],
+ "dependencies": [
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/entropa.space:443"
+   ],
+   "ref": "crypto/protocol/entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/bigironbank.online:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/bigironbank.online:443"
+   ],
+   "ref": "crypto/protocol/bigironbank.online:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/hippagrchealthcare.site:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/hippagrchealthcare.site:443"
+   ],
+   "ref": "crypto/protocol/hippagrchealthcare.site:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/docs.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/docs.entropa.space:443"
+   ],
+   "ref": "crypto/protocol/docs.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/scryon.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/scryon.entropa.space:443"
+   ],
+   "ref": "crypto/protocol/scryon.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/scryon-health.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/scryon-health.entropa.space:443"
+   ],
+   "ref": "crypto/protocol/scryon-health.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/scryon-council.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-128-gcm",
+    "crypto/algorithm/sha-256",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/scryon-council.entropa.space:443"
+   ],
+   "ref": "crypto/protocol/scryon-council.entropa.space:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/sha256withrsaencryption"
+   ],
+   "ref": "crypto/certificate/entropa-platinum-loqc3sut7a-uc.a.run.app:443"
+  },
+  {
+   "dependsOn": [
+    "crypto/algorithm/aes-256-gcm",
+    "crypto/algorithm/sha-384",
+    "crypto/algorithm/sha256withrsaencryption",
+    "crypto/algorithm/x25519mlkem768",
+    "crypto/certificate/entropa-platinum-loqc3sut7a-uc.a.run.app:443"
+   ],
+   "ref": "crypto/protocol/entropa-platinum-loqc3sut7a-uc.a.run.app:443"
+  }
+ ],
+ "metadata": {
+  "component": {
+   "bom-ref": "entropa-estate",
+   "name": "Entropa estate TLS posture",
+   "type": "application"
+  },
+  "properties": [
+   {
+    "name": "entropa:hosts_in_scope",
+    "value": "9"
+   },
+   {
+    "name": "entropa:hosts_answered",
+    "value": "8"
+   },
+   {
+    "name": "entropa:hosts_not_answered",
+    "value": "localhost:connection_refused"
+   },
+   {
+    "name": "entropa:wording",
+    "value": "inventory of observed TLS handshakes of our own hosts; evidence mapped to controls, not an assessment"
+   }
+  ],
+  "timestamp": "2026-11-13T22:04:14Z",
+  "tools": {
+   "components": [
+    {
+     "name": "entropa-e1-crypto-inventory",
+     "type": "application",
+     "version": "1"
+    }
+   ]
+  }
+ },
+ "serialNumber": "urn:uuid:7fd8358e-e1b5-4b97-82c6-ed78ad7b7301",
+ "specVersion": "1.6",
+ "version": 1
+}

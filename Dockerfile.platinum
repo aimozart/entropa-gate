@@ -1,0 +1,11 @@
+# Serverless ingest for platinum AI decisions (stage P1). Builds only entropa-platinum.
+FROM rust:1-slim-bookworm AS builder
+WORKDIR /build
+COPY . .
+RUN cargo build --release --locked -p entropa-platinum
+
+FROM gcr.io/distroless/cc-debian12:nonroot
+COPY --from=builder /build/target/release/entropa-platinum /usr/local/bin/entropa-platinum
+ENV PORT=8080
+EXPOSE 8080
+ENTRYPOINT ["/usr/local/bin/entropa-platinum", "serve", "/data/kms-v1"]

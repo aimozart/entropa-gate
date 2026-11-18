@@ -1,0 +1,41 @@
+# Release workflow: runs ONLY when a version tag like v0.2.0 is pushed. It has never been run.
+# Publishes entropa-core then entropa-kms to crates.io through Trusted Publishing (OIDC): no stored
+# token or secret. Steps the owner must do on crates.io first are in docs/RELEASING.md.
+# Action versions are pinned by commit SHA (verified with git ls-remote on 2026-10-20).
+name: release
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    environment: release # optional GitHub environment so the owner can require a manual approval
+    permissions:
+      contents: read
+      id-token: write # mint the OIDC token that crates.io exchanges for a short-lived publish token
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: the tag must match the crate version
+        run: |
+          v="$(sed -n 's/^version = "\(.*\)"/\1/p' Cargo.toml | head -n1)"
+          test "refs/tags/v${v}" = "${GITHUB_REF}" || { echo "tag ${GITHUB_REF} does not match version ${v}"; exit 1; }
+      - name: full checks first (fmt, clippy, tests, doc, deny, audit)
+        run: scripts/check.sh
+      - name: dry run (package and verify, uploads nothing)
+        run: DRY_RUN=1 scripts/release-publish.sh
+      - name: SBOM
+        run: scripts/sbom.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: sbom-cyclonedx
+          path: crates/*/*.cdx.json
+      - name: mint a short-lived crates.io token (Trusted Publishing)
+        id: auth
+        uses: rust-lang/crates-io-auth-action@c6f97d42243bad5fab37ca0427f495c86d5b1a18 # v1.0.5
+      - name: publish entropa-core then entropa-kms
+        run: scripts/release-publish.sh
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ steps.auth.outputs.token }}

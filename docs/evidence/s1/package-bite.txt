@@ -1,0 +1,7 @@
+B1 USER 0:0 in the Dockerfile => FAIL no numeric non-root USER;
+B2 RUN added, VOLUME removed => FAIL no VOLUME;FAIL a RUN, SHELL, EXPOSE or remote ADD is present;
+B3 FROM debian => FAIL the image is not FROM scratch;
+B4 a dynamic binary => FAIL not static: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=9eb2033821758079f76610e8644b400bb03f9c67, not stripped;FAIL 3 shared libraries needed;FAIL no image: the report names 'none';
+B5 a binary that opens a socket => FAIL not static: POSIX shell script, ASCII text executable;FAIL 3 network syscalls;FAIL no image: the report names 'none';PACKAGING CHECKS FAILED;
+B6 a report that claims reproducible with different hashes and says secure => FAIL the report says reproducible but the hashes differ;
+B6b a report that says secure => FAIL the report makes a claim it did not measure

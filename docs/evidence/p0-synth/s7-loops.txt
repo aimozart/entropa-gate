@@ -1,0 +1,34 @@
+loop 1 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 1 serve-alone: 
+loop 2 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 2 serve-alone: 
+loop 3 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 3 serve-alone: 
+loop 4 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 4 serve-alone: 
+loop 5 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 5 serve-alone: 
+loop 6 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 6 serve-alone: 
+loop 7 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 7 serve-alone: 
+loop 8 serve-alone: test s6_the_public_key_is_served_and_matches_the_cli ... FAILED
+loop 8 serve-alone: test s5_errors_never_echo_the_request ... ok
+loop 8 serve-alone: test s3_an_oversized_body_is_refused ... ok
+loop 8 serve-alone: test s2_bad_requests_get_4xx_and_write_nothing ... ok
+loop 8 serve-alone: --
+loop 8 serve-alone: thread 's6_the_public_key_is_served_and_matches_the_cli' (3756528) panicked at crates/platinum/tests/serve.rs:66:59:
+loop 9 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 9 serve-alone: 
+loop 10 serve-alone: test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+loop 10 serve-alone: 
+loop 1 whole-crate done
+loop 2 whole-crate done
+loop 3 whole-crate done
+loop 4 whole-crate done
+loop 5 whole-crate done
+loop 6 whole-crate done
+loop 7 whole-crate done
+loop 8 whole-crate done
+loop 9 whole-crate done
+loop 10 whole-crate done

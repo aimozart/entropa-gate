@@ -1,0 +1,88 @@
+   Compiling entropa-hook v0.2.0 (/work/crates/hook)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.26s
+     Running unittests src/lib.rs (target/debug/deps/entropa_hook-4872b9b53cd9626d)
+
+running 2 tests
+test paths::tests::secret_and_protected_rules ... ok
+test paths::tests::collapse_handles_dots_and_parents ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/entropa_hook-87b0bdf4839bbd41)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bash_mapping.rs (target/debug/deps/bash_mapping-22a1c3ad70fbe9e4)
+
+running 12 tests
+test b1_account_and_billing_changes_are_denied_and_billing_reads_ask ... ok
+test g2_g3_g4_plain_pushes_and_merges ... ok
+test d2_cloud_and_container_deletes_are_denied ... ok
+test g1_dangerous_pushes_are_denied_in_every_form ... ok
+test b2_billable_or_publishing_commands_ask ... ok
+test ok_the_everyday_commands_are_silent_and_a_chain_takes_its_worst_part ... ok
+test d1_exceptions_plain_rm_of_scratch_and_build_output_is_silent ... ok
+test p1_shell_writes_to_protected_files_ask ... ok
+test s2_patient_data_shapes_are_denied ... ok
+test r1_risky_shapes_are_denied_and_r2_unparseable_commands_ask ... ok
+test s1_secret_paths_and_environment_dumps_are_denied ... ok
+test d1_deletes_are_denied ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/heredocs.rs (target/debug/deps/heredocs-06a1a99e33c66fad)
+
+running 7 tests
+test here_strings_and_shift_operators_are_not_heredocs ... ok
+test line_continuations_and_operators_at_the_end_of_a_line_are_normal_shell ... ok
+test a_heredoc_inside_a_command_substitution_inside_quotes_is_skipped ... ok
+test nothing_is_hidden_by_a_heredoc_expansions_in_unquoted_bodies_run ... ok
+test nothing_is_hidden_by_a_heredoc_bodies_bound_for_a_shell_are_classified ... ok
+test heredoc_bodies_are_skipped_not_parsed_as_shell ... ok
+test nothing_is_hidden_by_a_heredoc_the_command_line_and_what_follows_are_still_classified ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/observe_and_failure.rs (target/debug/deps/observe_and_failure-79628f0720ff03ee)
+
+running 8 tests
+test unknown_extra_fields_are_ignored ... ok
+test the_observe_argument_overrides_the_environment ... ok
+test observe_mode_never_blocks_prints_no_decision_and_records_the_would_be_verdict ... ok
+test invalid_json_blocks_in_enforce_mode_and_is_only_logged_in_observe_mode ... ok
+test a_missing_tool_name_or_missing_required_field_blocks_in_enforce_mode ... ok
+test enforce_mode_prints_deny_and_ask_decisions_and_nothing_for_silent_calls ... ok
+test the_audit_log_is_a_verifiable_hash_chain ... ok
+test the_hook_never_prints_allow ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/source_guard.rs (target/debug/deps/source_guard-97496b75527bbe2d)
+
+running 4 tests
+test the_verdict_type_has_no_allow_variant ... ok
+test the_manifest_has_no_http_or_cloud_dependency ... ok
+test only_the_audit_module_may_write_files ... ok
+test no_network_process_or_unsafe_code_anywhere ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/tool_mapping.rs (target/debug/deps/tool_mapping-0f54e823f19746d8)
+
+running 5 tests
+test m1_m2_mcp_tools_only_from_the_allowlisted_servers ... ok
+test t1_reading_or_editing_secret_paths_is_denied ... ok
+test t2_writing_protected_files_asks ... ok
+test w1_x1_other_tools_are_silent ... ok
+test t3_writes_outside_the_project_ask_except_scratch_and_tmp ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_hook
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

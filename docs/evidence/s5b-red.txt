@@ -1,0 +1,44 @@
+S5b red run (stubs): 32 tests in crates/witness
+test n1_no_network_process_unsafe_file_clock_or_environment_access ok
+test n1_the_manifest_has_no_http_cloud_or_kms_dependency ok
+test n2_the_limits_are_the_documented_ones ok
+test v1_canonical_bytes_and_digests_match_the_independent_generator FAILED
+test v2_the_no_previous_root_constant_matches_the_vector_file ok
+test w10_a_good_request_decodes_and_nothing_is_echoed_in_errors FAILED
+test w10_hex_fields_must_be_exact_lowercase_hex FAILED
+test w10_size_limits_and_deep_nesting_are_refused_without_panicking FAILED
+test w10_the_statement_decoder_is_strict_and_verification_needs_the_right_key FAILED
+test w10_unknown_missing_and_mistyped_fields_are_refused FAILED
+test w11_a_corrupted_proof_is_always_refused_and_the_state_never_moves FAILED
+test w11_valid_histories_are_accepted_and_the_statements_chain FAILED
+test w1_an_empty_log_can_be_the_first_checkpoint_and_is_extended_with_an_empty_proof FAILED
+test w1_first_checkpoint_then_extension_then_the_statements_chain FAILED
+test w1_the_first_checkpoint_is_refused_unless_allow_first_is_on FAILED
+test w1_the_same_checkpoint_again_is_accepted_and_changes_nothing FAILED
+test w1_with_a_seeded_state_allow_first_is_not_needed FAILED
+test w2_a_smaller_checkpoint_is_a_rollback_and_leaves_the_state_alone FAILED
+test w3_a_signed_checkpoint_from_a_forked_history_that_fails_consistency_is_recorded_too FAILED
+test w3_the_same_size_with_a_different_root_is_equivocation_and_is_recorded FAILED
+test w4_every_broken_proof_is_refused_and_the_state_stays FAILED
+test w5_the_log_key_comes_from_configuration_never_from_the_request FAILED
+test w6_a_tampered_checkpoint_fails_the_signature FAILED
+test w7_an_unknown_log_id_is_refused FAILED
+test w7_the_configuration_is_checked_when_the_witness_is_built FAILED
+test w7_the_log_id_is_the_blake3_of_the_raw_public_key FAILED
+test w8_a_writer_that_advanced_the_state_between_read_and_swap_makes_us_lose FAILED
+test w8_the_loser_of_a_compare_and_swap_gets_a_retryable_error_and_no_statement FAILED
+test w9_a_failing_evidence_write_still_refuses_and_leaves_the_state FAILED
+test w9_a_failing_signer_signs_nothing_and_does_not_advance FAILED
+test w9_a_failing_store_read_signs_nothing FAILED
+test w9_a_failing_store_write_signs_nothing_and_does_not_advance FAILED
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+test result: FAILED. 0 passed; 14 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+panic reasons:
+     44 not yet implemented
+      2 Test failed: not yet implemented.

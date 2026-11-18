@@ -1,0 +1,30 @@
+{
+  "note": "one planted synthetic key per request; wall clock on the machine that ran it; build profile as run",
+  "runs_per_size": 2000,
+  "sizes": [
+    {
+      "bytes": 1024,
+      "internal_errors": 0,
+      "max_ms": 0.13431700000000002,
+      "p50_ms": 0.113463,
+      "p95_ms": 0.12150999999999999,
+      "p99_ms": 0.12831299999999998
+    },
+    {
+      "bytes": 16384,
+      "internal_errors": 0,
+      "max_ms": 1.87897,
+      "p50_ms": 1.6643409999999998,
+      "p95_ms": 1.754005,
+      "p99_ms": 1.800067
+    },
+    {
+      "bytes": 65536,
+      "internal_errors": 0,
+      "max_ms": 7.83303,
+      "p50_ms": 7.172607,
+      "p95_ms": 7.468294,
+      "p99_ms": 7.552502
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "evidence_kind": "outcome",
+ "run_id": "outcome-S1a",
+ "stage": "S1",
+ "report_file": "a stage record (not published) (section OUTCOME)",
+ "report_sha256_at_receipt": "de7c80297512ab5174a4f91f6ed8cd3ec7d6af34f3534c7d181840c842ab4421",
+ "note": "the receipt is on the local scratch node <build-dir>/s1-scratch-node, not the live node. The report file was edited after the receipt only by this evidence file, not by the plan; the sha256 above is of the plan as receipted.",
+ "receipt": {"index": 0, "label": "code_change", "kind": "evidence.change", "control": "hitrust_10_sdlc", "decision": "allow", "reason": "check_passed", "total": 51, "passed": 51, "flagged": 0,
+             "subject_hash": "8f984ca2b480a710fda824336a5ddfdc66b532e81fdb7b60fd2cac036770883e", "root": "e076d499e65bd34e208a946b058375225d98228d8cde0feaabdc6f8d39ac4e52"},
+ "probe_mistake": "index 1 on the same node (reason check_failed, same counts, same subject hash) is NOT the outcome: it was written while probing which reason code the node accepts. The ledger is append-only, so it stays; the outcome is index 0.",
+ "counts": {"total": "51 bite checks", "passed": "51 killed", "gate_tests_debug": 25, "gate_tests_release": 25, "packaging_checks": 22},
+ "limits": "see the OUTCOME section of a stage record (not published)"
+}

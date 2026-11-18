@@ -1,0 +1,20 @@
+[package]
+name = "entropa-explorer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "The public explorer's GET-only read API as a pure library (docs/ARCHITECTURE-EXPLORER.md section 5). Stage S7d: stubs and red tests."
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-ledger = { path = "../ledger" }
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+proptest = "1"
+
+[lints]
+workspace = true

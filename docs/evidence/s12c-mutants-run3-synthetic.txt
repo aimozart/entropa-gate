@@ -1,0 +1,7 @@
+mutants: jobs=4 timeout=90s fast_tests=1 limits: memory=24g swap=24g cpus=12 pids=4096
+Found 98 mutants to test
+ok       Unmutated baseline in 2s build + 0s test
+TIMEOUT  crates/synthetic/src/lib.rs:180:26: replace + with * in scan in 0s build + 90s test
+TIMEOUT  crates/synthetic/src/lib.rs:190:31: replace + with * in scan in 0s build + 90s test
+98 mutants tested in 2m: 95 caught, 1 unviable, 2 timeouts
+exit 3

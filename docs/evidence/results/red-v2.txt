@@ -1,0 +1,7 @@
+ERROR: test_r12_sources_have_types_and_a4c_a4d_are_independent_records_with_dates (test_results.T.test_r12
+ERROR: test_r13_the_r2_bars_are_verified_against_the_approved_order (test_results.T.test_r13_the_r2_
+ERROR: test_r15_a4c_and_a4d_carry_the_recorded_numbers (test_results.T.test_r15_a4c_and_a4d_carry_th
+FAIL: test_r10_numbers_that_no_report_file_supports_are_flagged_plainly (test_results.T.test_r10_num
+FAIL: test_r14_eg1_records_the_phone_flaw_and_cites_the_commit_for_the_panic (test_results.T.test_r1
+Ran 15 tests in 0.705s
+FAILED (failures=2, errors=3)

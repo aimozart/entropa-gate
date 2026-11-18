@@ -1,0 +1,28 @@
+[package]
+name = "entropa-mcp-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+serde_json = "1"
+tokio = { version = "1", features = ["rt", "io-util"] }
+entropa-mcp = { path = ".." }
+
+[workspace]
+
+[[bin]]
+name = "tool_args"
+path = "fuzz_targets/tool_args.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "line_pump"
+path = "fuzz_targets/line_pump.rs"
+test = false
+doc = false

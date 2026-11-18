@@ -1,0 +1,158 @@
+{
+  "receipts_a": [
+    {
+      "index": 0,
+      "subject_hash": "6e0aa57dfd686a09167048a24b0535d566672e096342430ceb4bfaf083efe375",
+      "size": 1,
+      "root": "13ecc125f0f2506cd2ef782894e56c37c6a5e79ee6251cc7b5ff43d4aff86648"
+    },
+    {
+      "index": 1,
+      "subject_hash": "db2ca9d92290552cd266302453b228d7531b10fbd19f8a5ca5d13e5137fe9177",
+      "size": 2,
+      "root": "7ce607d599d3d3f30591d9829dce3081156d75aa2cc3dce278ece5e92f9c8235"
+    },
+    {
+      "index": 2,
+      "subject_hash": "bf759d7761a799c647636d049ffc27110eabfddd49b6b35001227cba8a7c7b9f",
+      "size": 3,
+      "root": "57060f28352f5fc8b0f707d2ca1b2d73e6466bb281c40e3e222f4ffd6decdb06"
+    },
+    {
+      "index": 3,
+      "subject_hash": "21e0215d20a01e698aa5c1eb3179fa0176756c5ec954aff0e2f91d36002a155f",
+      "size": 4,
+      "root": "6fdfa77bfcac782ac375d6eee1089d49b22c6adb595c22c1e034e6155dd4b12a"
+    }
+  ],
+  "receipts_b": [
+    {
+      "index": 0,
+      "subject_hash": "6e0aa57dfd686a09167048a24b0535d566672e096342430ceb4bfaf083efe375",
+      "size": 1,
+      "root": "13ecc125f0f2506cd2ef782894e56c37c6a5e79ee6251cc7b5ff43d4aff86648"
+    },
+    {
+      "index": 1,
+      "subject_hash": "db2ca9d92290552cd266302453b228d7531b10fbd19f8a5ca5d13e5137fe9177",
+      "size": 2,
+      "root": "7ce607d599d3d3f30591d9829dce3081156d75aa2cc3dce278ece5e92f9c8235"
+    },
+    {
+      "index": 2,
+      "subject_hash": "bf759d7761a799c647636d049ffc27110eabfddd49b6b35001227cba8a7c7b9f",
+      "size": 3,
+      "root": "57060f28352f5fc8b0f707d2ca1b2d73e6466bb281c40e3e222f4ffd6decdb06"
+    },
+    {
+      "index": 3,
+      "subject_hash": "21e0215d20a01e698aa5c1eb3179fa0176756c5ec954aff0e2f91d36002a155f",
+      "size": 4,
+      "root": "6fdfa77bfcac782ac375d6eee1089d49b22c6adb595c22c1e034e6155dd4b12a"
+    }
+  ],
+  "files_a": {
+    "checkpoints.log": "5a20bb16553a31fb:42664",
+    "records.log": "5ce1c699bfbab5e4:57396"
+  },
+  "files_b": {
+    "checkpoints.log": "5a20bb16553a31fb:42664",
+    "records.log": "5ce1c699bfbab5e4:57396"
+  },
+  "verify_a_ok": {
+    "Ok": "OK records=4 checkpoints=4"
+  },
+  "verify_b_ok": {
+    "Ok": "OK records=4 checkpoints=4"
+  },
+  "cross_a_by_b": {
+    "Ok": "OK records=4 checkpoints=4"
+  },
+  "cross_b_by_a": {
+    "Ok": "OK records=4 checkpoints=4"
+  },
+  "errors": {
+    "not_json": {
+      "a": "request is not JSON (or has a duplicated key)",
+      "b": "invalid: request is not JSON (or has a duplicated key)"
+    },
+    "not_object": {
+      "a": "request must be an object",
+      "b": "invalid: request must be an object"
+    },
+    "unknown_field": {
+      "a": "unknown field: zzz",
+      "b": "invalid: unknown field: zzz"
+    },
+    "bad_label": {
+      "a": "label: not in the closed list",
+      "b": "invalid: label: not in the closed list"
+    },
+    "bad_decision": {
+      "a": "decision: not in the closed list",
+      "b": "invalid: decision: not in the closed list"
+    },
+    "bad_reason": {
+      "a": "reason: not in the closed list",
+      "b": "invalid: reason: not in the closed list"
+    },
+    "bad_provider": {
+      "a": "provider: not in the closed list",
+      "b": "invalid: provider: not in the closed list"
+    },
+    "missing_field": {
+      "a": "run_id: required text",
+      "b": "invalid: run_id: required text"
+    },
+    "text_not_text": {
+      "a": "input: required text",
+      "b": "invalid: input: required text"
+    },
+    "number_not_number": {
+      "a": "input_tokens: required whole number",
+      "b": "invalid: input_tokens: required whole number"
+    }
+  },
+  "empty_after_errors_a": {
+    "checkpoints.log": "cbf29ce484222325:0",
+    "records.log": "cbf29ce484222325:0"
+  },
+  "empty_after_errors_b": {
+    "checkpoints.log": "cbf29ce484222325:0",
+    "records.log": "cbf29ce484222325:0"
+  },
+  "duplicate_key": {
+    "a": {
+      "Err": "request is not JSON (or has a duplicated key)"
+    },
+    "b": {
+      "Err": "invalid: request is not JSON (or has a duplicated key)"
+    }
+  },
+  "verify_failures": {
+    "flip_record_byte": {
+      "a": {
+        "Err": "Corrupt(\"a checkpoint does not match the records\")"
+      },
+      "b": {
+        "Err": "verify failed: the ledger does not match its checkpoints or is malformed"
+      }
+    },
+    "flip_checkpoint_byte": {
+      "a": {
+        "Err": "Corrupt(\"a checkpoint does not match the records\")"
+      },
+      "b": {
+        "Err": "verify failed: the ledger does not match its checkpoints or is malformed"
+      }
+    },
+    "drop_last_checkpoint": {
+      "a": {
+        "Err": "the last checkpoint does not cover every record"
+      },
+      "b": {
+        "Err": "verify failed: the last checkpoint does not cover every record"
+      }
+    }
+  }
+}

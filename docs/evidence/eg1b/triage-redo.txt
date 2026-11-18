@@ -1,0 +1,20 @@
+caught: 140  missed: 16  timeout: 8  unviable: 0
+--- caught only by SIGKILL (NOT counted as caught):
+--- missed:
+crates/egress/src/decide.rs:393:14: replace > with >= in Budget::take
+crates/egress/src/decide.rs:396:16: replace -= with += in Budget::take
+crates/egress/src/decide.rs:599:26: replace < with > in scan_text
+crates/egress/src/decide.rs:599:26: replace < with <= in scan_text
+crates/egress/src/decide.rs:600:24: replace += with -= in scan_text
+crates/egress/src/decide.rs:779:21: replace > with >= in scan_all
+crates/egress/src/decide.rs:786:63: replace > with == in scan_all
+crates/egress/src/decide.rs:786:63: replace > with < in scan_all
+crates/egress/src/decide.rs:786:63: replace > with >= in scan_all
+crates/egress/src/decide.rs:789:67: replace > with >= in scan_all
+crates/egress/src/decide.rs:952:17: replace < with <= in core
+crates/egress/src/decide.rs:953:15: replace += with -= in core
+crates/egress/src/decide.rs:1132:43: replace != with == in core
+crates/egress/src/detect.rs:319:33: replace < with == in iban_ok
+crates/egress/src/detect.rs:319:33: replace < with <= in iban_ok
+crates/egress/src/detect.rs:722:36: replace + with - in run_stripped_rest
+DONE

@@ -1,0 +1,8 @@
+eg1c_families: network syscalls = 0
+eg1c_survivors: network syscalls = 0
+decide: network syscalls = 0
+views: network syscalls = 0
+eg1b_families: network syscalls = 0
+detectors: network syscalls = 0
+TOTAL network syscalls = 0
+bite (a process that opens a socket) counted: 1

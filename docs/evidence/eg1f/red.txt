@@ -1,0 +1,17 @@
+test y1_a_payload_of_typed_fields_passes_and_carries_no_free_text ... FAILED
+test y2_every_kind_of_violation_is_refused_with_its_own_code ... FAILED
+test y4_a_refusal_never_contains_the_payload_a_field_name_or_a_value ... FAILED
+test y5_the_contained_decision_runs_free_text_through_the_guard_and_the_worst_action_wins ... FAILED
+test y3_no_dev_secret_family_can_leave_through_a_typed_field ... FAILED
+test y6_hostile_payloads_never_panic_and_always_end_in_a_refusal_or_a_decision ... ok
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+error: test failed, to rerun pass `-p entropa-egress --test eg1f_contain`
+test x1_the_context_scan_finds_the_value_in_every_round_5_syntax ... FAILED
+test x3_the_scan_never_splits_a_character_and_never_panics_on_hostile_strings ... ok
+test x2_references_placeholders_and_prose_are_not_secrets ... FAILED
+test x4_dev_f_secrets_leak_at_most_ten_of_1080_under_v2_and_clean_blocks_at_most_twelve_of_630 ... FAILED
+test x6_the_old_decide_is_unchanged_in_behaviour_and_v2_never_allows_what_v1_blocks ... ok
+test x5_older_dev_sets_get_no_new_block_and_no_new_leak_under_v2 ... ok
+test result: FAILED. 3 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 34.56s
+error: test failed, to rerun pass `-p entropa-egress --test eg1f_context`
+error: 2 targets failed:

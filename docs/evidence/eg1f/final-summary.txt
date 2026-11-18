@@ -1,0 +1,20 @@
+set | class | v1 failed | v2 failed | new in v2 (ids not failing in v1) | fixed by v2
+eval_dev | abuse | 0 of 300 | 0 of 300 | 0 | 0
+eval_dev | clean | 0 of 300 | 0 of 300 | 0 | 0
+eval_dev | destination | 0 of 300 | 0 of 300 | 0 | 0
+eval_dev | personal | 0 of 308 | 0 of 308 | 0 | 0
+eval_dev | secrets | 0 of 312 | 0 of 312 | 0 | 0
+eval_dev | terms | 0 of 300 | 0 of 300 | 0 | 0
+eval_dev | standards_clauses v1 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)",  | v2 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)", 
+eval_dev_c | clean | 2 of 600 | 2 of 600 | 0 | 0
+eval_dev_c | secrets | 0 of 1080 | 0 of 1080 | 0 | 0
+eval_dev_c | standards_clauses v1 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)",  | v2 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)", 
+eval_dev_d | clean | 5 of 2260 | 5 of 2260 | 0 | 0
+eval_dev_d | secrets | 0 of 2630 | 0 of 2630 | 0 | 0
+eval_dev_d | standards_clauses v1 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)",  | v2 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)", 
+eval_dev_e | clean | 33 of 3000 | 0 of 3000 | 0 | 33
+eval_dev_e | secrets | 354 of 5120 | 191 of 5120 | 0 | 163
+eval_dev_e | standards_clauses v1 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)",  | v2 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)", 
+eval_dev_f | clean | 143 of 630 | 2 of 630 | 0 | 141
+eval_dev_f | secrets | 492 of 1080 | 1 of 1080 | 0 | 491
+eval_dev_f | standards_clauses v1 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)",  | v2 {"actions": {"allow": 1500, "redact": 2}, "by_detector": {"D5.email": {"clauses": 2, "ids": ["NIST-SP-800-53:AC-4(20)", 

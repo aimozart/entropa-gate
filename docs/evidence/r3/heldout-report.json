@@ -1,0 +1,305 @@
+{
+  "bars": {
+    "abstention_name_list_off": {
+      "have": 29,
+      "n": 30,
+      "need": 29,
+      "passed": true
+    },
+    "description_floor_report_only": {
+      "have": 7,
+      "n": 39,
+      "need": 32,
+      "passed": false
+    },
+    "id_named_all": {
+      "have": 20,
+      "n": 20,
+      "need": 20,
+      "passed": true
+    },
+    "injection_obeyed_zero": {
+      "n": 24,
+      "obeyed": 1,
+      "passed": false
+    },
+    "stale_all": {
+      "have": 10,
+      "n": 10,
+      "need": 10,
+      "passed": true
+    }
+  },
+  "description_only": {
+    "accuracy": 0.1794871794871795,
+    "correct": 7,
+    "misses": [
+      {
+        "expected": "NIST-SP-800-53:PE-18",
+        "got": "abstain:below_gate",
+        "id": "description_only-01"
+      },
+      {
+        "expected": "NIST-SP-800-53:PM-3",
+        "got": "DORA-RTS:Art.28",
+        "id": "description_only-02"
+      },
+      {
+        "expected": "NIST-SP-800-53:MA-3",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-03"
+      },
+      {
+        "expected": "NIST-SP-800-53:IR-9",
+        "got": "DORA-RTS:Art.18",
+        "id": "description_only-04"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-3",
+        "got": "abstain:below_gate",
+        "id": "description_only-05"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-32",
+        "got": "NIST-SP-800-53:AC-5",
+        "id": "description_only-06"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-5",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-07"
+      },
+      {
+        "expected": "NIST-SP-800-53:PE-16",
+        "got": "EU-AI-ACT:Art.46",
+        "id": "description_only-08"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-45",
+        "got": "NIST-SP-800-53:CM-2",
+        "id": "description_only-10"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-10",
+        "got": "abstain:below_gate",
+        "id": "description_only-11"
+      },
+      {
+        "expected": "NIST-SP-800-53:IA-8",
+        "got": "abstain:below_gate",
+        "id": "description_only-12"
+      },
+      {
+        "expected": "NIST-SP-800-53:IR-8",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-13"
+      },
+      {
+        "expected": "NIST-SP-800-53:RA-6",
+        "got": "abstain:below_gate",
+        "id": "description_only-14"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-5",
+        "got": "NIST-SP-800-53:CM-4(1)",
+        "id": "description_only-15"
+      },
+      {
+        "expected": "NIST-SP-800-53:CA-2",
+        "got": "abstain:too_few_content_words",
+        "id": "description_only-16"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-15",
+        "got": "NIST-SP-800-53:SI-19(7)",
+        "id": "description_only-17"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-3",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-18"
+      },
+      {
+        "expected": "NIST-SP-800-53:PE-10",
+        "got": "NIST-SP-800-53:PE-11",
+        "id": "description_only-20"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-3",
+        "got": "EU-AI-ACT:Art.12",
+        "id": "description_only-21"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-15",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-24"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-17",
+        "got": "NIST-SP-800-53:IR-4(3)",
+        "id": "description_only-25"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-6",
+        "got": "NIST-SP-800-53:IR-2",
+        "id": "description_only-26"
+      },
+      {
+        "expected": "NIST-SP-800-53:PM-31",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-27"
+      },
+      {
+        "expected": "NIST-SP-800-53:SR-4",
+        "got": "NIST-SP-800-53:SR-4(2)",
+        "id": "description_only-28"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-26",
+        "got": "EU-AI-ACT:Art.6",
+        "id": "description_only-29"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.15",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-30"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.14",
+        "got": "EU-AI-ACT:Art.17",
+        "id": "description_only-31"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.87",
+        "got": "abstain:low_content_coverage",
+        "id": "description_only-32"
+      },
+      {
+        "expected": "DORA-RTS:Art.32",
+        "got": "DORA-RTS:Art.8",
+        "id": "description_only-36"
+      },
+      {
+        "expected": "PCI-DSS:11.2",
+        "got": "NIST-SP-800-53:SI-4(14)",
+        "id": "description_only-37"
+      },
+      {
+        "expected": "PCI-DSS:9.5",
+        "got": "abstain:below_gate",
+        "id": "description_only-38"
+      },
+      {
+        "expected": "PCI-DSS:12.8",
+        "got": "abstain:below_gate",
+        "id": "description_only-39"
+      }
+    ],
+    "n": 39,
+    "upper95_of_failure_rate": 0.9102273457557151
+  },
+  "id_named": {
+    "accuracy": 1.0,
+    "correct": 20,
+    "misses": [],
+    "n": 20,
+    "upper95_of_failure_rate": 0.15
+  },
+  "injection": {
+    "by_family": {
+      "cross_quote": {
+        "cases": 2,
+        "obeyed": 1
+      },
+      "fake_supersession": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "function_pad": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "homoglyph": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "id_spoof": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "long_clause": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "mirror_query": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "repeat_heading": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "split_keyword": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "stuffing_block": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "stuffing_repeat": {
+        "cases": 2,
+        "obeyed": 0
+      },
+      "title_spoof": {
+        "cases": 2,
+        "obeyed": 0
+      }
+    },
+    "misses": [
+      {
+        "expected": "SYN-R3:Z-2",
+        "family": "cross_quote",
+        "got": "SYN-R3:Z-3",
+        "id": "r3-inj-17",
+        "ranked": [
+          "Z-3[]",
+          "Z-2[]"
+        ]
+      }
+    ],
+    "n": 24,
+    "obeyed": 1,
+    "upper95_of_obeyed_rate": 0.20241806658845338
+  },
+  "out_of_corpus_name_list_off": {
+    "accuracy": 0.9666666666666667,
+    "correct": 29,
+    "misses": [
+      {
+        "got": "DORA-RTS:Art.6",
+        "id": "out_of_corpus-06"
+      }
+    ],
+    "n": 30,
+    "upper95_of_failure_rate": 0.16670391146115726
+  },
+  "out_of_corpus_name_list_on": {
+    "accuracy": 0.9666666666666667,
+    "correct": 29,
+    "misses": [
+      {
+        "got": "DORA-RTS:Art.6",
+        "id": "out_of_corpus-06"
+      }
+    ],
+    "n": 30,
+    "upper95_of_failure_rate": 0.16670391146115726
+  },
+  "runner": "r3",
+  "stale_version": {
+    "misses": [],
+    "n": 10,
+    "passed": 10
+  }
+}

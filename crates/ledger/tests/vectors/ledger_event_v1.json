@@ -1,0 +1,108 @@
+{
+ "format": "entropa explorer events v1 (docs/ARCHITECTURE-EXPLORER.md section 4)",
+ "generated_by": "independent Python script (json + blake3), not by the Rust code",
+ "cases": [
+  {
+   "name": "tx_screened_with_model",
+   "fields": {
+    "kind": "tx.screened",
+    "tenant": "bigironbank",
+    "key_id": "0123456789abcdef",
+    "handle": "agent-bigironbank",
+    "ts": 1700000000,
+    "subject_hash": "6282e646e870ce564fb7a79f4e423520bd3f1c30c6ff47978d7ddbcf5900ad04",
+    "label": "fraud_screen",
+    "decision": "hold",
+    "reason": "needs_review",
+    "approval_ref": null,
+    "agent": {
+     "provider": "fake",
+     "model_id": "amazon.nova-lite-v1:0",
+     "input_tokens": 1200,
+     "output_tokens": 150,
+     "cost_micro_usd": 108
+    },
+    "role": null,
+    "attested_by": null,
+    "pubkey_fingerprint": null
+   },
+   "canonical": "{\"agent\":{\"cost_micro_usd\":108,\"input_tokens\":1200,\"model_id\":\"amazon.nova-lite-v1:0\",\"output_tokens\":150,\"provider\":\"fake\"},\"approval_ref\":null,\"attested_by\":null,\"decision\":\"hold\",\"handle\":\"agent-bigironbank\",\"key_id\":\"0123456789abcdef\",\"kind\":\"tx.screened\",\"label\":\"fraud_screen\",\"pubkey_fingerprint\":null,\"reason\":\"needs_review\",\"role\":null,\"subject_hash\":\"6282e646e870ce564fb7a79f4e423520bd3f1c30c6ff47978d7ddbcf5900ad04\",\"synthetic\":true,\"tenant\":\"bigironbank\",\"ts\":1700000000,\"type\":\"explorer.event\",\"v\":1}",
+   "digest_hex": "0dfe5227a1cf9c67337acad402bee32f5f2c4dbcf1f1155b2277295a0ad85a74"
+  },
+  {
+   "name": "audit_answer",
+   "fields": {
+    "kind": "agent.invocation",
+    "tenant": "entropa",
+    "key_id": "0123456789abcdef",
+    "handle": "agent-entropa",
+    "ts": 1700000060,
+    "subject_hash": "26e5bd5701aa52d3435e73880ec63ee1e7bf8e86f51192ea7f4a8acb1b202e60",
+    "label": "audit_question",
+    "decision": "info",
+    "reason": "cited_receipts",
+    "approval_ref": "6a83df989ef5c6943ba3883bfc69b96543232223f245ee81663a5eef95e6b68b",
+    "agent": {
+     "provider": "bedrock",
+     "model_id": "amazon.nova-lite-v1:0",
+     "input_tokens": 3000,
+     "output_tokens": 500,
+     "cost_micro_usd": 300
+    },
+    "role": null,
+    "attested_by": null,
+    "pubkey_fingerprint": null
+   },
+   "canonical": "{\"agent\":{\"cost_micro_usd\":300,\"input_tokens\":3000,\"model_id\":\"amazon.nova-lite-v1:0\",\"output_tokens\":500,\"provider\":\"bedrock\"},\"approval_ref\":\"6a83df989ef5c6943ba3883bfc69b96543232223f245ee81663a5eef95e6b68b\",\"attested_by\":null,\"decision\":\"info\",\"handle\":\"agent-entropa\",\"key_id\":\"0123456789abcdef\",\"kind\":\"agent.invocation\",\"label\":\"audit_question\",\"pubkey_fingerprint\":null,\"reason\":\"cited_receipts\",\"role\":null,\"subject_hash\":\"26e5bd5701aa52d3435e73880ec63ee1e7bf8e86f51192ea7f4a8acb1b202e60\",\"synthetic\":true,\"tenant\":\"entropa\",\"ts\":1700000060,\"type\":\"explorer.event\",\"v\":1}",
+   "digest_hex": "14963bb2efc945847fbef439df5a29dff319ede44c3062c2c503e322e1a5c1a3"
+  },
+  {
+   "name": "directory_entry",
+   "fields": {
+    "kind": "directory.actor",
+    "tenant": "entropa",
+    "key_id": "0123456789abcdef",
+    "handle": "human-principal",
+    "ts": 1699999000,
+    "subject_hash": "ecb36a3c28efe640c7f8f541d3a4f67a294353dabb9bc9ffecf4476c486ab609",
+    "label": "actor_registered",
+    "decision": "info",
+    "reason": "none",
+    "approval_ref": null,
+    "agent": null,
+    "role": "human",
+    "attested_by": "orchestrator-agent",
+    "pubkey_fingerprint": "fedcba9876543210"
+   },
+   "canonical": "{\"agent\":null,\"approval_ref\":null,\"attested_by\":\"orchestrator-agent\",\"decision\":\"info\",\"handle\":\"human-principal\",\"key_id\":\"0123456789abcdef\",\"kind\":\"directory.actor\",\"label\":\"actor_registered\",\"pubkey_fingerprint\":\"fedcba9876543210\",\"reason\":\"none\",\"role\":\"human\",\"subject_hash\":\"ecb36a3c28efe640c7f8f541d3a4f67a294353dabb9bc9ffecf4476c486ab609\",\"synthetic\":true,\"tenant\":\"entropa\",\"ts\":1699999000,\"type\":\"explorer.event\",\"v\":1}",
+   "digest_hex": "62dba3edb58b22ad8f2dface803b1899d23aa0485db899d4e887629282a2dfbd"
+  },
+  {
+   "name": "largest_numbers",
+   "fields": {
+    "kind": "agent.invocation",
+    "tenant": "hippagrchealthcare",
+    "key_id": "0123456789abcdef",
+    "handle": "agent-hippagrchealthcare",
+    "ts": 9007199254740991,
+    "subject_hash": "d4828db2e6adc27f352b12d5719649494b243bbefa1df5ebe04fd11cdf159c15",
+    "label": "case_review",
+    "decision": "release",
+    "reason": "within_limits",
+    "approval_ref": null,
+    "agent": {
+     "provider": "vertex",
+     "model_id": "gemini-synthetic:1",
+     "input_tokens": 9007199254740991,
+     "output_tokens": 0,
+     "cost_micro_usd": 9007199254740991
+    },
+    "role": null,
+    "attested_by": null,
+    "pubkey_fingerprint": null
+   },
+   "canonical": "{\"agent\":{\"cost_micro_usd\":9007199254740991,\"input_tokens\":9007199254740991,\"model_id\":\"gemini-synthetic:1\",\"output_tokens\":0,\"provider\":\"vertex\"},\"approval_ref\":null,\"attested_by\":null,\"decision\":\"release\",\"handle\":\"agent-hippagrchealthcare\",\"key_id\":\"0123456789abcdef\",\"kind\":\"agent.invocation\",\"label\":\"case_review\",\"pubkey_fingerprint\":null,\"reason\":\"within_limits\",\"role\":null,\"subject_hash\":\"d4828db2e6adc27f352b12d5719649494b243bbefa1df5ebe04fd11cdf159c15\",\"synthetic\":true,\"tenant\":\"hippagrchealthcare\",\"ts\":9007199254740991,\"type\":\"explorer.event\",\"v\":1}",
+   "digest_hex": "9f03b918e08ba636c90923d3e5aa886cf2b9c8541cd47e73803fa0a3a827e22e"
+  }
+ ]
+}

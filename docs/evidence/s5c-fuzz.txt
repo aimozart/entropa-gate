@@ -1,0 +1,9 @@
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz request_decode for 60s
+Done 8487667 runs in 61 second(s)
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz statement_verify for 60s
+Done 8339192 runs in 61 second(s)
+fuzz: rss_limit_mb=4096 limits: memory=24g swap=24g cpus=12 pids=4096
+== fuzz cosign_structured for 60s
+Done 6404 runs in 61 second(s)

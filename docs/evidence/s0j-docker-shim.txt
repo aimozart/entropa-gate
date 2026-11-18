@@ -1,0 +1,5 @@
+== .
+gitleaks tree (tracked files): clean
+gitleaks history: clean
+PREFLIGHT PASS
+ok   preflight passes through the docker fallback (no host gitleaks on PATH)

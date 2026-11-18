@@ -1,0 +1,21 @@
+# S12c: the Cedar replay tests (not red-first: replay() already existed) bite - each fails against a deliberately broken replay()
+## real replay()
+   test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+## broken: allow->deny counted as newly_allowed
+   test y1_a_stricter_candidate_policy_denies_what_it_should_and_nothing_else ... FAILED
+   test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+## broken: changed ids not recorded
+   test y1_a_stricter_candidate_policy_denies_what_it_should_and_nothing_else ... FAILED
+   test y2_loosening_a_policy_shows_up_as_newly_allowed ... FAILED
+   test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+## broken: bad-outcome denials counted as allowed
+   test y1_a_stricter_candidate_policy_denies_what_it_should_and_nothing_else ... FAILED
+   test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+## broken: changed means unchanged
+   test y2_loosening_a_policy_shows_up_as_newly_allowed ... FAILED
+   test y1_a_stricter_candidate_policy_denies_what_it_should_and_nothing_else ... FAILED
+   test y2b_a_cedar_permit_alone_does_not_allow_a_guarded_action_the_approvals_gate_must_agree ... FAILED
+   test y3_the_unchanged_policy_set_changes_nothing_and_the_baseline_is_what_the_policies_say ... FAILED
+   test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+## real replay() again
+   test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

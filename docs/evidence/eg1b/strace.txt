@@ -1,0 +1,17 @@
+entropa_egress-90eb586806a7acf0: network syscalls = 0
+zz_probe3-90e6ed7499578f89: network syscalls = 0
+decide-57798169594cb7cd: network syscalls = 0
+eg1b_families-8ea81667fdfe20c0: network syscalls = 0
+multibyte-43f8785a8a19034e: network syscalls = 0
+policy-b2f264adff6ff80a: network syscalls = 0
+views-497e03d71f0b389e: network syscalls = 0
+zz_probe5-d283436393be1156: network syscalls = 0
+egress_eval-f113849467d7f991: network syscalls = 0
+zz_probe4-ed9bf72bd3f4bfa6: network syscalls = 0
+zz_probe2-820a92571ccb8529: network syscalls = 0
+nul-2626771e1f80a5f1: network syscalls = 0
+sealed_runner-e94bb7c063e070b9: network syscalls = 0
+invariants-89b104d8bd4874e9: network syscalls = 0
+aws_alphabet-cd8568b0fefe1765: network syscalls = 0
+detectors-55aa66ee3d21d09e: network syscalls = 0
+TOTAL network syscalls = 0

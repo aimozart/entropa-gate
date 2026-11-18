@@ -1,0 +1,18 @@
+KILLED   M1 key file mode 0644 -> a1 :: test a1_init_makes_a_private_key_in_a_private_directory_and_never_prints_it ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filte
+KILLED   M2 directory mode 0755 -> a1 :: test a1_init_makes_a_private_key_in_a_private_directory_and_never_prints_it ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filte
+KILLED   M3 no key permission check -> a7 :: test a7_a_key_file_that_others_can_read_is_refused ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.17
+KILLED   M4 verify says OK when the ledger does not open -> a6 :: test a6_one_changed_byte_in_a_copy_fails_verification_at_five_of_five_positions ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 f
+KILLED   M5 record also writes the request to a file -> a5 :: test a5_300_planted_canaries_never_reach_a_file_a_receipt_or_stdout ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out;
+Traceback (most recent call last):
+  File "/tmp/claude-1000/-home-scott--cache-<build-dir>-<worktree>/3019ce34-5628-4cec-9fbd-a62b066f1a93/scratchpad/bite_gate.py", line 24, in <module>
+    assert old in orig, f"pattern not found for {name}"
+           ^^^^^^^^^^^
+AssertionError: pattern not found for M6 unknown request fields accepted
+KILLED   M6 unknown request fields accepted -> a4 :: test a4_record_refuses_bad_requests_and_changes_nothing ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in
+SURVIVED M7 no request size limit -> a4 :: test a4_record_refuses_bad_requests_and_changes_nothing ... ok | test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.06s
+KILLED   M8 unknown config keys accepted -> a2 :: test a2_the_config_has_closed_keys ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.00s | error: test 
+KILLED   M9 a network type in the library -> a8 :: test a8_the_library_holds_no_network_code_and_never_reads_the_cloud_key_variables ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9
+KILLED   M10 a public function returning the key -> a9 :: test a9_only_keys_rs_names_the_key_file_and_no_public_function_returns_key_bytes ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 
+KILLED   M11 key file named outside keys.rs -> a9 :: test a9_only_keys_rs_names_the_key_file_and_no_public_function_returns_key_bytes ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 
+KILLED   M12 record signs with a different label than it stores -> a10 :: test a10_a_gate_ledger_verifies_with_the_platinum_verifier_and_the_other_way_round ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 
+KILLED   M7 no request size limit -> a4b :: test a4b_the_library_refuses_a_request_over_the_size_limit_even_when_it_is_valid ... FAILED | test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 10

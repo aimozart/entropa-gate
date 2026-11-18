@@ -1,0 +1,157 @@
+{
+ "citations_version": 1,
+ "corpus_version": "c2026-11-13",
+ "corpus_hash": "0e8066afcbcee42f3839e1e6d091452dbcf6a63384adb76fc8daf434276de2e8",
+ "binding": "by clause id: an exact lookup of (standard, clause id) in the sealed manifest, compared by text hash; never a text search",
+ "wording": "evidence mapped to the control. A guardrail citing a clause is our statement of what the guardrail is for, not a review by an assessor.",
+ "register_rows": [
+  {
+   "register_id": "DORA-6",
+   "standard": "DORA-RTS",
+   "clause": "Art.6",
+   "text_sha256": "21b3be0def4d596537ed91cc927520b468b07e54ad72734fb08f5932fcd8c113"
+  },
+  {
+   "register_id": "DORA-7",
+   "standard": "DORA-RTS",
+   "clause": "Art.7",
+   "text_sha256": "ee389ae25e717855ebf24370dc356d89b7b2f6d0f4e006c79ff7baf76feb01b9"
+  },
+  {
+   "register_id": "DORA-12-2-d",
+   "standard": "DORA-RTS",
+   "clause": "Art.12",
+   "text_sha256": "4c9b6009f0a5e4174a4e0de16def4d09fa02f23cdc32c24c7e011896149185ae"
+  },
+  {
+   "register_id": "PCI-10-3-2",
+   "standard": "PCI-DSS",
+   "clause": "10.3.2",
+   "text_sha256": "4ec089f11d0b63f98f1e4c85de9e0b9216e31ba95a70f7833f908bcdb366a519"
+  },
+  {
+   "register_id": "PCI-10-3-4",
+   "standard": "PCI-DSS",
+   "clause": "10.3.4",
+   "text_sha256": "6f6740fb9054c44d0966e472ecbaa68269b273f1d278af7161f49a521ff7cf84"
+  },
+  {
+   "register_id": "PCI-10-5-1",
+   "standard": "PCI-DSS",
+   "clause": "10.5.1",
+   "text_sha256": "5a82df02fc56e5589ea80a5db0b2aced472c6ab9a3dd8d41c368f019c07661e6"
+  },
+  {
+   "register_id": "PCI-12-3-3",
+   "standard": "PCI-DSS",
+   "clause": "12.3.3",
+   "text_sha256": "e88ef3485874e6e989f204a5a22eb751bf0ac75b1fde0c31804b6d1f697d76d6"
+  },
+  {
+   "register_id": "NIST-AU-9",
+   "standard": "NIST-SP-800-53",
+   "clause": "AU-9",
+   "text_sha256": "807533daff9d91a987f667a4c9113f4a46c236013f0ec6ad2103faeeb817e84e"
+  },
+  {
+   "register_id": "NIST-AU-9-2",
+   "standard": "NIST-SP-800-53",
+   "clause": "AU-9(2)",
+   "text_sha256": "c0ab9b1f8dadad6d682cfc8c544cbf2d39fc6aa06fe6acdd1184307bb2639d32"
+  },
+  {
+   "register_id": "NIST-AU-9-3",
+   "standard": "NIST-SP-800-53",
+   "clause": "AU-9(3)",
+   "text_sha256": "5e6c85ae41bd2c0ea28b68ae1b7d43588edfc7a9fcd35e477d4f47ad358b426c"
+  },
+  {
+   "register_id": "NIST-AU-10",
+   "standard": "NIST-SP-800-53",
+   "clause": "AU-10",
+   "text_sha256": "3a056971786c1b05d8671523d2abf1dbcb7d99e2f88f506fc0e799b6dcbc07ba"
+  },
+  {
+   "register_id": "EUAIA-12",
+   "standard": "EU-AI-ACT",
+   "clause": "Art.12",
+   "text_sha256": "2c7ae773d15c99eb4ed6daf3f190cc2168b01e271266aca9c5518dd07a189d73"
+  },
+  {
+   "register_id": "EUAIA-19",
+   "standard": "EU-AI-ACT",
+   "clause": "Art.19",
+   "text_sha256": "179b5d4761ccbdfd16877f5c43945dd3fca80d35081af14ea383312ee792ee43"
+  },
+  {
+   "register_id": "EUAIA-26-6",
+   "standard": "EU-AI-ACT",
+   "clause": "Art.26",
+   "text_sha256": "cf80b295d5c0cb1dcac09dadb3163eab9eff2f5ece88bc0b06de15e205df1fe4"
+  },
+  {
+   "register_id": "HIPAA-164-312-b",
+   "standard": "HIPAA-SECURITY-RULE",
+   "clause": "164.312(b)",
+   "text_sha256": "82b14b9ecc14399ba0fcaea77cdf11d875f9d71fb49d07baf08939f7fa317618"
+  },
+  {
+   "register_id": "HIPAA-164-312-c1",
+   "standard": "HIPAA-SECURITY-RULE",
+   "clause": "164.312(c)",
+   "text_sha256": "c7c3b7c2caf035880fd4e30cce7b4a0d5d588fcba9b883da4a25e0342e22a143"
+  },
+  {
+   "register_id": "HIPAA-164-312-c2",
+   "standard": "HIPAA-SECURITY-RULE",
+   "clause": "164.312(c)",
+   "text_sha256": "c7c3b7c2caf035880fd4e30cce7b4a0d5d588fcba9b883da4a25e0342e22a143"
+  }
+ ],
+ "guardrails": [
+  {
+   "id": "cedar-hard-rule-actions-need-a-human",
+   "kind": "cedar_rule",
+   "file": "policies/entropa.cedar",
+   "marker": "@id(\"hard-rule-actions-need-a-human\")",
+   "cites": [
+    {
+     "standard": "NIST-SP-800-53",
+     "clause": "AC-3",
+     "text_sha256": "c286bc1b50a804f74c4ab37f8975cedbb8711e8ff923628d38e5acc1713d1579"
+    },
+    {
+     "standard": "NIST-SP-800-53",
+     "clause": "AC-6",
+     "text_sha256": "169ead26d5a6f519cb2ee9d134b880eca81bc42f9c5cdf92a67c94dcfff6d511"
+    }
+   ]
+  },
+  {
+   "id": "mcp-strict-argument-validation",
+   "kind": "input_validation",
+   "file": "crates/mcp/src/args.rs",
+   "marker": "//! Strict argument validation.",
+   "cites": [
+    {
+     "standard": "NIST-SP-800-53",
+     "clause": "SI-10",
+     "text_sha256": "060c3736db9ebd55e5ed8acfcf9398c730117a6ae6b0f8e01f8cbbbc06dfb4ae"
+    }
+   ]
+  },
+  {
+   "id": "synthetic-canary-scan",
+   "kind": "canary_scan",
+   "file": "crates/synthetic/src/lib.rs",
+   "marker": "pub fn scan(text: &str) -> Vec<String>",
+   "cites": [
+    {
+     "standard": "NIST-SP-800-53",
+     "clause": "AC-4",
+     "text_sha256": "46b7ebd67f0ba9752bda9d45f7f3495015fd7931f1aaeb9a72ec89e6222bd648"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "counts": {
+  "attacks": 2630,
+  "clean": 2260,
+  "families": {
+   "assign_clean": 1360,
+   "assign_literal": 1050,
+   "card_neg": 300,
+   "card_pos": 300,
+   "clean_hyphen": 600,
+   "hyphen_mid": 1280
+  }
+ },
+ "files": {
+  "eg_abuse.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_clean.jsonl": "fd7394a65a67ae3743b35f1a46e9aba054f1f28f0f82415e3ea70233b2fdc2f0",
+  "eg_destination.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_personal.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_policy_extra.json": "bd7a1804c86b13db1f4b2eaf51d0a35382658f0c6bcf23ba133993a9087f7cf5",
+  "eg_secrets.jsonl": "97da30ad38ed8674b53e4667abcef5d1b012cc75d66cab0753de38a26b40e8d7",
+  "eg_terms.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "seed": 20261217
+}

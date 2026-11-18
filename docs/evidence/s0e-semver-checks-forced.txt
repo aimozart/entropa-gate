@@ -1,0 +1,75 @@
+    Building entropa-core v0.2.0 (current)
+       Built [   0.168s] (current)
+     Parsing entropa-core v0.2.0 (current)
+      Parsed [   0.002s] (current)
+     Parsing entropa-core v0.1.3 (baseline, cached)
+      Parsed [   0.004s] (baseline)
+    Checking entropa-core v0.1.3 -> v0.2.0 (assume minor change)
+     Checked [   0.003s] 202 checks: 197 pass, 5 fail, 0 warn, 58 skip
+
+--- failure enum_missing: pub enum removed or renamed ---
+
+Description:
+A publicly-visible enum cannot be imported by its prior path. A `pub use` may have been removed, or the enum itself may have been renamed or removed entirely.
+        ref: https://doc.rust-lang.org/cargo/reference/semver.html#item-remove
+       impl: https://github.com/obi1kenobi/cargo-semver-checks/tree/v0.51.0/src/lints/enum_missing.ron
+
+Failed in:
+  enum entropa_core::chain::ChainError, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:20
+  enum entropa_core::ChainError, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:20
+
+--- failure function_missing: pub fn removed or renamed ---
+
+Description:
+A publicly-visible function cannot be imported by its prior path. A `pub use` may have been removed, or the function itself may have been renamed or removed entirely.
+        ref: https://doc.rust-lang.org/cargo/reference/semver.html#item-remove
+       impl: https://github.com/obi1kenobi/cargo-semver-checks/tree/v0.51.0/src/lints/function_missing.ron
+
+Failed in:
+  function entropa_core::chain::rollback_detected, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:278
+  function entropa_core::rollback_detected, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:278
+  function entropa_core::beacon::sample_live, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/beacon.rs:26
+  function entropa_core::beacon::sample, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/beacon.rs:44
+  function entropa_core::block::block_digest, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:96
+  function entropa_core::block_digest, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:96
+
+--- failure module_missing: pub module removed or renamed ---
+
+Description:
+A publicly-visible module cannot be imported by its prior path. A `pub use` may have been removed, or the module may have been renamed, removed, or made non-public.
+        ref: https://doc.rust-lang.org/cargo/reference/semver.html#item-remove
+       impl: https://github.com/obi1kenobi/cargo-semver-checks/tree/v0.51.0/src/lints/module_missing.ron
+
+Failed in:
+  mod entropa_core::chain, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:1
+  mod entropa_core::block, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:1
+  mod entropa_core::beacon, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/beacon.rs:1
+
+--- failure pub_module_level_const_missing: pub module-level const is missing ---
+
+Description:
+A public const is missing or renamed
+        ref: https://doc.rust-lang.org/cargo/reference/semver.html#item-remove
+       impl: https://github.com/obi1kenobi/cargo-semver-checks/tree/v0.51.0/src/lints/pub_module_level_const_missing.ron
+
+Failed in:
+  BIG_BANG in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:17
+  BIG_BANG in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:17
+
+--- failure struct_missing: pub struct removed or renamed ---
+
+Description:
+A publicly-visible struct cannot be imported by its prior path. A `pub use` may have been removed, or the struct itself may have been renamed or removed entirely.
+        ref: https://doc.rust-lang.org/cargo/reference/semver.html#item-remove
+       impl: https://github.com/obi1kenobi/cargo-semver-checks/tree/v0.51.0/src/lints/struct_missing.ron
+
+Failed in:
+  struct entropa_core::block::Transaction, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:12
+  struct entropa_core::Transaction, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:12
+  struct entropa_core::chain::Chain, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:44
+  struct entropa_core::Chain, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/chain.rs:44
+  struct entropa_core::block::Block, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:76
+
+     Summary semver requires new major version: 5 major and 0 minor checks failed
+  struct entropa_core::Block, previously in file /cargo/registry/src/index.crates.io-1949cf8c6b5b557f/entropa-core-0.1.3/src/block.rs:76
+    Finished [   0.378s] entropa-core

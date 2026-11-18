@@ -1,0 +1,70 @@
+   Compiling entropa-egress v0.2.0 (<build-dir>/<worktree>/crates/egress)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.21s
+     Running tests/eg1d_families.rs (target/debug/deps/eg1d_families-ebb37520689b49a5)
+
+running 7 tests
+test a1_references_are_allowed ... FAILED
+test b3_a_compound_of_two_disguises_is_seen ... FAILED
+test b2_irregular_hyphens_through_the_phrase_are_seen ... FAILED
+test b1_a_hyphen_grouping_that_starts_mid_line_is_seen ... FAILED
+test a3_a_literal_inside_a_call_is_still_a_credential ... FAILED
+test a2_literal_credentials_stay_blocked_in_every_form ... FAILED
+test b4_ordinary_hyphenated_text_stays_allowed ... ok
+
+failures:
+
+---- a1_references_are_allowed stdout ----
+
+thread 'a1_references_are_allowed' (463913) panicked at crates/egress/tests/eg1d_families.rs:38:9:
+assertion `left == right` failed: token = next_token()
+  left: Block
+ right: Allow
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- b3_a_compound_of_two_disguises_is_seen stdout ----
+
+thread 'b3_a_compound_of_two_disguises_is_seen' (463918) panicked at crates/egress/tests/eg1d_families.rs:131:13:
+assertion `left == right` failed: rot13 of reverse: 8Mg2TQqD5ZqdAxR2SH6LBkUWJ5aP erenrO :abvgnmvebughN
+  left: Allow
+ right: Block
+
+---- b2_irregular_hyphens_through_the_phrase_are_seen stdout ----
+
+thread 'b2_irregular_hyphens_through_the_phrase_are_seen' (463917) panicked at crates/egress/tests/eg1d_families.rs:121:9:
+assertion `left == right` failed: Au-thori-zat-ion: Bear-er C-n5WJHxO-Y6UF2E-kNqdM5QdDG-2t-Z8
+  left: Allow
+ right: Block
+
+---- b1_a_hyphen_grouping_that_starts_mid_line_is_seen stdout ----
+
+thread 'b1_a_hyphen_grouping_that_starts_mid_line_is_seen' (463916) panicked at crates/egress/tests/eg1d_families.rs:101:13:
+assertion `left == right` failed: g=2: see this: Au-th-or-iz-at-io-n:- B-ea-re-r -Cn-5W-JH-xO-Y6-UF-2E-kN-qd-M5-Qd-DG-2t-Z8
+  left: Allow
+ right: Block
+
+---- a3_a_literal_inside_a_call_is_still_a_credential stdout ----
+
+thread 'a3_a_literal_inside_a_call_is_still_a_credential' (463915) panicked at crates/egress/tests/eg1d_families.rs:74:9:
+assertion `left == right` failed: token = fetch("Ab3dE6gH9jK2mN5pQ7rS9tU1vW")
+  left: Allow
+ right: Block
+
+---- a2_literal_credentials_stay_blocked_in_every_form stdout ----
+
+thread 'a2_literal_credentials_stay_blocked_in_every_form' (463914) panicked at crates/egress/tests/eg1d_families.rs:60:9:
+assertion `left == right` failed: dbPassword = "Ab3dE6gH9jK2mN5pQ7rS9tU1vW"
+  left: Allow
+ right: Block
+
+
+failures:
+    a1_references_are_allowed
+    a2_literal_credentials_stay_blocked_in_every_form
+    a3_a_literal_inside_a_call_is_still_a_credential
+    b1_a_hyphen_grouping_that_starts_mid_line_is_seen
+    b2_irregular_hyphens_through_the_phrase_are_seen
+    b3_a_compound_of_two_disguises_is_seen
+
+test result: FAILED. 1 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+error: test failed, to rerun pass `-p entropa-egress --test eg1d_families`

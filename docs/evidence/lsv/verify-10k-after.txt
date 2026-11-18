@@ -1,0 +1,5 @@
+OK records=10000 checkpoints=10000
+
+real	0m2.632s
+user	0m2.349s
+sys	0m0.230s

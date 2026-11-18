@@ -1,0 +1,153 @@
+{
+ "index_hash": "c80a91b104930857778cbf80cc673cda90800a1b3747bd160b47267456500046",
+ "index_hash_other_threshold_0": "1bb3322507d569d2a980d79b366f3e8cde50cbc060ace0886a3a343401e8aa40",
+ "manifest_hash": "388b01eaf6f1bed4462514e60c1998c9405a8e7eeaaf1199d6dad21210c154c8",
+ "memory": {
+  "hash": "105eaab019c4d19a41dd7ad107b3895f20497c9142530087050ebdd88c8c4659",
+  "ids": [
+   "p2",
+   "p1"
+  ]
+ },
+ "precedents": [
+  {
+   "id": "p1",
+   "tenant": "entropa",
+   "terms": [
+    "change=test",
+    "class=missing_approval",
+    "decision=accept",
+    "reason=evidence_sufficient",
+    "severity=high"
+   ]
+  },
+  {
+   "id": "p2",
+   "tenant": "entropa",
+   "terms": [
+    "change=cedar_change",
+    "class=policy_gap",
+    "decision=accept",
+    "reason=risk_accepted",
+    "severity=medium"
+   ]
+  },
+  {
+   "id": "p3",
+   "tenant": "bigironbank",
+   "terms": [
+    "change=lesson",
+    "class=missing_approval",
+    "decision=accept",
+    "reason=already_handled",
+    "severity=low"
+   ]
+  },
+  {
+   "id": "p9",
+   "tenant": "entropa",
+   "terms": [
+    "change=test",
+    "class=wrong_subject",
+    "decision=accept",
+    "reason=evidence_sufficient",
+    "severity=high"
+   ]
+  }
+ ],
+ "queries": [
+  {
+   "hits": [
+    {
+     "id": "p1",
+     "score": 750
+    }
+   ],
+   "k": 3,
+   "query": [
+    "class=missing_approval",
+    "decision=accept",
+    "severity=high"
+   ],
+   "tenant": "entropa",
+   "threshold": 400
+  },
+  {
+   "hits": [
+    {
+     "id": "p1",
+     "score": 750
+    },
+    {
+     "id": "p2",
+     "score": 166
+    }
+   ],
+   "k": 3,
+   "query": [
+    "class=missing_approval",
+    "decision=accept",
+    "severity=high"
+   ],
+   "tenant": "entropa",
+   "threshold": 0
+  },
+  {
+   "hits": [
+    {
+     "id": "p1",
+     "score": 1000
+    }
+   ],
+   "k": 3,
+   "query": [
+    "change=test",
+    "class=missing_approval",
+    "decision=accept",
+    "reason=evidence_sufficient",
+    "severity=high"
+   ],
+   "tenant": "entropa",
+   "threshold": 400
+  },
+  {
+   "hits": [
+    {
+     "id": "p3",
+     "score": 411
+    }
+   ],
+   "k": 3,
+   "query": [
+    "change=test",
+    "class=missing_approval",
+    "decision=accept",
+    "reason=evidence_sufficient",
+    "severity=high"
+   ],
+   "tenant": "bigironbank",
+   "threshold": 0
+  },
+  {
+   "hits": [],
+   "k": 3,
+   "query": [
+    "class=cosmic_ray",
+    "decision=accept"
+   ],
+   "tenant": "entropa",
+   "threshold": 400
+  }
+ ],
+ "revoked": [
+  "p9"
+ ],
+ "threshold": 400,
+ "weights": {
+  "change": 2,
+  "class": 4,
+  "decision": 3,
+  "reason": 1,
+  "severity": 2
+ }
+}

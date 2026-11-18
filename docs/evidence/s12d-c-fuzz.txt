@@ -1,0 +1,15 @@
+"\012\252\252\252\252\252\252\252" # Uses: 1039
+"\001\000\000\200" # Uses: 1022
+"thresho" # Uses: 973
+"_f..=bbebpaca6.en" # Uses: 805
+"ntropacacpaan6t" # Uses: 811
+"\001\000\000\000\000\000\000\000" # Uses: 561
+"2\000\000\000\000\000\000\000" # Uses: 549
+"_f..=ca0.eno-rt" # Uses: 475
+"severity" # Uses: 382
+"_f..=bbebpacvet" # Uses: 362
+"t2" # Uses: 198
+".=.-0.6eb--rt" # Uses: 87
+"p2" # Uses: 90
+###### End of recommended dictionary. ######
+Done 1259904 runs in 61 second(s)

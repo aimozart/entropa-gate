@@ -1,0 +1,10 @@
+Downloading botocore (15.3MiB)
+ Downloaded botocore
+Installed 5 packages in 23ms
+no-token amazon.nova-lite-v1:0                        canonical_request_equal=True signature_equal=True
+token    amazon.nova-lite-v1:0                        canonical_request_equal=True signature_equal=True
+no-token us.anthropic.claude-haiku-4-5-20251001-v1:0  canonical_request_equal=True signature_equal=True
+token    us.anthropic.claude-haiku-4-5-20251001-v1:0  canonical_request_equal=True signature_equal=True
+no-token arn:aws:bedrock:us-west-2:123456789012:infer canonical_request_equal=True signature_equal=True
+token    arn:aws:bedrock:us-west-2:123456789012:infer canonical_request_equal=True signature_equal=True
+ALL EQUAL

@@ -1,0 +1,643 @@
+crates/core/src/merkle.rs:18:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:26:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:49:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:52:19: warning: indexing may panic
+crates/core/src/merkle.rs:55:30: warning: slicing may panic
+crates/core/src/merkle.rs:56:31: warning: slicing may panic
+crates/core/src/merkle.rs:88:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:93:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/merkle.rs:104:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:112:34: warning: slicing may panic
+crates/core/src/merkle.rs:114:54: warning: slicing may panic
+crates/core/src/merkle.rs:123:34: warning: slicing may panic
+crates/core/src/merkle.rs:125:54: warning: slicing may panic
+crates/core/src/merkle.rs:148:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:165:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:208:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/merkle.rs:229:19: warning: slicing may panic
+crates/core/src/merkle.rs:230:32: warning: slicing may panic
+crates/core/src/merkle.rs:234:19: warning: slicing may panic
+crates/core/src/merkle.rs:235:32: warning: slicing may panic
+crates/core/src/merkle.rs:244:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:24:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:31:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:36:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:41:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:46:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:56:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:67:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:73:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/pqc.rs:80:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/signer.rs:27:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/batch_receipt.rs:38:9: warning: indexing may panic
+crates/core/src/transparency_log/batch_receipt.rs:41:39: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:42:40: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:71:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:73:58: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:81:34: warning: slicing may panic
+crates/core/src/transparency_log/batch_receipt.rs:83:58: warning: slicing may panic
+crates/core/src/transparency_log/checkpoint.rs:35:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/receipt.rs:42:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/record.rs:59:28: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/core/src/transparency_log/record.rs:66:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:104:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/record.rs:106:19: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:111:16: warning: indexing may panic
+crates/core/src/transparency_log/record.rs:126:8: warning: this function could have a `#[must_use]` attribute
+crates/core/src/transparency_log/store.rs:14:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/store.rs:16:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/mod.rs:54:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:65:39: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:70:13: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`
+crates/core/src/transparency_log/mod.rs:73:21: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:80:25: warning: indexing may panic
+crates/core/src/transparency_log/mod.rs:90:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:100:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:115:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:128:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:146:9: warning: unused `self` argument
+crates/core/src/transparency_log/mod.rs:165:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/core/src/transparency_log/mod.rs:189:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:201:12: warning: this method could have a `#[must_use]` attribute
+crates/core/src/transparency_log/mod.rs:209:23: warning: slicing may panic
+crates/core/src/transparency_log/mod.rs:217:29: warning: indexing may panic
+crates/approvals/src/codec.rs:19:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:193:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:197:42: warning: item in documentation is missing backticks
+crates/approvals/src/codec.rs:205:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/codec.rs:209:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/approvals/src/codec.rs:215:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:227:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:256:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/codec.rs:334:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/directory.rs:7:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/directory.rs:50:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/approvals/src/replay.rs:39:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/replay.rs:213:8: warning: this function could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:56:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:69:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:73:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:157:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:216:12: warning: this method could have a `#[must_use]` attribute
+crates/approvals/src/lib.rs:324:5: warning: item in documentation is missing backticks
+crates/mcp/src/args.rs:119:15: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/mcp/src/args.rs:167:16: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/mcp/src/args.rs:189:9: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/mcp/src/args.rs:189:25: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/mcp/src/config.rs:19:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/mcp/src/lines.rs:16:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/mcp/src/lines.rs:51:41: warning: slicing may panic
+crates/mcp/src/source.rs:11:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/mcp/src/source.rs:13:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/mcp/src/source.rs:32:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/mcp/src/verify.rs:11:8: warning: this function could have a `#[must_use]` attribute
+crates/mcp/src/verify.rs:154:13: warning: `format!(..)` appended to existing `String`
+crates/mcp/src/verify.rs:182:9: warning: `format!(..)` appended to existing `String`
+crates/mcp/src/lib.rs:60:12: warning: this method could have a `#[must_use]` attribute
+crates/mcp/src/lib.rs:112:22: warning: this argument is passed by value, but not consumed in the function body
+crates/mcp/src/lib.rs:120:12: warning: this method could have a `#[must_use]` attribute
+crates/mcp/src/lib.rs:166:12: warning: this method could have a `#[must_use]` attribute
+crates/mcp/src/lib.rs:256:22: warning: unused `self` argument
+crates/policy/src/engine.rs:57:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/decode.rs:77:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/decode.rs:119:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/engine.rs:109:66: warning: redundant closure: help: replace the closure with the method itself: `std::string::ToString::to_string`
+crates/witness/src/statement.rs:9:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:32:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:39:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/statement.rs:42:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/witness/src/statement.rs:55:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/strict_json.rs:8:8: warning: this function could have a `#[must_use]` attribute
+crates/witness/src/strict_json.rs:13:15: warning: indexing may panic
+crates/witness/src/strict_json.rs:22:38: warning: indexing may panic
+crates/witness/src/strict_json.rs:23:24: warning: indexing may panic
+crates/witness/src/strict_json.rs:30:47: warning: indexing may panic
+crates/witness/src/strict_json.rs:33:35: warning: indexing may panic
+crates/witness/src/strict_json.rs:51:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:22:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/witness.rs:54:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:95:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:97:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/witness/src/lib.rs:104:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/engine.rs:171:5: warning: this function has too many lines (115/100)
+crates/policy/src/engine.rs:199:9: warning: this could be rewritten as `let...else`: help: consider writing: `let Ok(entities) = self.entities(req, role, has_key) else { return invalid() };`
+crates/policy/src/engine.rs:291:12: warning: unused `self` argument
+crates/policy/src/engine.rs:360:39: warning: casting `u64` to `i64` may wrap around the value: help: if this is intentional, use `cast_signed()` instead: `req.now.cast_signed()`
+crates/policy/src/record.rs:37:9: warning: these match arms have identical bodies
+crates/policy/src/record.rs:94:8: warning: this function could have a `#[must_use]` attribute
+crates/policy/src/record.rs:105:8: warning: this function could have a `#[must_use]` attribute
+crates/policy/src/record.rs:108:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/policy/src/record.rs:114:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/record.rs:133:50: warning: item in documentation is missing backticks
+crates/policy/src/record.rs:170:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/record.rs:212:8: warning: this boolean expression can be simplified: help: try: `m["ts"].as_u64().is_none_or(|t| t > MAX_SAFE_INT)`
+crates/policy/src/record.rs:174:5: warning: adding items after statements is confusing, since items exist from the start of the scope
+crates/policy/src/record.rs:196:8: warning: indexing may panic
+crates/policy/src/record.rs:212:9: warning: indexing may panic
+crates/policy/src/record.rs:227:8: warning: indexing may panic
+crates/policy/src/record.rs:227:54: warning: indexing may panic
+crates/policy/src/record.rs:242:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/policy/src/lib.rs:53:12: warning: this method could have a `#[must_use]` attribute
+crates/policy/src/lib.rs:71:12: warning: this method could have a `#[must_use]` attribute
+crates/policy/src/lib.rs:150:56: warning: item in documentation is missing backticks
+crates/policy/src/lib.rs:150:68: warning: item in documentation is missing backticks
+crates/egress/src/decide.rs:297:13: warning: binding's name is too similar to existing binding
+crates/egress/src/decide.rs:613:52: warning: unnested or-patterns
+crates/egress/src/decide.rs:1064:17: warning: binding's name is too similar to existing binding
+crates/egress/src/detect.rs:671:51: warning: 5 bindings with single-character names in scope
+crates/egress/src/eval.rs:48:16: warning: 5 bindings with single-character names in scope
+crates/egress/src/policy.rs:118:81: warning: long literal lacking separators: help: consider: `262_144`
+crates/egress/src/policy.rs:118:98: warning: long literal lacking separators: help: consider: `1_048_576`
+crates/egress/src/policy.rs:118:121: warning: long literal lacking separators: help: consider: `1_048_576`
+crates/egress/src/policy.rs:118:139: warning: long literal lacking separators: help: consider: `4_194_304`
+crates/ledger/src/generator.rs:300:13: warning: binding's name is too similar to existing binding
+crates/ledger/src/scenarios.rs:43:9: warning: 5 bindings with single-character names in scope
+crates/egress/src/sealed.rs:204:17: warning: binding's name is too similar to existing binding
+crates/ledger/src/store.rs:85:13: warning: 5 bindings with single-character names in scope
+crates/ledger/src/bundle.rs:69:1: warning: this function has too many lines (122/100)
+crates/ledger/src/bundle.rs:208:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:244:28: warning: indexing may panic
+crates/ledger/src/bundle.rs:244:38: warning: indexing may panic
+crates/ledger/src/bundle.rs:248:36: warning: slicing may panic
+crates/ledger/src/bundle.rs:323:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/bundle.rs:323:1: warning: this function has too many lines (210/100)
+crates/ledger/src/bundle.rs:490:21: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:24: warning: indexing may panic
+crates/ledger/src/bundle.rs:506:33: warning: indexing may panic
+crates/ledger/src/council.rs:44:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:138:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:143:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/event.rs:146:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/ledger/src/event.rs:152:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:164:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/event.rs:252:1: warning: this function has too many lines (118/100)
+crates/ledger/src/event.rs:374:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/evidence.rs:95:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:117:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/generator.rs:244:12: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:294:13: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/generator.rs:465:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/keys.rs:29:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/keys.rs:44:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:9:12: warning: this method could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:55:8: warning: this function could have a `#[must_use]` attribute
+crates/ledger/src/plain.rs:55:1: warning: this function has too many lines (162/100)
+crates/ledger/src/platinum.rs:45:18: warning: slicing may panic
+crates/ledger/src/platinum.rs:46:50: warning: indexing may panic
+crates/ledger/src/platinum.rs:47:35: warning: indexing may panic
+crates/ledger/src/platinum.rs:48:39: warning: indexing may panic
+crates/ledger/src/platinum.rs:51:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:53:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:55:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:56:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:57:16: warning: indexing may panic
+crates/ledger/src/platinum.rs:58:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:59:17: warning: slicing may panic
+crates/ledger/src/platinum.rs:71:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/scenarios.rs:39:5: warning: this function has too many lines (216/100)
+crates/ledger/src/store.rs:17:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:28:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:32:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/store.rs:69:20: warning: indexing may panic
+crates/ledger/src/store.rs:73:20: warning: indexing may panic
+crates/ledger/src/store.rs:90:18: warning: indexing may panic
+crates/ledger/src/store.rs:90:38: warning: indexing may panic
+crates/ledger/src/store.rs:92:18: warning: indexing may panic
+crates/ledger/src/store.rs:92:45: warning: indexing may panic
+crates/ledger/src/store.rs:97:13: warning: indexing may panic
+crates/ledger/src/store.rs:195:10: warning: this argument is passed by value, but not consumed in the function body
+crates/ledger/src/store.rs:218:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/ledger/src/vocab.rs:164:61: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:166:64: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:168:80: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:246:19: warning: item in documentation is missing backticks
+crates/ledger/src/vocab.rs:317:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:15:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:176:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:180:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:184:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:188:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:192:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:196:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:200:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:204:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/decide.rs:374:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `out.seen_after.clone_from(&conv.seen)`
+crates/egress/src/decide.rs:419:11: warning: the following explicit lifetimes could be elided: 'a
+crates/egress/src/decide.rs:442:11: warning: the following explicit lifetimes could be elided: 'a
+crates/egress/src/decide.rs:508:39: warning: indexing may panic
+crates/egress/src/decide.rs:512:32: warning: indexing may panic
+crates/egress/src/decide.rs:549:13: warning: indexing may panic
+crates/egress/src/decide.rs:552:5: warning: indexing may panic
+crates/egress/src/decide.rs:674:18: warning: indexing may panic
+crates/egress/src/decide.rs:674:31: warning: indexing may panic
+crates/egress/src/decide.rs:674:39: warning: indexing may panic
+crates/egress/src/decide.rs:674:47: warning: indexing may panic
+crates/egress/src/decide.rs:674:55: warning: indexing may panic
+crates/egress/src/decide.rs:707:29: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/decide.rs:710:37: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/decide.rs:799:5: warning: used `sort` on primitive type `tuple`: help: try: `v.sort_unstable()`
+crates/egress/src/decide.rs:810:1: warning: this function has too many lines (327/100)
+crates/egress/src/decide.rs:880:41: warning: matching over `()` is more explicit: help: use `()` instead of `_`: `()`
+crates/egress/src/decide.rs:982:18: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/egress/src/decide.rs:1032:16: warning: indexing may panic
+crates/egress/src/decide.rs:1059:21: warning: indexing may panic
+crates/egress/src/decide.rs:1086:13: warning: `format!(..)` appended to existing `String`
+crates/egress/src/decide.rs:1095:31: warning: indexing may panic
+crates/egress/src/decide.rs:1096:17: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `strings[bi].clone_from(s)`
+crates/egress/src/decide.rs:1096:17: warning: indexing may panic
+crates/egress/src/decide.rs:1108:31: warning: indexing may panic
+crates/egress/src/decide.rs:1109:17: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `strings[bi].clone_from(s)`
+crates/egress/src/decide.rs:1109:17: warning: indexing may panic
+crates/egress/src/detect.rs:39:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/detect.rs:55:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/detect.rs:73:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/detect.rs:78:13: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:206:14: warning: casts from `u8` to `u32` can be expressed infallibly using `From`
+crates/egress/src/detect.rs:221:16: warning: indexing may panic
+crates/egress/src/detect.rs:230:21: warning: casts from `u8` to `u32` can be expressed infallibly using `From`
+crates/egress/src/detect.rs:255:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:256:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:258:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:259:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:260:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:263:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:267:9: warning: these match arms have identical bodies
+crates/egress/src/detect.rs:342:20: warning: slicing may panic
+crates/egress/src/detect.rs:345:23: warning: casts from `u8` to `u32` can be expressed infallibly using `From`
+crates/egress/src/detect.rs:345:49: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/egress/src/detect.rs:349:21: warning: casts from `u8` to `u32` can be expressed infallibly using `From`
+crates/egress/src/detect.rs:349:22: warning: indexing may panic
+crates/egress/src/detect.rs:381:13: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/detect.rs:385:21: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/detect.rs:402:71: warning: item in documentation is missing backticks
+crates/egress/src/detect.rs:415:17: warning: slicing may panic
+crates/egress/src/detect.rs:415:64: warning: indexing may panic
+crates/egress/src/detect.rs:416:16: warning: slicing may panic
+crates/egress/src/detect.rs:416:74: warning: indexing may panic
+crates/egress/src/detect.rs:420:24: warning: indexing may panic
+crates/egress/src/detect.rs:426:17: warning: slicing may panic
+crates/egress/src/detect.rs:430:16: warning: slicing may panic
+crates/egress/src/detect.rs:449:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/detect.rs:454:1: warning: this function has too many lines (204/100)
+crates/egress/src/detect.rs:459:9: warning: consider adding a `;` to the last statement for consistent formatting
+crates/egress/src/detect.rs:480:39: warning: casts from `u32` to `u64` can be expressed infallibly using `From`
+crates/egress/src/detect.rs:480:46: warning: slicing may panic
+crates/egress/src/detect.rs:555:50: warning: slicing may panic
+crates/egress/src/detect.rs:557:60: warning: slicing may panic
+crates/egress/src/detect.rs:557:81: warning: slicing may panic
+crates/egress/src/detect.rs:671:1: warning: this function has too many lines (144/100)
+crates/egress/src/detect.rs:676:12: warning: indexing may panic
+crates/egress/src/detect.rs:676:49: warning: indexing may panic
+crates/egress/src/detect.rs:682:20: warning: indexing may panic
+crates/egress/src/detect.rs:683:33: warning: indexing may panic
+crates/egress/src/detect.rs:686:28: warning: indexing may panic
+crates/egress/src/detect.rs:686:44: warning: indexing may panic
+crates/egress/src/detect.rs:688:24: warning: indexing may panic
+crates/egress/src/detect.rs:701:38: warning: slicing may panic
+crates/egress/src/detect.rs:720:21: warning: indexing may panic
+crates/egress/src/detect.rs:721:26: warning: indexing may panic
+crates/egress/src/detect.rs:721:42: warning: indexing may panic
+crates/egress/src/detect.rs:778:14: warning: it is more concise to loop over references to containers instead of using explicit iteration methods: help: to write this more concisely, try: `&cfg.markers`
+crates/egress/src/eval.rs:26:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/eval.rs:37:5: warning: indexing may panic
+crates/egress/src/eval.rs:38:5: warning: indexing may panic
+crates/egress/src/eval.rs:39:5: warning: indexing may panic
+crates/egress/src/eval.rs:43:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/eval.rs:48:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/eval.rs:53:41: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/eval.rs:55:23: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/eval.rs:55:34: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/eval.rs:55:44: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/eval.rs:73:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/eval.rs:102:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/eval.rs:109:19: warning: matching over `()` is more explicit: help: use `()` instead of `_`: `()`
+crates/egress/src/eval.rs:214:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/eval.rs:240:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/eval.rs:254:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/eval.rs:290:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/eval.rs:313:27: warning: indexing may panic
+crates/egress/src/eval.rs:344:20: warning: redundant closure: help: replace the closure with the method itself: `f64::total_cmp`
+crates/egress/src/eval.rs:346:20: warning: casting `f64` to `usize` may truncate the value
+crates/egress/src/eval.rs:346:20: warning: casting `f64` to `usize` may lose the sign of the value
+crates/egress/src/eval.rs:346:22: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/egress/src/policy.rs:21:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:22:9: warning: indexing may panic
+crates/egress/src/policy.rs:79:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:102:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:112:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:239:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/policy.rs:239:5: warning: this function has too many lines (119/100)
+crates/egress/src/policy.rs:362:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:366:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:370:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:374:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:385:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:389:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:393:12: warning: this method could have a `#[must_use]` attribute
+crates/egress/src/policy.rs:423:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/record.rs:33:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/sealed.rs:22:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/sealed.rs:28:19: warning: indexing may panic
+crates/egress/src/sealed.rs:31:20: warning: indexing may panic
+crates/egress/src/sealed.rs:38:5: warning: indexing may panic
+crates/egress/src/sealed.rs:44:21: warning: indexing may panic
+crates/egress/src/sealed.rs:59:5: warning: indexing may panic
+crates/egress/src/sealed.rs:87:27: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`
+crates/egress/src/sealed.rs:161:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/sealed.rs:175:23: warning: matching over `()` is more explicit: help: use `()` instead of `_`: `()`
+crates/egress/src/send.rs:16:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/egress/src/views.rs:25:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/views.rs:70:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/views.rs:98:8: warning: this function could have a `#[must_use]` attribute
+crates/egress/src/views.rs:176:17: warning: casts from `u8` to `u32` can be expressed infallibly using `From`
+crates/egress/src/views.rs:201:12: warning: indexing may panic
+crates/egress/src/views.rs:203:16: warning: indexing may panic
+crates/egress/src/views.rs:204:16: warning: indexing may panic
+crates/egress/src/views.rs:210:22: warning: indexing may panic
+crates/standards/src/eval.rs:135:60: warning: long literal lacking separators: help: consider: `1.959_964_f64`
+crates/tokens/src/canon.rs:58:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/canon.rs:90:12: warning: slicing may panic
+crates/tokens/src/canon.rs:122:33: warning: this `continue` expression is redundant
+crates/tokens/src/canon.rs:142:33: warning: this `continue` expression is redundant
+crates/tokens/src/canon.rs:163:23: warning: slicing may panic
+crates/tokens/src/canon.rs:164:32: warning: indexing may panic
+crates/tokens/src/canon.rs:206:17: warning: consider adding a `;` to the last statement for consistent formatting: help: add a `;` here: `out.extend_from_slice(format!("\\u{:04x}", c as u32).as_bytes());`
+crates/tokens/src/canon.rs:253:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:261:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:268:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:277:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:284:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/canon.rs:291:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:21:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:30:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/claims.rs:83:26: warning: indexing may panic
+crates/tokens/src/claims.rs:83:33: warning: indexing may panic
+crates/tokens/src/claims.rs:88:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/claims.rs:143:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/claims.rs:204:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:31:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:106:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_a.rs:115:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:95:78: warning: indexing may panic
+crates/tokens/src/design_c.rs:95:85: warning: indexing may panic
+crates/tokens/src/design_c.rs:140:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `next.corpora.clone_from(c)`
+crates/tokens/src/design_c.rs:143:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `next.actions.clone_from(a)`
+crates/tokens/src/design_c.rs:206:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:353:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `signer_pk.clone_from(&b.next_pubkey)`
+crates/tokens/src/design_c.rs:354:9: warning: assigning the result of `Clone::clone()` may be inefficient: help: use `clone_from()`: `prev_sig.clone_from(&b.sig)`
+crates/tokens/src/design_c.rs:360:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/design_c.rs:454:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/tokens/src/revoke.rs:65:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/revoke.rs:83:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:9:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:17:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:25:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/testing.rs:34:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:57:12: warning: this method could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:143:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:156:8: warning: this function could have a `#[must_use]` attribute
+crates/tokens/src/verify.rs:162:15: warning: casting `usize` to `u32` may truncate the value on targets with 64-bit wide pointers
+crates/standards/src/chunk.rs:31:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/chunk.rs:40:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/chunk.rs:60:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/chunk.rs:135:5: warning: adding items after statements is confusing, since items exist from the start of the scope
+crates/standards/src/chunk.rs:290:9: warning: called `map(<f>).unwrap_or_else(<g>)` on a `Result` value: help: try: `Regex::new(re).map_or_else(|_| s.to_string(), |r| r.replace_all(s, " ").into_owned())`
+crates/standards/src/citations.rs:62:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/citations.rs:114:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/citations.rs:129:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/citations.rs:157:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/citations.rs:209:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/corpus.rs:17:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/corpus.rs:24:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/corpus.rs:102:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/corpus.rs:119:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:29:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:128:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:133:23: warning: casting `u64` to `f64` may cause a loss of precision (`u64` is 64 bits wide, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:135:22: warning: casting `u64` to `f64` may cause a loss of precision (`u64` is 64 bits wide, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:135:32: warning: casting `u64` to `f64` may cause a loss of precision (`u64` is 64 bits wide, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:135:50: warning: casting `u64` to `f64` may cause a loss of precision (`u64` is 64 bits wide, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:235:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:253:13: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:253:37: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/eval.rs:312:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:340:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:356:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:377:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:396:23: warning: indexing may panic
+crates/standards/src/eval.rs:397:23: warning: indexing may panic
+crates/standards/src/eval.rs:429:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:440:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:456:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:462:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:470:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:478:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:482:12: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/eval.rs:605:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:605:1: warning: this function has too many lines (127/100)
+crates/standards/src/eval.rs:635:25: warning: indexing may panic
+crates/standards/src/eval.rs:635:63: warning: indexing may panic
+crates/standards/src/eval.rs:655:58: warning: indexing may panic
+crates/standards/src/eval.rs:660:63: warning: indexing may panic
+crates/standards/src/eval.rs:842:242: warning: used `cloned` where `copied` could be used instead: help: try: `copied`
+crates/standards/src/eval.rs:870:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/eval.rs:909:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:43:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:59:23: warning: indexing may panic
+crates/standards/src/flags.rs:59:37: warning: indexing may panic
+crates/standards/src/flags.rs:59:51: warning: indexing may panic
+crates/standards/src/flags.rs:77:12: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:77:38: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:96:25: warning: indexing may panic
+crates/standards/src/flags.rs:96:39: warning: indexing may panic
+crates/standards/src/flags.rs:96:53: warning: indexing may panic
+crates/standards/src/flags.rs:105:37: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:105:56: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:113:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:125:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:132:30: warning: indexing may panic
+crates/standards/src/flags.rs:132:17: warning: indexing may panic
+crates/standards/src/flags.rs:133:33: warning: indexing may panic
+crates/standards/src/flags.rs:144:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:158:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/flags.rs:162:31: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:162:60: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:169:12: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/flags.rs:169:28: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/r2eval.rs:135:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/r2eval.rs:141:22: warning: indexing may panic
+crates/standards/src/r2eval.rs:177:26: warning: indexing may panic
+crates/standards/src/r2eval.rs:202:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/r2eval.rs:209:26: warning: indexing may panic
+crates/standards/src/r2eval.rs:281:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:307:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:332:77: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/r2eval.rs:332:94: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/r2eval.rs:348:5: warning: indexing may panic
+crates/standards/src/r2eval.rs:364:5: warning: indexing may panic
+crates/standards/src/r2eval.rs:388:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:401:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/r2eval.rs:408:46: warning: casting `f64` to `usize` may truncate the value
+crates/standards/src/r2eval.rs:408:46: warning: casting `f64` to `usize` may lose the sign of the value
+crates/standards/src/r2eval.rs:410:38: warning: casting `f64` to `u32` may truncate the value
+crates/standards/src/r2eval.rs:410:38: warning: casting `f64` to `u32` may lose the sign of the value
+crates/standards/src/r2eval.rs:419:46: warning: casting `f64` to `usize` may truncate the value
+crates/standards/src/r2eval.rs:419:46: warning: casting `f64` to `usize` may lose the sign of the value
+crates/standards/src/r2eval.rs:422:64: warning: casting `f64` to `usize` may truncate the value
+crates/standards/src/r2eval.rs:422:64: warning: casting `f64` to `usize` may lose the sign of the value
+crates/standards/src/r2eval.rs:434:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:440:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:452:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r2eval.rs:458:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r3eval.rs:32:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/r3eval.rs:38:22: warning: indexing may panic
+crates/standards/src/r3eval.rs:106:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r3eval.rs:116:23: warning: indexing may panic
+crates/standards/src/r3eval.rs:120:35: warning: indexing may panic
+crates/standards/src/r3eval.rs:135:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/r3eval.rs:144:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r3eval.rs:153:18: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/standards/src/r3eval.rs:153:18: warning: indexing may panic
+crates/standards/src/r3eval.rs:156:22: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/standards/src/r3eval.rs:156:22: warning: indexing may panic
+crates/standards/src/r3eval.rs:157:18: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/standards/src/r3eval.rs:157:18: warning: indexing may panic
+crates/standards/src/r3eval.rs:158:17: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/standards/src/r3eval.rs:158:17: warning: indexing may panic
+crates/standards/src/r3eval.rs:159:16: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/standards/src/r3eval.rs:159:16: warning: indexing may panic
+crates/standards/src/r3eval.rs:160:18: warning: casting `f64` to `usize` may truncate the value
+crates/standards/src/r3eval.rs:160:18: warning: casting `f64` to `usize` may lose the sign of the value
+crates/standards/src/r3eval.rs:160:26: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/r3eval.rs:161:18: warning: casting `f64` to `usize` may truncate the value
+crates/standards/src/r3eval.rs:161:18: warning: casting `f64` to `usize` may lose the sign of the value
+crates/standards/src/r3eval.rs:161:26: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/r3eval.rs:162:5: warning: indexing may panic
+crates/standards/src/r3eval.rs:169:5: warning: indexing may panic
+crates/standards/src/r3eval.rs:174:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r3eval.rs:180:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/r3eval.rs:185:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/records.rs:37:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/retrieve.rs:2:27: warning: item in documentation is missing backticks
+crates/standards/src/retrieve.rs:30:1: warning: more than 3 bools in a struct
+crates/standards/src/retrieve.rs:263:26: warning: indexing may panic
+crates/standards/src/retrieve.rs:265:20: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:265:61: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:266:30: warning: indexing may panic
+crates/standards/src/retrieve.rs:266:40: warning: indexing may panic
+crates/standards/src/retrieve.rs:273:13: warning: indexing may panic
+crates/standards/src/retrieve.rs:274:13: warning: indexing may panic
+crates/standards/src/retrieve.rs:330:43: warning: indexing may panic
+crates/standards/src/retrieve.rs:330:49: warning: indexing may panic
+crates/standards/src/retrieve.rs:376:21: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:376:21: warning: indexing may panic
+crates/standards/src/retrieve.rs:378:21: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:378:22: warning: indexing may panic
+crates/standards/src/retrieve.rs:378:43: warning: indexing may panic
+crates/standards/src/retrieve.rs:395:17: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:396:18: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:452:47: warning: indexing may panic
+crates/standards/src/retrieve.rs:452:83: warning: indexing may panic
+crates/standards/src/retrieve.rs:455:38: warning: indexing may panic
+crates/standards/src/retrieve.rs:455:49: warning: indexing may panic
+crates/standards/src/retrieve.rs:456:21: warning: manual implementation of `midpoint` which can overflow: help: use `f64::midpoint` instead: `f64::midpoint(w[0].idf, w[1].idf)`
+crates/standards/src/retrieve.rs:456:22: warning: indexing may panic
+crates/standards/src/retrieve.rs:456:33: warning: indexing may panic
+crates/standards/src/retrieve.rs:475:23: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:525:17: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:525:34: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:623:12: warning: indexing may panic
+crates/standards/src/retrieve.rs:626:40: warning: indexing may panic
+crates/standards/src/retrieve.rs:626:69: warning: indexing may panic
+crates/standards/src/retrieve.rs:698:42: warning: redundant closure: help: replace the closure with the method itself: `char::is_ascii_digit`
+crates/standards/src/retrieve.rs:714:24: warning: indexing may panic
+crates/standards/src/retrieve.rs:765:8: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:765:27: warning: casting `usize` to `f64` may cause a loss of precision (`usize` can be up to 64 bits wide depending on the target architecture, but `f64`'s mantissa is only 52 bits wide)
+crates/standards/src/retrieve.rs:798:42: warning: redundant closure: help: replace the closure with the method itself: `char::is_ascii_digit`
+crates/standards/src/retrieve.rs:827:1: warning: this function has too many lines (160/100)
+crates/standards/src/retrieve.rs:1043:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1051:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1070:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1102:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1121:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1126:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1141:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/retrieve.rs:1141:5: warning: this function has too many lines (141/100)
+crates/standards/src/retrieve.rs:1256:27: warning: indexing may panic
+crates/standards/src/retrieve.rs:1258:37: warning: indexing may panic
+crates/standards/src/retrieve.rs:1294:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/retrieve.rs:1328:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/seal.rs:107:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/seal.rs:226:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/seal.rs:226:1: warning: this function has too many lines (147/100)
+crates/standards/src/seal.rs:246:13: warning: unnecessary `!=` operation
+crates/standards/src/seal.rs:265:18: warning: indexing may panic
+crates/standards/src/seal.rs:386:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/seal.rs:389:26: warning: redundant closure: help: replace the closure with the method itself: `std::result::Result::ok`
+crates/standards/src/seal.rs:401:1: warning: docs for function returning `Result` missing `# Errors` section
+crates/standards/src/text.rs:14:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:55:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:77:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:107:24: warning: indexing may panic
+crates/standards/src/text.rs:107:42: warning: indexing may panic
+crates/standards/src/text.rs:108:46: warning: indexing may panic
+crates/standards/src/text.rs:241:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:248:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:261:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:276:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:281:8: warning: this function could have a `#[must_use]` attribute
+crates/standards/src/text.rs:291:26: warning: slicing may panic
+crates/standards/src/text.rs:294:33: warning: indexing may panic
+crates/standards/src/text.rs:294:67: warning: indexing may panic
+crates/standards/src/text.rs:299:5: warning: slicing may panic
+crates/standards/src/tools.rs:94:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/tools.rs:110:12: warning: this method could have a `#[must_use]` attribute
+crates/standards/src/tools.rs:190:9: warning: this could be rewritten as `let...else`
+crates/standards/src/tools.rs:190:17: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`
+crates/standards/src/tools.rs:220:5: warning: this function has too many lines (140/100)
+crates/standards/src/tools.rs:232:32: warning: casting `u64` to `usize` may truncate the value on targets with 32-bit wide pointers
+crates/tiers/src/change.rs:422:17: warning: 5 bindings with single-character names in scope
+crates/tiers/src/adapters.rs:1:5: warning: item in documentation is missing backticks
+crates/tiers/src/adapters.rs:31:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/adapters.rs:35:42: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/adapters.rs:99:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/adapters.rs:145:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/adapters.rs:176:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/append.rs:51:22: warning: this argument is passed by value, but not consumed in the function body
+crates/tiers/src/append.rs:57:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/append.rs:67:5: warning: missing `#[must_use]` attribute on a method returning `Self`
+crates/tiers/src/append.rs:72:5: warning: missing `#[must_use]` attribute on a method returning `Self`
+crates/tiers/src/append.rs:93:21: warning: consider adding a `;` to the last statement for consistent formatting: help: add a `;` here: `std::thread::sleep(Duration::from_millis(2));`
+crates/tiers/src/append.rs:182:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/append.rs:184:58: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/append.rs:191:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/append.rs:193:58: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/append.rs:248:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/append.rs:257:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/cedar.rs:35:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/cedar.rs:43:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/change.rs:26:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/change.rs:87:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/change.rs:176:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:185:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:187:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:206:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:220:29: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/change.rs:227:29: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/change.rs:242:38: warning: redundant closure: help: replace the closure with the method itself: `std::sync::PoisonError::into_inner`
+crates/tiers/src/change.rs:320:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:370:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:413:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/change.rs:413:5: warning: this function has too many lines (109/100)
+crates/tiers/src/lib.rs:25:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/lib.rs:33:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/lib.rs:78:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/lib.rs:174:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:179:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:186:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:191:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:200:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:231:5: warning: docs for function returning `Result` missing `# Errors` section
+crates/tiers/src/lib.rs:280:12: warning: this method could have a `#[must_use]` attribute
+crates/tiers/src/lib.rs:317:9: warning: you seem to be trying to use `match` for destructuring a single pattern. Consider using `if let`

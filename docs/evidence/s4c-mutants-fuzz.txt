@@ -1,0 +1,6 @@
+S4c entropa-policy
+mutation run 1: 127 mutants, 99 caught, 17 missed, 11 unviable (misses: is_guarded x2, Debug fmt, now > i64::MAX x2, MAX_SAFE_INT arithmetic x2, list length > x2, nine || in decode_record)
+tests added: crates/policy/tests/boundaries.rs (6 tests: single-fault per field, limits at the edge, now at i64::MAX, is_guarded, Debug)
+mutation run 2: 127 mutants, 116 caught, 0 missed, 11 unviable
+fuzz (60 s each, scripts/fuzz.sh with FUZZ_CRATE=policy): policy_load 190744 runs, request_builder 1061100 runs, record_decode 7433789 runs; no crash
+note: request_builder coverage is low (cov 230) because most random strings fail the hex/shape checks and return InvalidRequest early

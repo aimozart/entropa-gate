@@ -1,0 +1,4 @@
+test c1_the_incremental_writer_and_platinum_write_the_same_evidence_ledger_bytes ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+test c1_the_incremental_writer_and_platinum_write_the_same_evidence_ledger_bytes ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

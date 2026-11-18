@@ -1,0 +1,40 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test z0_the_action_list_is_closed ... FAILED
+test a8_the_library_holds_no_clock_no_network_and_no_key_material ... ok
+test a1_t0_can_only_read_the_corpus_and_never_reaches_the_guard ... FAILED
+test a3_what_the_request_says_never_changes_the_decision_or_the_tier ... FAILED
+test a4_everything_that_can_fail_denies ... FAILED
+test a2_a_request_never_exceeds_its_token ... FAILED
+test a5_exactly_one_record_per_decision_and_none_holds_text_or_token_bytes ... FAILED
+test a7_collaborators_are_called_in_order_and_only_when_needed ... FAILED
+test a6_the_same_inputs_give_the_same_decision_and_record ... FAILED
+test a5b_a_record_that_cannot_be_written_denies_and_returns_no_result ... FAILED
+test a4b_a_revocation_list_older_than_300_seconds_denies_at_the_clock_passed_in ... FAILED
+test a1b_tiers_allow_what_the_plan_says_and_no_more ... FAILED
+thread 'z0_the_action_list_is_closed' (3753879) panicked at crates/tiers/tests/at2.rs:171:5:
+  left: None
+ right: Some(ReadCorpus)
+thread 'a1_t0_can_only_read_the_corpus_and_never_reaches_the_guard' (3753868) panicked at crates/tiers/tests/at2.rs:191:5:
+  left: Denied(NotImplemented)
+ right: Denied(TierForbids)
+thread 'a3_what_the_request_says_never_changes_the_decision_or_the_tier' (3753871) panicked at crates/tiers/tests/at2.rs:320:9:
+  left: Denied(NotImplemented)
+ right: Denied(TierForbids)
+thread 'a4_everything_that_can_fail_denies' (3753872) panicked at crates/tiers/tests/at2.rs:338:5:
+  left: Denied(NotImplemented)
+ right: Denied(UnknownAction)
+thread 'a2_a_request_never_exceeds_its_token' (3753870) panicked at crates/tiers/tests/at2.rs:252:5:
+  left: Denied(NotImplemented)
+ right: Denied(CorpusNotInToken)
+thread 'a5_exactly_one_record_per_decision_and_none_holds_text_or_token_bytes' (3753874) panicked at crates/tiers/tests/at2.rs:453:5:
+  left: Denied(NotImplemented)
+ right: Allowed
+thread 'a7_collaborators_are_called_in_order_and_only_when_needed' (3753877) panicked at crates/tiers/tests/at2.rs:565:5:
+  left: (0, 0, 0)
+ right: (1, 0, 1)
+thread 'a6_the_same_inputs_give_the_same_decision_and_record' (3753876) panicked at crates/tiers/tests/at2.rs:546:5:
+  left: Denied(NotImplemented)
+ right: Allowed
+thread 'a5b_a_record_that_cannot_be_written_denies_and_returns_no_result' (3753875) panicked at crates/tiers/tests/at2.rs:525:5:
+  left: Denied(NotImplemented)
+ right: Denied(RecordFailed)

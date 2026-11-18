@@ -1,0 +1,26 @@
+[package]
+name = "entropa-tiers"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "AT2: tier enforcement. Every request with a design-A token is decided by code: token, tier policy, egress guard, retrieval guard, one hash-only record per decision. No network, no clock, no key material."
+
+[dependencies]
+entropa-tokens = { path = "../tokens" }
+cedar-policy = "=4.14.0"
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-approvals = { path = "../approvals" }
+entropa-ledger = { path = "../ledger" }
+entropa-egress = { path = "../egress" }
+entropa-standards = { path = "../standards" }
+serde_json = { workspace = true }
+blake3 = { workspace = true }
+hex = { workspace = true }
+
+[dev-dependencies]
+entropa-platinum = { path = "../platinum" }
+
+[lints]
+workspace = true

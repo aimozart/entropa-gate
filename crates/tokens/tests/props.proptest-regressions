@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 5de7b5478b3daba1e1f69b457945b9c33e2134fc8ce4ba2787337987d515ec12 # shrinks to tier = T0, c = {0, 6}, a = {}, spend = 0, rate = 0, nb = 1799999500, ttl = 1, id = "00aaa0a0aa0a0aaa0a00a000000aaaa0", subj = "0"
+cc 1ec5bb0d5dc98f1f89a2ed10a08f9d291a4670d4130c3cf2ea8a0c757d75b6ca # shrinks to tier = T0, c = {}, a = {}, spend = 0, rate = 0, nb = 1800000002, ttl = 1, id = "0aaa000a0a00a0a00a0a000a0aa00aa0", subj = "0"

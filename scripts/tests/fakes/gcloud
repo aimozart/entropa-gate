@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# A fake `gcloud` for script tests — never touches the network, just records what
+# it was called with (so tests can assert on the real invocation) and returns
+# fixture JSON for `run revisions list` / `run services list` so scripts can
+# validate a target actually exists before acting on it.
+set -euo pipefail
+
+FIXTURES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../fixtures" && pwd)"
+
+if [ -n "${GCLOUD_CALL_LOG:-}" ]; then
+    echo "$@" >> "$GCLOUD_CALL_LOG"
+fi
+
+if [ "${1:-}" = "run" ] && [ "${2:-}" = "revisions" ] && [ "${3:-}" = "list" ]; then
+    cat "$FIXTURES_DIR/gcloud-revisions.json"
+    exit 0
+fi
+
+if [ "${1:-}" = "run" ] && [ "${2:-}" = "services" ] && [ "${3:-}" = "list" ]; then
+    cat "$FIXTURES_DIR/gcloud-services.json"
+    exit 0
+fi
+
+exit 0

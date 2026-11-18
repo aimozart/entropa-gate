@@ -1,0 +1,2 @@
+GET /api/records
+limit=5&cursor=3&tenant=entropa

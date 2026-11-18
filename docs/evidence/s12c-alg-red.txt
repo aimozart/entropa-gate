@@ -1,0 +1,451 @@
+   Compiling entropa-council v0.2.0 (/work/crates/council)
+warning: variant `TokenList64` is never constructed
+  --> crates/council/src/schema.rs:27:5
+   |
+ 5 | pub(crate) enum Kind {
+   |                 ---- variant in this enum
+...
+27 |     TokenList64,
+   |     ^^^^^^^^^^^
+   |
+   = note: `Kind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `entropa-council` (lib test) generated 1 warning
+warning: `entropa-council` (lib) generated 1 warning (1 duplicate)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.49s
+     Running unittests src/lib.rs (target/debug/deps/entropa_council-6fc6ac4c8ceb1691)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/algorithm.rs (target/debug/deps/algorithm-2fb28da155aa483c)
+
+running 6 tests
+test a2_the_default_registry_knows_exactly_ml_dsa_65 ... FAILED
+test a3_a_second_algorithm_is_a_configuration_swap_not_a_format_change ... FAILED
+test a6_a_verifier_for_one_label_is_never_asked_to_judge_another ... FAILED
+test a4_the_label_is_signed_so_relabelling_an_event_fails_in_both_directions ... FAILED
+test a5_an_event_cannot_be_signed_under_a_label_that_is_not_the_signers_algorithm ... ok
+test a1_an_ml_dsa_event_carries_its_label_and_verifies_with_the_default_registry ... FAILED
+
+failures:
+
+---- a2_the_default_registry_knows_exactly_ml_dsa_65 stdout ----
+
+thread 'a2_the_default_registry_knows_exactly_ml_dsa_65' (1082) panicked at crates/council/src/event.rs:343:9:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- a3_a_second_algorithm_is_a_configuration_swap_not_a_format_change stdout ----
+
+thread 'a3_a_second_algorithm_is_a_configuration_swap_not_a_format_change' (1083) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- a6_a_verifier_for_one_label_is_never_asked_to_judge_another stdout ----
+
+thread 'a6_a_verifier_for_one_label_is_never_asked_to_judge_another' (1086) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- a4_the_label_is_signed_so_relabelling_an_event_fails_in_both_directions stdout ----
+
+thread 'a4_the_label_is_signed_so_relabelling_an_event_fails_in_both_directions' (1084) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- a1_an_ml_dsa_event_carries_its_label_and_verifies_with_the_default_registry stdout ----
+
+thread 'a1_an_ml_dsa_event_carries_its_label_and_verifies_with_the_default_registry' (1081) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    a1_an_ml_dsa_event_carries_its_label_and_verifies_with_the_default_registry
+    a2_the_default_registry_knows_exactly_ml_dsa_65
+    a3_a_second_algorithm_is_a_configuration_swap_not_a_format_change
+    a4_the_label_is_signed_so_relabelling_an_event_fails_in_both_directions
+    a6_a_verifier_for_one_label_is_never_asked_to_judge_another
+
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p entropa-council --test algorithm`
+     Running tests/carryover.rs (target/debug/deps/carryover-5da5e8b761576910)
+
+running 8 tests
+test k1_the_surplus_is_the_lowest_ranked_in_a_stable_order ... FAILED
+test k2_the_plan_does_not_depend_on_the_order_of_the_input ... FAILED
+test k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact ... FAILED
+test k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap ... FAILED
+test k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision ... FAILED
+test k5_the_event_schema_is_closed_and_consistent ... FAILED
+test k6_the_session_records_the_carry_over_once_after_the_report ... FAILED
+test k8_the_carry_over_does_not_change_the_quorum_or_approve_anything ... FAILED
+
+failures:
+
+---- k1_the_surplus_is_the_lowest_ranked_in_a_stable_order stdout ----
+
+thread 'k1_the_surplus_is_the_lowest_ranked_in_a_stable_order' (1088) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- k2_the_plan_does_not_depend_on_the_order_of_the_input stdout ----
+
+thread 'k2_the_plan_does_not_depend_on_the_order_of_the_input' (1089) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact stdout ----
+
+thread 'k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact' (1090) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap stdout ----
+
+thread 'k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap' (1091) panicked at crates/council/src/carryover.rs:26:5:
+not yet implemented
+
+---- k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision stdout ----
+
+thread 'k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision' (1094) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- k5_the_event_schema_is_closed_and_consistent stdout ----
+
+thread 'k5_the_event_schema_is_closed_and_consistent' (1092) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("unknown event type")
+
+---- k6_the_session_records_the_carry_over_once_after_the_report stdout ----
+
+thread 'k6_the_session_records_the_carry_over_once_after_the_report' (1093) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- k8_the_carry_over_does_not_change_the_quorum_or_approve_anything stdout ----
+
+thread 'k8_the_carry_over_does_not_change_the_quorum_or_approve_anything' (1095) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    k1_the_surplus_is_the_lowest_ranked_in_a_stable_order
+    k2_the_plan_does_not_depend_on_the_order_of_the_input
+    k3_nothing_is_carried_when_everything_fits_and_the_cap_is_exact
+    k4_the_plan_refuses_duplicates_unknown_severities_and_a_zero_cap
+    k5_the_event_schema_is_closed_and_consistent
+    k6_the_session_records_the_carry_over_once_after_the_report
+    k7_the_carry_over_is_refused_before_the_report_with_a_wrong_hash_or_role_or_collision
+    k8_the_carry_over_does_not_change_the_quorum_or_approve_anything
+
+test result: FAILED. 0 passed; 8 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test carryover`
+     Running tests/events.rs (target/debug/deps/events-c8e69c8ee9f043c7)
+
+running 10 tests
+test e10_providers_families_and_the_independence_rule ... ok
+test e2_every_event_type_decodes_and_reports_its_type_and_session ... FAILED
+test e4_the_signed_digest_is_domain_separated ... FAILED
+test e1_golden_canonical_bytes_and_digests_match_an_independent_implementation ... FAILED
+test e9_the_role_that_may_write_each_event_type ... FAILED
+test e6_the_decoder_refuses_bad_values_in_every_other_type ... ok
+test e5_the_decoder_refuses_every_bad_finding ... FAILED
+test e7_no_free_text_field_exists_in_any_event_type ... ok
+test e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys ... FAILED
+test e8_a_canary_token_can_never_enter_an_event ... ok
+
+failures:
+
+---- e2_every_event_type_decodes_and_reports_its_type_and_session stdout ----
+
+thread 'e2_every_event_type_decodes_and_reports_its_type_and_session' (1099) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- e4_the_signed_digest_is_domain_separated stdout ----
+
+thread 'e4_the_signed_digest_is_domain_separated' (1101) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- e1_golden_canonical_bytes_and_digests_match_an_independent_implementation stdout ----
+
+thread 'e1_golden_canonical_bytes_and_digests_match_an_independent_implementation' (1098) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- e9_the_role_that_may_write_each_event_type stdout ----
+
+thread 'e9_the_role_that_may_write_each_event_type' (1106) panicked at crates/council/tests/events.rs:377:9:
+assertion `left == right` failed: carryover.recorded
+  left: None
+ right: Some(Orchestrator)
+
+---- e5_the_decoder_refuses_every_bad_finding stdout ----
+
+thread 'e5_the_decoder_refuses_every_bad_finding' (1102) panicked at crates/council/tests/events.rs:208:9:
+missing alg was accepted
+
+---- e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys stdout ----
+
+thread 'e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys' (1100) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    e1_golden_canonical_bytes_and_digests_match_an_independent_implementation
+    e2_every_event_type_decodes_and_reports_its_type_and_session
+    e3_sign_and_verify_every_event_type_and_refuse_tampering_and_other_keys
+    e4_the_signed_digest_is_domain_separated
+    e5_the_decoder_refuses_every_bad_finding
+    e9_the_role_that_may_write_each_event_type
+
+test result: FAILED. 4 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+error: test failed, to rerun pass `-p entropa-council --test events`
+     Running tests/planted.rs (target/debug/deps/planted-92cf575096175356)
+
+running 8 tests
+test p1_the_numbers_of_a_mixed_reviewer ... ok
+test p3_thresholds_default_to_the_proposed_values_and_the_mixed_reviewer_fails_all_seven ... ok
+test p2_a_finding_with_a_hallucinated_reference_never_counts_as_a_detection ... ok
+test p7_a_hindsight_pair_needs_both_members ... ok
+test p6_the_outputs_must_match_the_suite ... ok
+test p5_a_metric_that_was_not_measured_cannot_qualify_a_reviewer ... ok
+test p8_the_evaluation_is_deterministic ... ok
+test p4_a_perfect_reviewer_meets_the_thresholds ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/provenance.rs (target/debug/deps/provenance-c003b5016e981518)
+
+running 9 tests
+test v3_building_refuses_bad_indexes ... ok
+test v2_the_hash_does_not_depend_on_insertion_order_but_on_everything_else ... ok
+test v6_search_refuses_bad_queries_and_oversize_k ... ok
+test v1_the_index_hash_matches_an_independent_implementation ... ok
+test v5_search_is_reproducible_bit_for_bit ... ok
+test v4_exact_cosine_search_with_ties_broken_by_id ... ok
+test v8_only_signed_accepted_decisions_enter_the_corpus ... FAILED
+test v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic ... FAILED
+test v7_a_provenance_record_names_exactly_the_ids_retrieved_and_the_index_used ... ok
+
+failures:
+
+---- v8_only_signed_accepted_decisions_enter_the_corpus stdout ----
+
+thread 'v8_only_signed_accepted_decisions_enter_the_corpus' (1124) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic stdout ----
+
+thread 'v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic' (1125) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    v8_only_signed_accepted_decisions_enter_the_corpus
+    v9_the_rendering_of_an_entry_is_closed_code_text_only_and_deterministic
+
+test result: FAILED. 7 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test provenance`
+     Running tests/reliability.rs (target/debug/deps/reliability-fe0d169ed7bf6fd4)
+
+running 7 tests
+test r1_the_score_is_the_smoothed_weighted_acceptance_rate ... ok
+test r2_deferred_findings_are_ignored ... ok
+test r3_severity_weights_are_one_two_three_four ... ok
+test r4_no_data_is_one_half ... ok
+test r5_only_decisions_inside_the_rolling_window_count ... ok
+test r6_scores_are_kept_per_reviewer_and_per_class ... ok
+test r7_more_acceptance_never_lowers_the_score_and_it_stays_in_range ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/render.rs (target/debug/deps/render-3a1a3fe5a2954e2f)
+
+running 4 tests
+test m1_the_rendering_is_the_documented_closed_code_text ... FAILED
+test m4_only_reviewable_events_can_be_rendered ... FAILED
+test m3_nothing_but_codes_references_and_layout_reaches_the_model ... FAILED
+test m2_the_order_of_the_events_does_not_change_the_rendering ... FAILED
+
+failures:
+
+---- m1_the_rendering_is_the_documented_closed_code_text stdout ----
+
+thread 'm1_the_rendering_is_the_documented_closed_code_text' (1135) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- m4_only_reviewable_events_can_be_rendered stdout ----
+
+thread 'm4_only_reviewable_events_can_be_rendered' (1138) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- m3_nothing_but_codes_references_and_layout_reaches_the_model stdout ----
+
+thread 'm3_nothing_but_codes_references_and_layout_reaches_the_model' (1137) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- m2_the_order_of_the_events_does_not_change_the_rendering stdout ----
+
+thread 'm2_the_order_of_the_events_does_not_change_the_rendering' (1136) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    m1_the_rendering_is_the_documented_closed_code_text
+    m2_the_order_of_the_events_does_not_change_the_rendering
+    m3_nothing_but_codes_references_and_layout_reaches_the_model
+    m4_only_reviewable_events_can_be_rendered
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test render`
+     Running tests/replay.rs (target/debug/deps/replay-07c453fa5b1298ef)
+
+running 7 tests
+test x1_counts_for_a_stricter_candidate ... ok
+test x3_the_same_policy_changes_nothing_and_no_requests_is_an_empty_report ... ok
+test x4_an_input_that_does_not_match_its_recorded_hash_is_refused ... ok
+test x5_the_replay_is_deterministic_and_independent_of_the_order_of_the_requests ... ok
+test x2_counts_for_a_candidate_that_also_loosens ... ok
+test x7_duplicate_ids_are_refused ... ok
+test x6_the_input_hash_matches_an_independent_implementation ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/session.rs (target/debug/deps/session-eec8fc01d0c4c30f)
+
+running 15 tests
+test s10_decision_rules_attestation_approval_and_hard_rule_items ... FAILED
+test s12_an_absent_human_means_pending_and_no_change ... FAILED
+test s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing ... FAILED
+test s11_nothing_changes_without_a_recorded_human_decision ... FAILED
+test s15_the_window_and_findings_hashes_match_an_independent_implementation ... ok
+test s2_events_out_of_order_are_refused ... FAILED
+test s13_no_quorum_means_no_change_and_closes_as_no_quorum ... FAILED
+test s1_a_session_walks_every_state_in_order ... FAILED
+test s3_every_event_type_refuses_the_wrong_role ... FAILED
+test s5_the_independence_rule_is_enforced_in_code ... FAILED
+test s6_the_window_hash_binds_the_scope ... FAILED
+test s7_the_report_and_the_packet_must_be_complete ... FAILED
+test s8_a_session_holds_at_most_twelve_findings ... FAILED
+test s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused ... FAILED
+test s4_wrong_session_duplicates_and_session_less_events ... FAILED
+
+failures:
+
+---- s10_decision_rules_attestation_approval_and_hard_rule_items stdout ----
+
+thread 's10_decision_rules_attestation_approval_and_hard_rule_items' (1148) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- s12_an_absent_human_means_pending_and_no_change stdout ----
+
+thread 's12_an_absent_human_means_pending_and_no_change' (1150) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing stdout ----
+
+thread 's14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing' (1152) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s11_nothing_changes_without_a_recorded_human_decision stdout ----
+
+thread 's11_nothing_changes_without_a_recorded_human_decision' (1149) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s2_events_out_of_order_are_refused stdout ----
+
+thread 's2_events_out_of_order_are_refused' (1155) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s13_no_quorum_means_no_change_and_closes_as_no_quorum stdout ----
+
+thread 's13_no_quorum_means_no_change_and_closes_as_no_quorum' (1151) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s1_a_session_walks_every_state_in_order stdout ----
+
+thread 's1_a_session_walks_every_state_in_order' (1154) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s3_every_event_type_refuses_the_wrong_role stdout ----
+
+thread 's3_every_event_type_refuses_the_wrong_role' (1156) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s5_the_independence_rule_is_enforced_in_code stdout ----
+
+thread 's5_the_independence_rule_is_enforced_in_code' (1158) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s6_the_window_hash_binds_the_scope stdout ----
+
+thread 's6_the_window_hash_binds_the_scope' (1159) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s7_the_report_and_the_packet_must_be_complete stdout ----
+
+thread 's7_the_report_and_the_packet_must_be_complete' (1160) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s8_a_session_holds_at_most_twelve_findings stdout ----
+
+thread 's8_a_session_holds_at_most_twelve_findings' (1161) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused stdout ----
+
+thread 's9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused' (1162) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+---- s4_wrong_session_duplicates_and_session_less_events stdout ----
+
+thread 's4_wrong_session_duplicates_and_session_less_events' (1157) panicked at crates/council/tests/common/mod.rs:15:26:
+unexpected error: Invalid("an unknown field is present")
+
+
+failures:
+    s10_decision_rules_attestation_approval_and_hard_rule_items
+    s11_nothing_changes_without_a_recorded_human_decision
+    s12_an_absent_human_means_pending_and_no_change
+    s13_no_quorum_means_no_change_and_closes_as_no_quorum
+    s14_closing_early_or_with_false_counts_is_refused_and_a_closed_session_takes_nothing
+    s1_a_session_walks_every_state_in_order
+    s2_events_out_of_order_are_refused
+    s3_every_event_type_refuses_the_wrong_role
+    s4_wrong_session_duplicates_and_session_less_events
+    s5_the_independence_rule_is_enforced_in_code
+    s6_the_window_hash_binds_the_scope
+    s7_the_report_and_the_packet_must_be_complete
+    s8_a_session_holds_at_most_twelve_findings
+    s9_a_rebuttal_or_decision_for_an_unknown_finding_is_refused
+
+test result: FAILED. 1 passed; 14 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p entropa-council --test session`
+     Running tests/static_checks.rs (target/debug/deps/static_checks-c5ef3623250be8bd)
+
+running 4 tests
+test g2_the_manifest_holds_no_network_cloud_or_model_dependency ... ok
+test g4_no_source_file_is_over_five_hundred_lines ... ok
+test g3_no_crew_names_in_the_source_tests_or_vectors ... ok
+test g1_the_source_is_pure_no_io_no_clock_no_environment_no_unsafe ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_council
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 6 targets failed:
+    `-p entropa-council --test algorithm`
+    `-p entropa-council --test carryover`
+    `-p entropa-council --test events`
+    `-p entropa-council --test provenance`
+    `-p entropa-council --test render`
+    `-p entropa-council --test session`

@@ -1,0 +1,11 @@
+S1 packaging report (20261115T005559)
+binary sha256: 4a74a15cfc7af7055fe2927baee86352200da9e300f5ae07e6f0712c9b029ec4
+second build sha256: 4a74a15cfc7af7055fe2927baee86352200da9e300f5ae07e6f0712c9b029ec4
+binary bytes: 2819736
+reproducible: yes (two builds in different target directories gave the same SHA-256; same source path and toolchain)
+link: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, stripped
+toolchain: rustc 1.99.1 (58cf8f9c3 2026-10-13)
+image tag: entropa-gate:s1-4a74a15cfc7a
+image id: sha256:b3508e719dab6e813bbb2a0d33b178412b673b173d8c6d5d3a3bca3fcd7ad35c
+image bytes: 1286595
+scope: built and tested on this machine only (linux x86_64, glibc static); no image signature, no SBOM (S2); a static glibc binary can differ from a musl one

@@ -1,0 +1,32 @@
+     Running unittests src/lib.rs (target/debug/deps/entropa_tiers-28b3fa282c4447d0)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/at2.rs (target/debug/deps/at2-d73b7c829609a469)
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+     Running tests/at2b.rs (target/debug/deps/at2b-5912c9089fac5566)
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 34.27s
+     Running tests/battery.rs (target/debug/deps/battery-db6f3afac0c7efe5)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 127.47s
+     Running tests/cedar.rs (target/debug/deps/cedar-e14e4d9d70eac11d)
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+     Running tests/latency.rs (target/debug/deps/latency-b14554f3fda626a3)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 126.48s
+     Running tests/props.rs (target/debug/deps/props-f206edcab9c18a8f)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 72.37s
+     Running tests/record_hash.rs (target/debug/deps/record_hash-0e6d97663ba6e896)
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+    Checking entropa-egress v0.2.0 (<build-dir>/<worktree>/crates/egress)
+    Checking entropa-tokens v0.2.0 (<build-dir>/<worktree>/crates/tokens)
+    Checking entropa-tiers v0.2.0 (<build-dir>/<worktree>/crates/tiers)
+    Checking entropa-platinum v0.2.0 (<build-dir>/<worktree>/crates/platinum)
+error: very complex type used. Consider factoring parts into `type` definitions
+   --> crates/tiers/tests/at2b.rs:323:16
+    |
+323 |     let cases: Vec<(&str, DenyCode, Box<dyn Fn(&mut Setup)>)> = vec![
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.99.0/index.html#type_complexity
+    = note: `-D clippy::type-complexity` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::type_complexity)]`
+
+error: could not compile `entropa-tiers` (test "at2b") due to 1 previous error

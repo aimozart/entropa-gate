@@ -1,0 +1,7 @@
+eg1e_families: network syscalls = 0
+eg1e_more: network syscalls = 0
+eg1d_families: network syscalls = 0
+eg1c_families: network syscalls = 0
+eg1b_families: network syscalls = 0
+decide: network syscalls = 0
+bite: 1

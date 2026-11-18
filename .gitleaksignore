@@ -1,0 +1,3 @@
+# One OLD finding, ignored by its exact fingerprint only (not the path, not the rule). Reason: a false positive, a test string ("eyJ..." text) in the JWT-sanitiser unit test, not a credential. Commit d25252d, 2026-11-05.
+# History is not rewritten. Any other finding, even in the same file or rule, still fails the scan (tools/controls/tests/test_gitleaks_ignore.py).
+d25252d59ac09dd360895c77a9e8d3f09adc8b6a:crates/contact/src/gmail.rs:generic-api-key:169

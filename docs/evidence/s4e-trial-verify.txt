@@ -1,0 +1,7 @@
+trial log copy lines: 138
+serde_json features in this graph:
+3
+audit chain ok: 138 line(s)
+exit=0
+audit chain ok: 138 line(s)
+script-style exit=0

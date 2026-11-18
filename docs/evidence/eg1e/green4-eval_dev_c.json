@@ -1,0 +1,269 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "clean": {
+      "actions": {
+        "allow": 598,
+        "block": 2
+      },
+      "cases": 600,
+      "failed": 2,
+      "failed_ids": [
+        "c-clean-0251",
+        "c-clean-0353"
+      ],
+      "families": {
+        "clean:0": {
+          "cases": 100,
+          "failed": 0
+        },
+        "clean:1": {
+          "cases": 100,
+          "failed": 0
+        },
+        "clean:2": {
+          "cases": 100,
+          "failed": 0
+        },
+        "clean:3": {
+          "cases": 100,
+          "failed": 0
+        },
+        "clean:4": {
+          "cases": 100,
+          "failed": 0
+        },
+        "clean:5": {
+          "cases": 100,
+          "failed": 2
+        }
+      },
+      "upper95_of_failure_rate": 0.010022935973093202
+    },
+    "secrets": {
+      "actions": {
+        "block": 1080
+      },
+      "cases": 1080,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "hyphen:api_key:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:api_key:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:api_key:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:api_key:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:api_key:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:api_key:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:authz_bearer:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:bearer:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:password:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:secret:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:3": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:4": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:5": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:6": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:7": {
+          "cases": 10,
+          "failed": 0
+        },
+        "hyphen:token:8": {
+          "cases": 10,
+          "failed": 0
+        },
+        "reverse:api_key:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "reverse:authz_bearer:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "reverse:bearer:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "reverse:password:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "reverse:secret:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "reverse:token:rev": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:api_key:r13": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:authz_bearer:r13": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:bearer:r13": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:password:r13": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:secret:r13": {
+          "cases": 60,
+          "failed": 0
+        },
+        "rot13:token:r13": {
+          "cases": 60,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.002769982677936489
+    }
+  },
+  "standards_clauses": {
+    "actions": {
+      "allow": 1500,
+      "redact": 2
+    },
+    "by_detector": {
+      "D5.email": {
+        "clauses": 2,
+        "ids": [
+          "NIST-SP-800-53:AC-4(20)",
+          "NIST-SP-800-53:SC-46"
+        ]
+      },
+      "D6": {
+        "clauses": 1,
+        "ids": [
+          "NIST-SP-800-53:PM-17"
+        ]
+      }
+    },
+    "clauses": 1502
+  }
+}

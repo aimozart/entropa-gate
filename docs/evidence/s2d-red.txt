@@ -1,0 +1,10 @@
+test p5_p8_every_stdout_line_is_json_rpc_and_results_carry_structured_content_and_text ... ok
+test p4_unknown_tool_and_malformed_calls_are_protocol_errors ... ok
+test p6_closing_stdin_makes_the_process_exit_promptly ... ok
+test p3_modern_discover_and_per_request_meta ... ok
+test p1_p2_legacy_handshake_then_tools_list_in_the_fixed_order ... ok
+test p7_responses_are_matched_by_id_not_position ... ok
+test x2b_hostile_bytes_do_not_kill_the_server ... ok
+test x2a_an_oversize_request_line_is_refused_and_the_server_survives ... FAILED
+thread 'x2a_an_oversize_request_line_is_refused_and_the_server_survives' (498) panicked at crates/mcp/tests/protocol.rs:187:5:
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; 

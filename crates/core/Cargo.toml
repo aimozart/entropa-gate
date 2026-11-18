@@ -1,0 +1,31 @@
+[package]
+name = "entropa-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "MIT"
+description = "Entropa core: a post-quantum (ML-DSA-65, FIPS 204) signed Merkle transparency log with inclusion and consistency proofs, receipts and pluggable checkpoint signers."
+repository = "https://github.com/aimozart/entropa-gate"
+homepage = "https://entropa.space"
+readme = "README.md"
+documentation = "https://docs.rs/entropa-core"
+rust-version = "1.99"
+keywords = ["transparency-log", "merkle", "post-quantum", "ml-dsa", "audit"]
+categories = ["cryptography", "data-structures"]
+# Packaged on purpose: sources, tests with their small public vectors, examples. Not packaged:
+# fuzz corpora and artifacts, proptest seeds, evidence.
+include = ["src/**", "tests/**", "examples/**", "README.md", "LICENSE-MIT", "Cargo.toml"]
+
+[dependencies]
+ml-dsa = "0.1.1"
+blake3 = { workspace = true }
+serde = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+proptest = "1"
+serde_json = { workspace = true }
+
+[lints]
+workspace = true

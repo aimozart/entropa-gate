@@ -1,0 +1,5 @@
+OK records=10000 pages=50 bytes=255678077 key_id=5141c3f819d14559
+MOCK-DATA.txt
+evidence-ledger
+OK records=10000 checkpoints=10000
+reader verify wall 2.59s

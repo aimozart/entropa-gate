@@ -1,0 +1,9 @@
+{
+ "evidence_kind": "outcome",
+ "run_id": "outcome-AT2b",
+ "stage": "AT2b",
+ "note": "receipt on the local scratch node <build-dir>/at2-scratch-node (index 1; index 0 is outcome-AT2), not the live node. verify-evidence OK records=2 checkpoints=2.",
+ "plan_sha256_at_receipt": "2aa790dc7650a69d2dd3914c11a6ac2db3e6b5f0bc0d5792eac7506bff6efcde",
+ "receipt_response": {"index":1,"subject_hash":"486e8164992a6c9bbb9743f5600ad05757705f04df69c6568b58d5d0090cf546","size":2,"root":"2dd5a9e0b9ae3d5f7b80f4b21103173def14f6ad2446118a09fe745f0264fcea"},
+ "counts": {"tiers_tests_new": 24, "survivor_tests": 4, "attack_classes": 18, "cases_per_class": 300, "accepted": 0, "control_allowed": "300 of 300", "ledger_records_verified": 5400, "concurrency_overruns": 0, "mutants": "54 caught, 2 argued, 17 unviable of 73", "decision_p95_ms": 0.306, "append_ms_at_1_300_3000": [4.6, 11.9, 551], "network_syscalls": 0}
+}

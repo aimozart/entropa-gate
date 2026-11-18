@@ -1,0 +1,6 @@
+FMT_OK
+    Checking entropa-kms v0.2.0 (/work/crates/kms)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.39s
+   Generated /work/target/doc/entropa_api/index.html and 6 other files
+advisories ok, bans ok, licenses ok, sources ok
+0

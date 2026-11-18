@@ -1,0 +1,73 @@
+{
+ "author": "the reviewer (written 2026-11-13 from the E1 control map, before any R1 result)",
+ "note": "15 description-only clause-addressed questions with expected register ids, and 5 out-of-corpus questions; add to the frozen sets as a separately reported sub-set; the author may not edit them",
+ "clause_addressed": [
+  {
+   "q": "Which clause says logging systems and log information must be protected against tampering and deletion?",
+   "expect": "DORA-12-2-d"
+  },
+  {
+   "q": "Where does the delegated regulation require a documented policy on encryption and cryptographic controls?",
+   "expect": "DORA-6"
+  },
+  {
+   "q": "Which requirement covers the lifecycle of cryptographic keys including destruction and revocation?",
+   "expect": "DORA-7"
+  },
+  {
+   "q": "Which PCI requirement asks for change-detection on audit logs so data cannot change without alerts?",
+   "expect": "PCI-10-3-4"
+  },
+  {
+   "q": "Which PCI requirement says audit log files are protected from modification by individuals?",
+   "expect": "PCI-10-3-2"
+  },
+  {
+   "q": "How long must PCI audit log history be retained and how much must be immediately available?",
+   "expect": "PCI-10-5-1"
+  },
+  {
+   "q": "Which PCI requirement is the annual review of cipher suites and protocols?",
+   "expect": "PCI-12-3-3"
+  },
+  {
+   "q": "Which NIST control protects audit information from unauthorised modification and deletion?",
+   "expect": "NIST-AU-9"
+  },
+  {
+   "q": "Which NIST enhancement requires audit records on a physically separate system?",
+   "expect": "NIST-AU-9-2"
+  },
+  {
+   "q": "Which NIST enhancement requires cryptographic protection of audit information integrity?",
+   "expect": "NIST-AU-9-3"
+  },
+  {
+   "q": "Which NIST control provides irrefutable evidence that an actor performed an action?",
+   "expect": "NIST-AU-10"
+  },
+  {
+   "q": "Which EU AI Act article requires high-risk systems to allow automatic recording of events?",
+   "expect": "EUAIA-12"
+  },
+  {
+   "q": "Which EU AI Act article sets the minimum log retention for providers?",
+   "expect": "EUAIA-19"
+  },
+  {
+   "q": "Which EU AI Act article sets log keeping for deployers?",
+   "expect": "EUAIA-26-6"
+  },
+  {
+   "q": "Which HIPAA technical safeguard requires mechanisms that record and examine activity?",
+   "expect": "HIPAA-164-312-b"
+  }
+ ],
+ "out_of_corpus": [
+  "Which clause of ISO 42001 requires AI system event logs (Annex A)?",
+  "What does SOC 2 criterion CC7.2 require?",
+  "Which HITRUST control covers audit logging?",
+  "What does the NIS2 directive require for cryptography?",
+  "What does CNSA 2.0 say about 2030 deadlines?"
+ ]
+}

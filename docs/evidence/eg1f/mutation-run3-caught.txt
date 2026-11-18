@@ -1,0 +1,461 @@
+crates/egress/src/contain.rs:93:5: replace is_nested -> bool with true
+crates/egress/src/contain.rs:93:5: replace is_nested -> bool with false
+crates/egress/src/contain.rs:93:19: replace || with && in is_nested
+crates/egress/src/contain.rs:97:5: replace text_of -> Result<&str, Refusal> with Ok("")
+crates/egress/src/contain.rs:97:5: replace text_of -> Result<&str, Refusal> with Ok("xyzzy")
+crates/egress/src/contain.rs:104:5: replace check_field -> Result<Option<String>, Refusal> with Ok(None)
+crates/egress/src/contain.rs:104:5: replace check_field -> Result<Option<String>, Refusal> with Ok(Some(String::new()))
+crates/egress/src/contain.rs:104:5: replace check_field -> Result<Option<String>, Refusal> with Ok(Some("xyzzy".into()))
+crates/egress/src/contain.rs:107:38: replace == with != in check_field
+crates/egress/src/contain.rs:115:30: replace && with || in check_field
+crates/egress/src/contain.rs:115:24: replace == with != in check_field
+crates/egress/src/contain.rs:123:34: replace > with == in check_field
+crates/egress/src/contain.rs:123:34: replace > with < in check_field
+crates/egress/src/contain.rs:127:17: replace || with && in check_field
+crates/egress/src/contain.rs:127:20: delete ! in check_field
+crates/egress/src/contain.rs:129:69: replace || with && in check_field
+crates/egress/src/contain.rs:129:56: replace || with && in check_field
+crates/egress/src/contain.rs:129:61: replace == with != in check_field
+crates/egress/src/contain.rs:129:74: replace == with != in check_field
+crates/egress/src/contain.rs:140:25: replace || with && in check_field
+crates/egress/src/contain.rs:140:18: replace < with == in check_field
+crates/egress/src/contain.rs:140:18: replace < with > in check_field
+crates/egress/src/contain.rs:140:30: replace > with == in check_field
+crates/egress/src/contain.rs:140:30: replace > with < in check_field
+crates/egress/src/contain.rs:158:34: replace > with == in check_field
+crates/egress/src/contain.rs:158:34: replace > with < in check_field
+crates/egress/src/contain.rs:168:5: replace check -> Result<Contained, Refusal> with Ok(Default::default())
+crates/egress/src/contain.rs:168:22: replace > with == in check
+crates/egress/src/contain.rs:168:22: replace > with < in check
+crates/egress/src/contain.rs:173:8: delete ! in check
+crates/egress/src/contain.rs:178:34: delete ! in check
+crates/egress/src/contain.rs:186:30: replace == with != in check
+crates/egress/src/context.rs:49:5: replace is_sep -> bool with true
+crates/egress/src/context.rs:49:5: replace is_sep -> bool with false
+crates/egress/src/context.rs:54:5: replace loose -> Option<(usize, bool)> with None
+crates/egress/src/context.rs:57:25: replace || with && in loose
+crates/egress/src/context.rs:57:14: replace >= with < in loose
+crates/egress/src/context.rs:57:28: delete ! in loose
+crates/egress/src/context.rs:60:11: replace += with -= in loose
+crates/egress/src/context.rs:60:11: replace += with *= in loose
+crates/egress/src/context.rs:61:18: replace < with == in loose
+crates/egress/src/context.rs:61:18: replace < with > in loose
+crates/egress/src/context.rs:61:18: replace < with <= in loose
+crates/egress/src/context.rs:61:14: replace + with - in loose
+crates/egress/src/context.rs:61:14: replace + with * in loose
+crates/egress/src/context.rs:63:40: replace && with || in loose
+crates/egress/src/context.rs:63:25: replace && with || in loose
+crates/egress/src/context.rs:63:21: replace < with == in loose
+crates/egress/src/context.rs:63:21: replace < with > in loose
+crates/egress/src/context.rs:63:30: replace < with == in loose
+crates/egress/src/context.rs:63:30: replace < with > in loose
+crates/egress/src/context.rs:63:30: replace < with <= in loose
+crates/egress/src/context.rs:64:24: replace |= with &= in loose
+crates/egress/src/context.rs:64:32: replace == with != in loose
+crates/egress/src/context.rs:65:19: replace += with -= in loose
+crates/egress/src/context.rs:65:19: replace += with *= in loose
+crates/egress/src/context.rs:76:5: replace tail -> Option<usize> with None
+crates/egress/src/context.rs:76:5: replace tail -> Option<usize> with Some(0)
+crates/egress/src/context.rs:76:5: replace tail -> Option<usize> with Some(1)
+crates/egress/src/context.rs:82:13: replace && with || in tail
+crates/egress/src/context.rs:81:13: replace && with || in tail
+crates/egress/src/context.rs:80:17: replace < with == in tail
+crates/egress/src/context.rs:80:17: replace < with > in tail
+crates/egress/src/context.rs:80:17: replace < with <= in tail
+crates/egress/src/context.rs:81:21: replace < with == in tail
+crates/egress/src/context.rs:81:21: replace < with > in tail
+crates/egress/src/context.rs:83:17: replace || with && in tail
+crates/egress/src/context.rs:83:34: replace && with || in tail
+crates/egress/src/context.rs:83:26: replace == with != in tail
+crates/egress/src/context.rs:85:26: delete ! in tail
+crates/egress/src/context.rs:86:15: replace += with -= in tail
+crates/egress/src/context.rs:86:15: replace += with *= in tail
+crates/egress/src/context.rs:87:18: replace += with *= in tail
+crates/egress/src/context.rs:90:14: replace < with == in tail
+crates/egress/src/context.rs:90:14: replace < with <= in tail
+crates/egress/src/context.rs:90:58: replace == with != in tail
+crates/egress/src/context.rs:98:29: replace && with || in tail
+crates/egress/src/context.rs:98:22: replace == with != in tail
+crates/egress/src/context.rs:111:46: replace && with || in tail
+crates/egress/src/context.rs:111:31: replace && with || in tail
+crates/egress/src/context.rs:111:36: replace < with == in tail
+crates/egress/src/context.rs:111:36: replace < with <= in tail
+crates/egress/src/context.rs:112:50: replace && with || in tail
+crates/egress/src/context.rs:112:35: replace && with || in tail
+crates/egress/src/context.rs:112:30: replace == with != in tail
+crates/egress/src/context.rs:112:40: replace < with == in tail
+crates/egress/src/context.rs:112:40: replace < with <= in tail
+crates/egress/src/context.rs:123:5: replace line_start -> usize with 1
+crates/egress/src/context.rs:125:27: replace == with != in line_start
+crates/egress/src/context.rs:126:26: replace + with - in line_start
+crates/egress/src/context.rs:130:5: replace is_reference_word -> bool with true
+crates/egress/src/context.rs:130:5: replace is_reference_word -> bool with false
+crates/egress/src/context.rs:176:5: replace placeholder -> bool with true
+crates/egress/src/context.rs:176:5: replace placeholder -> bool with false
+crates/egress/src/context.rs:181:16: replace < with == in placeholder
+crates/egress/src/context.rs:181:16: replace < with > in placeholder
+crates/egress/src/context.rs:185:5: replace mask -> bool with true
+crates/egress/src/context.rs:186:9: replace && with || in mask
+crates/egress/src/context.rs:192:5: replace reference -> bool with true
+crates/egress/src/context.rs:192:5: replace reference -> bool with false
+crates/egress/src/context.rs:197:9: replace || with && in reference
+crates/egress/src/context.rs:196:14: replace == with != in reference
+crates/egress/src/context.rs:201:17: replace == with != in reference
+crates/egress/src/context.rs:202:17: replace == with != in reference
+crates/egress/src/context.rs:208:43: replace + with - in reference
+crates/egress/src/context.rs:208:43: replace + with * in reference
+crates/egress/src/context.rs:214:13: replace && with || in reference
+crates/egress/src/context.rs:213:13: replace && with || in reference
+crates/egress/src/context.rs:212:13: replace && with || in reference
+crates/egress/src/context.rs:211:13: replace && with || in reference
+crates/egress/src/context.rs:210:13: replace && with || in reference
+crates/egress/src/context.rs:209:12: delete ! in reference
+crates/egress/src/context.rs:210:16: delete ! in reference
+crates/egress/src/context.rs:221:9: delete ! in reference
+crates/egress/src/context.rs:221:37: replace || with && in reference
+crates/egress/src/context.rs:224:18: replace && with || in reference
+crates/egress/src/context.rs:224:14: replace > with == in reference
+crates/egress/src/context.rs:224:14: replace > with < in reference
+crates/egress/src/context.rs:228:37: replace || with && in reference
+crates/egress/src/context.rs:233:5: replace is_variable -> bool with false
+crates/egress/src/context.rs:234:16: replace < with > in is_variable
+crates/egress/src/context.rs:234:28: replace != with == in is_variable
+crates/egress/src/context.rs:237:21: replace || with && in is_variable
+crates/egress/src/context.rs:237:29: replace == with != in is_variable
+crates/egress/src/context.rs:240:8: delete ! in is_variable
+crates/egress/src/context.rs:240:37: replace || with && in is_variable
+crates/egress/src/context.rs:240:45: replace == with != in is_variable
+crates/egress/src/context.rs:244:13: replace < with <= in is_variable
+crates/egress/src/context.rs:249:13: delete match arm b'[' in is_variable
+crates/egress/src/context.rs:246:18: replace match guard c.is_ascii_alphanumeric() || matches!(c, b'_' | b'.' | b':' | b'\\') with false in is_variable
+crates/egress/src/context.rs:247:21: replace match guard b.get(i + 1) == Some(&b'>') with false in is_variable
+crates/egress/src/context.rs:246:44: replace || with && in is_variable
+crates/egress/src/context.rs:246:92: replace += with -= in is_variable
+crates/egress/src/context.rs:247:34: replace == with != in is_variable
+crates/egress/src/context.rs:247:29: replace + with - in is_variable
+crates/egress/src/context.rs:247:29: replace + with * in is_variable
+crates/egress/src/context.rs:249:57: replace == with != in is_variable
+crates/egress/src/context.rs:250:35: replace + with - in is_variable
+crates/egress/src/context.rs:250:35: replace + with * in is_variable
+crates/egress/src/context.rs:260:5: replace identifier_like -> bool with false
+crates/egress/src/context.rs:261:5: delete ! in identifier_like
+crates/egress/src/context.rs:262:40: replace || with && in identifier_like
+crates/egress/src/context.rs:264:48: replace || with && in identifier_like
+crates/egress/src/context.rs:267:5: replace looks_like_secret -> bool with true
+crates/egress/src/context.rs:269:9: replace && with || in looks_like_secret
+crates/egress/src/context.rs:268:9: replace && with || in looks_like_secret
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with None
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((0, 0, true))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((0, 0, false))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((0, 1, true))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((0, 1, false))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((1, 0, true))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((1, 0, false))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((1, 1, true))
+crates/egress/src/context.rs:284:5: replace value_at -> Option<(usize, usize, bool)> with Some((1, 1, false))
+crates/egress/src/context.rs:284:10: replace >= with < in value_at
+crates/egress/src/context.rs:289:23: replace + with - in value_at
+crates/egress/src/context.rs:289:23: replace + with * in value_at
+crates/egress/src/context.rs:291:57: replace && with || in value_at
+crates/egress/src/context.rs:291:40: replace && with || in value_at
+crates/egress/src/context.rs:291:27: replace && with || in value_at
+crates/egress/src/context.rs:291:17: replace < with == in value_at
+crates/egress/src/context.rs:291:17: replace < with > in value_at
+crates/egress/src/context.rs:291:17: replace < with <= in value_at
+crates/egress/src/context.rs:291:35: replace != with == in value_at
+crates/egress/src/context.rs:291:48: replace != with == in value_at
+crates/egress/src/context.rs:291:70: replace < with == in value_at
+crates/egress/src/context.rs:291:70: replace < with > in value_at
+crates/egress/src/context.rs:292:30: replace && with || in value_at
+crates/egress/src/context.rs:292:21: replace == with != in value_at
+crates/egress/src/context.rs:295:15: replace += with -= in value_at
+crates/egress/src/context.rs:299:18: replace && with || in value_at
+crates/egress/src/context.rs:299:34: replace == with != in value_at
+crates/egress/src/context.rs:299:29: replace + with * in value_at
+crates/egress/src/context.rs:300:22: replace && with || in value_at
+crates/egress/src/context.rs:300:38: replace == with != in value_at
+crates/egress/src/context.rs:301:22: replace && with || in value_at
+crates/egress/src/context.rs:301:14: replace == with != in value_at
+crates/egress/src/context.rs:302:14: replace == with != in value_at
+crates/egress/src/context.rs:311:23: replace + with - in value_at
+crates/egress/src/context.rs:312:44: replace && with || in value_at
+crates/egress/src/context.rs:312:27: replace && with || in value_at
+crates/egress/src/context.rs:312:17: replace < with == in value_at
+crates/egress/src/context.rs:312:17: replace < with > in value_at
+crates/egress/src/context.rs:312:17: replace < with <= in value_at
+crates/egress/src/context.rs:312:35: replace != with == in value_at
+crates/egress/src/context.rs:312:52: replace != with == in value_at
+crates/egress/src/context.rs:312:70: replace < with == in value_at
+crates/egress/src/context.rs:312:70: replace < with > in value_at
+crates/egress/src/context.rs:313:15: replace += with -= in value_at
+crates/egress/src/context.rs:319:23: replace && with || in value_at
+crates/egress/src/context.rs:319:13: replace < with == in value_at
+crates/egress/src/context.rs:319:13: replace < with > in value_at
+crates/egress/src/context.rs:319:13: replace < with <= in value_at
+crates/egress/src/context.rs:319:32: replace < with == in value_at
+crates/egress/src/context.rs:319:32: replace < with > in value_at
+crates/egress/src/context.rs:322:12: delete ! in value_at
+crates/egress/src/context.rs:323:38: replace + with - in value_at
+crates/egress/src/context.rs:325:42: replace || with && in value_at
+crates/egress/src/context.rs:325:34: replace == with != in value_at
+crates/egress/src/context.rs:325:47: replace == with != in value_at
+crates/egress/src/context.rs:327:29: replace == with != in value_at
+crates/egress/src/context.rs:327:24: replace + with - in value_at
+crates/egress/src/context.rs:327:24: replace + with * in value_at
+crates/egress/src/context.rs:328:23: replace += with *= in value_at
+crates/egress/src/context.rs:328:28: replace + with - in value_at
+crates/egress/src/context.rs:328:28: replace + with * in value_at
+crates/egress/src/context.rs:333:28: replace > with == in value_at
+crates/egress/src/context.rs:333:28: replace > with < in value_at
+crates/egress/src/context.rs:333:44: replace == with != in value_at
+crates/egress/src/context.rs:333:39: replace - with + in value_at
+crates/egress/src/context.rs:333:39: replace - with / in value_at
+crates/egress/src/context.rs:335:23: replace || with && in value_at
+crates/egress/src/context.rs:335:15: replace == with != in value_at
+crates/egress/src/context.rs:335:28: replace == with != in value_at
+crates/egress/src/context.rs:339:17: replace || with && in value_at
+crates/egress/src/context.rs:338:17: replace || with && in value_at
+crates/egress/src/context.rs:339:31: replace && with || in value_at
+crates/egress/src/context.rs:339:23: replace == with != in value_at
+crates/egress/src/context.rs:339:34: delete ! in value_at
+crates/egress/src/context.rs:344:11: replace += with -= in value_at
+crates/egress/src/context.rs:347:10: replace == with != in value_at
+crates/egress/src/context.rs:355:5: replace text_of -> &str with ""
+crates/egress/src/context.rs:355:5: replace text_of -> &str with "xyzzy"
+crates/egress/src/context.rs:360:5: replace analyze -> Analysis with Default::default()
+crates/egress/src/context.rs:363:13: replace < with == in analyze
+crates/egress/src/context.rs:363:13: replace < with > in analyze
+crates/egress/src/context.rs:363:13: replace < with <= in analyze
+crates/egress/src/context.rs:366:13: replace || with && in analyze
+crates/egress/src/context.rs:365:13: replace || with && in analyze
+crates/egress/src/context.rs:364:25: replace == with != in analyze
+crates/egress/src/context.rs:365:16: delete ! in analyze
+crates/egress/src/context.rs:365:21: replace - with + in analyze
+crates/egress/src/context.rs:365:21: replace - with / in analyze
+crates/egress/src/context.rs:366:21: replace - with + in analyze
+crates/egress/src/context.rs:366:21: replace - with / in analyze
+crates/egress/src/context.rs:367:12: delete ! in analyze
+crates/egress/src/context.rs:388:35: replace + with - in analyze
+crates/egress/src/context.rs:394:15: replace += with -= in analyze
+crates/egress/src/context.rs:402:5: replace ident_start -> usize with 0
+crates/egress/src/context.rs:402:5: replace ident_start -> usize with 1
+crates/egress/src/context.rs:403:17: replace && with || in ident_start
+crates/egress/src/context.rs:403:13: replace > with == in ident_start
+crates/egress/src/context.rs:403:13: replace > with < in ident_start
+crates/egress/src/context.rs:403:13: replace > with >= in ident_start
+crates/egress/src/context.rs:403:54: replace || with && in ident_start
+crates/egress/src/context.rs:403:25: replace - with + in ident_start
+crates/egress/src/context.rs:403:25: replace - with / in ident_start
+crates/egress/src/context.rs:404:11: replace -= with += in ident_start
+crates/egress/src/context.rs:411:5: replace is_reference -> bool with true
+crates/egress/src/context.rs:411:5: replace is_reference -> bool with false
+crates/egress/src/context.rs:416:9: replace && with || in is_reference
+crates/egress/src/context.rs:415:9: replace && with || in is_reference
+crates/egress/src/context.rs:414:9: replace && with || in is_reference
+crates/egress/src/context.rs:421:27: replace && with || in is_reference
+crates/egress/src/context.rs:421:30: delete ! in is_reference
+crates/egress/src/context.rs:427:9: replace || with && in is_reference
+crates/egress/src/context.rs:426:9: replace || with && in is_reference
+crates/egress/src/context.rs:425:9: replace || with && in is_reference
+crates/egress/src/context.rs:439:54: replace && with || in is_reference
+crates/egress/src/context.rs:439:32: replace && with || in is_reference
+crates/egress/src/context.rs:440:68: replace || with && in is_reference
+crates/egress/src/context.rs:440:57: replace || with && in is_reference
+crates/egress/src/context.rs:440:32: replace || with && in is_reference
+crates/egress/src/context.rs:440:20: replace || with && in is_reference
+crates/egress/src/context.rs:445:31: replace && with || in is_reference
+crates/egress/src/context.rs:445:34: delete ! in is_reference
+crates/egress/src/context.rs:452:46: delete ! in is_reference
+crates/egress/src/context.rs:452:79: replace < with == in is_reference
+crates/egress/src/context.rs:452:79: replace < with > in is_reference
+crates/egress/src/context.rs:454:13: delete ! in is_reference
+crates/egress/src/context.rs:455:48: delete ! in is_reference
+crates/egress/src/context.rs:456:28: replace >= with < in is_reference
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with None
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((0, 0, true))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((0, 0, false))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((0, 1, true))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((0, 1, false))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((1, 0, true))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((1, 0, false))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((1, 1, true))
+crates/egress/src/context.rs:469:5: replace assignment -> Option<(usize, usize, bool)> with Some((1, 1, false))
+crates/egress/src/context.rs:472:20: replace && with || in assignment
+crates/egress/src/context.rs:472:10: replace < with == in assignment
+crates/egress/src/context.rs:472:10: replace < with > in assignment
+crates/egress/src/context.rs:472:10: replace < with <= in assignment
+crates/egress/src/context.rs:472:28: replace == with != in assignment
+crates/egress/src/context.rs:473:24: replace && with || in assignment
+crates/egress/src/context.rs:473:19: replace > with == in assignment
+crates/egress/src/context.rs:473:19: replace > with < in assignment
+crates/egress/src/context.rs:473:19: replace > with >= in assignment
+crates/egress/src/context.rs:473:41: replace == with != in assignment
+crates/egress/src/context.rs:473:36: replace - with + in assignment
+crates/egress/src/context.rs:473:36: replace - with / in assignment
+crates/egress/src/context.rs:474:43: replace + with - in assignment
+crates/egress/src/context.rs:476:24: replace < with > in assignment
+crates/egress/src/context.rs:484:37: replace && with || in assignment
+crates/egress/src/context.rs:484:32: replace > with == in assignment
+crates/egress/src/context.rs:484:32: replace > with >= in assignment
+crates/egress/src/context.rs:490:23: replace && with || in assignment
+crates/egress/src/context.rs:490:13: replace < with == in assignment
+crates/egress/src/context.rs:490:13: replace < with > in assignment
+crates/egress/src/context.rs:490:13: replace < with <= in assignment
+crates/egress/src/context.rs:491:11: replace += with -= in assignment
+crates/egress/src/context.rs:494:23: replace && with || in assignment
+crates/egress/src/context.rs:494:13: replace < with == in assignment
+crates/egress/src/context.rs:494:13: replace < with > in assignment
+crates/egress/src/context.rs:494:13: replace < with <= in assignment
+crates/egress/src/context.rs:494:40: replace || with && in assignment
+crates/egress/src/context.rs:494:32: replace == with != in assignment
+crates/egress/src/context.rs:494:48: replace == with != in assignment
+crates/egress/src/context.rs:495:11: replace += with -= in assignment
+crates/egress/src/context.rs:497:29: replace > with == in assignment
+crates/egress/src/context.rs:497:29: replace > with < in assignment
+crates/egress/src/context.rs:497:29: replace > with >= in assignment
+crates/egress/src/context.rs:501:9: replace && with || in assignment
+crates/egress/src/context.rs:500:18: replace > with == in assignment
+crates/egress/src/context.rs:500:18: replace > with >= in assignment
+crates/egress/src/context.rs:501:22: replace - with + in assignment
+crates/egress/src/context.rs:504:16: replace -= with += in assignment
+crates/egress/src/context.rs:513:38: replace && with || in assignment
+crates/egress/src/context.rs:513:23: replace == with != in assignment
+crates/egress/src/context.rs:513:55: replace || with && in assignment
+crates/egress/src/context.rs:513:49: replace == with != in assignment
+crates/egress/src/context.rs:513:67: replace - with + in assignment
+crates/egress/src/context.rs:513:67: replace - with / in assignment
+crates/egress/src/context.rs:516:10: replace == with != in assignment
+crates/egress/src/context.rs:520:30: replace == with != in assignment
+crates/egress/src/context.rs:521:36: replace + with - in assignment
+crates/egress/src/context.rs:521:36: replace + with * in assignment
+crates/egress/src/context.rs:525:11: replace += with -= in assignment
+crates/egress/src/context.rs:525:11: replace += with *= in assignment
+crates/egress/src/context.rs:525:16: replace + with - in assignment
+crates/egress/src/context.rs:525:16: replace + with * in assignment
+crates/egress/src/context.rs:526:27: replace && with || in assignment
+crates/egress/src/context.rs:526:17: replace < with == in assignment
+crates/egress/src/context.rs:526:17: replace < with > in assignment
+crates/egress/src/context.rs:526:44: replace || with && in assignment
+crates/egress/src/context.rs:526:36: replace == with != in assignment
+crates/egress/src/context.rs:526:52: replace == with != in assignment
+crates/egress/src/context.rs:527:15: replace += with -= in assignment
+crates/egress/src/context.rs:531:40: replace && with || in assignment
+crates/egress/src/context.rs:531:32: replace == with != in assignment
+crates/egress/src/context.rs:531:56: replace == with != in assignment
+crates/egress/src/context.rs:531:51: replace + with - in assignment
+crates/egress/src/context.rs:531:51: replace + with * in assignment
+crates/egress/src/context.rs:532:12: replace + with - in assignment
+crates/egress/src/context.rs:532:12: replace + with * in assignment
+crates/egress/src/context.rs:533:25: replace && with || in assignment
+crates/egress/src/context.rs:533:17: replace == with != in assignment
+crates/egress/src/context.rs:533:41: replace != with == in assignment
+crates/egress/src/context.rs:533:36: replace + with * in assignment
+crates/egress/src/context.rs:535:15: replace + with - in assignment
+crates/egress/src/context.rs:535:15: replace + with * in assignment
+crates/egress/src/context.rs:536:48: replace == with != in assignment
+crates/egress/src/context.rs:542:25: replace && with || in assignment
+crates/egress/src/context.rs:542:17: replace == with != in assignment
+crates/egress/src/context.rs:542:41: replace == with != in assignment
+crates/egress/src/context.rs:542:36: replace + with - in assignment
+crates/egress/src/context.rs:542:36: replace + with * in assignment
+crates/egress/src/context.rs:543:12: replace + with - in assignment
+crates/egress/src/context.rs:543:12: replace + with * in assignment
+crates/egress/src/context.rs:544:56: replace && with || in assignment
+crates/egress/src/context.rs:544:25: replace && with || in assignment
+crates/egress/src/context.rs:544:17: replace == with != in assignment
+crates/egress/src/context.rs:544:41: replace != with == in assignment
+crates/egress/src/context.rs:544:36: replace + with * in assignment
+crates/egress/src/context.rs:544:72: replace != with == in assignment
+crates/egress/src/context.rs:546:15: replace + with - in assignment
+crates/egress/src/context.rs:546:15: replace + with * in assignment
+crates/egress/src/context.rs:547:27: replace || with && in assignment
+crates/egress/src/context.rs:559:13: replace && with || in assignment
+crates/egress/src/context.rs:558:13: replace && with || in assignment
+crates/egress/src/context.rs:561:29: replace && with || in assignment
+crates/egress/src/context.rs:562:36: replace && with || in assignment
+crates/egress/src/context.rs:563:12: delete ! in assignment
+crates/egress/src/context.rs:563:41: replace || with && in assignment
+crates/egress/src/context.rs:563:24: replace || with && in assignment
+crates/egress/src/context.rs:568:20: replace < with > in assignment
+crates/egress/src/context.rs:572:13: replace && with || in assignment
+crates/egress/src/context.rs:583:24: replace && with || in assignment
+crates/egress/src/context.rs:583:14: replace < with == in assignment
+crates/egress/src/context.rs:583:14: replace < with > in assignment
+crates/egress/src/context.rs:583:14: replace < with <= in assignment
+crates/egress/src/context.rs:583:42: replace || with && in assignment
+crates/egress/src/context.rs:583:34: replace == with != in assignment
+crates/egress/src/context.rs:583:51: replace == with != in assignment
+crates/egress/src/context.rs:584:12: replace += with -= in assignment
+crates/egress/src/context.rs:587:13: replace == with != in assignment
+crates/egress/src/context.rs:590:22: replace < with == in assignment
+crates/egress/src/context.rs:590:22: replace < with > in assignment
+crates/egress/src/context.rs:590:40: replace == with != in assignment
+crates/egress/src/context.rs:603:57: replace && with || in assignment
+crates/egress/src/context.rs:603:40: replace && with || in assignment
+crates/egress/src/context.rs:603:27: replace && with || in assignment
+crates/egress/src/context.rs:603:17: replace < with == in assignment
+crates/egress/src/context.rs:603:17: replace < with > in assignment
+crates/egress/src/context.rs:603:17: replace < with <= in assignment
+crates/egress/src/context.rs:603:35: replace != with == in assignment
+crates/egress/src/context.rs:603:48: replace != with == in assignment
+crates/egress/src/context.rs:603:67: replace < with == in assignment
+crates/egress/src/context.rs:603:67: replace < with > in assignment
+crates/egress/src/context.rs:604:15: replace += with -= in assignment
+crates/egress/src/context.rs:609:9: replace && with || in assignment
+crates/egress/src/context.rs:608:9: replace && with || in assignment
+crates/egress/src/context.rs:607:21: replace == with != in assignment
+crates/egress/src/context.rs:608:15: replace == with != in assignment
+crates/egress/src/context.rs:609:12: delete ! in assignment
+crates/egress/src/context.rs:613:44: replace && with || in assignment
+crates/egress/src/context.rs:613:27: replace && with || in assignment
+crates/egress/src/context.rs:613:17: replace < with == in assignment
+crates/egress/src/context.rs:613:17: replace < with > in assignment
+crates/egress/src/context.rs:613:17: replace < with <= in assignment
+crates/egress/src/context.rs:613:35: replace != with == in assignment
+crates/egress/src/context.rs:613:54: replace < with == in assignment
+crates/egress/src/context.rs:613:54: replace < with > in assignment
+crates/egress/src/context.rs:614:15: replace += with -= in assignment
+crates/egress/src/context.rs:616:22: replace && with || in assignment
+crates/egress/src/context.rs:616:17: replace > with == in assignment
+crates/egress/src/context.rs:616:17: replace > with >= in assignment
+crates/egress/src/context.rs:616:29: replace - with + in assignment
+crates/egress/src/context.rs:616:29: replace - with / in assignment
+crates/egress/src/context.rs:617:15: replace -= with += in assignment
+crates/egress/src/context.rs:624:16: replace < with == in assignment
+crates/egress/src/context.rs:624:16: replace < with > in assignment
+crates/egress/src/context.rs:628:36: replace && with || in assignment
+crates/egress/src/context.rs:628:27: replace && with || in assignment
+crates/egress/src/context.rs:628:32: replace > with == in assignment
+crates/egress/src/context.rs:628:32: replace > with < in assignment
+crates/egress/src/context.rs:628:48: replace == with != in assignment
+crates/egress/src/context.rs:628:43: replace - with + in assignment
+crates/egress/src/context.rs:628:43: replace - with / in assignment
+crates/egress/src/context.rs:629:26: replace || with && in assignment
+crates/egress/src/context.rs:634:5: replace scan -> Vec<Hit> with vec![]
+crates/egress/src/v2.rs:39:17: delete ! in decide_v2
+crates/egress/src/v2.rs:66:27: delete ! in decide_v2
+crates/egress/src/v2.rs:66:88: replace == with != in decide_v2
+crates/egress/src/v2.rs:67:56: replace == with != in decide_v2
+crates/egress/src/v2.rs:73:17: replace && with || in decide_v2
+crates/egress/src/v2.rs:72:17: replace && with || in decide_v2
+crates/egress/src/v2.rs:71:17: replace && with || in decide_v2
+crates/egress/src/v2.rs:70:17: replace && with || in decide_v2
+crates/egress/src/v2.rs:69:17: replace && with || in decide_v2
+crates/egress/src/v2.rs:73:20: delete ! in decide_v2
+crates/egress/src/v2.rs:83:39: replace == with != in decide_v2
+crates/egress/src/v2.rs:88:42: replace < with == in decide_v2
+crates/egress/src/v2.rs:88:42: replace < with > in decide_v2
+crates/egress/src/v2.rs:88:61: replace < with == in decide_v2
+crates/egress/src/v2.rs:88:61: replace < with > in decide_v2
+crates/egress/src/v2.rs:90:20: delete ! in decide_v2
+crates/egress/src/v2.rs:106:5: replace units_of -> Vec<String> with vec![]
+crates/egress/src/v2.rs:106:5: replace units_of -> Vec<String> with vec![String::new()]
+crates/egress/src/v2.rs:106:5: replace units_of -> Vec<String> with vec!["xyzzy".into()]
+crates/egress/src/v2.rs:107:9: replace units_of::walk with ()
+crates/egress/src/v2.rs:107:18: replace > with < in units_of::walk
+crates/egress/src/v2.rs:107:36: replace > with < in units_of::walk
+crates/egress/src/v2.rs:112:13: delete match arm serde_json::Value::Array(a) in units_of::walk
+crates/egress/src/v2.rs:113:13: delete match arm serde_json::Value::Object(m) in units_of::walk
+crates/egress/src/v2.rs:118:35: replace + with - in units_of::walk
+crates/egress/src/v2.rs:176:27: replace > with == in decide_contained_to
+crates/egress/src/v2.rs:176:27: replace > with < in decide_contained_to

@@ -1,0 +1,11 @@
+crates/egress/src/context.rs:185:5: replace mask -> bool with true
+crates/egress/src/context.rs:185:5: replace mask -> bool with false
+crates/egress/src/context.rs:185:5: delete ! in mask
+crates/egress/src/context.rs:234:20: replace || with && in is_variable
+crates/egress/src/context.rs:234:16: replace < with == in is_variable
+crates/egress/src/context.rs:234:16: replace < with > in is_variable
+crates/egress/src/context.rs:234:28: replace != with == in is_variable
+crates/egress/src/context.rs:439:54: replace && with || in is_reference
+crates/egress/src/context.rs:439:32: replace && with || in is_reference
+crates/egress/src/context.rs:439:28: replace > with == in is_reference
+crates/egress/src/context.rs:439:28: replace > with < in is_reference

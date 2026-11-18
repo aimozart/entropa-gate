@@ -1,0 +1,20 @@
+## cargo publish --dry-run --locked -p entropa-core -p entropa-kms (clean tree, uploads nothing)
+    Updating crates.io index
+   Packaging entropa-core v0.2.0 (/work/crates/core)
+    Updating crates.io index
+    Packaged 26 files, 606.6KiB (310.0KiB compressed)
+   Packaging entropa-kms v0.2.0 (/work/crates/kms)
+    Updating crates.io index
+    Packaged 11 files, 99.4KiB (31.2KiB compressed)
+   Verifying entropa-core v0.2.0 (/work/crates/core)
+   Compiling entropa-core v0.2.0 (/work/target/package/entropa-core-0.2.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.46s
+   Verifying entropa-kms v0.2.0 (/work/crates/kms)
+    Updating crates.io index
+   Compiling entropa-kms v0.2.0 (/work/target/package/entropa-kms-0.2.0)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.59s
+   Uploading entropa-core v0.2.0 (/work/crates/core)
+warning: aborting upload due to dry run
+   Uploading entropa-kms v0.2.0 (/work/crates/kms)
+warning: aborting upload due to dry run
+exit=0

@@ -1,0 +1,17 @@
+Found 71 mutants to test
+ok       Unmutated baseline in 2s build + 3s test
+MISSED   crates/release/src/lib.rs:23:9: replace <impl std::fmt::Display for ReleaseError>::fmt -> std::fmt::Result with Ok(Default::default()) in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:75:9: replace sbom::purl -> String with String::new() in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:75:9: replace sbom::purl -> String with "xyzzy".into() in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:229:22: replace match guard !b.is_empty() with true in manifest::key_id in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:234:9: replace manifest::name_ok -> bool with true in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:235:13: replace && with || in manifest::name_ok in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:246:52: replace || with && in manifest::build in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:246:30: replace || with && in manifest::build in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:246:69: replace > with == in manifest::build in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:246:69: replace > with >= in manifest::build in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:253:56: replace || with && in manifest::build in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:311:27: replace > with >= in manifest::verify in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:339:38: replace || with && in manifest::verify in 0s build + 1s test
+MISSED   crates/release/src/lib.rs:343:13: replace || with && in manifest::verify in 0s build + 1s test
+71 mutants tested in 2m: 14 missed, 51 caught, 6 unviable

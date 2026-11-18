@@ -1,0 +1,11 @@
+== mutation 1: the JCB entry is removed from the allowlist
+test t5_every_luhn_valid_card_shaped_number_in_the_repository_is_on_the_allowlist_with_a_source ... FAILED
+card-shaped numbers not on the allowlist (file: masked value, count): {"crates/egress/tests/detectors.rs: 35…(16 digits)": 1}
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+== mutation 2: the Luhn check always says no (the scan would see nothing)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test t6_the_card_finder_and_the_allowlist_parser_work ... FAILED
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+== mutation 3: a prefix entry points at the wrong directory
+test t5_every_luhn_valid_card_shaped_number_in_the_repository_is_on_the_allowlist_with_a_source ... FAILED
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s

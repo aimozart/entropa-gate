@@ -1,0 +1,8 @@
+Found 35 mutants to test
+ok       Unmutated baseline in 14s build + 21s test
+MISSED   crates/nodecore/src/lib.rs:65:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "" in 0s build + 1s test
+MISSED   crates/nodecore/src/lib.rs:65:9: replace <impl CheckpointSigner for Dyn<'_>>::algorithm -> &'static str with "xyzzy" in 0s build + 1s test
+MISSED   crates/nodecore/src/lib.rs:79:5: replace now -> u64 with 0 in 0s build + 1s test
+MISSED   crates/nodecore/src/lib.rs:79:5: replace now -> u64 with 1 in 0s build + 1s test
+MISSED   crates/nodecore/src/lib.rs:207:9: delete match arm 5 in council_event in 0s build + 1s test
+35 mutants tested in 2m: 5 missed, 23 caught, 7 unviable

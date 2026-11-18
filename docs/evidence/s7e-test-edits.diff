@@ -1,0 +1,71 @@
+diff --git a/crates/explorer/tests/hostile.rs b/crates/explorer/tests/hostile.rs
+index e415050..0bb6918 100644
+--- a/crates/explorer/tests/hostile.rs
++++ b/crates/explorer/tests/hostile.rs
+@@ -39,22 +39,36 @@ fn x2_a_huge_limit_cannot_widen_the_page() {
+     }
+ }
+ 
++/// One explorer for all cases (verifying the bundle is the slow part); every case uses a fresh client so the
++/// limiter never interferes.
++fn shared() -> &'static Explorer {
++    static E: std::sync::OnceLock<Explorer> = std::sync::OnceLock::new();
++    E.get_or_init(explorer)
++}
++
++/// Every fixed error text the API can answer with; a needle may only appear in a body if it is part of this.
++const FIXED: &str =
++    "bad_request not_found method_not_allowed rate_limited uri_too_long response_too_large";
++
+ proptest! {
+     #![proptest_config(ProptestConfig { cases: 64, failure_persistence: None, .. ProptestConfig::default() })]
+ 
+     #[test]
+-    fn x3_any_path_and_query_gives_valid_json_and_no_echo(path in "\\PC{0,80}", query in "\\PC{0,80}") {
+-        let e = explorer();
+-        let mut req = from("GET", "/", CLIENT);
++    fn x3_any_path_and_query_gives_valid_json_and_no_echo(path in "\\PC{6,80}", query in "\\PC{6,80}") {
++        static N: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
++        let client = format!("client-{}", N.fetch_add(1, std::sync::atomic::Ordering::SeqCst));
++        let mut req = from("GET", "/", &client);
+         req.path = format!("/api/{path}");
+         req.query = query.clone();
+-        let r = e.handle(&req, &FakeClock::at(NOW));
++        let r = shared().handle(&req, &FakeClock::at(NOW));
+         if r.status == 501 { panic!("{NOT_IMPLEMENTED}"); }
+         prop_assert!(serde_json::from_str::<serde_json::Value>(&r.body).is_ok() || r.body.is_empty());
+-        if r.status >= 400 {
+-            let needle = format!("{path}{query}");
+-            prop_assume!(needle.chars().count() >= 6 && !r.body.contains("error"));
+-            prop_assert!(!r.body.contains(&needle));
++        // No response, of any status, echoes what the client sent (path or query, 6+ characters).
++        for needle in [&path, &query] {
++            prop_assert!(!r.body.contains(needle.as_str()) || FIXED.contains(needle.as_str()), "echoed {needle:?}");
++            for v in r.headers.values() {
++                prop_assert!(!v.contains(needle.as_str()), "header echoed {needle:?}");
++            }
+         }
+     }
+ }
+diff --git a/crates/explorer/tests/query.rs b/crates/explorer/tests/query.rs
+index ac0e916..d4391e8 100644
+--- a/crates/explorer/tests/query.rs
++++ b/crates/explorer/tests/query.rs
+@@ -5,7 +5,7 @@ use common::*;
+ 
+ #[test]
+ fn q1_these_queries_are_all_bad_requests() {
+-    let e = explorer();
++    // One explorer per query: 30 queries from one client would (rightly) hit the 20-request burst.
+     let bad = [
+         "/api/records?limit=0",
+         "/api/records?limit=101",
+@@ -39,7 +39,7 @@ fn q1_these_queries_are_all_bad_requests() {
+         "/api/receipts/3?size=",
+     ];
+     for t in bad {
+-        let r = ask(&e, t);
++        let r = ask(&explorer(), t);
+         assert_eq!(r.status, 400, "{t}");
+         assert_eq!(json(&r)["error"], "bad_request", "{t}");
+     }

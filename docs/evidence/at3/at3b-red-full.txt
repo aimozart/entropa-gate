@@ -1,0 +1,75 @@
+   Compiling entropa-tiers v0.2.0 (<build-dir>/<worktree>/crates/tiers)
+    Finished `test` profile [unoptimized] target(s) in 0.51s
+     Running tests/at3b.rs (target/debug/deps/at3b-86e9a5da74b2dc07)
+
+running 8 tests
+test v7_a_stored_approval_whose_subject_differs_from_its_token_is_not_counted ... FAILED
+test v6_the_activation_record_names_the_activator_by_hash_only ... FAILED
+test v1_an_approver_revoked_after_approving_does_not_count ... FAILED
+test v3_activation_needs_a_valid_t3_token_naming_the_class ... FAILED
+test v5_a_record_failure_aborts_the_reservation_so_a_retry_succeeds ... ok
+test b1_battery_revoked_after_approving_300_none_activated_and_300_valid_activated ... FAILED
+test v2_an_approver_token_expired_at_activation_or_a_stale_list_denies ... FAILED
+test v4_a_lost_race_writes_exactly_one_allowed_activation_record ... FAILED
+
+failures:
+
+---- v7_a_stored_approval_whose_subject_differs_from_its_token_is_not_counted stdout ----
+
+thread 'v7_a_stored_approval_whose_subject_differs_from_its_token_is_not_counted' (467671) panicked at crates/tiers/tests/at3b.rs:397:5:
+assertion failed: cc.activate(&w.t3(3, "carol"), None, &h, NOW + 2).is_err()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- v6_the_activation_record_names_the_activator_by_hash_only stdout ----
+
+thread 'v6_the_activation_record_names_the_activator_by_hash_only' (467670) panicked at crates/tiers/tests/at3b.rs:364:5:
+assertion `left == right` failed
+  left: None
+ right: Some("e597adc94120234ab44558d0bdc415a3df58f1766e40469befa8c806557b09b7")
+
+---- v1_an_approver_revoked_after_approving_does_not_count stdout ----
+
+thread 'v1_an_approver_revoked_after_approving_does_not_count' (467665) panicked at crates/tiers/tests/at3b.rs:138:5:
+assertion `left == right` failed
+  left: Ok(VersionRec { class: "prompt", name: "p", seq: 1, content_hash: "11111111111111111111111111111111111111111111111111111111111111aa", parent_version_hash: None, change_hash: "aed2239403e4f10b7a09148f741778186319e6594ddae3a1d9cb76a4be234849", version_hash: "737b181a77128dd6ad46e88f10ac46c9244f8652c6caf6eb56e1fa8835ebd445" })
+ right: Err(Token(Revoked))
+
+---- v3_activation_needs_a_valid_t3_token_naming_the_class stdout ----
+
+thread 'v3_activation_needs_a_valid_t3_token_naming_the_class' (467667) panicked at crates/tiers/tests/at3b.rs:208:5:
+assertion failed: matches!(cc.activate(b"junk", None, &h, NOW + 2), Err(ChangeDeny::Token(_)))
+
+---- b1_battery_revoked_after_approving_300_none_activated_and_300_valid_activated stdout ----
+
+thread 'b1_battery_revoked_after_approving_300_none_activated_and_300_valid_activated' (467664) panicked at crates/tiers/tests/at3b.rs:435:9:
+assertion `left == right` failed: case 0
+  left: Ok(())
+ right: Err(Token(Revoked))
+
+---- v2_an_approver_token_expired_at_activation_or_a_stale_list_denies stdout ----
+
+thread 'v2_an_approver_token_expired_at_activation_or_a_stale_list_denies' (467666) panicked at crates/tiers/tests/at3b.rs:181:5:
+assertion `left == right` failed
+  left: Ok(VersionRec { class: "prompt", name: "p", seq: 1, content_hash: "11111111111111111111111111111111111111111111111111111111111111aa", parent_version_hash: None, change_hash: "aed2239403e4f10b7a09148f741778186319e6594ddae3a1d9cb76a4be234849", version_hash: "737b181a77128dd6ad46e88f10ac46c9244f8652c6caf6eb56e1fa8835ebd445" })
+ right: Err(Token(Expired))
+
+---- v4_a_lost_race_writes_exactly_one_allowed_activation_record stdout ----
+
+thread 'v4_a_lost_race_writes_exactly_one_allowed_activation_record' (467668) panicked at crates/tiers/tests/at3b.rs:297:13:
+assertion `left == right` failed: 2 threads: one allowed activation record
+  left: 2
+ right: 1
+
+
+failures:
+    b1_battery_revoked_after_approving_300_none_activated_and_300_valid_activated
+    v1_an_approver_revoked_after_approving_does_not_count
+    v2_an_approver_token_expired_at_activation_or_a_stale_list_denies
+    v3_activation_needs_a_valid_t3_token_naming_the_class
+    v4_a_lost_race_writes_exactly_one_allowed_activation_record
+    v6_the_activation_record_names_the_activator_by_hash_only
+    v7_a_stored_approval_whose_subject_differs_from_its_token_is_not_counted
+
+test result: FAILED. 1 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s
+
+error: test failed, to rerun pass `-p entropa-tiers --test at3b`

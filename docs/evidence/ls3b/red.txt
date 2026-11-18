@@ -1,0 +1,61 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test h13_cors_is_answered_for_exactly_one_origin_and_never_with_a_star ... FAILED
+test h6_a_missing_short_or_non_ip_header_falls_back_to_the_peer_address_and_they_share_one_bucket ... FAILED
+test h7_two_ipv6_addresses_in_one_64_share_a_bucket_and_another_64_does_not ... FAILED
+test h8_header_limits ... FAILED
+test h4_a_forged_forwarded_for_does_not_change_the_bucket_but_a_different_real_entry_does ... FAILED
+test h10_slow_senders_are_cut_off ... FAILED
+test h11_the_ninth_concurrent_request_gets_503_busy ... FAILED
+test h2_routes_and_methods ... FAILED
+test h12_the_global_and_daily_caps_answer_503_with_retry_after ... FAILED
+test h5_with_two_hops_the_second_entry_from_the_right_is_the_key ... FAILED
+test h9_a_big_body_is_refused_without_reading_it ... FAILED
+test h14_nothing_from_a_request_reaches_stdout_or_stderr_over_1000_requests ... FAILED
+test h1_the_binary_refuses_to_start_without_hops_or_a_single_allowed_origin ... FAILED
+test h3_a_valid_request_gets_the_handler_answer_with_a_signed_record ... FAILED
+thread 'h13_cors_is_answered_for_exactly_one_origin_and_never_with_a_star' (4149137) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: "
+thread 'h6_a_missing_short_or_non_ip_header_falls_back_to_the_peer_address_and_they_share_one_bucket' (4149152) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: "
+thread 'h7_two_ipv6_addresses_in_one_64_share_a_bucket_and_another_64_does_not' (4149153) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: "
+thread 'h8_header_limits' (4149154) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: "
+thread 'h4_a_forged_forwarded_for_does_not_change_the_bucket_but_a_different_real_entry_does' (4149150) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: "
+thread 'h10_slow_senders_are_cut_off' (4149134) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h11_the_ninth_concurrent_request_gets_503_busy' (4149135) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h2_routes_and_methods' (4149148) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h12_the_global_and_daily_caps_answer_503_with_retry_after' (4149136) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h5_with_two_hops_the_second_entry_from_the_right_is_the_key' (4149151) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h9_a_big_body_is_refused_without_reading_it' (4149155) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h14_nothing_from_a_request_reaches_stdout_or_stderr_over_1000_requests' (4149140) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+thread 'h1_the_binary_refuses_to_start_without_hops_or_a_single_allowed_origin' (4149146) panicked at crates/try-http/tests/http.rs:181:9:
+no trusted-hops: must exit with 2: exited with exit status: 99: not implemented
+thread 'h3_a_valid_request_gets_the_handler_answer_with_a_signed_record' (4149149) panicked at crates/try-http/tests/http.rs:82:23:
+called `Result::unwrap()` on an `Err` value: "exited with exit status: 99: not implemented\n"
+test result: FAILED. 0 passed; 14 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test k1_the_entry_counted_from_the_right_is_the_key_and_forged_left_entries_are_ignored ... FAILED
+test k3_zero_hops_ignores_the_header_entirely ... FAILED
+test k4_ipv6_is_reduced_to_its_64_and_ipv4_mapped_is_ipv4 ... FAILED
+test k6_the_daily_cap_refuses_with_daily_limit_until_the_next_utc_day ... FAILED
+test k7_when_both_caps_apply_the_daily_one_is_reported ... FAILED
+test k2_a_short_header_a_missing_header_or_a_non_ip_entry_uses_the_peer ... FAILED
+test k5_the_global_cap_refuses_with_busy_and_a_retry_after_to_the_end_of_the_window ... FAILED
+thread 'k1_the_entry_counted_from_the_right_is_the_key_and_forged_left_entries_are_ignored' (4149191) panicked at crates/try-http/tests/keys.rs:12:5:
+thread 'k3_zero_hops_ignores_the_header_entirely' (4149193) panicked at crates/try-http/tests/keys.rs:39:5:
+thread 'k4_ipv6_is_reduced_to_its_64_and_ipv4_mapped_is_ipv4' (4149194) panicked at crates/try-http/tests/keys.rs:45:5:
+thread 'k6_the_daily_cap_refuses_with_daily_limit_until_the_next_utc_day' (4149196) panicked at crates/try-http/tests/keys.rs:85:30:
+thread 'k7_when_both_caps_apply_the_daily_one_is_reported' (4149197) panicked at crates/try-http/tests/keys.rs:99:31:
+thread 'k2_a_short_header_a_missing_header_or_a_non_ip_entry_uses_the_peer' (4149192) panicked at crates/try-http/tests/keys.rs:27:5:
+thread 'k5_the_global_cap_refuses_with_busy_and_a_retry_after_to_the_end_of_the_window' (4149195) panicked at crates/try-http/tests/keys.rs:68:29:
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

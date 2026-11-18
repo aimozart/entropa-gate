@@ -1,0 +1,1099 @@
+{
+  "bound_method": "exact one-sided 95 percent for zero failures (1 - 0.05^(1/n)); Wilson upper otherwise",
+  "classes": {
+    "clean": {
+      "actions": {
+        "allow": 628,
+        "block": 2
+      },
+      "cases": 630,
+      "failed": 2,
+      "failed_ids": [
+        "f-placeholder-0273",
+        "f-placeholder-0336"
+      ],
+      "families": {
+        "ids": {
+          "cases": 60,
+          "failed": 0
+        },
+        "php_assign": {
+          "cases": 110,
+          "failed": 0
+        },
+        "placeholder": {
+          "cases": 130,
+          "failed": 2
+        },
+        "props": {
+          "cases": 80,
+          "failed": 0
+        },
+        "prose": {
+          "cases": 140,
+          "failed": 0
+        },
+        "ps_assign": {
+          "cases": 110,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.00954794716334171
+    },
+    "secrets": {
+      "actions": {
+        "block": 1080
+      },
+      "cases": 1080,
+      "failed": 0,
+      "failed_ids": [],
+      "families": {
+        "hmid:colon": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmid:dotdash": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmid:old": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmid:plain": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmid:slash": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmid:space": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:colon": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:dotdash": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:old": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:plain": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:slash": {
+          "cases": 18,
+          "failed": 0
+        },
+        "hmix:space": {
+          "cases": 18,
+          "failed": 0
+        },
+        "lit:bash:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:bash:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag2:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:cli_flag:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:csharp:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:curl_hdr_sq:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:docker_e:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:env_file:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:go:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_auth_tok:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:hdr_key:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:java:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:json:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:kotlin:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:lua:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:php_arr:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:props:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ps_secure:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:ruby_env:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:rust:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_ident:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:sql_pw:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:swift:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:tf:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:toml:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:wget:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:xml:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:alnum": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:camel": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:dash": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:dot": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:mixed": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:rand": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:snake": {
+          "cases": 3,
+          "failed": 0
+        },
+        "lit:yaml:spaced": {
+          "cases": 3,
+          "failed": 0
+        },
+        "nskey": {
+          "cases": 120,
+          "failed": 0
+        }
+      },
+      "upper95_of_failure_rate": 0.002769982677936489
+    }
+  }
+}

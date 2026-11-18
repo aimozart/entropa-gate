@@ -1,0 +1,9 @@
+== drop removes the lock even when read-only
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+== writes allowed on a read-only store
+test ro4_every_write_on_a_read_only_store_is_refused_and_changes_nothing ... FAILED
+test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+== read-only open creates the directory
+test ro2_a_missing_directory_is_an_error_and_is_not_created ... FAILED
+test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+restored

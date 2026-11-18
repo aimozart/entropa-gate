@@ -1,0 +1,12 @@
+test h2_the_whole_phrase_reversed_is_blocked ... FAILED
+test h3_the_whole_phrase_rot13_is_blocked ... FAILED
+test h1_the_whole_phrase_cut_by_a_hyphen_every_g_characters_is_blocked ... FAILED
+test h4_near_misses_that_allow_today_stay_allowed ... ok
+assertion `left == right` failed: authz_bearer alone: 8Zt2GDdQ5MdqNkE2FU6YOxHJW5nC reraeB :noitazirohtuA
+  left: Allow
+ right: Block
+assertion `left == right` failed: authz_bearer alone: Nhgubevmngvba: Ornere Pa5JWUkBL6HS2RxAdqZ5DqQT2gM8
+  left: Allow
+ right: Block
+assertion `left == right` failed: authz_bearer g=3 alone: Aut-hor-iza-tio-n: -Bea-rer- Cn-5WJ-HxO-Y6U-F2E-kNq-dM5-QdD-G2t-Z8
+  left: Allow

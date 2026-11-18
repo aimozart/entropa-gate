@@ -1,0 +1,17 @@
+{
+ "counts": {
+  "attacks": 1080,
+  "attacks_per_family": 360,
+  "clean": 600
+ },
+ "files": {
+  "eg_abuse.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_clean.jsonl": "554c1907a8efcbed4c5c05529b6cbb46dd9b017406ff266f338d397c558aa33f",
+  "eg_destination.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_personal.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "eg_policy_extra.json": "bd7a1804c86b13db1f4b2eaf51d0a35382658f0c6bcf23ba133993a9087f7cf5",
+  "eg_secrets.jsonl": "04cf21d86a5496960a4e2f2f1ec150512589bef9b02c39dc886f7229847c8e87",
+  "eg_terms.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "seed": 20261216
+}

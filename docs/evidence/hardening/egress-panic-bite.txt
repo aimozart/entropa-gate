@@ -1,0 +1,4 @@
+test h2_the_public_view_functions_never_panic_on_the_same_strings ... FAILED
+test h1_four_hundred_thousand_hostile_strings_never_panic_in_any_tier ... ok
+panics on: ["ENTROPA-CANARY-%70%61%73%73%77%6f%72%6", "Bearer UGFzc3dvcmQ9WGs5UXpMMg==%4)curl -u %4ü%41:😀\tsecret_key&:Zm9v%41%42%43%44%45%46%47%48%49%4a%4b%4c%4d%4e%2F\u{200b}:=%41$))%41", "%4 = secret_key/0000000", "1234567890123456789012345:,user@example.in
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 32.96s

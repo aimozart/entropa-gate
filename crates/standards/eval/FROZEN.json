@@ -1,0 +1,17 @@
+{
+ "frozen_on": "2026-11-13",
+ "plan_commit": "ecfa560",
+ "note": "question sets and fixtures frozen before any retrieval code; the reviewer's independent subset is his file, unedited; any change to a file below is a new stage, not a tuning step",
+ "files": {
+  "sets/clause_addressed.jsonl": "4c8e71494665e31dd3977d18324db93007a671aa6e0fcee385454f3fdb67658a",
+  "sets/injection.jsonl": "baa009ca3a9f890e3cbb34977963e0ed68f024e538256b8283c35a751a784643",
+  "sets/out_of_corpus.jsonl": "b84abd28697a6bc1f20eea236d80895b9cc6149a83e0e23ba71aa26c06100f68",
+  "sets/register_map.json": "3ec031f99e9af435c7ba79e6f08174c5ab246302ae7e943c9868436d1008399a",
+  "sets/independent_questions.json": "c5f2258b5bc3a3e0673ad80a74dd149258a4f2efa85bfbc4a75631e09af4b49c",
+  "sets/stale_version.jsonl": "080fc102b4cb39e12ba3a9727247f8f83f7a27105a39549426d081a43108e1ed",
+  "fixtures/inject_licensed.txt": "57a7fce279f331fec1048b6e88ecc3a848d0f5133c3ae51322b944d612e22408",
+  "fixtures/inject_std.txt": "2e7d541d4f0b5da21b2a7126898289e90bfa66662c852bde3cfc2397f3f78f08",
+  "fixtures/stale_v1.txt": "61e991e4e80f246e1ecb62b8c69b4296c428f3ef204b34357180336cb909311b",
+  "fixtures/stale_v2.txt": "6b30186500c735ddb097c389a41506c02bb546dedb1bcf480f3cd1954aa17649"
+ }
+}

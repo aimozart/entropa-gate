@@ -1,0 +1,17 @@
+caught: 41  missed: 13  timeout: 8  unviable: 0
+--- caught only by SIGKILL (NOT counted as caught):
+--- missed:
+crates/egress/src/detect.rs:661:47: replace < with <= in run_stripped_rest
+crates/egress/src/detect.rs:667:21: replace && with || in run_stripped_rest
+crates/egress/src/detect.rs:668:28: replace + with - in run_stripped_rest
+crates/egress/src/detect.rs:702:25: replace && with || in run_stripped_rest
+crates/egress/src/detect.rs:701:39: replace || with && in run_stripped_rest
+crates/egress/src/detect.rs:701:31: replace == with != in run_stripped_rest
+crates/egress/src/detect.rs:701:47: replace == with != in run_stripped_rest
+crates/egress/src/detect.rs:702:36: replace + with - in run_stripped_rest
+crates/egress/src/detect.rs:702:36: replace + with * in run_stripped_rest
+crates/egress/src/detect.rs:817:60: replace && with || in dedupe
+crates/egress/src/detect.rs:817:29: replace == with != in dedupe
+crates/egress/src/detect.rs:817:49: replace == with != in dedupe
+crates/egress/src/detect.rs:817:69: replace == with != in dedupe
+DONE
