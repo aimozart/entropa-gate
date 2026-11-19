@@ -1,0 +1,20 @@
+ok   dash1 d3 (node): without the tool it passes (skips)
+ok   dash1 d3 (node): and says SKIPPED
+ok   dash1 d3 (node): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   dash1 d3 (node): with the tool it passes
+ok   dash1 d3 (node): and really ran
+ok   ls2 l7 (node): without the tool it passes (skips)
+ok   ls2 l7 (node): and says SKIPPED
+ok   ls2 l7 (node): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   ls2 l7 (node): with the tool it passes
+ok   ls2 l7 (node): and really ran
+ok   ls2_tar t5 (node): without the tool it passes (skips)
+ok   ls2_tar t5 (node): and says SKIPPED
+ok   ls2_tar t5 (node): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   ls2_tar t5 (node): with the tool it passes
+ok   ls2_tar t5 (node): and really ran
+ok   release s2 x1 (minisign): without the tool it passes (skips)
+ok   release s2 x1 (minisign): and says SKIPPED
+ok   release s2 x1 (minisign): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   release s2 x1 (minisign): with the tool it passes
+ok   release s2 x1 (minisign): and really ran

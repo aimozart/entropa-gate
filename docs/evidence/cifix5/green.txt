@@ -1,0 +1,5 @@
+ok   1 without node the page test passes (skips)
+ok   1 and says SKIPPED because node is missing
+ok   2 with ENTROPA_REQUIRE_NODE=1 a missing node fails the test
+ok   3 with node the page test passes
+ok   3 and really ran (no SKIPPED)

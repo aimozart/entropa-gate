@@ -173,8 +173,28 @@ fn t4_the_tar_is_deterministic_and_a_refusal_writes_no_tar() {
     );
 }
 
+/// Tests that need a program the CI container image does not have (node, minisign) SKIP with a loud line when it is missing; ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure.
+fn tool_or_skip(tool: &str, test: &str) -> bool {
+    let missing = matches!(
+        std::process::Command::new(tool).arg("--version").output(),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound
+    );
+    if !missing {
+        return true;
+    }
+    assert!(
+        std::env::var("ENTROPA_REQUIRE_TOOLS").as_deref() != Ok("1"),
+        "{test}: {tool} is required (ENTROPA_REQUIRE_TOOLS=1) but was not found"
+    );
+    eprintln!("SKIPPED {test}: {tool} is not installed here, so this check was not run");
+    false
+}
+
 #[test]
 fn t5_the_page_links_the_tar_with_textcontent_only_and_the_csp_still_holds() {
+    if !tool_or_skip("node", "t5") {
+        return;
+    }
     let (d, pk) = mock("t5", 6);
     let out = scratch("t5-out");
     generate(&d, &pk, &out, &with_tar()).unwrap();

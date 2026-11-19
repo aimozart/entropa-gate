@@ -171,9 +171,31 @@ app.start(doc, fetch).then((r) => {
   console.log(JSON.stringify({ mismatch: doc._ids['mismatch'] ? doc._ids['mismatch'].textContent : null, label: doc._ids['label'] ? doc._ids['label'].textContent : null, meters: all.filter(n => n.tag === 'meter').length, rows: all.filter(n => n.attrs && n.attrs.class === 'newest-row').length, result: r }));
 }).catch(e => { console.log('ERR ' + e.message); process.exit(1); });
 "#;
+/// The node program (ENTROPA_NODE overrides it, so that "node is missing" can be tried).
+fn node_cmd() -> String {
+    std::env::var("ENTROPA_NODE").unwrap_or_else(|_| "node".to_string())
+}
+/// The page tests run the page's JavaScript with node. The CI container image has no node: then the test SKIPS with a loud line, unless ENTROPA_REQUIRE_NODE=1 says node is required (then it fails).
+fn node_or_skip(test: &str) -> bool {
+    let present = std::process::Command::new(node_cmd())
+        .arg("--version")
+        .output()
+        .map(|o| o.status.success())
+        .unwrap_or(false);
+    if present {
+        return true;
+    }
+    assert!(
+        std::env::var("ENTROPA_REQUIRE_NODE").as_deref() != Ok("1")
+            && std::env::var("ENTROPA_REQUIRE_TOOLS").as_deref() != Ok("1"),
+        "{test}: node is required (ENTROPA_REQUIRE_NODE=1) but was not found"
+    );
+    eprintln!("SKIPPED {test}: node is not installed here, so the page's JavaScript was not run");
+    false
+}
 fn run_node(out: &std::path::Path, tamper: &str) -> Value {
     std::fs::write(out.join("harness.js"), HARNESS).unwrap();
-    let o = std::process::Command::new("node")
+    let o = std::process::Command::new(node_cmd())
         .arg(out.join("harness.js"))
         .arg(out)
         .arg(tamper)
@@ -190,6 +212,9 @@ fn run_node(out: &std::path::Path, tamper: &str) -> Value {
 
 #[test]
 fn d3_the_page_recomputes_the_numbers_and_shows_a_banner_only_when_they_differ() {
+    if !node_or_skip("d3") {
+        return;
+    }
     let (d, pk) = mock("d3", 30);
     let out = scratch("d3-out");
     generate(
@@ -278,6 +303,9 @@ fn d7_a_ten_thousand_record_bundle_for_the_browser_pass() {
 
 #[test]
 fn d8_a_feed_over_60_days_shows_the_latest_60_and_keeps_the_rest_as_a_total() {
+    if !node_or_skip("d8") {
+        return;
+    }
     // 80 records, one every 100,000 s (1.157 days): 93 distinct days
     let n = 80u32;
     let step = 100_000u64;

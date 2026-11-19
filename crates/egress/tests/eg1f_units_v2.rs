@@ -134,7 +134,11 @@ fn w4_the_walk_reads_nested_objects_to_depth_64_and_not_deeper() {
     };
     let o = wide(&nest(2));
     assert_eq!(o.action, Action::Block, "two levels");
-    assert_eq!(wide(&nest(65)).action, Action::Block, "65 objects deep: still read");
+    assert_eq!(
+        wide(&nest(65)).action,
+        Action::Block,
+        "65 objects deep: still read"
+    );
     assert_eq!(
         wide(&nest(66)).action,
         Action::Allow,
@@ -236,7 +240,10 @@ fn w9_the_payload_limit_is_65536_bytes_inclusive() {
     let at = |n: usize| format!("{{\"big\":\"{}\"}}", "a".repeat(n));
     let exact = at(65_536 - 10);
     assert_eq!(exact.len(), 65_536);
-    assert!(check(&schema(), exact.as_bytes()).is_ok(), "exactly 65,536 bytes");
+    assert!(
+        check(&schema(), exact.as_bytes()).is_ok(),
+        "exactly 65,536 bytes"
+    );
     let over = at(65_536 - 9);
     assert_eq!(over.len(), 65_537);
     assert_eq!(

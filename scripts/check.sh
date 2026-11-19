@@ -10,8 +10,9 @@ scripts/tests/mutants-speed.sh
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/gitignore-baseline.sh
 scripts/tests/governance-checks.sh
-scripts/public-preflight.sh
-scripts/tests/public-preflight-shim.sh
+scripts/preflight-if-vendored.sh
+scripts/tests/public-gitignore.sh
+scripts/tests/vendor-optional.sh
 in_dev bash -ec '
 set -x
 cargo fmt --all -- --check

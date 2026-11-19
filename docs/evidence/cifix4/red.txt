@@ -1,0 +1,23 @@
+error: redundant redefinition of a binding `p`
+   --> crates/egress/src/context.rs:514:5
+    |
+514 |     let mut p = p;
+    |     ^^^^^^^^^^^^^^
+    |
+help: `p` is initially defined here
+   --> crates/egress/src/context.rs:493:9
+    |
+493 |     let mut p = r;
+    |         ^^^^^
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.99.0/index.html#redundant_locals
+    = note: `-D clippy::redundant-locals` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::redundant_locals)]`
+
+    Checking entropa-synthetic v0.2.0 (/work/crates/synthetic)
+error: could not compile `entropa-egress` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+exit 101
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded serde_spanned v1.1.2
+  Downloaded toml v1.1.8+spec-1.1.0

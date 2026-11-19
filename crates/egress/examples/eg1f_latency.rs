@@ -19,8 +19,18 @@ impl RecordSink for Null {
 
 fn prose(bytes: usize) -> String {
     let words = [
-        "supplier", "schedule", "review", "storage", "recovery", "deploy", "quarter", "risk",
-        "update", "owner", "retention", "policy",
+        "supplier",
+        "schedule",
+        "review",
+        "storage",
+        "recovery",
+        "deploy",
+        "quarter",
+        "risk",
+        "update",
+        "owner",
+        "retention",
+        "policy",
     ];
     let (mut t, mut i) = (String::new(), 0);
     while t.len() + 64 < bytes {
@@ -47,7 +57,10 @@ fn pct(ms: &mut [f64]) -> serde_json::Value {
 }
 
 fn main() {
-    let n: usize = std::env::args().nth(1).and_then(|a| a.parse().ok()).unwrap_or(200);
+    let n: usize = std::env::args()
+        .nth(1)
+        .and_then(|a| a.parse().ok())
+        .unwrap_or(200);
     let policy = load_policy(&policy_from_extra(&json!({}))).unwrap();
     let conv = Conversation {
         key: b"latency-key".to_vec(),
@@ -55,7 +68,10 @@ fn main() {
         seen: vec![],
     };
     let mut out = vec![];
-    for (shape, make) in [("prose_with_one_key", prose as fn(usize) -> String), ("keyword_dense", keywords)] {
+    for (shape, make) in [
+        ("prose_with_one_key", prose as fn(usize) -> String),
+        ("keyword_dense", keywords),
+    ] {
         for bytes in [1024usize, 16384, 65536] {
             let req = Request {
                 destination: "https://api.model.example/v1/chat".into(),

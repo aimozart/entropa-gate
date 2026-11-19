@@ -377,7 +377,7 @@ fn hostile() -> impl Strategy<Value = String> {
         6 => prop::collection::vec(prop::sample::select(HOSTILE_CHARS.to_vec()), 0..200).prop_map(|v| v.into_iter().collect::<String>()),
         6 => prop::collection::vec(prop::sample::select(PIECES.to_vec()), 0..40).prop_map(|v| v.join(" ")),
         3 => (prop::sample::select(PIECES.to_vec()), 1usize..600).prop_map(|(p, n)| p.repeat(n)),
-        1 => (prop::sample::select(HOSTILE_CHARS.to_vec()), 20_000usize..200_000).prop_map(|(c, n)| std::iter::repeat(c).take(n).collect::<String>()),
+        1 => (prop::sample::select(HOSTILE_CHARS.to_vec()), 20_000usize..200_000).prop_map(|(c, n)| std::iter::repeat_n(c, n).collect::<String>()),
         1 => (prop::sample::select(PIECES.to_vec()), 20_000usize..120_000).prop_map(|(p, n)| p.repeat(n / p.len().max(1) + 1)),
     ]
 }
@@ -712,11 +712,7 @@ fn written(std: &str, id: &str, variant: u8, upper: u8) -> String {
     match std {
         "NIST-SP-800-53" => match (variant % 4, id.find('(')) {
             (1, Some(i)) => cased(&format!("{} {}", &id[..i], &id[i..])),
-            (2, Some(i)) => cased(&format!(
-                "{}( {} )",
-                &id[..i],
-                id[i + 1..id.len() - 1].to_string()
-            )),
+            (2, Some(i)) => cased(&format!("{}( {} )", &id[..i], &id[i + 1..id.len() - 1])),
             (3, _) => cased(&format!("control {id}")),
             _ => cased(id),
         },

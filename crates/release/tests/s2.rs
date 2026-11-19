@@ -347,8 +347,28 @@ fn mkkeys(tag: &str) -> (PathBuf, PathBuf, PathBuf) {
     (d, sk, pk)
 }
 
+/// Tests that need a program the CI container image does not have (node, minisign) SKIP with a loud line when it is missing; ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure.
+fn tool_or_skip(tool: &str, test: &str) -> bool {
+    let missing = matches!(
+        std::process::Command::new(tool).arg("--version").output(),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound
+    );
+    if !missing {
+        return true;
+    }
+    assert!(
+        std::env::var("ENTROPA_REQUIRE_TOOLS").as_deref() != Ok("1"),
+        "{test}: {tool} is required (ENTROPA_REQUIRE_TOOLS=1) but was not found"
+    );
+    eprintln!("SKIPPED {test}: {tool} is not installed here, so this check was not run");
+    false
+}
+
 #[test]
 fn x1_minisign_round_trip_and_the_three_refusals() {
+    if !tool_or_skip("minisign", "x1") {
+        return;
+    }
     let (d, sk, pk) = mkkeys("x1");
     let f = d.join("artifact.bin");
     std::fs::write(&f, b"synthetic artifact").unwrap();

@@ -1,0 +1,21 @@
+== build-admin-ui-network
+ok   1 the banner says it needs the network and what it downloads
+ok   1 then docker runs
+ok   2 refused with exit 3
+ok   2 docker was not called
+ok   2 the refusal says why
+ok   3 ENTROPA_NO_NETWORK=1 refuses too
+ok   4 builds from node_modules
+ok   4 the container has no network
+ok   4 no npm ci
+ok   4 npm run build is there
+ok   5 dist present: nothing runs
+ok   6 unknown option: exit 2
+== retry test (unchanged expectations)
+ok   no failure: one npm ci, then the build
+ok   one timeout: retried once, build runs
+ok   the retry is announced as a network retry
+ok   two timeouts: retried twice, build runs
+ok   three timeouts: gives up after 3 attempts and fails, no build
+== public-gitignore
+32

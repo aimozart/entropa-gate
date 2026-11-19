@@ -28,7 +28,8 @@ STUB
 chmod +x "$tmp/bin/docker" "$tmp/bin/npm"
 try() { # try <failures> -> prints output, sets $rc and the attempt count
   rm -f "$tmp/count" "$tmp/count.build"
-  out="$(PATH="$tmp/bin:$PATH" NPM_COUNT="$tmp/count" FAIL_CI="$1" ENTROPA_NPM_RETRY_DELAY=0 scripts/build-admin-ui.sh 2>&1)"; rc=$?
+  # Test change (CI-FIX 3): the caller's ENTROPA_NO_NETWORK must not leak into this test (a clean-clone check runs with it set)
+  out="$(env -u ENTROPA_NO_NETWORK PATH="$tmp/bin:$PATH" NPM_COUNT="$tmp/count" FAIL_CI="$1" ENTROPA_NPM_RETRY_DELAY=0 scripts/build-admin-ui.sh 2>&1)"; rc=$?
   attempts=$(cat "$tmp/count" 2>/dev/null || echo 0); built=$(cat "$tmp/count.build" 2>/dev/null | wc -l)
 }
 try 0; [ "$rc" -eq 0 ] && [ "$attempts" -eq 1 ] && [ "$built" -eq 1 ] && ok "no failure: one npm ci, then the build" || bad "no failure (rc=$rc attempts=$attempts built=$built)"

@@ -1,0 +1,20 @@
+ok   dash1 d3 (node): without the tool it passes (skips)
+ok   dash1 d3 (node): and says SKIPPED
+FAIL dash1 d3 (node): a required tool was not enforced
+ok   dash1 d3 (node): with the tool it passes
+ok   dash1 d3 (node): and really ran
+FAIL ls2 l7 (node): without the tool it failed (rc=101): thread 'l7_app_js_is_free_of_unsafe_sinks_and_renders_under_a_fake_dom' (466948) panicked at crates/mockview/tests/ls2.rs:439:10:
+FAIL ls2 l7 (node): no SKIPPED line
+ok   ls2 l7 (node): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   ls2 l7 (node): with the tool it passes
+ok   ls2 l7 (node): and really ran
+FAIL ls2_tar t5 (node): without the tool it failed (rc=101): thread 't5_the_page_links_the_tar_with_textcontent_only_and_the_csp_still_holds' (467072) panicked at crates/mockview/tests/ls2_tar.rs:205:10:
+FAIL ls2_tar t5 (node): no SKIPPED line
+ok   ls2_tar t5 (node): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   ls2_tar t5 (node): with the tool it passes
+ok   ls2_tar t5 (node): and really ran
+FAIL release s2 x1 (minisign): without the tool it failed (rc=101): thread 'x1_minisign_round_trip_and_the_three_refusals' (468143) panicked at crates/release/tests/s2.rs:345:10:
+FAIL release s2 x1 (minisign): no SKIPPED line
+ok   release s2 x1 (minisign): ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure
+ok   release s2 x1 (minisign): with the tool it passes
+ok   release s2 x1 (minisign): and really ran

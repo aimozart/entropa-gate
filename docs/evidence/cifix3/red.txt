@@ -1,0 +1,43 @@
+== export-fmt on the v5i export (what CI saw)
+FAIL the export is not rustfmt-clean: 16 diffs in: crates/approvals/tests/boundaries.rs crates/egress/examples/eg1f_latency.rs crates/egress/tests/eg1f_sealed.rs crates/egress/tests/eg1f_units.rs crates/egress/tests/eg1f_units_v2.rs crates/ledger/tests/static_checks.rs 
+== export-no-build-output on the v5i clean clone (admin-ui/dist and node_modules are untracked there)
+ok   no build output or downloaded dependency in the export
+== build-admin-ui-network
+FAIL 1 no banner: 
+ok   1 then docker runs
+FAIL 2 exit 0 (wanted 3)
+FAIL 2 docker was called
+FAIL 2 no reason: 
+FAIL 3 rc=0 log=[DOCKER run --rm --user 1000:1000 -e HOME=/tmp -v /tmp/adminnet.AOENpH/repo/admin-ui:/w -w /w node:22-bookworm sh -c 
+n=0
+until npm ci --no-audit --no-fund; do
+  n=$((n + 1))
+  [ "$n" -le 2 ] || { echo 'build-admin-ui: npm ci failed 3 times, giving up' >&2; exit 1; }
+  echo "build-admin-ui: npm ci failed (possibly a registry network timeout); network retry $n of 2 in 5s" >&2
+  sleep 5
+done
+npm run build]
+ok   4 builds from node_modules
+FAIL 4 no --network none: DOCKER run --rm --user 1000:1000 -e HOME=/tmp -v /tmp/adminnet.AOENpH/repo/admin-ui:/w -w /w node:22-bookworm sh -c 
+n=0
+until npm ci --no-audit --no-fund; do
+  n=$((n + 1))
+  [ "$n" -le 2 ] || { echo 'build-admin-ui: npm ci failed 3 times, giving up' >&2; exit 1; }
+  echo "build-admin-ui: npm ci failed (possibly a registry network timeout); network retry $n of 2 in 5s" >&2
+  sleep 5
+done
+npm run build
+FAIL 4 npm ci was in the command
+ok   4 npm run build is there
+FAIL 5 rc=0 log=[DOCKER run --rm --user 1000:1000 -e HOME=/tmp -v /tmp/adminnet.AOENpH/repo/admin-ui:/w -w /w node:22-bookworm sh -c 
+n=0
+until npm ci --no-audit --no-fund; do
+  n=$((n + 1))
+  [ "$n" -le 2 ] || { echo 'build-admin-ui: npm ci failed 3 times, giving up' >&2; exit 1; }
+  echo "build-admin-ui: npm ci failed (possibly a registry network timeout); network retry $n of 2 in 5s" >&2
+  sleep 5
+done
+npm run build]
+FAIL 6 exit 0
+== public-gitignore
+FAIL NOT ignored: admin-ui/dist/index.html

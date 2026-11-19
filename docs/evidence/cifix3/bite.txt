@@ -1,0 +1,15 @@
+A1 the banner removed: KILLED (1 checks fail, first: 1 no banner: )
+A2 --no-network ignored: KILLED (5 checks fail, first: 2 exit 0 (wanted 3))
+A3 the offline build keeps the network: KILLED (1 checks fail, first: 4 no --network none: DOCKER run --rm --user 1000:1000 -e HOME=/tm)
+A4 the offline build runs npm ci: KILLED (1 checks fail, first: 4 npm ci was in the command)
+A5 a missing node_modules does not refuse: KILLED (7 checks fail, first: 2 exit 0 (wanted 3))
+A6 an existing dist is rebuilt anyway: KILLED (1 checks fail, first: 5 rc=0 log=[DOCKER run --rm --network none --user 1000:1000 -e HO)
+A7 an unknown option is ignored: KILLED (1 checks fail, first: 6 exit 0)
+A8 the environment variable is ignored: KILLED (1 checks fail, first: 3 rc=0 log=[DOCKER run --rm --user 1000:1000 -e HOME=/tmp -v /tmp)
+F1 an unformatted file in a planted workspace: KILLED (exit 1)
+F2 the same workspace after cargo fmt passes: OK
+N tracked admin-ui/dist/index.html: KILLED
+N tracked admin-ui/node_modules/x/y.js: KILLED
+N tracked crates/a/target/debug/x: KILLED
+N tracked node_modules/p/index.js: KILLED
+N2 a clean tree passes: OK
