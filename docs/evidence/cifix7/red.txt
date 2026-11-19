@@ -1,0 +1,17 @@
+ok   found the case variables in the sources: AT1_CASES AT2_CASES AT3_CASES EG1_CASES H13_CASES 
+FAIL .github/workflows/ci.yml has no top-level env block
+FAIL AT1_CASES is not capped in the workflow env
+FAIL AT1_CASES is not listed in IN_DEV_PASS_ENV
+FAIL AT2_CASES is not capped in the workflow env
+FAIL AT2_CASES is not listed in IN_DEV_PASS_ENV
+FAIL AT3_CASES is not capped in the workflow env
+FAIL AT3_CASES is not listed in IN_DEV_PASS_ENV
+FAIL EG1_CASES is not capped in the workflow env
+FAIL EG1_CASES is not listed in IN_DEV_PASS_ENV
+FAIL H13_CASES is not capped in the workflow env
+FAIL H13_CASES is not listed in IN_DEV_PASS_ENV
+FAIL AT1_CASES is not a number up to 10000 ()
+FAIL AT2_CASES is not a number up to 10000 ()
+FAIL AT3_CASES is not a number up to 10000 ()
+FAIL EG1_CASES is not a number up to 10000 ()
+FAIL H13_CASES is not a number up to 10000 ()

@@ -1,0 +1,5 @@
+R1 only the private path is looked at: KILLED
+R2 the root LICENSE wins over the asset: KILLED
+R3 an empty file is accepted: KILLED
+R4 a missing licence does not fail: KILLED
+R5 the build script copies the private path again: KILLED

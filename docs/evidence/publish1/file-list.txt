@@ -883,6 +883,11 @@ docs/evidence/cifix5/green2.txt
 docs/evidence/cifix5/green.txt
 docs/evidence/cifix5/red2.txt
 docs/evidence/cifix5/red.txt
+docs/evidence/cifix6/green.txt
+docs/evidence/cifix6/red.txt
+docs/evidence/cifix7/bite.txt
+docs/evidence/cifix7/green.txt
+docs/evidence/cifix7/red.txt
 docs/evidence/cifix/bite.txt
 docs/evidence/cifix/four-cpu-run.txt
 docs/evidence/cifix/green-caps.txt
@@ -1327,6 +1332,9 @@ docs/evidence/r3/r2-dev-regression-r3code.json
 docs/evidence/rehearsal/rehearsal-bite.txt
 docs/evidence/rehearsal/rehearsal-negative.txt
 docs/evidence/rehearsal/rehearsal-run.txt
+docs/evidence/relfix/bite.txt
+docs/evidence/relfix/green.txt
+docs/evidence/relfix/red.txt
 docs/evidence/results/bite.txt
 docs/evidence/results/bite-v2.txt
 docs/evidence/results/green.txt
@@ -1729,6 +1737,7 @@ scripts/ins2-mutants.sh
 scripts/keys1-mutants.sh
 scripts/lib-docker.sh
 scripts/lib/gcloud-runner.sh
+scripts/lib-pkg1.sh
 scripts/ls3b-mutants.sh
 scripts/ls3c-package.sh
 scripts/ls3d-mutants.sh
@@ -1770,6 +1779,7 @@ scripts/soak/realistic_traffic.py
 scripts/tests/build-admin-ui-network.sh
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/check-public-docs.sh
+scripts/tests/ci-case-caps.sh
 scripts/tests/container-caps.sh
 scripts/tests/container-limits.sh
 scripts/tests/dash1-node-optional.sh
@@ -1786,6 +1796,7 @@ scripts/tests/migrate_epoch_firestore.bats
 scripts/tests/mutants-speed.sh
 scripts/tests/pkg1-bite.sh
 scripts/tests/pkg1-install.sh
+scripts/tests/pkg1-license-source.sh
 scripts/tests/public-gitignore.sh
 scripts/tests/public-preflight-shim.sh
 scripts/tests/repro-compare.sh

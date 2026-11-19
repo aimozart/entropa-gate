@@ -7,6 +7,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 SRC="$PWD"
+source "$SRC/scripts/lib-pkg1.sh"
 OUT="${1:?usage: pkg1-build.sh OUT_DIR}"
 free_gb=$(df -BG --output=avail / | tail -1 | tr -dc 0-9); [ "$free_gb" -ge 25 ] || { echo "refusing to start: only ${free_gb} GB free on / (rule: at least 25 GB)" >&2; exit 1; }
 mkdir -p "$OUT"
@@ -50,7 +51,7 @@ assemble() { # $1 = binaries directory, $2 = work directory (new), $3 = tarball 
   mkdir -p "$stage"
   cp "$1/entropa-gate" "$1/entropa-release" "$stage/"
   cp packaging/pkg1/install.sh packaging/pkg1/uninstall.sh packaging/pkg1/README.txt "$stage/"
-  cp scripts/public-export-assets/LICENSE "$stage/LICENSE"
+  cp "$(pkg1_license_file "$SRC")" "$stage/LICENSE"
   printf '%s\n' "$VERSION" > "$stage/VERSION"
   chmod 0755 "$stage/entropa-gate" "$stage/entropa-release" "$stage/install.sh" "$stage/uninstall.sh"; chmod 0644 "$stage/README.txt" "$stage/LICENSE" "$stage/VERSION"
   "$stage/entropa-release" sbom --lock Cargo.lock --product entropa-gate --version "$VERSION" --out "$stage/SBOM.cdx.json" >/dev/null

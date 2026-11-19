@@ -13,6 +13,7 @@ scripts/tests/governance-checks.sh
 scripts/preflight-if-vendored.sh
 scripts/tests/public-gitignore.sh
 scripts/tests/vendor-optional.sh
+scripts/tests/ci-case-caps.sh
 in_dev bash -ec '
 set -x
 cargo fmt --all -- --check

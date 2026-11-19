@@ -237,7 +237,7 @@ const FUNCTION_EXTRA: &[&str] = &[
     "list",
 ];
 
-/// Is this a stemmed query token a content word (not a stop word and not one of [`FUNCTION_EXTRA`])?
+/// Is this a stemmed query token a content word (not a stop word and not one of `FUNCTION_EXTRA`)?
 pub fn is_content_token(t: &str) -> bool {
     !STOP.contains(&t)
         && !FUNCTION_EXTRA.contains(&t)
