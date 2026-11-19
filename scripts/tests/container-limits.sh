@@ -9,7 +9,11 @@ bad() { echo "FAIL $1"; fail=1; }
 
 # 1. defaults are on the docker command line (dry run prints it instead of running it)
 cmd="$(ENTROPA_DEV_DRY_RUN=1 in_dev true 2>&1)"
-for flag in --memory=24g --memory-swap=24g --cpus=12 --pids-limit=4096; do
+# Test change (CI-FIX): the defaults are capped at what the host has (a 4-CPU runner cannot take --cpus=12), so the expected flags are worked out from the real host here, independently of the library
+host_cpus=$(nproc); host_mem=$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)
+exp_cpus=12; [ "$host_cpus" -lt 12 ] && exp_cpus="$host_cpus"
+exp_mem=24g; [ "$host_mem" -lt 24576 ] && exp_mem="${host_mem}m"
+for flag in --memory=$exp_mem --memory-swap=$exp_mem --cpus=$exp_cpus --pids-limit=4096; do
   case "$cmd" in *"$flag"*) ok "default $flag";; *) bad "default $flag missing";; esac
 done
 

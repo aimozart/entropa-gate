@@ -1,0 +1,12 @@
+ok   default --memory=24g
+ok   default --memory-swap=24g
+ok   default --cpus=12
+ok   default --pids-limit=4096
+ok   override --memory=512m
+ok   override --memory-swap=512m
+ok   override --cpus=2
+ok   override --pids-limit=64
+ok   allocation bomb killed (exit 137)
+     host MemAvailable before/after: 43627 MiB / 43379 MiB
+ok   host RAM not exhausted
+ok   pids limit stops forks

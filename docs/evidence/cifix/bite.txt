@@ -1,0 +1,8 @@
+K1 CPU cap removed: KILLED (4 checks fail, first: c1 a 4-CPU host: the default request of 12 becomes 4 (w)
+K2 CPU comparison reversed (caps requests BELOW the host): KILLED (9 checks fail, first: c1 a 4-CPU host: the default request of 12 becomes 4 (w)
+K3 the memory cap removed: KILLED (5 checks fail, first: m1 a 7000 MiB host: the default 24g becomes 7000m (want)
+K4 g read as 1000 MiB: KILLED (1 checks fail, first: m6 7g (7168 MiB) on a 7000 MiB host is capped (wanted: )
+K5 an unreadable host CPU count caps to 0: KILLED (2 checks fail, first: u1 unknown host CPUs: no cap (wanted: --cpus=12 ) got: )
+K6 an unreadable host memory caps to 0: KILLED (1 checks fail, first: u1 unknown host memory: no cap (wanted: --memory=24g ) )
+K7 the cap is not said out loud (CPU): KILLED (1 checks fail, first: c1 the cap is said out loud (wanted: using 4) got: note)
+K8 the limits line shows the uncapped request: KILLED (1 checks fail, first: l1 the limits line shows the capped CPUs (wanted: cpus=)

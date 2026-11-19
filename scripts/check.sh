@@ -5,6 +5,7 @@ source "$(dirname "$0")/lib-docker.sh"
 [ -d "$ROOT/admin-ui/dist" ] || "$ROOT/scripts/build-admin-ui.sh"
 scripts/check-site-links.sh
 scripts/tests/container-limits.sh
+scripts/tests/container-caps.sh
 scripts/tests/mutants-speed.sh
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/gitignore-baseline.sh

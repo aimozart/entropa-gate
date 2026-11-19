@@ -868,6 +868,12 @@ docs/evidence/bv1/c-chrome.txt
 docs/evidence/bv1/c-red.txt
 docs/evidence/bv1/c-wasm-node.txt
 docs/evidence/bv1/final-run.txt
+docs/evidence/cifix/bite.txt
+docs/evidence/cifix/four-cpu-run.txt
+docs/evidence/cifix/green-caps.txt
+docs/evidence/cifix/green-limits.txt
+docs/evidence/cifix/green-mutants-speed.txt
+docs/evidence/cifix/red.txt
 docs/evidence/dash1/bite.txt
 docs/evidence/dash1/cap-bite.txt
 docs/evidence/dash1/cap-counts.txt
@@ -1747,6 +1753,7 @@ scripts/soak/llm_agent_traffic.py
 scripts/soak/realistic_traffic.py
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/check-public-docs.sh
+scripts/tests/container-caps.sh
 scripts/tests/container-limits.sh
 scripts/tests/deploy_entropa_scryon.bats
 scripts/tests/doc-install1.sh
