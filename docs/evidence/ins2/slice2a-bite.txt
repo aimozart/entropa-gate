@@ -1,0 +1,14 @@
+BITE upper-case hash accepted: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE second line accepted: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+BITE cap off by one: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE counter disagreement accepted: test result: FAILED. 12 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE checkpoint key vs log id unchecked: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE version unchecked: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE integer range unchecked: test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE v2 counter 0 accepted: test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE duplicate keys accepted: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE checkpoint size disagreement accepted: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE empty expected id check (expected equivalent): test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE wrong log accepted: test result: FAILED. 13 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE (round 2) integer range unchecked, test c4 added: test result: FAILED. 14 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+NOTE two mutants are EQUIVALENT and stay documented: (1) `want.is_empty() ||` in decode_anchor_for: the anchor's log id is always 64 hex digits, so an empty expected id can never equal it; the emptiness test is a guard that cannot change an outcome. (2) `counter == 0` inside the v2 checkpoint: the top-level counter must equal the checkpoint's and a top-level counter of 0 is refused first, so the inner test cannot be reached with a different outcome.

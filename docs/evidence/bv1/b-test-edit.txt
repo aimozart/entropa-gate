@@ -1,0 +1,1 @@
+STATED TEST EDIT: crates/policy/tests/static_checks.rs n1: the pinned-line text now expects the optional-dependency form (same exact version =4.14.0); reason: Cedar became an optional feature (BV1)

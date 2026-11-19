@@ -1,4 +1,4 @@
-//! The closed-code schema of every council event (docs/ARCHITECTURE-COUNCIL.md section 6).
+//! The closed-code schema of every council event (the council design notes section 6).
 
 /// What a field may hold.
 #[derive(Clone, Copy)]

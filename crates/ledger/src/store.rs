@@ -1,6 +1,7 @@
 //! The append-only ledger store: a shared core with a file-backed and an in-memory front.
 
 use crate::LedgerError;
+use entropa_core::anchor::{AnyCheckpoint, CheckpointV2};
 use entropa_core::merkle::{leaf_hash, node_hash, Hash};
 use entropa_core::transparency_log::Checkpoint;
 use std::fs::{self, OpenOptions};
@@ -28,6 +29,10 @@ pub trait LedgerStore {
     fn put_checkpoint(&mut self, cp: &Checkpoint) -> Result<(), LedgerError>;
     /// All checkpoints, oldest first.
     fn checkpoints(&self) -> Vec<Checkpoint>;
+    /// Store a signed v2 checkpoint (counter and chain link). Same rules as [`Self::put_checkpoint`], plus: the counter is the previous v2 counter plus one (1 for the first), `prev` is the chain digest of the previous v2 checkpoint (zero for the first), and no v1 checkpoint may follow.
+    fn put_checkpoint_v2(&mut self, cp: &CheckpointV2) -> Result<(), LedgerError>;
+    /// All checkpoints of either kind, oldest first. (A v2 checkpoint also shows in [`Self::checkpoints`] with its fields, but its signature only verifies as a v2 checkpoint.)
+    fn any_checkpoints(&self) -> Vec<AnyCheckpoint>;
     /// Store a witness statement (JSON text).
     fn put_witness(&mut self, statement_json: &str) -> Result<(), LedgerError>;
     /// All witness statements, oldest first.
@@ -40,7 +45,7 @@ struct Core {
     leaves: Vec<Hash>,
     /// `levels[k - 1][i]` is the root of the aligned perfect subtree `leaves[i * 2^k .. (i + 1) * 2^k)`, built as leaves arrive (LEDGER-STORE-VERIFY).
     levels: Vec<Vec<Hash>>,
-    checkpoints: Vec<Checkpoint>,
+    checkpoints: Vec<AnyCheckpoint>,
     witnesses: Vec<String>,
 }
 
@@ -101,30 +106,77 @@ impl Core {
         self.records.len() - 1
     }
 
-    fn check_checkpoint(&self, cp: &Checkpoint) -> Result<(), LedgerError> {
-        if cp.size > self.records.len() {
+    /// The checkpoint fields every kind must satisfy: not beyond the records, the root of exactly that prefix, not older than the previous checkpoint.
+    fn check_parts(&self, size: usize, root: Hash) -> Result<(), LedgerError> {
+        if size > self.records.len() {
             return Err(LedgerError::Invalid(
                 "checkpoint covers more records than exist".into(),
             ));
         }
-        let expected = if cp.size == 0 {
+        let expected = if size == 0 {
             Some(leaf_hash(&[]))
         } else {
-            self.prefix_root(cp.size)
+            self.prefix_root(size)
         };
-        if expected != Some(cp.root) {
+        if expected != Some(root) {
             return Err(LedgerError::Invalid(
                 "checkpoint root does not match the records".into(),
             ));
         }
         if let Some(last) = self.checkpoints.last() {
-            if cp.size < last.size || (cp.size == last.size && cp.root != last.root) {
+            let (last_size, last_root) = match last {
+                AnyCheckpoint::V1(c) => (c.size, c.root),
+                AnyCheckpoint::V2(c) => (c.size, c.root),
+            };
+            if size < last_size || (size == last_size && root != last_root) {
                 return Err(LedgerError::Invalid(
                     "checkpoint is older than the previous one".into(),
                 ));
             }
         }
         Ok(())
+    }
+
+    fn check_checkpoint(&self, cp: &Checkpoint) -> Result<(), LedgerError> {
+        self.check_parts(cp.size, cp.root)?;
+        if matches!(self.checkpoints.last(), Some(AnyCheckpoint::V2(_))) {
+            return Err(LedgerError::Invalid(
+                "a v1 checkpoint cannot follow a v2 checkpoint".into(),
+            ));
+        }
+        Ok(())
+    }
+
+    /// A v2 checkpoint: the counter is the previous v2 counter plus one (1 for the first, which may follow v1 ones), `prev` is the chain digest of the previous v2 checkpoint (zero for the first).
+    fn check_checkpoint_v2(&self, cp: &CheckpointV2) -> Result<(), LedgerError> {
+        self.check_parts(cp.size, cp.root)?;
+        let (want_counter, want_prev) = match self.checkpoints.last() {
+            Some(AnyCheckpoint::V2(p)) => (p.counter + 1, p.chain_digest()),
+            _ => (1, [0u8; 32]),
+        };
+        if cp.counter != want_counter || cp.prev != want_prev {
+            return Err(LedgerError::Invalid(
+                "the v2 checkpoint does not continue the chain".into(),
+            ));
+        }
+        Ok(())
+    }
+
+    /// The checkpoints in the v1 shape (a v2 checkpoint keeps its fields; its signature verifies only as a v2 checkpoint).
+    fn view(&self) -> Vec<Checkpoint> {
+        self.checkpoints
+            .iter()
+            .map(|c| match c {
+                AnyCheckpoint::V1(c) => c.clone(),
+                AnyCheckpoint::V2(c) => Checkpoint {
+                    root: c.root,
+                    size: c.size,
+                    timestamp: c.timestamp,
+                    proposer_pubkey: c.proposer_pubkey.clone(),
+                    signature: c.signature.clone(),
+                },
+            })
+            .collect()
     }
 
     fn check_witness(s: &str) -> Result<(), LedgerError> {
@@ -159,10 +211,18 @@ impl LedgerStore for MemoryStore {
     }
     fn put_checkpoint(&mut self, cp: &Checkpoint) -> Result<(), LedgerError> {
         self.core.check_checkpoint(cp)?;
-        self.core.checkpoints.push(cp.clone());
+        self.core.checkpoints.push(AnyCheckpoint::V1(cp.clone()));
+        Ok(())
+    }
+    fn put_checkpoint_v2(&mut self, cp: &CheckpointV2) -> Result<(), LedgerError> {
+        self.core.check_checkpoint_v2(cp)?;
+        self.core.checkpoints.push(AnyCheckpoint::V2(cp.clone()));
         Ok(())
     }
     fn checkpoints(&self) -> Vec<Checkpoint> {
+        self.core.view()
+    }
+    fn any_checkpoints(&self) -> Vec<AnyCheckpoint> {
         self.core.checkpoints.clone()
     }
     fn put_witness(&mut self, s: &str) -> Result<(), LedgerError> {
@@ -256,18 +316,29 @@ impl FileStore {
 
     fn load(&mut self) -> Result<(), LedgerError> {
         for line in lines(&self.dir.join("records.log"))? {
+            if line.bytes().any(|b| b.is_ascii_uppercase()) {
+                return Err(corrupt("a record line is not lower-case hex"));
+            }
             let bytes = hex::decode(&line).map_err(|_| corrupt("a record line is not hex"))?;
             Core::check_record(&bytes)
                 .map_err(|_| corrupt("a stored record is empty or too large"))?;
             self.core.push(&bytes);
         }
         for line in lines(&self.dir.join("checkpoints.log"))? {
-            let cp: Checkpoint = serde_json::from_str(&line)
-                .map_err(|_| corrupt("a checkpoint line is not valid"))?;
-            self.core
-                .check_checkpoint(&cp)
-                .map_err(|_| corrupt("a checkpoint does not match the records"))?;
-            self.core.checkpoints.push(cp);
+            match crate::raw::parse_checkpoint_text(&line)? {
+                AnyCheckpoint::V2(cp) => {
+                    self.core
+                        .check_checkpoint_v2(&cp)
+                        .map_err(|_| corrupt("a checkpoint does not match the records"))?;
+                    self.core.checkpoints.push(AnyCheckpoint::V2(cp));
+                }
+                AnyCheckpoint::V1(cp) => {
+                    self.core
+                        .check_checkpoint(&cp)
+                        .map_err(|_| corrupt("a checkpoint does not match the records"))?;
+                    self.core.checkpoints.push(AnyCheckpoint::V1(cp));
+                }
+            }
         }
         for line in lines(&self.dir.join("witnesses.log"))? {
             Core::check_witness(&line).map_err(|_| corrupt("a witness line is not valid"))?;
@@ -308,10 +379,22 @@ impl LedgerStore for FileStore {
             "checkpoints.log",
             &serde_json::to_string(cp).map_err(|_| LedgerError::Invalid("checkpoint".into()))?,
         )?;
-        self.core.checkpoints.push(cp.clone());
+        self.core.checkpoints.push(AnyCheckpoint::V1(cp.clone()));
+        Ok(())
+    }
+    fn put_checkpoint_v2(&mut self, cp: &CheckpointV2) -> Result<(), LedgerError> {
+        self.core.check_checkpoint_v2(cp)?;
+        self.write_line(
+            "checkpoints.log",
+            &serde_json::to_string(cp).map_err(|_| LedgerError::Invalid("checkpoint".into()))?,
+        )?;
+        self.core.checkpoints.push(AnyCheckpoint::V2(cp.clone()));
         Ok(())
     }
     fn checkpoints(&self) -> Vec<Checkpoint> {
+        self.core.view()
+    }
+    fn any_checkpoints(&self) -> Vec<AnyCheckpoint> {
         self.core.checkpoints.clone()
     }
     fn put_witness(&mut self, s: &str) -> Result<(), LedgerError> {

@@ -1,0 +1,44 @@
+SAME   valid-small native=ok page=0 38 ms
+SAME   valid-medium native=ok page=0 58 ms
+SAME   tamper-record-byte native=Invalid page=1 8 ms
+SAME   tamper-head-root native=Invalid page=1 7 ms
+SAME   tamper-head-size native=Invalid page=1 5 ms
+SAME   tamper-checkpoint-signature-short native=Verify page=2 4 ms
+SAME   tamper-receipt-dropped native=Invalid page=1 8 ms
+SAME   tamper-receipt-swapped native=Verify page=2 11 ms
+SAME   tamper-consistency-dropped native=Invalid page=1 14 ms
+SAME   tamper-witness-size native=Verify page=2 13 ms
+SAME   tamper-handle-internal-name native=Invalid page=1 5 ms
+SAME   tamper-actor-key-swapped native=Invalid page=1 5 ms
+SAME   tamper-synthetic-false native=Invalid page=1 2 ms
+SAME   tamper-unknown-top-level-field native=Invalid page=1 28 ms
+SAME   tamper-log-key-replaced native=Invalid page=1 6 ms
+SAME   flip-record-00 native=Verify page=2 31 ms
+SAME   flip-record-01 native=Verify page=2 33 ms
+SAME   flip-record-02 native=Invalid page=1 8 ms
+SAME   flip-record-03 native=Invalid page=1 32 ms
+SAME   flip-record-04 native=Invalid page=1 10 ms
+SAME   flip-record-05 native=Invalid page=1 7 ms
+SAME   flip-record-06 native=Invalid page=1 31 ms
+SAME   flip-record-07 native=Invalid page=1 32 ms
+SAME   flip-record-08 native=Verify page=2 30 ms
+SAME   flip-record-09 native=Verify page=2 32 ms
+SAME   flip-checkpoint-signature-00 native=Verify page=2 31 ms
+SAME   flip-checkpoint-signature-01 native=Verify page=2 5 ms
+SAME   truncated-25 native=Invalid page=1 2 ms
+SAME   truncated-50 native=Invalid page=1 2 ms
+SAME   truncated-90 native=Invalid page=1 2 ms
+SAME   duplicate-top-level-key native=Invalid page=1 27 ms
+SAME   nesting-300 native=Invalid page=1 30 ms
+SAME   malformed-empty-string native=Invalid page=1 3 ms
+SAME   malformed-open-brace native=Invalid page=1 32 ms
+SAME   malformed-empty-array native=Invalid page=1 31 ms
+SAME   malformed-null native=Invalid page=1 5 ms
+SAME   malformed-number native=Invalid page=1 3 ms
+SAME   oversize-generated native=Limit page=3 31 ms
+16 MiB file: page=3 (3 = limit) 26 ms SAME
+valid-medium in Chrome: code 0, 52 ms, counts 60,4,60,3,4,60
+CSP: default-src 'none'; script-src 'sha256-…' 'wasm-unsafe-eval'; style-src 'sha256-…'; connect-src 'none'; img-src 'none'; form-action 'none'; base-uri 'none'
+fetch under the CSP: BLOCKED
+XMLHttpRequest under the CSP: BLOCKED
+SUMMARY same=39 differ=0 total=39; csp checks: fetch BLOCKED, xhr BLOCKED

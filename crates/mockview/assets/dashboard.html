@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Mock feed dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<p id="label" class="banner">mock data, real signed records</p>
+<h1>Mock feed dashboard</h1>
+<p><a href="index.html">All records</a></p>
+</header>
+<main>
+<p id="mismatch" class="warn" role="alert"></p>
+<section id="totals" aria-label="Totals"></section>
+<section id="by_decision" aria-label="Records by outcome"></section>
+<section id="by_kind" aria-label="Records by kind"></section>
+<section id="by_reason" aria-label="Records by reason"></section>
+<section id="by_control" aria-label="Records by control"></section>
+<section id="by_day" aria-label="Records per day (UTC)"></section>
+<section id="newest" aria-label="Newest records"></section>
+<section id="note" aria-label="About these numbers"></section>
+</main>
+<script src="dashboard.js"></script>
+</body>
+</html>

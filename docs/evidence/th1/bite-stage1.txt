@@ -1,0 +1,18 @@
+BITE prereg: no domain tag: p1_the_signed_bytes_start_with_the result: FAILED. 5 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE prereg: not-key-id ignored: p5_not_key_id_refuses_a_key_equal_ result: FAILED. 5 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE prereg: given public key not compared (redundant with the signature?): NONE (survived)
+BITE prereg: signature not checked: p3_every_tamper_is_refused p4_a_prereg_signature_is_not_a_rel result: FAILED. 4 passed; 2 failed error: test failed, to rerun pass  error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found: s.len() == 64 && s.bytes()
+BITE prereg: hash shape not checked: NONE (survived)
+BITE set: duplicate id allowed: s3_every_refusal result: FAILED. 3 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE set: input size limit off: s4_size_limits result: FAILED. 3 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE set: case limit off: s4_size_limits result: FAILED. 3 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE set: timeout lower bound off: s3_every_refusal result: FAILED. 3 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE stats: wrong z: b2_other_counts_use_wilson result: FAILED. 2 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE forecast: order check off: f2_every_refusal result: FAILED. 1 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE forecast: metric names open: f2_every_refusal result: FAILED. 1 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE release load_key: permission check off (p6): p6_a_key_file_readable_by_others_i result: FAILED. 5 passed; 1 failed error: test failed, to rerun pass  error: 1 target failed: 
+BITE (redone) prereg: hash length check loosened: test p7_a_hash_must_be_64_lowercase_hex_digits ... FAILED test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measur 
+BITE (redone) prereg: given public key not compared: test p3_every_tamper_is_refused ... FAILED test result: FAILED. 6 passed; 1 failed; 0 ignored; 0 measur 

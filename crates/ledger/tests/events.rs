@@ -142,7 +142,9 @@ fn e3_the_vocabularies_are_closed_and_exactly_these() {
             "crypto_inventory",
             "log_integrity_check",
             "corpus_version",
-            "retrieval_record"
+            "retrieval_record",
+            // Test change (TH1): one additive label, appended last
+            "prereg_committed"
         ]
     );
     assert_eq!(

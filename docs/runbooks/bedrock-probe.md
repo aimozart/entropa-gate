@@ -45,7 +45,7 @@ is about $0.0000019 for a typical answer; the hard cap (300 in, 50 out) is $0.00
    - `ThrottlingException` / quota text: step 2 quota note.
    If you are unsure, compare with the CLI using the very same environment: `aws bedrock-runtime converse --region "$AWS_REGION" --model-id "$BEDROCK_MODEL_ID" --messages '[{"role":"user","content":[{"text":"ok"}]}]' --inference-config '{"maxTokens":5}'`
    (the CLI picks up the same variables), and paste us the printed `error_type` and `error_message` lines.
-6. **Tell the reviewer/the author the result** (paste the printed lines; they contain no secrets). We then record it in docs/FINOPS-LEDGER.md and commit the result file.
+6. **Tell the reviewer/the author the result** (paste the printed lines; they contain no secrets). We then record it in the cost notes and commit the result file.
 
 ## Next day: check Billing (the real question: did the credit apply?)
 In the AWS console, **Billing and Cost Management**:

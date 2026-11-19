@@ -10,10 +10,13 @@ mod bundle;
 mod council;
 mod event;
 mod evidence;
+#[cfg(feature = "engine")]
 mod generator;
 mod keys;
 mod plain;
 mod platinum;
+mod raw;
+#[cfg(feature = "engine")]
 mod scenarios;
 mod store;
 mod vocab;
@@ -25,10 +28,12 @@ pub use event::{
     AgentMeta, Event, EventFields, EvidenceMeta,
 };
 pub use evidence::{evidence_fields, EvidenceRecord};
+#[cfg(feature = "engine")]
 pub use generator::{Generator, RunSummary};
 pub use keys::Keys;
 pub use plain::plain_english;
 pub use platinum::{platinum_fields, PlatinumDecision};
+pub use raw::{read_raw, read_raw_with, RawLedger, MAX_CHECKPOINT_LINE, MAX_RECORD_LINE};
 pub use store::{FileStore, LedgerStore, MemoryStore};
 pub use vocab::{
     ControlCode, Decision, Handle, Kind, LabelCode, Provider, ReasonCode, RoleCode, Tenant,

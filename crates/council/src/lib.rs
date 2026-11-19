@@ -1,6 +1,6 @@
 //! # entropa-council
 //!
-//! The pure, deterministic core of the Decision Review Council (`docs/ARCHITECTURE-COUNCIL.md`): closed-code
+//! The pure, deterministic core of the Decision Review Council (`the council design notes`): closed-code
 //! events with a strict decoder and signatures, the session state machine and quorum rule, critic-reliability
 //! scoring, the planted-fault evaluation harness, retrieval provenance and the replay harness. It uses no model,
 //! no network, no clock and no file; time is an argument.
@@ -74,7 +74,7 @@ pub enum CouncilError {
     HashMismatch(String),
 }
 
-/// The roles that sign council events (docs/ARCHITECTURE-COUNCIL.md section 2).
+/// The roles that sign council events (the council design notes section 2).
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Role {
     /// `scheduler`: opens and closes sessions, records proofs and evaluations.

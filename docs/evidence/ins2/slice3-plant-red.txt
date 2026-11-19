@@ -1,0 +1,5 @@
+test x3_the_helper_refuses_a_bad_spec_and_writes_nothing ... ok
+test x2_other_signing_seed_skipped_counter_wrong_prev_downgrade_and_a_planted_root ... FAILED
+test x1_a_planted_honest_v2_chain_verifies_and_a_regressing_one_is_clock_regression ... FAILED
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+error: test failed, to rerun pass `-p entropa-gate --test plant`

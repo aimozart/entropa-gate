@@ -1,0 +1,5 @@
+BITE equal times flagged: test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.16s
+BITE equal sizes flagged: test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.36s
+BITE shrinking sizes allowed: test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.88s
+BITE size slot removed: test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.86s
+BITE counter slot removed: test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.74s

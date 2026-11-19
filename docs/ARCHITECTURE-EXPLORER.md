@@ -1,15 +1,14 @@
-# ARCHITECTURE-EXPLORER: the public explorer and demo, no login (stage S7a, design only)
+# ARCHITECTURE-EXPLORER: the public explorer and demo, no login
 
 Status: design for review. **No GCP or other resource is created by this document.** Written 2026-10-21 on branch
-`rerust-s7a-explorer-arch` (from `rerust-int-s4g`). Nothing here is billable until the owner says go with the price restated.
-Rules carried over: synthetic data only; no secrets in the repo or the browser; nothing is deleted without the owner's exact word and a
-standalone yes/no; no compliance claim of any kind; the GCP project is `entropa-testnet` (the one GCP project).
+Nothing here is billable until the owner says go with the price restated.
+Rules carried over: synthetic data only; no secrets in the repo or the browser; nothing is deleted without explicit approval; no compliance claim of any kind; the GCP project is `entropa-testnet` (the one GCP project).
 
 ## 1. What it is, and what it is not
 A public, read-only window onto the Entropa ledger: anyone can open it, look at checkpoints, records, receipts and proofs, see witness
 statements and the people-and-agents who act, and **verify a record in their own browser** without trusting our server.
 **Not in it, by design:** no login, no signup, no billing, no API keys, no partner accounts, no payment page, no ingest endpoint, no cookies, no
-tracking, no personal data. The old product surface (partner login dashboard, `/api/tx` ingest, admin UI, billing) is retired (a project record (not published)); the explorer never writes
+tracking, no personal data. The old product surface (partner login dashboard, `/api/tx` ingest, admin UI, billing) is retired; the explorer never writes
 to the ledger. Only the server-side generator (section 6) and the real approval flows write, and they are not reachable from the internet.
 
 ## 2. What exists today (inventory, so the migration is honest)
@@ -166,4 +165,4 @@ S7b `explorer-api` crate stubs + red tests (contract, validation, rate limit, ca
 - **D10 Real data:** synthetic only; any real deployment is a separate decision with its own review.
 
 ## 16. Service eligibility (standing rule, 2026-10-21)
-Rule source and links: a project record (not published), "Standing rule: service eligibility for PHI-equivalent data" (checked 2026-10-21; re-check before adding a service and quarterly). For this design: **Firebase Hosting is not on Google's covered list, so it serves only the static public synthetic front end and the WASM verifier; nothing that touches PHI-equivalent data is served from it.** The read API on Cloud Run and the ledger in Cloud Storage are covered products. The ledger, the bundle and every API response are closed-code, data-minimal and carry no PHI-equivalent value (P0; canaries are scanned for). Cloud Scheduler, Secret Manager, Cloud KMS and Cloud Logging are on Google's covered list; keep PHI-equivalent values out of labels, metadata and logs. In the `entropa-testnet` project, unsupported services are disabled if the project ever holds PHI-equivalent data (the old GKE cluster's decommission is a separate decision needing the owner's exact word).
+Cloud-service eligibility note (checked 2026-10-21; re-check before adding a service and quarterly). For this design: **Firebase Hosting is not on Google's covered list, so it serves only the static public synthetic front end and the WASM verifier; nothing that touches PHI-equivalent data is served from it.** The read API on Cloud Run and the ledger in Cloud Storage are covered products. The ledger, the bundle and every API response are closed-code, data-minimal and carry no PHI-equivalent value (P0; canaries are scanned for). Cloud Scheduler, Secret Manager, Cloud KMS and Cloud Logging are on Google's covered list; keep PHI-equivalent values out of labels, metadata and logs. In the `entropa-testnet` project, unsupported services are disabled if the project ever holds PHI-equivalent data (the old GKE cluster's decommission is a separate decision needing the owner's exact word).

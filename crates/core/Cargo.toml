@@ -16,8 +16,13 @@ categories = ["cryptography", "data-structures"]
 # fuzz corpora and artifacts, proptest seeds, evidence.
 include = ["src/**", "tests/**", "examples/**", "README.md", "LICENSE-MIT", "Cargo.toml"]
 
+[features]
+# `signing` (default) = key generation from the operating system's randomness (Probe::spawn). Without it the crate verifies only and needs no randomness source (builds for wasm32-unknown-unknown).
+default = ["signing"]
+signing = ["ml-dsa/getrandom"]
+
 [dependencies]
-ml-dsa = "0.1.1"
+ml-dsa = { version = "0.1.1", default-features = false, features = ["alloc"] }
 blake3 = { workspace = true }
 serde = { workspace = true }
 hex = { workspace = true }

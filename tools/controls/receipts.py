@@ -25,7 +25,8 @@ class Node:
         return p.stdout.decode("utf-8", "replace")
 
     def init(self) -> None:
-        if not (self.dir / "platinum.key").exists():
+        # a node is initialised when it has the legacy shared key or any per-ledger key (KEYS1)
+        if not any((self.dir / f).exists() for f in ("platinum.key", "decisions.key", "evidence.key", "council.key")):
             self._run("init")
 
     def emit(self, *, kind: str, label: str, decision: str, reason: str, control: str, total: int, passed: int, flagged: int, detail: str, run_id: str) -> dict:

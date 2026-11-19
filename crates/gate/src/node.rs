@@ -3,7 +3,7 @@
 use crate::keys::load;
 use crate::{GateError, Res};
 use entropa_ledger::{FileStore, Kind, LedgerStore};
-use entropa_nodecore::{append, decision_fields, verify_ledger, NodeError, StoreStage};
+use entropa_nodecore::{append_v2, decision_fields, verify_ledger, NodeError, StoreStage};
 use std::path::Path;
 
 /// The largest request `record` reads (bytes).
@@ -65,7 +65,7 @@ pub fn record(dir: &Path, request: &str) -> Res<Receipt> {
     }
     let probe = load(dir)?;
     let fields = decision_fields(request, &probe.pubkey_hex()).map_err(map)?;
-    let r = append(dir, "ledger", &probe, &fields).map_err(map)?;
+    let r = append_v2(dir, "ledger", &probe, &fields).map_err(map)?;
     Ok(Receipt {
         index: r.index,
         subject_hash: r.subject_hash,

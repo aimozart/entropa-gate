@@ -1,0 +1,14 @@
+test z1_the_report_has_counts_bounds_ids_and_the_closed_reasons ... FAILED
+test z4_two_runs_give_byte_identical_reports_and_no_report_byte_holds_input_output_secrets_or_paths ... FAILED
+test z5_calibration_rows_compare_forecast_ranges_with_measured_values ... FAILED
+test z2_every_refusal_happens_before_anything_runs_and_writes_no_report ... FAILED
+test z3_a_second_report_to_the_same_path_is_refused_and_the_first_is_untouched ... FAILED
+test z6_a_matching_preregistration_is_recorded_and_every_mismatch_is_refused ... FAILED
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+test r1_allow_and_block_are_read_from_the_first_stdout_line_and_stdin_is_delivered ... FAILED
+test r2_wrong_verdict ... FAILED
+test r4_a_secret_in_stdout_or_stderr_is_an_echo_even_when_the_verdict_is_right ... FAILED
+test r3_every_other_reason ... FAILED
+test r5_arguments_are_passed_without_a_shell ... ok
+test result: FAILED. 1 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+NOTE: r5 passes against the stub (it asserts 'no failure' and the stub never fails): vacuous until green + bite (arguments not passed).

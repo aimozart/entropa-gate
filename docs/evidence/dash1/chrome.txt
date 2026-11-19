@@ -1,0 +1,4 @@
+matching data: render 122 ms; {"rows":10,"meters":2323,"mismatch":"","label":"mock data, real signed records","records":"Records: 10000"}
+console problems: 0
+summary.json with one wrong number: render 99 ms; {"rows":10,"meters":2323,"mismatch":"The numbers on this page do not match the data files. Do not rely on them.","label":"mock data, real signed records","records":"Records: 10000"}
+DASH1 CHROME: PASS

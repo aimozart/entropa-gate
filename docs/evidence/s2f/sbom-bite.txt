@@ -1,0 +1,5 @@
+BITE missing checksum accepted: FAILED (failures=1)
+BITE package absent from the lock accepted (then KeyError would hide it): FAILED (errors=1)
+BITE components unsorted: FAILED (failures=1)
+BITE hashes dropped: FAILED (failures=1)
+BITE a timestamp in the output: FAILED (failures=1)

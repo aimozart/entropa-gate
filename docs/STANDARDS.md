@@ -1,5 +1,5 @@
-# Engineering standards (industry best practice, original checklist; Scott 2026-10-20: "super best practices")
-Every stage is held to this. A stage is not done until its relevant lines here are green or explicitly waived by Scott with a reason in a project record (not published).
+# Engineering standards (industry best practice, original checklist; the owner 2026-10-20: "super best practices")
+Every stage is held to this. A stage is not done until its relevant lines here are green or explicitly waived by the owner with a reason in the decision records.
 ## Code and design
 - Rust edition and toolchain pinned (rust-toolchain.toml); workspace lints in Cargo.toml: forbid unsafe_code, deny missing_docs on public APIs, clippy -D warnings (plus a chosen pedantic subset), rustfmt enforced.
 - Small crates with one job; files under ~500 lines; errors via thiserror with typed variants; no unwrap/expect in library paths (tests excepted); no panics on untrusted input.
@@ -14,7 +14,7 @@ Every stage is held to this. A stage is not done until its relevant lines here a
 ## Delivery and operations
 - CI on every push: fmt, clippy, test (all features), doc, deny, audit, coverage, mutation (nightly), fuzz smoke; branch protection and required reviews on GitHub when public; conventional commits and a generated changelog; reproducible container builds with --locked.
 - Observability: structured logs (never secrets), tracing with OpenTelemetry-compatible spans, health and readiness endpoints, SLOs and an error budget, runbooks in docs/runbooks/, a load/soak test with recorded results.
-- FinOps: every cloud resource priced first in docs/FINOPS-LEDGER.md, tagged project=entropa, with a teardown command; unit cost per request tracked; nothing left running.
+- FinOps: every cloud resource priced first in the cost notes, tagged project=entropa, with a teardown command; unit cost per request tracked; nothing left running.
 ## AI-assisted development governance (our differentiator)
 - AI-written code is attributed (Co-Authored-By trailer), reviewed by the reviewer, and every stage records evidence (commands and outputs) in AI-LOG and DECISION_OUTCOMES; humans gate approvals; Paxel report per repo (--project entropa-rust) after meaningful stages; prompts stored in docs/prompts/.
 ## Red-phase checklist (added 2026-10-21 after S12b/S12c)

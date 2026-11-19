@@ -1,0 +1,5 @@
+error: couldn't read `crates/core/tests/vectors/verify_only.json`: No such file or directory (os error 2)
+ --> crates/core/tests/verify_only.rs:7:22
+  |
+7 | const VECTOR: &str = include_str!("vectors/verify_only.json");
+--

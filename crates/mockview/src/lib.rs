@@ -60,7 +60,11 @@ pub struct Report {
 const INDEX_HTML: &str = include_str!("../assets/index.html");
 const STYLE_CSS: &str = include_str!("../assets/style.css");
 const APP_JS: &str = include_str!("../assets/app.js");
+const DASHBOARD_HTML: &str = include_str!("../assets/dashboard.html");
+const DASHBOARD_JS: &str = include_str!("../assets/dashboard.js");
 const MAX_MARKER_BYTES: usize = 4096;
+/// How many days the dashboard lists; earlier days are kept as one total.
+const MAX_DAYS: usize = 60;
 const TAR_NAME: &str = "ledger.tar";
 const TAR_HOW_TO: &str = "Download ledger.tar, extract it (tar -xf ledger.tar -C DIR), then run entropa-mockview verify DIR PUBLIC_KEY_HEX with the public key shown above.";
 const VERIFY_COMMAND: &str = "entropa-mockview verify <DIR> <PUBLIC_KEY_HEX>";
@@ -146,6 +150,73 @@ fn key_id(pubkey_hex: &str) -> String {
     }
 }
 
+/// The UTC calendar day (`YYYY-MM-DD`) of a Unix timestamp in seconds. (DASH1 stub: not implemented.)
+pub fn utc_day(ts: u64) -> String {
+    // civil-from-days (proleptic Gregorian), days since 1970-01-01
+    let z = i64::try_from(ts / 86_400).unwrap_or(0) + 719_468;
+    let era = z.div_euclid(146_097);
+    let doe = z.rem_euclid(146_097);
+    let yoe = (doe - doe / 1_460 + doe / 36_524 - doe / 146_096) / 365;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let d = doy - (153 * mp + 2) / 5 + 1;
+    let m = if mp < 10 { mp + 3 } else { mp - 9 };
+    let y = yoe + era * 400 + i64::from(m <= 2);
+    format!("{y:04}-{m:02}-{d:02}")
+}
+
+fn head_of(
+    cps: &[entropa_core::transparency_log::Checkpoint],
+) -> Result<(usize, String), ViewError> {
+    let h = cps.last().ok_or_else(|| io("no checkpoint"))?;
+    Ok((h.size, hex::encode(h.root)))
+}
+
+/// Counts for the dashboard, computed from the already verified rows (closed codes only; the plain sentences are the ones of the record pages).
+fn summarise(rows: &[Value], head: (usize, String)) -> Value {
+    use std::collections::BTreeMap;
+    let mut by: BTreeMap<&str, BTreeMap<String, u64>> = BTreeMap::new();
+    for r in rows {
+        for (name, field) in [
+            ("by_decision", "decision"),
+            ("by_kind", "kind"),
+            ("by_reason", "reason"),
+            ("by_control", "control"),
+            ("by_label", "label"),
+        ] {
+            *by.entry(name)
+                .or_default()
+                .entry(r[field].as_str().unwrap_or("").to_string())
+                .or_insert(0) += 1;
+        }
+        *by.entry("by_day")
+            .or_default()
+            .entry(utc_day(r["ts"].as_u64().unwrap_or(0)))
+            .or_insert(0) += 1;
+    }
+    // only the latest MAX_DAYS days are listed; the rest is kept as one total so the numbers still add up
+    let mut days = by.remove("by_day").unwrap_or_default();
+    let mut earlier = (0u64, 0u64);
+    while days.len() > MAX_DAYS {
+        if let Some((_, c)) = days.pop_first() {
+            earlier = (earlier.0 + 1, earlier.1 + c);
+        }
+    }
+    let newest: Vec<Value> = rows
+        .iter()
+        .rev()
+        .take(10)
+        .map(|r| json!({"index": r["index"], "ts": r["ts"], "plain": r["plain"]}))
+        .collect();
+    let mut v = json!({"label": LABEL, "records": rows.len(), "head": {"size": head.0, "root": head.1}, "newest": newest});
+    for (k, m) in by {
+        v[k] = json!(m);
+    }
+    v["by_day"] = json!(days);
+    v["earlier_days"] = json!({"days": earlier.0, "records": earlier.1});
+    v
+}
+
 /// Verify the evidence ledger of `ledger_dir` under `pubkey_hex`, check the mock marker, and write the static bundle into `out_dir`.
 pub fn generate(
     ledger_dir: &Path,
@@ -186,6 +257,7 @@ pub fn generate(
             "checkpoint_size": cp.size, "checkpoint_root": hex::encode(cp.root),
         }));
     }
+    let summary = summarise(&rows, head_of(&cps)?);
     // the optional ledger copy: ONLY the marker, the records and the checkpoints (a fixed list of three names; nothing else in the directory is read)
     let tar = if cfg.include_ledger {
         let read = |rel: &str| {
@@ -216,6 +288,12 @@ pub fn generate(
         meta["ledger_tar"] = json!({"file": TAR_NAME, "bytes": t.len(), "blake3": blake3::hash(t).to_hex().to_string(), "how_to": TAR_HOW_TO});
     }
     let mut out: Vec<(String, Vec<u8>)> = vec![
+        ("dashboard.html".into(), DASHBOARD_HTML.as_bytes().to_vec()),
+        ("dashboard.js".into(), DASHBOARD_JS.as_bytes().to_vec()),
+        (
+            "data/summary.json".into(),
+            json_text(&summary)?.into_bytes(),
+        ),
         ("index.html".into(), INDEX_HTML.as_bytes().to_vec()),
         ("style.css".into(), STYLE_CSS.as_bytes().to_vec()),
         ("app.js".into(), APP_JS.as_bytes().to_vec()),

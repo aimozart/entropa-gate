@@ -1,0 +1,15 @@
+PKG1 package report (20261118T214016)
+version: 0.2.0
+tarball sha256: aa6a3df3d68e8fdb04ad12fba458505527f74a0cebc8634bcaea16c9ca417483
+second tarball sha256: aa6a3df3d68e8fdb04ad12fba458505527f74a0cebc8634bcaea16c9ca417483
+tarball bytes: 2177670
+tarball reproducible: yes (two builds, two assemblies, same bytes)
+binaries identical: yes
+entropa-gate sha256: 2519262be7a4e9dee1e08875003395fdbad3099a7e70de00508c227dc7bd17a5
+entropa-release sha256: 303a0c316d35d466f41a8c60b09c87bdef2527327d78ce1550da4bf02dfc8b2d
+link: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), static-pie linked, for GNU/Linux 3.2.0, stripped
+toolchain: rustc 1.99.1 (58cf8f9c3 2026-10-13)
+keys: TEST keys generated at run time in <build-dir>/pkg1-package-v5h/testkeys (never a real release key)
+image tag: entropa-gate:pkg1-aa6a3df3d68e
+image bytes: 1334719
+scope: built and tested on this machine only (linux x86_64, glibc static); the two builds share host, kernel, toolchain and crate cache; no independent review; nothing published

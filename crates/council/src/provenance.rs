@@ -1,4 +1,4 @@
-//! Decision memory: pinned, hashed, exact retrieval and provenance records (docs/ARCHITECTURE-COUNCIL.md section 12).
+//! Decision memory: pinned, hashed, exact retrieval and provenance records (the council design notes section 12).
 
 use crate::canon::canonical;
 use crate::event::{is_token, validate};

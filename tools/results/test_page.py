@@ -97,12 +97,12 @@ class P(unittest.TestCase):
         self.assertIn("tested against", data["label"].lower())
         nodes = data["nodes"]
         failed = [n for n in nodes if n["cls"] == "failed-item"]
-        self.assertEqual(len(failed), 21)
+        self.assertEqual(len(failed), 25)  # Test change (RESULTS-V3): 21 + 4
         first_failed = next(i for i, n in enumerate(nodes) if n["cls"] == "failed-item")
         first_row = next(i for i, n in enumerate(nodes) if n["cls"] == "row")
         self.assertLess(first_failed, first_row, "the failed list must precede the rows")
         rows = [n for n in nodes if n["cls"] == "row"]
-        self.assertEqual(len(rows), 12)
+        self.assertEqual(len(rows), 19)  # Test change (RESULTS-V3): 12 + 7 rows
 
     def test_p4_inside_a_row_failed_bars_precede_passed_bars_and_every_row_says_set_spent(self):
         nodes = render()["nodes"]
@@ -113,12 +113,12 @@ class P(unittest.TestCase):
                 order[cur] = []
             elif n["cls"].startswith("bar ") and cur is not None:
                 order[cur].append(n["cls"].split()[1])
-        self.assertEqual(len(order), 12)
+        self.assertEqual(len(order), 19)  # Test change (RESULTS-V3): 12 + 7 rows
         rank = {"fail": 0, "report_only": 1, "measured": 1, "pass": 2}
         for title, results in order.items():
             self.assertEqual(results, sorted(results, key=lambda r: rank[r]), title)
         spent = [n for n in nodes if n["cls"] == "spent"]
-        self.assertEqual(len(spent), 12)
+        self.assertEqual(len(spent), 19)  # Test change (RESULTS-V3): 12 + 7 rows
         self.assertTrue(all("set spent" in n["text"].lower() for n in spent))
 
     def test_p5_wording_no_banned_words_no_paths_no_emails(self):
@@ -160,7 +160,8 @@ class P(unittest.TestCase):
 
 
 # ---- RESULTS-V2 (a stage record (not published)) ----
-EXPECTED_ORDER = ["EG-6", "EG-5", "AT4", "EG-4", "EG-3", "EG-2", "EG-1", "H1.1", "R3", "A4d", "R2", "A4c"]
+# Test change (RESULTS-V3): seven rows added (listed after EG-6 in the spec: LS3d RS1 INS-1 INS-2 INS-3 EG-7 EG-8; the later-listed row of a date first)
+EXPECTED_ORDER = ["EG-8", "EG-7", "INS-3", "INS-2", "INS-1", "RS1", "LS3d", "EG-6", "EG-5", "AT4", "EG-4", "EG-3", "EG-2", "EG-1", "H1.1", "R3", "A4d", "R2", "A4c"]
 LABELS = ("What it tested", "What happened", "What changed next")
 
 

@@ -8,7 +8,7 @@ directory. The S4b tests (unedited by rule) build engines with `Engine::new` and
 `Request`. That constructor therefore trusts request fields. If a production caller forgets `with_directory`, a
 request can claim `role: human` and the Cedar rule for hard-rule actions would be satisfied by a claim.
 
-## Decision (a stated deviation from docs/ARCHITECTURE-CEDAR.md, which lives on branch rerust-s4a-cedar-arch)
+## Decision (a stated deviation from docs/ARCHITECTURE-CEDAR.md)
 - The design doc says the role is read from the signed actor directory; S4d makes the type system enforce it.
 - `Engine::new` and `Engine::with_directory` (the request-trusting path) exist only with the cargo feature
   `trust-request-fields`, which is off by default.

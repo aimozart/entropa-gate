@@ -229,9 +229,16 @@ async fn route(req: Request<Incoming>, peer: IpAddr, sh: &Shared) -> Resp {
 }
 
 async fn handle(req: Request<Incoming>, peer: IpAddr, sh: Arc<Shared>) -> Result<Resp, Infallible> {
-    let r = match timeout(REQUEST_TIMEOUT, route(req, peer, &sh)).await {
-        Ok(r) => r,
-        Err(_) => error(408, "timeout", None, None),
+    // RFC 9112 section 3.2: an HTTP/1.1 request with no Host header, or with more than one, is answered 400 before anything else (LS3b2)
+    let r = if req.version() == hyper::Version::HTTP_11
+        && req.headers().get_all("host").iter().count() != 1
+    {
+        error(400, "bad_request", None, None)
+    } else {
+        match timeout(REQUEST_TIMEOUT, route(req, peer, &sh)).await {
+            Ok(r) => r,
+            Err(_) => error(408, "timeout", None, None),
+        }
     };
     sh.count(r.status().as_u16());
     Ok(r)

@@ -40,6 +40,10 @@ const DECIDE: &str = r#"{"label":"council_decision","actor":"human-principal","d
 fn co1_log_and_verify_a_separate_council_ledger() {
     let d = dir("co1");
     assert!(run(&["init", d.to_str().unwrap()], None).status.success());
+    // Test change (KEYS1): the council ledger has its own optional key; init no longer creates it, so the test adds it.
+    assert!(run(&["keys-add", d.to_str().unwrap(), "council"], None)
+        .status
+        .success());
     for r in [OPEN, FINDING, DECIDE] {
         let o = run(&["log-council", d.to_str().unwrap()], Some(r));
         assert!(o.status.success(), "{}", String::from_utf8_lossy(&o.stderr));
@@ -76,6 +80,8 @@ fn co2_unknown_fields_and_non_council_labels_are_refused() {
 fn co3_the_export_has_plain_english_and_never_the_raw_text() {
     let d = dir("co3");
     run(&["init", d.to_str().unwrap()], None);
+    // Test change (KEYS1): the council ledger has its own optional key; init no longer creates it, so the test adds it.
+    run(&["keys-add", d.to_str().unwrap(), "council"], None);
     for r in [OPEN, FINDING, DECIDE] {
         run(&["log-council", d.to_str().unwrap()], Some(r));
     }

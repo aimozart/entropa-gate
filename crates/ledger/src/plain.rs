@@ -200,6 +200,7 @@ pub fn plain_english(f: &EventFields) -> String {
         } else {
             "A standards corpus version was refused: a source changed under the same version name, so nothing was overwritten.".to_string()
         },
+        (Kind::EvidenceChange, LabelCode::PreregCommitted) => "A pre-registration was committed: a signed record of what would be tested was anchored here, as a hash only.".to_string(),
         (Kind::EvidenceChange, LabelCode::Deploy) => "A deploy was recorded.".to_string(),
         (Kind::EvidenceChange, LabelCode::Rollback) => "A rollback was recorded.".to_string(),
         (Kind::EvidenceChange, LabelCode::SchemaChange) => "A schema change was recorded.".to_string(),

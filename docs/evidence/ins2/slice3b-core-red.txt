@@ -1,0 +1,4 @@
+test h1_equal_checkpoint_times_are_fine_only_a_lower_time_is_a_regression ... ok
+test h3_a_conflict_at_one_size_is_a_fork_even_when_the_counters_differ_and_a_conflict_at_one_counter_too ... FAILED
+test h2_a_v2_chain_may_repeat_a_size_with_a_new_counter_but_may_never_shrink ... ok
+test result: FAILED. 22 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.95s

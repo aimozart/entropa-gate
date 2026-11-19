@@ -8,7 +8,7 @@
 #
 # Cost (free-trial subscription, spending limit ON): Container Registry Basic about 0.167 USD per day (the image is built locally and pushed: ACR Tasks is blocked on free trials), storage account
 # and a 1 GB file share a few cents, Container Apps within its monthly free grant: about 2 to 3 USD until the credit
-# expires on 2026-11-16, against 200 USD of credit. Teardown: delete the resource group (the owner's exact word first).
+# expires on 2026-11-16, against 200 USD of credit. Teardown: delete the resource group (explicit approval first).
 # Needs: az CLI logged in as the Azure account that owns the subscription; the Entropa log public key in LOG_PUBKEY.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -32,7 +32,7 @@ Would create in subscription $(az account show --query name -o tsv), region $LOC
   container apps env       $ENVN (consumption, no log analytics)
   container app            $APP (0 to 1 replica, external HTTPS ingress)
 Witnesses the log with public key ${LOG_PUBKEY:0:16}..., accepts the first checkpoint on trust (allow_first).
-Estimated total until 2026-11-16: about 2 to 3 USD. Teardown: az group delete -n $RG (the owner's exact word first).
+Estimated total until 2026-11-16: about 2 to 3 USD. Teardown: az group delete -n $RG (explicit approval first).
 EOF
   exit 0
 fi

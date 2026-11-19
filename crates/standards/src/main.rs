@@ -15,6 +15,7 @@ use entropa_standards::r2eval;
 use entropa_standards::r3eval;
 use entropa_standards::records::{ProcessSink, RecordSink};
 use entropa_standards::retrieve::Retriever;
+use entropa_standards::rs1eval;
 use entropa_standards::seal::{self, SealError, SealOutcome};
 use std::path::{Path, PathBuf};
 use std::process::{Command, ExitCode};
@@ -327,6 +328,191 @@ fn main() -> ExitCode {
                 ))
                 .unwrap_or_default()
             );
+            ExitCode::SUCCESS
+        }
+        Some("rs1-signals") => {
+            let (Some(store), Some(version), Some(dir)) = (
+                flag(&args, "--store"),
+                flag(&args, "--version"),
+                flag(&args, "--dev-dir"),
+            ) else {
+                return usage("rs1-signals needs --store, --version and --dev-dir");
+            };
+            let Ok(sealed) = seal::open(Path::new(&store), &version) else {
+                return ExitCode::from(4);
+            };
+            let Ok(d) = rs1eval::load_dev_rs1(Path::new(&dir)) else {
+                return ExitCode::from(3);
+            };
+            let retriever = Retriever::from_sealed(vec![sealed]);
+            let (off, _) = r2eval::configs();
+            println!(
+                "{}",
+                serde_json::to_string_pretty(&rs1eval::run_signals(&retriever, &version, &d, &off))
+                    .unwrap_or_default()
+            );
+            ExitCode::SUCCESS
+        }
+        Some("rs1-census") => {
+            let (Some(store), Some(version)) = (flag(&args, "--store"), flag(&args, "--version"))
+            else {
+                return usage("rs1-census needs --store and --version");
+            };
+            let words = flag(&args, "--words")
+                .and_then(|w| w.parse().ok())
+                .unwrap_or(12usize);
+            let Ok(sealed) = seal::open(Path::new(&store), &version) else {
+                return ExitCode::from(4);
+            };
+            let (mut off, _) = r2eval::configs();
+            if let Some(spec) = flag(&args, "--set") {
+                if let Err(e) = r2eval::apply_overrides(&mut off, &spec) {
+                    return usage(&e);
+                }
+            }
+            println!(
+                "{}",
+                serde_json::to_string_pretty(&rs1eval::run_census(&sealed, &version, words, &off))
+                    .unwrap_or_default()
+            );
+            ExitCode::SUCCESS
+        }
+        Some("rs1-ask") => {
+            let (Some(store), Some(version), Some(q)) = (
+                flag(&args, "--store"),
+                flag(&args, "--version"),
+                flag(&args, "--q"),
+            ) else {
+                return usage("rs1-ask needs --store, --version and --q");
+            };
+            let Ok(sealed) = seal::open(Path::new(&store), &version) else {
+                return ExitCode::from(4);
+            };
+            let (mut off, _) = r2eval::configs();
+            if let Some(spec) = flag(&args, "--set") {
+                if let Err(e) = r2eval::apply_overrides(&mut off, &spec) {
+                    return usage(&e);
+                }
+            }
+            let r = Retriever::from_sealed(vec![sealed]);
+            let res = r.search(&q, Some(&version), 3, &off);
+            println!("verdict={:?} reason={}", res.verdict, res.reason);
+            for p in &res.passages {
+                println!(
+                    "{}:{} score={:.2} flags={:?}",
+                    p.standard, p.clause_id, p.score, p.flags
+                );
+            }
+            for l in r.explain(&q, Some(&version), &off).iter().take(3) {
+                println!("  {l}");
+            }
+            ExitCode::SUCCESS
+        }
+        Some("rs1-explain") => {
+            let (Some(dir), Some(case)) = (flag(&args, "--dev-dir"), flag(&args, "--case")) else {
+                return usage("rs1-explain needs --dev-dir and --case");
+            };
+            let Ok(d) = rs1eval::load_dev_rs1(Path::new(&dir)) else {
+                eprintln!("refused: the RS1 DEV sets do not match their frozen hashes");
+                return ExitCode::from(3);
+            };
+            let (mut off, _) = r2eval::configs();
+            if let Some(spec) = flag(&args, "--set") {
+                if let Err(e) = r2eval::apply_overrides(&mut off, &spec) {
+                    return usage(&e);
+                }
+            }
+            for line in rs1eval::explain_case_rs1(&d, &case, &off).unwrap_or_default() {
+                println!("{line}");
+            }
+            ExitCode::SUCCESS
+        }
+        Some("rs1-dev-eval") => {
+            let (Some(store), Some(version), Some(dir)) = (
+                flag(&args, "--store"),
+                flag(&args, "--version"),
+                flag(&args, "--dev-dir"),
+            ) else {
+                return usage("rs1-dev-eval needs --store, --version and --dev-dir");
+            };
+            let sealed = match seal::open(Path::new(&store), &version) {
+                Ok(s) => s,
+                Err(e) => {
+                    eprintln!("error: {e:?}");
+                    return ExitCode::from(4);
+                }
+            };
+            let d = match rs1eval::load_dev_rs1(Path::new(&dir)) {
+                Ok(d) => d,
+                Err(e) => {
+                    eprintln!("refused: {e}");
+                    return ExitCode::from(3);
+                }
+            };
+            let retriever = Retriever::from_sealed(vec![sealed]);
+            let (mut off, mut on) = r2eval::configs();
+            if let Some(spec) = flag(&args, "--set") {
+                if let Err(e) = r2eval::apply_overrides(&mut off, &spec)
+                    .and_then(|()| r2eval::apply_overrides(&mut on, &spec))
+                {
+                    return usage(&e);
+                }
+            }
+            println!(
+                "{}",
+                serde_json::to_string_pretty(&rs1eval::run_dev_rs1(
+                    &retriever, &version, &d, &off, &on
+                ))
+                .unwrap_or_default()
+            );
+            ExitCode::SUCCESS
+        }
+        Some("heldout-rs1") => {
+            // ONE scored run: the sha256 is an ARGUMENT, checked before the file is parsed; an existing report blocks a second run.
+            let (Some(store), Some(version), Some(file), Some(sha), Some(out)) = (
+                flag(&args, "--store"),
+                flag(&args, "--version"),
+                flag(&args, "--file"),
+                flag(&args, "--sha"),
+                flag(&args, "--out"),
+            ) else {
+                return usage("heldout-rs1 needs --store, --version, --file, --sha and --out");
+            };
+            if Path::new(&out).exists() {
+                eprintln!("refused: a held-out report already exists; the run happens once");
+                return ExitCode::from(3);
+            }
+            let (held, kinds, attacks) = match rs1eval::load_heldout_rs1(Path::new(&file), &sha) {
+                Ok(h) => h,
+                Err(e) => {
+                    eprintln!("refused: {e}");
+                    return ExitCode::from(3);
+                }
+            };
+            let sealed = match seal::open(Path::new(&store), &version) {
+                Ok(s) => s,
+                Err(e) => {
+                    eprintln!("error: {e:?}");
+                    return ExitCode::from(4);
+                }
+            };
+            let retriever = Retriever::from_sealed(vec![sealed]);
+            let switches = flag(&args, "--set").unwrap_or_default();
+            let rep = match rs1eval::run_heldout_rs1(
+                &retriever, &version, &held, &kinds, &attacks, &switches,
+            ) {
+                Ok(r) => r,
+                Err(e) => {
+                    eprintln!("refused: {e}");
+                    return ExitCode::from(3);
+                }
+            };
+            let text = serde_json::to_string_pretty(&rep).unwrap_or_default();
+            if std::fs::write(&out, &text).is_err() {
+                eprintln!("error: cannot write the report");
+                return ExitCode::from(5);
+            }
+            println!("{text}");
             ExitCode::SUCCESS
         }
         Some("heldout-r3") => {

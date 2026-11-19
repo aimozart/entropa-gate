@@ -26,7 +26,7 @@ A checkpoint signs `root (32) || size (u64 BE) || timestamp (u64 BE)` (48 bytes,
 Pinned toolchain (`rust-toolchain.toml`, 1.99.1), workspace lints, cargo-deny and cargo-audit, property tests, two fuzz targets, mutation testing, coverage, SBOM, a CI workflow and a tag-triggered Trusted Publishing release workflow (both written, never run on GitHub). Everything runs in the Docker dev image. Details: `docs/STANDARDS.md`, `docs/adr/`, `TESTING.md`.
 
 ## Planned (not in this repository yet)
-MCP hardening and enforcement (S2d-S2g), signed approval records and human gate (S3), Cedar default-deny policy gate (S4), witness that checks checkpoint consistency (S5), CI and infrastructure as code with priced resources (S6), a public explorer with no login and data-minimal records (S9). Cloud footprint today: one AWS KMS key (us-west-2, `docs/FINOPS-LEDGER.md`); nothing else is running.
+MCP hardening and enforcement, signed approval records and human gate, Cedar default-deny policy gate, witness that checks checkpoint consistency, CI and infrastructure as code with priced resources, a public explorer with no login and data-minimal records. Cloud footprint today: one AWS KMS key (us-west-2, `the cost notes`); nothing else is running.
 
 ## Threats
-`docs/THREAT-MODEL.md` (STRIDE per component). Known open issues: `docs/AUDIT-STANDARDS.md`, `a project record (not published)`.
+`docs/THREAT-MODEL.md` (STRIDE per component). Known open issues: `docs/AUDIT-STANDARDS.md`.

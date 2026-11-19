@@ -5,7 +5,7 @@ edition.workspace = true
 authors.workspace = true
 license = "Apache-2.0"
 publish = false
-description = "P0 data safety (a project record (not published)): synthetic identifiers from reserved INVALID ranges, canary tokens and a canary scanner. Stage S12b: stubs and red tests."
+description = "P0 data safety: synthetic identifiers from reserved INVALID ranges, canary tokens and a canary scanner."
 
 [dependencies]
 blake3 = { workspace = true }

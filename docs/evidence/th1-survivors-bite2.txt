@@ -1,0 +1,4 @@
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+BITE [s/Err(e) if e.raw_os_error() == Some(26) \&\& attempt < 5 =>/Err(_e) if true =>/]: test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.55s
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+BITE [s/Some(26) \&\& attempt < 5/Some(26) || attempt < 5/]: test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.46s

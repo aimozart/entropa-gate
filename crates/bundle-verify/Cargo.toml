@@ -1,0 +1,30 @@
+[package]
+name = "entropa-bundle-verify"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license = "Apache-2.0"
+publish = false
+description = "The browser verifier: the static-bundle verification of entropa-ledger compiled to WebAssembly behind a plain C interface (no JavaScript glue, no randomness source, no network). Verification only."
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+entropa-ledger = { path = "../ledger", default-features = false }
+
+[dev-dependencies]
+serde_json = { workspace = true }
+
+[lints.rust]
+# the only unsafe-flagged items are the `#[no_mangle]` export attributes in src/abi.rs (there is no unsafe block anywhere)
+unsafe_code = "deny"
+missing_docs = "warn"
+
+[lints.clippy]
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"
+dbg_macro = "deny"
+todo = "deny"
+unimplemented = "deny"

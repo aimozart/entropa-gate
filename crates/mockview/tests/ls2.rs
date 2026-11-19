@@ -213,7 +213,8 @@ fn l3_hostile_marker_text_never_reaches_the_pages_as_markup() {
             assert!(
                 scripts
                     .iter()
-                    .all(|s| s.starts_with("<script src=\"app.js\"")),
+                    .all(|s| s.starts_with("<script src=\"app.js\"")
+                        || s.starts_with("<script src=\"dashboard.js\"")),
                 "{n}: inline or foreign script: {scripts:?}"
             );
             assert!(!t.contains("onerror") && !t.contains("alert("), "{n}");

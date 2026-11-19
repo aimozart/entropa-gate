@@ -1,0 +1,17 @@
+test d6_utc_days_change_exactly_at_midnight_and_handle_leap_days ... FAILED
+test d5_a_refusal_writes_no_dashboard_file ... ok
+test d2_no_unsafe_sinks_csp_one_external_script_and_no_banned_or_process_words ... FAILED
+test d4_regeneration_is_byte_identical ... FAILED
+test d3_the_page_recomputes_the_numbers_and_shows_a_banner_only_when_they_differ ... FAILED
+test d1_the_dashboard_files_exist_with_the_label_and_the_counts_match_the_generator ... FAILED
+thread 'd6_utc_days_change_exactly_at_midnight_and_handle_leap_days' (3893295) panicked at crates/mockview/tests/dash1.rs:178:5:
+assertion `left == right` failed
+  left: "not yet implemented"
+ right: "1970-01-01"
+thread 'd2_no_unsafe_sinks_csp_one_external_script_and_no_banned_or_process_words' (3893291) panicked at crates/mockview/tests/dash1.rs:95:64:
+thread 'd4_regeneration_is_byte_identical' (3893293) panicked at crates/mockview/tests/dash1.rs:156:45:
+thread 'd3_the_page_recomputes_the_numbers_and_shows_a_banner_only_when_they_differ' (3893292) panicked at crates/mockview/tests/dash1.rs:130:5:
+thread 'd1_the_dashboard_files_exist_with_the_label_and_the_counts_match_the_generator' (3893290) panicked at crates/mockview/tests/dash1.rs:59:73:
+missing dashboard.html
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.21s
+error: test failed, to rerun pass `-p entropa-mockview --test dash1`

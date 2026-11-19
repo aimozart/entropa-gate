@@ -1,0 +1,1 @@
+STATED TEST EDIT (DASH1): crates/mockview/tests/ls2.rs l3: the only external script allowed in an html file is app.js OR (new) dashboard.js; still no inline or foreign script

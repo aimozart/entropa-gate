@@ -1,4 +1,4 @@
-//! The retrieval evaluation harness and the planted-suite generator (docs/ARCHITECTURE-MEMORY.md section 7). All data
+//! The retrieval evaluation harness and the planted-suite generator (the decision-memory design notes section 7). All data
 //! is synthetic; the generator is a pure function of its seed (a splitmix64 stream, no clock, no entropy).
 
 use crate::memory::{LexicalIndex, Precedent};

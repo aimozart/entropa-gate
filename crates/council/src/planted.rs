@@ -1,4 +1,4 @@
-//! The planted-fault evaluation harness for reviewer models (docs/ARCHITECTURE-COUNCIL.md section 8).
+//! The planted-fault evaluation harness for reviewer models (the council design notes section 8).
 
 use crate::CouncilError;
 use std::collections::{BTreeMap, BTreeSet};

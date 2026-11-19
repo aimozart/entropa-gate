@@ -1,0 +1,15 @@
+test b1_unknown_missing_and_wrong_typed_fields_are_refused ... FAILED
+test a1_the_canonical_line_matches_an_independent_python_derivation ... FAILED
+test b2_hex_fields_are_exact_lowercase_64_digit_strings ... FAILED
+test b3_a_duplicated_key_is_refused ... ok
+test b4_the_size_cap_is_exactly_32_kib_and_checked_before_parsing ... FAILED
+test b7_errors_never_echo_the_input ... FAILED
+test a3_a_text_with_a_trailing_newline_is_accepted_but_other_trailing_text_is_not ... FAILED
+test b8_nesting_depth_and_non_objects_are_refused ... ok
+test c2_a_second_line_or_trailing_bytes_are_refused_and_a_counter_with_a_v1_checkpoint_too ... FAILED
+test c1_an_anchor_for_another_log_is_a_closed_refusal ... FAILED
+test b6_the_embedded_checkpoint_has_exact_keys_and_a_known_version ... FAILED
+test b5_an_embedded_checkpoint_must_agree_with_the_top_level_fields ... FAILED
+test a2_every_kind_of_anchor_round_trips ... FAILED
+test result: FAILED. 2 passed; 11 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+error: test failed, to rerun pass `-p entropa-witness --test anchor_file`

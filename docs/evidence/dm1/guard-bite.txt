@@ -1,0 +1,7 @@
+BITE redacted text allowed: test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s
+BITE NUL allowed: test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+BITE invalid UTF-8 allowed: test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+BITE limit off by one: test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+BITE default tier T0: test result: FAILED. 4 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+BITE reason prefix: test result: FAILED. 4 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s
+BITE empty input allowed to the engine: NOT APPLIED

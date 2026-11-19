@@ -1,0 +1,6 @@
+test w1_append_v2_issues_counters_chain_links_and_verifiable_signatures ... FAILED
+test w4_verify_ledger_rejects_a_damaged_v2_signature_and_names_the_checkpoint ... FAILED
+test w2_the_checkpoint_time_never_goes_backwards_even_when_an_event_time_does ... FAILED
+test w3_a_ledger_may_start_v1_and_continue_v2_and_a_v1_writer_then_refuses ... FAILED
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+error: test failed, to rerun pass `-p entropa-nodecore --test v2`

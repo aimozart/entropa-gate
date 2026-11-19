@@ -257,6 +257,11 @@ fn is_format(c: char) -> bool {
     matches!(c, '\u{200b}'..='\u{200f}' | '\u{202a}'..='\u{202e}' | '\u{2060}'..='\u{2064}' | '\u{2066}'..='\u{2069}' | '\u{feff}')
 }
 
+/// Is this a zero-width, bidirectional or soft-hyphen character (RS1 `hidden_chars`)?
+pub fn is_hidden(c: char) -> bool {
+    is_format(c) || c == '\u{ad}'
+}
+
 /// Remove control, bidirectional and zero-width characters (newlines and tabs become spaces). Everything else is kept.
 pub fn sanitise(s: &str) -> String {
     s.chars()

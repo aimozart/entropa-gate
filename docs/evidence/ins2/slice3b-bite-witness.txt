@@ -1,0 +1,5 @@
+BITE empty or too long -> and: test result: FAILED. 15 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE too long or odd -> and: test result: FAILED. 15 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.05s
+BITE odd or not hex -> and: test result: FAILED. 15 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.06s
+BITE limit as equality: test result: FAILED. 15 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.04s
+BITE limit off by one: test result: FAILED. 15 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.04s

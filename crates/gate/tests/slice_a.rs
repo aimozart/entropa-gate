@@ -406,6 +406,8 @@ fn a10_a_gate_ledger_verifies_with_the_platinum_verifier_and_the_other_way_round
     // a platinum-made ledger verifies with the gate (same format)
     let p = t.path().join("plat");
     entropa_platinum::init(&p).unwrap();
+    // Test change (integration of the per-ledger keys): platinum now creates decisions.key and evidence.key; this gate reads one key file, platinum.key, so the decisions key is copied to the name the gate reads
+    std::fs::copy(p.join("decisions.key"), p.join("platinum.key")).unwrap();
     entropa_platinum::log_with(&p, &*entropa_platinum::node_signer(&p).unwrap(), REQ).unwrap();
     assert!(node::verify(&p).unwrap().starts_with("OK records=1"));
 }

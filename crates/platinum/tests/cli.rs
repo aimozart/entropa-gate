@@ -99,7 +99,8 @@ fn c3_the_key_file_is_private_and_a_loose_one_is_refused() {
     let d = dir("c3");
     let ds = d.to_str().unwrap();
     run(&["init", ds], None);
-    let key = d.join("platinum.key");
+    // Test change (KEYS1): init now creates decisions.key (and evidence.key) instead of the single platinum.key; the assertions are unchanged.
+    let key = d.join("decisions.key");
     assert_eq!(
         std::fs::metadata(&key).unwrap().permissions().mode() & 0o777,
         0o600

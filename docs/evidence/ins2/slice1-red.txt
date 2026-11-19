@@ -1,0 +1,19 @@
+test a1_the_v2_digest_matches_an_independent_python_derivation ... FAILED
+test a3_the_closed_codes_are_exactly_these_strings ... FAILED
+test d1_precedence_signature_before_key_before_mismatch_before_fork_before_rewritten_before_rolled_before_clock_before_missing ... FAILED
+test c7_a7_a_deleted_anchor_is_anchor_missing_when_one_is_expected ... FAILED
+test d2_ok_anchored_means_consistent_with_the_anchor_and_nothing_about_later_records ... FAILED
+test c9_signature_key_and_chain_faults_have_their_own_codes ... FAILED
+test c8_a_changed_record_with_the_old_checkpoints_is_a_checkpoint_mismatch ... FAILED
+test c2_a2_a3_a_shorter_or_older_ledger_is_rolled_back_with_any_anchor ... FAILED
+test c5_a4_a_copied_key_is_caught_only_when_a_signed_conflict_is_seen ... FAILED
+test b1_an_unchanged_ledger_is_ok_unanchored_without_an_anchor_and_anchor_missing_when_one_is_expected ... FAILED
+test c6_a5_clock_set_back_is_caught_by_the_v2_counter_only ... FAILED
+test c1_a1_rewrite_and_resign_is_invisible_without_an_anchor_and_caught_with_one ... FAILED
+test c4_a3_a_lower_counter_at_the_same_size_is_rolled_back ... FAILED
+test b2_an_older_anchor_hash_only_or_signed_gives_ok_anchored_with_its_size ... FAILED
+test c3_a2_records_cut_but_the_newest_checkpoint_kept_is_a_checkpoint_mismatch ... FAILED
+test a2_sign_verify_and_the_chain_digest_binds_every_field ... FAILED
+test e1_unchanged_ledgers_never_raise_an_alarm ... FAILED
+test result: FAILED. 0 passed; 17 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.30s
+error: test failed, to rerun pass `-p entropa-core --test anchor`

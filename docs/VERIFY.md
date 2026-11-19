@@ -58,5 +58,5 @@ anywhere) — fmt, clippy, `cargo test --workspace`, secret-scan, dependency-aud
 
 ## Decision closure
 
-`a project record (not published)` — every architecture/safety/product decision, in Decision / Reason /
+`the decision records` — every architecture/safety/product decision, in Decision / Reason /
 Expected proof / Observed outcome / Evidence / Status form. 17 entries as of 2026-08-15.

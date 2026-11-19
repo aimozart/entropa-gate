@@ -1,5 +1,6 @@
 //! The command line: `init --dir D`, `record --dir D` (one JSON request on stdin), `verify --dir D`, `status --dir D [--config C]`.
 use crate::config::Config;
+use crate::opts::{self, Spec};
 use crate::{keys, node, GateError};
 use std::io::{Read, Write};
 use std::path::PathBuf;
@@ -19,6 +20,31 @@ pub fn run(args: &[String], stdin: &mut dyn Read, out: &mut dyn Write, err: &mut
     };
     if args.first().map(String::as_str) == Some("licence") {
         return licence_cmd(args, out, err);
+    }
+    if matches!(args.first().map(String::as_str), Some("check" | "anchor")) {
+        return crate::check::run(args, out, err);
+    }
+    let spec = match args.first().map(String::as_str) {
+        Some("init" | "record" | "verify") => Some(Spec {
+            once: &["--dir"],
+            many: &[],
+            flags: &[],
+        }),
+        Some("status") => Some(Spec {
+            once: &["--dir", "--config"],
+            many: &[],
+            flags: &[],
+        }),
+        Some("explorer") => Some(Spec {
+            once: &["--dir", "--config", "--out"],
+            many: &[],
+            flags: &[],
+        }),
+        _ => None,
+    };
+    // an unknown option, an extra word or a repeated option is a usage error, never ignored
+    if !spec.is_some_and(|sp| opts::parse(&args[1..], &sp).is_some()) {
+        return usage(err);
     }
     let (Some(cmd), Some(dir)) = (args.first(), flag(args, "--dir")) else {
         return usage(err);
@@ -90,6 +116,20 @@ fn licence_cmd(args: &[String], out: &mut dyn Write, err: &mut dyn Write) -> i32
     use crate::licence::{check, Policy, DEFAULT_TOLERANCE_SECS};
     if args.get(1).map(String::as_str) != Some("check") {
         let _ = writeln!(err, "usage: entropa-gate licence check --file FILE [--pubkey-file FILE] [--require ENTITLEMENT]");
+        return 2;
+    }
+    let licence_usage = "usage: entropa-gate licence check --file FILE [--pubkey-file FILE] [--require ENTITLEMENT]";
+    if opts::parse(
+        &args[2..],
+        &Spec {
+            once: &["--file", "--pubkey-file", "--require"],
+            many: &[],
+            flags: &[],
+        },
+    )
+    .is_none()
+    {
+        let _ = writeln!(err, "{licence_usage}");
         return 2;
     }
     let Some(file) = flag(args, "--file") else {

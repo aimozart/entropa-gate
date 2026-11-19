@@ -1,4 +1,4 @@
-//! Decision memory (docs/ARCHITECTURE-MEMORY.md sections 3, 4, 7, 8): the lexical index, its hashes, the retrieval
+//! Decision memory (the decision-memory design notes sections 3, 4, 7, 8): the lexical index, its hashes, the retrieval
 //! evaluation harness and the planted-suite generator. Golden values come from docs/evidence/s12d-b-gen-vectors.py.
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod common;

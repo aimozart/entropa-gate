@@ -24,3 +24,9 @@ name = "bundle_verify"
 path = "fuzz_targets/bundle_verify.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "raw_reader"
+path = "fuzz_targets/raw_reader.rs"
+test = false
+doc = false

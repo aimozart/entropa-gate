@@ -1,13 +1,19 @@
 //! The static JSON bundle: export from a store, and a standalone verifier that needs only the JSON.
 
 use crate::event::{canonical_json, decode_event, event_canonical_bytes, event_digest};
+#[cfg(feature = "engine")]
 use crate::generator::Generator;
+#[cfg(feature = "engine")]
 use crate::store::LedgerStore;
 use crate::vocab::{Handle, Kind, RoleCode, Tenant};
 use crate::{LedgerError, MAX_BUNDLE_BYTES};
 use entropa_approvals::{self as ap, Body};
-use entropa_core::merkle::{consistency_proof, leaf_hash, verify_consistency, Hash};
-use entropa_core::transparency_log::{decode_record, Checkpoint, Receipt, TransparencyLog};
+#[cfg(feature = "engine")]
+use entropa_core::merkle::{consistency_proof, leaf_hash};
+use entropa_core::merkle::{verify_consistency, Hash};
+#[cfg(feature = "engine")]
+use entropa_core::transparency_log::TransparencyLog;
+use entropa_core::transparency_log::{decode_record, Checkpoint, Receipt};
 use serde_json::{json, Map, Value};
 use std::collections::{BTreeMap, HashMap};
 
@@ -203,6 +209,7 @@ fn request_tenant(ctx: &Ctx, request_id: &str) -> Result<Tenant, LedgerError> {
         .ok_or_else(|| invalid("approval for an unknown request"))
 }
 
+#[cfg(feature = "engine")]
 impl Generator {
     /// Export the static JSON bundle of the whole store.
     pub fn export_bundle(&self, store: &impl LedgerStore) -> Result<String, LedgerError> {

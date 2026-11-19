@@ -14,6 +14,7 @@ pub mod r2eval;
 pub mod r3eval;
 pub mod records;
 pub mod retrieve;
+pub mod rs1eval;
 pub mod seal;
 pub mod text;
 pub mod tools;

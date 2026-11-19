@@ -1,0 +1,2 @@
+mockview debug: 28 passed 0 failed 1 ignored
+mockview --release: 28 passed 0 failed 1 ignored

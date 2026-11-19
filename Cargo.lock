@@ -1156,6 +1156,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "entropa-bundle-verify"
+version = "0.2.0"
+dependencies = [
+ "entropa-ledger",
+ "serde_json",
+]
+
+[[package]]
+name = "entropa-check"
+version = "0.2.0"
+dependencies = [
+ "blake3",
+ "entropa-approvals",
+ "entropa-core",
+ "entropa-ledger",
+ "entropa-nodecore",
+ "entropa-release",
+ "entropa-witness",
+ "hex",
+ "serde_json",
+ "sha2 0.10.9",
+]
+
+[[package]]
 name = "entropa-contact"
 version = "0.2.0"
 dependencies = [
@@ -2360,7 +2384,6 @@ version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "add6b9d92e496f16f4526d68ff29da1483aba4b119baeab8bed3b9e3544a6f3d"
 dependencies = [
- "const-oid",
  "crypto-common 0.2.2",
  "ctutils",
  "hybrid-array",

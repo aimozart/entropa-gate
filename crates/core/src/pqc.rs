@@ -9,9 +9,10 @@
 //! authenticity survives a future quantum adversary — the whole point of Entropa.
 
 use ml_dsa::signature::{Signer, Verifier};
+#[cfg(feature = "signing")]
+use ml_dsa::Generate;
 use ml_dsa::{
-    EncodedSignature, EncodedVerifyingKey, Generate, Keypair, MlDsa65, Signature, SigningKey,
-    VerifyingKey,
+    EncodedSignature, EncodedVerifyingKey, Keypair, MlDsa65, Signature, SigningKey, VerifyingKey,
 };
 
 /// A Probe — a post-quantum identity that can sign blocks and transactions.
@@ -20,7 +21,8 @@ pub struct Probe {
 }
 
 impl Probe {
-    /// Spawn a fresh Probe with a new ML-DSA-65 keypair.
+    /// Spawn a fresh Probe with a new ML-DSA-65 keypair (needs the `signing` feature: operating-system randomness).
+    #[cfg(feature = "signing")]
     pub fn spawn() -> Self {
         Self {
             signing: SigningKey::<MlDsa65>::generate(),
@@ -97,7 +99,7 @@ pub fn verify_hex(pubkey_hex: &str, msg: &[u8], sig_hex: &str) -> bool {
     vk.verify(msg, &sig).is_ok()
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     use super::*;
 

@@ -1,4 +1,4 @@
-//! The session state machine and quorum rule (docs/ARCHITECTURE-COUNCIL.md sections 4 and 5).
+//! The session state machine and quorum rule (the council design notes sections 4 and 5).
 
 use crate::canon::hash_sorted;
 use crate::{independent, required_role, CouncilError, Event, Provider, Role};

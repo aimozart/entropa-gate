@@ -1,0 +1,1 @@
+INS slice 4 mutation (lines changed since the freeze, cargo-mutants --in-diff, run 7): gate 40 caught / 0 missed / 0 unviable; ledger 3 caught / 0 missed / 2 unviable. First run (run 6): 1 survivor (the explorer arm of the option table), closed by test o4.

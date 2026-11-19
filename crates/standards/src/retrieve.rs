@@ -81,6 +81,12 @@ pub struct Config {
     pub flag_factor: f64,
     /// R3: the share of the query's distinct content words that the top passage holds must be at least this; 0 = off.
     pub content_cov_min: f64,
+    /// RS1: the shortest clause, in tokens, whose query density is judged (the `dense_keywords` flag). The shipped value is the R3 one (24); a smaller value is an RS1 candidate.
+    pub density_min_tokens: usize,
+    /// RS1: apply the raw-text structural flags (hidden characters, markup, repeated id). ON by default since the RS1 freeze (a stage record (not published)).
+    pub raw_flags: bool,
+    /// RS1 candidate: an unknown ALL-CAPS name anywhere in the question (not only before a word like "Act") marks it as about another standard. ON by default since the RS1 freeze.
+    pub foreign_any_name: bool,
 }
 
 impl Default for Config {
@@ -112,6 +118,9 @@ impl Default for Config {
             flag_factor: 0.2,
             content_min_matched: 2,
             content_cov_min: 0.5,
+            density_min_tokens: crate::flags::DENSITY_MIN_TOKENS,
+            raw_flags: true,
+            foreign_any_name: true,
         }
     }
 }
@@ -209,6 +218,8 @@ struct Doc {
     seq: Vec<String>,
     /// Flags from the clause's own statistics and from copies of other clauses.
     flags: Vec<&'static str>,
+    /// RS1: flags of the raw text alone (applied only when `Config::raw_flags`).
+    raw_flags: Vec<&'static str>,
 }
 
 struct Index {
@@ -339,6 +350,7 @@ impl Index {
             docs.push(Doc {
                 seq,
                 flags: Vec::new(),
+                raw_flags: crate::flags::raw_flags(&c.text),
                 first_sentence: text::tokens(first).into_iter().collect(),
                 rest: text::tokens(rest_text).into_iter().collect(),
                 rest_words: rest_text.split_whitespace().count(),
@@ -530,7 +542,15 @@ impl Index {
         let mut flags: Vec<&'static str> = Vec::new();
         if cfg.structural_flags {
             flags.extend(d.flags.iter().copied());
-            flags.extend(crate::flags::query_flags(&q.seq, &d.seq, q.question));
+            if cfg.raw_flags {
+                flags.extend(d.raw_flags.iter().copied());
+            }
+            flags.extend(crate::flags::query_flags_with(
+                &q.seq,
+                &d.seq,
+                q.question,
+                cfg.density_min_tokens,
+            ));
             if flags.iter().any(|f| crate::flags::excludes(f)) {
                 score = 0.0;
                 norm = 0.0;
@@ -675,7 +695,12 @@ const KIND_WORDS: &[&str] = &[
 
 /// Does the query name a standard we do not hold? Structural: an all-capitals or digit-bearing name (not one of the held standards' own
 /// name words) followed, after at most two numbers or other acronyms, by a kind word; or an `800-NN` NIST publication number other than 800-53.
-fn names_foreign_standard(q: &str, held_words: &BTreeSet<String>) -> bool {
+fn names_foreign_standard(
+    q: &str,
+    held_words: &BTreeSet<String>,
+    vocab: Option<&HashMap<String, usize>>,
+) -> bool {
+    let any_name = vocab.is_some();
     if let Some(r) = rx(r"\b800-(\d{2,3})") {
         if r.captures_iter(q).any(|c| &c[1] != "53") {
             return true;
@@ -720,6 +745,18 @@ fn names_foreign_standard(q: &str, held_words: &BTreeSet<String>) -> bool {
             ) {
                 continue;
             }
+        }
+        if any_name {
+            // RS1: a name is foreign only if none of its tokens occurs anywhere in the corpus
+            let in_vocab = vocab.is_some_and(|v| {
+                text::tokens(w.trim_matches(|c: char| !c.is_alphanumeric()))
+                    .iter()
+                    .any(|t| v.contains_key(t))
+            });
+            if in_vocab {
+                continue;
+            }
+            return true;
         }
         let mut skipped = 0;
         for next in words.iter().skip(i + 1) {
@@ -982,7 +1019,8 @@ fn analyse(query: &str, idx: &Index, cfg: &Config) -> Analysis {
         .into_iter()
         .filter(|t| !alias_tokens.contains(t))
         .collect();
-    let foreign = cfg.foreign_guard && names_foreign_standard(&q, &held_words);
+    let foreign = cfg.foreign_guard
+        && names_foreign_standard(&q, &held_words, cfg.foreign_any_name.then_some(&idx.df));
     Analysis {
         foreign,
         scope: (!scope.is_empty()).then_some(scope),
