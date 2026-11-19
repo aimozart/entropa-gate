@@ -1,0 +1,8 @@
+error[E0432]: unresolved imports `entropa_standards::flags::raw_flags`, `entropa_standards::flags::HIDDEN_CHARS`, `entropa_standards::flags::ID_REPEAT`, `entropa_standards::flags::MARKUP`
+ --> crates/standards/tests/rs1_raw.rs:4:32
+  |
+4 | use entropa_standards::flags::{raw_flags, HIDDEN_CHARS, ID_REPEAT, MARKUP};
+--
+error[E0609]: no field `raw_flags` on type `Config`
+  --> crates/standards/tests/rs1_raw.rs:33:32
+   |

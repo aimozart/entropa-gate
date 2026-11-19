@@ -1,0 +1,24 @@
+== public-gitignore
+ok count 30
+== vendor-optional
+ok   1 exit 0 without the vendored preflight
+ok   1 the skip is said with its reason
+ok   1 the ignore checks still ran
+ok   2 a wrong recorded hash still fails
+ok   3 the right recorded hash passes
+ok   4 absent vendor: exit 0
+ok   4 the skip is said with its reason
+ok   4 the preflight scripts were not called
+FAIL 5 present vendor: rc=0 calls=[CALLED public-preflight.sh ]
+ok   5 a failing preflight fails the step
+== gitignore-baseline (private tree)
+ok   1 exit 0 without the vendored preflight
+ok   1 the skip is said with its reason
+ok   1 the ignore checks still ran
+ok   2 a wrong recorded hash still fails
+ok   3 the right recorded hash passes
+ok   4 absent vendor: exit 0
+ok   4 the skip is said with its reason
+ok   4 the preflight scripts were not called
+ok   5 present vendor: both called in order
+ok   5 a failing preflight fails the step

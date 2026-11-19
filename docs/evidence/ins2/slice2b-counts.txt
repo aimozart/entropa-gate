@@ -1,0 +1,12 @@
+entropa-gate debug: 43 passed 0 failed 0 ignored 
+entropa-gate --release: 43 passed 0 failed 0 ignored 
+entropa-ledger debug: 118 passed 0 failed 4 ignored 
+entropa-ledger --release: 118 passed 0 failed 4 ignored 
+entropa-witness debug: 54 passed 0 failed 1 ignored 
+entropa-witness --release: 54 passed 0 failed 1 ignored 
+entropa-core debug: 115 passed 0 failed 5 ignored 
+entropa-core --release: 115 passed 0 failed 5 ignored 
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.58s
+fmt diffs (workspace, old files included): 14
+OK   build entropa-ledger (wasm32, no default features)
+OK   tree entropa-ledger has no getrandom or rand

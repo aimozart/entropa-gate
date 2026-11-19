@@ -21,7 +21,7 @@ failed=$(printf '%s' "$out" | grep -Eo '[0-9]+ failed' | grep -Eo '[0-9]+' | pas
 echo "tests: $passed passed, $failed failed; result: $([ $rc -eq 0 ] && echo PASS || echo FAIL)"
 # signed receipt: evidence.control_check / ci_tests, counts only (the module name and sha are hashed with the run id, never stored)
 DIR=${EVIDENCE_DIR:-$HOME/.local/share/hippagrchealthcare-evidence}
-if command -v entropa-platinum >/dev/null && [ -f "$DIR/platinum.key" ]; then
+if command -v entropa-platinum >/dev/null && { [ -f "$DIR/evidence.key" ] || [ -f "$DIR/platinum.key" ]; }; then
   if [ "$rc" -eq 0 ]; then d=allow; r=check_passed; else d=deny; r=check_failed; fi
   jq -n --arg d "$d" --arg r "$r" --argjson t $((passed + failed)) --argjson p "$passed" --argjson f "$failed" --arg det "module $mod at $sha" --arg run "ci-$mod-$sha" \
     '{kind:"evidence.control_check",label:"ci_tests",decision:$d,reason:$r,control:"hitrust_10_sdlc",total:$t,passed:$p,flagged:$f,detail:$det,run_id:$run}' \

@@ -1,0 +1,3 @@
+verify_ledger signature: pub fn verify_ledger(dir: &Path, sub: &str, accept, pubkey_hex) reads files through FileStore::open_read_only (std::fs); wasm32-unknown-unknown has no file system
+wasm build of entropa-nodecore:
+error: failed to download `bumpalo v3.20.3`

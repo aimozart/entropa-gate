@@ -8,9 +8,11 @@
 
 use entropa_approvals::{ActionClass, BlockReason};
 
+#[cfg(feature = "engine")]
 mod engine;
 mod record;
 
+#[cfg(feature = "engine")]
 pub use engine::Engine;
 pub use record::{
     append_record, decode_record, record_canonical_bytes, record_digest, sign_record,

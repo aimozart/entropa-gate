@@ -1,6 +1,6 @@
 # Testing
 
-## True counts (2026-10-20, branch rerust-s0g-receipt-index)
+## True counts (2026-10-20)
 Produced by `scripts/count-tests.sh` (it runs `cargo test --workspace --locked` in Docker, default and `--all-features`, and sums the `test result:` lines). Output saved in `docs/evidence/s0c3-count-tests.txt`.
 
 | Build | Passed | Failed | Ignored |

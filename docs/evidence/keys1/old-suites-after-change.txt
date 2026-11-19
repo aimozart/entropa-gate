@@ -1,0 +1,298 @@
+   Compiling entropa-mockview v0.2.0 (<build-dir>/<worktree>/crates/mockview)
+   Compiling entropa-platinum v0.2.0 (<build-dir>/<worktree>/crates/platinum)
+   Compiling entropa-nodecore v0.2.0 (<build-dir>/<worktree>/crates/nodecore)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.94s
+     Running unittests src/lib.rs (<build-dir>/keys1-target/debug/deps/entropa_mockview-8fecd1264340c514)
+
+running 2 tests
+test tests::u1_names_up_to_100_bytes_are_accepted_and_101_refused ... ok
+test tests::u2_every_data_size_pads_to_a_whole_block_and_the_system_tar_reads_it_back ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/main.rs (<build-dir>/keys1-target/debug/deps/entropa_mockview-48d6f10ec58d5523)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/ls2.rs (<build-dir>/keys1-target/debug/deps/ls2-78851b48af4a56ce)
+
+running 9 tests
+test q1_the_marker_limit_is_exactly_4096_bytes_and_errors_print_their_variant ... ok
+test l3_hostile_marker_text_never_reaches_the_pages_as_markup ... ok
+test l7_app_js_is_free_of_unsafe_sinks_and_renders_under_a_fake_dom ... ok
+test l5_records_equal_the_independent_platinum_export ... ok
+test l2_every_refusal_writes_nothing ... ok
+test l4_no_private_string_no_email_no_banned_word_and_the_allowed_fields_only ... ok
+test q2_the_command_line_tool_prints_ok_refuses_with_exit_1_and_checks_its_arguments ... ok
+test l6_output_is_deterministic_and_the_verify_block_is_exact ... ok
+test l1_a_verified_mock_ledger_becomes_a_paged_bundle_with_the_label_everywhere ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 55.81s
+
+     Running tests/ls2_tar.rs (<build-dir>/keys1-target/debug/deps/ls2_tar-2d172e6d2a43f126)
+
+running 9 tests
+test t2_a_key_file_and_any_other_file_in_the_ledger_directory_never_enter_the_tar ... ok
+test v2_the_reader_command_refuses_a_wrong_key_a_changed_byte_and_bad_usage ... ok
+test t5_the_page_links_the_tar_with_textcontent_only_and_the_csp_still_holds ... ok
+test t6_the_command_line_flag_writes_the_tar_and_nothing_else_changes ... ok
+test t4_the_tar_is_deterministic_and_a_refusal_writes_no_tar ... ok
+test v3_the_reader_command_works_on_read_only_media_and_refuses_a_path_with_no_ledger ... ok
+test t3_meta_describes_the_tar_and_without_the_option_there_is_none ... ok
+test v1_the_reader_command_verifies_the_extracted_tar_with_only_the_public_key ... ok
+test t1_the_tar_holds_exactly_the_marker_records_and_checkpoints_and_the_copy_verifies ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.66s
+
+     Running unittests src/lib.rs (<build-dir>/keys1-target/debug/deps/entropa_nodecore-d6c66ffbe7453aae)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/nodecore.rs (<build-dir>/keys1-target/debug/deps/nodecore-9969c2d2a0c467a9)
+
+running 9 tests
+test q2_council_model_fields_all_five_or_none ... ok
+test n3_every_refusal_text_equals_the_unmoved_platinum_text_except_the_duplicate_key_decision ... ok
+test q1_a_request_without_ts_gets_the_current_time_and_one_with_ts_keeps_it ... ok
+test n4_a_duplicated_key_is_refused_in_all_three_schemas ... ok
+test n6_a_failing_signer_leaves_the_ledger_exactly_as_it_was ... ok
+test n7_the_dependency_tree_holds_no_network_or_cloud_crate ... ok
+test n2_evidence_and_council_events_equal_the_platinum_bytes ... ok
+test n1_four_decision_appends_write_the_golden_bytes_and_receipts ... ok
+test n5_verify_failures_have_the_unmoved_platinum_texts ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.24s
+
+     Running tests/read_only.rs (<build-dir>/keys1-target/debug/deps/read_only-490e06b5218b3bbf)
+
+running 7 tests
+test ro2_a_missing_directory_is_an_error_and_is_not_created ... ok
+test ro7_a_node_directory_without_the_ledger_directory_keeps_its_old_answer_and_creates_nothing ... ok
+test ro4_every_write_on_a_read_only_store_is_refused_and_changes_nothing ... ok
+test ro3_it_works_while_a_writer_holds_the_store_and_leaves_the_writers_lock_alone ... ok
+test ro6_a_corrupt_ledger_is_refused_in_read_only_mode_for_the_right_reason ... ok
+test ro1_a_read_only_directory_loads_and_nothing_is_created ... ok
+test ro5_the_node_verifier_and_the_reader_command_verify_a_read_only_ledger ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.29s
+
+     Running unittests src/lib.rs (<build-dir>/keys1-target/debug/deps/entropa_platinum-283d34aa5dcfb8bd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (<build-dir>/keys1-target/debug/deps/entropa_platinum-7e7c9136afaa5130)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (<build-dir>/keys1-target/debug/deps/cli-cd74da34d2ddc988)
+
+running 6 tests
+test c3_the_key_file_is_private_and_a_loose_one_is_refused ... FAILED
+test c6_a_second_writer_is_refused ... ok
+test c2_nothing_raw_reaches_disk ... ok
+test c4_bad_requests_are_refused_and_nothing_is_written ... ok
+test c5_tampering_with_a_record_is_detected ... ok
+test c1_init_log_verify_round_trip ... ok
+
+failures:
+
+---- c3_the_key_file_is_private_and_a_loose_one_is_refused stdout ----
+
+thread 'c3_the_key_file_is_private_and_a_loose_one_is_refused' (1372237) panicked at crates/platinum/tests/cli.rs:104:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    c3_the_key_file_is_private_and_a_loose_one_is_refused
+
+test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+
+error: test failed, to rerun pass `-p entropa-platinum --test cli`
+     Running tests/controls_labels.rs (<build-dir>/keys1-target/debug/deps/controls_labels-8c264f21a898b619)
+
+running 4 tests
+test cl3_unknown_control_codes_are_refused ... ok
+test cl4_the_old_labels_still_work_with_an_old_control ... ok
+test cl2_the_new_labels_are_refused_on_the_wrong_kinds_and_nothing_is_written ... ok
+test cl1_log_evidence_accepts_both_labels_with_every_new_control_and_the_ledger_verifies ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.02s
+
+     Running tests/corpus_labels.rs (<build-dir>/keys1-target/debug/deps/corpus_labels-e8d874f92c85f953)
+
+running 4 tests
+test cv3_no_new_control_code_exists_and_unknown_codes_are_still_refused ... ok
+test cv2_each_label_is_refused_on_every_other_kind_and_nothing_is_written ... ok
+test cv4_the_old_labels_still_work_on_their_kinds ... ok
+test cv1_log_evidence_accepts_each_label_on_its_own_kind_and_the_ledger_verifies ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+     Running tests/council.rs (<build-dir>/keys1-target/debug/deps/council-e9b8702b7b652766)
+
+running 4 tests
+test co1_log_and_verify_a_separate_council_ledger ... FAILED
+test co2_unknown_fields_and_non_council_labels_are_refused ... ok
+test co3_the_export_has_plain_english_and_never_the_raw_text ... FAILED
+test co4_a_closed_output_pipe_is_quiet_not_a_panic ... ok
+
+failures:
+
+---- co1_log_and_verify_a_separate_council_ledger stdout ----
+
+thread 'co1_log_and_verify_a_separate_council_ledger' (1372345) panicked at crates/platinum/tests/council.rs:45:9:
+error: no key file (run init first)
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- co3_the_export_has_plain_english_and_never_the_raw_text stdout ----
+
+thread 'co3_the_export_has_plain_english_and_never_the_raw_text' (1372347) panicked at crates/platinum/tests/council.rs:84:5:
+error: no key file (run init first)
+
+
+
+failures:
+    co1_log_and_verify_a_separate_council_ledger
+    co3_the_export_has_plain_english_and_never_the_raw_text
+
+test result: FAILED. 2 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+error: test failed, to rerun pass `-p entropa-platinum --test council`
+     Running tests/evidence.rs (<build-dir>/keys1-target/debug/deps/evidence-1d99076b097c6af3)
+
+running 8 tests
+test ec3_the_detail_text_never_reaches_disk ... ok
+test ex2_an_export_of_a_tampered_ledger_fails ... ok
+test ec2_bad_requests_are_refused_and_nothing_is_written ... ok
+test ec4_a_tampered_evidence_record_is_detected ... ok
+test ec1_log_and_verify_a_separate_evidence_ledger ... ok
+test ex1_the_export_bundle_lists_records_hashes_and_checkpoints_without_detail ... ok
+test ex3_every_exported_record_carries_a_plain_english_sentence ... ok
+test ex4_the_bundle_carries_everything_a_browser_needs_to_verify_independently ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running tests/keys1.rs (<build-dir>/keys1-target/debug/deps/keys1-2f5717ca6c8690bb)
+
+running 8 tests
+test k1_init_creates_two_distinct_keys_with_mode_0600_and_no_council_key ... ok
+test k2_keys_add_creates_the_council_key_once_and_never_overwrites ... ok
+test k6_keys_check_on_a_separated_node_passes_and_prints_distinct_key_ids_and_no_key_material ... ok
+test k7_a_per_ledger_key_file_readable_by_others_is_refused ... ok
+test k8_a_node_with_a_shared_key_and_one_own_key_mixes_correctly ... ok
+test k5_a_legacy_node_with_only_platinum_key_still_works_and_keys_check_says_so ... ok
+test k4_a_ledger_does_not_verify_under_another_ledgers_key ... ok
+test k3_each_ledger_signs_with_its_own_key_and_the_key_ids_differ ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+     Running tests/serve.rs (<build-dir>/keys1-target/debug/deps/serve-e4b4145dfec71bf7)
+
+running 8 tests
+initialised
+initialised
+initialised
+initialised
+initialised
+initialised
+initialised
+initialised
+test s3_an_oversized_body_is_refused ... ok
+test s5_errors_never_echo_the_request ... ok
+test s6_the_public_key_is_served_and_matches_the_cli ... ok
+test s2_bad_requests_get_4xx_and_write_nothing ... ok
+test s4_a_stale_lock_from_a_crashed_instance_is_cleared_at_boot ... ok
+test s7_the_evidence_endpoint_logs_and_verifies_over_http ... ok
+test s1_health_log_verify_over_http ... ok
+test s8_both_ledgers_export_a_bundle_with_plain_english_and_no_raw_text ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s
+
+     Running tests/signer.rs (<build-dir>/keys1-target/debug/deps/signer-5b4ac4457316895f)
+
+running 4 tests
+test k2_the_evidence_ledger_uses_the_same_signer ... ok
+test k3_a_signer_that_fails_leaves_the_ledger_unchanged ... ok
+test k4_a_failure_signing_the_checkpoint_also_leaves_the_ledger_unchanged ... ok
+test k1_events_and_checkpoints_verify_under_the_remote_key_only ... FAILED
+
+failures:
+
+---- k1_events_and_checkpoints_verify_under_the_remote_key_only stdout ----
+
+thread 'k1_events_and_checkpoints_verify_under_the_remote_key_only' (1372517) panicked at crates/platinum/tests/signer.rs:36:14:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    k1_events_and_checkpoints_verify_under_the_remote_key_only
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+error: test failed, to rerun pass `-p entropa-platinum --test signer`
+     Running tests/triage_labels.rs (<build-dir>/keys1-target/debug/deps/triage_labels-2f0ca5a9483d478f)
+
+running 3 tests
+test tl3_the_new_labels_are_refused_on_the_wrong_kinds_and_nothing_is_written ... ok
+test tl1_log_accepts_claims_triage_and_refuses_the_other_new_labels ... ok
+test tl2_log_evidence_accepts_the_policy_labels_and_case_outcome_on_their_kinds ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+     Running tests/witness_sync.rs (<build-dir>/keys1-target/debug/deps/witness_sync-70a52a4fd1dbd031)
+
+running 4 tests
+test s4_an_unreachable_witness_is_reported_and_never_breaks_the_ledger ... ok
+test s3_the_export_carries_the_witness_statements ... FAILED
+test s1_a_checkpoint_is_witnessed_and_the_statement_is_kept_and_verifies ... ok
+test s2_a_later_sync_sends_a_consistency_proof_and_names_the_previous_checkpoint ... ok
+
+failures:
+
+---- s3_the_export_carries_the_witness_statements stdout ----
+
+thread 's3_the_export_carries_the_witness_statements' (1372552) panicked at crates/platinum/tests/witness_sync.rs:107:34:
+called `Result::unwrap()` on an `Err` value: "record 0: signature does not verify"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    s3_the_export_carries_the_witness_statements
+
+test result: FAILED. 3 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+error: test failed, to rerun pass `-p entropa-platinum --test witness_sync`
+   Doc-tests entropa_mockview
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_nodecore
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_platinum
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+error: 4 targets failed:
+    `-p entropa-platinum --test cli`
+    `-p entropa-platinum --test council`
+    `-p entropa-platinum --test signer`
+    `-p entropa-platinum --test witness_sync`

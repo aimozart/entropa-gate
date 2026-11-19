@@ -1,0 +1,284 @@
+diff --git a/crates/gate/src/check.rs b/crates/gate/src/check.rs
+index eb0001b..325e1dc 100644
+--- a/crates/gate/src/check.rs
++++ b/crates/gate/src/check.rs
+@@ -1,6 +1,7 @@
+ //! INS2 slice 2b: `entropa-gate check --dir D [--anchor FILE]... [--require-anchor]` and `entropa-gate anchor export --dir D --out FILE [--signed]`.
+ //! `check` prints `verdict: <closed code>[ N]` and a counts line; it never prints record content. Exit codes: 0 ok_*, 1 any alarm, 2 usage, 3 an input file was refused (not a verdict).
+ use crate::keys;
++use crate::opts::{self, Spec};
+ use entropa_core::anchor::{assess, Anchor, AnyCheckpoint, Verdict};
+ use entropa_core::transparency_log::decode_record;
+ use entropa_ledger::{read_raw_with, verify_event, Kind, LedgerError};
+@@ -15,19 +16,6 @@ const USAGE_CHECK: &str =
+     "usage: entropa-gate check --dir DIR [--anchor FILE]... [--require-anchor]";
+ const USAGE_ANCHOR: &str = "usage: entropa-gate anchor export --dir DIR --out FILE [--signed]";
+ 
+-fn values(args: &[String], name: &str) -> Option<Vec<String>> {
+-    let mut out = Vec::new();
+-    let mut i = 0;
+-    while i < args.len() {
+-        if args[i] == name {
+-            out.push(args.get(i + 1)?.clone());
+-            i += 1;
+-        }
+-        i += 1;
+-    }
+-    Some(out)
+-}
+-
+ enum Loaded {
+     /// Anchors that decoded and name this log.
+     Anchors(Vec<Anchor>),
+@@ -148,14 +136,20 @@ fn run_check(args: &[String], out: &mut dyn Write, err: &mut dyn Write) -> i32 {
+         let _ = writeln!(err, "{USAGE_CHECK}");
+         2
+     };
+-    let (Some(dirs), Some(files)) = (values(args, "--dir"), values(args, "--anchor")) else {
++    let spec = Spec {
++        once: &["--dir"],
++        many: &["--anchor"],
++        flags: &["--require-anchor"],
++    };
++    let Some(o) = opts::parse(&args[1..], &spec) else {
+         return usage(err);
+     };
+-    let [dir] = dirs.as_slice() else {
++    let Some(dir) = o.one("--dir") else {
+         return usage(err);
+     };
++    let files: Vec<String> = o.all("--anchor").into_iter().map(String::from).collect();
+     let dir = PathBuf::from(dir);
+-    let require = args.iter().any(|a| a == "--require-anchor");
++    let require = o.flag("--require-anchor");
+     let pubkey = match pubkey_of(&dir) {
+         Ok(k) => k,
+         Err(e) => {
+@@ -197,13 +191,18 @@ fn run_export(args: &[String], out: &mut dyn Write, err: &mut dyn Write) -> i32
+         let _ = writeln!(err, "{USAGE_ANCHOR}");
+         2
+     };
+-    let (Some(dirs), Some(outs)) = (values(args, "--dir"), values(args, "--out")) else {
++    let spec = Spec {
++        once: &["--dir", "--out"],
++        many: &[],
++        flags: &["--signed"],
++    };
++    let Some(o) = opts::parse(&args[2..], &spec) else {
+         return usage(err);
+     };
+-    let ([dir], [file]) = (dirs.as_slice(), outs.as_slice()) else {
++    let (Some(dir), Some(file)) = (o.one("--dir"), o.one("--out")) else {
+         return usage(err);
+     };
+-    let signed = args.iter().any(|a| a == "--signed");
++    let signed = o.flag("--signed");
+     let dir = PathBuf::from(dir);
+     let pubkey = match pubkey_of(&dir) {
+         Ok(k) => k,
+diff --git a/crates/gate/src/cli.rs b/crates/gate/src/cli.rs
+index 76d3aeb..3fee5ef 100644
+--- a/crates/gate/src/cli.rs
++++ b/crates/gate/src/cli.rs
+@@ -1,5 +1,6 @@
+ //! The command line: `init --dir D`, `record --dir D` (one JSON request on stdin), `verify --dir D`, `status --dir D [--config C]`.
+ use crate::config::Config;
++use crate::opts::{self, Spec};
+ use crate::{keys, node, GateError};
+ use std::io::{Read, Write};
+ use std::path::PathBuf;
+@@ -23,6 +24,28 @@ pub fn run(args: &[String], stdin: &mut dyn Read, out: &mut dyn Write, err: &mut
+     if matches!(args.first().map(String::as_str), Some("check" | "anchor")) {
+         return crate::check::run(args, out, err);
+     }
++    let spec = match args.first().map(String::as_str) {
++        Some("init" | "record" | "verify") => Some(Spec {
++            once: &["--dir"],
++            many: &[],
++            flags: &[],
++        }),
++        Some("status") => Some(Spec {
++            once: &["--dir", "--config"],
++            many: &[],
++            flags: &[],
++        }),
++        Some("explorer") => Some(Spec {
++            once: &["--dir", "--config", "--out"],
++            many: &[],
++            flags: &[],
++        }),
++        _ => None,
++    };
++    // an unknown option, an extra word or a repeated option is a usage error, never ignored
++    if !spec.is_some_and(|sp| opts::parse(&args[1..], &sp).is_some()) {
++        return usage(err);
++    }
+     let (Some(cmd), Some(dir)) = (args.first(), flag(args, "--dir")) else {
+         return usage(err);
+     };
+@@ -95,6 +118,20 @@ fn licence_cmd(args: &[String], out: &mut dyn Write, err: &mut dyn Write) -> i32
+         let _ = writeln!(err, "usage: entropa-gate licence check --file FILE [--pubkey-file FILE] [--require ENTITLEMENT]");
+         return 2;
+     }
++    let licence_usage = "usage: entropa-gate licence check --file FILE [--pubkey-file FILE] [--require ENTITLEMENT]";
++    if opts::parse(
++        &args[2..],
++        &Spec {
++            once: &["--file", "--pubkey-file", "--require"],
++            many: &[],
++            flags: &[],
++        },
++    )
++    .is_none()
++    {
++        let _ = writeln!(err, "{licence_usage}");
++        return 2;
++    }
+     let Some(file) = flag(args, "--file") else {
+         let _ = writeln!(err, "licence: --file FILE is required");
+         return 2;
+diff --git a/crates/gate/src/lib.rs b/crates/gate/src/lib.rs
+index 74af0a2..bdb62b7 100644
+--- a/crates/gate/src/lib.rs
++++ b/crates/gate/src/lib.rs
+@@ -11,6 +11,7 @@ pub mod licence;
+ #[cfg(feature = "issue")]
+ pub mod licence_issue;
+ pub mod node;
++pub mod opts;
+ #[cfg(feature = "plant")]
+ pub mod plant;
+ 
+diff --git a/crates/gate/src/opts.rs b/crates/gate/src/opts.rs
+new file mode 100644
+index 0000000..38333e6
+--- /dev/null
++++ b/crates/gate/src/opts.rs
+@@ -0,0 +1,67 @@
++//! Strict option parsing for the gate's subcommands: an unknown option, an extra word, a missing value, or an option that may not repeat is a usage error (the caller prints its usage line and exits 2).
++//! A mistyped `--require-anchors` must never be ignored. An option that takes a value takes the NEXT word as that value, whatever it looks like.
++
++/// What a subcommand accepts (all names include the leading `--`).
++pub struct Spec<'a> {
++    /// Options with one value that may appear once.
++    pub once: &'a [&'a str],
++    /// Options with one value that may repeat.
++    pub many: &'a [&'a str],
++    /// Options without a value that may appear once.
++    pub flags: &'a [&'a str],
++}
++
++/// The parsed options.
++#[derive(Debug, Default)]
++pub struct Opts {
++    values: Vec<(String, String)>,
++    flags: Vec<String>,
++}
++
++impl Opts {
++    /// The value of an option that may appear once.
++    pub fn one(&self, name: &str) -> Option<&str> {
++        self.values
++            .iter()
++            .find(|(k, _)| k == name)
++            .map(|(_, v)| v.as_str())
++    }
++    /// Every value of an option, in order.
++    pub fn all(&self, name: &str) -> Vec<&str> {
++        self.values
++            .iter()
++            .filter(|(k, _)| k == name)
++            .map(|(_, v)| v.as_str())
++            .collect()
++    }
++    /// Whether a flag was given.
++    pub fn flag(&self, name: &str) -> bool {
++        self.flags.iter().any(|f| f == name)
++    }
++}
++
++/// Parse `args` (the words after the subcommand). `None` = a usage error.
++pub fn parse(args: &[String], spec: &Spec<'_>) -> Option<Opts> {
++    let mut out = Opts::default();
++    let mut i = 0;
++    while i < args.len() {
++        let a = args[i].as_str();
++        if spec.flags.contains(&a) {
++            if out.flag(a) {
++                return None;
++            }
++            out.flags.push(a.to_string());
++        } else if spec.once.contains(&a) || spec.many.contains(&a) {
++            let value = args.get(i + 1)?;
++            if spec.once.contains(&a) && out.one(a).is_some() {
++                return None;
++            }
++            out.values.push((a.to_string(), value.clone()));
++            i += 1;
++        } else {
++            return None;
++        }
++        i += 1;
++    }
++    Some(out)
++}
+diff --git a/crates/ledger/src/raw.rs b/crates/ledger/src/raw.rs
+index 9f0e4e4..da36cd6 100644
+--- a/crates/ledger/src/raw.rs
++++ b/crates/ledger/src/raw.rs
+@@ -63,10 +63,21 @@ fn bounded_lines(
+     }
+ }
+ 
++/// True when any hex field of a checkpoint line holds an upper-case digit (the documented layout is lower case).
++pub(crate) fn upper_case_hex_field(v: &serde_json::Value) -> bool {
++    ["root", "prev", "signature", "proposer_pubkey"]
++        .iter()
++        .filter_map(|k| v.get(*k).and_then(serde_json::Value::as_str))
++        .any(|t| t.bytes().any(|b| b.is_ascii_uppercase()))
++}
++
+ fn parse_checkpoint(line: &[u8]) -> Result<AnyCheckpoint, LedgerError> {
+     let text = std::str::from_utf8(line).map_err(|_| corrupt("a checkpoint line is not text"))?;
+     let v: serde_json::Value =
+         serde_json::from_str(text).map_err(|_| corrupt("a checkpoint line is not valid"))?;
++    if upper_case_hex_field(&v) {
++        return Err(corrupt("a checkpoint hex field is not lower-case"));
++    }
+     if v.get("counter").is_some() {
+         serde_json::from_value::<CheckpointV2>(v)
+             .map(AnyCheckpoint::V2)
+@@ -91,6 +102,9 @@ pub fn read_raw_with(
+     let mut leaves = Vec::new();
+     bounded_lines(&dir.join("records.log"), MAX_RECORD_LINE, |l| {
+         let text = std::str::from_utf8(l).map_err(|_| corrupt("a record line is not hex"))?;
++        if text.bytes().any(|b| b.is_ascii_uppercase()) {
++            return Err(corrupt("a record line is not lower-case hex"));
++        }
+         let bytes = hex::decode(text).map_err(|_| corrupt("a record line is not hex"))?;
+         if bytes.is_empty() || bytes.len() > MAX_RECORD_BYTES {
+             return Err(corrupt("a stored record is empty or too large"));
+diff --git a/crates/ledger/src/store.rs b/crates/ledger/src/store.rs
+index aa641ac..c695169 100644
+--- a/crates/ledger/src/store.rs
++++ b/crates/ledger/src/store.rs
+@@ -316,6 +316,9 @@ impl FileStore {
+ 
+     fn load(&mut self) -> Result<(), LedgerError> {
+         for line in lines(&self.dir.join("records.log"))? {
++            if line.bytes().any(|b| b.is_ascii_uppercase()) {
++                return Err(corrupt("a record line is not lower-case hex"));
++            }
+             let bytes = hex::decode(&line).map_err(|_| corrupt("a record line is not hex"))?;
+             Core::check_record(&bytes)
+                 .map_err(|_| corrupt("a stored record is empty or too large"))?;
+@@ -324,6 +327,9 @@ impl FileStore {
+         for line in lines(&self.dir.join("checkpoints.log"))? {
+             let value: serde_json::Value = serde_json::from_str(&line)
+                 .map_err(|_| corrupt("a checkpoint line is not valid"))?;
++            if crate::raw::upper_case_hex_field(&value) {
++                return Err(corrupt("a checkpoint hex field is not lower-case"));
++            }
+             if value.get("counter").is_some() {
+                 let cp: CheckpointV2 = serde_json::from_value(value)
+                     .map_err(|_| corrupt("a checkpoint line is not valid"))?;

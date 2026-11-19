@@ -1,0 +1,13 @@
+crates/standards/src/rs1eval.rs:294:5: replace run_heldout_rs1 -> Result<Value, String> with Ok(Default::default())
+crates/standards/src/rs1eval.rs:333:5: replace run_signals -> Value with Default::default()
+crates/standards/src/rs1eval.rs:347:37: replace == with != in run_signals
+crates/standards/src/rs1eval.rs:350:26: replace > with == in run_signals
+crates/standards/src/rs1eval.rs:350:26: replace > with < in run_signals
+crates/standards/src/rs1eval.rs:350:26: replace > with >= in run_signals
+crates/standards/src/rs1eval.rs:440:14: replace += with *= in inj_block_rs1
+crates/standards/src/rs1eval.rs:441:18: replace += with *= in inj_block_rs1
+crates/standards/src/rs1eval.rs:441:13: replace + with * in inj_block_rs1
+crates/standards/src/rs1eval.rs:442:34: replace || with && in inj_block_rs1
+crates/standards/src/rs1eval.rs:442:14: replace == with != in inj_block_rs1
+crates/standards/src/rs1eval.rs:442:39: replace == with != in inj_block_rs1
+crates/standards/src/rs1eval.rs:445:18: replace == with != in inj_block_rs1

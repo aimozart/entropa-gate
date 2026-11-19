@@ -1,0 +1,8 @@
+OK   build entropa-witness (wasm32, no default features)
+OK   tree entropa-witness has no getrandom or rand
+OK   build entropa-approvals (wasm32, no default features)
+OK   tree entropa-approvals has no getrandom or rand
+FAIL build entropa-policy: error: failed to download `bumpalo v3.20.3`
+FAIL tree entropa-policy: error: failed to download `bumpalo v3.20.3` 
+FAIL build entropa-ledger: error[E0432]: unresolved import `entropa_policy::Engine`
+OK   tree entropa-ledger has no getrandom or rand

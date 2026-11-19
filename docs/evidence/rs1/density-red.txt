@@ -1,0 +1,10 @@
+test d1_the_minimum_clause_length_for_the_density_flag_is_ten_tokens ... FAILED
+test d2_a_short_clause_made_mostly_of_query_words_is_flagged_and_a_normal_short_clause_is_not ... FAILED
+test d3_the_partial_query_mirror_family_of_the_rs1_dev_set_no_longer_wins ... FAILED
+test d4_no_short_stale_or_id_named_regression_from_the_new_minimum ... ok
+
+failures:
+
+test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+error: test failed, to rerun pass `-p entropa-standards --test rs1_density`

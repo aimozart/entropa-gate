@@ -1,0 +1,12 @@
+"eckpointter" # Uses: 600
+"\270\000\000\000\000\000\000\000" # Uses: 570
+"\001\000\000\001" # Uses: 576
+"rn{11wernt" # Uses: 511
+"\377\377\377\377\377\377\015\015" # Uses: 458
+"ooulter111nter" # Uses: 419
+"ecekpoint" # Uses: 352
+"\377\007" # Uses: 239
+"\377\377\377\377\377\377\377\007" # Uses: 162
+"\015\000" # Uses: 57
+###### End of recommended dictionary. ######
+Done 6414352 runs in 61 second(s)

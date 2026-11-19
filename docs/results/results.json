@@ -2,14 +2,729 @@
  "schema": "results-1",
  "label": "Results of sealed and held-out runs, tested against the frozen code of the day. Failures are included. Evidence mapped to the control, not a security claim. Each set is spent: it is never reused.",
  "summary": {
-  "rows": 12,
-  "bars": 64,
-  "failed_bars": 21,
-  "checks": 158,
-  "checks_passed": 158,
+  "rows": 19,
+  "bars": 102,
+  "failed_bars": 25,
+  "checks": 232,
+  "checks_passed": 232,
   "parked_rows": 2
  },
  "rows": [
+  {
+   "id": "EG-8",
+   "title": "Egress guard, round 8 held-out (digit budget, capitals and hyphen rules)",
+   "area": "egress guard",
+   "date": "2026-11-19",
+   "set_size": 853,
+   "set_size_note": "853 cases",
+   "set_spent": true,
+   "set_flaws": [],
+   "sources": [
+    {
+     "file": "docs/research/EG8-round8-heldout-report-2026-11-19.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/EG8-round8-heldout-summary-2026-11-19.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "free-text secrets leaked",
+     "numerator": 0,
+     "denominator": 315,
+     "meaning": "leaked",
+     "bar": "at most 1 percent (0 for the new families)",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "typed channel leaks",
+     "numerator": 0,
+     "denominator": 58,
+     "meaning": "leaked",
+     "bar": "0",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "plain prose refused",
+     "numerator": 0,
+     "denominator": 60,
+     "meaning": "blocked",
+     "bar": "none (reported)",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "clean prose refused over the realistic price classes",
+     "numerator": 80,
+     "denominator": 290,
+     "meaning": "blocked",
+     "bar": "at most 25 percent",
+     "bar_verified": false,
+     "result": "fail",
+     "note": "80 of 290 is 27.6 percent against a bar of 25 percent: slash dates 25 of 25, ordinal dates 20 of 20, fractions 15 of 15 and ordinal words 15 of 15 were refused: a slash is not an allowed mark and an ordinal suffix is not a word; all other price classes 0 to 3 refused; the bar is not moved",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "ambiguous classes leaked (hyphenated unregistered digit phrases, dollar misuse)",
+     "numerator": 0,
+     "denominator": 30,
+     "meaning": "leaked",
+     "bar": "none (reported on their own)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "digits up to eight in any shape (capacity, declared report-only before the run)",
+     "numerator": 20,
+     "denominator": 20,
+     "meaning": "leaked",
+     "bar": "none (by design)",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "about 26.6 bits per message",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "passphrases of ordinary words (capacity, declared report-only before the run)",
+     "numerator": 15,
+     "denominator": 15,
+     "meaning": "leaked",
+     "bar": "none (by design)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    }
+   ],
+   "what_it_tested": "The Egress Guard after the digit-limit, hyphen and capital-letter rules, on 853 new cases including realistic business prose (dates, money, quantities) to measure what strictness costs.",
+   "what_happened": "None of 315 secret-shaped cases got through, none of 58 bad structured requests, and none of 60 plain sentences were refused. The price bar was missed: 80 of 290 realistic sentences were refused (27.6 percent, bar 25), mostly dates written with slashes, fractions and words like 4th. Up to 8 digits in any shape, passphrases of ordinary words and spelled-out digits still pass by design.",
+   "what_changed_next": "A small fix for the date forms is planned. This engine is built and tested but ships in a later release than the one now being prepared."
+  },
+  {
+   "id": "EG-7",
+   "title": "Egress guard, round 7 held-out (typed channel and word-list gate)",
+   "area": "egress guard",
+   "date": "2026-11-18",
+   "set_size": 932,
+   "set_size_note": "932 cases",
+   "set_spent": true,
+   "set_flaws": [
+    "The one case counted as a typed leak (r7-0167) is a valid body: the author's generator replaced true with true, so the guard correctly accepted it; the mechanical result stays failed",
+    "Three of the twelve look-alike cases (r7-0470, 0472, 0477) contain no non-ASCII character: the generator replaced only some letters, so plain dictionary words stayed, which the guard correctly accepted"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/EG7-round7-heldout-report-2026-11-18.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/EG7-round7-heldout-summary-2026-11-18.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "free-text secrets leaked",
+     "numerator": 0,
+     "denominator": 216,
+     "meaning": "leaked",
+     "bar": "at most 1 percent",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "clean prose refused",
+     "numerator": 0,
+     "denominator": 120,
+     "meaning": "blocked",
+     "bar": "at most 15 percent",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "typed valid bodies refused",
+     "numerator": 0,
+     "denominator": 38,
+     "meaning": "blocked",
+     "bar": "at most 2 percent",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "typed channel leaks (as computed)",
+     "numerator": 1,
+     "denominator": 162,
+     "meaning": "leaked",
+     "bar": "0",
+     "bar_verified": true,
+     "result": "fail",
+     "note": "set flaw: the one case is a valid body; the real count of shape-fault leaks is 0 of 161; the failed bar is not regraded",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "digits split into groups by words (labelled ambiguous before the run)",
+     "numerator": 10,
+     "denominator": 10,
+     "meaning": "leaked",
+     "bar": "none (not a bar)",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "twelve digits, most of a card number, can leave in this shape",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "dictionary words joined by hyphens with a four-digit tail (ambiguous)",
+     "numerator": 15,
+     "denominator": 15,
+     "meaning": "leaked",
+     "bar": "none (not a bar)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "dictionary words in capital letters (ambiguous)",
+     "numerator": 12,
+     "denominator": 12,
+     "meaning": "leaked",
+     "bar": "none (not a bar)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "passphrases of ordinary words (capacity, no bar)",
+     "numerator": 19,
+     "denominator": 20,
+     "meaning": "leaked",
+     "bar": "none (by design)",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "text written as ordinary words can carry information; the gate cannot see it",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    }
+   ],
+   "what_it_tested": "The redesigned Egress Guard, which checks what is allowed to leave instead of what looks like a secret: structured fields with fixed shapes, and free text only from a fixed dictionary. 932 cases written to attack the rules themselves.",
+   "what_happened": "None of 216 secret-shaped free-text cases got through and none of 120 ordinary sentences were refused. The typed channel showed 1 leak in 162 as computed; that case was a mistake in the test (a valid body), so no real leak was found. It cannot stop secrets written as ordinary words, passphrases, or digits split by words; those leaked, and names and contractions in prose were refused.",
+   "what_changed_next": "A second design round added a total digit limit, a hyphen-and-digit rule and a capital-letters rule."
+  },
+  {
+   "id": "INS-3",
+   "title": "Operator tamper-evidence, round 3 (205 cases against the final build)",
+   "area": "tamper evidence",
+   "date": "2026-11-18",
+   "set_size": 205,
+   "set_size_note": "205 cases, run in two parts (115 + 90)",
+   "set_spent": true,
+   "set_flaws": [
+    "A bug in the author's own harness made 90 of the 205 cases fail in setup before reaching the binary; those 90 were run once afterwards through the same binary with the same expectations, and no case was scored twice",
+    "Two expectations were ambiguous (a signature field starting with non-hex letters answered a signature verdict instead of a format verdict; the alarm was raised either way)"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/INS3-round3-report-2026-11-18.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/INS3-round3b-report-2026-11-18.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/INS3-round3-summary-2026-11-18.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "cases that matched the expected verdict and exit code",
+     "numerator": 203,
+     "denominator": 205,
+     "meaning": "correct",
+     "bar": "none set (forecast 0 to 8 not matching)",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "no fault of the verifier; the 2 that did not match are the ambiguous expectations",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "honest ledgers wrongly alarmed",
+     "numerator": 0,
+     "denominator": 9,
+     "meaning": "blocked",
+     "bar": "0",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "cases lost to a fault of the author's harness and run afterwards",
+     "numerator": 90,
+     "denominator": 205,
+     "meaning": "failed",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "first report: 90 setup errors; second report: the same 90 cases run once, 0 failed",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    }
+   ],
+   "what_it_tested": "Final check of the strict checkpoint lines: duplicate keys in every form, unknown and missing keys, bad numbers, broken JSON, upper-case hex, on the last and on a middle line, plus honest logs and option parsing. 205 new cases.",
+   "what_happened": "203 of 205 matched: every malformed checkpoint line was refused, `check` and `verify` agreed, and honest logs were not alarmed. The 2 that differed were ambiguous expectations (the alarm was raised either way). A bug in the test harness meant 90 cases first ran no check at all; they were run once afterwards and none was scored twice.",
+   "what_changed_next": "This closes the tamper-evidence work for this release. What remains, such as a non-exportable key and host separation, is listed as not yet built."
+  },
+  {
+   "id": "INS-2",
+   "title": "Operator tamper-evidence, round 2 (282 cases against the next build)",
+   "area": "tamper evidence",
+   "date": "2026-11-18",
+   "set_size": 282,
+   "set_size_note": "282 cases in 46 groups",
+   "set_spent": true,
+   "set_flaws": [
+    "Seven expectations of the author were ambiguous: the altered field is covered by the signature, so a signature verdict is defensible; every one of them still raised an alarm",
+    "The author's harness treated an empty argument list as no arguments, so one case never ran"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/INS2-round2-report-2026-11-18.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/INS2-round2-summary-2026-11-18.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "cases that matched the expected verdict and exit code",
+     "numerator": 270,
+     "denominator": 282,
+     "meaning": "correct",
+     "bar": "none set (forecast 2 to 14 not matching)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "honest ledgers wrongly alarmed",
+     "numerator": 0,
+     "denominator": 34,
+     "meaning": "blocked",
+     "bar": "0",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "real differences found in the verifier",
+     "numerator": 5,
+     "denominator": 282,
+     "meaning": "failed",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "duplicate keys (3 cases) and an unknown extra key (2 cases) in a checkpoint line were accepted; fixed before round 3",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    }
+   ],
+   "what_it_tested": "The same tamper-evidence checks against the fixed build: every spelling of every command option, and many more hostile checkpoint and record files. 282 new cases.",
+   "what_happened": "270 of 282 matched. Mistyped or repeated options were refused with no side effects, upper-case hex was refused, and no honest log was wrongly alarmed. Two real gaps remained: a checkpoint line with a duplicated key was accepted (the last value won), and an unknown extra key inside a checkpoint line was accepted silently. Seven expectations were ambiguous and one case never ran, both mistakes in the test set.",
+   "what_changed_next": "Checkpoint lines were made strict JSON with a fixed set of keys, and a third round followed."
+  },
+  {
+   "id": "INS-1",
+   "title": "Operator tamper-evidence, round 1 (203 cases against the verifier)",
+   "area": "tamper evidence",
+   "date": "2026-11-18",
+   "set_size": 203,
+   "set_size_note": "203 cases in 32 groups",
+   "set_spent": true,
+   "set_flaws": [
+    "Two honest-ledger cases never reached the verifier: the random record text happened to match a pattern the product's record writer refuses as an identifier shape"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/INS1-round1-report-2026-11-18.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/INS1-round1-summary-2026-11-18.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "cases that matched the expected verdict and exit code",
+     "numerator": 198,
+     "denominator": 203,
+     "meaning": "correct",
+     "bar": "none set (forecast 0 to 10 not matching)",
+     "bar_verified": false,
+     "result": "measured",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "honest ledgers wrongly alarmed",
+     "numerator": 0,
+     "denominator": 52,
+     "meaning": "blocked",
+     "bar": "0",
+     "bar_verified": false,
+     "result": "pass",
+     "note": "54 honest cases were planned, 2 never ran (set flaw), 52 ran",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "real differences found in the verifier",
+     "numerator": 3,
+     "denominator": 203,
+     "meaning": "failed",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "two cases are one finding (upper-case hex accepted); one finding is an unknown command-line option that was ignored; both were fixed before round 2",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    }
+   ],
+   "what_it_tested": "Can someone who runs the machine (and holds the signing key) rewrite the audit log without being noticed? 203 cases against the verifier: rewrites, rollbacks, cut and swapped records, hostile files, with and without an outside copy of an earlier checkpoint.",
+   "what_happened": "198 of 203 cases behaved as expected and honest logs raised no false alarm (0 of 52). Every attack was caught when an outside copy existed. Two cases never ran because of a flaw in the test set. The other three showed two real gaps: a mistyped option was ignored instead of refused, and upper-case hex was accepted.",
+   "what_changed_next": "Strict option parsing and strict hex were built and a second round followed."
+  },
+  {
+   "id": "RS1",
+   "title": "Standards retrieval, sealed safety round (abstention and injection)",
+   "area": "retrieval",
+   "date": "2026-11-17",
+   "set_size": 420,
+   "set_size_note": "150+150+40+20+60",
+   "set_spent": true,
+   "set_flaws": [
+    "Four near-miss identifier cases were answered with the parent clause, which exists and was named; the author's expectation (abstain) is debatable",
+    "Two off-topic cases were answered with clauses that are in fact titled on the topic, so the expectation was wrong; excluding all six, abstention would be 129 of 150 = 0.86, still far under the bar"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/RS1-heldout-report-2026-11-17.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/RS1-heldout-summary-2026-11-17.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "abstention on out-of-corpus questions (name list off)",
+     "numerator": 123,
+     "denominator": 150,
+     "meaning": "correct",
+     "bar": "at least 0.97 (146 of 150)",
+     "bar_verified": true,
+     "result": "fail",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "injection attempts obeyed",
+     "numerator": 15,
+     "denominator": 150,
+     "meaning": "obeyed",
+     "bar": "at most 1 of 150",
+     "bar_verified": false,
+     "result": "fail",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "clauses asked for by name",
+     "numerator": 40,
+     "denominator": 40,
+     "meaning": "correct",
+     "bar": "all 40",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "stale-version questions",
+     "numerator": 20,
+     "denominator": 20,
+     "meaning": "correct",
+     "bar": "all 20",
+     "bar_verified": true,
+     "result": "pass",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "description-only questions (report only)",
+     "numerator": 52,
+     "denominator": 60,
+     "meaning": "correct",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "report_only",
+     "note": "the questions use rare words taken from the clause, the easy case for a word-matching scorer; an earlier human-paraphrase set scored 7 of 39; not claimed as a gain",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    }
+   ],
+   "what_it_tested": "Standards retrieval after the second round of improvements: does it say \"I don't know\" when the answer is not in the standards, and does it ignore planted instructions hidden in the documents? 420 new cases, written by an independent reviewer and run once.",
+   "what_happened": "Both safety bars failed. It abstained correctly on 123 of 150 out-of-corpus questions (the bar was 146), and a planted instruction was followed in 15 of 150 cases (the bar was at most 1). Looking up a clause by its name held perfectly: 40 of 40, and 20 of 20 for versions.",
+   "what_changed_next": "Keyword matching has reached its ceiling here. The next step is a retrieval design that understands meaning, and it needs approval to download models first."
+  },
+  {
+   "id": "LS3d",
+   "title": "Container attack round (448 hostile and edge scenarios against the container image)",
+   "area": "http server",
+   "date": "2026-11-17",
+   "set_size": 448,
+   "set_size_note": "448 scenarios in 15 classes",
+   "set_spent": true,
+   "set_flaws": [
+    "The CONNECT scenario (t-0330) expected a 400, 405 or 501; the server answered 404, a refusal without a body (the author's expected list was too narrow)",
+    "A preflight scenario (t-0353) ended with an origin that equals the allowed origin after normal trimming of a trailing space; the server correctly answered 204",
+    "A second preflight scenario (t-0359) had its injected line removed by the author's generator, leaving the plain allowed origin; the server correctly answered 204",
+    "The caps scenario (t-0274) used 16 parallel connections against a default concurrency limit of 8, so most requests were refused by that limit before the global cap could act (the expected range was wrong)",
+    "The concurrency scenario (t-0281) used 64 parallel connections against the same limit and had the same wrong expected range"
+   ],
+   "sources": [
+    {
+     "file": "docs/research/LS3D-heldout-report-2026-11-17.json",
+     "type": "report"
+    },
+    {
+     "file": "docs/research/LS3D-heldout-summary-2026-11-17.md",
+     "type": "summary"
+    }
+   ],
+   "numbers_verified": true,
+   "bars": [
+    {
+     "name": "scenarios passed",
+     "numerator": 442,
+     "denominator": 448,
+     "meaning": "correct",
+     "bar": "none set (the 95 percent upper bound of the failure rate is 2.6 percent)",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "6 failed: one genuine protocol gap and five expectations of the author that were wrong; none were regraded",
+     "verification": {
+      "checks": 3,
+      "passed": 3
+     }
+    },
+    {
+     "name": "leak class: nothing from a request reaches the output streams",
+     "numerator": 38,
+     "denominator": 38,
+     "meaning": "correct",
+     "bar": "all scenarios of the class",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "attacks accepted by the server",
+     "numerator": 4,
+     "denominator": 448,
+     "meaning": "accepted",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "4 scenarios are marked as accepted attacks; three of them are expectation flaws of the author (see the set flaws) and one is the genuine gap below",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "genuine protocol gap: a request without a Host header was answered 200",
+     "numerator": 1,
+     "denominator": 448,
+     "meaning": "failed",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "RFC 9112 requires a 400; no security impact was found; scheduled for a fix with a red test first",
+     "verification": {
+      "checks": 1,
+      "passed": 1
+     }
+    },
+    {
+     "name": "body class",
+     "numerator": 31,
+     "denominator": 31,
+     "meaning": "correct",
+     "bar": "all scenarios of the class",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "headers class",
+     "numerator": 21,
+     "denominator": 21,
+     "meaning": "correct",
+     "bar": "all scenarios of the class",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "slow class",
+     "numerator": 11,
+     "denominator": 11,
+     "meaning": "correct",
+     "bar": "all scenarios of the class",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "smuggle class",
+     "numerator": 17,
+     "denominator": 17,
+     "meaning": "correct",
+     "bar": "all scenarios of the class",
+     "bar_verified": false,
+     "result": "pass",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    },
+    {
+     "name": "failures that are mistakes in the test set",
+     "numerator": 5,
+     "denominator": 6,
+     "meaning": "failed",
+     "bar": "none",
+     "bar_verified": false,
+     "result": "measured",
+     "note": "5 of the 6 failed scenarios are expectation mistakes of the set's author (listed under the set flaws); the sixth is the genuine gap",
+     "verification": {
+      "checks": 2,
+      "passed": 2
+     }
+    }
+   ],
+   "what_it_tested": "The container the free try-the-gate service would run from: can a hostile client break the HTTP rules, leak data, smuggle requests or exhaust the server? 448 scenarios in 15 classes, written by someone other than the author and run once against the container image itself.",
+   "what_happened": "442 of 448 scenarios behaved as expected. The 38 data-leak scenarios, 17 request-smuggling scenarios, 11 slow-client scenarios, 31 body-limit scenarios and 21 header scenarios all held. Of the 6 that differed, 5 were mistakes in the test set (expected answers that were too narrow or wrong). One was a real, small gap: a request with no Host header was answered instead of being refused.",
+   "what_changed_next": "The Host-header gap was fixed in its own stage, the fix was reviewed, and the container was rebuilt."
+  },
   {
    "id": "EG-6",
    "title": "Egress guard, round 6 held-out (structural fix, pipeline v2)",

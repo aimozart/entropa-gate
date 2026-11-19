@@ -1,0 +1,12 @@
+test c2_usage_and_unknown_commands_exit_2_and_say_nothing_about_content ... FAILED
+test c6_fuzz_validates_its_arguments_and_wraps_cargo_fuzz ... FAILED
+test c3_sealed_runs_once_prints_a_summary_without_content_and_refuses_a_second_run ... FAILED
+test c1_bounds_prints_the_two_bounds_and_refuses_impossible_counts ... FAILED
+test c5_mutate_wraps_cargo_mutants_with_the_cap_and_never_downloads ... FAILED
+test c4_prereg_make_verify_and_a_registered_run ... FAILED
+test result: FAILED. 0 passed; 6 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+test m3_the_sample_has_no_real_secret_shapes ... ok
+test m2_the_fixed_sample_guard_passes_and_the_forecast_is_a_hit ... ok
+test m1_the_flawed_sample_guard_fails_honestly_and_the_forecast_is_missed ... ok
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s
+NOTE: sample m1-m3 pass at once: they exercise the finished sealed::run on the new sample files (they would fail if the sample files or the guards were wrong); their bite is the flaw itself (fixed vs flawed guard differ).

@@ -424,6 +424,9 @@ pub fn apply_overrides(cfg: &mut Config, spec: &str) -> Result<(), String> {
             "structural_flags" => cfg.structural_flags = f()? != 0.0,
             "flag_factor" => cfg.flag_factor = f()?,
             "foreign_guard" => cfg.foreign_guard = f()? != 0.0,
+            "raw_flags" => cfg.raw_flags = f()? != 0.0,
+            "foreign_any_name" => cfg.foreign_any_name = f()? != 0.0,
+            "density_min_tokens" => cfg.density_min_tokens = f()? as usize,
             other => return Err(format!("unknown parameter {other}")),
         }
     }

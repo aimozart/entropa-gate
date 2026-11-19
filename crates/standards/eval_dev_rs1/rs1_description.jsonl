@@ -1,0 +1,60 @@
+{"qid": "d1-01", "query": "Who creates, reviews and switches off user accounts, and how often are the accounts looked at again?", "standard": "NIST-SP-800-53", "expected": "AC-2", "form": "description"}
+{"qid": "d1-02", "query": "The system itself must really enforce the permissions that were approved for each user.", "standard": "NIST-SP-800-53", "expected": "AC-3", "form": "description"}
+{"qid": "d1-03", "query": "People should be given only the minimum rights they need to do their job.", "standard": "NIST-SP-800-53", "expected": "AC-6", "form": "description"}
+{"qid": "d1-04", "query": "Locking a login after too many wrong password tries.", "standard": "NIST-SP-800-53", "expected": "AC-7", "form": "description"}
+{"qid": "d1-05", "query": "A warning message shown before sign-in saying that use of the system is monitored.", "standard": "NIST-SP-800-53", "expected": "AC-8", "form": "description"}
+{"qid": "d1-06", "query": "A screen that locks itself after a period of no activity until the person signs in again.", "standard": "NIST-SP-800-53", "expected": "AC-11", "form": "description"}
+{"qid": "d1-07", "query": "Rules for staff who connect to the network from outside the office.", "standard": "NIST-SP-800-53", "expected": "AC-17", "form": "description"}
+{"qid": "d1-08", "query": "Controls on joining the network over a wireless connection.", "standard": "NIST-SP-800-53", "expected": "AC-18", "form": "description"}
+{"qid": "d1-09", "query": "No single person should be able to complete a critical task entirely alone.", "standard": "NIST-SP-800-53", "expected": "AC-5", "form": "description"}
+{"qid": "d1-10", "query": "Teaching all staff to recognise security threats such as phishing emails.", "standard": "NIST-SP-800-53", "expected": "AT-2", "form": "description"}
+{"qid": "d1-11", "query": "Deciding which kinds of events a system has to write down.", "standard": "NIST-SP-800-53", "expected": "AU-2", "form": "description"}
+{"qid": "d1-12", "query": "Looking through the logs regularly for suspicious activity and passing on what is found.", "standard": "NIST-SP-800-53", "expected": "AU-6", "form": "description"}
+{"qid": "d1-13", "query": "Keeping the log files safe from being changed or deleted by people who should not touch them.", "standard": "NIST-SP-800-53", "expected": "AU-9", "form": "description"}
+{"qid": "d1-14", "query": "How long log records have to be kept before they may be discarded.", "standard": "NIST-SP-800-53", "expected": "AU-11", "form": "description"}
+{"qid": "d1-15", "query": "Ongoing, regular measurement of how well the safeguards are working.", "standard": "NIST-SP-800-53", "expected": "CA-7", "form": "description"}
+{"qid": "d1-16", "query": "A written, agreed standard setup for each system that is kept up to date.", "standard": "NIST-SP-800-53", "expected": "CM-2", "form": "description"}
+{"qid": "d1-17", "query": "Choosing and checking the security-related settings on each system.", "standard": "NIST-SP-800-53", "expected": "CM-6", "form": "description"}
+{"qid": "d1-18", "query": "Switching off services, ports and programs that are not needed.", "standard": "NIST-SP-800-53", "expected": "CM-7", "form": "description"}
+{"qid": "d1-19", "query": "Rehearsing the disaster recovery plan to see whether it really works.", "standard": "NIST-SP-800-53", "expected": "CP-4", "form": "description"}
+{"qid": "d1-20", "query": "Making copies of data and software so they can be put back after a loss.", "standard": "NIST-SP-800-53", "expected": "CP-9", "form": "description"}
+{"qid": "d1-21", "query": "Making sure each person proves who they are before they are let in.", "standard": "NIST-SP-800-53", "expected": "IA-2", "form": "description"}
+{"qid": "d1-22", "query": "How passwords and tokens are issued, changed and protected.", "standard": "NIST-SP-800-53", "expected": "IA-5", "form": "description"}
+{"qid": "d1-23", "query": "The steps for dealing with a security incident from first detection to recovery.", "standard": "NIST-SP-800-53", "expected": "IR-4", "form": "description"}
+{"qid": "d1-24", "query": "Telling the right people about security incidents within set times.", "standard": "NIST-SP-800-53", "expected": "IR-6", "form": "description"}
+{"qid": "d1-25", "query": "Wiping or destroying storage devices before they are reused or thrown away.", "standard": "NIST-SP-800-53", "expected": "MP-6", "form": "description"}
+{"qid": "d1-26", "query": "Controlling who may walk into the rooms and buildings that hold the systems.", "standard": "NIST-SP-800-53", "expected": "PE-3", "form": "description"}
+{"qid": "d1-27", "query": "What to do about access and equipment when an employee leaves the organisation.", "standard": "NIST-SP-800-53", "expected": "PS-4", "form": "description"}
+{"qid": "d1-28", "query": "Working out how likely harm is and how bad it would be for the organisation.", "standard": "NIST-SP-800-53", "expected": "RA-3", "form": "description"}
+{"qid": "d1-29", "query": "Regularly scanning systems for known weaknesses and fixing what is found.", "standard": "NIST-SP-800-53", "expected": "RA-5", "form": "description"}
+{"qid": "d1-30", "query": "Software suppliers testing their own product for security flaws and fixing them.", "standard": "NIST-SP-800-53", "expected": "SA-11", "form": "description"}
+{"qid": "d1-31", "query": "Watching and controlling the traffic that crosses the edges of the network.", "standard": "NIST-SP-800-53", "expected": "SC-7", "form": "description"}
+{"qid": "d1-32", "query": "Protecting data from being read or changed while it travels across a network.", "standard": "NIST-SP-800-53", "expected": "SC-8", "form": "description"}
+{"qid": "d1-33", "query": "How encryption keys are created, stored, handed out and retired.", "standard": "NIST-SP-800-53", "expected": "SC-12", "form": "description"}
+{"qid": "d1-34", "query": "Keeping stored data safe, for example by scrambling the contents of disks.", "standard": "NIST-SP-800-53", "expected": "SC-28", "form": "description"}
+{"qid": "d1-35", "query": "Finding, reporting and correcting software flaws and installing the fixes.", "standard": "NIST-SP-800-53", "expected": "SI-2", "form": "description"}
+{"qid": "d1-36", "query": "Software that spots and stops viruses and other harmful programs.", "standard": "NIST-SP-800-53", "expected": "SI-3", "form": "description"}
+{"qid": "d1-37", "query": "Watching systems for attacks and for use that nobody approved.", "standard": "NIST-SP-800-53", "expected": "SI-4", "form": "description"}
+{"qid": "d1-38", "query": "Managing the risks that come from suppliers and the products they provide.", "standard": "NIST-SP-800-53", "expected": "SR-3", "form": "description"}
+{"qid": "d1-39", "query": "A continuing process for finding and reducing the risks of a high-risk AI system throughout its life.", "standard": "EU-AI-ACT", "expected": "Art.9", "form": "description"}
+{"qid": "d1-40", "query": "Rules for the quality of the data used to train and test such systems.", "standard": "EU-AI-ACT", "expected": "Art.10", "form": "description"}
+{"qid": "d1-41", "query": "The paper trail describing how a high-risk system was designed and tested, kept ready for the authorities.", "standard": "EU-AI-ACT", "expected": "Art.11", "form": "description"}
+{"qid": "d1-42", "query": "High-risk systems must automatically keep logs of events over their lifetime.", "standard": "EU-AI-ACT", "expected": "Art.12", "form": "description"}
+{"qid": "d1-43", "query": "Users of a high-risk system must be given clear information so they can understand its output.", "standard": "EU-AI-ACT", "expected": "Art.13", "form": "description"}
+{"qid": "d1-44", "query": "Designing the system so that people can watch over it and step in or stop it.", "standard": "EU-AI-ACT", "expected": "Art.14", "form": "description"}
+{"qid": "d1-45", "query": "A high-risk system must be accurate, resistant to errors and attacks, and perform consistently.", "standard": "EU-AI-ACT", "expected": "Art.15", "form": "description"}
+{"qid": "d1-46", "query": "The documented procedures a provider needs to keep compliance in order.", "standard": "EU-AI-ACT", "expected": "Art.17", "form": "description"}
+{"qid": "d1-47", "query": "What the organisations that use a high-risk system must do, such as following the instructions and watching its operation.", "standard": "EU-AI-ACT", "expected": "Art.26", "form": "description"}
+{"qid": "d1-48", "query": "People must be told when they are talking to a machine or looking at artificially generated content.", "standard": "EU-AI-ACT", "expected": "Art.50", "form": "description"}
+{"qid": "d1-49", "query": "Making sure staff who run or use AI systems have enough understanding of them.", "standard": "EU-AI-ACT", "expected": "Art.4", "form": "description"}
+{"qid": "d1-50", "query": "AI practices that are banned outright, such as certain manipulative or social scoring uses.", "standard": "EU-AI-ACT", "expected": "Art.5", "form": "description"}
+{"qid": "d1-51", "query": "Reporting a serious incident involving a high-risk system to the market surveillance authority.", "standard": "EU-AI-ACT", "expected": "Art.73", "form": "description"}
+{"qid": "d1-52", "query": "A provider must keep checking how its high-risk system performs after it is on the market.", "standard": "EU-AI-ACT", "expected": "Art.72", "form": "description"}
+{"qid": "d1-53", "query": "Ending a session by itself after a set time or event, so that nobody can carry on in someone else's login.", "standard": "NIST-SP-800-53", "expected": "AC-12", "form": "description"}
+{"qid": "d1-54", "query": "Systems must stamp each record with a trustworthy time.", "standard": "NIST-SP-800-53", "expected": "AU-8", "form": "description"}
+{"qid": "d1-55", "query": "Limiting the damage when a flood of requests tries to make a system unavailable.", "standard": "NIST-SP-800-53", "expected": "SC-5", "form": "description"}
+{"qid": "d1-56", "query": "Limiting electronic access to health information to the people or programs that are allowed it.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(a)", "form": "description"}
+{"qid": "d1-57", "query": "Recording and examining activity in systems that hold health information.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(b)", "form": "description"}
+{"qid": "d1-58", "query": "Protecting health information from being improperly altered or destroyed.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(c)", "form": "description"}
+{"qid": "d1-59", "query": "Checking that a person or machine asking for access is who it claims to be.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(d)", "form": "description"}
+{"qid": "d1-60", "query": "Guarding health information against unauthorised access while it is sent over a network.", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(e)", "form": "description"}

@@ -73,6 +73,7 @@ fn label_fits(kind: Kind, label: LabelCode) -> bool {
                 | LabelCode::KeyRotation
                 | LabelCode::CodeChange
                 | LabelCode::CorpusVersion
+                | LabelCode::PreregCommitted
         ),
         Kind::EvidencePolicy => matches!(
             label,

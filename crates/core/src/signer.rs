@@ -43,7 +43,7 @@ impl CheckpointSigner for Probe {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     use super::*;
     use crate::transparency_log::TransparencyLog;

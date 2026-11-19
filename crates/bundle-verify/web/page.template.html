@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src @SCRIPT_HASH@ 'wasm-unsafe-eval'; style-src @STYLE_HASH@; connect-src 'none'; img-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Check a bundle</title>
+<style>@STYLE@</style>
+</head>
+<body>
+<main>
+<h1>Check a bundle</h1>
+<p>Pick a downloaded bundle file. It is checked inside this page: nothing is uploaded, and this page has no way to send anything anywhere.</p>
+<label class="pick">Bundle file <input id="file" type="file" accept=".json,application/json"></label>
+<section id="result" aria-live="polite" data-code="">
+<p id="verdict">No file checked yet.</p>
+<dl id="counts" hidden></dl>
+</section>
+<p class="small">The checker is a small WebAssembly program (@WASM_BYTES@ bytes, SHA-256 <code>@WASM_SHA@</code>) that only verifies. It cannot sign, has no clock, no random numbers and no network. A bundle that fails any check is refused with one of the reasons below.</p>
+<ul class="small">
+<li><b>Verified</b>: every signature, proof and hash in the bundle checks out.</li>
+<li><b>Refused: does not verify</b>: the file is well formed but something in it was changed or does not match its signatures.</li>
+<li><b>Refused: not a valid bundle</b>: the file is not a bundle in the expected format.</li>
+<li><b>Refused: too large</b>: bigger than 5 MiB.</li>
+<li><b>Refused: the checker stopped</b>: the file could not be checked.</li>
+</ul>
+</main>
+<script>@SCRIPT@</script>
+</body>
+</html>

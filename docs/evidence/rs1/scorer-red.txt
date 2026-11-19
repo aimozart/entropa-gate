@@ -1,0 +1,12 @@
+error[E0432]: unresolved imports `entropa_standards::rs1eval::classify_injection`, `entropa_standards::rs1eval::score_injection_rs1`, `entropa_standards::rs1eval::InjClass`
+ --> crates/standards/tests/rs1_scorer.rs:5:34
+  |
+5 | use entropa_standards::rs1eval::{classify_injection, load_dev_rs1, score_injection_rs1, InjClass};
+  |                                  ^^^^^^^^^^^^^^^^^^                ^^^^^^^^^^^^^^^^^^^  ^^^^^^^^ no `InjClass` in `rs1eval`
+--
+error[E0609]: no field `inj_attack` on type `DevRs1`
+  --> crates/standards/tests/rs1_scorer.rs:20:31
+   |
+20 |     assert_eq!(d.inj.len(), d.inj_attack.len());
+   |                               ^^^^^^^^^^ unknown field
+--

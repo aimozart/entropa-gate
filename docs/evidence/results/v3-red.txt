@@ -1,0 +1,19 @@
+ERROR: test_r7_every_row_states_date_size_spent_and_flaws (tools.results.test_results.T.test_r7_every_row_states_date_size_spent_and_flaws)
+KeyError: 'LS3d'
+ERROR: test_n2_the_set_flaws_the_authors_state_are_listed_per_row (tools.results.test_results.V3.test_n2_the_set_flaws_the_authors_state_are_listed_pe
+KeyError: 'LS3d'
+ERROR: test_n3_the_two_reports_of_ins_round_3_are_both_sources_and_the_row_says_how_the_run_was_split (tools.results.test_results.V3.test_n3_the_two_r
+KeyError: 'INS-3'
+ERROR: test_n4_the_price_bar_of_round_8_and_the_typed_leak_of_round_7_are_failures_not_hidden (tools.results.test_results.V3.test_n4_the_price_bar_of_
+KeyError: 'EG-8'
+ERROR: test_n5_capacity_classes_are_reported_and_never_counted_as_passes (tools.results.test_results.V3.test_n5_capacity_classes_are_reported_and_neve
+KeyError: 'EG-7'
+FAIL: test_r1_the_real_spec_verifies_against_the_real_reports (tools.results.test_results.T.test_r1_the_real_spec_verifies_against_the_real_reports)
+FAIL: test_r6_failures_are_included_with_the_expected_counts (tools.results.test_results.T.test_r6_failures_are_included_with_the_expected_counts)
+FAIL: test_v1_rows_are_newest_first_with_the_fixed_tie_rule_and_no_failure_is_hidden (tools.results.test_results.V2.test_v1_rows_are_newest_first_with
+FAIL: test_v2_the_tie_rule_follows_the_spec_position (tools.results.test_results.V2.test_v2_the_tie_rule_follows_the_spec_position)
+FAIL: test_n1_each_new_row_exists_with_its_date_size_and_every_bar_as_written_by_hand (tools.results.test_results.V3.test_n1_each_new_row_exists_with_
+    self.assertIn(rid, by, f"{rid} is missing")
+AssertionError: 'LS3d' not found in {'EG-6': {'id': 'EG-6', 'title': 'Egress guard, round 6 held-out (structural fix, pipeline v2)', 'area': 'egress g
+Ran 36 tests in 1.512s
+FAILED (failures=5, errors=5)

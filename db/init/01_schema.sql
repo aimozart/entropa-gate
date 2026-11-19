@@ -1,5 +1,5 @@
 -- Schema for entropa's decision-outcomes tracking, mirroring the structure already
--- established in a project record (not published) (Expected proof -> Observed outcome -> Evidence).
+-- established in the decision records (Expected proof -> Observed outcome -> Evidence).
 -- This does not replace that file yet -- see db/README.md for the migration plan.
 
 CREATE TYPE decision_status AS ENUM (

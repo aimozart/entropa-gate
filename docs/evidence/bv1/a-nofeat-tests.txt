@@ -1,0 +1,4 @@
+error[E0599]: no associated function or constant named `spawn` found for struct `Probe` in the current scope
+error: aborting due to 1 previous error
+error: doctest failed, to rerun pass `-p entropa-core --doc`
+no-default-features: 51 passed 1 failed 0 ignored

@@ -28,7 +28,7 @@ class T(unittest.TestCase):
         self.assertIn("tested against", text.lower())
         self.assertLess(text.index("## Failed bars"), text.index("## All runs"))
         failed_part = text.split("## All runs")[0]
-        self.assertEqual(sum(1 for l in failed_part.splitlines() if l.startswith("- ")), 21)
+        self.assertEqual(sum(1 for l in failed_part.splitlines() if l.startswith("- ")), 25)  # Test change (RESULTS-V3): 21 + 4 failed bars
         for l in text.splitlines():
             if l.startswith("- "):
                 self.assertIn("[evidence: docs/results/results.json]", l)

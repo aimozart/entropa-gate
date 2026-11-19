@@ -5,7 +5,7 @@ edition.workspace = true
 authors.workspace = true
 license = "Apache-2.0"
 publish = false
-description = "The pure, deterministic core of the Decision Review Council (docs/ARCHITECTURE-COUNCIL.md): closed-code events, session state machine and quorum, reliability scoring, planted-fault evaluation, retrieval provenance, replay. No model, no cloud. Stage S12b: stubs and red tests."
+description = "The pure, deterministic core of the Decision Review Council (the council design notes): closed-code events, session state machine and quorum, reliability scoring, planted-fault evaluation, retrieval provenance, replay. No model, no cloud."
 
 [dependencies]
 entropa-core = { path = "../core", version = "0.2.0" }

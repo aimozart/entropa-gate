@@ -1,0 +1,40 @@
+{"qid": "n1-01", "query": "What does control AC-2 require?", "standard": "NIST-SP-800-53", "expected": "AC-2", "form": "plain"}
+{"qid": "n1-02", "query": "What does AC-2 (4) require?", "standard": "NIST-SP-800-53", "expected": "AC-2(4)", "form": "spaced_enh"}
+{"qid": "n1-03", "query": "Explain NIST SP 800-53 control IA-5(1).", "standard": "NIST-SP-800-53", "expected": "IA-5(1)", "form": "enh"}
+{"qid": "n1-04", "query": "What is control SC-28 about in NIST 800-53 Rev 5?", "standard": "NIST-SP-800-53", "expected": "SC-28", "form": "plain"}
+{"qid": "n1-05", "query": "Summarise ac-17 from the NIST 800-53 catalogue.", "standard": "NIST-SP-800-53", "expected": "AC-17", "form": "lower"}
+{"qid": "n1-06", "query": "What does control AU-6 (1) say?", "standard": "NIST-SP-800-53", "expected": "AU-6(1)", "form": "spaced_enh"}
+{"qid": "n1-07", "query": "NIST SP 800-53 control CM-7: what does it require?", "standard": "NIST-SP-800-53", "expected": "CM-7", "form": "colon"}
+{"qid": "n1-08", "query": "What does the control with the identifier SI-4 say?", "standard": "NIST-SP-800-53", "expected": "SI-4", "form": "identifier"}
+{"qid": "n1-09", "query": "Describe control PE-3.", "standard": "NIST-SP-800-53", "expected": "PE-3", "form": "plain"}
+{"qid": "n1-10", "query": "What are the details of NIST 800-53 MP-6?", "standard": "NIST-SP-800-53", "expected": "MP-6", "form": "plain"}
+{"qid": "n1-11", "query": "What does CP-9 (1) require in NIST SP 800-53?", "standard": "NIST-SP-800-53", "expected": "CP-9(1)", "form": "spaced_enh"}
+{"qid": "n1-12", "query": "Explain IR-4 of NIST 800-53.", "standard": "NIST-SP-800-53", "expected": "IR-4", "form": "plain"}
+{"qid": "n1-13", "query": "What does control RA-5 require?", "standard": "NIST-SP-800-53", "expected": "RA-5", "form": "plain"}
+{"qid": "n1-14", "query": "What does SA-11 say in the NIST catalogue?", "standard": "NIST-SP-800-53", "expected": "SA-11", "form": "plain"}
+{"qid": "n1-15", "query": "What does SR-3 require?", "standard": "NIST-SP-800-53", "expected": "SR-3", "form": "plain"}
+{"qid": "n1-16", "query": "In NIST SP 800-53, what is SC-7(5)?", "standard": "NIST-SP-800-53", "expected": "SC-7(5)", "form": "enh"}
+{"qid": "n1-17", "query": "What does PS-4 say?", "standard": "NIST-SP-800-53", "expected": "PS-4", "form": "plain"}
+{"qid": "n1-18", "query": "What does control PL-2 require in NIST SP 800-53?", "standard": "NIST-SP-800-53", "expected": "PL-2", "form": "plain"}
+{"qid": "n1-19", "query": "Tell me about NIST control AT-2.", "standard": "NIST-SP-800-53", "expected": "AT-2", "form": "plain"}
+{"qid": "n1-20", "query": "What does control CA-7 mean?", "standard": "NIST-SP-800-53", "expected": "CA-7", "form": "plain"}
+{"qid": "n1-21", "query": "What does PCI DSS requirement 10.3.4 say?", "standard": "PCI-DSS", "expected": "10.3.4", "form": "plain"}
+{"qid": "n1-22", "query": "Explain PCI DSS requirement 1.2.1.", "standard": "PCI-DSS", "expected": "1.2.1", "form": "plain"}
+{"qid": "n1-23", "query": "What does requirement 3.5.1 of PCI DSS cover?", "standard": "PCI-DSS", "expected": "3.5.1", "form": "of"}
+{"qid": "n1-24", "query": "What does PCI DSS 8.3.6 require?", "standard": "PCI-DSS", "expected": "8.3.6", "form": "short"}
+{"qid": "n1-25", "query": "Summarise PCI DSS requirement 12.1.", "standard": "PCI-DSS", "expected": "12.1", "form": "plain"}
+{"qid": "n1-26", "query": "What does requirement 6.3.3 say in PCI DSS v4?", "standard": "PCI-DSS", "expected": "6.3.3", "form": "v4"}
+{"qid": "n1-27", "query": "What does PCI DSS 4.2.1 require?", "standard": "PCI-DSS", "expected": "4.2.1", "form": "short"}
+{"qid": "n1-28", "query": "What is PCI DSS requirement 11.3.1?", "standard": "PCI-DSS", "expected": "11.3.1", "form": "plain"}
+{"qid": "n1-29", "query": "What does Article 9 of the EU AI Act require?", "standard": "EU-AI-ACT", "expected": "Art.9", "form": "article"}
+{"qid": "n1-30", "query": "Explain Article 14 of the AI Act.", "standard": "EU-AI-ACT", "expected": "Art.14", "form": "article"}
+{"qid": "n1-31", "query": "What is in Annex III of the EU AI Act?", "standard": "EU-AI-ACT", "expected": "Annex III", "form": "annex"}
+{"qid": "n1-32", "query": "What does AI Act article 50 say?", "standard": "EU-AI-ACT", "expected": "Art.50", "form": "article"}
+{"qid": "n1-33", "query": "What does Annex IV of the AI Act describe?", "standard": "EU-AI-ACT", "expected": "Annex IV", "form": "annex"}
+{"qid": "n1-34", "query": "Summarise Art. 26 of the EU AI Act.", "standard": "EU-AI-ACT", "expected": "Art.26", "form": "abbrev"}
+{"qid": "n1-35", "query": "What does Article 6 of the DORA RTS require?", "standard": "DORA-RTS", "expected": "Art.6", "form": "article"}
+{"qid": "n1-36", "query": "Explain DORA RTS Article 12.", "standard": "DORA-RTS", "expected": "Art.12", "form": "article"}
+{"qid": "n1-37", "query": "What does article 20 of the DORA technical standard say?", "standard": "DORA-RTS", "expected": "Art.20", "form": "article"}
+{"qid": "n1-38", "query": "What does 45 CFR 164.312(b) require?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(b)", "form": "cfr"}
+{"qid": "n1-39", "query": "Explain HIPAA 164.312(e).", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(e)", "form": "plain"}
+{"qid": "n1-40", "query": "What does 164.312(d) of the HIPAA Security Rule say?", "standard": "HIPAA-SECURITY-RULE", "expected": "164.312(d)", "form": "plain"}

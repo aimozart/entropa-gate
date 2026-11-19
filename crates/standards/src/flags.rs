@@ -17,6 +17,14 @@ pub const REPEATED_PHRASE: &str = "repeated_phrase";
 pub const CONTAINS_COPY: &str = "contains_copy";
 /// A clause that repeats the query's content words in the query's own order.
 pub const QUERY_ECHO: &str = "query_echo";
+/// RS1: the raw text holds zero-width, bidirectional or soft-hyphen characters (they hide words from a reader, not from the tokenizer).
+pub const HIDDEN_CHARS: &str = "hidden_chars";
+/// RS1: the raw text holds an HTML comment or tag.
+pub const MARKUP: &str = "markup";
+/// RS1: one id-shaped token (`AB-12`) appears at least [`ID_REPEAT_MIN`] times in the clause.
+pub const ID_REPEAT: &str = "id_repeat";
+/// See [`ID_REPEAT`].
+pub const ID_REPEAT_MIN: usize = 4;
 /// A clause in which query words are a large share of all its words.
 pub const DENSE_KEYWORDS: &str = "dense_keywords";
 
@@ -41,7 +49,7 @@ pub const DENSITY_MIN_TOKENS: usize = 24;
 
 /// Flags that exclude a clause from text search (the others demote it).
 pub fn excludes(flag: &str) -> bool {
-    flag == CONFUSABLE
+    flag == CONFUSABLE || flag == HIDDEN_CHARS || flag == MARKUP || flag == ID_REPEAT
 }
 
 /// A three-term phrase that occurs in this many clauses of the corpus is boilerplate of the standard, not stuffing.
@@ -156,6 +164,17 @@ pub fn is_question(raw: &str) -> bool {
 
 /// Query-relative flags: the clause echoes the query (a question), or its words are mostly query words.
 pub fn query_flags(query_seq: &[String], doc_seq: &[String], question: bool) -> Vec<&'static str> {
+    query_flags_with(query_seq, doc_seq, question, DENSITY_MIN_TOKENS)
+}
+
+/// [`query_flags`] with the shortest clause (in tokens) whose query density is judged given explicitly (RS1: a smaller value also judges short clauses, at the cost of demoting a short
+/// genuine clause that a question quotes almost word for word; see a stage record (not published)).
+pub fn query_flags_with(
+    query_seq: &[String],
+    doc_seq: &[String],
+    question: bool,
+    density_min_tokens: usize,
+) -> Vec<&'static str> {
     let mut f = Vec::new();
     if question && query_seq.len() >= ECHO_RUN {
         let run = longest_run(query_seq, doc_seq);
@@ -163,12 +182,63 @@ pub fn query_flags(query_seq: &[String], doc_seq: &[String], question: bool) -> 
             f.push(QUERY_ECHO);
         }
     }
-    if doc_seq.len() >= DENSITY_MIN_TOKENS {
+    if doc_seq.len() >= density_min_tokens {
         let q: HashSet<&String> = query_seq.iter().collect();
         let hits = doc_seq.iter().filter(|t| q.contains(t)).count();
         if (hits as f64) / (doc_seq.len() as f64) > DENSITY_MAX {
             f.push(DENSE_KEYWORDS);
         }
+    }
+    f
+}
+
+/// Two relative measurements of a clause against a query, for the RS1 design (a stage record (not published)): the share of the clause's tokens that are query tokens (density), and the share
+/// of its token positions covered by a two-token phrase that occurs at least twice (repetition). Both are 0.0 for an empty clause.
+pub fn signals(query_seq: &[String], doc_seq: &[String]) -> (f64, f64) {
+    if doc_seq.is_empty() {
+        return (0.0, 0.0);
+    }
+    let q: HashSet<&String> = query_seq.iter().collect();
+    let density = doc_seq.iter().filter(|t| q.contains(t)).count() as f64 / doc_seq.len() as f64;
+    let mut count: HashMap<(&String, &String), usize> = HashMap::new();
+    for w in doc_seq.windows(2) {
+        *count.entry((&w[0], &w[1])).or_default() += 1;
+    }
+    let mut covered = vec![false; doc_seq.len()];
+    for (i, w) in doc_seq.windows(2).enumerate() {
+        if count[&(&w[0], &w[1])] >= 2 {
+            covered[i] = true;
+            covered[i + 1] = true;
+        }
+    }
+    (
+        density,
+        covered.iter().filter(|c| **c).count() as f64 / doc_seq.len() as f64,
+    )
+}
+
+/// RS1 candidate: flags from the RAW text of one clause alone (never from the query). Hidden characters, markup, a repeated id-shaped token.
+pub fn raw_flags(raw: &str) -> Vec<&'static str> {
+    use std::sync::OnceLock;
+    static TAG: OnceLock<Option<regex::Regex>> = OnceLock::new();
+    static ID: OnceLock<Option<regex::Regex>> = OnceLock::new();
+    let mut f = Vec::new();
+    if raw.chars().any(crate::text::is_hidden) {
+        f.push(HIDDEN_CHARS);
+    }
+    let tag = TAG.get_or_init(|| regex::Regex::new(r"<!--|<[A-Za-z/][^<>]{0,200}>").ok());
+    if tag.as_ref().is_some_and(|t| t.is_match(raw)) {
+        f.push(MARKUP);
+    }
+    let id = ID.get_or_init(|| regex::Regex::new(r"\b[A-Z]{1,4}-[0-9]{1,3}\b").ok());
+    let mut counts: HashMap<&str, usize> = HashMap::new();
+    if let Some(id) = id {
+        for m in id.find_iter(raw) {
+            *counts.entry(m.as_str()).or_default() += 1;
+        }
+    }
+    if counts.values().any(|c| *c >= ID_REPEAT_MIN) {
+        f.push(ID_REPEAT);
     }
     f
 }

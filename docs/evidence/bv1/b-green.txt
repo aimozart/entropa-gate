@@ -1,0 +1,8 @@
+OK   build entropa-witness (wasm32, no default features)
+OK   tree entropa-witness has no getrandom or rand
+OK   build entropa-approvals (wasm32, no default features)
+OK   tree entropa-approvals has no getrandom or rand
+OK   build entropa-policy (wasm32, no default features)
+OK   tree entropa-policy has no getrandom or rand
+OK   build entropa-ledger (wasm32, no default features)
+OK   tree entropa-ledger has no getrandom or rand

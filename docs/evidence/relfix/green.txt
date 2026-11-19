@@ -1,0 +1,7 @@
+ok   1 private tree: the export asset is used
+ok   2 public checkout: the root LICENSE is used
+ok   3 no licence text anywhere: it fails
+ok   3 and says why
+ok   4 an empty LICENSE is refused
+ok   5 pkg1-build.sh uses the helper
+ok   6 no direct copy of the private path

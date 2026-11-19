@@ -1,0 +1,4 @@
+FAIL: test_n1_each_new_row_exists_with_its_date_size_and_every_bar_as_written_by_hand (tools.results.test_results.V3.test_n1_each_new_row_exists_with_its_date_size_and_ev
+FAIL: test_n6_the_real_descriptions_of_all_nineteen_rows_pass_the_number_check_with_nothing_withheld (tools.results.test_results.V3.test_n6_the_real_descriptions_of_all_n
+Ran 36 tests in 1.893s
+FAILED (failures=2)

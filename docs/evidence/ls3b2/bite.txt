@@ -1,0 +1,9 @@
+only a missing Host is refused (two are accepted): KILLED by h18
+Traceback (most recent call last):
+  File "<stdin>", line 12, in <module>
+AssertionError: HTTP/1.0 is refused too
+HTTP/1.0 is refused too: KILLED by h18
+only POST is checked: KILLED by h18
+the refusal word changed: KILLED by h18
+the refusal answers 200: KILLED by h18
+the refusal is not counted: KILLED by h18

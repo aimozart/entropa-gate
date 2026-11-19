@@ -1,0 +1,362 @@
+   Compiling entropa-standards v0.2.0 (<build-dir>/<worktree>/crates/standards)
+    Finished `release` profile [optimized] target(s) in 0.71s
+     Running unittests src/lib.rs (<build-dir>/rs1-target/release/deps/entropa_standards-097a86f7fc1901b0)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (<build-dir>/rs1-target/release/deps/entropa_standards-5c519d53d8f20297)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/entropa-standards-mcp.rs (<build-dir>/rs1-target/release/deps/entropa_standards_mcp-626846ca2b7c2f76)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/citations.rs (<build-dir>/rs1-target/release/deps/citations-714552d203a1ec00)
+
+running 9 tests
+test k2_three_real_guardrails_each_cite_at_least_one_clause_and_their_files_and_markers_exist ... ok
+test k1_every_e1_register_row_is_bound_and_the_binding_matches_the_frozen_register_map ... ok
+test k8_the_binding_is_by_clause_id_the_citation_code_never_searches ... ok
+test k9_a_malformed_citations_file_is_refused ... ok
+test k7_a_missing_guardrail_file_or_marker_is_a_finding ... ok
+test k3_the_citations_name_the_corpus_version_and_hash_and_every_hash_is_a_sha256 ... ok
+test k4_against_the_sealed_manifest_nothing_has_drifted ... ok
+test k6_a_cited_clause_that_disappears_is_reported_unknown_not_ok ... ok
+test k5_the_drift_check_bites_a_changed_clause_text_is_reported_for_exactly_its_citations ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/cli.rs (<build-dir>/rs1-target/release/deps/cli-02d616c16586564a)
+
+running 8 tests
+test c3_a_changed_source_is_refused_with_exit_3_and_nothing_is_overwritten ... ok
+test c6_eval_needs_its_arguments_and_a_sealed_store ... ok
+test c2_sealing_the_same_content_again_says_so_and_exits_zero ... ok
+test c1_seal_then_versions_then_inspect ... ok
+test c7_eval_refuses_a_changed_frozen_set_and_never_overwrites_results ... ok
+test c4_bad_usage_exits_2_and_never_writes ... ok
+test c8_cites_check_passes_on_the_committed_manifest_and_exits_3_on_drift ... ok
+test c5_a_missing_pdf_extractor_or_pdf_is_a_clean_error ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/dev3_sets.rs (<build-dir>/rs1-target/release/deps/dev3_sets-be5898c0cd54bd0c)
+
+running 5 tests
+test e5_dev3_files_match_their_frozen_hashes_and_the_older_sets_are_untouched ... ok
+test e2_out_of_corpus_questions_use_no_name_from_the_codes_list_and_are_new ... ok
+test e3_injection_set_has_24_cases_in_at_least_12_families_with_the_six_ordered_ones ... ok
+test e4_id_named_set_has_20_real_clauses_and_stale_set_has_10_cases ... ok
+test e1_out_of_corpus_set_has_30_questions_over_every_held_standard_and_none_is_a_real_id ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/dev_sets.rs (<build-dir>/rs1-target/release/deps/dev_sets-764200818b764b5f)
+
+running 4 tests
+test d4_dev_files_match_their_frozen_hashes ... ok
+test d3_injection_set_covers_eight_families_with_a_four_clause_corpus_each ... ok
+test d2_out_of_corpus_set_has_20_questions_and_no_name_from_a_list_in_the_code ... ok
+test d1_description_set_has_at_least_60_questions_over_real_clauses_not_in_r1 ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/eval_harness.rs (<build-dir>/rs1-target/release/deps/eval_harness-56a23c1b5da38526)
+
+running 8 tests
+test e1_upper_bounds_are_the_rule_of_three_at_zero_and_wilson_otherwise ... ok
+test e5_the_bars_are_exactly_the_ordered_thresholds ... ok
+test e4_out_of_corpus_scoring_counts_abstentions_and_can_fail ... ok
+test e7_each_invariant_detects_its_violation_negative_controls ... ok
+test e3_clause_addressed_scoring_counts_by_form_and_standard_and_lists_misses_by_id_only ... ok
+test e2_the_frozen_check_passes_on_the_real_sets_and_fails_on_a_changed_or_unlisted_file ... ok
+test e6_the_fixture_sets_run_through_the_real_tool_core_and_report_every_case ... ok
+test e8_the_full_report_has_every_section_and_names_the_shipped_configuration ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s
+
+     Running tests/flags3.rs (<build-dir>/rs1-target/release/deps/flags3-ba0297b958ce2788)
+
+running 6 tests
+test j2_a_clause_made_of_a_few_terms_repeated_is_flagged_for_low_diversity_or_repeated_phrase ... ok
+test j6_the_flags_can_be_switched_off_for_an_ablation ... ok
+test j1_a_clause_that_repeats_the_querys_content_words_in_order_is_flagged_and_loses ... ok
+test j3_a_clause_that_quotes_another_clause_is_flagged_as_a_copy ... ok
+test j4_look_alike_letters_are_folded_and_the_clause_is_flagged_and_excluded ... ok
+test j5_genuine_prose_is_never_flagged ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/foreign.rs (<build-dir>/rs1-target/release/deps/foreign-8abc0b3b4e655b83)
+
+running 4 tests
+test f2_another_nist_publication_number_abstains_but_the_held_one_answers ... ok
+test f4_a_clause_id_followed_by_a_kind_word_is_not_a_foreign_standard ... ok
+test f3_held_standards_names_and_plain_acronyms_do_not_trigger_it ... ok
+test f1_a_foreign_acronym_with_a_kind_word_abstains_even_when_an_id_shaped_token_exists_here ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/frozen_sets.rs (<build-dir>/rs1-target/release/deps/frozen_sets-58e707b3e29e312d)
+
+running 6 tests
+test f3_twenty_out_of_corpus_questions_cover_the_named_gaps ... ok
+test f2_id_questions_name_their_clause_and_description_questions_do_not ... ok
+test f6_every_file_under_eval_is_hash_frozen_in_frozen_json_and_nothing_is_unlisted ... ok
+test f1_sixty_clause_addressed_questions_with_the_agreed_mix_and_real_expected_clauses ... ok
+test f5_independent_subset_is_kept_byte_for_byte_and_maps_to_real_clauses ... ok
+test f4_injection_and_stale_sets_and_their_fixtures ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gate3.rs (<build-dir>/rs1-target/release/deps/gate3-643d1f49bc981b39)
+
+running 6 tests
+test g4_no_content_word_in_the_corpus_vocabulary_abstains_whatever_the_other_switches ... ok
+test g6_the_gate_reports_why_it_abstained ... ok
+test g3_a_real_paraphrase_that_shares_most_of_its_content_words_still_answers ... ok
+test g5_the_name_list_makes_no_difference_to_everyday_questions ... ok
+test g1_one_shared_content_word_never_suffices ... ok
+test g2_two_shared_words_with_a_low_share_of_the_questions_own_content_words_abstain ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/h13_props.rs (<build-dir>/rs1-target/release/deps/h13_props-e07b5f52e0e7025b)
+
+running 11 tests
+test i5c_a_tampered_store_never_opens ... ok
+test i3_an_existing_id_answers_exactly_that_clause ... ok
+test i2b_an_existing_id_next_to_a_nonexistent_one_abstains ... ok
+test i2_a_nonexistent_id_never_returns_a_passage ... ok
+test i1c_tool_calls_never_panic_and_make_exactly_one_hash_only_record ... ok
+test i1b_text_and_flag_helpers_never_panic_hang_or_balloon ... ok
+test i4a_passages_are_untrusted_and_licensed_text_is_one_short_quote ... ok
+test i1d_spec_parser_and_store_loader_never_panic ... ok
+test i1a_search_never_panics_hangs_or_balloons ... ok
+test i4b_flags_demote_exactly_and_never_promote ... ok
+test i7_retrieval_is_deterministic ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.44s
+
+     Running tests/h13_regress.rs (<build-dir>/rs1-target/release/deps/h13_regress-2cb332f9a7ddb28b)
+
+running 5 tests
+test v4_a_changed_clause_tier_or_version_in_the_store_is_refused ... ok
+test v5_a_roman_numeral_after_annex_is_not_a_foreign_standard ... ok
+test v2_capitalised_id_keywords_are_not_a_foreign_standard ... ok
+test v3_existing_ids_still_answer ... ok
+test v1_a_longer_number_is_not_read_as_its_held_prefix ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/ids3.rs (<build-dir>/rs1-target/release/deps/ids3-7c9e161b1fd87e68)
+
+running 5 tests
+test h5_version_and_product_numbers_and_other_standards_codes_are_not_clause_ids ... ok
+test h2_hipaa_ids_that_exist_still_resolve_in_every_written_form ... ok
+test h1_a_hipaa_section_or_lettered_subsection_that_is_not_held_abstains ... ok
+test h4_existing_ids_in_all_the_held_forms_answer ... ok
+test h3_a_nonexistent_nested_or_family_id_abstains_even_when_its_parent_exists ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/ingest.rs (<build-dir>/rs1-target/release/deps/ingest-8b1b175cb942eda7)
+
+running 13 tests
+test i1_oscal_controls_and_enhancements_are_separate_clauses_with_nist_style_ids ... ok
+test i3_pci_style_requirements_merge_statement_and_testing_lines_and_ignore_noise ... ok
+test i2_eu_articles_are_clauses_noise_and_chapter_lines_are_dropped_and_duplicates_keep_the_longest ... ok
+test i12_pdf_sources_go_through_the_extractor_and_a_missing_extractor_is_an_error_not_a_panic ... ok
+test i13_a_bad_spec_is_refused_before_anything_is_read_or_written ... ok
+test i4_html_sections_are_clauses_with_tags_scripts_and_entities_removed ... ok
+test i11_a_failing_sink_does_not_unseal_the_corpus_but_is_reported ... ok
+test i6_a_seal_writes_a_manifest_with_hashes_and_no_text_and_the_clauses_with_text ... ok
+test i9_opening_a_sealed_version_detects_a_tampered_clause_or_manifest ... ok
+test i5_chunking_is_deterministic_and_an_empty_or_idless_source_is_refused ... ok
+test i7_the_corpus_hash_is_deterministic_and_the_same_content_again_is_a_no_op ... ok
+test i10_a_seal_emits_one_corpus_version_receipt_request_and_a_refusal_emits_a_denial ... ok
+test i8_a_changed_source_under_the_same_version_name_is_refused_and_nothing_is_overwritten ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/mcp_protocol.rs (<build-dir>/rs1-target/release/deps/mcp_protocol-024a11c65be55105)
+
+running 10 tests
+test m10_with_the_real_node_binary_every_retrieval_gives_a_record_that_verifies_offline ... ok
+test m9_the_server_works_with_no_network_at_all ... ok
+test m1_handshake_then_tools_list_gives_four_read_only_tools_in_the_fixed_order ... ok
+test m6_closing_stdin_ends_the_process_promptly_with_status_zero ... ok
+test m7_the_server_refuses_to_start_without_a_sink_a_sealed_corpus_or_an_intact_store ... ok
+test m8_if_the_record_cannot_be_written_the_server_returns_no_answer ... ok
+test m2_a_search_returns_cited_untrusted_passages_and_writes_exactly_one_record ... ok
+test m5_stdout_carries_only_json_rpc_and_stderr_never_carries_query_or_clause_text ... ok
+test m3_abstentions_invalid_arguments_and_unknown_tools_each_leave_one_record ... ok
+test m4_hostile_lines_do_not_kill_the_server_and_the_next_valid_request_is_answered ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/r2_runner.rs (<build-dir>/rs1-target/release/deps/r2_runner-81fe09c14bb387dc)
+
+running 6 tests
+test r3_the_heldout_runner_checks_the_seal_first_and_does_not_echo_content ... ok
+test r2_a_changed_dev_file_is_refused ... ok
+test r1_dev_sets_load_and_verify_their_frozen_hashes ... ok
+test r5_injection_is_obeyed_when_the_top_clause_is_not_the_expected_one ... ok
+test r6_a_stale_case_passes_only_when_the_pinned_version_returns_the_expected_hash ... ok
+test r4_the_heldout_report_has_counts_bounds_and_ids_but_no_question_text ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/r3_runner.rs (<build-dir>/rs1-target/release/deps/r3_runner-68439162cbf49945)
+
+running 4 tests
+test q2_a_changed_dev3_file_is_refused ... ok
+test q1_dev3_loads_with_its_frozen_hashes_and_has_the_ordered_sizes ... ok
+test q4_the_r3_heldout_runner_is_pinned_to_the_orders_sha_and_judges_the_bars ... ok
+test q3_the_dev3_report_has_every_block_with_bounds ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+
+     Running tests/rank_v2.rs (<build-dir>/rs1-target/release/deps/rank_v2-8e3c0259c9eb21c2)
+
+running 15 tests
+test t3d_zero_width_characters_do_not_split_words ... ok
+test t4a_the_shipped_configuration_has_no_name_list ... ok
+test t3e_a_single_letter_clause_id_is_an_id ... ok
+test t2b_a_clause_covering_all_the_query_terms_beats_one_repeating_a_single_term ... ok
+test t4b_the_shipped_gate_answers_on_a_tiny_corpus ... ok
+test t4d_an_id_shaped_token_that_does_not_exist_still_abstains ... ok
+test t4e_an_off_topic_question_abstains_on_the_relative_gate_alone ... ok
+test t2c_adjacent_query_words_found_together_beat_the_same_words_scattered ... ok
+test t2a_a_term_in_the_clause_head_outranks_the_same_term_only_in_a_short_body ... ok
+test t3a_repeating_a_term_a_hundred_times_does_not_beat_the_clause_that_answers ... ok
+test t2d_a_clause_is_preferred_over_its_own_enhancement_when_their_scores_are_close ... ok
+test t3c_a_keyword_block_without_prose_ranks_below_the_sentence_that_answers ... ok
+test t3f_a_heading_that_copies_the_question_but_has_no_body_behind_it_does_not_win ... ok
+test t4c_an_unknown_acronym_not_in_the_corpus_vocabulary_abstains_without_any_list ... ok
+test t3b_one_huge_clause_in_one_standard_does_not_change_scores_in_another_standard ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/retrieval.rs (<build-dir>/rs1-target/release/deps/retrieval-fec5c3cc8407a5f4)
+
+running 18 tests
+test r1_tokens_are_lowercase_alphanumeric_without_stop_words_with_plural_s_stripped_and_digits_kept ... ok
+test r2_sanitise_removes_control_bidi_and_zero_width_characters_and_nothing_else ... ok
+test r3_the_first_25_words_and_the_best_25_word_window ... ok
+test r13_cite_check_is_ok_for_the_current_hash_drift_for_another_and_unknown_for_a_missing_clause ... ok
+test r16_lookup_clause_is_exact_and_refuses_an_unknown_clause_or_version ... ok
+test r4_the_bm25_score_matches_the_formula_for_k1_1_2_and_b_0_75_with_the_per_standard_median_length ... ok
+test r15_every_passage_is_marked_untrusted_and_output_text_is_sanitised ... ok
+test r18_the_result_names_its_corpus_version_and_hash_and_serialises_without_text_for_licensed_passages ... ok
+test r7_an_exact_id_hit_wins_even_when_the_text_would_rank_another_clause_first ... ok
+test r12_queries_are_pinned_to_a_corpus_version_and_the_default_is_the_newest ... ok
+test r14_open_clauses_return_capped_text_and_licensed_clauses_return_one_short_quote_only ... ok
+test r9_naming_a_standard_scopes_the_search_to_it_and_the_standard_name_is_not_scored ... ok
+test r10_the_abstention_gate_constants_are_fixed_and_a_weak_or_partial_match_abstains ... ok
+test r8_an_id_shaped_token_that_does_not_exist_makes_the_answer_abstain ... ok
+test r5_ordering_is_fully_deterministic_ties_by_standard_then_id_and_input_order_does_not_matter ... ok
+test r6_a_clause_id_in_the_query_is_an_exact_hit_in_any_common_spelling_and_ranks_first ... ok
+test r11_queries_naming_a_standard_we_do_not_hold_abstain_and_the_guard_can_be_switched_off_for_the_ablation ... ok
+test r17_hostile_queries_are_bounded_and_never_panic ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/rs1_density.rs (<build-dir>/rs1-target/release/deps/rs1_density-b6ed5c6d7b2e2081)
+
+running 4 tests
+test d1_the_shipped_minimum_is_unchanged_and_the_candidate_is_a_configuration_value ... ok
+test d2_with_a_minimum_of_ten_a_short_clause_made_of_query_words_is_flagged_and_a_normal_one_is_not ... ok
+test d3_the_partial_query_mirror_family_wins_today_and_does_not_with_the_candidate ... ok
+test d4_the_candidate_does_not_break_stale_or_the_other_injection_families_that_held ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+     Running tests/rs1_foreign.rs (<build-dir>/rs1-target/release/deps/rs1_foreign-3eccf78274168f52)
+
+running 3 tests
+test f1_off_by_default_and_switchable ... ok
+test f2_an_unknown_all_caps_name_makes_the_question_abstain_when_the_switch_is_on ... ok
+test f3_a_name_the_corpus_holds_does_not_abstain_and_plain_questions_are_unchanged ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/rs1_raw.rs (<build-dir>/rs1-target/release/deps/rs1_raw-996ab2def0eb7304)
+
+running 5 tests
+test w3_the_candidate_is_off_by_default_and_switchable ... ok
+test w2_ordinary_clause_text_is_not_flagged ... ok
+test w1_hidden_characters_markup_and_a_repeated_id_are_flagged ... ok
+test w4_with_the_switch_the_hidden_markup_zero_width_and_id_spoof_families_are_not_obeyed ... ok
+test w5_the_switch_does_not_make_any_other_case_worse ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+     Running tests/rs1_runner.rs (<build-dir>/rs1-target/release/deps/rs1_runner-8dcb1d32fd4fa968)
+
+running 2 tests
+test n1_a_missing_attack_field_is_refused_before_scoring ... ok
+test n2_the_report_has_the_three_way_split_and_records_the_switches ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/rs1_scorer.rs (<build-dir>/rs1-target/release/deps/rs1_scorer-480c290a157bbf9b)
+
+running 3 tests
+test s1_the_four_classes_follow_the_rule ... ok
+test s2_every_dev_case_names_an_attack_clause_that_exists_and_is_not_the_genuine_one ... ok
+test s3_the_baseline_restated_is_18_obeyed_1_abstained_2_another_clause_129_correct ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/stale3.rs (<build-dir>/rs1-target/release/deps/stale3-235a534a8e6735c5)
+
+running 2 tests
+test k1_a_pinned_lookup_on_a_one_clause_corpus_returns_the_pinned_text ... ok
+test k2_the_old_floor_would_have_refused_it_and_the_content_gate_still_refuses_an_unrelated_question ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/static_checks.rs (<build-dir>/rs1-target/release/deps/static_checks-a99e785d4f08013a)
+
+running 6 tests
+test s2_tokio_is_built_without_its_net_feature_and_no_full_feature_set ... ok
+test s6_the_tool_names_contain_no_write_verb_and_the_binary_registers_no_tool_outside_the_core ... ok
+test s4_the_only_process_spawns_are_the_record_sink_and_the_cli_pdf_extractor ... ok
+test s3_no_network_or_socket_api_appears_in_any_source_file ... ok
+test s5_the_server_path_has_no_write_to_the_file_system ... ok
+test s1_no_http_or_tls_client_crate_is_anywhere_in_the_dependency_closure ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/tools.rs (<build-dir>/rs1-target/release/deps/tools-d5421060c3fb673c)
+
+running 12 tests
+test t1_exactly_four_read_only_tools_in_a_fixed_order_with_strict_schemas ... ok
+test t6_an_unknown_tool_is_an_error_and_there_is_no_way_to_reach_a_write_tool ... ok
+test t4_lookup_and_cite_check_and_list_versions_each_write_exactly_one_record ... ok
+test t3_an_abstention_is_recorded_as_a_denial_with_counts_one_zero_one ... ok
+test t7_if_the_record_cannot_be_written_no_answer_is_returned ... ok
+test t2_a_search_answers_and_writes_one_hash_only_record ... ok
+test t10_instructions_in_a_query_change_nothing_and_cost_exactly_one_record ... ok
+test t5_invalid_arguments_are_refused_with_a_clear_error_and_still_recorded_without_the_raw_arguments ... ok
+test t9_licensed_text_never_reaches_an_output_or_a_record_beyond_one_short_quote ... ok
+test t11_the_server_survives_a_few_hundred_hostile_argument_shapes_and_records_each ... ok
+test t12_an_output_never_exceeds_64_kib ... ok
+test t8_run_ids_are_unique_valid_and_bounded ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.38s
+
+   Doc-tests entropa_standards
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

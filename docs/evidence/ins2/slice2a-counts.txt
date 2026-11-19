@@ -1,0 +1,4 @@
+witness debug: 54 passed 0 failed 1 ignored 
+witness --release: 54 passed 0 failed 1 ignored 
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.11s
+fmt-ok

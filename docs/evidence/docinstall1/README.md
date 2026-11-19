@@ -1,0 +1,6 @@
+# DOC-INSTALL1: the install guide, proven in a clean container
+- `scripts/tests/doc-install1.sh PKG_DIR IMAGE_TAG` runs every command of the guide (verify first, install, root refusal, changed-file refusal, the weaker key mode, init/record/verify, uninstall, the container section with a host directory) in a container with no network, an ordinary user and an empty home, and compares every output block of the guide with what was printed: `run.txt` (29 checks, ALL OK).
+- `pkg1-install-tests.txt`: the 66 checks of `scripts/tests/pkg1-install.sh` on the same package (ALL OK).
+- `package-report.txt`: the build report (two builds, byte-identical; tarball sha256 aa6a3df3d68e..., image tag entropa-gate:pkg1-aa6a3df3d68e). THIS PACKAGE IS SIGNED WITH THROWAWAY TEST KEYS: a real release is rebuilt with the owner's key directory and has its own hashes.
+- `bite.txt`: the proof fails when a guide block is changed, when the wrong key is the trust anchor, and for an old tarball whose checksum list contained itself (the first refusal seen: an early assembly from before the build script was fixed; the current script's tarballs do not have the fault).
+- Not proven: a Docker named volume (it would leave a volume behind), another Linux distribution, a real release key.

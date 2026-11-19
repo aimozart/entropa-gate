@@ -1,0 +1,31 @@
+work directory: <work-dir>
+ok   init
+ok   verify
+ok   nodefiles
+ok   keymodes
+ok   after-uninstall-binary
+ok   after-uninstall-node
+ok   container-init
+ok   container-verify
+ok   install verified by minisign and exit 0
+ok   install exit 0
+ok   pubkey-mode warns that the weaker mode is not enough for a hostile download
+ok   root refuses root
+ok   tamper refuses a changed file
+ok   uninstall keeps keys and ledgers
+ok   minisign-verify signature verifies
+ok   nothing was installed by the refused runs
+ok   guide block minisign-verify
+ok   guide block sha256check
+ok   guide block install
+ok   guide block root
+ok   guide block tamper
+ok   guide block pubkey-mode
+ok   guide block init
+ok   guide block record
+ok   guide block verify
+ok   guide block container-init
+ok   guide block container-record
+ok   guide block container-verify
+ok   guide block uninstall
+ALL OK

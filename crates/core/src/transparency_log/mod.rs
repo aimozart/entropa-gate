@@ -223,12 +223,12 @@ impl TransparencyLog {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 pub(crate) fn checkpoint_digest_for_tests(root: &Hash, size: usize, ts: u64) -> Vec<u8> {
     checkpoint_digest(root, size, ts)
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     #[test]
     fn record_returns_the_appended_bytes_and_none_out_of_range() {

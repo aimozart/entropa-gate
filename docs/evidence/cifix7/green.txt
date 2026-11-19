@@ -1,0 +1,17 @@
+ok   found the case variables in the sources: AT1_CASES AT2_CASES AT3_CASES EG1_CASES H13_CASES 
+ok   .github/workflows/ci.yml has a top-level env block
+ok   AT1_CASES is capped in the workflow env
+ok   AT1_CASES is passed into the container (IN_DEV_PASS_ENV)
+ok   AT2_CASES is capped in the workflow env
+ok   AT2_CASES is passed into the container (IN_DEV_PASS_ENV)
+ok   AT3_CASES is capped in the workflow env
+ok   AT3_CASES is passed into the container (IN_DEV_PASS_ENV)
+ok   EG1_CASES is capped in the workflow env
+ok   EG1_CASES is passed into the container (IN_DEV_PASS_ENV)
+ok   H13_CASES is capped in the workflow env
+ok   H13_CASES is passed into the container (IN_DEV_PASS_ENV)
+ok   AT1_CASES=1000 is a reduction
+ok   AT2_CASES=2000 is a reduction
+ok   AT3_CASES=2000 is a reduction
+ok   EG1_CASES=2000 is a reduction
+ok   H13_CASES=2000 is a reduction

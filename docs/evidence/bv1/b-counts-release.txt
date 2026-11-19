@@ -1,0 +1,5 @@
+entropa-core release: 96 passed 0 failed 5 ignored 
+entropa-witness release: 39 passed 0 failed 0 ignored 
+entropa-approvals release: 41 passed 0 failed 0 ignored 
+entropa-policy release: 37 passed 0 failed 0 ignored 
+entropa-ledger release: 118 passed 0 failed 4 ignored 

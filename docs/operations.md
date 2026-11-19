@@ -36,7 +36,7 @@ never resets the soak clock:
 - `monitoring/` — versioned exports of the 5 live Cloud Monitoring alert policies (5xx errors,
   heartbeat missed, AI decision failures, chain rollback detected, memory utilization high), so the
   current alerting setup is reproducible from the repo, not only imperative `gcloud` history.
-- `a project record (not published)` — every architecture/safety/product decision, with the command that
+- `the decision records` — every architecture/safety/product decision, with the command that
   proves the outcome, not just the plan.
 
 ## Live-testing evidence practice (standing rule, the project rules — not optional)
@@ -57,7 +57,7 @@ throughout the action, not just check status before/after:
 - True push-streaming (`gcloud alpha logging tail`) needs `grpcio` + `CLOUDSDK_PYTHON_SITEPACKAGES=1`,
   not installed in this environment as of 2026-08-18 — fall back to polling `gcloud logging read` on
   a short interval (~4s) into a file, deduped by `insertId`, for the duration of the action.
-- **Every test/action gets its own `a project record (not published)` entry**, filled in as it happens, not
+- **Every test/action gets its own `the decision records` entry**, filled in as it happens, not
   reconstructed afterward: Expected proof (what log lines/behavior should appear) → Observed outcome
   (what the captured log/command output actually showed) → Evidence (the real excerpts). This is the
   same expectation/observed/evidence discipline Paxel's reports ask for — treat it as a standing

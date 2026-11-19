@@ -24,9 +24,11 @@ members = [
     "crates/tiers",
     "crates/nodecore",
     "crates/release",
+    "crates/check",
     "crates/mockview",
     "crates/try",
     "crates/try-http",
+    "crates/bundle-verify",
 ]
 
 [workspace.package]
@@ -56,3 +58,12 @@ panic = "warn"
 dbg_macro = "deny"
 todo = "deny"
 unimplemented = "deny"
+
+# BV1: the browser verifier. Size-optimised, aborts on panic (a panic becomes a trap that the page reports as such).
+[profile.wasm]
+inherits = "release"
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

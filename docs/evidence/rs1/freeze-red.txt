@@ -1,0 +1,3 @@
+error[E0277]: can't compare `std::string::String` with `Vec<std::string::String>`
+error[E0277]: can't compare `std::string::String` with `Vec<std::string::String>`
+error: could not compile `entropa-standards` (test "rs1_runner") due to 2 previous errors

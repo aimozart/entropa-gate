@@ -869,3 +869,47 @@ fn h17_every_start_has_its_own_salt_so_the_same_text_gives_a_different_record_ha
     }
     panic!("the three requests never fell in one second");
 }
+
+#[test]
+fn h18_an_http_11_request_without_exactly_one_host_header_is_refused_with_400_before_anything_else()
+{
+    // RFC 9112 section 3.2: a server MUST answer 400 to an HTTP/1.1 request that has no Host header or more than one. (LS3d found one answered 200.)
+    let s = start(&[]);
+    let valid = |hosts: &str| {
+        format!(
+            "POST /try HTTP/1.1\r\n{hosts}Content-Type: application/json\r\nContent-Length: {}\r\nX-Forwarded-For: 203.0.113.140\r\nConnection: close\r\n\r\n{GOOD}",
+            GOOD.len()
+        )
+    };
+    let bad: Vec<(&str, String)> = vec![
+        ("healthz without Host", "GET /healthz HTTP/1.1\r\nConnection: close\r\n\r\n".into()),
+        ("an unknown path without Host", "GET /nope HTTP/1.1\r\nConnection: close\r\n\r\n".into()),
+        ("a valid gate request without Host", valid("")),
+        ("a preflight without Host", format!("OPTIONS /try HTTP/1.1\r\nOrigin: {ORIGIN}\r\nAccess-Control-Request-Method: POST\r\nConnection: close\r\n\r\n")),
+        ("two Host headers", "GET /healthz HTTP/1.1\r\nHost: a\r\nHost: b\r\nConnection: close\r\n\r\n".into()),
+        ("a valid gate request with two Host headers", valid("Host: a\r\nHost: b\r\n")),
+    ];
+    for (name, req) in &bad {
+        let r = send(s.port, req.as_bytes()).unwrap_or_else(|| panic!("{name}: no answer"));
+        assert_eq!(r.status, 400, "{name}: {r:?}");
+        assert_eq!(json(&r)["error"], "bad_request", "{name}");
+        assert!(r.h("access-control-allow-origin").is_none(), "{name}");
+    }
+    // the refused requests never reached the handler: they did not use up the client's allowance (ten valid requests of the same client still pass)
+    for i in 0..10 {
+        let r = send(s.port, valid("Host: x\r\n").as_bytes()).unwrap();
+        assert_eq!(r.status, 200, "valid request {i}: {r:?}");
+    }
+    // exactly one Host works; HTTP/1.0 needs none
+    assert_eq!(get(s.port, "/healthz").status, 200);
+    assert_eq!(
+        send(s.port, b"GET /healthz HTTP/1.0\r\n\r\n")
+            .unwrap()
+            .status,
+        200
+    );
+    // the refusal is counted as a 400 in the status counts
+    std::thread::sleep(Duration::from_millis(1500));
+    let m = counts_by_key(&s.out.lock().unwrap());
+    assert_eq!(m.get("400"), Some(&(bad.len() as u64)), "{m:?}");
+}

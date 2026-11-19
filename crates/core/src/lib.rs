@@ -10,6 +10,7 @@
 //!
 //! This crate is pure Rust with no network calls of its own.
 
+pub mod anchor;
 pub mod merkle;
 pub mod pqc;
 pub mod signer;
@@ -19,6 +20,6 @@ pub use pqc::{probe_id, verify_hex, Probe};
 pub use signer::{CheckpointSigner, SignError};
 
 /// Compiles and runs the README quickstart as a doc test.
-#[cfg(doctest)]
+#[cfg(all(doctest, feature = "signing"))]
 #[doc = include_str!("../README.md")]
 struct ReadmeDoctests;

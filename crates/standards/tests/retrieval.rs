@@ -490,7 +490,12 @@ fn r15_every_passage_is_marked_untrusted_and_output_text_is_sanitised() {
         ),
     ];
     let rt = Retriever::from_clauses("t", "h", docs);
-    let res = rt.search("alpha beta delta", None, 5, &loose());
+    // RS1: `raw_flags` (ON since the RS1 freeze) EXCLUDES a clause with hidden characters (rs1_raw.rs w4); it is switched off here so that this test still checks the output sanitising
+    let cfg = Config {
+        raw_flags: false,
+        ..loose()
+    };
+    let res = rt.search("alpha beta delta", None, 5, &cfg);
     assert!(res.passages.iter().all(|p| p.untrusted));
     let json = serde_json::to_value(&res).unwrap();
     assert!(json["passages"]

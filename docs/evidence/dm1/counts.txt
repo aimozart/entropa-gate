@@ -1,0 +1,8 @@
+entropa-try debug: 22 passed 0 failed 0 ignored 
+entropa-try --release: 22 passed 0 failed 0 ignored 
+warning: build failed, waiting for other jobs to finish...
+fmt-ok
+    Checking entropa-nodecore v0.2.0 (<build-dir>/entropa-dm1/crates/nodecore)
+    Checking entropa-try v0.2.0 (<build-dir>/entropa-dm1/crates/try)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.65s
+note: clippy over the dependency crate entropa-egress reports the known finding at crates/egress/src/context.rs:514 (frozen code, disclosed, fix planned in its own stage); entropa-try itself is checked with --no-deps

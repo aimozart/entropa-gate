@@ -1,0 +1,20 @@
+== public-gitignore
+FAIL NOT ignored: id_rsa
+FAIL NOT ignored: id_ed25519
+FAIL NOT ignored: keystore.jks
+FAIL NOT ignored: terraform.tfstate
+FAIL NOT ignored: terraform.tfstate.backup
+FAIL NOT ignored: .terraform/x
+FAIL NOT ignored: .npmrc
+FAIL NOT ignored: .netrc
+FAIL NOT ignored: vault.gpg
+FAIL missing from the exported .gitignore: *.jks
+FAIL missing from the exported .gitignore: *.gpg
+FAIL missing from the exported .gitignore: id_rsa*
+== vendor-optional
+FAIL 1 exit 1 without the vendored preflight: FAIL the vendored preflight does not match its recorded hash
+FAIL 1 no stated skip
+ok   1 the ignore checks still ran
+ok   2 a wrong recorded hash still fails
+ok   3 the right recorded hash passes
+FAIL 4 scripts/preflight-if-vendored.sh does not exist

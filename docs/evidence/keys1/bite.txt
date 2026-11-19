@@ -1,0 +1,9 @@
+BITE A signer ignores the ledger (always decisions key): failing -> k7_a k8_a k4_a k3_e resu 
+BITE B keys-check never detects a shared own key: failing -> NONE (survived)
+BITE C keys-add and init overwrite (truncate, not create_new): failing -> k2_k resu 
+BITE D init gives both ledgers the same key: failing -> k1_i k6_k k4_a k3_e resu 
+BITE E legacy shared key not allowed to fall back: failing -> NONE (survived)
+BITE F keys-check ignores legacy in strict mode: failing -> k5_a resu 
+BITE G permission check skipped: failing -> k7_a resu 
+BITE E legacy shared key not allowed to fall back: failing -> test k5_ test k8_ test res 
+BITE B (re-run with k9) keys-check never detects a shared own key: failing -> test k9_tw test resul error: tes 

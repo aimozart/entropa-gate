@@ -28,12 +28,12 @@ fn set() -> Value {
             "expect": expect, "canaries": canaries})
     };
     json!({"schema": "eg-sealed-v1",
-        "policy": {"destinations": [{"tier": "T1", "url_prefix": "https://api.model.example/v1/"}, {"tier": "T2", "url_prefix": "https://api.model.example/v1/"}],
-                   "do_not_send_terms": [], "modes": {}},
-        "cases": [
-            case("s-1", "secrets", json!({"msg": format!("'password' => '{PLANTED}'")}), "no_leak", &[PLANTED]),
-            case("c-1", "clean", json!({"msg": "Please summarise the retention clause."}), "allow", &[]),
-        ]})
+    "policy": {"destinations": [{"tier": "T1", "url_prefix": "https://api.model.example/v1/"}, {"tier": "T2", "url_prefix": "https://api.model.example/v1/"}],
+               "do_not_send_terms": [], "modes": {}},
+    "cases": [
+        case("s-1", "secrets", json!({"msg": format!("'password' => '{PLANTED}'")}), "no_leak", &[PLANTED]),
+        case("c-1", "clean", json!({"msg": "Please summarise the retention clause."}), "allow", &[]),
+    ]})
 }
 struct Fixture {
     _d: tempfile::TempDir,
@@ -54,7 +54,15 @@ fn fixture() -> Fixture {
     }
 }
 fn heldout(fx: &Fixture, sha_arg: &str, extra: &[&str]) -> (i32, String) {
-    let mut a = vec!["heldout-eg", "--file", &fx.file, "--sha", sha_arg, "--out", &fx.out];
+    let mut a = vec![
+        "heldout-eg",
+        "--file",
+        &fx.file,
+        "--sha",
+        sha_arg,
+        "--out",
+        &fx.out,
+    ];
     a.extend_from_slice(extra);
     run(&a)
 }
@@ -85,7 +93,11 @@ fn g2_v2_runs_once_and_a_second_report_is_refused() {
     let (code, err) = heldout(&fx, &sha(&fx.bytes), &["--pipeline", "v2"]);
     assert_eq!(code, 3, "{err}");
     assert!(err.contains("run once"), "{err}");
-    assert_eq!(std::fs::read_to_string(&fx.out).unwrap(), first, "the first report is untouched");
+    assert_eq!(
+        std::fs::read_to_string(&fx.out).unwrap(),
+        first,
+        "the first report is untouched"
+    );
     // the report holds no request text
     assert!(!first.contains(PLANTED));
 }
@@ -97,7 +109,11 @@ fn g3_the_switch_selects_the_pipeline_and_the_default_is_v1() {
     assert_eq!(heldout(&fx2, &sha(&fx2.bytes), &["--pipeline", "v2"]).0, 0);
     assert_eq!(heldout(&fx3, &sha(&fx3.bytes), &[]).0, 0);
     let leaks = |fx: &Fixture| report(fx)["classes"]["secrets"]["failed"].clone();
-    assert_eq!(leaks(&fx1), 1, "v1 lets the planted PHP-array secret through");
+    assert_eq!(
+        leaks(&fx1),
+        1,
+        "v1 lets the planted PHP-array secret through"
+    );
     assert_eq!(leaks(&fx2), 0, "v2 blocks it");
     assert_eq!(leaks(&fx3), 1, "no flag means v1");
     assert_eq!(report(&fx2)["classes"]["clean"]["failed"], 0);

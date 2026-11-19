@@ -97,10 +97,11 @@ fn s3_the_export_carries_the_witness_statements() {
     log_n(&d, &signer, 0, 2);
     sync_witnesses(&d, "ledger", &[url]);
     // the export uses the node signer, so run it with the same key as the node's key file for this test
-    std::fs::write(d.join("platinum.key"), format!("{}\n", "7e".repeat(32))).unwrap();
+    // Test change (KEYS1): init creates decisions.key, which wins over a legacy platinum.key; the test overwrites decisions.key with the same key.
+    std::fs::write(d.join("decisions.key"), format!("{}\n", "7e".repeat(32))).unwrap();
     use std::os::unix::fs::PermissionsExt;
     std::fs::set_permissions(
-        d.join("platinum.key"),
+        d.join("decisions.key"),
         std::fs::Permissions::from_mode(0o600),
     )
     .unwrap();

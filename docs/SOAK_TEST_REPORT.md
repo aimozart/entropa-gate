@@ -38,7 +38,7 @@ incomplete, not a hard failure) · 🔴 red (blocking, unresolved failure).
 | Memory headroom / O(n) growth | 🔴 | **The real blocker.** 3 stopgap bumps in 4 days (512Mi→1Gi→2Gi→4Gi), currently 65.99% of 4Gi. The actual fix (`Chain::bound_to_window`) is built, unit-tested, **still unwired**. Every prior ceiling got revisited within 1–3 days — this will recur without the real fix. |
 | Public/private repo hygiene | 🟢 | `entropa-public` verified clean of all proprietary content; mirror-sync script in place; `gitleaks` 0 leaks both repos. |
 | CI/security gates | 🟢 | Pre-commit runs full suite (fmt/clippy/test/secret-scan/audit); `entropa-public` CI green on every push. |
-| Decision-outcome documentation | 🟡 | Real practice exists (`a project record (not published)`, 21 entries) but had a genuine drift (one entry's status went stale for 4 days before this review caught it) — now corrected, but proves the process needs periodic review, not just entries at write-time. |
+| Decision-outcome documentation | 🟡 | Real practice exists (`the decision records`, 21 entries) but had a genuine drift (one entry's status went stale for 4 days before this review caught it) — now corrected, but proves the process needs periodic review, not just entries at write-time. |
 
 ## Overall verdict
 

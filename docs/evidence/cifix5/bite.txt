@@ -1,0 +1,2 @@
+S1 the skip always triggers (node present is ignored): KILLED (3 skipped although node is present)
+S2 ENTROPA_REQUIRE_NODE=1 is ignored: KILLED (2 a required node was not enforced)

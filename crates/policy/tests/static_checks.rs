@@ -43,7 +43,8 @@ fn n1_the_manifest_has_no_http_cloud_or_kms_dependency() {
         assert!(!m.contains(banned), "Cargo.toml mentions {banned}");
     }
     assert!(
-        m.contains("cedar-policy = \"=4.14.0\""),
+        // BV1: the engine is an optional feature (a verification-only build has no Cedar); the exact pin is unchanged
+        m.contains("cedar-policy = { version = \"=4.14.0\", optional = true }"),
         "the Cedar version stays pinned (ADR 0018)"
     );
 }

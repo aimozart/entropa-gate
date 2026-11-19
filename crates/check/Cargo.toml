@@ -1,0 +1,33 @@
+[package]
+name = "entropa-check"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "entropa-check: the sealed-run discipline for your own guard rules: a hash-pinned set run once, a signed pre-registration, a report of counts, bounds and ids only (TH1, a stage record (not published))"
+publish = false
+
+[lib]
+name = "entropa_check"
+path = "src/lib.rs"
+
+[[bin]]
+name = "entropa-check"
+path = "src/main.rs"
+
+[dependencies]
+entropa-core = { path = "../core", version = "0.2.0" }
+entropa-release = { path = "../release" }
+entropa-witness = { path = "../witness" }
+entropa-nodecore = { path = "../nodecore" }
+entropa-ledger = { path = "../ledger" }
+entropa-approvals = { path = "../approvals" }
+sha2 = "0.10"
+hex = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+blake3 = { workspace = true }
+
+[lints]
+workspace = true

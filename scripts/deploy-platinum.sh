@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Deploy the platinum ingest to Cloud Run in project entropa-testnet. Serverless, scale to zero, ONE instance (single writer).
 # Cost: Cloud Run free tier, bucket cents, Secret Manager 0.06 USD/month, image under the free 0.5 GB.
-# Teardown (needs the owner's exact word + yes/no): scripts/teardown-platinum.sh
+# Teardown (needs explicit approval): scripts/teardown-platinum.sh
 # Steps marked [IAM] are run by the owner (the assistant's permission classifier blocks IAM grants).
 set -euo pipefail
 P=entropa-testnet; R=us-central1; SVC=entropa-platinum; SA=entropa-platinum-run

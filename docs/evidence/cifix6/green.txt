@@ -1,0 +1,2 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 5.80s
+   Generated <build-dir>/v5-host-target/doc/entropa_standards/index.html and 1 other file

@@ -1,5 +1,7 @@
 //! NODECORE (a stage record (not published)): the ONE network-free implementation of "validate a request, sign it, append it with a signed checkpoint" and "re-read a ledger and check
 //! every signature". The request parser is strict: a duplicated key is refused in every schema (decision D1, the reviewer 2026-11-16). No network, no KMS, no clock except the default `ts`.
+use entropa_core::anchor::{sign_v2, AnyCheckpoint};
+use entropa_core::merkle::{leaf_hash, root as merkle_root};
 use entropa_core::transparency_log::{decode_record, encode_record, TransparencyLog};
 use entropa_core::{CheckpointSigner, SignError};
 use entropa_ledger::{
@@ -237,6 +239,13 @@ pub fn append(
         .map_err(|_| NodeError::Invalid("record too large".into()))?;
     let mut store = FileStore::open(&dir.join(sub))
         .map_err(|e| NodeError::Store(StoreStage::Open, format!("{e:?}")))?;
+    // a v1 checkpoint may not follow a v2 one (a downgrade): refuse BEFORE the record is written, so no record is left without its checkpoint
+    if matches!(store.any_checkpoints().last(), Some(AnyCheckpoint::V2(_))) {
+        return Err(NodeError::Store(
+            StoreStage::Checkpoint,
+            "a v1 checkpoint cannot follow a v2 checkpoint".into(),
+        ));
+    }
     let mut tlog = TransparencyLog::new();
     for i in 0..store.len() {
         tlog.append(
@@ -254,6 +263,60 @@ pub fn append(
         .map_err(|e| NodeError::Store(StoreStage::Append, format!("{e:?}")))?;
     store
         .put_checkpoint(&cp)
+        .map_err(|e| NodeError::Store(StoreStage::Checkpoint, format!("{e:?}")))?;
+    Ok(Receipt {
+        index: index as u64,
+        subject_hash: fields.subject_hash.clone(),
+        size: cp.size as u64,
+        root: hex::encode(cp.root),
+    })
+}
+
+/// Like [`append`], but the checkpoint is a v2 checkpoint: a counter that moves by one at every checkpoint (also at the same size), the chain digest of the previous v2 checkpoint
+/// (zero for the first, which may follow v1 checkpoints), and a signature over the domain-tagged digest. The checkpoint time is the later of the event time and the previous
+/// checkpoint's time, so an honest writer never emits a time that goes backwards.
+pub fn append_v2(
+    dir: &Path,
+    sub: &str,
+    signer: &dyn CheckpointSigner,
+    fields: &EventFields,
+) -> Result<Receipt, NodeError> {
+    let label = fields.kind.as_str();
+    let payload = encode_event(
+        &sign_event(&Dyn(signer), fields).map_err(|e| NodeError::Io(format!("{e:?}")))?,
+    )
+    .map_err(|e| NodeError::Io(format!("{e:?}")))?;
+    let record = encode_record(&payload, Some(label))
+        .map_err(|_| NodeError::Invalid("record too large".into()))?;
+    let mut store = FileStore::open(&dir.join(sub))
+        .map_err(|e| NodeError::Store(StoreStage::Open, format!("{e:?}")))?;
+    let mut leaves = Vec::with_capacity(store.len() + 1);
+    for i in 0..store.len() {
+        leaves.push(leaf_hash(&store.record(i).ok_or_else(|| {
+            NodeError::Io("store changed while reading".into())
+        })?));
+    }
+    leaves.push(leaf_hash(&record));
+    let root = merkle_root(&leaves).ok_or_else(|| NodeError::Io("empty tree".into()))?;
+    let (counter, prev, last_time) = match store.any_checkpoints().last() {
+        Some(AnyCheckpoint::V2(c)) => (c.counter + 1, c.chain_digest(), c.timestamp),
+        Some(AnyCheckpoint::V1(c)) => (1, [0u8; 32], c.timestamp),
+        None => (1, [0u8; 32], 0),
+    };
+    let cp = sign_v2(
+        &Dyn(signer),
+        counter,
+        &prev,
+        &root,
+        leaves.len(),
+        fields.ts.max(last_time),
+    )
+    .map_err(|e| NodeError::Io(e.to_string()))?;
+    let index = store
+        .append(&record)
+        .map_err(|e| NodeError::Store(StoreStage::Append, format!("{e:?}")))?;
+    store
+        .put_checkpoint_v2(&cp)
         .map_err(|e| NodeError::Store(StoreStage::Checkpoint, format!("{e:?}")))?;
     Ok(Receipt {
         index: index as u64,
@@ -292,8 +355,12 @@ pub fn verify_ledger(
         }
     }
     let cps = store.checkpoints();
-    for (n, cp) in cps.iter().enumerate() {
-        if !cp.verify_signature(pubkey_hex) {
+    for (n, cp) in store.any_checkpoints().iter().enumerate() {
+        let ok = match cp {
+            AnyCheckpoint::V1(c) => c.verify_signature(pubkey_hex),
+            AnyCheckpoint::V2(c) => c.verify_signature(pubkey_hex),
+        };
+        if !ok {
             return v(format!("checkpoint {n}: signature does not verify"));
         }
     }

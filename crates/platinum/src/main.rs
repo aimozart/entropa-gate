@@ -1,7 +1,8 @@
 //! `entropa-platinum` command line (see the library docs).
 use entropa_platinum::{
-    export_council, export_decisions, export_evidence, init, log, log_council, log_evidence,
-    node_signer, verify, verify_council, verify_evidence, Res,
+    export_council, export_decisions, export_evidence, init, keys_add, keys_check, log,
+    log_council, log_evidence, node_signer_for, verify, verify_council, verify_evidence, Ledger,
+    Res,
 };
 use std::io::Read;
 use std::path::Path;
@@ -37,12 +38,26 @@ fn main() {
         (Some("verify-evidence"), Some(d)) => verify_evidence(Path::new(d)),
         (Some("export-evidence"), Some(d)) => export_evidence(Path::new(d)).map(|v| v.to_string()),
         (Some("export-decisions"), Some(d)) => export_decisions(Path::new(d)).map(|v| v.to_string()),
-        (Some("pubkey"), Some(d)) => node_signer(Path::new(d)).map(|s| s.pubkey_hex()),
+        (Some("pubkey"), Some(d)) => {
+            let ledger = match args.get(2) {
+                None => Some(Ledger::Decisions),
+                Some(l) => Ledger::parse(l),
+            };
+            match ledger {
+                Some(l) => node_signer_for(Path::new(d), l).map(|s| s.pubkey_hex()),
+                None => Err("the ledger must be decisions, evidence or council".to_string()),
+            }
+        }
+        (Some("keys-add"), Some(d)) => match args.get(2).and_then(|l| Ledger::parse(l)) {
+            Some(l) => keys_add(Path::new(d), l).map(|()| format!("created {}.key", l.name())),
+            None => Err("usage: keys-add DIR decisions|evidence|council".to_string()),
+        },
+        (Some("keys-check"), Some(d)) => keys_check(Path::new(d), args.iter().any(|a| a == "--allow-legacy")),
         (Some("serve"), Some(d)) => {
             entropa_platinum::serve::run(Path::new(d).to_path_buf()).map(|()| String::new())
         }
         _ => Err(
-            "usage: entropa-platinum init|log|log-evidence|log-council|verify|verify-evidence|verify-council|export-evidence|export-council|export-decisions|pubkey|serve DIR"
+            "usage: entropa-platinum init|log|log-evidence|log-council|verify|verify-evidence|verify-council|export-evidence|export-council|export-decisions|pubkey [LEDGER]|keys-add DIR LEDGER|keys-check DIR [--allow-legacy]|serve DIR"
                 .to_string(),
         ),
     };

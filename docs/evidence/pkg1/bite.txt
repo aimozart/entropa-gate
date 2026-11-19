@@ -1,0 +1,5 @@
+BITE verification skipped (minisign mode always passes): P3 ms changed binary (exit 0, leftovers: /tmp/tmp-pkg1/bite-;P3 ms changed install.sh (exit 0, leftovers: /tmp/tmp-pkg1/b;P3 ms changed SBOM (exit 0, leftovers: /tmp/tmp-pkg1/bite-20;P3 ms missing file (exit 0, leftovers: /tmp/tmp-pkg1/bite-20;
+BITE extra files accepted: P3 ms extra file (exit 0, leftovers: /tmp/tmp-pkg1/bite-2026;
+BITE root allowed without the flag: root not refused (exit 0);
+BITE uninstall removes the whole prefix: P4 uninstall removed a foreign file;
+BITE install writes before verifying (copy first): P3 ms wrong key (exit 1, leftovers: /tmp/tmp-pkg1/bite-20261;P3 ms changed binary (exit 1, leftovers: /tmp/tmp-pkg1/bite-;P3 ms changed install.sh (exit 1, leftovers: /tmp/tmp-pkg1/b;P3 ms changed SBOM (exit 1, leftovers: /tmp/tmp-pkg1/bite-20;

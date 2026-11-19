@@ -1,4 +1,4 @@
-//! The two events of the decision-memory design (docs/ARCHITECTURE-MEMORY.md sections 2 and 4): `index.built` (the scheduler
+//! The two events of the decision-memory design (the decision-memory design notes sections 2 and 4): `index.built` (the scheduler
 //! signs every index version) and `precedent.revoked` (the human principal withdraws a precedent). Closed codes only,
 //! not session-bound. Built with a local helper so the shared kind lists of the accepted tests stay untouched.
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]

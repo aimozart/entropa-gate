@@ -1,0 +1,21 @@
+ok   c1 a 4-CPU host: the default request of 12 becomes 4
+ok   c1 and 12 is gone
+ok   c1 the cap is said out loud
+ok   c2 a request below the host is never raised
+ok   c2 and nothing is said
+ok   c3 a big host keeps the default of 12
+ok   c4 a fractional request below the host stays
+ok   c5 a fractional request above the host becomes the host's
+ok   m1 a 7000 MiB host: the default 24g becomes 7000m
+ok   m1 and the swap limit equals it
+ok   m1 the cap is said out loud
+ok   m2 a big host keeps 24g
+ok   m3 a request below the host stays
+ok   m4 a huge request is capped
+ok   m5 6g on a 7000 MiB host stays (6144 MiB is below 7000)
+ok   m6 7g (7168 MiB) on a 7000 MiB host is capped
+ok   u1 unknown host CPUs: no cap
+ok   u1 unknown host memory: no cap
+ok   u2 garbage host values: no cap
+ok   l1 the limits line shows the capped CPUs
+ok   l1 and the capped memory

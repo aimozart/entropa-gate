@@ -1,0 +1,2 @@
+OK   build entropa-core (wasm32, no default features)
+OK   tree entropa-core has no getrandom or rand

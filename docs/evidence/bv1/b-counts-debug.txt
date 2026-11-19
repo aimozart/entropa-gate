@@ -1,0 +1,5 @@
+entropa-core debug: 96 passed 0 failed 5 ignored 
+entropa-witness debug: 39 passed 0 failed 0 ignored 
+entropa-approvals debug: 41 passed 0 failed 0 ignored 
+entropa-policy debug: error: test failed, to rerun pass `-p entropa-policy --test static_checks` 36 passed 1 failed 0 ignored 
+entropa-ledger debug: 118 passed 0 failed 4 ignored 

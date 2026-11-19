@@ -19,3 +19,7 @@ serde_json = { workspace = true }
 
 [lints]
 workspace = true
+
+[[bin]]
+name = "entropa-guard"
+path = "src/bin/entropa-guard.rs"

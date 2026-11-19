@@ -61,8 +61,14 @@ fn u3_a_secret_word_glued_inside_a_longer_word_is_not_a_key_but_camel_case_is() 
 
 #[test]
 fn u4_the_line_start_is_the_previous_newline() {
-    sec("foo\npassword=island ember 42! harbor", "island ember 42! harbor");
-    sec("a\nb\nc\npassword: island ember 42! harbor", "island ember 42! harbor");
+    sec(
+        "foo\npassword=island ember 42! harbor",
+        "island ember 42! harbor",
+    );
+    sec(
+        "a\nb\nc\npassword: island ember 42! harbor",
+        "island ember 42! harbor",
+    );
 }
 
 #[test]
@@ -136,13 +142,19 @@ fn u10_prose_keys_need_a_value_that_looks_like_one() {
     rf("set password: reviewed", "reviewed");
     sec("password: reviewed", "reviewed");
     sec("say password\": reviewed", "reviewed");
-    sec("say password\": island ember 42! harbor", "island ember 42! harbor");
+    sec(
+        "say password\": island ember 42! harbor",
+        "island ember 42! harbor",
+    );
     rf("=password: island ember 42! harbor", "island");
 }
 
 #[test]
 fn u11_path_like_keys_count_as_one_key_token() {
-    sec("vault/kv/token: island ember 42! harbor", "island ember 42! harbor");
+    sec(
+        "vault/kv/token: island ember 42! harbor",
+        "island ember 42! harbor",
+    );
 }
 
 #[test]
@@ -210,13 +222,25 @@ fn u17_values_are_cut_at_the_documented_limit_of_4096_bytes() {
     assert_eq!(a.secrets[0].end - a.secrets[0].start, 4096, "plain");
     let a = analyze(&format!("password = <{long}"));
     assert_eq!(a.references.len(), 1);
-    assert_eq!(a.references[0].end - a.references[0].start, 4097, "bracketed");
+    assert_eq!(
+        a.references[0].end - a.references[0].start,
+        4097,
+        "bracketed"
+    );
     let a = analyze(&format!("x \"password: {long}"));
     assert_eq!(a.secrets.len(), 1);
-    assert_eq!(a.secrets[0].end - a.secrets[0].start, 4096, "inside a key quote");
+    assert_eq!(
+        a.secrets[0].end - a.secrets[0].start,
+        4096,
+        "inside a key quote"
+    );
     let a = analyze(&format!("password: {long}"));
     assert_eq!(a.secrets.len(), 1);
-    assert_eq!(a.secrets[0].end - a.secrets[0].start, 4096, "to the end of the line");
+    assert_eq!(
+        a.secrets[0].end - a.secrets[0].start,
+        4096,
+        "to the end of the line"
+    );
 }
 
 #[test]
@@ -228,8 +252,14 @@ fn u18_value_extents() {
     none(&format!("password = ab[ {}]", "x".repeat(300)));
     // the value of a properties or YAML line runs to the end of the line and loses trailing blanks
     sec("password: abcdefgh   ", "abcdefgh");
-    sec("say password\": island ember 42! harbor", "island ember 42! harbor");
-    sec("password=island ember 42! harbor", "island ember 42! harbor");
+    sec(
+        "say password\": island ember 42! harbor",
+        "island ember 42! harbor",
+    );
+    sec(
+        "password=island ember 42! harbor",
+        "island ember 42! harbor",
+    );
     sec("<password>Xk39fQ2zLp</password>", V);
     rf("password = <vault:x>", "<vault:x>");
 }

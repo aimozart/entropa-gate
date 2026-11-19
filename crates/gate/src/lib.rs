@@ -2,6 +2,7 @@
 //! no network code and never returns key bytes (a stage record (not published), invariants I1 to I6). The node functions are built on `entropa-ledger`
 //! and `entropa-core` directly, NOT on `entropa-platinum`, which carries `reqwest`, `axum`, `tokio` and a cloud-KMS path a client binary must not hold.
 
+pub mod check;
 pub mod cli;
 pub mod config;
 pub mod explorer;
@@ -10,6 +11,9 @@ pub mod licence;
 #[cfg(feature = "issue")]
 pub mod licence_issue;
 pub mod node;
+pub mod opts;
+#[cfg(feature = "plant")]
+pub mod plant;
 
 /// A short, input-free error.
 #[derive(Debug, Clone, PartialEq, Eq)]

@@ -1,0 +1,8 @@
+test g5_trouble_is_blocked_not_allowed_empty_nul_invalid_utf8_and_over_64_kib ... FAILED
+test g1_harmless_text_is_allowed_with_exit_0_and_one_word ... FAILED
+test g6_usage_errors_exit_2_and_print_nothing_on_stdout ... FAILED
+test g2_a_secret_shaped_string_is_blocked_with_exit_1_and_a_reason_code_on_stderr ... FAILED
+test g4_t0_never_allows_anything_and_the_default_tier_allows_harmless_text ... FAILED
+test g3_an_email_is_blocked_at_every_tier_because_a_wrapper_cannot_send_redacted_text ... ok
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+error: test failed, to rerun pass `-p entropa-try --test guard_bin`

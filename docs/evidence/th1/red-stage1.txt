@@ -1,0 +1,23 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test f1_a_valid_forecast_parses ... FAILED
+test f2_every_refusal ... FAILED
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test p1_the_signed_bytes_start_with_the_tag_and_bind_every_field ... FAILED
+test p4_a_prereg_signature_is_not_a_release_manifest_signature_and_the_reverse ... FAILED
+test p6_a_key_file_readable_by_others_is_refused ... ok
+test p5_not_key_id_refuses_a_key_equal_to_a_release_key ... FAILED
+test p2_round_trip ... FAILED
+test p3_every_tamper_is_refused ... FAILED
+test result: FAILED. 1 passed; 5 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+test s3_every_refusal ... FAILED
+test s1_a_minimal_set_parses_with_defaults ... FAILED
+test s2_hex_input_attack_secrets_and_timeout ... FAILED
+test s4_size_limits ... FAILED
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test b3_impossible_inputs_are_refused ... FAILED
+test b1_zero_events_use_the_rule_of_three_form ... FAILED
+test b2_other_counts_use_wilson ... FAILED
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+NOTE: p6 passes against the stub (the stub also errors); it is vacuous until the green phase and its bite check (permission check removed).

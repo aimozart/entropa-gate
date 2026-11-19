@@ -53,7 +53,7 @@ pub fn verify_receipt(receipt: &Receipt, expected_pubkey_hex: &str) -> bool {
     )
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     fn log_of(n: usize) -> TransparencyLog {
         let mut log = TransparencyLog::new();

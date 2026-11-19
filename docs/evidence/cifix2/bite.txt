@@ -1,0 +1,9 @@
+L1 the id_rsa pattern removed from the exported .gitignore: KILLED by public-gitignore.sh
+L2 the .terraform pattern removed: KILLED by public-gitignore.sh
+L3 the hash check is skipped unconditionally: KILLED by vendor-optional.sh
+L4 a missing .source alone skips (wrong: the script may be there): SURVIVED
+L5 the wrapper always skips: KILLED by vendor-optional.sh
+L6 the wrapper never skips: KILLED by vendor-optional.sh
+L7 the wrapper ignores a failing preflight: KILLED by vendor-optional.sh
+L8 the shim test is not called: KILLED by vendor-optional.sh
+L4 again, after the new case 2b: KILLED

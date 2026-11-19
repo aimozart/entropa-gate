@@ -511,7 +511,6 @@ fn assignment(
     });
     let dash_flag =
         b.get(istart) == Some(&b'-') && (istart == ls || b[istart - 1].is_ascii_whitespace());
-    let mut p = p;
     let mut c = *b.get(p)?;
     if c == b'{' {
         // Terraform: variable "password" { default = "v" }

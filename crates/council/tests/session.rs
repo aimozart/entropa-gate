@@ -1,4 +1,4 @@
-//! The session state machine and the quorum rule (docs/ARCHITECTURE-COUNCIL.md sections 4 and 5).
+//! The session state machine and the quorum rule (the council design notes sections 4 and 5).
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod common;
 use common::*;

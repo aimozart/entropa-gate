@@ -1,0 +1,36 @@
+{
+ "freeze": "RS1",
+ "source_commit": "e1171f53119b0b0689e56a72e68c20ccbbab558f",
+ "switches_default_on": [
+  "raw_flags",
+  "foreign_any_name"
+ ],
+ "density_min_tokens_default": 24,
+ "src_sha256": {
+  "crates/standards/src/chunk.rs": "7b4263c54e10d36f3162e21d6f305e5829ac0e10708586083384ab32f7e6691c",
+  "crates/standards/src/citations.rs": "4fa25bb2d195d18dfe03dd5c05f1f0d1fc2c1c1713ac31009abe1ef7e858c9d6",
+  "crates/standards/src/corpus.rs": "97200c4cc7979deb30fa0d78bf1a29ae55d913ab0b1cee4f72874d1f0db23288",
+  "crates/standards/src/eval.rs": "e52017c819557dad75432de559f843028e69e4769032b367dc9ce39e1ae721e6",
+  "crates/standards/src/flags.rs": "c6173c6075ad233af2e2c551383920b02f111c9a23bb27fb5cfc606145d5ddc4",
+  "crates/standards/src/lib.rs": "57856bde9602645c59cbdc4b9fbb1237cb6460c8c049b5c508b43479c06c8896",
+  "crates/standards/src/main.rs": "bcca056cde91571bb21a1cfc7a7f8c035853428f862a132adfd750f0251a051e",
+  "crates/standards/src/r2eval.rs": "0d084833addfb47dfdfb1d19ec99ae8510eaca22440f31f5e5ed8cddd8cd5c6c",
+  "crates/standards/src/r3eval.rs": "55b1befe06998d90c8a3da852b8c268891767af7e188dd0035c393a0355870d7",
+  "crates/standards/src/records.rs": "7e67ac2fc6670a452f56ba69ca105ef23485fe6451c8e72d2726ac338baee026",
+  "crates/standards/src/retrieve.rs": "808783e98c1e4ab37fd2af7ef2eee79f95a67980aa5606ef3a65ca5513762de6",
+  "crates/standards/src/rs1eval.rs": "1355489d6b6d2de1f094cae595c2bb44cc22c245ab6049c949d60f63669818e8",
+  "crates/standards/src/seal.rs": "e8fb7494e34b07a0d531d8cd635bd8f56359baa73de013558b0dca0fa80aae56",
+  "crates/standards/src/text.rs": "c61b1ecc029b8cf916985c339599ac0be974715766f97891905cfa2093a7ac6d",
+  "crates/standards/src/tools.rs": "9301e350d802e1800b7067be05f2726785399edb3377f1242e12115996fd07fa"
+ },
+ "dev_files_sha256": {
+  "RS1_DEV_FROZEN.json": "f867d634e7c5fba5aa097c139887e31823633c0de3a61a657407134f11c0e9d3",
+  "rs1_abstention.jsonl": "66b049a7ede3d18b482c01d6d298d6ee594f807c5867b00e5f5198849f57849f",
+  "rs1_description.jsonl": "f82eb67c3ac063e51f3a65ec48939c74e4b0275a0bb9e1949ade866ff6849382",
+  "rs1_id_named.jsonl": "7aaa620fb431e28af36d140b555aec61dbe9ed058cf973eb45165b6c2ce47fdd",
+  "rs1_injection.jsonl": "8cdb2e10abdf8c52d35eb8a41b9ba9c291b247cdc12974faac61039326dfc31b",
+  "rs1_stale.jsonl": "dfbf15b4204c344a1a69be835faa7e5fb4f270103337fcf0b5b67d8edb33511c"
+ },
+ "release_binary_sha256": "187cea39bf1ae4b6daf58cdc2d456c93708a6b7bc5b008b4668ca14c872de5d6",
+ "release_binary_path": "~/.cache/build/rs1-target/release/entropa-standards (cargo build --release --offline --locked -p entropa-standards --bin entropa-standards)"
+}
