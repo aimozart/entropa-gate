@@ -328,8 +328,10 @@ fn t4c_an_unknown_acronym_not_in_the_corpus_vocabulary_abstains_without_any_list
         &cfg
     )
     .starts_with("abstain"));
+    // RS1: `foreign_any_name` (ON since the RS1 freeze) is a second guard on unknown ALL-CAPS names; it is switched off here so that this test still isolates `entity_guard`
     let no_guard = Config {
         entity_guard: false,
+        foreign_any_name: false,
         ..cfg
     };
     assert_eq!(

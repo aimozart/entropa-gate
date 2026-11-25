@@ -237,7 +237,7 @@ const FUNCTION_EXTRA: &[&str] = &[
     "list",
 ];
 
-/// Is this a stemmed query token a content word (not a stop word and not one of [`FUNCTION_EXTRA`])?
+/// Is this a stemmed query token a content word (not a stop word and not one of `FUNCTION_EXTRA`)?
 pub fn is_content_token(t: &str) -> bool {
     !STOP.contains(&t)
         && !FUNCTION_EXTRA.contains(&t)
@@ -255,6 +255,11 @@ pub fn is_stop_word(w: &str) -> bool {
 
 fn is_format(c: char) -> bool {
     matches!(c, '\u{200b}'..='\u{200f}' | '\u{202a}'..='\u{202e}' | '\u{2060}'..='\u{2064}' | '\u{2066}'..='\u{2069}' | '\u{feff}')
+}
+
+/// Is this a zero-width, bidirectional or soft-hyphen character (RS1 `hidden_chars`)?
+pub fn is_hidden(c: char) -> bool {
+    is_format(c) || c == '\u{ad}'
 }
 
 /// Remove control, bidirectional and zero-width characters (newlines and tabs become spaces). Everything else is kept.

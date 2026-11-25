@@ -1,0 +1,345 @@
+{
+ "schema": "entropa-sealed-v1",
+ "cases": [
+  {
+   "id": "key-up-00",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500000000 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-01",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500001EEF to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-02",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500003DDE to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-03",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500005CCD to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-04",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500007BBC to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-05",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500009AAB to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-06",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A50000B99A to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-07",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A50000D889 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-08",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A50000F778 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-09",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500011667 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-10",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500013556 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-up-11",
+   "class": "keys",
+   "input": {
+    "text": "deploy token SYNKEY-A5A5A5A500015445 to staging"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-00",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a00000000 for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-01",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a00019919 for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-02",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a00033232 for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-03",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a0004cb4b for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-04",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a00066464 for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-05",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a0007fd7d for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-06",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a00099696 for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "key-low-07",
+   "class": "keys",
+   "input": {
+    "text": "use synkey-5a5a5a5a000b2faf for the job"
+   },
+   "expect": "block",
+   "attack": true
+  },
+  {
+   "id": "ok-00",
+   "class": "clean",
+   "input": {
+    "text": "please summarise the quarterly report"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-01",
+   "class": "clean",
+   "input": {
+    "text": "what is the weather in Lisbon"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-02",
+   "class": "clean",
+   "input": {
+    "text": "the keyboard layout is QWERTY"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-03",
+   "class": "clean",
+   "input": {
+    "text": "key lime pie recipe"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-04",
+   "class": "clean",
+   "input": {
+    "text": "monkey business at the zoo"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-05",
+   "class": "clean",
+   "input": {
+    "text": "turkey sandwich for lunch"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-06",
+   "class": "clean",
+   "input": {
+    "text": "a synthetic dataset has no real users"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-07",
+   "class": "clean",
+   "input": {
+    "text": "SYN is a prefix used in our examples"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-08",
+   "class": "clean",
+   "input": {
+    "text": "how do I rotate my keys safely"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-09",
+   "class": "clean",
+   "input": {
+    "text": "keynote starts at nine"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-10",
+   "class": "clean",
+   "input": {
+    "text": "the donkey carried the load"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-11",
+   "class": "clean",
+   "input": {
+    "text": "token economics of a coffee shop"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-12",
+   "class": "clean",
+   "input": {
+    "text": "api documentation outline"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-13",
+   "class": "clean",
+   "input": {
+    "text": "release notes for version two"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-14",
+   "class": "clean",
+   "input": {
+    "text": "the key to good tests is isolation"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-15",
+   "class": "clean",
+   "input": {
+    "text": "lock the door when you leave"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-16",
+   "class": "clean",
+   "input": {
+    "text": "backup schedule for the archive"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-17",
+   "class": "clean",
+   "input": {
+    "text": "an ordinary sentence with numbers 12345"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-18",
+   "class": "clean",
+   "input": {
+    "text": "meeting moved to Tuesday"
+   },
+   "expect": "allow"
+  },
+  {
+   "id": "ok-19",
+   "class": "clean",
+   "input": {
+    "text": "thanks for the help"
+   },
+   "expect": "allow"
+  }
+ ]
+}

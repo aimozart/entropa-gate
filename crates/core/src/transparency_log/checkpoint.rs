@@ -41,7 +41,7 @@ impl Checkpoint {
     }
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     /// Golden layout: root (32) || size as u64 big-endian (8) || timestamp u64 big-endian (8),
     /// identical on 32- and 64-bit targets.

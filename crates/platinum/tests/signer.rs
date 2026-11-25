@@ -32,7 +32,8 @@ fn k1_events_and_checkpoints_verify_under_the_remote_key_only() {
         .starts_with("OK records=2 checkpoints=2"));
     // the file key is not the signer, so verifying under it must fail
     let file_key = Probe::from_signing_key_hex(
-        std::fs::read_to_string(d.join("platinum.key"))
+        // Test change (KEYS1): the node's file key for the AI ledger is decisions.key now (platinum.key is the legacy shared key).
+        std::fs::read_to_string(d.join("decisions.key"))
             .unwrap()
             .trim(),
     )

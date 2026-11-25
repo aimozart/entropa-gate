@@ -1,0 +1,3 @@
+the property run must seal some versions or it proves nothing: 3 sealed, at least 2000 wanted for 2000 cases
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 18.80s
+(the floor restored; the mutation above makes the floor impossible and the assertion fires with its message)

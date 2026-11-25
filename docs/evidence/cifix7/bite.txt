@@ -1,0 +1,4 @@
+C1 one cap removed (AT3): KILLED
+C2 a cap raised above the limit: KILLED
+C3 a variable not passed to the container: KILLED
+C4 the whole env block removed: KILLED

@@ -5,7 +5,7 @@ use serde_json::{json, Value};
 use sha2::{Digest, Sha256};
 use std::os::unix::fs::PermissionsExt;
 use std::process::Command;
-use std::time::Instant;
+use std::time::{Duration, Instant};
 
 fn sha(b: &[u8]) -> String {
     hex::encode(Sha256::digest(b))
@@ -555,25 +555,43 @@ fn s6_a_server_that_never_answers_a_response_that_never_comes_and_a_scenario_ove
     let r = rep(&o);
     assert_eq!(r["reasons"]["timeout"], 1, "{r}");
     assert_eq!(r["totals"]["failed"], 1);
+    // Test change (CI-FIX 10): the bound is no longer a tight wall clock. A fake server that never answers would hold the runner for ever; any finite answer inside HANG_BOUND proves that the runner cut it off by its own 500 ms limit, however slow the machine is.
+    const HANG_BOUND: std::time::Duration = std::time::Duration::from_secs(120);
     assert!(
-        t0.elapsed().as_secs() < 15,
-        "the runner must not hang: {:?}",
-        t0.elapsed()
+        t0.elapsed() < HANG_BOUND,
+        "the runner must not hang: {:?} (bound {:?})",
+        t0.elapsed(),
+        HANG_BOUND
     );
     // the real server: a scenario that sleeps past its own time limit fails with a timeout and does not run on
+    // Test change (CI-FIX 10): no tight wall clock. A control run of the same shape (a scenario with a 1.5 s limit whose single step does not wait) measures this machine's own cost of starting a server and running a scenario; the enforced run may exceed it by far less than the 60 s sleep. If the limit were not enforced the run would last 60 s more than the control, however slow the machine is.
+    let control = {
+        let t0 = Instant::now();
+        let o = run(
+            vec![
+                json!({"id": "t-0", "class": "x", "timeout_ms": 1500, "final_alive": false, "steps": [{"op": "sleep", "ms": 0}]}),
+            ],
+            &real(),
+        );
+        let _ = rep(&o);
+        t0.elapsed()
+    };
     let t0 = Instant::now();
     let o = run(
         vec![
-            json!({"id": "t-2", "class": "x", "timeout_ms": 1500, "final_alive": false, "steps": [{"op": "sleep", "ms": 6000}]}),
+            json!({"id": "t-2", "class": "x", "timeout_ms": 1500, "final_alive": false, "steps": [{"op": "sleep", "ms": 60000}]}),
         ],
         &real(),
     );
     let r = rep(&o);
     assert_eq!(r["reasons"]["timeout"], 1, "{r}");
+    let extra = Duration::from_secs(30);
     assert!(
-        t0.elapsed().as_millis() < 5000,
-        "the limit is enforced: {:?}",
-        t0.elapsed()
+        t0.elapsed() < control + extra,
+        "the limit is enforced (1.5 s limit, 60 s sleep): took {:?}, the control run {:?}, allowed {:?} more",
+        t0.elapsed(),
+        control,
+        extra
     );
 }
 

@@ -1,0 +1,4 @@
+FAIL missing VERSION
+FAIL P2 the installer does not name the version 0.2.0
+FAIL P2 no uninstall instruction in the installer output
+SOME FAILED

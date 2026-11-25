@@ -1,0 +1,4 @@
+BITE [if any(p is None for p in parts):] -> FAILED (errors=1)
+BITE [ok ] -> FAILED (errors=1)
+BITE [if t not in ALLOWED:] -> FAILED (failures=3)
+BITE [OR needs ALL alternatives allowed (OR treated like AND)] -> FAILED (errors=2)

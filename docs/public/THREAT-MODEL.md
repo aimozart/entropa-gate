@@ -19,7 +19,7 @@ What the system is meant to withstand, how that was tested, and what it does not
 
 - **A stolen or misused signing key.** Anyone holding a key can sign anything the format allows. The release key is a file with restricted permissions; no hardware or cloud key service is used yet, and no real release key exists. [evidence: docs/evidence/s2e/]
 - **A reader who runs a program from the same place as the data.** If one server provides the page, the verify program and the ledger, a dishonest server can provide a verifier that says yes. The defence is to check the program's signature against a fingerprint obtained from a second place, which requires a published release that does not exist yet. [evidence: stage record, not published]
-- **Whether an AI decision was correct.** A signature or a log shows who recorded what and that it was not changed afterwards; it does not show the decision was right. [evidence: a project record (not published)]
-- **Real personal or patient data.** Only synthetic data is used; the project policy forbids real data. [evidence: a project record (not published)]
+- **Whether an AI decision was correct.** A signature or a log shows who recorded what and that it was not changed afterwards; it does not show the decision was right. [evidence: not published]
+- **Real personal or patient data.** Only synthetic data is used; the project policy forbids real data. [evidence: not published]
 - **Availability and denial of service.** No claim is made; the work so far measured correctness and refusal, not load. [evidence: docs/evidence/s2/]
 - **Verification inside a web browser.** A browser verifier is planned and a native test corpus exists for it, but no browser verifier has been built or tested. [evidence: docs/evidence/browser-corpus/]

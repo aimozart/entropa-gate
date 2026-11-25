@@ -1,0 +1,25 @@
+OK   build entropa-core (wasm32, no default features)
+OK   tree entropa-core has no getrandom or rand
+OK   build entropa-witness (wasm32, no default features)
+OK   tree entropa-witness has no getrandom or rand
+OK   build entropa-approvals (wasm32, no default features)
+OK   tree entropa-approvals has no getrandom or rand
+OK   build entropa-policy (wasm32, no default features)
+OK   tree entropa-policy has no getrandom or rand
+OK   build entropa-ledger (wasm32, no default features)
+OK   tree entropa-ledger has no getrandom or rand
+OK   build entropa-bundle-verify (wasm32, no default features)
+OK   tree entropa-bundle-verify has no getrandom or rand
+wasm bytes: 321417
+wasm gzip bytes: 117559
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.59s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.62s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+TIMING 10020 records verified (167 runs of valid-medium, 60 records each, 1022600 bytes): 10479 ms in node (1.05 ms per record)
+SUMMARY same=39 differ=0 total=39
+CSP: default-src 'none'; script-src 'sha256-…' 'wasm-unsafe-eval'; style-src 'sha256-…'; connect-src 'none'; img-src 'none'; form-action 'none'; base-uri 'none'
+SUMMARY same=39 differ=0 total=39; csp checks: fetch BLOCKED, xhr BLOCKED
+fe6bd33ee385ee9380d601945fe5a24ee1f74f8351e212531623a68f2f58145a  <home>/.c
+bd01f0d6f355d8e09f249277376746047f26574f35194e83790d3c96b37f080b  /hom
+page bytes: 433216

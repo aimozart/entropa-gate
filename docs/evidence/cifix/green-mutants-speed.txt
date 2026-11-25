@@ -1,0 +1,11 @@
+ok   default is 4 jobs
+ok   default timeout is 30 s
+ok   the fast test mode is on by default for mutation runs
+ok   the fast-test variable is passed into the container
+ok   the container limits are still printed
+ok   JOBS overrides the default
+ok   ENTROPA_MUTANTS_JOBS beats JOBS
+ok   ENTROPA_FAST_TESTS=0 turns the light mode off (full-strength tests)
+ok   scripts/check.sh does not set the fast test mode
+ok   scripts/count-tests.sh does not set the fast test mode
+ok   scripts/ci.sh does not set the fast test mode

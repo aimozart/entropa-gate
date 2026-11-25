@@ -1,0 +1,10 @@
+Q1 the digest pin removed: KILLED
+Q2 a wrong digest: KILLED
+Q3 minisign dropped from the install: KILLED
+Q4 recommended packages allowed: KILLED
+Q5 the apt lists are not cleaned: KILLED
+Q6 no build-time check: KILLED
+Q7 ENTROPA_REQUIRE_TOOLS not set: KILLED
+Q8 not passed into the container: KILLED
+Q9 the sentence missing in TESTING.md: KILLED
+Q10 the machine statement removed: KILLED

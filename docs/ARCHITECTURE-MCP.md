@@ -1,8 +1,7 @@
 # ARCHITECTURE-MCP: Entropa read-only log inspection server (`entropa-mcp`)
 
-Status: **design only, no code** (stage S2a, 2026-10-20). A proposal for the reviewer and Scott to audit. Modelled on `../clinic-ops/docs/ARCHITECTURE-MCP.md` (read, not copied). Anything not confirmed is marked **UNVERIFIED** and collected in section 13; open decisions are in section 14.
+Status: **design only, no code** (stage S2a, 2026-10-20). A proposal for the reviewer and the owner to audit. Modelled on `../clinic-ops/docs/ARCHITECTURE-MCP.md` (read, not copied). Anything not confirmed is marked **UNVERIFIED** and collected in section 13; open decisions are in section 14.
 
-**Base-branch note.** The S2a order said to branch from `rerust-s0b-standards`, which predates record format v2 (S0d), the AWS client (S1) and the cleanups. This document describes the API as of `rerust-s0c3-paxel-ready`. Decision D1 (the reviewer, 2026-10-20): the code stages branch from the newest accepted tip. S0g later closed D6 (see below).
 
 ## 1. Purpose and shape
 `entropa-mcp` is a Model Context Protocol server that lets an AI client **inspect and verify** the Entropa transparency log. It answers "what is the log head?", "is this checkpoint signed by a key I trust?", "is this record really in the log?", "what are the latest records?", and "explain this inclusion proof step by step". It **cannot change anything**.
@@ -201,14 +200,13 @@ Fetched and read on 2026-10-20 (WebFetch):
 - MCP spec 2026-07-28, Tools: https://modelcontextprotocol.io/specification/2026-07-28/server/tools (tool names SHOULD, `inputSchema`/`outputSchema`, annotations untrusted, structured content, protocol errors vs tool execution errors, security considerations MUST list).
 - MCP spec 2026-07-28, stdio: https://modelcontextprotocol.io/specification/2026-07-28/basic/transports/stdio (stdout MCP only, stderr logging, newline framing, exit on stdin EOF, cancellation, backward-compatibility probe).
 - `cargo info rmcp` run today: **3.6.0** is now the latest (Apache-2.0, rust-version 1.88; default features `base64`, `macros`, `server`). The clinic doc pinned 3.5.1; see D4.
-- Repo code read at `rerust-s0c3-paxel-ready`: `crates/core/src/transparency_log/{mod,receipt,checkpoint,record}.rs`, `merkle.rs`. Prior art: `../clinic-ops/docs/ARCHITECTURE-MCP.md` and `ARCHITECTURE-HOOK.md`.
+- Repo code read at the baseline: `crates/core/src/transparency_log/{mod,receipt,checkpoint,record}.rs`, `merkle.rs`. Prior art: `../clinic-ops/docs/ARCHITECTURE-MCP.md` and `ARCHITECTURE-HOOK.md`.
 
 **Carried over from the clinic-ops document, not re-verified today:** rmcp 3.5.1 smoke-test facts (macro usage `#[tool_router(server_handler)]`, `readOnlyHint` field, out-of-order responses, `serde_json` re-export); the 2025-06-18 revision comparison.
 **UNVERIFIED:** how rmcp 3.6.0 handles the modern `server/discover` path, cancellation and `outputSchema` generation; whether the `rmcp` macros can declare `outputSchema` with `additionalProperties: false` as written here; the 2026-07-28 lifecycle and `server/discover` pages (not read); the effect of the fixed timeouts and caps under load; whether `readOnlyHint` is the field name in rmcp 3.6.0; JSON number handling above 2^53 (sizes are capped at 2^53-1 to stay exact).
 
 ## 14. Decisions
 Settled by the reviewer on 2026-10-20: D1 yes (branch from the newest accepted tip), D2 file export first and HTTP later, D3 trust store from env only, D4 settled by the S2c rmcp smoke test, D5 keep the 64 KiB MCP cap, D6 fixed in core (S0g), D7 yes but in S5, D8 fine, D9 keep 128. Original text:
-- **D1 base branch:** order says branch from `rerust-s0b-standards`; this doc describes the later API (record v2, `Result` encode/decode). Should S2b branch from the latest stage instead? (Recommended: yes.)
 - **D2 log source:** v1 = `FileSource` over an exported log file (offline, fully testable) and `HttpSource` later against the public explorer API (S9)? Or HTTP first against the legacy `entropa-api` (`/api/chain/{partner}`, partner-scoped, with logins we plan to drop)? (Recommended: file first.)
 - **D3 trust store:** keys only from `ENTROPA_TRUSTED_PUBKEYS`, or also a pinned key set compiled in for the KMS key? (Recommended: env only; document the KMS public key in the README.)
 - **D4 rmcp version:** pin 3.5.1 (known smoke test) or 3.6.0 (latest)? Needs the compile smoke test in S2b.

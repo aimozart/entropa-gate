@@ -1,5 +1,5 @@
 //! Surplus findings carry over to the next weekly session, in a stable order, as a recorded event
-//! (decision 3 of the S12b review; docs/ARCHITECTURE-COUNCIL.md section 18).
+//! (decision 3 of the S12b review; the council design notes section 18).
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod common;
 use common::*;

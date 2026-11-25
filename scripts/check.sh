@@ -5,12 +5,16 @@ source "$(dirname "$0")/lib-docker.sh"
 [ -d "$ROOT/admin-ui/dist" ] || "$ROOT/scripts/build-admin-ui.sh"
 scripts/check-site-links.sh
 scripts/tests/container-limits.sh
+scripts/tests/container-caps.sh
 scripts/tests/mutants-speed.sh
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/gitignore-baseline.sh
 scripts/tests/governance-checks.sh
-scripts/public-preflight.sh
-scripts/tests/public-preflight-shim.sh
+scripts/preflight-if-vendored.sh
+scripts/tests/public-gitignore.sh
+scripts/tests/vendor-optional.sh
+scripts/tests/ci-case-caps.sh
+scripts/tests/ci-quality.sh
 in_dev bash -ec '
 set -x
 cargo fmt --all -- --check

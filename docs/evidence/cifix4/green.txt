@@ -1,0 +1,3 @@
+clippy after the fixes (default features, entropa-api excluded in the private tree because it has no built admin UI): exit 0, no error or warning lines
+entropa-egress debug (H13_CASES=2000): 139 passed 0 failed 0 ignored
+entropa-standards debug (H13_CASES=2000): 189 passed 0 failed 0 ignored

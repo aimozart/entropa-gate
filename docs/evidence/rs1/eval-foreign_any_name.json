@@ -1,0 +1,818 @@
+{
+  "abstention_name_list_off": {
+    "accuracy": 0.9133333333333333,
+    "by_kind": {
+      "adjacent_regulation": {
+        "cases": 30,
+        "missed": 7
+      },
+      "annex_article": {
+        "cases": 15,
+        "missed": 3
+      },
+      "cross_standard_id": {
+        "cases": 15,
+        "missed": 0
+      },
+      "everyday": {
+        "cases": 30,
+        "missed": 1
+      },
+      "near_miss_id": {
+        "cases": 30,
+        "missed": 0
+      },
+      "unindexed": {
+        "cases": 30,
+        "missed": 2
+      }
+    },
+    "correct": 137,
+    "misses": [
+      {
+        "got": "EU-AI-ACT:Art.52",
+        "id": "a1-027"
+      },
+      {
+        "got": "NIST-SP-800-53:RA-2(1)",
+        "id": "a1-036"
+      },
+      {
+        "got": "DORA-RTS:Art.6",
+        "id": "a1-052"
+      },
+      {
+        "got": "DORA-RTS:Art.39",
+        "id": "a1-061"
+      },
+      {
+        "got": "EU-AI-ACT:Art.56",
+        "id": "a1-068"
+      },
+      {
+        "got": "PCI-DSS:3.3.1.3",
+        "id": "a1-071"
+      },
+      {
+        "got": "EU-AI-ACT:Annex I",
+        "id": "a1-079"
+      },
+      {
+        "got": "EU-AI-ACT:Art.53",
+        "id": "a1-084"
+      },
+      {
+        "got": "NIST-SP-800-53:RA-5(3)",
+        "id": "a1-089"
+      },
+      {
+        "got": "DORA-RTS:Art.30",
+        "id": "a1-090"
+      },
+      {
+        "got": "DORA-RTS:Art.42",
+        "id": "a1-146"
+      },
+      {
+        "got": "EU-AI-ACT:Art.5",
+        "id": "a1-147"
+      },
+      {
+        "got": "EU-AI-ACT:Annex VI",
+        "id": "a1-150"
+      }
+    ],
+    "n": 150,
+    "upper95_of_failure_rate": 0.14262822426394298
+  },
+  "abstention_name_list_on": {
+    "accuracy": 0.92,
+    "correct": 138,
+    "misses": [
+      {
+        "got": "EU-AI-ACT:Art.52",
+        "id": "a1-027"
+      },
+      {
+        "got": "DORA-RTS:Art.6",
+        "id": "a1-052"
+      },
+      {
+        "got": "DORA-RTS:Art.39",
+        "id": "a1-061"
+      },
+      {
+        "got": "EU-AI-ACT:Art.56",
+        "id": "a1-068"
+      },
+      {
+        "got": "PCI-DSS:3.3.1.3",
+        "id": "a1-071"
+      },
+      {
+        "got": "EU-AI-ACT:Annex I",
+        "id": "a1-079"
+      },
+      {
+        "got": "EU-AI-ACT:Art.53",
+        "id": "a1-084"
+      },
+      {
+        "got": "NIST-SP-800-53:RA-5(3)",
+        "id": "a1-089"
+      },
+      {
+        "got": "DORA-RTS:Art.30",
+        "id": "a1-090"
+      },
+      {
+        "got": "DORA-RTS:Art.42",
+        "id": "a1-146"
+      },
+      {
+        "got": "EU-AI-ACT:Art.5",
+        "id": "a1-147"
+      },
+      {
+        "got": "EU-AI-ACT:Annex VI",
+        "id": "a1-150"
+      }
+    ],
+    "n": 150,
+    "upper95_of_failure_rate": 0.1346213642704447
+  },
+  "description_only_report_only": {
+    "accuracy": 0.21666666666666667,
+    "correct": 13,
+    "misses": [
+      {
+        "expected": "NIST-SP-800-53:AC-2",
+        "got": "DORA-RTS:Art.20",
+        "id": "d1-01"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-3",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-02"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-6",
+        "got": "abstain:too_few_content_words",
+        "id": "d1-03"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-7",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-04"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-8",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-05"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-11",
+        "got": "abstain:below_gate",
+        "id": "d1-06"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-17",
+        "got": "NIST-SP-800-53:SC-7(8)",
+        "id": "d1-07"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-18",
+        "got": "NIST-SP-800-53:SI-4(14)",
+        "id": "d1-08"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-5",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-09"
+      },
+      {
+        "expected": "NIST-SP-800-53:AT-2",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-10"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-2",
+        "got": "EU-AI-ACT:Art.36",
+        "id": "d1-11"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-6",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-12"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-9",
+        "got": "abstain:below_gate",
+        "id": "d1-13"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-11",
+        "got": "EU-AI-ACT:Art.12",
+        "id": "d1-14"
+      },
+      {
+        "expected": "NIST-SP-800-53:CA-7",
+        "got": "EU-AI-ACT:Art.50",
+        "id": "d1-15"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-2",
+        "got": "EU-AI-ACT:Art.47",
+        "id": "d1-16"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-6",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-17"
+      },
+      {
+        "expected": "NIST-SP-800-53:CM-7",
+        "got": "NIST-SP-800-53:SA-9(2)",
+        "id": "d1-18"
+      },
+      {
+        "expected": "NIST-SP-800-53:CP-4",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-19"
+      },
+      {
+        "expected": "NIST-SP-800-53:CP-9",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-20"
+      },
+      {
+        "expected": "NIST-SP-800-53:IA-2",
+        "got": "EU-AI-ACT:Art.86",
+        "id": "d1-21"
+      },
+      {
+        "expected": "NIST-SP-800-53:IR-6",
+        "got": "DORA-RTS:Art.23",
+        "id": "d1-24"
+      },
+      {
+        "expected": "NIST-SP-800-53:MP-6",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-25"
+      },
+      {
+        "expected": "NIST-SP-800-53:PE-3",
+        "got": "NIST-SP-800-53:PE-10",
+        "id": "d1-26"
+      },
+      {
+        "expected": "NIST-SP-800-53:PS-4",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-27"
+      },
+      {
+        "expected": "NIST-SP-800-53:RA-3",
+        "got": "EU-AI-ACT:Art.3",
+        "id": "d1-28"
+      },
+      {
+        "expected": "NIST-SP-800-53:RA-5",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-29"
+      },
+      {
+        "expected": "NIST-SP-800-53:SA-11",
+        "got": "NIST-SP-800-53:SA-10",
+        "id": "d1-30"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-7",
+        "got": "NIST-SP-800-53:SC-31",
+        "id": "d1-31"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-8",
+        "got": "abstain:too_few_content_words",
+        "id": "d1-32"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-12",
+        "got": "DORA-RTS:Art.7",
+        "id": "d1-33"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-28",
+        "got": "abstain:below_gate",
+        "id": "d1-34"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-3",
+        "got": "abstain:below_gate",
+        "id": "d1-36"
+      },
+      {
+        "expected": "NIST-SP-800-53:SI-4",
+        "got": "abstain:below_gate",
+        "id": "d1-37"
+      },
+      {
+        "expected": "NIST-SP-800-53:SR-3",
+        "got": "NIST-SP-800-53:SR-6",
+        "id": "d1-38"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.10",
+        "got": "EU-AI-ACT:Annex XI",
+        "id": "d1-40"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.11",
+        "got": "EU-AI-ACT:Art.77",
+        "id": "d1-41"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.12",
+        "got": "EU-AI-ACT:Art.19",
+        "id": "d1-42"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.14",
+        "got": "abstain:below_gate",
+        "id": "d1-44"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.17",
+        "got": "EU-AI-ACT:Annex VI",
+        "id": "d1-46"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.26",
+        "got": "EU-AI-ACT:Art.15",
+        "id": "d1-47"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.4",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-49"
+      },
+      {
+        "expected": "EU-AI-ACT:Art.72",
+        "got": "EU-AI-ACT:Art.47",
+        "id": "d1-52"
+      },
+      {
+        "expected": "NIST-SP-800-53:AC-12",
+        "got": "abstain:below_gate",
+        "id": "d1-53"
+      },
+      {
+        "expected": "NIST-SP-800-53:AU-8",
+        "got": "NIST-SP-800-53:AU-12(1)",
+        "id": "d1-54"
+      },
+      {
+        "expected": "NIST-SP-800-53:SC-5",
+        "got": "abstain:low_content_coverage",
+        "id": "d1-55"
+      },
+      {
+        "expected": "HIPAA-SECURITY-RULE:164.312(e)",
+        "got": "DORA-RTS:Art.12",
+        "id": "d1-60"
+      }
+    ],
+    "n": 60,
+    "over_abstentions": 23,
+    "upper95_of_failure_rate": 0.8687695600460952,
+    "wrong_clause": 24
+  },
+  "id_named_regression": {
+    "accuracy": 1.0,
+    "correct": 40,
+    "misses": [],
+    "n": 40,
+    "upper95_of_failure_rate": 0.075
+  },
+  "injection": {
+    "abstained": 1,
+    "another_clause_cases": [
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "hidden_markup",
+        "got": "SYN-DEV:Z-2",
+        "id": "r1-091",
+        "ranked": [
+          "Z-2[]",
+          "Z-4[]",
+          "Z-3[repeated_phrase,query_echo]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-3",
+        "family": "hidden_markup",
+        "got": "SYN-DEV:Z-2",
+        "id": "r1-094",
+        "ranked": [
+          "Z-2[]",
+          "Z-3[]",
+          "Z-4[query_echo]"
+        ]
+      }
+    ],
+    "answered_another_clause": 2,
+    "by_family": {
+      "case_shift": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "cross_quote_interleaved": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "cross_quote_partial": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "cross_quote_reworded": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "cross_quote_short": {
+        "abstained": 1,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 0,
+        "obeyed": 5
+      },
+      "cross_quote_whole": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "fake_supersession": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "function_word_padding": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "hidden_markup": {
+        "abstained": 0,
+        "another_clause": 2,
+        "cases": 6,
+        "correct": 2,
+        "obeyed": 2
+      },
+      "id_spoof": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 4,
+        "obeyed": 2
+      },
+      "instruction_text": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "long_padding": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "mixed_mirror_list": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 5,
+        "obeyed": 1
+      },
+      "number_stuffing": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "query_mirror": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 5,
+        "obeyed": 1
+      },
+      "query_mirror_partial": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 2,
+        "obeyed": 4
+      },
+      "quote_of_quote": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "repeated_heading": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "split_keywords": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "synonym_spam": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "tail_stuffing": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 4,
+        "obeyed": 2
+      },
+      "term_list": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "title_spoof": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "unicode_homoglyph": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 6,
+        "obeyed": 0
+      },
+      "zero_width": {
+        "abstained": 0,
+        "another_clause": 0,
+        "cases": 6,
+        "correct": 5,
+        "obeyed": 1
+      }
+    },
+    "correct": 129,
+    "misses": [
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "cross_quote_short",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-019",
+        "ranked": [
+          "Z-3[query_echo]",
+          "Z-4[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-1",
+        "family": "cross_quote_short",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-020",
+        "ranked": [
+          "Z-4[]",
+          "Z-1[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-2",
+        "family": "cross_quote_short",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-021",
+        "ranked": [
+          "Z-4[query_echo]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-3",
+        "family": "cross_quote_short",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-022",
+        "ranked": [
+          "Z-4[query_echo]",
+          "Z-3[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "cross_quote_short",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-023",
+        "ranked": [
+          "Z-3[query_echo]",
+          "Z-4[]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-3",
+        "family": "query_mirror",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-041",
+        "ranked": [
+          "Z-4[]",
+          "Z-3[]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-1",
+        "family": "query_mirror_partial",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-044",
+        "ranked": [
+          "Z-4[]",
+          "Z-1[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-2",
+        "family": "query_mirror_partial",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-045",
+        "ranked": [
+          "Z-4[]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-3",
+        "family": "query_mirror_partial",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-046",
+        "ranked": [
+          "Z-4[]",
+          "Z-3[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "query_mirror_partial",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-047",
+        "ranked": [
+          "Z-3[]",
+          "Z-4[]",
+          "Z-2[]",
+          "Z-1[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-2",
+        "family": "tail_stuffing",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-069",
+        "ranked": [
+          "Z-4[]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-1",
+        "family": "tail_stuffing",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-072",
+        "ranked": [
+          "Z-4[]",
+          "Z-1[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-2",
+        "family": "zero_width",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-088",
+        "ranked": [
+          "Z-4[]",
+          "Z-2[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-1",
+        "family": "hidden_markup",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-092",
+        "ranked": [
+          "Z-4[]",
+          "Z-1[]",
+          "Z-3[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "hidden_markup",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-095",
+        "ranked": [
+          "Z-3[]",
+          "Z-2[]",
+          "Z-4[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "id_spoof",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-106",
+        "ranked": [
+          "Z-3[]",
+          "Z-4[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-3",
+        "expected": "SYN-DEV:Z-4",
+        "family": "id_spoof",
+        "got": "SYN-DEV:Z-3",
+        "id": "r1-107",
+        "ranked": [
+          "Z-3[]",
+          "Z-4[]"
+        ]
+      },
+      {
+        "attack": "SYN-DEV:Z-4",
+        "expected": "SYN-DEV:Z-2",
+        "family": "mixed_mirror_list",
+        "got": "SYN-DEV:Z-4",
+        "id": "r1-150",
+        "ranked": [
+          "Z-4[]",
+          "Z-2[]"
+        ]
+      }
+    ],
+    "n": 150,
+    "obeyed": 18,
+    "upper95_of_obeyed_rate": 0.18170835540215846
+  },
+  "stale_regression": {
+    "misses": [],
+    "n": 20,
+    "passed": 20
+  }
+}

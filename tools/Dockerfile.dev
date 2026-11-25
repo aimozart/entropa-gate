@@ -1,6 +1,8 @@
 # Entropa dev image: pinned stable toolchain plus the quality tools from docs/STANDARDS.md.
 # Build: docker build -t entropa-dev:1 -f tools/Dockerfile.dev tools   (scripts/lib-docker.sh does it on first use)
-FROM rust:1.99.1-bookworm
+FROM rust:1.99.1-bookworm@sha256:e12566d5abc17a0da741628782cdb504b68b8961f5bfcf677936bf3e8b32de29
+# node (the page tests run the pages' JavaScript) and minisign (the release signature tests) come from the Debian bookworm repositories; the build prints both versions, and CI sets ENTROPA_REQUIRE_TOOLS=1 so that a missing tool fails a test instead of skipping it
+RUN apt-get update && apt-get install -y --no-install-recommends nodejs minisign && rm -rf /var/lib/apt/lists/* && node --version && minisign -v
 RUN rustup component add clippy rustfmt llvm-tools-preview \
  && rustup toolchain install nightly --profile minimal
 ENV CARGO_HOME=/cargo

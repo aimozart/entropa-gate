@@ -40,7 +40,7 @@ fn x1_the_context_scan_finds_the_value_in_every_round_5_syntax() {
         format!("service/auth/password: {V}"),
         format!("{{\"client_secret\": \"{W}\"}}"),
         format!("password = \"{W}\""),
-        format!("token: abc.def-123_xyz"),
+        "token: abc.def-123_xyz".to_string(),
         format!("$password = \"{V}\""),
         format!("API_KEY={V}"),
         format!("Authorization: Be-ar-er {V}AB"),

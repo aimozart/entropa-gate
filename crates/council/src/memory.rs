@@ -1,4 +1,4 @@
-//! Decision memory, stage S12d-c: the exact lexical index of docs/ARCHITECTURE-MEMORY.md sections 3 and 4, with its
+//! Decision memory, stage S12d-c: the exact lexical index of the decision-memory design notes sections 3 and 4, with its
 //! integer scorer, index hash, manifest hash and memory hash. The retrieval evaluation harness and the planted-suite
 //! generator of section 7 live in `memory_eval`. No float, no clock, no file, no model.
 

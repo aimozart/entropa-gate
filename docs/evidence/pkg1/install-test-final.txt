@@ -1,0 +1,66 @@
+ok   tarball exists: entropa-gate-0.2.0-linux-x86_64.tar.gz
+ok   report exists
+ok   test trust anchors present
+ok   report sha256 matches the tarball
+ok   P1 the second build gave the same tarball
+ok   P1 the two binaries are identical
+ok   one top directory
+ok   contains entropa-gate
+ok   contains entropa-release
+ok   contains install.sh
+ok   contains uninstall.sh
+ok   contains LICENSE
+ok   contains README.txt
+ok   contains SBOM.cdx.json
+ok   contains SHA256SUMS
+ok   contains SHA256SUMS.minisig
+ok   contains MANIFEST.json
+ok   all entries owned by 0/0
+ok   P2 install (minisign mode) exit 0
+ok   P2 prints the verification mode
+ok   P2 prints what it did not check
+ok   P2 binary installed in ~/.local/bin
+ok   P2 init works
+ok   P2 record works
+ok   P2 verify works
+ok   P2 the installer created no key
+ok   P2 an install record exists
+ok   P2 nothing written outside the prefix
+ok   P2b install (ML-DSA mode) exit 0
+ok   P2b prints the mode
+ok   P2b warns that the verifier came from the same tarball
+ok   P3 refused with nothing installed: ms no trust anchor
+ok   P3 refused with nothing installed: ms wrong key
+ok   P3 refused with nothing installed: ms changed binary
+ok   P3 refused with nothing installed: ms changed install.sh
+ok   P3 refused with nothing installed: ms changed SBOM
+ok   P3 refused with nothing installed: ms missing file
+ok   P3 refused with nothing installed: ms extra file
+n/a  P3 minisign mode does not read MANIFEST.json (SHA256SUMS covers every other file); the ML-DSA mode does
+ok   P3 refused with nothing installed: ml no trust anchor
+ok   P3 refused with nothing installed: ml wrong key
+ok   P3 refused with nothing installed: ml changed binary
+ok   P3 refused with nothing installed: ml changed install.sh
+ok   P3 refused with nothing installed: ml changed SBOM
+ok   P3 refused with nothing installed: ml missing file
+ok   P3 refused with nothing installed: ml extra file
+ok   P3 refused with nothing installed: ml changed manifest
+ok   P3 a truncated tarball yields no installer
+ok   root is refused without the flag
+ok   root allowed with --allow-root
+ok   P4 second install exit 0
+ok   P4 uninstall exit 0
+ok   P4 installed files removed
+ok   P4 a foreign file in the same directory is untouched
+ok   P4 the user's node (keys and ledger) is untouched
+ok   P5 Debian bookworm container, no network, non-root, empty HOME: install (ML-DSA mode), init, verify work
+ok   P5 the container run used the ML-DSA mode (minisign is not installed there)
+ok   P6 a fresh login shell finds it (distro default .profile)
+ok   P6 an open shell finds it after hash -r when ~/.local/bin is on PATH
+ok   P6 off PATH: the installer prints the exact line to add
+ok   P6 no shell file was edited
+ok   P7 container init (no network, read-only, no caps)
+ok   P7 container record
+ok   P7 container verify
+
+ALL OK

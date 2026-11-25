@@ -1,5 +1,5 @@
 //! Shared helpers. All data is synthetic. Events are built from JSON, so the tests depend on the schema of
-//! docs/ARCHITECTURE-COUNCIL.md section 6 and not on any struct layout.
+//! the council design notes section 6 and not on any struct layout.
 #![allow(dead_code, clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 
 pub use entropa_council::*;

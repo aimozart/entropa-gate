@@ -29,6 +29,12 @@ required-features = ["issue"]
 [features]
 # issuing a licence needs the issuer key, which stays with the owner: the capability is compiled only for tests and the issuer tool
 issue = []
+# a TEST HELPER for planting attacked ledgers (hand-made checkpoint chains signed with the ledger's own key, or another seed): never part of the shipped binary
+plant = []
+
+[[example]]
+name = "plant_checkpoints"
+required-features = ["plant"]
 
 [dev-dependencies]
 entropa-gate = { path = ".", features = ["issue"] }

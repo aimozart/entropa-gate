@@ -1,0 +1,1 @@
+BITE page that always shows 'verified': SUMMARY same=2 differ=37 total=39; csp checks: fetch BLOCKED, xhr BLOCKED

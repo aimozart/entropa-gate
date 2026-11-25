@@ -1,0 +1,15 @@
+== the guard alone
+== four exchanges
+== the record
+ok   the ledger holds no prompt or answer text
+ok   the key is neither printed nor recorded
+ok   guard-allow.txt
+ok   guard-block.txt
+ok   ex1.txt
+ok   ex2.txt
+ok   ex3.txt
+ok   ex4.txt
+ok   verify.txt
+ok   status.txt
+FAIL the guide <build-dir>/entropa-dm1/docs/public-drafts/MODEL-INTEGRATION.md does not exist
+FAILED

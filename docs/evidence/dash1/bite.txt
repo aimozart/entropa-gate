@@ -1,0 +1,4 @@
+BITE summary counts doubled (generator, by_decision etc.): test result: FAILED. 4 passed; 2 failed (d1 and d3 side: the page banner shows)  [the first two attempts of this bite were no-op edits (a reflowed line) and passed; the third edit was applied for real]
+BITE page never shows the banner (ok = true): FAILED. 5 passed; 1 failed (d3)
+BITE day length 86,401 in utc_day: FAILED. 3 passed; 3 failed (d6, d1 and d4 or d3 follow)
+BITE page day string cut short (slice 0,9): FAILED. 5 passed; 1 failed (d3: mismatch banner shown for good data)

@@ -1,0 +1,46 @@
+== public guard on the filtered main tree
+PUBLIC GUARD: files reference agentic-process material:
+  OBSERVABILITY.md
+  PAXEL_CHAT_LOG.md
+  crates/api/src/main.rs
+  crates/api/src/persistence/mod.rs
+  crates/core/src/chain.rs
+  docs/archive/README-2026-08-open-core.md
+  scripts/check-file-sizes.sh
+== checker on the filtered main tree
+FINDING email Cargo.toml:18
+FINDING private_process OBSERVABILITY.md:65
+FINDING private_process OBSERVABILITY.md:69
+FINDING private_process PAXEL_CHAT_LOG.md:18
+FINDING private_process PAXEL_CHAT_LOG.md:113
+FINDING private_process PAXEL_CHAT_LOG.md:158
+FINDING private_process PAXEL_CHAT_LOG.md:174
+FINDING private_process PAXEL_CHAT_LOG.md:209
+FINDING private_process PAXEL_CHAT_LOG.md:223
+FINDING private_process PAXEL_CHAT_LOG.md:233
+FINDING private_process PAXEL_CHAT_LOG.md:247
+FINDING private_process PAXEL_CHAT_LOG.md:271
+FINDING private_process PAXEL_CHAT_LOG.md:280
+FINDING private_process PAXEL_CHAT_LOG.md:296
+FINDING private_process PAXEL_CHAT_LOG.md:427
+FINDING private_process PAXEL_CHAT_LOG.md:470
+FINDING private_process PAXEL_CHAT_LOG.md:517
+FINDING private_process PAXEL_CHAT_LOG.md:523
+FINDING private_process PAXEL_CHAT_LOG.md:556
+FINDING private_process PAXEL_CHAT_LOG.md:583
+FINDING private_process README.md:22
+FINDING private_process README.md:53
+FINDING private_process .github/workflows/ci.yml:44
+FINDING big_file assets/aimozart_logo.png:0
+FINDING email crates/api/scryon/hire.html:162
+FINDING private_process crates/api/src/main.rs:27
+FINDING private_process crates/api/src/persistence/mod.rs:38
+FINDING private_process crates/core/src/chain.rs:86
+FINDING private_process docs/SCOPE.md:8
+FINDING private_process docs/archive/README-2026-08-open-core.md:162
+FINDING private_process docs/archive/README-2026-08-open-core.md:163
+FINDING private_path docs/archive/README-2026-08-open-core.md:163
+FINDING private_process docs/archive/README-2026-08-open-core.md:267
+FINDING private_process scripts/check-file-sizes.sh:2
+FINDING private_process scripts/verify.sh:16
+findings: 35 (allowlisted: 0) big_file=1 email=2 private_path=1 private_process=31

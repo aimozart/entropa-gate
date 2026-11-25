@@ -9,6 +9,15 @@ on:
     - cron: "17 5 * * *" # nightly: mutation testing and fuzz smoke
 permissions:
   contents: read
+env:
+  # The property tests default to 100,000 cases each; in the debug run on a 4-CPU runner that takes many hours (one binary needed over 30 minutes at 10,000). The CI debug run uses reduced counts; the full counts are the release builds.
+  AT1_CASES: "1000"
+  AT2_CASES: "2000"
+  AT3_CASES: "2000"
+  EG1_CASES: "2000"
+  H13_CASES: "2000"
+  ENTROPA_REQUIRE_TOOLS: "1"
+  IN_DEV_PASS_ENV: "AT1_CASES AT2_CASES AT3_CASES EG1_CASES H13_CASES ENTROPA_REQUIRE_TOOLS"
 jobs:
   check:
     runs-on: ubuntu-24.04

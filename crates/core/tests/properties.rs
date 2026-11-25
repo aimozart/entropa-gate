@@ -1,5 +1,6 @@
 //! Property tests (proptest): Merkle proofs and receipts hold for any log size and index.
 //! Seeds: proptest persists failing cases under `proptest-regressions/`; commit those files.
+#![cfg(feature = "signing")]
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 
 use entropa_core::merkle::{

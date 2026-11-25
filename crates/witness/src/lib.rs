@@ -7,6 +7,7 @@
 
 use entropa_core::transparency_log::Checkpoint;
 
+pub mod anchor_file;
 mod decode;
 mod statement;
 pub mod strict_json;

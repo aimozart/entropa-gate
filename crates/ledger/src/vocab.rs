@@ -171,6 +171,8 @@ closed_enum!(
         CorpusVersion => "corpus_version",
         /// A retrieval from the sealed standards corpus was answered or abstained (an evidence.access label; counts: total = 1 query or the passages returned, passed = passages returned, flagged = 1 when it abstained).
         RetrievalRecord => "retrieval_record",
+        /// A pre-registration record (a signed commitment to a set, forecast, runner and target) was committed to this ledger as a hash (an evidence.change label).
+        PreregCommitted => "prereg_committed",
     }
 );
 

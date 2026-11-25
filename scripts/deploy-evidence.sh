@@ -5,7 +5,7 @@
 set -uo pipefail
 DIR=${EVIDENCE_DIR:-$HOME/.local/share/hippagrchealthcare-evidence}
 detail=${1:-deploy}
-command -v entropa-platinum >/dev/null && [ -f "$DIR/platinum.key" ] || exit 0
+command -v entropa-platinum >/dev/null && { [ -f "$DIR/evidence.key" ] || [ -f "$DIR/platinum.key" ]; } || exit 0
 run="deploy-$(date +%Y%m%d%H%M%S)"
 jq -n --arg d "$detail" --arg r "$run" '{kind:"evidence.change",label:"deploy",decision:"info",reason:"check_passed",control:"hitrust_10_sdlc",total:1,passed:1,flagged:0,detail:$d,run_id:$r}' \
   | entropa-platinum log-evidence "$DIR" >/dev/null 2>&1 || true

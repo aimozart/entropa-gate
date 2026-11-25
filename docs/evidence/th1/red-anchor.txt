@@ -1,0 +1,5 @@
+test a1_record_then_check_and_the_record_is_the_documented_hash_only_event ... FAILED
+test a2_check_is_false_for_other_text_other_ledgers_and_a_damaged_ledger ... FAILED
+test a3_a_wrong_key_does_not_verify_and_a_loose_key_or_missing_key_is_refused ... FAILED
+test a4_a_second_anchor_of_the_same_record_is_refused_and_the_ledger_holds_only_hashes ... FAILED
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s

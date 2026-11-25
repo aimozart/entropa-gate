@@ -1,0 +1,2 @@
+T1 a missing tool is never noticed: KILLED (release s2 x1 (minisign): without the tool it failed (rc=101): thread 'x1_minisign_ro; release s2 x1 (minisign): no SKIPPED line)
+T2 ENTROPA_REQUIRE_TOOLS=1 is ignored: KILLED (release s2 x1 (minisign): a required tool was not enforced)

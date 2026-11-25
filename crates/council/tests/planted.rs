@@ -1,4 +1,4 @@
-//! The planted-fault evaluation harness for reviewer models (docs/ARCHITECTURE-COUNCIL.md section 8).
+//! The planted-fault evaluation harness for reviewer models (the council design notes section 8).
 #![allow(clippy::unwrap_used, clippy::expect_used, clippy::panic)]
 mod common;
 use common::*;

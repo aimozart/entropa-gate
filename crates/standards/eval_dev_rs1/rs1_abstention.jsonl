@@ -1,0 +1,150 @@
+{"qid": "a1-001", "kind": "everyday", "query": "How long should I boil an egg for a soft yolk?"}
+{"qid": "a1-002", "kind": "everyday", "query": "Which tyre pressure is right for a small hatchback in winter?"}
+{"qid": "a1-003", "kind": "everyday", "query": "What is the best way to learn the guitar as an adult?"}
+{"qid": "a1-004", "kind": "everyday", "query": "How do I stop my houseplants from getting yellow leaves?"}
+{"qid": "a1-005", "kind": "everyday", "query": "Can you recommend a good book about the history of Rome?"}
+{"qid": "a1-006", "kind": "everyday", "query": "What time does the sun set in Lisbon in June?"}
+{"qid": "a1-007", "kind": "everyday", "query": "How do I remove limescale from a kettle?"}
+{"qid": "a1-008", "kind": "everyday", "query": "What is a sensible daily amount of water to drink?"}
+{"qid": "a1-009", "kind": "everyday", "query": "Which stretches help with lower back stiffness after a flight?"}
+{"qid": "a1-010", "kind": "everyday", "query": "How can I teach my dog to stop pulling on the lead?"}
+{"qid": "a1-011", "kind": "everyday", "query": "What is the difference between baking soda and baking powder?"}
+{"qid": "a1-012", "kind": "everyday", "query": "How do I change a flat bicycle tyre?"}
+{"qid": "a1-013", "kind": "everyday", "query": "Which fruit trees grow well in a small shady garden?"}
+{"qid": "a1-014", "kind": "everyday", "query": "How many cups are in a litre?"}
+{"qid": "a1-015", "kind": "everyday", "query": "What should I pack for a week of hiking in Scotland?"}
+{"qid": "a1-016", "kind": "everyday", "query": "How do I convert a recipe from ounces to grams?"}
+{"qid": "a1-017", "kind": "everyday", "query": "What is a good way to memorise a long speech?"}
+{"qid": "a1-018", "kind": "everyday", "query": "Why does my phone charger get warm overnight?"}
+{"qid": "a1-019", "kind": "everyday", "query": "How do I choose a mattress for a sore shoulder?"}
+{"qid": "a1-020", "kind": "everyday", "query": "What is the quickest way to cool a bottle of wine?"}
+{"qid": "a1-021", "kind": "everyday", "query": "How do I write a polite email declining a meeting?"}
+{"qid": "a1-022", "kind": "everyday", "query": "Which paint finish is best for a bathroom ceiling?"}
+{"qid": "a1-023", "kind": "everyday", "query": "How often should I service a central heating boiler at home?"}
+{"qid": "a1-024", "kind": "everyday", "query": "What are good names for a small bakery?"}
+{"qid": "a1-025", "kind": "everyday", "query": "How do I get chewing gum off a wool carpet?"}
+{"qid": "a1-026", "kind": "everyday", "query": "What is the rule for calculating a tip in a restaurant?"}
+{"qid": "a1-027", "kind": "everyday", "query": "How do I keep basil fresh for a week?"}
+{"qid": "a1-028", "kind": "everyday", "query": "What is the tallest mountain in South America?"}
+{"qid": "a1-029", "kind": "everyday", "query": "How do I set up a home network printer on a laptop?"}
+{"qid": "a1-030", "kind": "everyday", "query": "What is a good bedtime routine for a toddler?"}
+{"qid": "a1-031", "kind": "unindexed", "query": "What does GDPR say about the right to erasure?"}
+{"qid": "a1-032", "kind": "unindexed", "query": "What does the NIS2 directive say about incident reporting deadlines?"}
+{"qid": "a1-033", "kind": "unindexed", "query": "What does ISO 27001 say about the statement of applicability?"}
+{"qid": "a1-034", "kind": "unindexed", "query": "What does SOC 2 say about the availability criteria?"}
+{"qid": "a1-035", "kind": "unindexed", "query": "What does the CCPA say about the right to opt out of the sale of personal information?"}
+{"qid": "a1-036", "kind": "unindexed", "query": "What does FedRAMP say about the moderate baseline?"}
+{"qid": "a1-037", "kind": "unindexed", "query": "What does CMMC say about level two practices?"}
+{"qid": "a1-038", "kind": "unindexed", "query": "What does PSD2 say about strong customer authentication?"}
+{"qid": "a1-039", "kind": "unindexed", "query": "What does MiFID II say about transaction reporting?"}
+{"qid": "a1-040", "kind": "unindexed", "query": "What does Sarbanes-Oxley say about internal control over financial reporting?"}
+{"qid": "a1-041", "kind": "unindexed", "query": "What does the NIST Cybersecurity Framework say about the Protect function?"}
+{"qid": "a1-042", "kind": "unindexed", "query": "What does NIST SP 800-171 say about protecting controlled unclassified information?"}
+{"qid": "a1-043", "kind": "unindexed", "query": "What does NIST SP 800-63B say about authenticator assurance levels?"}
+{"qid": "a1-044", "kind": "unindexed", "query": "What does NIST SP 800-61 say about the incident response lifecycle?"}
+{"qid": "a1-045", "kind": "unindexed", "query": "What does ISO 27701 say about privacy information management?"}
+{"qid": "a1-046", "kind": "unindexed", "query": "What does the CIS Controls say about inventory of enterprise assets?"}
+{"qid": "a1-047", "kind": "unindexed", "query": "What does COBIT say about governance objectives?"}
+{"qid": "a1-048", "kind": "unindexed", "query": "What does ITIL say about change enablement?"}
+{"qid": "a1-049", "kind": "unindexed", "query": "What does TISAX say about the assessment levels?"}
+{"qid": "a1-050", "kind": "unindexed", "query": "What does HITRUST say about the e1 assessment?"}
+{"qid": "a1-051", "kind": "unindexed", "query": "What does IEC 62443 say about security levels for zones?"}
+{"qid": "a1-052", "kind": "unindexed", "query": "What does the EU Cyber Resilience Act say about vulnerability handling?"}
+{"qid": "a1-053", "kind": "unindexed", "query": "What does the EU Data Act say about switching between cloud providers?"}
+{"qid": "a1-054", "kind": "unindexed", "query": "What does the UK GDPR say about data protection impact assessments?"}
+{"qid": "a1-055", "kind": "unindexed", "query": "What does Brazil's LGPD say about the legal bases for processing?"}
+{"qid": "a1-056", "kind": "unindexed", "query": "What does PIPEDA say about meaningful consent?"}
+{"qid": "a1-057", "kind": "unindexed", "query": "What does the HIPAA Privacy Rule say about the minimum necessary standard?"}
+{"qid": "a1-058", "kind": "unindexed", "query": "What does the NIST AI RMF say about the Govern function?"}
+{"qid": "a1-059", "kind": "unindexed", "query": "What does ISO 42001 say about the AI management system policy?"}
+{"qid": "a1-060", "kind": "unindexed", "query": "What does OWASP ASVS say about session management verification?"}
+{"qid": "a1-061", "kind": "adjacent_regulation", "query": "What does the DORA regulation itself say about the register of information on ICT third-party providers?"}
+{"qid": "a1-062", "kind": "adjacent_regulation", "query": "Which GDPR article covers automated individual decision-making?"}
+{"qid": "a1-063", "kind": "adjacent_regulation", "query": "How many hours does the NIS2 directive allow for an early warning of a significant incident?"}
+{"qid": "a1-064", "kind": "adjacent_regulation", "query": "What does ISO 27001 Annex A 8.24 require for the use of cryptography?"}
+{"qid": "a1-065", "kind": "adjacent_regulation", "query": "Which SOC 2 common criterion covers change management?"}
+{"qid": "a1-066", "kind": "adjacent_regulation", "query": "What does HITRUST say about mobile device controls?"}
+{"qid": "a1-067", "kind": "adjacent_regulation", "query": "Which NIST SP 800-171 requirement covers multi-factor authentication for privileged accounts?"}
+{"qid": "a1-068", "kind": "adjacent_regulation", "query": "What does the EU Digital Services Act say about systemic risk assessments?"}
+{"qid": "a1-069", "kind": "adjacent_regulation", "query": "How does the Colorado AI Act define a consequential decision?"}
+{"qid": "a1-070", "kind": "adjacent_regulation", "query": "What does New York City Local Law 144 require of a bias audit?"}
+{"qid": "a1-071", "kind": "adjacent_regulation", "query": "What does PCI PIN security say about key blocks?"}
+{"qid": "a1-072", "kind": "adjacent_regulation", "query": "Which PCI 3DS requirement covers the 3DS server?"}
+{"qid": "a1-073", "kind": "adjacent_regulation", "query": "What does PCI P2PE require for solution providers?"}
+{"qid": "a1-074", "kind": "adjacent_regulation", "query": "What does NERC CIP-007 say about patch management?"}
+{"qid": "a1-075", "kind": "adjacent_regulation", "query": "What does the SWIFT customer security programme require for operator sessions?"}
+{"qid": "a1-076", "kind": "adjacent_regulation", "query": "Which MITRE ATLAS technique covers poisoning of training data?"}
+{"qid": "a1-077", "kind": "adjacent_regulation", "query": "What does the OWASP top ten for large language models say about prompt injection?"}
+{"qid": "a1-078", "kind": "adjacent_regulation", "query": "What does the HIPAA Breach Notification Rule require within sixty days?"}
+{"qid": "a1-079", "kind": "adjacent_regulation", "query": "Which EU Medical Device Regulation annex covers clinical evaluation?"}
+{"qid": "a1-080", "kind": "adjacent_regulation", "query": "What does the FDA's guidance say about cybersecurity in premarket submissions?"}
+{"qid": "a1-081", "kind": "adjacent_regulation", "query": "How does the UK Online Safety Act define illegal content?"}
+{"qid": "a1-082", "kind": "adjacent_regulation", "query": "What does the Singapore PDPA require for data breach notification?"}
+{"qid": "a1-083", "kind": "adjacent_regulation", "query": "What does Article 32 of the GDPR say about security of processing?"}
+{"qid": "a1-084", "kind": "adjacent_regulation", "query": "What does the EU AI Act's code of practice for general-purpose models say about copyright?"}
+{"qid": "a1-085", "kind": "adjacent_regulation", "query": "Which ISO 23894 clause covers AI risk identification?"}
+{"qid": "a1-086", "kind": "adjacent_regulation", "query": "What does NIST SP 800-37 say about the authorization step?"}
+{"qid": "a1-087", "kind": "adjacent_regulation", "query": "What does NIST SP 800-30 say about threat sources?"}
+{"qid": "a1-088", "kind": "adjacent_regulation", "query": "What does the Basel Committee say about operational resilience principles?"}
+{"qid": "a1-089", "kind": "adjacent_regulation", "query": "What does NIST SP 800-53A say about assessment methods?"}
+{"qid": "a1-090", "kind": "adjacent_regulation", "query": "Which Federal Reserve guidance covers third-party risk management?"}
+{"qid": "a1-091", "kind": "near_miss_id", "query": "What does control AC-0 require?", "standard": "NIST-SP-800-53", "id": "AC-0"}
+{"qid": "a1-092", "kind": "near_miss_id", "query": "Explain NIST SP 800-53 control AC-26.", "standard": "NIST-SP-800-53", "id": "AC-26"}
+{"qid": "a1-093", "kind": "near_miss_id", "query": "What does IA-14 say in NIST 800-53?", "standard": "NIST-SP-800-53", "id": "IA-14"}
+{"qid": "a1-094", "kind": "near_miss_id", "query": "Summarise control SC-99.", "standard": "NIST-SP-800-53", "id": "SC-99"}
+{"qid": "a1-095", "kind": "near_miss_id", "query": "What does enhancement AU-6(44) of NIST 800-53 require?", "standard": "NIST-SP-800-53", "id": "AU-6(44)"}
+{"qid": "a1-096", "kind": "near_miss_id", "query": "Describe control CP-31 in the NIST catalogue.", "standard": "NIST-SP-800-53", "id": "CP-31"}
+{"qid": "a1-097", "kind": "near_miss_id", "query": "What does control XX-1 require in NIST 800-53?", "standard": "NIST-SP-800-53", "id": "XX-1"}
+{"qid": "a1-098", "kind": "near_miss_id", "query": "Explain SI-42 from NIST SP 800-53 Rev. 5.", "standard": "NIST-SP-800-53", "id": "SI-42"}
+{"qid": "a1-099", "kind": "near_miss_id", "query": "What does PE-77 require?", "standard": "NIST-SP-800-53", "id": "PE-77"}
+{"qid": "a1-100", "kind": "near_miss_id", "query": "What is control RA-33 about?", "standard": "NIST-SP-800-53", "id": "RA-33"}
+{"qid": "a1-101", "kind": "near_miss_id", "query": "What does PCI DSS requirement 14.1 say?", "standard": "PCI-DSS", "id": "14.1"}
+{"qid": "a1-102", "kind": "near_miss_id", "query": "Explain PCI DSS 3.9.9.", "standard": "PCI-DSS", "id": "3.9.9"}
+{"qid": "a1-103", "kind": "near_miss_id", "query": "What does requirement 12.10.9 of PCI DSS cover?", "standard": "PCI-DSS", "id": "12.10.9"}
+{"qid": "a1-104", "kind": "near_miss_id", "query": "What does PCI DSS 0.1 say?", "standard": "PCI-DSS", "id": "0.1"}
+{"qid": "a1-105", "kind": "near_miss_id", "query": "Describe PCI DSS requirement 7.4.", "standard": "PCI-DSS", "id": "7.4"}
+{"qid": "a1-106", "kind": "near_miss_id", "query": "What does requirement 21.2 in PCI DSS require?", "standard": "PCI-DSS", "id": "21.2"}
+{"qid": "a1-107", "kind": "near_miss_id", "query": "What does Article 114 of the EU AI Act say?", "standard": "EU-AI-ACT", "id": "Art.114"}
+{"qid": "a1-108", "kind": "near_miss_id", "query": "Explain Article 0 of the AI Act.", "standard": "EU-AI-ACT", "id": "Art.0"}
+{"qid": "a1-109", "kind": "near_miss_id", "query": "What does Annex XIV of the EU AI Act contain?", "standard": "EU-AI-ACT", "id": "Annex XIV"}
+{"qid": "a1-110", "kind": "near_miss_id", "query": "Summarise Article 300 of the AI Act.", "standard": "EU-AI-ACT", "id": "Art.300"}
+{"qid": "a1-111", "kind": "near_miss_id", "query": "What does AI Act article 250 require?", "standard": "EU-AI-ACT", "id": "Art.250"}
+{"qid": "a1-112", "kind": "near_miss_id", "query": "What is in Annex XX of the AI Act?", "standard": "EU-AI-ACT", "id": "Annex XX"}
+{"qid": "a1-113", "kind": "near_miss_id", "query": "What does Article 43 of the DORA RTS require?", "standard": "DORA-RTS", "id": "Art.43"}
+{"qid": "a1-114", "kind": "near_miss_id", "query": "Explain DORA RTS Article 60.", "standard": "DORA-RTS", "id": "Art.60"}
+{"qid": "a1-115", "kind": "near_miss_id", "query": "What does Article 99 of the DORA technical standard say?", "standard": "DORA-RTS", "id": "Art.99"}
+{"qid": "a1-116", "kind": "near_miss_id", "query": "What does DORA RTS Article 0 cover?", "standard": "DORA-RTS", "id": "Art.0"}
+{"qid": "a1-117", "kind": "near_miss_id", "query": "What does 45 CFR 164.312(f) require?", "standard": "HIPAA-SECURITY-RULE", "id": "164.312(f)"}
+{"qid": "a1-118", "kind": "near_miss_id", "query": "Explain 164.310(a) of the HIPAA Security Rule.", "standard": "HIPAA-SECURITY-RULE", "id": "164.310(a)"}
+{"qid": "a1-119", "kind": "near_miss_id", "query": "What does 164.312(a)(1) say about access control?", "standard": "HIPAA-SECURITY-RULE", "id": "164.312(a)(1)"}
+{"qid": "a1-120", "kind": "near_miss_id", "query": "What does HIPAA section 164.399 require?", "standard": "HIPAA-SECURITY-RULE", "id": "164.399"}
+{"qid": "a1-121", "kind": "cross_standard_id", "query": "What does PCI DSS requirement AC-2 say?", "standard": "PCI-DSS", "id": "AC-2"}
+{"qid": "a1-122", "kind": "cross_standard_id", "query": "Explain PCI DSS control AU-6.", "standard": "PCI-DSS", "id": "AU-6"}
+{"qid": "a1-123", "kind": "cross_standard_id", "query": "What does PCI DSS SC-7 require?", "standard": "PCI-DSS", "id": "SC-7"}
+{"qid": "a1-124", "kind": "cross_standard_id", "query": "What does NIST 800-53 requirement 10.3.4 say?", "standard": "NIST-SP-800-53", "id": "10.3.4"}
+{"qid": "a1-125", "kind": "cross_standard_id", "query": "Explain NIST SP 800-53 requirement 8.3.6.", "standard": "NIST-SP-800-53", "id": "8.3.6"}
+{"qid": "a1-126", "kind": "cross_standard_id", "query": "What does NIST SP 800-53 section 164.312(b) say?", "standard": "NIST-SP-800-53", "id": "164.312(b)"}
+{"qid": "a1-127", "kind": "cross_standard_id", "query": "What does Article AC-2 of the EU AI Act say?", "standard": "EU-AI-ACT", "id": "AC-2"}
+{"qid": "a1-128", "kind": "cross_standard_id", "query": "What does requirement 10.3.4 of the EU AI Act say?", "standard": "EU-AI-ACT", "id": "10.3.4"}
+{"qid": "a1-129", "kind": "cross_standard_id", "query": "What does DORA RTS control AC-17 say?", "standard": "DORA-RTS", "id": "AC-17"}
+{"qid": "a1-130", "kind": "cross_standard_id", "query": "What does DORA RTS section 164.312(a) say?", "standard": "DORA-RTS", "id": "164.312(a)"}
+{"qid": "a1-131", "kind": "cross_standard_id", "query": "What does HIPAA 164 control AC-2 require?", "standard": "HIPAA-SECURITY-RULE", "id": "AC-2"}
+{"qid": "a1-132", "kind": "cross_standard_id", "query": "What does the HIPAA Security Rule requirement 10.3.4 say?", "standard": "HIPAA-SECURITY-RULE", "id": "10.3.4"}
+{"qid": "a1-133", "kind": "cross_standard_id", "query": "What does Article 9 of the HIPAA Security Rule say?", "standard": "HIPAA-SECURITY-RULE", "id": "Art.9"}
+{"qid": "a1-134", "kind": "cross_standard_id", "query": "What does Annex III of the DORA RTS contain?", "standard": "DORA-RTS", "id": "Annex III"}
+{"qid": "a1-135", "kind": "cross_standard_id", "query": "What does Article 9 of PCI DSS require?", "standard": "PCI-DSS", "id": "Art.9"}
+{"qid": "a1-136", "kind": "annex_article", "query": "What is listed in Annex XVI of the EU AI Act?", "standard": "EU-AI-ACT", "id": "Annex XVI"}
+{"qid": "a1-137", "kind": "annex_article", "query": "Summarise Annex XVII of the AI Act.", "standard": "EU-AI-ACT", "id": "Annex XVII"}
+{"qid": "a1-138", "kind": "annex_article", "query": "What does Annex 0 of the AI Act say?", "standard": "EU-AI-ACT", "id": "Annex 0"}
+{"qid": "a1-139", "kind": "annex_article", "query": "What does Annex I of the DORA RTS contain?", "standard": "DORA-RTS", "id": "Annex I"}
+{"qid": "a1-140", "kind": "annex_article", "query": "Explain Annex II of the DORA technical standard.", "standard": "DORA-RTS", "id": "Annex II"}
+{"qid": "a1-141", "kind": "annex_article", "query": "What does Annex A of NIST SP 800-53 contain?", "standard": "NIST-SP-800-53", "id": "Annex A"}
+{"qid": "a1-142", "kind": "annex_article", "query": "What does Annex B of PCI DSS cover?", "standard": "PCI-DSS", "id": "Annex B"}
+{"qid": "a1-143", "kind": "annex_article", "query": "What does Annex 2 of the HIPAA Security Rule say?", "standard": "HIPAA-SECURITY-RULE", "id": "Annex 2"}
+{"qid": "a1-144", "kind": "annex_article", "query": "What does Recital 9 of the EU AI Act say?", "standard": "EU-AI-ACT", "id": "Recital 9"}
+{"qid": "a1-145", "kind": "annex_article", "query": "Explain recital 300 of the AI Act.", "standard": "EU-AI-ACT", "id": "Recital 300"}
+{"qid": "a1-146", "kind": "annex_article", "query": "What does paragraph 9 of Article 42 of the DORA RTS say?", "standard": "DORA-RTS", "id": "Art.42(9)"}
+{"qid": "a1-147", "kind": "annex_article", "query": "What does Article 5(9) of the EU AI Act require?", "standard": "EU-AI-ACT", "id": "Art.5(9)"}
+{"qid": "a1-148", "kind": "annex_article", "query": "What does appendix F of NIST SP 800-53 describe?", "standard": "NIST-SP-800-53", "id": "Appendix F"}
+{"qid": "a1-149", "kind": "annex_article", "query": "What does Appendix Z of PCI DSS require?", "standard": "PCI-DSS", "id": "Appendix Z"}
+{"qid": "a1-150", "kind": "annex_article", "query": "What does Chapter XIX of the AI Act contain?", "standard": "EU-AI-ACT", "id": "Chapter XIX"}

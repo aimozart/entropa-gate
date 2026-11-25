@@ -5,7 +5,7 @@ edition.workspace = true
 authors.workspace = true
 license = "Apache-2.0"
 publish = false
-description = "The public explorer's GET-only read API as a pure library (docs/ARCHITECTURE-EXPLORER.md section 5). Stage S7d: stubs and red tests."
+description = "The public explorer's GET-only read API as a pure library (docs/ARCHITECTURE-EXPLORER.md section 5)."
 
 [dependencies]
 entropa-core = { path = "../core", version = "0.2.0" }

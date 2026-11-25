@@ -54,7 +54,8 @@ fn n1_the_manifest_has_no_http_or_cloud_dependency() {
 #[test]
 fn n2_no_crew_name_in_the_sources() {
     let src = sources().to_lowercase();
-    for name in ["kcops", "yttocs", "ulus", "niatpac"].map(|n| n.chars().rev().collect::<String>()) {
+    for name in ["kcops", "yttocs", "ulus", "niatpac"].map(|n| n.chars().rev().collect::<String>())
+    {
         assert!(
             !src.contains(name.as_str()),
             "internal name {name:?} in crates/ledger/src"

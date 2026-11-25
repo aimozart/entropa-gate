@@ -1,0 +1,16 @@
+BITE signature check removed: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.56s
+BITE key check removed: NOT APPLIED (pattern missing)
+BITE prefix root check removed: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.44s
+BITE last checkpoint must cover all records removed: test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.89s
+BITE chain check removed: test result: FAILED. 16 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.47s
+BITE fork check removed: test result: FAILED. 14 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.79s
+BITE rewritten check removed: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.89s
+BITE shorter-than-anchor check removed: test result: FAILED. 16 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.50s
+BITE counter rollback check removed: test result: FAILED. 16 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.97s
+BITE clock check removed: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.39s
+BITE anchor_missing removed: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.25s
+BITE ok_anchored uses the smallest size: test result: FAILED. 15 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.60s
+BITE signed anchor not verified: NOT APPLIED (pattern missing)
+BITE (round 2) key check removed: test result: FAILED. 17 passed; 2 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.46s
+BITE (round 2) signed anchor not verified (test f2 added): test result: FAILED. 18 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.59s
+BITE (round 2) last checkpoint must cover all records removed (survived in round 1; test f1 added): test result: FAILED. 18 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 7.95s error: test failed, to rerun pass `-p entropa-core --test anchor` 

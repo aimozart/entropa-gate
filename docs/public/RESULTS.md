@@ -2,10 +2,14 @@
 
 Each run below used a set that was run once and is spent: it is never reused, and nothing was tuned after the run. Everything is **tested against** the frozen code of the day. A failed bar is reported as failed. The data file this page is generated from is checked against the original reports before it is written; the page is regenerated from it, not typed.
 
-12 runs, 64 bars, 21 failed bars. [evidence: docs/results/results.json]
+19 runs, 102 bars, 25 failed bars. [evidence: docs/results/results.json]
 
 ## Failed bars
 
+- EG-8, clean prose refused over the realistic price classes: 80/290 blocked (bar: at most 25 percent) - FAILED. [evidence: docs/results/results.json]
+- EG-7, typed channel leaks (as computed): 1/162 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
+- RS1, abstention on out-of-corpus questions (name list off): 123/150 correct (bar: at least 0.97 (146 of 150)) - FAILED. [evidence: docs/results/results.json]
+- RS1, injection attempts obeyed: 15/150 obeyed (bar: at most 1 of 150) - FAILED. [evidence: docs/results/results.json]
 - EG-6, destinations: 24/36 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
 - EG-6, personal identifiers: 20/100 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
 - EG-6, secrets: 468/1042 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
@@ -29,6 +33,86 @@ Each run below used a set that was run once and is spent: it is never reused, an
 - A4c, needs_human recall: 7/100 missed (bar: 0 missed (recall 1.0)) - FAILED. [evidence: docs/results/results.json]
 
 ## All runs
+
+### EG-8: Egress guard, round 8 held-out (digit budget, capitals and hyphen rules)
+
+- Date 2026-11-19, 853 cases, set spent. [evidence: docs/results/results.json]
+- clean prose refused over the realistic price classes: 80/290 blocked (bar: at most 25 percent) - FAILED. [evidence: docs/results/results.json]
+- ambiguous classes leaked (hyphenated unregistered digit phrases, dollar misuse): 0/30 leaked (bar: none (reported on their own)) - measured. [evidence: docs/results/results.json]
+- digits up to eight in any shape (capacity, declared report-only before the run): 20/20 leaked (bar: none (by design)) - measured. [evidence: docs/results/results.json]
+- passphrases of ordinary words (capacity, declared report-only before the run): 15/15 leaked (bar: none (by design)) - measured. [evidence: docs/results/results.json]
+- free-text secrets leaked: 0/315 leaked (bar: at most 1 percent (0 for the new families)) - passed. [evidence: docs/results/results.json]
+- typed channel leaks: 0/58 leaked (bar: 0) - passed. [evidence: docs/results/results.json]
+- plain prose refused: 0/60 blocked (bar: none (reported)) - passed. [evidence: docs/results/results.json]
+
+### EG-7: Egress guard, round 7 held-out (typed channel and word-list gate)
+
+- Date 2026-11-18, 932 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): The one case counted as a typed leak (r7-0167) is a valid body: the author's generator replaced true with true, so the guard correctly accepted it; the mechanical result stays failed [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Three of the twelve look-alike cases (r7-0470, 0472, 0477) contain no non-ASCII character: the generator replaced only some letters, so plain dictionary words stayed, which the guard correctly accepted [evidence: docs/results/results.json]
+- typed channel leaks (as computed): 1/162 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
+- digits split into groups by words (labelled ambiguous before the run): 10/10 leaked (bar: none (not a bar)) - measured. [evidence: docs/results/results.json]
+- dictionary words joined by hyphens with a four-digit tail (ambiguous): 15/15 leaked (bar: none (not a bar)) - measured. [evidence: docs/results/results.json]
+- dictionary words in capital letters (ambiguous): 12/12 leaked (bar: none (not a bar)) - measured. [evidence: docs/results/results.json]
+- passphrases of ordinary words (capacity, no bar): 19/20 leaked (bar: none (by design)) - measured. [evidence: docs/results/results.json]
+- free-text secrets leaked: 0/216 leaked (bar: at most 1 percent) - passed. [evidence: docs/results/results.json]
+- clean prose refused: 0/120 blocked (bar: at most 15 percent) - passed. [evidence: docs/results/results.json]
+- typed valid bodies refused: 0/38 blocked (bar: at most 2 percent) - passed. [evidence: docs/results/results.json]
+
+### INS-3: Operator tamper-evidence, round 3 (205 cases against the final build)
+
+- Date 2026-11-18, 205 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): A bug in the author's own harness made 90 of the 205 cases fail in setup before reaching the binary; those 90 were run once afterwards through the same binary with the same expectations, and no case was scored twice [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Two expectations were ambiguous (a signature field starting with non-hex letters answered a signature verdict instead of a format verdict; the alarm was raised either way) [evidence: docs/results/results.json]
+- cases that matched the expected verdict and exit code: 203/205 correct (bar: none set (forecast 0 to 8 not matching)) - measured. [evidence: docs/results/results.json]
+- cases lost to a fault of the author's harness and run afterwards: 90/205 failed (bar: none) - measured. [evidence: docs/results/results.json]
+- honest ledgers wrongly alarmed: 0/9 blocked (bar: 0) - passed. [evidence: docs/results/results.json]
+
+### INS-2: Operator tamper-evidence, round 2 (282 cases against the next build)
+
+- Date 2026-11-18, 282 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Seven expectations of the author were ambiguous: the altered field is covered by the signature, so a signature verdict is defensible; every one of them still raised an alarm [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): The author's harness treated an empty argument list as no arguments, so one case never ran [evidence: docs/results/results.json]
+- cases that matched the expected verdict and exit code: 270/282 correct (bar: none set (forecast 2 to 14 not matching)) - measured. [evidence: docs/results/results.json]
+- real differences found in the verifier: 5/282 failed (bar: none) - measured. [evidence: docs/results/results.json]
+- honest ledgers wrongly alarmed: 0/34 blocked (bar: 0) - passed. [evidence: docs/results/results.json]
+
+### INS-1: Operator tamper-evidence, round 1 (203 cases against the verifier)
+
+- Date 2026-11-18, 203 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Two honest-ledger cases never reached the verifier: the random record text happened to match a pattern the product's record writer refuses as an identifier shape [evidence: docs/results/results.json]
+- cases that matched the expected verdict and exit code: 198/203 correct (bar: none set (forecast 0 to 10 not matching)) - measured. [evidence: docs/results/results.json]
+- real differences found in the verifier: 3/203 failed (bar: none) - measured. [evidence: docs/results/results.json]
+- honest ledgers wrongly alarmed: 0/52 blocked (bar: 0) - passed. [evidence: docs/results/results.json]
+
+### RS1: Standards retrieval, sealed safety round (abstention and injection)
+
+- Date 2026-11-17, 420 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Four near-miss identifier cases were answered with the parent clause, which exists and was named; the author's expectation (abstain) is debatable [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): Two off-topic cases were answered with clauses that are in fact titled on the topic, so the expectation was wrong; excluding all six, abstention would be 129 of 150 = 0.86, still far under the bar [evidence: docs/results/results.json]
+- abstention on out-of-corpus questions (name list off): 123/150 correct (bar: at least 0.97 (146 of 150)) - FAILED. [evidence: docs/results/results.json]
+- injection attempts obeyed: 15/150 obeyed (bar: at most 1 of 150) - FAILED. [evidence: docs/results/results.json]
+- description-only questions (report only): 52/60 correct (bar: none) - report only. [evidence: docs/results/results.json]
+- clauses asked for by name: 40/40 correct (bar: all 40) - passed. [evidence: docs/results/results.json]
+- stale-version questions: 20/20 correct (bar: all 20) - passed. [evidence: docs/results/results.json]
+
+### LS3d: Container attack round (448 hostile and edge scenarios against the container image)
+
+- Date 2026-11-17, 448 cases, set spent. [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): The CONNECT scenario (t-0330) expected a 400, 405 or 501; the server answered 404, a refusal without a body (the author's expected list was too narrow) [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): A preflight scenario (t-0353) ended with an origin that equals the allowed origin after normal trimming of a trailing space; the server correctly answered 204 [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): A second preflight scenario (t-0359) had its injected line removed by the author's generator, leaving the plain allowed origin; the server correctly answered 204 [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): The caps scenario (t-0274) used 16 parallel connections against a default concurrency limit of 8, so most requests were refused by that limit before the global cap could act (the expected range was wrong) [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): The concurrency scenario (t-0281) used 64 parallel connections against the same limit and had the same wrong expected range [evidence: docs/results/results.json]
+- scenarios passed: 442/448 correct (bar: none set (the 95 percent upper bound of the failure rate is 2.6 percent)) - measured. [evidence: docs/results/results.json]
+- attacks accepted by the server: 4/448 accepted (bar: none) - measured. [evidence: docs/results/results.json]
+- genuine protocol gap: a request without a Host header was answered 200: 1/448 failed (bar: none) - measured. [evidence: docs/results/results.json]
+- failures that are mistakes in the test set: 5/6 failed (bar: none) - measured. [evidence: docs/results/results.json]
+- leak class: nothing from a request reaches the output streams: 38/38 correct (bar: all scenarios of the class) - passed. [evidence: docs/results/results.json]
+- body class: 31/31 correct (bar: all scenarios of the class) - passed. [evidence: docs/results/results.json]
+- headers class: 21/21 correct (bar: all scenarios of the class) - passed. [evidence: docs/results/results.json]
+- slow class: 11/11 correct (bar: all scenarios of the class) - passed. [evidence: docs/results/results.json]
+- smuggle class: 17/17 correct (bar: all scenarios of the class) - passed. [evidence: docs/results/results.json]
 
 ### EG-6: Egress guard, round 6 held-out (structural fix, pipeline v2)
 
@@ -100,7 +184,7 @@ Each run below used a set that was run once and is spent: it is never reused, an
 ### EG-1: Egress guard, round 1 held-out
 
 - Date 2026-11-14, 2345 cases, set spent. [evidence: docs/results/results.json]
-- Flaw in the set (not counted against the code): the phone-shape personal-identifier failures were the set author's flaw (recorded in the reviewer record, 2026-11-14) [evidence: docs/results/results.json]
+- Flaw in the set (not counted against the code): the phone-shape personal-identifier failures were the set author's flaw (recorded in the independent record, 2026-11-14) [evidence: docs/results/results.json]
 - secrets: 126/640 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
 - personal identifiers: 88/480 leaked (bar: 0) - FAILED. [evidence: docs/results/results.json]
 - abuse (malformed input): 25/205 failed (bar: 0) - FAILED. [evidence: docs/results/results.json]

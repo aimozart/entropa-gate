@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found: let failed = if case.secrets.iter().any(|s| contains(&out, s
+BITE secrets never checked: PATTERN NOT FOUND
+BITE stderr not scanned for secrets: r4_a_secret_in_stdout_or_s result: FAILED. 4 passed;  error: test failed, to rer error: 1 target failed: 
+BITE time limit never enforced: r3_every_other_reason result: FAILED. 4 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found: Command::new(target).args(args).process_group(0)
+BITE arguments not passed: PATTERN NOT FOUND
+BITE output cap raised: r3_every_other_reason result: FAILED. 4 passed;  error: test failed, to rer error: 1 target failed: 
+BITE non-zero exit accepted: r3_every_other_reason result: FAILED. 4 passed;  error: test failed, to rer error: 1 target failed: 
+BITE only block counts as block (allow expected check inverted): z5_calibration_rows_compar z1_the_report_has_counts_b result: FAILED. 4 passed;  error: test failed, to rer r2_wrong_verdict result: FAILED. 4 passed;  error: test failed, to rer error: 2 targets failed: 
+BITE set sha not checked: z2_every_refusal_happens_b result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE no-prereg rule dropped: error: this file contains  error: could not compile ` 
+BITE prereg hashes not compared: z6_a_matching_preregistrat result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found: .write(true).create_new(true).open(&o.out)
+BITE report may be overwritten: PATTERN NOT FOUND
+BITE out-exists pre-check removed (and create_new kept): NONE (survived)
+BITE target executable check dropped: z2_every_refusal_happens_b result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE report leaks the first input: z4_two_runs_give_byte_iden result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE small_n threshold: z1_the_report_has_counts_b result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE forecast class existence not checked: z5_calibration_rows_compar result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE secrets never checked (redone): z4_two_runs_give_byte_iden result: FAILED. 6 passed;  error: test failed, to rer r4_a_secret_in_stdout_or_s result: FAILED. 4 passed;  error: test failed, to rer error: 2 targets failed: 
+BITE arguments not passed (redone): r5_arguments_are_passed_wi result: FAILED. 4 passed;  error: test failed, to rer error: 1 target failed: 
+BITE no-prereg rule dropped (redone): z2_every_refusal_happens_b z7_a_refused_second_run_do result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE report may be overwritten (redone): NONE (survived)
+BITE out-exists pre-check removed (z7 added): z7_a_refused_second_run_do result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+BITE report may be overwritten (z8 added): test z8_a_report_that_appears_during_the test result: FAILED. 7 passed; 1 failed; 

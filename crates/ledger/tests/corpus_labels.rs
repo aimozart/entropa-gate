@@ -58,10 +58,11 @@ const KINDS: [Kind; 5] = [
 
 #[test]
 fn k1_the_two_labels_are_appended_after_the_e1_labels_in_order() {
+    // Test change (TH1): the label prereg_committed is appended after these, so the four are checked as a contiguous run, not as the very tail.
     let all: Vec<&str> = LabelCode::ALL.iter().map(|l| l.as_str()).collect();
-    let n = all.len();
+    let at = all.iter().position(|w| *w == "crypto_inventory").unwrap();
     assert_eq!(
-        &all[n - 4..],
+        &all[at..at + 4],
         [
             "crypto_inventory",
             "log_integrity_check",

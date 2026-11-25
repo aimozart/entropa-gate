@@ -1,0 +1,11 @@
+B1 a word changed in a guide output block (initialised -> initialized):
+FAIL the guide block init differs:
+FAILED (outputs in <work-dir>/out)
+B2 a different minisign key given as the trust anchor (package5's test key against this tarball):
+FAIL init: got [sh: 6: entropa-gate: not found
+FAIL verify: got [sh: 10: entropa-gate: not found
+FAIL nodefiles: got [ls: cannot access '/home/you/entropa-node': No such file or directory]
+B3 the old tarball whose SHA256SUMS lists itself (pkg1-package2):
+FAIL init: got [sh: 6: entropa-gate: not found
+FAIL verify: got [sh: 10: entropa-gate: not found
+FAIL nodefiles: got [ls: cannot access '/home/you/entropa-node': No such file or directory]

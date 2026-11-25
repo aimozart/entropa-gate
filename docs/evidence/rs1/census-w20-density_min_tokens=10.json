@@ -1,0 +1,87 @@
+{
+  "abstained": 136,
+  "another_clause": 419,
+  "another_clause_examples_ids_only": [
+    "DORA-RTS:Art.10 -> DORA-RTS:Art.9",
+    "DORA-RTS:Art.11 -> DORA-RTS:Art.9",
+    "DORA-RTS:Art.12 -> DORA-RTS:Art.13",
+    "DORA-RTS:Art.15 -> DORA-RTS:Art.18",
+    "DORA-RTS:Art.16 -> DORA-RTS:Art.18",
+    "DORA-RTS:Art.20 -> DORA-RTS:Art.21",
+    "DORA-RTS:Art.25 -> DORA-RTS:Art.11",
+    "DORA-RTS:Art.26 -> DORA-RTS:Art.11",
+    "DORA-RTS:Art.28 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.29 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.30 -> DORA-RTS:Art.28",
+    "DORA-RTS:Art.31 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.32 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.33 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.34 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.35 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.36 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.37 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.38 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.39 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.4 -> DORA-RTS:Art.9",
+    "DORA-RTS:Art.40 -> DORA-RTS:Art.16",
+    "DORA-RTS:Art.42 -> EU-AI-ACT:Art.97",
+    "DORA-RTS:Art.6 -> DORA-RTS:Art.9",
+    "DORA-RTS:Art.7 -> DORA-RTS:Art.6",
+    "EU-AI-ACT:Annex II -> DORA-RTS:Art.5",
+    "EU-AI-ACT:Annex III -> DORA-RTS:Art.6",
+    "EU-AI-ACT:Annex IV -> DORA-RTS:Art.11",
+    "EU-AI-ACT:Annex IX -> EU-AI-ACT:Annex III",
+    "EU-AI-ACT:Annex V -> EU-AI-ACT:Art.47",
+    "EU-AI-ACT:Annex VI -> EU-AI-ACT:Art.43",
+    "EU-AI-ACT:Annex XI -> EU-AI-ACT:Art.53",
+    "EU-AI-ACT:Annex XII -> EU-AI-ACT:Art.53",
+    "EU-AI-ACT:Annex XIII -> EU-AI-ACT:Art.51",
+    "EU-AI-ACT:Art.10 -> EU-AI-ACT:Art.15",
+    "EU-AI-ACT:Art.102 -> DORA-RTS:Art.4",
+    "EU-AI-ACT:Art.103 -> DORA-RTS:Art.17",
+    "EU-AI-ACT:Art.104 -> DORA-RTS:Art.22",
+    "EU-AI-ACT:Art.105 -> DORA-RTS:Art.8",
+    "EU-AI-ACT:Art.106 -> DORA-RTS:Art.5"
+  ],
+  "by_standard": {
+    "DORA-RTS": {
+      "abstained": 0,
+      "another_clause": 25,
+      "clauses": 42,
+      "parent_or_enhancement": 1,
+      "self": 16
+    },
+    "EU-AI-ACT": {
+      "abstained": 2,
+      "another_clause": 52,
+      "clauses": 126,
+      "parent_or_enhancement": 2,
+      "self": 70
+    },
+    "HIPAA-SECURITY-RULE": {
+      "abstained": 1,
+      "another_clause": 2,
+      "clauses": 5,
+      "parent_or_enhancement": 0,
+      "self": 2
+    },
+    "NIST-SP-800-53": {
+      "abstained": 63,
+      "another_clause": 221,
+      "clauses": 1016,
+      "parent_or_enhancement": 106,
+      "self": 626
+    },
+    "PCI-DSS": {
+      "abstained": 70,
+      "another_clause": 119,
+      "clauses": 313,
+      "parent_or_enhancement": 31,
+      "self": 93
+    }
+  },
+  "clauses": 1502,
+  "parent_or_enhancement": 140,
+  "query_words": 20,
+  "self_retrieved": 807
+}

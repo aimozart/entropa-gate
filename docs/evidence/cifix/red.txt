@@ -1,0 +1,21 @@
+FAIL c1 a 4-CPU host: the default request of 12 becomes 4 (wanted: --cpus=4 ) got: docker run --rm --memory=24g --memory-swap=24g --cpus=12 --pids-lim
+FAIL c1 and 12 is gone (found: --cpus=12)
+FAIL c1 the cap is said out loud (wanted: using 4) got: docker run --rm --memory=24g --memory-swap=24g --cpus=12 --pids-limit=4096 --user 1000:1000 -e
+ok   c2 a request below the host is never raised
+ok   c2 and nothing is said
+ok   c3 a big host keeps the default of 12
+ok   c4 a fractional request below the host stays
+FAIL c5 a fractional request above the host becomes the host's (wanted: --cpus=4 ) got: docker run --rm --memory=24g --memory-swap=24g --cpus=4.5 --pi
+FAIL m1 a 7000 MiB host: the default 24g becomes 7000m (wanted: --memory=7000m ) got: docker run --rm --memory=24g --memory-swap=24g --cpus=12 --pids-
+FAIL m1 and the swap limit equals it (wanted: --memory-swap=7000m ) got: docker run --rm --memory=24g --memory-swap=24g --cpus=12 --pids-limit=4096 --
+FAIL m1 the cap is said out loud (wanted: using 7000m) got: docker run --rm --memory=24g --memory-swap=24g --cpus=12 --pids-limit=4096 --user 1000:100
+ok   m2 a big host keeps 24g
+ok   m3 a request below the host stays
+FAIL m4 a huge request is capped (wanted: --memory=7000m ) got: docker run --rm --memory=100000g --memory-swap=100000g --cpus=12 --pids-limit=4096 --u
+ok   m5 6g on a 7000 MiB host stays (6144 MiB is below 7000)
+FAIL m6 7g (7168 MiB) on a 7000 MiB host is capped (wanted: --memory=7000m ) got: docker run --rm --memory=7g --memory-swap=7g --cpus=12 --pids-limit=
+ok   u1 unknown host CPUs: no cap
+ok   u1 unknown host memory: no cap
+ok   u2 garbage host values: no cap
+FAIL l1 the limits line shows the capped CPUs (wanted: cpus=4 ) got: limits: memory=24g swap=24g cpus=12 pids=4096
+FAIL l1 and the capped memory (wanted: memory=7000m) got: limits: memory=24g swap=24g cpus=12 pids=4096

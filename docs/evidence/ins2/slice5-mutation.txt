@@ -1,0 +1,1 @@
+INS slice 5 mutation (lines changed since freeze 2, cargo-mutants --in-diff, run 8): ledger 8 caught / 0 missed / 3 unviable; gate: no source line changed (0 mutants). Tests: crates/ledger/tests/strict_lines.rs, lower_case.rs, raw_reader.rs, store_v2.rs, plus check_anchor k17 through the command line.

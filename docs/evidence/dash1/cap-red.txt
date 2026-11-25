@@ -1,0 +1,23 @@
+test d7_a_ten_thousand_record_bundle_for_the_browser_pass ... ignored, 10,000 records: slow; writes the bundle into DASH1_OUT for the real-browser pass
+test d6_utc_days_change_exactly_at_midnight_and_handle_leap_days ... ok
+test d5_a_refusal_writes_no_dashboard_file ... ok
+test d2_no_unsafe_sinks_csp_one_external_script_and_no_banned_or_process_words ... ok
+test d9_a_feed_of_60_days_or_fewer_has_no_earlier_total ... FAILED
+test d4_regeneration_is_byte_identical ... ok
+test d3_the_page_recomputes_the_numbers_and_shows_a_banner_only_when_they_differ ... ok
+test d1_the_dashboard_files_exist_with_the_label_and_the_counts_match_the_generator ... ok
+test d8_a_feed_over_60_days_shows_the_latest_60_and_keeps_the_rest_as_a_total ... FAILED
+
+failures:
+--
+thread 'd9_a_feed_of_60_days_or_fewer_has_no_earlier_total' (3909978) panicked at crates/mockview/tests/dash1.rs:344:5:
+assertion `left == right` failed
+  left: Null
+--
+thread 'd8_a_feed_over_60_days_shows_the_latest_60_and_keeps_the_rest_as_a_total' (3909977) panicked at crates/mockview/tests/dash1.rs:305:5:
+assertion `left == right` failed: only the latest 60 days are listed
+  left: 80
+--
+test result: FAILED. 6 passed; 2 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.48s
+
+error: test failed, to rerun pass `-p entropa-mockview --test dash1`

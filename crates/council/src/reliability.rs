@@ -1,4 +1,4 @@
-//! Critic-reliability scoring from accepted and rejected findings (docs/ARCHITECTURE-COUNCIL.md section 8).
+//! Critic-reliability scoring from accepted and rejected findings (the council design notes section 8).
 
 /// What the human decided about a finding.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

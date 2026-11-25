@@ -1,0 +1,22 @@
+== the guard alone
+== four exchanges
+== the record
+ok   the ledger holds no prompt or answer text
+ok   the key is neither printed nor recorded
+ok   guard-allow.txt
+ok   guard-block.txt
+ok   ex1.txt
+ok   ex2.txt
+ok   ex3.txt
+ok   ex4.txt
+ok   verify.txt
+ok   status.txt
+ok   guide block guard-allow.txt
+ok   guide block guard-block.txt
+ok   guide block ex1.txt
+ok   guide block ex2.txt
+ok   guide block ex3.txt
+ok   guide block ex4.txt
+ok   guide block verify.txt
+ok   guide block status.txt
+ALL OK

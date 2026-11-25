@@ -25,6 +25,26 @@ fn exe() -> &'static str {
 }
 
 fn start(name: &str, stale_lock: bool) -> Server {
+    // The port is picked and released before the server binds it, so something else can take it in
+    // between. start_on() checks that the answering server is ours; if not, take a new port.
+    for _ in 0..10 {
+        if let Ok(s) = start_on(name, stale_lock, free_port()) {
+            return s;
+        }
+    }
+    panic!("server did not start");
+}
+
+fn free_port() -> u16 {
+    std::net::TcpListener::bind("127.0.0.1:0")
+        .unwrap()
+        .local_addr()
+        .unwrap()
+        .port()
+}
+
+/// Start a server on `port`. Err if it never answered on that port.
+fn start_on(name: &str, stale_lock: bool, port: u16) -> Result<Server, String> {
     let nanos = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .map_or(0, |d| d.as_nanos());
@@ -38,51 +58,56 @@ fn start(name: &str, stale_lock: bool) -> Server {
     if stale_lock {
         std::fs::write(dir.join("ledger").join(".lock"), b"").unwrap();
     }
-    // A free port is found by binding port 0 and closing the listener, so another test of this file (they run in parallel) can be handed the same port before our server binds it:
-    // the readiness probe would then connect to THEIR server, and later requests fail ("connection refused") when it goes away. So: after the probe succeeds, wait a moment and
-    // check that OUR child is still running; if it exited (it could not bind), choose another port and start again (at most 5 attempts).
-    for _attempt in 0..5 {
-        let port = std::net::TcpListener::bind("127.0.0.1:0")
-            .unwrap()
-            .local_addr()
-            .unwrap()
-            .port();
-        let mut child = Command::new(exe())
-            .args(["serve", dir.to_str().unwrap()])
-            .env("PORT", port.to_string())
-            .env("BIND", "127.0.0.1")
-            .stdout(Stdio::null())
-            .stderr(Stdio::null())
-            .spawn()
-            .unwrap();
-        let mut up = false;
-        for _ in 0..100 {
-            if TcpStream::connect(("127.0.0.1", port)).is_ok() {
-                up = true;
-                break;
-            }
-            if child.try_wait().ok().flatten().is_some() {
-                break;
-            }
-            std::thread::sleep(Duration::from_millis(50));
+    let mut child = Command::new(exe())
+        .args(["serve", dir.to_str().unwrap()])
+        .env("PORT", port.to_string())
+        .env("BIND", "127.0.0.1")
+        .stdout(Stdio::null())
+        .stderr(Stdio::null())
+        .spawn()
+        .unwrap();
+    for _ in 0..100 {
+        // Ours only if our process is still alive and the key served on the port is the key of
+        // this node directory (a foreign listener cannot know it).
+        if child.try_wait().ok().flatten().is_some() {
+            break;
         }
-        if up {
-            std::thread::sleep(Duration::from_millis(150));
-            if child.try_wait().ok().flatten().is_none() {
-                return Server { child, port, dir };
+        if let Some(key) = get_pubkey(port) {
+            let o = Command::new(exe())
+                .args(["pubkey", dir.to_str().unwrap()])
+                .output()
+                .unwrap();
+            if key.trim() == String::from_utf8_lossy(&o.stdout).trim() && !key.trim().is_empty() {
+                return Ok(Server { child, port, dir });
             }
         }
-        let _ = child.kill();
-        let _ = child.wait();
+        std::thread::sleep(Duration::from_millis(50));
     }
-    panic!("server did not start");
+    let _ = child.kill();
+    let _ = child.wait();
+    Err("server did not start".to_string())
+}
+
+fn get_pubkey(port: u16) -> Option<String> {
+    let mut c = TcpStream::connect(("127.0.0.1", port)).ok()?;
+    c.set_read_timeout(Some(Duration::from_secs(2))).ok()?;
+    c.write_all(b"GET /v1/pubkey HTTP/1.1\r\nHost: x\r\nConnection: close\r\n\r\n")
+        .ok()?;
+    let mut out = String::new();
+    c.read_to_string(&mut out).ok()?;
+    if !out.starts_with("HTTP/1.1 200") {
+        return None;
+    }
+    Some(out.split("\r\n\r\n").nth(1)?.to_string())
 }
 
 fn http(s: &Server, method: &str, path: &str, body: &str) -> (u16, String) {
     let mut c = TcpStream::connect(("127.0.0.1", s.port)).unwrap();
     c.set_read_timeout(Some(Duration::from_secs(10))).unwrap();
     let req = format!("{method} {path} HTTP/1.1\r\nHost: x\r\nConnection: close\r\nContent-Length: {}\r\nContent-Type: application/json\r\n\r\n{body}", body.len());
-    c.write_all(req.as_bytes()).unwrap();
+    // A server may refuse early (413) and close while the body is still being written; the write
+    // is then cut off, and the refusal that was already sent must still be read.
+    let _ = c.write_all(req.as_bytes());
     let mut out = String::new();
     let _ = c.read_to_string(&mut out);
     let code = out
@@ -221,4 +246,47 @@ fn s8_both_ledgers_export_a_bundle_with_plain_english_and_no_raw_text() {
         .unwrap()
         .contains("Row-level security"));
     assert!(!b.contains("wrong-actor"));
+}
+
+/// A server that refuses at once (413) and closes with the body unread, as the real one does at its
+/// body limit. This makes the early-close ordering deterministic, so no load is needed.
+fn early_refusing_server() -> Server {
+    let l = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+    let port = l.local_addr().unwrap().port();
+    std::thread::spawn(move || {
+        if let Ok((mut c, _)) = l.accept() {
+            let _ = c.write_all(
+                b"HTTP/1.1 413 Payload Too Large\r\nContent-Length: 0\r\nConnection: close\r\n\r\n",
+            );
+            // dropped with the request body unread: the client's write is reset
+        }
+    });
+    Server {
+        child: Command::new("sleep").arg("30").spawn().unwrap(),
+        port,
+        dir: PathBuf::from("unused"),
+    }
+}
+
+#[test]
+fn s3b_the_client_helper_reads_an_early_refusal_even_when_its_write_is_cut_off() {
+    let s = early_refusing_server();
+    let big = format!(r#"{{"input":"{}"}}"#, "x".repeat(3 * 1024 * 1024));
+    let (c, _) = http(&s, "POST", "/v1/decision", &big);
+    assert_eq!(c, 413);
+}
+
+#[test]
+fn s9_a_port_taken_by_someone_else_is_not_mistaken_for_our_server() {
+    // A foreign listener took the port between "pick" and "bind" (the old pick-then-release race).
+    let squatter = std::net::TcpListener::bind("127.0.0.1:0").unwrap();
+    let port = squatter.local_addr().unwrap().port();
+    std::thread::spawn(move || {
+        for c in squatter.incoming().flatten() {
+            let mut c = c;
+            let _ =
+                c.write_all(b"HTTP/1.1 200 OK\r\nContent-Length: 2\r\nConnection: close\r\n\r\nok");
+        }
+    });
+    assert!(start_on("s9", false, port).is_err());
 }

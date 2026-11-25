@@ -1,0 +1,21 @@
+test o3_the_older_subcommands_are_strict_too ... FAILED
+test o2_anchor_export_refuses_unknown_and_repeated_options ... FAILED
+test o1_check_refuses_unknown_misspelled_repeated_and_extra_words_with_exit_2_and_no_verdict ... FAILED
+
+failures:
+--
+thread 'o3_the_older_subcommands_are_strict_too' (609127) panicked at crates/gate/tests/strict_options.rs:117:9:
+assertion `left == right` failed: ["verify", "--dir", "/tmp/tmp-bv1/.tmp12oVkK/l", "--bogus"]: (0, "OK records=1 checkpoints=1\n", "")
+  left: 0
+--
+thread 'o2_anchor_export_refuses_unknown_and_repeated_options' (609126) panicked at crates/gate/tests/strict_options.rs:85:9:
+assertion `left == right` failed: ["anchor", "export", "--dir", "/tmp/tmp-bv1/.tmpBMDInp/l", "--out", "/tmp/tmp-bv1/.tmpBMDInp/a.anchor", "--bogus"]: (0, "anchor written: size=1 counter=1\n", "")
+  left: 0
+--
+thread 'o1_check_refuses_unknown_misspelled_repeated_and_extra_words_with_exit_2_and_no_verdict' (609125) panicked at crates/gate/tests/strict_options.rs:52:9:
+assertion `left == right` failed: ["check", "--dir", "/tmp/tmp-bv1/.tmpmQMl06/l", "--bogus"]: (0, "verdict: ok_unanchored\nrecords=1 checkpoints=1 anchors=0 format=v2\n", "warning: no anchor was given; nothing outside this machine was compared, so a ledger rewritten and signed again by the key holder would look the same (ok_unanchored)\n")
+  left: 0
+--
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+error: test failed, to rerun pass `-p entropa-gate --test strict_options`

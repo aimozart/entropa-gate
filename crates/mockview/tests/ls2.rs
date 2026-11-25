@@ -213,7 +213,8 @@ fn l3_hostile_marker_text_never_reaches_the_pages_as_markup() {
             assert!(
                 scripts
                     .iter()
-                    .all(|s| s.starts_with("<script src=\"app.js\"")),
+                    .all(|s| s.starts_with("<script src=\"app.js\"")
+                        || s.starts_with("<script src=\"dashboard.js\"")),
                 "{n}: inline or foreign script: {scripts:?}"
             );
             assert!(!t.contains("onerror") && !t.contains("alert("), "{n}");
@@ -398,8 +399,28 @@ fn l6_output_is_deterministic_and_the_verify_block_is_exact() {
         .is_some_and(|a| !a.is_empty()));
 }
 
+/// Tests that need a program the CI container image does not have (node, minisign) SKIP with a loud line when it is missing; ENTROPA_REQUIRE_TOOLS=1 makes a missing tool a failure.
+fn tool_or_skip(tool: &str, test: &str) -> bool {
+    let missing = matches!(
+        std::process::Command::new(tool).arg("--version").output(),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound
+    );
+    if !missing {
+        return true;
+    }
+    assert!(
+        std::env::var("ENTROPA_REQUIRE_TOOLS").as_deref() != Ok("1"),
+        "{test}: {tool} is required (ENTROPA_REQUIRE_TOOLS=1) but was not found"
+    );
+    eprintln!("SKIPPED {test}: {tool} is not installed here, so this check was not run");
+    false
+}
+
 #[test]
 fn l7_app_js_is_free_of_unsafe_sinks_and_renders_under_a_fake_dom() {
+    if !tool_or_skip("node", "l7") {
+        return;
+    }
     let (d, pk) = mock("l7", 8);
     let out = scratch("l7-out");
     generate(&d, &pk, &out, &Config::default()).unwrap();

@@ -1,7 +1,7 @@
-# ARCHITECTURE-WITNESS: a tiny Azure witness for Entropa checkpoints (stage S5a, design only)
+# ARCHITECTURE-WITNESS: a tiny Azure witness for Entropa checkpoints
 
 Status: design for review. **No Azure resource exists or is created by this document.** Nothing here is billable until
-The owner says go. Written 2026-10-21 on branch `rerust-s5a-azure-witness-arch` (from `rerust-int-s4e`).
+The owner says go. Written 2026-10-21.
 The owner's Azure credit "pot B" ends about 2026-11-17, so section 9 plans how the work survives that date.
 
 ## 1. What a witness is for, and the honest limit
@@ -23,7 +23,7 @@ equivocated. **What it does not prove (state this wherever the witness is shown)
   witness key can sign anything. Real deployments use several independent witnesses and require a quorum.
 - The first checkpoint a witness sees is accepted on trust (trust on first use); consistency is only checkable after that.
 - Witness time is the witness's own clock, not a proof of when records were written.
-- It proves nothing about whether the records are true, or an AI decision correct (see a project record (not published) note).
+- It proves nothing about whether the records are true, or an AI decision correct (see the decision records note).
 
 ## 2. Protocol
 Request (JSON, strict decoder, size-limited, unknown fields rejected):
@@ -97,7 +97,7 @@ The API lists meters, not free grants as such: a row with price 0.0 and a higher
 compute 32 GB-s and 1,000 executions: inside both free tiers = **$0.00**; state blob (1 KB) and writes: 1,000 writes about $0.005; Function-host
 storage traffic (heartbeats, locks): assumed up to about 100,000 operations a month about $0.50; Key Vault reads at cold start: negligible (< $0.01).
 **About $0.01 to $1 a month; worst case about $0.0014 per hour.** Idle cost is the storage account only (cents). These are forecasts; the actual comes from
-Cost Management (section 9). Ledger rows for these (marked proposed, not created) are in docs/FINOPS-LEDGER.md. A budget alert of $5 is created *before* any resource (it is free).
+Cost Management (section 9). Ledger rows for these (marked proposed, not created) are in the cost notes. A budget alert of $5 is created *before* any resource (it is free).
 
 **Pick: option A, Functions classic Consumption on Linux with a custom handler.** Linux Consumption retires on 2028-09-30 per Microsoft's notice (found by search, confirm), which is long after Nov 17. Flex Consumption is the successor; its custom-handler support appeared supported in search results but unclear: check (D3). Cheapest viable SKU in either case is the pay-per-use plan, not a dedicated plan.
 
@@ -107,7 +107,7 @@ Everything lives in one resource group `rg-entropa-witness`, tagged `project=ent
 az group delete --name rg-entropa-witness --yes --no-wait     # removes every resource of the witness
 az group exists --name rg-entropa-witness                      # prints false when gone
 ```
-A Key Vault is soft-deleted for 90 days by default; to free the name earlier the owner may also run `az keyvault purge --name <vault>` (kept out of scripts on purpose). Nothing is left running after teardown. The deletion rules apply: the owner's exact word plus a standalone yes/no before any delete.
+A Key Vault is soft-deleted for 90 days by default; to free the name earlier the owner may also run `az keyvault purge --name <vault>` (kept out of scripts on purpose). Nothing is left running after teardown. Deletion requires explicit approval.
 
 ## 8. Test plan (red first, each stage on its own branch, like S4)
 S5b stubs + red tests; S5c implement; S5d Azure adapter + Bicep (no deploy); S5e deploy (billable: the owner's go, price stated again); S5f capture.

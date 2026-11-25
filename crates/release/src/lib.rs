@@ -448,7 +448,8 @@ pub mod cli {
             .and_then(|i| args.get(i + 1))
             .cloned()
     }
-    fn key_id(pubkey_hex: &str) -> String {
+    /// The key id of a public key (hex), as printed by `keygen` (shared with entropa-check).
+    pub fn key_id(pubkey_hex: &str) -> String {
         hex::decode(pubkey_hex)
             .map(|b| hex::encode(&blake3::hash(&b).as_bytes()[..8]))
             .unwrap_or_default()
@@ -513,7 +514,8 @@ pub mod cli {
         out.sort_by(|a, b| a.0.cmp(&b.0));
         Ok(out)
     }
-    fn load_key(path: &Path) -> Result<Probe, String> {
+    /// Load a signing key file (a 0600 hex seed); shared with entropa-check so one key format serves both tools.
+    pub fn load_key(path: &Path) -> Result<Probe, String> {
         let md = std::fs::metadata(path).map_err(|_| "no key file".to_string())?;
         if md.permissions().mode() & 0o077 != 0 {
             return Err(

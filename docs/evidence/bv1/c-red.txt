@@ -1,0 +1,12 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test b3_bytes_that_are_not_text_are_invalid_not_a_crash ... FAILED
+test b1_every_corpus_case_has_the_native_verdict_as_a_closed_code ... FAILED
+test b2_a_16_mib_input_is_refused_as_limit_and_nothing_is_echoed ... FAILED
+thread 'b3_bytes_that_are_not_text_are_invalid_not_a_crash' (3871220) panicked at crates/bundle-verify/tests/corpus.rs:78:9:
+assertion `left == right` failed
+  left: 4
+ right: 1
+thread 'b1_every_corpus_case_has_the_native_verdict_as_a_closed_code' (3871218) panicked at crates/bundle-verify/tests/corpus.rs:48:9:
+assertion `left == right` failed: case valid-small
+  left: 4
+ right: 0

@@ -45,7 +45,8 @@ fn ts_accepts_2_pow_53_minus_1_and_rejects_2_pow_53() {
         sign(&f.requester, &too_big),
         Err(ApprovalError::Invalid(_))
     ));
-    let mut v: Value = serde_json::from_str(&must(encode(&sign(&f.requester, &ok).unwrap()))).unwrap();
+    let mut v: Value =
+        serde_json::from_str(&must(encode(&sign(&f.requester, &ok).unwrap()))).unwrap();
     v["ts"] = serde_json::json!(1u64 << 53);
     assert!(decode(&v.to_string()).is_err());
 }

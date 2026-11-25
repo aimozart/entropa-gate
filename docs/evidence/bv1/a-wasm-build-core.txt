@@ -1,0 +1,2 @@
+   Compiling entropa-core v0.2.0 (<build-dir>/entropa-bv1/crates/core)
+    Finished `release` profile [optimized] target(s) in 0.82s

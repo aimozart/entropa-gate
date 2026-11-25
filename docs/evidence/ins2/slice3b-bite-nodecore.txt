@@ -1,0 +1,1 @@
+BITE kind-or-label check: test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s

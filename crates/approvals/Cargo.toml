@@ -5,10 +5,10 @@ edition.workspace = true
 authors.workspace = true
 license = "Apache-2.0"
 publish = false
-description = "Signed approval records (request, approve, deny, consume) and a human gate over the Entropa log. Stage S3b: stubs and red tests."
+description = "Signed approval records (request, approve, deny, consume) and a human gate over the Entropa log."
 
 [dependencies]
-entropa-core = { path = "../core", version = "0.2.0" }
+entropa-core = { path = "../core", version = "0.2.0", default-features = false }
 blake3 = { workspace = true }
 hex = { workspace = true }
 serde = { workspace = true }
@@ -16,6 +16,11 @@ serde_json = { workspace = true }
 
 [dev-dependencies]
 proptest = "1"
+
+[features]
+# `signing` (default) forwards to entropa-core; without it this crate only verifies (BV1: builds for wasm32-unknown-unknown without a randomness source).
+default = ["signing"]
+signing = ["entropa-core/signing"]
 
 [lints]
 workspace = true

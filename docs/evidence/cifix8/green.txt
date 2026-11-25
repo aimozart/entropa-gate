@@ -1,0 +1,10 @@
+ok   1 the base image is pinned by digest
+ok   1 and the digest is the one of the local image (sha256:e12566d5abc17a0da741628782cdb504b68b8961f5bfcf677936bf3e8b32de29)
+ok   2 nodejs and minisign are installed without recommended packages
+ok   2 the apt lists are updated and cleaned in the same layer
+ok   3 both tools are checked at build time
+ok   4 the workflow sets ENTROPA_REQUIRE_TOOLS=1
+ok   4 and it is passed into the container
+ok   5 TESTING.md carries the case-count sentence
+ok   5 docs/public/KNOWN-LIMITS.md carries the case-count sentence
+ok   6 TESTING.md says which command and which machine the release counts come from

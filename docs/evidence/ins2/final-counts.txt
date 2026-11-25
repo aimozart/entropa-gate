@@ -1,0 +1,26 @@
+entropa-core debug: 119 passed 0 failed 5 ignored 
+entropa-core --release: 119 passed 0 failed 5 ignored 
+entropa-witness debug: 55 passed 0 failed 1 ignored 
+entropa-witness --release: 55 passed 0 failed 1 ignored 
+entropa-ledger debug: 129 passed 0 failed 4 ignored 
+entropa-ledger --release: 129 passed 0 failed 4 ignored 
+entropa-nodecore debug: 22 passed 0 failed 0 ignored 
+entropa-nodecore --release: 22 passed 0 failed 0 ignored 
+entropa-gate debug: 52 passed 0 failed 1 ignored 
+entropa-gate --release: 52 passed 0 failed 1 ignored 
+entropa-mockview debug: 28 passed 0 failed 1 ignored 
+entropa-mockview --release: 28 passed 0 failed 1 ignored 
+entropa-platinum debug: 45 passed 0 failed 0 ignored 
+entropa-platinum --release: 45 passed 0 failed 0 ignored 
+entropa-explorer debug: 48 passed 0 failed 0 ignored 
+entropa-explorer --release: 48 passed 0 failed 0 ignored 
+gate with the plant helper (debug): 55 passed 0 failed 1 ignored
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.79s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.72s
+fmt ok
+OK   build entropa-core (wasm32, no default features)
+OK   tree entropa-core has no getrandom or rand
+OK   build entropa-witness (wasm32, no default features)
+OK   tree entropa-witness has no getrandom or rand
+OK   build entropa-ledger (wasm32, no default features)
+OK   tree entropa-ledger has no getrandom or rand

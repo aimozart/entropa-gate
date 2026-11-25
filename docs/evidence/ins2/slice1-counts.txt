@@ -1,0 +1,8 @@
+core default debug: 115 passed 0 failed 5 ignored 
+core default --release: 115 passed 0 failed 5 ignored 
+core --no-default-features debug: 70 passed 0 failed 0 ignored 
+core --no-default-features --release: 70 passed 0 failed 0 ignored 
+OK   build entropa-core (wasm32, no default features)
+OK   tree entropa-core has no getrandom or rand
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.20s
+fmt-ok

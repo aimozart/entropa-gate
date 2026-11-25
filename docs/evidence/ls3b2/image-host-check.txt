@@ -1,0 +1,6 @@
+Image entropa-try-http:ls3c-92c50a25d048 run read-only, no capabilities, 128 MB, published on 127.0.0.1 (trusted-hops 0), checked with curl on 2026-11-17:
+GET /healthz with Host ........................ 200
+GET /healthz with the Host header removed ..... 400
+POST /try (valid body), Host header removed ... 400
+GET /healthz as HTTP/1.0, no Host ............. 200
+(The container was stopped, not removed.)

@@ -1,0 +1,6 @@
+BITE the answer is not checked: FAIL ex3.txt: got [Sure. The key is AKIAIOSFODNN7EXAMPLE. FAIL the guide block ex3.txt differs: 
+BITE the prompt is not checked: FAIL ex2.txt: got [Stand-in answer: your prompt had 39 characters. FAIL the guide block ex2.txt differs: 
+BITE the key is printed on failure (only when set): FAIL ex4.txt: got [failed: the model call did not return an answer  FAIL the guide block ex4.txt differs: 
+BITE an extra field in the record request (the gate must refuse it: the wrapper then fails): FAIL ex1.txt: got [failed: the record could not be written FAIL ex2.txt: got [failed: the record could not be written 
+BITE the stand-in wording changes (the guide block must differ): FAIL ex1.txt: got [Stand-in answer: your prompt had 30 chars. FAIL the guide block ex1.txt differs: 
+BITE the bearer token is printed with the answer: FAIL the key leaked FAIL ex1.txt: got [Stand-in answer: your prompt had 30 characters.  

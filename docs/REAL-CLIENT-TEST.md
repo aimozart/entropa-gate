@@ -8,7 +8,6 @@ It shows that a real MCP client can start the server from `.mcp.json`, list the 
 ## 2. Setup (about 3 minutes; Docker only; nothing billable, nothing leaves this PC)
 ```
 cd ~/entropa-rust
-git switch rerust-s2f-mcp-real-client        # this stage's branch
 ./scripts/mcp-demo-setup.sh                   # builds the server, writes synthetic fixtures to target/mcp-demo/
 ```
 The script ends by printing three `export` lines. Paste them into the same terminal, then start Claude Code **from `~/entropa-rust`** in that terminal (so it inherits them):

@@ -1,0 +1,6 @@
+FAIL build entropa-witness: error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the "wasm_js" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support
+FAIL tree entropa-witness: │   │   │   ├── getrandom v0.4.3 │   │   │   │   └── rand_core v0.10.1 
+FAIL build entropa-approvals: error: The wasm32/64-unknown-unknown are not supported by default; you may need to enable the "wasm_js" crate feature. For more information see: https://docs.rs/getrandom/0.4.3/#webassembly-support
+FAIL tree entropa-approvals: │   │   │   ├── getrandom v0.4.3 │   │   │   │   └── rand_core v0.10.1 
+FAIL build entropa-policy: error: failed to download `bumpalo v3.20.3`
+FAIL tree entropa-policy: error: failed to download `bumpalo v3.20.3` 

@@ -1,0 +1,12 @@
+container-limits with 4 CPUs visible (taskset):
+ok   default --memory=24g
+ok   default --memory-swap=24g
+ok   default --cpus=4
+ok   default --pids-limit=4096
+ok   override --memory=512m
+ok   override --memory-swap=512m
+ok   override --cpus=2
+ok   override --pids-limit=64
+ok   allocation bomb killed (exit 137)
+ok   host RAM not exhausted
+ok   pids limit stops forks

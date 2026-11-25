@@ -18,7 +18,7 @@ n bytes                    payload (valid UTF-8)
 - **Limits:** `MAX_FIELD_BYTES` = 1 MiB for the payload and 1 MiB for the label (maximum record 2 MiB + 10 bytes); `encode_record` returns `RecordError::FieldTooLarge` instead of truncating.
 - **API:** `encode_record` and `decode_record` return `Result<_, RecordError>`. `decode_record_or_marker` is a display-only helper for views that must show something for undecodable bytes (never used for verification).
 - Leaf hashing and leaf/node domain separation in merkle.rs are unchanged; only the bytes fed to `leaf_hash` change.
-- **No legacy decoder:** nothing live depends on v1 (Scott, 2026-10-20), so v1 bytes are simply rejected.
+- **No legacy decoder:** nothing live depends on v1 (the owner, 2026-10-20), so v1 bytes are simply rejected.
 
 ## Consequences
 Breaking change to entropa-core: version 0.2.0, changelog entry. Clients sending `label: ""` now produce a different leaf than `label` absent. Records are 5 to 9 bytes larger than v1. Golden vectors are under crates/core/tests/vectors/ (public test data).

@@ -1,0 +1,125 @@
+   Compiling entropa-try-http v0.2.0 (<build-dir>/<worktree>/crates/try-http)
+    Finished `release` profile [optimized] target(s) in 2.40s
+     Running unittests src/lib.rs (<build-dir>/ls3b-release-target/release/deps/entropa_try-bafd02fc7edd66a1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/contract.rs (<build-dir>/ls3b-release-target/release/deps/contract-e5928e53a0ef486b)
+
+running 10 tests
+test k5_malformed_bodies_are_refused_with_their_own_code_and_never_echoed ... ok
+test k9_every_answer_has_a_status_from_the_table_and_an_error_code_from_the_closed_list ... ok
+test k8_nothing_the_visitor_sent_is_echoed_or_stored_in_the_answer_or_the_record ... ok
+test k1_an_ordinary_text_is_allowed_with_a_signed_record_and_exactly_the_documented_fields ... ok
+test k2_a_secret_shaped_text_is_blocked_with_closed_reason_codes_and_a_deny_record ... ok
+test k3_every_tier_answers_with_the_same_shape_and_an_unknown_tier_is_refused ... ok
+test k4_the_size_limit_is_exact_and_the_content_type_must_be_json ... ok
+test k6_the_rate_limit_counts_per_client_resets_with_the_window_and_tells_when_to_retry ... ok
+test k10_the_handler_takes_the_time_from_the_caller_and_the_dependency_tree_has_no_network_crate ... ok
+test k7_the_limiter_remembers_a_bounded_number_of_clients ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 21.09s
+
+     Running tests/contract_more.rs (<build-dir>/ls3b-release-target/release/deps/contract_more-43520317d6f6772e)
+
+running 6 tests
+test m1_a_redaction_is_said_plainly_in_the_answer_and_recorded_as_an_allow_of_the_redacted_text ... ok
+test m4_a_limit_of_zero_clients_still_works_and_the_configured_body_limit_is_used ... ok
+test m6_the_record_names_the_signer_and_the_time_the_caller_gave ... ok
+test m3_the_limiter_forgets_the_longest_unseen_client_first ... ok
+test m2_the_limiter_edges_are_exact_capacity_window_end_and_retry_after ... ok
+test m5_the_salt_changes_every_hash_and_the_same_salt_gives_the_same_hash ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running unittests src/lib.rs (<build-dir>/ls3b-release-target/release/deps/entropa_try_http-cb497020543c65e2)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (<build-dir>/ls3b-release-target/release/deps/entropa_try_http-486cf5071fa34fbe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/try_sealed.rs (<build-dir>/ls3b-release-target/release/deps/try_sealed-43fb131f833db3d3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/http.rs (<build-dir>/ls3b-release-target/release/deps/http-9482c23909a2a260)
+
+running 18 tests
+test h2_routes_and_methods ... ok
+test h3_a_valid_request_gets_the_handler_answer_with_a_signed_record ... ok
+test h8_header_limits ... ok
+test h7_two_ipv6_addresses_in_one_64_share_a_bucket_and_another_64_does_not ... ok
+test h4_a_forged_forwarded_for_does_not_change_the_bucket_but_a_different_real_entry_does ... ok
+test h6_a_missing_short_or_non_ip_header_falls_back_to_the_peer_address_and_they_share_one_bucket ... ok
+test h13_cors_is_answered_for_exactly_one_origin_and_never_with_a_star ... ok
+test h5_with_two_hops_the_second_entry_from_the_right_is_the_key ... ok
+test h17_every_start_has_its_own_salt_so_the_same_text_gives_a_different_record_hash ... ok
+test h12_the_global_and_daily_caps_answer_503_with_retry_after ... ok
+test h16_an_origin_with_a_host_is_accepted_and_a_body_of_exactly_the_read_limit_counts_for_its_client ... ok
+test h1_the_binary_refuses_to_start_without_hops_or_a_single_allowed_origin ... ok
+test h11_the_ninth_concurrent_request_gets_503_busy ... ok
+test h18_an_http_11_request_without_exactly_one_host_header_is_refused_with_400_before_anything_else ... ok
+test h14_nothing_from_a_request_reaches_stdout_or_stderr_over_1000_requests ... ok
+test h9_a_big_body_is_refused_without_reading_it ... ok
+test h15_the_status_counts_are_filed_under_their_status_and_the_first_line_comes_after_one_interval ... ok
+test h10_slow_senders_are_cut_off ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.16s
+
+     Running tests/keys.rs (<build-dir>/ls3b-release-target/release/deps/keys-67b0a08471d13201)
+
+running 7 tests
+test k6_the_daily_cap_refuses_with_daily_limit_until_the_next_utc_day ... ok
+test k7_when_both_caps_apply_the_daily_one_is_reported ... ok
+test k2_a_short_header_a_missing_header_or_a_non_ip_entry_uses_the_peer ... ok
+test k3_zero_hops_ignores_the_header_entirely ... ok
+test k5_the_global_cap_refuses_with_busy_and_a_retry_after_to_the_end_of_the_window ... ok
+test k4_ipv6_is_reduced_to_its_64_and_ipv4_mapped_is_ipv4 ... ok
+test k1_the_entry_counted_from_the_right_is_the_key_and_forged_left_entries_are_ignored ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/sealed_runner.rs (<build-dir>/ls3b-release-target/release/deps/sealed_runner-62ba61fc0b07ec32)
+
+running 15 tests
+test s10_the_container_target_runs_the_same_scenarios ... ignored, needs docker and the image named in LS3D_IMAGE
+test s8_a_target_that_cannot_be_started_is_a_runner_error_per_scenario_not_a_crash ... ok
+test s11_check_validates_the_file_without_running_anything_and_names_only_fields ... ok
+test s9_the_report_holds_no_case_text_and_a_second_run_is_refused ... ok
+test s1_every_refusal_happens_before_anything_is_parsed_or_run ... ok
+test s4_a_wrong_status_is_a_failure_and_an_attack_step_makes_it_an_accepted_attack ... ok
+test s5_header_body_and_count_expectations_are_each_checked_and_filed_under_their_reason ... ok
+test s6_a_server_that_never_answers_a_response_that_never_comes_and_a_scenario_over_its_time_are_timeouts ... ok
+test s13_a_scenario_marked_attack_counts_an_unmet_expectation_as_an_accepted_attack ... ok
+test s14_the_text_escape_pass_is_off_by_default_and_on_with_the_option ... ok
+test s12_a_hold_with_for_ms_closes_by_itself_and_returns_at_once ... ok
+test s2_scenarios_that_hold_pass_with_the_exact_bound_and_the_report_has_the_documented_shape ... ok
+test s15_a_read_with_only_or_close_passes_only_on_a_clean_close_and_a_failing_stats_expectation_fails ... ok
+test s7_a_server_that_is_not_alive_at_the_end_leaks_or_prints_anything_but_status_counts_fails ... ok
+test s3_the_real_server_behaviours_are_driven_with_raw_steps ... ok
+
+test result: ok. 14 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 13.98s
+
+   Doc-tests entropa_try
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests entropa_try_http
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+exit 0

@@ -177,13 +177,79 @@ fn p1_the_two_writers_are_deterministic_and_the_observed_behaviour_equals_the_go
 }
 
 #[test]
-fn p2_the_two_writers_write_identical_bytes_for_the_same_requests_and_key() {
+fn p2_the_two_writers_write_identical_records_and_receipts_and_differ_only_in_the_checkpoint_format(
+) {
+    // Test change (INS2 slice 3): the gate writer now issues v2 checkpoints (counter, chain link, domain-tagged signature); platinum's writer keeps v1.
+    // Everything else is still identical: the record bytes, the receipts, and A's own checkpoint bytes (pinned in the golden). B's checkpoint bytes are
+    // checked against an independent derivation by p4.
     let o = observe();
     assert_eq!(
-        o["files_a"], o["files_b"],
-        "A and B must write the same ledger bytes"
+        o["files_a"]["records.log"], o["files_b"]["records.log"],
+        "the record bytes are identical"
+    );
+    assert_ne!(
+        o["files_a"]["checkpoints.log"], o["files_b"]["checkpoints.log"],
+        "B writes v2 checkpoints"
     );
     assert_eq!(o["receipts_a"], o["receipts_b"]);
+}
+
+/// The ledger directory of the gate writer B after the four pinned requests (shared by p4 and the generator below).
+fn scenario_b(root: &Path) -> PathBuf {
+    let b = fresh(root, "v2b");
+    for n in 1..=4 {
+        b_rec(&b, &req(n)).unwrap();
+    }
+    b
+}
+
+#[test]
+#[ignore = "writes the scenario ledger for the independent derivation: PIN_V2_OUT=<dir> cargo test ... p4w -- --ignored"]
+fn p4w_write_the_scenario_for_the_independent_derivation() {
+    let Some(out) = std::env::var_os("PIN_V2_OUT") else {
+        return;
+    };
+    let t = tempfile::tempdir().unwrap();
+    let b = scenario_b(t.path());
+    let out = PathBuf::from(out);
+    std::fs::create_dir_all(&out).unwrap();
+    for f in ["records.log", "checkpoints.log"] {
+        std::fs::copy(b.join("ledger").join(f), out.join(f)).unwrap();
+    }
+}
+
+#[test]
+fn p4_the_v2_checkpoints_of_the_gate_writer_equal_the_independent_python_derivation() {
+    // tests/pins/gate_v2_expected.json comes from docs/evidence/ins2/gen-gate-v2-expected.py (its own Merkle tree, its own digest bytes, its own chain digests; blake3 from a library)
+    let expected: Value =
+        serde_json::from_str(&std::fs::read_to_string("tests/pins/gate_v2_expected.json").unwrap())
+            .unwrap();
+    let t = tempfile::tempdir().unwrap();
+    let b = scenario_b(t.path());
+    let pubkey = entropa_core::Probe::from_signing_key_hex(&seed())
+        .unwrap()
+        .pubkey_hex();
+    let lines: Vec<Value> = std::fs::read_to_string(b.join("ledger/checkpoints.log"))
+        .unwrap()
+        .lines()
+        .map(|l| serde_json::from_str(l).unwrap())
+        .collect();
+    let want = expected["checkpoints"].as_array().unwrap();
+    assert_eq!(lines.len(), want.len());
+    for (got, w) in lines.iter().zip(want) {
+        for k in ["counter", "prev", "root", "size", "timestamp"] {
+            assert_eq!(got[k], w[k], "field {k}");
+        }
+        let sig = got["signature"].as_str().unwrap();
+        assert!(
+            entropa_core::verify_hex(
+                &pubkey,
+                &hex::decode(w["digest"].as_str().unwrap()).unwrap(),
+                sig
+            ),
+            "the signature verifies over the independently derived digest"
+        );
+    }
 }
 
 #[test]

@@ -1,0 +1,11 @@
+test m1_record_writes_v2_checkpoints_and_check_reports_the_format ... FAILED
+test k15_an_unterminated_extra_line_and_the_exact_record_size_limit ... ok
+test k2_require_anchor_without_one_is_anchor_missing_and_exit_1 ... ok
+test m2_a_ledger_that_starts_v1_and_continues_v2_is_ok_and_says_v1_plus_v2_and_a_v1_after_v2_is_refused ... FAILED
+test m4_the_gate_writer_never_emits_a_checkpoint_time_that_goes_backwards ... ok
+test k8_hostile_ledger_files_are_format_error_and_never_a_crash ... ok
+test m3_a_v2_ledger_exports_a_signed_anchor_with_its_counter_and_rollback_by_counter_is_caught ... FAILED
+test k7_records_cut_but_the_newest_checkpoint_kept_and_a_flipped_record_are_checkpoint_mismatch ... ok
+test k10_precedence_through_the_command_line ... ok
+test result: FAILED. 6 passed; 3 failed; 0 ignored; 0 measured; 10 filtered out; finished in 0.26s
+error: test failed, to rerun pass `-p entropa-gate --test check_anchor`

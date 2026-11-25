@@ -1,0 +1,33 @@
+BITE anchor: duplicate allowed: a4_a_second_anchor_of_the_ result: FAILED. 3 passed;  error: test failed, to rer error: 1 target failed: 
+BITE anchor: ledger not verified: a3_a_wrong_key_does_not_ve a2_check_is_false_for_othe result: FAILED. 2 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found
+BITE anchor: label not checked: PATTERN NOT FOUND
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found
+BITE anchor: any record counts (hash not compared): PATTERN NOT FOUND
+BITE sealed: anchored always true when a ledger is named: c7_anchoring_end_to_end_ma result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+BITE sealed: missing anchor directory accepted: c7_anchoring_end_to_end_ma result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found
+BITE make: file written before the anchor: PATTERN NOT FOUND
+BITE wrap: disk guard off: c5_mutate_wraps_cargo_muta result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found
+BITE wrap: memory cap dropped: PATTERN NOT FOUND
+BITE wrap: installed-tool check off: c5_mutate_wraps_cargo_muta c6_fuzz_validates_its_argu result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE cli: fuzz seconds bound off: c6_fuzz_validates_its_argu result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: pattern not found
+BITE cli: fuzz target name unchecked: PATTERN NOT FOUND
+BITE make: failed anchor ignored (file still written): c7_anchoring_end_to_end_ma result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+BITE wrap: memory cap dropped: c6_fuzz_validates_its_argu c5_mutate_wraps_cargo_muta result: FAILED. 5 passed;  error: test failed, to rer error: 1 target failed: 
+BITE cli: fuzz target name unchecked: c6_fuzz_validates_its_argu result: FAILED. 6 passed;  error: test failed, to rer error: 1 target failed: 
+BITE anchor: label not checked: NONE (survived)
+BITE anchor: hash not compared (any prereg record counts): a4_a_second_anchor_of_the_ a2_check_is_false_for_othe result: FAILED. 2 passed;  error: test failed, to rer error: 1 target failed: 
+BITE anchor: label not checked (a5 added): test a5_a_record_with_another_label_but_the_same_d test result: FAILED. 4 passed; 1 failed; 0 ignored 

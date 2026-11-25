@@ -114,7 +114,7 @@ pub(super) fn proofs_for(leaves: &[Hash], indices: &[usize]) -> Vec<Option<Vec<P
         .collect()
 }
 
-#[cfg(test)]
+#[cfg(all(test, feature = "signing"))]
 mod tests {
     use crate::pqc::Probe;
     use crate::transparency_log::TransparencyLog;

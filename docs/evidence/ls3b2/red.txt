@@ -1,0 +1,6 @@
+test h18_an_http_11_request_without_exactly_one_host_header_is_refused_with_400_before_anything_else ... FAILED
+thread 'h18_an_http_11_request_without_exactly_one_host_header_is_refused_with_400_before_anything_else' (739911) panicked at crates/try-http/tests/http.rs:894:9:
+assertion `left == right` failed: healthz without Host: Resp { status: 200, headers: [("cache-control", "no-store"), ("x-content-type-options", "nosniff"), ("connection", "close"), ("content-length", "0"), ("date", "Tue, 17 Nov 2026 22:43:02 GMT")], body: "" }
+  left: 200
+ right: 400
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 17 filtered out; finished in 0.02s

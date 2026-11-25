@@ -1,0 +1,18 @@
+entropa-core debug: 116 passed 0 failed 5 ignored 
+entropa-core --release: 116 passed 0 failed 5 ignored 
+entropa-witness debug: 54 passed 0 failed 1 ignored 
+entropa-witness --release: 54 passed 0 failed 1 ignored 
+entropa-ledger debug: 123 passed 0 failed 4 ignored 
+entropa-ledger --release: 123 passed 0 failed 4 ignored 
+entropa-nodecore debug: 21 passed 0 failed 0 ignored 
+entropa-nodecore --release: 21 passed 0 failed 0 ignored 
+entropa-gate debug: 48 passed 0 failed 1 ignored 
+entropa-gate --release: 48 passed 0 failed 1 ignored 
+entropa-mockview debug: 28 passed 0 failed 1 ignored 
+entropa-mockview --release: 28 passed 0 failed 1 ignored 
+entropa-platinum debug: 45 passed 0 failed 0 ignored 
+entropa-platinum --release: 45 passed 0 failed 0 ignored 
+entropa-explorer debug: 48 passed 0 failed 0 ignored 
+entropa-explorer --release: 48 passed 0 failed 0 ignored 
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.80s
+fmt ok

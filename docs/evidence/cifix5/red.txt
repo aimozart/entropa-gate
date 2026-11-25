@@ -1,0 +1,5 @@
+ok   1 without node the page test passes (skips)
+FAIL 1 no SKIPPED line
+FAIL 2 a required node was not enforced
+ok   3 with node the page test passes
+ok   3 and really ran (no SKIPPED)

@@ -1,0 +1,4 @@
+BITE cap 61 instead of 60: test result: FAILED. 7 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.34s
+BITE earlier total forgets the records: test result: FAILED. 7 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.35s
+BITE page ignores the earlier total: test result: FAILED. 7 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.50s
+BITE page cap 59: test result: FAILED. 7 passed; 1 failed; 1 ignored; 0 measured; 0 filtered out; finished in 4.43s

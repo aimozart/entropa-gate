@@ -92,7 +92,7 @@ Deploying a real AgentCore policy engine is not part of S4 (section 10).
 
 ## 10. FinOps
 - S4 is **$0**: local library, no cloud resource, no network (`cedar-policy` is a Rust crate; adding it is a build-time dependency only).
-- AgentCore Policy pricing is **not verified** and nothing in S4 creates an AgentCore resource. If a later stage deploys one in a sandbox account to compare behavior, L11 applies: price it from the AWS pricing pages first, record it in docs/FINOPS-LEDGER.md with the teardown command, wait for the owner's go, tag `project=entropa`, delete it the same day (deletion needs the owner's word and a standalone yes/no).
+- AgentCore Policy pricing is **not verified** and nothing in S4 creates an AgentCore resource. If a later stage deploys one in a sandbox account to compare behavior, the cost rule applies: price it from the AWS pricing pages first, record it in the cost notes with the teardown command, wait for the owner's go, tag `project=entropa`, delete it the same day (deletion needs explicit approval).
 
 ## 11. Test plan (S4b writes these red; S4c makes them green)
 | Id | Case | Expected |
