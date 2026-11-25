@@ -868,6 +868,9 @@ docs/evidence/bv1/c-chrome.txt
 docs/evidence/bv1/c-red.txt
 docs/evidence/bv1/c-wasm-node.txt
 docs/evidence/bv1/final-run.txt
+docs/evidence/cifix10/bite.txt
+docs/evidence/cifix10/green.txt
+docs/evidence/cifix10/red.txt
 docs/evidence/cifix2/bite.txt
 docs/evidence/cifix2/green.txt
 docs/evidence/cifix2/red.txt

@@ -1,0 +1,8 @@
+mutation: the scenario time limit is not enforced (timeout_ms replaced by one hour)
+assertion `left == right` failed: {"schema":"ls3d-report-v1","file_sha256":"b2bafaa49fae1a1a03b18017e3976ced1a6b7aabf53a4b593bcee2c0ac1f4a09","runner_sha256":"029192dcc017fb0ccb072ceefea4f696e9f87aef57f6de0af286e87835edb
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 70.23s
+(source restored)
+mutation 2: a sleep step ignores the scenario deadline (the timeout is reported only after the full 60 s)
+the limit is enforced (1.5 s limit, 60 s sleep): took 62.198211818s, the control run 3.727686896s, allowed 30s more
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 68.61s
+(source restored)
