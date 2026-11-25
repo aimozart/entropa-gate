@@ -14,6 +14,7 @@ scripts/preflight-if-vendored.sh
 scripts/tests/public-gitignore.sh
 scripts/tests/vendor-optional.sh
 scripts/tests/ci-case-caps.sh
+scripts/tests/ci-quality.sh
 in_dev bash -ec '
 set -x
 cargo fmt --all -- --check

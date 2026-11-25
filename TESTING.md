@@ -13,6 +13,10 @@ Per crate (default features): entropa_api 129, entropa_core 70 (69 unit plus 1 R
 ## Why a file count undercounts this repository
 Most tests are co-located with the code in `#[cfg(test)] mod tests` blocks (30 source files), which is the idiomatic Rust layout. A tool that only counts files under `tests/` sees 6 integration files and misses the other ~200 tests. Tests have not been moved to be counted. Do not estimate coverage from file names or `grep '#\[test\]'`: the grep also counts tests that only compile with a feature or inside `proptest!` macros, so it will not equal the run. Use the command below.
 
+## What CI runs, and where the reported counts come from
+The CI debug run uses capped property-test case counts (1,000 to 2,000); the full-size (100,000-case) properties are run in the release builds by the maintainers, and the counts reported in the results are from those runs.
+Where the release counts come from: `cargo test --release --offline --locked`, run for each test binary separately (30 minutes at most per binary, 6 GB memory cap) with the property tests at their default size, on the maintainers' workstation (Linux x86_64, 20 CPUs, 64 GB of memory); a binary that exceeds its time box is recorded as such, not as a pass. Some intermediate re-runs of single crates, listed in the evidence folders, used reduced counts and say so in their files. CI also requires the tools the tests use (`ENTROPA_REQUIRE_TOOLS=1`: node and minisign are in the dev image), so a missing tool fails a test instead of skipping it.
+
 ## Commands
 ```
 ./scripts/count-tests.sh      # true counts, per crate and total, both builds

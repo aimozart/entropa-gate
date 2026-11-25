@@ -1,0 +1,2 @@
+AT3_CASES=2000: sealed versions: 3 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 18.80s 
+AT3_CASES=10000: sealed versions: 6 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 93.36s 

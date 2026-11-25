@@ -195,8 +195,10 @@ fn p1_random_call_sequences_never_seal_a_version_without_two_distinct_subjects()
         }
     }
     eprintln!("sealed versions: {sealed}");
+    // The sanity floor grows with the case count (5 at the default of 20,000 cases; the measured seals are about 3 at 2,000 and 6 at 10,000): the property assertions above are unchanged, only the check that the run sealed anything at all scales.
+    let floor = (cases / 4000).max(1);
     assert!(
-        sealed >= 5,
-        "the property run must seal some versions or it proves nothing: {sealed}"
+        sealed >= floor,
+        "the property run must seal some versions or it proves nothing: {sealed} sealed, at least {floor} wanted for {cases} cases"
     );
 }

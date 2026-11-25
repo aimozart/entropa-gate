@@ -888,6 +888,15 @@ docs/evidence/cifix6/red.txt
 docs/evidence/cifix7/bite.txt
 docs/evidence/cifix7/green.txt
 docs/evidence/cifix7/red.txt
+docs/evidence/cifix8/bite.txt
+docs/evidence/cifix8/green.txt
+docs/evidence/cifix8/red.txt
+docs/evidence/cifix9/bite-at3.txt
+docs/evidence/cifix9/green-at3.txt
+docs/evidence/cifix9/other-clients-load.txt
+docs/evidence/cifix9/red-at3.txt
+docs/evidence/cifix9/serve-load.txt
+docs/evidence/cifix9/serve-noload.txt
 docs/evidence/cifix/bite.txt
 docs/evidence/cifix/four-cpu-run.txt
 docs/evidence/cifix/green-caps.txt
@@ -1780,6 +1789,7 @@ scripts/tests/build-admin-ui-network.sh
 scripts/tests/build-admin-ui-retry.sh
 scripts/tests/check-public-docs.sh
 scripts/tests/ci-case-caps.sh
+scripts/tests/ci-quality.sh
 scripts/tests/container-caps.sh
 scripts/tests/container-limits.sh
 scripts/tests/dash1-node-optional.sh

@@ -1,0 +1,10 @@
+FAIL 1 the FROM line is not digest-pinned
+FAIL 1 the pinned digest differs from the local image (sha256:e12566d5abc17a0da741628782cdb504b68b8961f5bfcf677936bf3e8b32de29)
+FAIL 2 no apt install of nodejs and minisign
+FAIL 2 apt lists not handled
+FAIL 3 no build-time check of the tools
+FAIL 4 ENTROPA_REQUIRE_TOOLS=1 is not set in the workflow env
+FAIL 4 not in IN_DEV_PASS_ENV
+FAIL 5 TESTING.md lacks the case-count sentence
+FAIL 5 docs/public/KNOWN-LIMITS.md lacks the case-count sentence
+FAIL 6 TESTING.md does not say where the release counts come from
